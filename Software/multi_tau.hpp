@@ -8,6 +8,10 @@
 #include "discarder.hpp"
 
 
+int array[param];
+
+MultiTau_ACorr_RT_Teensy<3, 10, 3>  multy;
+
 /** @brief MultiTau Auto-Correlator object that is composed of multiple linear - autocorrelators. Specialised for teensy. */
 //using Lin_Corr_t = Lin_ACorr_RT_Teensy;		         //→ S        //→P                  //→m
 template <unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Ratio>

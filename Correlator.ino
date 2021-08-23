@@ -2,6 +2,8 @@
 #include "pit.hpp"
 //#include "DigitalToggle/DigitalToggle.h"
 
+#include "TTL_C.hpp"
+
 PITController<0> PI_t;
 void setup()
 {

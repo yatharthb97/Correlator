@@ -1,6 +1,10 @@
 #pragma once
+#include "errors.hpp"
 
-
+//Enable PIN for PIT_TRIGGER00
+IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B0_04 &= ~SION; //Unset SION Bit (Modality - "Input Path is determined by functionality")
+IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B0_04 |= MUX_MODE(6); //Set Trigger
+//Which pin is this???
 
 /** @brief Interface for PIT timers on Teensy 4.x microcontrollers. */
 template <unsigned int ChID>
@@ -11,13 +15,13 @@ public:
 
 	//Period values are in microseconds (us)
 	double Actual_period = 0; //! Actual Time Period set by the device due to finite resolution
-  double Set_period = 0; //! Time Period requested by the user.
+  	double Set_period = 0; //! Time Period requested by the user.
 
 	uint32_t Clk_freq = uint32_t(24 * 1e6); //! Clock frequency used by the timer. Initalized to 24MHz → default oscillator clock 
 	const static constexpr uint32_t PIT_MAX_COUNTER = 4294967295; //! Constant - Maximum possible counter value. 32 bit counter.
 
 PITController()
-{ static_assert(ChID <=3, "No such PIT channel exists"); }
+{ static_assert(ChID <=3, "No such PIT channel exists!"); }
 
 //Group1
 /** \defgroup PIT_Glb ''PIT Global Controls'' */
@@ -66,7 +70,7 @@ PITController()
 	Error_t set_gate_time(double gt_microseconds) __attribute__((flatten))
 	{
 		double ldval = gt_microseconds * this->Clk_freq * 1e-6;
-    this->Set_period = gt_microseconds;
+    	this->Set_period = gt_microseconds;
 		
 		if(ldval > PIT_MAX_COUNTER)
 		{
@@ -119,9 +123,9 @@ PITController()
 	void static set_interrupt(void (*isr_fn)(), unsigned int priority ) __attribute__((always_inline))
 	{
 		//assert(priority <= 255);
-    NVIC_ENABLE_IRQ(IRQ_PIT);
-    NVIC_SET_PRIORITY(IRQ_PIT, priority);
-    attachInterruptVector(IRQ_PIT, isr_fn);
+    	NVIC_ENABLE_IRQ(IRQ_PIT);
+    	NVIC_SET_PRIORITY(IRQ_PIT, priority);
+    	attachInterruptVector(IRQ_PIT, isr_fn);
 	}
 
 	/** @brief Clears the interrupt flag and hence prepares the timer for the next gate interval. The clearing has to be done manually. If the flag is not cleared, the interrupt will be called again and again. */
@@ -137,15 +141,17 @@ PITController()
 /** \defgroup CLK ''Clock Select Functions'' */
 /* @{ */
 
-	/** @brief Sets the clock source frequency of all PIT channels to the value F_BUS_ACTUAL (= F_CPU_ACTUAL / 4 ) which is nominally 150 MHz. The exact value depends on the CPU clock rate. */
-	void static sel_FBUS_clock() __attribute__((always_inline))
+	/** @brief Sets the clock source frequency of all PIT channels to the value F_BUS_ACTUAL (= F_CPU_ACTUAL / 4 ) which is nominally 150 MHz. The exact value depends on the CPU clock rate. 
+	    \warning This will change the clock source for all 4 PITs and also the 2 GPTs.*/
+	void sel_FBUS_clock() __attribute__((always_inline))
 	{
 		CCM_CSCMR1 &= ~CCM_CSCMR1_PERCLK_CLK_SEL; //Clear CCM-Peripheral clock gate bit -> gate down
-		this->Clk_freq = F_BUS_ACTUAL; //Set Equal to Peripheral Bus frequency  
+		Clk_freq = F_BUS_ACTUAL; //Set Equal to Peripheral Bus frequency  
 	}
 
-	/** @brief Sets the source clock frequency of all PIT channels to 24 MHz which is the default oscillator clock. This setting is also the default state, if no clock is selected. */
-	void static sel_24MHz_clock() __attribute__((always_inline))
+	/** @brief Sets the source clock frequency of all PIT channels to 24 MHz which is the default oscillator clock. This setting is also the default state, if no clock is selected.
+	    \warning This will change the clock source for all 4 PITs and also the 2 GPTs.*/
+	void sel_24MHz_clock() __attribute__((always_inline))
 	{
 		  CCM_CSCMR1 |= CCM_CSCMR1_PERCLK_CLK_SEL; //Set CCM-Peripheral clock gate bit -> gate up
 		  this->Clk_freq = 24000000; //24MHz

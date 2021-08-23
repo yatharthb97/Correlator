@@ -29,3 +29,14 @@ File descriptions:
 * `modules.hpp` - Defines functions that represent highest-abstracted modules in the system.
 * `errors.hpp` - Defines common error codes and error generating functions.
 
+
+
+
+
+
+
+## Standard Flushing Procedure for USB Serial on Teensy:
+
+• Libraries use `Serial.write(buffer, bytes);` for all outputs.
+• For line buffered outputs, the final user calls:
+    `Serial.write_now('\n')`. Note: The libraries are not allowed to use endlines on output calls. This also solves the "`\r\n`" problem of using `Serial.println()`.
