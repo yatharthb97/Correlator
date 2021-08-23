@@ -21,13 +21,13 @@ This folder contains the implementation of the software correlator that will be 
 File descriptions:
 
  * `pit.hpp` - Defines `class PITController` that provides an abstraction layer on the PIT timer controls.
-* `tmr.hpp`
-* `quadtmr_setup.hpp`
+* `qtmr1.hpp` - Defines 'class QTMR1Controller' that provides an abstraction layer on the QTMR1 timer controls.
 
 ## Common Interface 
 
 * `modules.hpp` - Defines functions that represent highest-abstracted modules in the system.
 * `errors.hpp` - Defines common error codes and error generating functions.
+* `utilities.hpp` - Contains some utility functions
 
 
 
@@ -37,6 +37,7 @@ File descriptions:
 
 ## Standard Flushing Procedure for USB Serial on Teensy:
 
-• Libraries use `Serial.write(buffer, bytes);` for all outputs.
-• For line buffered outputs, the final user calls:
-    `Serial.write_now('\n')`. Note: The libraries are not allowed to use endlines on output calls. This also solves the "`\r\n`" problem of using `Serial.println()`.
+• Libraries will use `Serial.write(buffer, bytes);` for all outputs.
+• For line buffered outputs, at the end, user calls:
+    `Serial.send_now('\n')`. Note: The libraries are not allowed to use endlines on output calls. This also solves the "`\r\n`" problem of using `Serial.println()`.
+• As per the PJRC website, `Serial.flush()` waits for the buffer to clear, but might not actually initiate the clearing. Hence, Using `Serial.send_now()` might prove more judicious.
