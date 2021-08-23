@@ -22,6 +22,7 @@ File descriptions:
 
  * `pit.hpp` - Defines `class PITController` that provides an abstraction layer on the PIT timer controls.
 * `qtmr1.hpp` - Defines 'class QTMR1Controller' that provides an abstraction layer on the QTMR1 timer controls.
+* `lifetime_timer.hpp` - Interface for using PIT timers in chained mode to create a 64-bit lifetime counter
 
 ## Common Interface 
 
@@ -38,6 +39,9 @@ File descriptions:
 ## Standard Flushing Procedure for USB Serial on Teensy:
 
 • Libraries will use `Serial.write(buffer, bytes);` for all outputs.
+
 • For line buffered outputs, at the end, user calls:
+
     `Serial.send_now('\n')`. Note: The libraries are not allowed to use endlines on output calls. This also solves the "`\r\n`" problem of using `Serial.println()`.
+
 • As per the PJRC website, `Serial.flush()` waits for the buffer to clear, but might not actually initiate the clearing. Hence, Using `Serial.send_now()` might prove more judicious.
