@@ -7,8 +7,11 @@ const int TTL_C_Output_Pin = 0;
 
 
 //Error Pins
-const int Error1_Pin;
-const int Error2_Pin;
-const int Error3_Pin;
-const int Error4_Pin;
-const int Error5_Pin;
+const int PRECISION_PIN;
+const int OU_Flow_PIN;
+
+
+// LED Indicators
+
+const int SETUP_LED 4
+const int RUN_LED 5
