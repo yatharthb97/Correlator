@@ -14,7 +14,10 @@ This folder contains the implementation of the software correlator that will be 
     + `counter_t` - Type returned by the Counter module
     + `index_t` - Type used to index arrays and buffers in the implementation
 * `test.cpp` - File used for tsting
-* `circlar_buffer.hpp` - Another implementation of circular buffer (unsued right now) 
+* `circlar_buffer.hpp` - Another implementation of circular buffer (unsued right now)
+
+* `Lin_CrossCorr_RT_Base.hpp` - Base interface for Linear Cross Correlators
+* `Lin_CrossCorr_RT_Teensy.hpp` - Teensy specific Liner Cross Correlator interface
 
 ## Hardware 
 
