@@ -8,9 +8,9 @@
 #include "discarder.hpp"
 
 
-int array[param];
 
-MultiTau_ACorr_RT_Teensy<3, 10, 3>  multy;
+//Example
+//MultiTau_ACorr_RT_Teensy<3, 10, 3>  multy;
 
 /** @brief MultiTau Auto-Correlator object that is composed of multiple linear - autocorrelators. Specialised for teensy. */
 //using Lin_Corr_t = Lin_ACorr_RT_Teensy;		         //→ S        //→P                  //→m
@@ -98,7 +98,7 @@ public:
 	/** @brief Returns the relavent Tau scaling factor, based on the specialised scheme. It is used by the accumulator objects to set the BufferPoints attribute. */
 	index_t tau_scaling_scheme(unsigned int s) const __attribute__((always_inline))
 	{
-		return pow(Bin_Ratio, s);
+		return index_t(pow(Bin_Ratio, s));
 	}
 
 };
