@@ -1,16 +1,20 @@
 #pragma once
 
-
+/** @brief Interface for using the "Life Time TImer" functionality of the Periodic Interrut Timer on Teensy 4.x microcontrollers. The module uses Channel 0 and 1 of the 4 PIT channels.
+ * \attention The module has no checks on the use of CH0 and CH1 by external drivers, however, the interface enforces a singleton template and can only be constructed once. 
+ * \attention The module does not set the clock frequency and uses either the default or the one set globally (as is the only use case) by external drivers outside its scope. 
+ * \reference : Code adapted from IMXRT Manual Page 2977. */
 class PIT_LifetimeTimer
 {
 	
 private:
 	static constexpr bool singleton_flag = false; //! Enforces a singleton template
+public:
 
 	//0 - Constructor
 	PIT_LifetimeTimer()
 	{
-		static_assert(singleton_flag, "PIT_LifetimeTimer : The resource is already initalised.");
+		static_assert(singleton_flag, "PIT_LifetimeTimer : The resource is already constructed.");
 		singleton_flag  = true;
 	}
 
@@ -21,7 +25,7 @@ private:
 	 * \attention : The timers will operate at the clock frequency set for PIT timers outside this library. */
 	void init() __attribute__((always_inline))
 	{
-		// turn on PIT 
+		// Enable on PIT 
 		PIT_MCR = 0x00;
 		
 		//Timer 1
@@ -36,7 +40,7 @@ private:
 	}
 
 	//2
-	/** @brief Starts the timers for downcounting counting. */
+	/** @brief Starts the timers for down counting. */
 	void start() __attribute__((always_inline))
 	{
 		PIT_TCTRL1 |= TEN; // start timer 1
@@ -52,7 +56,7 @@ private:
 	}
 
 	//4
-	/** @brief Stops the timers and resets the timer back to the init value (max) - s0xFFFFFFFFFFFFFF. */
+	/** @brief Stops the timers and resets the timer back to the init value (max) - 0xFFFFFFFFFFFFFF. */
 	void reset() __attribute__((always_inline))
 	{	
 		this->stop();

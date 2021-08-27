@@ -1,10 +1,6 @@
 #pragma once
 #include "errors.hpp"
 
-//Enable PIN for PIT_TRIGGER00
-IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B0_04 &= ~SION; //Unset SION Bit (Modality - "Input Path is determined by functionality")
-IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B0_04 |= MUX_MODE(6); //Set Trigger
-//Which pin is this???
 
 /** @brief Interface for PIT timers on Teensy 4.x microcontrollers. */
 template <unsigned int ChID>
@@ -15,7 +11,7 @@ public:
 
 	//Period values are in microseconds (us)
 	double Actual_period = 0; //! Actual Time Period set by the device due to finite resolution
-  	double Set_period = 0; //! Time Period requested by the user.
+  	double Req_period = 0; //! Time Period requested by the user.
 
 	uint32_t Clk_freq = uint32_t(24 * 1e6); //! Clock frequency used by the timer. Initalized to 24MHz → default oscillator clock 
 	const static constexpr uint32_t PIT_MAX_COUNTER = 4294967295; //! Constant - Maximum possible counter value. 32 bit counter.
@@ -40,7 +36,7 @@ PITController()
 	}
 
 	/** @brief Pause/Resume - \b Toggle all PIT Channels. */
-	void pause_resume_PITs() __attribute__((always_inline))
+	void static pause_resume_PITs() __attribute__((always_inline))
 	{
 		PIT_MCR ^= PIT_MCR_FRZ;
 	}
@@ -66,11 +62,13 @@ PITController()
 	}
 
 	/**
-	 * @brief Sets the gate time after which the counter returns to zero and marks the end of onegate interval. */
+	 * @brief Sets the gate time after which the counter returns to zero and marks the end of onegate interval. 
+	 * \attention In case of an error, the gate time is set to the maximum. 
+	 * \attention The clock source must be selected before calling this function. */
 	Error_t set_gate_time(double gt_microseconds) __attribute__((flatten))
 	{
 		double ldval = gt_microseconds * this->Clk_freq * 1e-6;
-    	this->Set_period = gt_microseconds;
+    	this->Req_period = gt_microseconds;
 		
 		if(ldval > PIT_MAX_COUNTER)
 		{
@@ -91,6 +89,13 @@ PITController()
 			this->Actual_period = (uint32_t(ldval) - 1) * this->tick_period_us();
 			return Error_t::Success;
 		}
+	}
+
+	/** @brief Returns the error in the gate timing period due to the finite resolution of the timers.
+	 * @Return Error in microseconds. */
+	double period_error_us() const __attribute__((always_inline))
+	{
+		return (this->Req_period - this->Actual_period);
 	}
 
 	/** @brief Returns the value of one \b Tick - Minimum resolution of the timer. */
@@ -122,7 +127,7 @@ PITController()
 	/** @brief Sets a common ISR and its priority for all PIT Channels. \note All PIT channels share a single ISR on Teensy 4.x micro-controllers. */
 	void static set_interrupt(void (*isr_fn)(), unsigned int priority ) __attribute__((always_inline))
 	{
-		//assert(priority <= 255);
+		_assert_(priority <= 255);
     	NVIC_ENABLE_IRQ(IRQ_PIT);
     	NVIC_SET_PRIORITY(IRQ_PIT, priority);
     	attachInterruptVector(IRQ_PIT, isr_fn);
@@ -131,7 +136,7 @@ PITController()
 	/** @brief Clears the interrupt flag and hence prepares the timer for the next gate interval. The clearing has to be done manually. If the flag is not cleared, the interrupt will be called again and again. */
 	void clear_interrupt_flag() __attribute__((always_inline))
 	{
-		IMXRT_PIT_CHANNELS[ChID].TFLG = 1; //Clear by writing 1
+		IMXRT_PIT_CHANNELS[ChID].TFLG = 1; //Clear by writing 1 (TIF is the only field in the register)
 	}
 /* @} */ //End of Interrupt Group
 
@@ -154,7 +159,7 @@ PITController()
 	void sel_24MHz_clock() __attribute__((always_inline))
 	{
 		  CCM_CSCMR1 |= CCM_CSCMR1_PERCLK_CLK_SEL; //Set CCM-Peripheral clock gate bit -> gate up
-		  this->Clk_freq = 24000000; //24MHz
+		  this->Clk_freq = uint32_t(24*1e6); //24MHz
 	}
 /* @{ */ // ENd of Clock Select Functions
 
