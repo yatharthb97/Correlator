@@ -22,9 +22,11 @@ namespace Errors{
 		if(error == Error_t::Success)
 			return;
 		else if(error == Error_t::Counter_Underflow || Error_t::Counter_Overflow)
-			{ digitalWrite(OU_Flow_PIN, HIGH); }
+			{ LEDSet::error(ER_OVERFLOW_PIN); }
 		else if(error == Error_t::Precision)
-			{ digitalWrite(PRECISION_PIN, HIGH);}
+			{ LEDSet::error(ER_PRECISION_PIN); }
+		else if(error == Error_t::Input_Validation)
+			{ LEDSet::error(ER_INPUT_VALIDATION); }
 	}
 
 	/** @brief Receives error value and error threshold and returns an appropriate error state. */

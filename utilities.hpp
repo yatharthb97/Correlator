@@ -3,8 +3,6 @@
 #define PRREG(x) Serial.print(#x" 0x"); Serial.println(x,HEX)
 
 
-//Connects 
-xbar_connect(PI_t.get_xbar_in_pin(), TTL_c.get_xbar_out_pin());
 
 //xbar_connect function
 /** @brief Establishes connection over XBAR1-A, given the input and output xbar pins
@@ -54,12 +52,8 @@ void single_pulse(const uint8_t PIN) __attribute__((always_inline))
 
 
 
-
-IMXRT_TMR_t * TMRx = (IMXRT_TMR_t *)&IMXRT_TMR4;
-
-
 /** @brief Returns true if the given DMA channel is in the error state. */
-bool has_DMA_error()
-{
-  return DMAx_ES != 0; //x is the channel number.
-}
+// bool has_DMA_error()
+// {
+//   return DMAx_ES != 0; //x is the channel number.
+// }
