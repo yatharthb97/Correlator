@@ -231,7 +231,7 @@ public:
 	 * \attention This setting applies to all the channels of the Timer 1 group. */
 	void static timers_anti_freeze() __attribute__((always_inline))
 	{
-		IOMUXC_GPR_GPR2 &= ~QTIMER1_TMR_CNTS_FREEZE; //Set Bit
+		IOMUXC_GPR_GPR2 &= ~QTIMER1_TMR_CNTS_FREEZE; //Unset Bit
 	}
 
 };
