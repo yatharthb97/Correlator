@@ -48,3 +48,23 @@ File descriptions:
     `Serial.send_now('\n')`. Note: The libraries are not allowed to use endlines on output calls. This also solves the "`\r\n`" problem of using `Serial.println()`.
 
 • As per the PJRC website, `Serial.flush()` waits for the buffer to clear, but might not actually initiate the clearing. Hence, Using `Serial.send_now()` might prove more judicious.
+
+
+
+## SLOC as on 28/08/21
+
+---------- Result ------------
+
+            Physical :  1873
+              Source :  1093
+             Comment :  503
+ Single-line comment :  284
+       Block comment :  223
+               Mixed :  132
+ Empty block comment :  0
+               Empty :  409
+               To Do :  0
+
+Number of files read :  23
+
+----------------------------
