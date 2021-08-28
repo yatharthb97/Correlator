@@ -2,46 +2,51 @@
 #include "pit.hpp"
 #include "pins.hpp"
 #include "qtmr1.hpp"
-
+#include "utilities.hpp"
 
 //Hardware Resource
-const int PI_t_CH = 3; //! PIT Channnel that will be used for PI_t
-PITController<PI_t_CH> PI_t; //! PI_t Resource
-TMR1Controller<> TTL_C; //! TTL_c Resource
+PITController<2> PI_t; //! PI_t Resource
+TMR1Controller TTL_c; //! TTL_c Resource
 
 //Software Resource
-MultiTau_ACorr_RT_Teensy<3, 10, 3> multitau; //! Multi Tau Object
+#define LIN_CHANNELS 9
+#define SERIES_SIZE 27
+#define BIN_RATI0 3
+MultiTau_ACorr_RT_Teensy<LIN_CHANNELS, SERIES_SIZE, BIN_RATI0> multitau; //! Multi Tau Object
 
 //Global volatile variables
-volatile counter_t counter_val = 0; //! Stores the value read by the counter
-volatile bool update_flag = false; //! Indicates if a new value has arrived from the counting module
-volatile unsigned int update_count = 0; //! Stores the number of updates made on the correlator channels 
+volatile counter_t Counter_val = 0; //! Stores the value read by the counter
+volatile bool Update_flag = false; //! Indicates if a new value has arrived from the counting module
+volatile unsigned int Update_count = 0; //! Stores the number of updates made on the correlator channels 
+
 
 //Time Values
-const unsigned int serial_out_count_max = 1; //! Serial output is done after these many updates
-const double gate_time_us = 1; //! The gate time of TTL_C in microseconds (us) 
-const double allowed_period_error = 0; //! Gate time precision error due to finite precision of timers.
+const unsigned int SerialOut_CountMax = 1; //! Serial output is done after these many updates
+const double Gate_time_us = 1; //! The gate time of TTL_C in microseconds (us) 
+const double Allowed_period_error_us = 1e-3; //! Gate time precision error due to finite precision of timers.
 
 void setup()
 {
+  //0. Set Setup LED
   pinMode(SETUP_LED, OUTPUT);
   digitalWrite(SETUP_LED, HIGH);
 
 
   //1. PinModes
+  LEDSet::init(); //Set Pinmode for all LEDs.
   pinMode(,OUTPUT);
   pinMode(,OUTPUT);
   pinMode(,OUTPUT);
   pinMode(,OUTPUT);
   pinMode(,OUTPUT);
   pinMode(,OUTPUT);
-
 
 
   //2. Serial Setup
   Serial.begin();
   while(!Serial)
-  Serial.println("Serial Connected!")
+  //Serial.println("Serial Connected!")
+
 
   //3. PIT_t Setup
   PI_t.enable_PITs(); //Enable all PITs
@@ -52,19 +57,24 @@ void setup()
   Error_t er_period_precision = Errors::Precison_Threshold(PI_t.period_error(), allowed_period_error);
 
   //4. TTL_C Setup
-  //** Pending
+  TTL_c.init();
+  TTL_c.pin_init();
+
+  //5. XBAR Connection
+  xbar_connect(PI_t.get_xbar_in_pin(), TTL_c.get_xbar_out_pin());
 
 
-  //5. Setup is complete
+  //6. Setup is complete
   asm volatile ("dsb");
   digitalWrite(SETUP_LED, LOW);
 
-  //6. Validation
+  //7. Validation
   Errors::Validate(er_invalid_gt);
   Errors::Validate(er_period_precision);
+  Errors::Validate(Auto_MultiTau_Input_Validator<LIN_CHANNELS, SERIES_SIZE, BIN_RATI0>());
 
-  //7. Indicate Start
-  BlinkLED(SETUP_LED, 5);
+  //7. Indicate End of Setup
+  BlinkLED(SETUP_LED, 5, 20);
 
 
 } // End of setup()
@@ -72,8 +82,7 @@ void setup()
 void loop()
 {
   
-  digitalWrite(RUN_LED, HIGH);
-  RTC.start();
+  digitalWrite(LOOP_LED, HIGH);
   TTL_C.start();
   PI_t.start();
   asm volatile ("dsb");
@@ -82,18 +91,22 @@ void loop()
   {
     if(update_flag) //Calculate Multi-tau correlation
     {
-      multitau.push_datum(counter_val);
-      update_count++;
-    }
+      Multitau.push_datum(counter_val);
+      Update_count++;
 
-    if(update_count >= serial_out_count_max)
-    {
-      multitau.ch_out();
-      update_count = 0;
+      if(Update_count >= SerialOut_CountMax)
+      {
+        multitau.ch_out();
+        Update_count = 0;
+      }
     }
   }
 
-  digitalWrite(RUN_LED, LOW);
+  // <<while loop breaks>> ↓
+  digitalWrite(LOOP_LED, LOW);
+  LEDSet::set_all();
+  LEDSet::unset(RUN_LED);
+  abort();
 } //End of loop()
 
 
