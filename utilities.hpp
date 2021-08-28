@@ -3,6 +3,31 @@
 #define PRREG(x) Serial.print(#x" 0x"); Serial.println(x,HEX)
 
 
+//Connects 
+xbar_connect(PI_t.get_xbar_in_pin(), TTL_c.get_xbar_out_pin());
+
+//xbar_connect function
+/** @brief Establishes connection over XBAR1-A, given the input and output xbar pins
+ * \reference - https://github.com/manitou48/teensy4/blob/bc8fc46af5065a3f84352e0474069ae7a1a13064/pitxbaradc.ino#L40
+ * \licence - Not specified*/
+ void xbar_connect(unsigned int input, unsigned int output)
+ {
+   if (input >= 88) return;
+   if (output >= 132) return;
+   volatile uint16_t *xbar = &XBARA1_SEL0 + (output / 2);
+   uint16_t val = *xbar;
+   if (!(output & 1)) {
+     val = (val & 0xFF00) | input;
+   } else {
+     val = (val & 0x00FF) | (input << 8);
+   }
+   *xbar = val;
+ }
+
+
+
+
+
 
 //#define F_CPU_TICK ARM_DWT_CYCCNT
 uint32_t __attribute__((always_inline)) F_CPU_tick_count() //Restructure as a MACRO
@@ -20,24 +45,14 @@ float __attribute__((flatten)) get_CPU_temp()
 //Is this an active low pulse?
 void single_pulse(const uint8_t PIN) __attribute__((always_inline))
 {
-  digitalWriteFast(PIN, HIGH);
-  asm("dsb");
-  asm("nop");
   digitalToggleFast(PIN);
-  asm("dsb")
+  volatile asm("dsb");
+  volatile asm("nop");
+  digitalToggleFast(PIN);
+  volatile asm("dsb")
 }
 
-//Route to PIN 14
-void test_sigle_pulse() __attribute__((flatten))
-{
-  unsigned long duration = pulseIn(14, HIGH);
-  Serial.println(duration);
 
-  //Serial.println(ARM_DWT_CYCCNT);
-  asm volatile ("nop");
-  //Serial.println(ARM_DWT_CYCCNT);
-
-}
 
 
 IMXRT_TMR_t * TMRx = (IMXRT_TMR_t *)&IMXRT_TMR4;
