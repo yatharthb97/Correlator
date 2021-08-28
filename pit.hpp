@@ -103,6 +103,25 @@ PITController()
 	{
 		return 1e-6 / this->Clk_freq;
 	}
+
+
+	/** @brief Returns the correspoding XBAR1-A Input Pins for the corresponding channel TRIGGER signal. 
+	 * \reference - Manual Page 63. 
+	 * \attention - This function does not initalize the xbar channels. It only returns the corresponding pin. */
+	void get_xbar_in_pin() __attribute__((always_inline))
+	{
+		if(ChID == 0)
+		{ return 56; }
+
+		else if(ChID == 1)
+		{ return 57; }
+
+		else if(ChID == 2)
+		{ return 58; }
+
+		else if(ChID == 3)
+		{ return 59; }
+	}
 /* @} */ //End of Control Functions
 
 

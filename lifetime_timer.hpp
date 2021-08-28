@@ -1,4 +1,6 @@
 #pragma once
+#include "errors.hpp"
+
 
 /** @brief Interface for using the "Life Time TImer" functionality of the Periodic Interrut Timer on Teensy 4.x microcontrollers. The module uses Channel 0 and 1 of the 4 PIT channels.
  * \attention The module has no checks on the use of CH0 and CH1 by external drivers, however, the interface enforces a singleton template and can only be constructed once. 
@@ -14,7 +16,7 @@ public:
 	//0 - Constructor
 	PIT_LifetimeTimer()
 	{
-		static_assert(singleton_flag, "PIT_LifetimeTimer : The resource is already constructed.");
+		_assert_(!singleton_flag, "PIT_LifetimeTimer : The resource is already constructed.");
 		singleton_flag  = true;
 	}
 
