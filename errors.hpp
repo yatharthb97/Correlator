@@ -3,14 +3,14 @@
 
 //Common Error Codes for Software-Hardware Interface
 
-// Error codes
+/** @brief Enumarates the error codes thrown by the different modules. */
 enum class Error_t
 {
-	Success = 0,
+	Success = 0,      //! No error
 	Counter_Overflow,
 	Counter_Underflow,
-	Precision,
-	Input_Validation
+	Precision, 		 //! The error due to finite resolution is greater than acceptable.
+	Input_Validation //! Input validation failed
 };
 
 /** @breif Contains functions that handle errors of type `Error_t`. */
@@ -59,16 +59,18 @@ namespace Errors{
 /** @brief Custom runtime assert function that sets all the dashboard LEDs to high. */
 #ifndef NDEBUG
 	
-	void _assert_(bool expression) __attribute__((noreturn, flatten))
+	/** @brief Custom assertion function. 
+	 * @param expression which must evaluate to false for the assertion to call abort.
+	 * @param message which is ignored in the function,  but helps with code redability*/
+	void _assert_(bool expression, char* __attribute__((unused)) message = "") __attribute__((noreturn, flatten))
 	{
 		if(!expression)
 		{
-			//Set all LED Pins to High
-			LEDSet::set_all();
+			LEDSet::set_all(); //Set all LED Pins to High
+			
+			abort(); //Call abort
 		}
 
-		//Call abort
-		abort();
 	}
 
 #elif
