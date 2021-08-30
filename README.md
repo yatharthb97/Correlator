@@ -1,5 +1,7 @@
 # DIY Teensy Correlator Project Repository
 
+Online *doxygen* documentation Link: https://yatharthb97.github.io/Correlator/index.html
+
 ## Software
 
 This folder contains the implementation of the software correlator that will be used on Teensy. The file descriptions are as follows:
