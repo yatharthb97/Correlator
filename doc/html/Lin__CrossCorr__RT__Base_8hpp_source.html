@@ -24,7 +24,7 @@
    <div id="projectname">DIY Auto-Correlator
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Auto-CorrelatorCardimplementationusingTeensy4.xmicrocontrollers.</div>
+   <div id="projectbrief">Auto-Correlator Card implementation using Teensy 4.x microcontrollers.</div>
   </td>
  </tr>
  </tbody>
@@ -75,9 +75,9 @@ $(function() {
 <div class="ttc" id="classLin__CrossCorr__RT__Base_html"><div class="ttname"><a href="classLin__CrossCorr__RT__Base.html">Lin_CrossCorr_RT_Base</a></div><div class="ttdoc">This class is a blank interface for all objects that are — {Linear Real-Time Software Auto-Correlato...</div><div class="ttdef"><b>Definition:</b> Lin_CrossCorr_RT_Base.hpp:6</div></div>
 <div class="ttc" id="group__Lin__CorrCorr__Base__Out_html_ga5d7bad992e07606a18ea828aeb768e1f"><div class="ttname"><a href="group__Lin__CorrCorr__Base__Out.html#ga5d7bad992e07606a18ea828aeb768e1f">Lin_CrossCorr_RT_Base::ch_out</a></div><div class="ttdeci">virtual void ch_out() const =0</div><div class="ttdoc">Outputs all the channels using specific implementation based methods. Both the channel outputs are ap...</div></div>
 <div class="ttc" id="group__Lin__CorrCorr__Base__Out_html_gacc777900e8d232740373a70c1d5b4cce"><div class="ttname"><a href="group__Lin__CorrCorr__Base__Out.html#gacc777900e8d232740373a70c1d5b4cce">Lin_CrossCorr_RT_Base::get_ch_array12</a></div><div class="ttdeci">virtual counter_t * get_ch_array12() const =0</div></div>
-<div class="ttc" id="types_8hpp_html_a7c40bb931c31595ed6308605f4537447"><div class="ttname"><a href="types_8hpp.html#a7c40bb931c31595ed6308605f4537447">index_t</a></div><div class="ttdeci">uint_fast8_t index_t</div><div class="ttdoc">Data type received from the pulse counter. It is the fundamental type used for representing series da...</div><div class="ttdef"><b>Definition:</b> types.hpp:7</div></div>
+<div class="ttc" id="types_8hpp_html_a7c40bb931c31595ed6308605f4537447"><div class="ttname"><a href="types_8hpp.html#a7c40bb931c31595ed6308605f4537447">index_t</a></div><div class="ttdeci">uint_fast8_t index_t</div><div class="ttdoc">It is used as the array indices and thus determine the maximum size of the Channel_array and the Seri...</div><div class="ttdef"><b>Definition:</b> types.hpp:7</div></div>
 <div class="ttc" id="classLin__CrossCorr__RT__Base_html_a48faa93c6766605436fd8399949beb11"><div class="ttname"><a href="classLin__CrossCorr__RT__Base.html#a48faa93c6766605436fd8399949beb11">Lin_CrossCorr_RT_Base::push_data</a></div><div class="ttdeci">virtual void push_data(const counter_t *container1, const counter_t *container2, const index_t size)=0</div><div class="ttdoc">Repeatedy calls Lin_CrossCorr_RT_Base::push_datam() on all the elements of the countainers. </div></div>
-<div class="ttc" id="types_8hpp_html_ac89ac912f524b3e3fa3720ea55fec966"><div class="ttname"><a href="types_8hpp.html#ac89ac912f524b3e3fa3720ea55fec966">counter_t</a></div><div class="ttdeci">uint_fast32_t counter_t</div><div class="ttdef"><b>Definition:</b> types.hpp:5</div></div>
+<div class="ttc" id="types_8hpp_html_ac89ac912f524b3e3fa3720ea55fec966"><div class="ttname"><a href="types_8hpp.html#ac89ac912f524b3e3fa3720ea55fec966">counter_t</a></div><div class="ttdeci">uint_fast32_t counter_t</div><div class="ttdoc">Data type received from the pulse counter. It is the fundamental type used for representing series da...</div><div class="ttdef"><b>Definition:</b> types.hpp:5</div></div>
 <div class="ttc" id="classLin__CrossCorr__RT__Base_html_abdc90b5ab6a5f7ac98e97b3d16261834"><div class="ttname"><a href="classLin__CrossCorr__RT__Base.html#abdc90b5ab6a5f7ac98e97b3d16261834">Lin_CrossCorr_RT_Base::push_datum</a></div><div class="ttdeci">virtual void push_datum(counter_t datum1, counter_t datum2)=0</div><div class="ttdoc">Accepts two single datum from the counters — which is the lowest order of data aggregate, appends to Series_array(s) and updates relevant channels. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

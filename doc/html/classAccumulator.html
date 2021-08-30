@@ -24,7 +24,7 @@
    <div id="projectname">DIY Auto-Correlator
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Auto-CorrelatorCardimplementationusingTeensy4.xmicrocontrollers.</div>
+   <div id="projectbrief">Auto-Correlator Card implementation using Teensy 4.x microcontrollers.</div>
   </td>
  </tr>
  </tbody>
@@ -77,20 +77,22 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa1793bc1599bc2451fabc44954673164"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAccumulator.html#aa1793bc1599bc2451fabc44954673164">pipe</a> (<a class="el" href="classLin__ACorr__RT__Base.html">Lin_ACorr_RT_Base</a> &amp;channel, <a class="el" href="types_8hpp.html#ac89ac912f524b3e3fa3720ea55fec966">counter_t</a> datum) <a class="el" href="utilities_8hpp.html#a103d5b3998e0dd804213c8f30a094f4d">__attribute__</a>((flatten))</td></tr>
-<tr class="memdesc:aa1793bc1599bc2451fabc44954673164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maintains a cunter of the items to accumuate.  <a href="#aa1793bc1599bc2451fabc44954673164">More...</a><br /></td></tr>
+<tr class="memdesc:aa1793bc1599bc2451fabc44954673164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accumulates data points until the BufferPoints criteria is satisfied, after which the points are pushed to the channel.  <a href="#aa1793bc1599bc2451fabc44954673164">More...</a><br /></td></tr>
 <tr class="separator:aa1793bc1599bc2451fabc44954673164"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a9cc7c392e99778c99593f7798cb2ab3b"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAccumulator.html#a9cc7c392e99778c99593f7798cb2ab3b">ReceivedPointsCounter</a> = 0</td></tr>
+<tr class="memdesc:a9cc7c392e99778c99593f7798cb2ab3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of points accepted by the accumulator. For debugging.  <a href="#a9cc7c392e99778c99593f7798cb2ab3b">More...</a><br /></td></tr>
 <tr class="separator:a9cc7c392e99778c99593f7798cb2ab3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a559e4fac031df015e47248599740b33c"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAccumulator.html#a559e4fac031df015e47248599740b33c">BufferPoints</a> = 0</td></tr>
-<tr class="memdesc:a559e4fac031df015e47248599740b33c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of points accepted by the accumulator. For debugging.  <a href="#a559e4fac031df015e47248599740b33c">More...</a><br /></td></tr>
+<tr class="memdesc:a559e4fac031df015e47248599740b33c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of points accumulated and binned together.  <a href="#a559e4fac031df015e47248599740b33c">More...</a><br /></td></tr>
 <tr class="separator:a559e4fac031df015e47248599740b33c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e615af8b85dd2c8500d1f8c473879ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8hpp.html#ac89ac912f524b3e3fa3720ea55fec966">counter_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAccumulator.html#a8e615af8b85dd2c8500d1f8c473879ab">Accumulate</a> = 0.0</td></tr>
-<tr class="memdesc:a8e615af8b85dd2c8500d1f8c473879ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nmber of points accumulated and binned together.  <a href="#a8e615af8b85dd2c8500d1f8c473879ab">More...</a><br /></td></tr>
+<tr class="memdesc:a8e615af8b85dd2c8500d1f8c473879ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the value of the accumulate.  <a href="#a8e615af8b85dd2c8500d1f8c473879ab">More...</a><br /></td></tr>
 <tr class="separator:a8e615af8b85dd2c8500d1f8c473879ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a753e3878c3078a11ee9bc13b6185ec60"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAccumulator.html#a753e3878c3078a11ee9bc13b6185ec60">LocalCounter</a> = 0</td></tr>
+<tr class="memdesc:a753e3878c3078a11ee9bc13b6185ec60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maintains a cunter of the items to accumuate.  <a href="#a753e3878c3078a11ee9bc13b6185ec60">More...</a><br /></td></tr>
 <tr class="separator:a753e3878c3078a11ee9bc13b6185ec60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -130,7 +132,6 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Maintains a cunter of the items to accumuate. </p>
 <p>Accumulates data points until the BufferPoints criteria is satisfied, after which the points are pushed to the channel. </p>
 
 </div>
@@ -156,7 +157,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Nmber of points accumulated and binned together. </p>
+<p>Stores the value of the accumulate. </p>
 
 </div>
 </div>
@@ -180,7 +181,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Maximum number of points accepted by the accumulator. For debugging. </p>
+<p>Number of points accumulated and binned together. </p>
 
 </div>
 </div>
@@ -204,6 +205,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Maintains a cunter of the items to accumuate. </p>
+
 </div>
 </div>
 <a id="a9cc7c392e99778c99593f7798cb2ab3b"></a>
@@ -225,6 +228,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Maximum number of points accepted by the accumulator. For debugging. </p>
 
 </div>
 </div>
