@@ -1,0 +1,163 @@
+.TH "Circular_Buffer< Type, MaxSize >" 3 "Mon Aug 30 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Circular_Buffer< Type, MaxSize > \- Implementation of simple Serial Buffer with bounded index random accessor\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <circular_buffer\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBreset\fP () \fB__attribute__\fP((always_inline))"
+.br
+.RI "Resets the buffer (pointers) without clearing the elements\&. "
+.ti -1c
+.RI "bool \fBis_full\fP () const \fB__attribute__\fP((always_inline))"
+.br
+.RI "Returns whether the buffer is full\&. "
+.ti -1c
+.RI "bool \fBis_empty\fP () const \fB__attribute__\fP((always_inline))"
+.br
+.RI "Returns whether the buffer is empty\&. "
+.ti -1c
+.RI "size_t \fBcapacity\fP () const \fB__attribute__\fP((always_inline))"
+.br
+.RI "Returns the maximum capacity of the buffer\&. "
+.ti -1c
+.RI "size_t \fBsize\fP () const \fB__attribute__\fP((always_inline))"
+.br
+.RI "Returns the current size of the buffer\&. "
+.ti -1c
+.RI "void \fBpush_back\fP (const Type data) \fB__attribute__\fP((flatten))"
+.br
+.RI "Adds a datum to the circular buffer\&. "
+.ti -1c
+.RI "Type \fBpop_back\fP () \fB__attribute__\fP((always_inline))"
+.br
+.RI "Returns the last element from the buffer and deletes it - pop operation\&. "
+.ti -1c
+.RI "Type \fBoperator[]\fP (const size_t index) const \fB__attribute__\fP((always_inline))"
+.br
+.RI "Random access operator can be used to retrive the nth element in the buffer at any state of the buffer\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBadvance_pointer\fP () \fB__attribute__\fP((always_inline))"
+.br
+.RI "Flag indicates whether the buffer is running at full capacity\&. "
+.ti -1c
+.RI "void \fBretreat_pointer\fP () \fB__attribute__\fP((always_inline))"
+.br
+.RI "Adjusts the pointers after a removal or \fBpop_back()\fP operation\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Type \fBbuffer\fP [MaxSize] = {0}"
+.br
+.ti -1c
+.RI "size_t \fBhead\fP"
+.br
+.RI "Fixed Size Buffer\&. "
+.ti -1c
+.RI "size_t \fBtail\fP"
+.br
+.RI "Index / Pointer of the first element of the buffer\&. "
+.ti -1c
+.RI "bool \fBis_full_flag\fP"
+.br
+.RI "Index / Pointer to the last element of the buffer\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename Type, size_t MaxSize>
+.br
+class Circular_Buffer< Type, MaxSize >"
+Implementation of simple Serial Buffer with bounded index random accessor\&. 
+
+
+.PP
+\fBAttention:\fP
+.RS 4
+{Compilation - Not-OK, Tests - Incomplete} 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename Type , size_t MaxSize> void \fBCircular_Buffer\fP< Type, MaxSize >::advance_pointer ()\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Flag indicates whether the buffer is running at full capacity\&. Adjusts the pointer after addition or \fBpush_back()\fP operation\&. 
+.SS "template<typename Type , size_t MaxSize> size_t \fBCircular_Buffer\fP< Type, MaxSize >::capacity () const\fC [inline]\fP"
+
+.PP
+Returns the maximum capacity of the buffer\&. 
+.SS "template<typename Type , size_t MaxSize> bool \fBCircular_Buffer\fP< Type, MaxSize >::is_empty () const\fC [inline]\fP"
+
+.PP
+Returns whether the buffer is empty\&. 
+.PP
+\fBNote:\fP
+.RS 4
+{!is_full() != \fBis_empty()\fP} 
+.RE
+.PP
+
+.SS "template<typename Type , size_t MaxSize> bool \fBCircular_Buffer\fP< Type, MaxSize >::is_full () const\fC [inline]\fP"
+
+.PP
+Returns whether the buffer is full\&. 
+.SS "template<typename Type , size_t MaxSize> Type \fBCircular_Buffer\fP< Type, MaxSize >::operator[] (const size_t index) const\fC [inline]\fP"
+
+.PP
+Random access operator can be used to retrive the nth element in the buffer at any state of the buffer\&. 
+.SS "template<typename Type , size_t MaxSize> Type \fBCircular_Buffer\fP< Type, MaxSize >::pop_back ()\fC [inline]\fP"
+
+.PP
+Returns the last element from the buffer and deletes it - pop operation\&. 
+.SS "template<typename Type , size_t MaxSize> void \fBCircular_Buffer\fP< Type, MaxSize >::push_back (const Type data)\fC [inline]\fP"
+
+.PP
+Adds a datum to the circular buffer\&. 
+.SS "template<typename Type , size_t MaxSize> void \fBCircular_Buffer\fP< Type, MaxSize >::reset ()\fC [inline]\fP"
+
+.PP
+Resets the buffer (pointers) without clearing the elements\&. 
+.SS "template<typename Type , size_t MaxSize> void \fBCircular_Buffer\fP< Type, MaxSize >::retreat_pointer ()\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Adjusts the pointers after a removal or \fBpop_back()\fP operation\&. 
+.SS "template<typename Type , size_t MaxSize> size_t \fBCircular_Buffer\fP< Type, MaxSize >::size () const\fC [inline]\fP"
+
+.PP
+Returns the current size of the buffer\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "template<typename Type , size_t MaxSize> Type \fBCircular_Buffer\fP< Type, MaxSize >::buffer[MaxSize] = {0}\fC [private]\fP"
+
+.SS "template<typename Type , size_t MaxSize> size_t \fBCircular_Buffer\fP< Type, MaxSize >::head\fC [private]\fP"
+
+.PP
+Fixed Size Buffer\&. 
+.SS "template<typename Type , size_t MaxSize> bool \fBCircular_Buffer\fP< Type, MaxSize >::is_full_flag\fC [private]\fP"
+
+.PP
+Index / Pointer to the last element of the buffer\&. 
+.SS "template<typename Type , size_t MaxSize> size_t \fBCircular_Buffer\fP< Type, MaxSize >::tail\fC [private]\fP"
+
+.PP
+Index / Pointer of the first element of the buffer\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator from the source code\&.

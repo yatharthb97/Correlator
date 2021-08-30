@@ -1,0 +1,71 @@
+.TH "Simpler_Circular_Buffer< Type, MaxSize >" 3 "Mon Aug 30 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Simpler_Circular_Buffer< Type, MaxSize >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <simpler_circular_buffer\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBreset\fP () \fB__attribute__\fP((always_inline))"
+.br
+.RI "Index / Pointer to the last element of the buffer\&. "
+.ti -1c
+.RI "void \fBpush_back\fP (const Type datum) \fB__attribute__\fP((flatten))"
+.br
+.RI "Adds a datum to the circular buffer\&. "
+.ti -1c
+.RI "Type \fBoperator[]\fP (const size_t index) const \fB__attribute__\fP((always_inline))"
+.br
+.RI "Random access operator can be used to retrive the nth element in the buffer at any state of the buffer\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Type \fBbuffer\fP [MaxSize] = {0}"
+.br
+.ti -1c
+.RI "size_t \fBhead\fP = 0"
+.br
+.RI "Fixed Size Buffer\&. "
+.ti -1c
+.RI "size_t \fBtail\fP = 0"
+.br
+.RI "Index / Pointer of the first element of the buffer\&. "
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename Type, size_t MaxSize> Type \fBSimpler_Circular_Buffer\fP< Type, MaxSize >::operator[] (const size_t index) const\fC [inline]\fP"
+
+.PP
+Random access operator can be used to retrive the nth element in the buffer at any state of the buffer\&. 
+.SS "template<typename Type, size_t MaxSize> void \fBSimpler_Circular_Buffer\fP< Type, MaxSize >::push_back (const Type datum)\fC [inline]\fP"
+
+.PP
+Adds a datum to the circular buffer\&. 
+.SS "template<typename Type, size_t MaxSize> void \fBSimpler_Circular_Buffer\fP< Type, MaxSize >::reset ()\fC [inline]\fP"
+
+.PP
+Index / Pointer to the last element of the buffer\&. Resets the buffer (pointers) without clearing the elements\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "template<typename Type, size_t MaxSize> Type \fBSimpler_Circular_Buffer\fP< Type, MaxSize >::buffer[MaxSize] = {0}\fC [private]\fP"
+
+.SS "template<typename Type, size_t MaxSize> size_t \fBSimpler_Circular_Buffer\fP< Type, MaxSize >::head = 0\fC [private]\fP"
+
+.PP
+Fixed Size Buffer\&. 
+.SS "template<typename Type, size_t MaxSize> size_t \fBSimpler_Circular_Buffer\fP< Type, MaxSize >::tail = 0\fC [private]\fP"
+
+.PP
+Index / Pointer of the first element of the buffer\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator from the source code\&.

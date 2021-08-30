@@ -1,0 +1,49 @@
+.TH "/mnt/m/code/Correlator/modules.hpp" 3 "Mon Aug 30 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/mnt/m/code/Correlator/modules.hpp
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBError_t\fP \fBPI_t_typical_setup\fP (double gate_time, void(*isr_fn)())"
+.br
+.RI "Typical setup for PI_t module\&. "
+.ti -1c
+.RI "FAST void \fBpit_isr\fP () \fB__attribute__\fP((interrupt('FIQ')))"
+.br
+.RI "Test ISR for PI_t\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBPITController\fP< 0 > \fBPI_t\fP"
+.br
+.ti -1c
+.RI "IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B0_04 & \fBIOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B0_04\fP = MUX_MODE(6)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBError_t\fP PI_t_typical_setup (double gate_time, void(*)() isr_fn)"
+
+.PP
+Typical setup for PI_t module\&. 
+.SS "FAST void pit_isr ()"
+
+.PP
+Test ISR for PI_t\&. 
+.SH "Variable Documentation"
+.PP 
+.SS "IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B0_04& IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B0_04 = MUX_MODE(6)"
+
+.SS "\fBPITController\fP<0> PI_t"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator from the source code\&.

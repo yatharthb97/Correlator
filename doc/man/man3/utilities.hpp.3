@@ -1,0 +1,51 @@
+.TH "/mnt/m/code/Correlator/utilities.hpp" 3 "Mon Aug 30 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/mnt/m/code/Correlator/utilities.hpp
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBPRREG\fP(x)   Serial\&.print(#x' 0x'); Serial\&.println(x,HEX)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBxbar_connect\fP (unsigned int input, unsigned int output)"
+.br
+.RI "Establishes connection over XBAR1-A, given the input and output xbar pins  - https://github.com/manitou48/teensy4/blob/bc8fc46af5065a3f84352e0474069ae7a1a13064/pitxbaradc.ino#L40  - Not specified\&. "
+.ti -1c
+.RI "uint32_t \fB__attribute__\fP ((always_inline)) F_CPU_tick_count()"
+.br
+.ti -1c
+.RI "float \fB__attribute__\fP ((flatten)) get_CPU_temp()"
+.br
+.ti -1c
+.RI "void \fBsingle_pulse\fP (const uint8_t PIN) \fB__attribute__\fP((always_inline))"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define PRREG(x)   Serial\&.print(#x' 0x'); Serial\&.println(x,HEX)"
+
+.SH "Function Documentation"
+.PP 
+.SS "uint32_t __attribute__ ((always_inline))"
+
+.SS "float __attribute__ ((flatten))"
+
+.SS "void single_pulse (const uint8_t PIN)"
+
+.SS "void xbar_connect (unsigned int input, unsigned int output)"
+
+.PP
+Establishes connection over XBAR1-A, given the input and output xbar pins  - https://github.com/manitou48/teensy4/blob/bc8fc46af5065a3f84352e0474069ae7a1a13064/pitxbaradc.ino#L40  - Not specified\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator from the source code\&.

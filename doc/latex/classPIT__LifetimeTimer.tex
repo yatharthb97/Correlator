@@ -1,0 +1,175 @@
+\hypertarget{classPIT__LifetimeTimer}{}\section{P\+I\+T\+\_\+\+Lifetime\+Timer Class Reference}
+\label{classPIT__LifetimeTimer}\index{P\+I\+T\+\_\+\+Lifetime\+Timer@{P\+I\+T\+\_\+\+Lifetime\+Timer}}
+
+
+Interface for using the \char`\"{}\+Life Time T\+Imer\char`\"{} functionality of the Periodic Interrut Timer on Teensy 4.\+x microcontrollers. The module uses Channel 0 and 1 of the 4 P\+IT channels.  
+
+
+
+
+{\ttfamily \#include $<$lifetime\+\_\+timer.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPIT__LifetimeTimer_a826797e75688ab4e7cd5c8854fa6a7c0}{P\+I\+T\+\_\+\+Lifetime\+Timer} ()
+\begin{DoxyCompactList}\small\item\em Enforces a singleton template. \end{DoxyCompactList}\item 
+void \hyperlink{classPIT__LifetimeTimer_ad1c585d138123be94769afcca87f2dc6}{init} () \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
+\begin{DoxyCompactList}\small\item\em Sets up Timer 0 and Timer 1 channels for Lifetime timing -\/ chained configuration. This function also makes a call to enable P\+IT timers. The timers are aet at maximum values and will start downcounting once \+::start() method is called.  \+: Code adapted from I\+M\+X\+RT Manual Page 2977. \end{DoxyCompactList}\item 
+void \hyperlink{classPIT__LifetimeTimer_a6feabeff2529cabaf27ef53d027a4fc9}{start} () \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
+\begin{DoxyCompactList}\small\item\em Starts the timers for down counting. \end{DoxyCompactList}\item 
+void \hyperlink{classPIT__LifetimeTimer_a92543f292044725b1dea4d009e01d9e4}{stop} () \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
+\begin{DoxyCompactList}\small\item\em Stops the timers from counting. The timers values will freeze. \end{DoxyCompactList}\item 
+void \hyperlink{classPIT__LifetimeTimer_a5c1c38cfa6c7a049a495ee3d89e13276}{reset} () \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
+\begin{DoxyCompactList}\small\item\em Stops the timers and resets the timer back to the init value (max) -\/ 0x\+F\+F\+F\+F\+F\+F\+F\+F\+F\+F\+F\+F\+FF. \end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{classPIT__LifetimeTimer_a4ee08cce7812322a7a10fcba0463476c}{read\+\_\+val} () \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
+\begin{DoxyCompactList}\small\item\em Returns the complete 64-\/bit timing value. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{classPIT__LifetimeTimer_a4f7f8cd3847b9edb19dfa27f048a08cc}{read\+\_\+low\+\_\+val} () \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
+\begin{DoxyCompactList}\small\item\em Returns the lower 32-\/bit half of the 64-\/bit timing value. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{classPIT__LifetimeTimer_a39b0861ac88aec5e53f326409d536bcf}{read\+\_\+high\+\_\+val} () \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
+\begin{DoxyCompactList}\small\item\em Returns the higher 32-\/bit half of the 64-\/bit timing value. \end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{classPIT__LifetimeTimer_a04adf2272a47d4c81a28c6363e2da4fd}{elapsed64} () \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
+\begin{DoxyCompactList}\small\item\em Returns the elapsed duration from the start call of the timer. The return is the complete 64bit value. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{classPIT__LifetimeTimer_af7481214070333f845a23456b4d75880}{elapsed32} () \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
+\begin{DoxyCompactList}\small\item\em Returns the elapsed duration from the start call of the timer. The return is the lower 32-\/bit half elapsed time value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr bool \hyperlink{classPIT__LifetimeTimer_ac864330dcb91ab7ef876f15ddd74f923}{singleton\+\_\+flag} = false
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for using the \char`\"{}\+Life Time T\+Imer\char`\"{} functionality of the Periodic Interrut Timer on Teensy 4.\+x microcontrollers. The module uses Channel 0 and 1 of the 4 P\+IT channels. 
+
+\begin{DoxyAttention}{Attention}
+The module has no checks on the use of C\+H0 and C\+H1 by external drivers, however, the interface enforces a singleton template and can only be constructed once. 
+
+The module does not set the clock frequency and uses either the default or the one set globally (as is the only use case) by external drivers outside its scope.  \+: Code adapted from I\+M\+X\+RT Manual Page 2977. 
+\end{DoxyAttention}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPIT__LifetimeTimer_a826797e75688ab4e7cd5c8854fa6a7c0}\label{classPIT__LifetimeTimer_a826797e75688ab4e7cd5c8854fa6a7c0}} 
+\index{P\+I\+T\+\_\+\+Lifetime\+Timer@{P\+I\+T\+\_\+\+Lifetime\+Timer}!P\+I\+T\+\_\+\+Lifetime\+Timer@{P\+I\+T\+\_\+\+Lifetime\+Timer}}
+\index{P\+I\+T\+\_\+\+Lifetime\+Timer@{P\+I\+T\+\_\+\+Lifetime\+Timer}!P\+I\+T\+\_\+\+Lifetime\+Timer@{P\+I\+T\+\_\+\+Lifetime\+Timer}}
+\subsubsection{\texorpdfstring{P\+I\+T\+\_\+\+Lifetime\+Timer()}{PIT\_LifetimeTimer()}}
+{\footnotesize\ttfamily P\+I\+T\+\_\+\+Lifetime\+Timer\+::\+P\+I\+T\+\_\+\+Lifetime\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Enforces a singleton template. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPIT__LifetimeTimer_af7481214070333f845a23456b4d75880}\label{classPIT__LifetimeTimer_af7481214070333f845a23456b4d75880}} 
+\index{P\+I\+T\+\_\+\+Lifetime\+Timer@{P\+I\+T\+\_\+\+Lifetime\+Timer}!elapsed32@{elapsed32}}
+\index{elapsed32@{elapsed32}!P\+I\+T\+\_\+\+Lifetime\+Timer@{P\+I\+T\+\_\+\+Lifetime\+Timer}}
+\subsubsection{\texorpdfstring{elapsed32()}{elapsed32()}}
+{\footnotesize\ttfamily uint32\+\_\+t P\+I\+T\+\_\+\+Lifetime\+Timer\+::elapsed32 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the elapsed duration from the start call of the timer. The return is the lower 32-\/bit half elapsed time value. 
+
+\begin{DoxyWarning}{Warning}
+If the elapsed duration is greater than the 32-\/bit rollover time, then the quantity returned is meaningless. Hence, use of this function should be reserved for measuring small time durarions. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classPIT__LifetimeTimer_a04adf2272a47d4c81a28c6363e2da4fd}\label{classPIT__LifetimeTimer_a04adf2272a47d4c81a28c6363e2da4fd}} 
+\index{P\+I\+T\+\_\+\+Lifetime\+Timer@{P\+I\+T\+\_\+\+Lifetime\+Timer}!elapsed64@{elapsed64}}
+\index{elapsed64@{elapsed64}!P\+I\+T\+\_\+\+Lifetime\+Timer@{P\+I\+T\+\_\+\+Lifetime\+Timer}}
+\subsubsection{\texorpdfstring{elapsed64()}{elapsed64()}}
+{\footnotesize\ttfamily uint64\+\_\+t P\+I\+T\+\_\+\+Lifetime\+Timer\+::elapsed64 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the elapsed duration from the start call of the timer. The return is the complete 64bit value. 
+
+\mbox{\Hypertarget{classPIT__LifetimeTimer_ad1c585d138123be94769afcca87f2dc6}\label{classPIT__LifetimeTimer_ad1c585d138123be94769afcca87f2dc6}} 
+\index{P\+I\+T\+\_\+\+Lifetime\+Timer@{P\+I\+T\+\_\+\+Lifetime\+Timer}!init@{init}}
+\index{init@{init}!P\+I\+T\+\_\+\+Lifetime\+Timer@{P\+I\+T\+\_\+\+Lifetime\+Timer}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void P\+I\+T\+\_\+\+Lifetime\+Timer\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets up Timer 0 and Timer 1 channels for Lifetime timing -\/ chained configuration. This function also makes a call to enable P\+IT timers. The timers are aet at maximum values and will start downcounting once \+::start() method is called.  \+: Code adapted from I\+M\+X\+RT Manual Page 2977. 
+
+\begin{DoxyAttention}{Attention}
+\+: The timers will operate at the clock frequency set for P\+IT timers outside this library. 
+\end{DoxyAttention}
+\mbox{\Hypertarget{classPIT__LifetimeTimer_a39b0861ac88aec5e53f326409d536bcf}\label{classPIT__LifetimeTimer_a39b0861ac88aec5e53f326409d536bcf}} 
+\index{P\+I\+T\+\_\+\+Lifetime\+Timer@{P\+I\+T\+\_\+\+Lifetime\+Timer}!read\+\_\+high\+\_\+val@{read\+\_\+high\+\_\+val}}
+\index{read\+\_\+high\+\_\+val@{read\+\_\+high\+\_\+val}!P\+I\+T\+\_\+\+Lifetime\+Timer@{P\+I\+T\+\_\+\+Lifetime\+Timer}}
+\subsubsection{\texorpdfstring{read\+\_\+high\+\_\+val()}{read\_high\_val()}}
+{\footnotesize\ttfamily uint32\+\_\+t P\+I\+T\+\_\+\+Lifetime\+Timer\+::read\+\_\+high\+\_\+val (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the higher 32-\/bit half of the 64-\/bit timing value. 
+
+\mbox{\Hypertarget{classPIT__LifetimeTimer_a4f7f8cd3847b9edb19dfa27f048a08cc}\label{classPIT__LifetimeTimer_a4f7f8cd3847b9edb19dfa27f048a08cc}} 
+\index{P\+I\+T\+\_\+\+Lifetime\+Timer@{P\+I\+T\+\_\+\+Lifetime\+Timer}!read\+\_\+low\+\_\+val@{read\+\_\+low\+\_\+val}}
+\index{read\+\_\+low\+\_\+val@{read\+\_\+low\+\_\+val}!P\+I\+T\+\_\+\+Lifetime\+Timer@{P\+I\+T\+\_\+\+Lifetime\+Timer}}
+\subsubsection{\texorpdfstring{read\+\_\+low\+\_\+val()}{read\_low\_val()}}
+{\footnotesize\ttfamily uint32\+\_\+t P\+I\+T\+\_\+\+Lifetime\+Timer\+::read\+\_\+low\+\_\+val (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the lower 32-\/bit half of the 64-\/bit timing value. 
+
+\mbox{\Hypertarget{classPIT__LifetimeTimer_a4ee08cce7812322a7a10fcba0463476c}\label{classPIT__LifetimeTimer_a4ee08cce7812322a7a10fcba0463476c}} 
+\index{P\+I\+T\+\_\+\+Lifetime\+Timer@{P\+I\+T\+\_\+\+Lifetime\+Timer}!read\+\_\+val@{read\+\_\+val}}
+\index{read\+\_\+val@{read\+\_\+val}!P\+I\+T\+\_\+\+Lifetime\+Timer@{P\+I\+T\+\_\+\+Lifetime\+Timer}}
+\subsubsection{\texorpdfstring{read\+\_\+val()}{read\_val()}}
+{\footnotesize\ttfamily uint64\+\_\+t P\+I\+T\+\_\+\+Lifetime\+Timer\+::read\+\_\+val (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the complete 64-\/bit timing value. 
+
+\mbox{\Hypertarget{classPIT__LifetimeTimer_a5c1c38cfa6c7a049a495ee3d89e13276}\label{classPIT__LifetimeTimer_a5c1c38cfa6c7a049a495ee3d89e13276}} 
+\index{P\+I\+T\+\_\+\+Lifetime\+Timer@{P\+I\+T\+\_\+\+Lifetime\+Timer}!reset@{reset}}
+\index{reset@{reset}!P\+I\+T\+\_\+\+Lifetime\+Timer@{P\+I\+T\+\_\+\+Lifetime\+Timer}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void P\+I\+T\+\_\+\+Lifetime\+Timer\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Stops the timers and resets the timer back to the init value (max) -\/ 0x\+F\+F\+F\+F\+F\+F\+F\+F\+F\+F\+F\+F\+FF. 
+
+\mbox{\Hypertarget{classPIT__LifetimeTimer_a6feabeff2529cabaf27ef53d027a4fc9}\label{classPIT__LifetimeTimer_a6feabeff2529cabaf27ef53d027a4fc9}} 
+\index{P\+I\+T\+\_\+\+Lifetime\+Timer@{P\+I\+T\+\_\+\+Lifetime\+Timer}!start@{start}}
+\index{start@{start}!P\+I\+T\+\_\+\+Lifetime\+Timer@{P\+I\+T\+\_\+\+Lifetime\+Timer}}
+\subsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void P\+I\+T\+\_\+\+Lifetime\+Timer\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Starts the timers for down counting. 
+
+\mbox{\Hypertarget{classPIT__LifetimeTimer_a92543f292044725b1dea4d009e01d9e4}\label{classPIT__LifetimeTimer_a92543f292044725b1dea4d009e01d9e4}} 
+\index{P\+I\+T\+\_\+\+Lifetime\+Timer@{P\+I\+T\+\_\+\+Lifetime\+Timer}!stop@{stop}}
+\index{stop@{stop}!P\+I\+T\+\_\+\+Lifetime\+Timer@{P\+I\+T\+\_\+\+Lifetime\+Timer}}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void P\+I\+T\+\_\+\+Lifetime\+Timer\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Stops the timers from counting. The timers values will freeze. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classPIT__LifetimeTimer_ac864330dcb91ab7ef876f15ddd74f923}\label{classPIT__LifetimeTimer_ac864330dcb91ab7ef876f15ddd74f923}} 
+\index{P\+I\+T\+\_\+\+Lifetime\+Timer@{P\+I\+T\+\_\+\+Lifetime\+Timer}!singleton\+\_\+flag@{singleton\+\_\+flag}}
+\index{singleton\+\_\+flag@{singleton\+\_\+flag}!P\+I\+T\+\_\+\+Lifetime\+Timer@{P\+I\+T\+\_\+\+Lifetime\+Timer}}
+\subsubsection{\texorpdfstring{singleton\+\_\+flag}{singleton\_flag}}
+{\footnotesize\ttfamily constexpr bool P\+I\+T\+\_\+\+Lifetime\+Timer\+::singleton\+\_\+flag = false\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/mnt/m/code/\+Correlator/\hyperlink{lifetime__timer_8hpp}{lifetime\+\_\+timer.\+hpp}\end{DoxyCompactItemize}

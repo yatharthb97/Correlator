@@ -1,0 +1,132 @@
+.TH "Lin_CrossCorr_RT_Teensy< Series_size >" 3 "Mon Aug 30 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Lin_CrossCorr_RT_Teensy< Series_size > \- This is an implementation of \fBLin_ACorr_RT_Base\fP for Teensy with \fB\fP(No normalisation or baseline subtraction\&.)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Lin_CrossCorr_RT_Teensy\&.hpp>\fP
+.PP
+Inherits \fBLin_CrossCorr_RT_Base\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fB__attribute__\fP ((flatten)) \fBpush_datum\fP(\fBcounter_t\fP datum1"
+.br
+.RI "Stores the last active index → Post-increment\&. "
+.ti -1c
+.RI "\fBSeries_array2\fP \fBpush_back\fP (datum2)"
+.br
+.ti -1c
+.RI "\fBfor\fP (unsigned int i=0;i<=Series_size;i++)"
+.br
+.ti -1c
+.RI "void \fB__attribute__\fP ((flatten)) \fBpush_data\fP(const \fBcounter_t\fP *container1"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBcounter_t\fP \fBChannel_array12\fP [Series_size] = {0}"
+.br
+.ti -1c
+.RI "\fBcounter_t\fP \fBChannel_array21\fP [Series_size] = {0}"
+.br
+.RI "Stores the Channel output - 12\&. "
+.ti -1c
+.RI "\fBSimpler_Circular_Buffer\fP< \fBcounter_t\fP, Series_size > \fBSeries_array1\fP"
+.br
+.RI "Stores the Channel output - 21\&. "
+.ti -1c
+.RI "\fBSimpler_Circular_Buffer\fP< \fBcounter_t\fP, Series_size > \fBSeries_array2\fP"
+.br
+.ti -1c
+.RI "\fBindex_t\fP \fBSeries_index1\fP = 0"
+.br
+.ti -1c
+.RI "\fBindex_t\fP \fBSeries_index2\fP = 0"
+.br
+.RI "Stores the last active index → Post-increment\&. "
+.ti -1c
+.RI "void \fBcounter_t\fP datum2 \fBoverride\fP"
+.br
+.ti -1c
+.RI "\fBSeries_index1\fP"
+.br
+.ti -1c
+.RI "\fBSeries_index2\fP"
+.br
+.ti -1c
+.RI "void const \fBcounter_t\fP * \fBcontainer2\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<index_t Series_size>
+.br
+class Lin_CrossCorr_RT_Teensy< Series_size >"
+This is an implementation of \fBLin_ACorr_RT_Base\fP for Teensy with \fB\fP(No normalisation or baseline subtraction\&.) 
+
+
+.PP
+\fBNote:\fP
+.RS 4
+{ Template parameter - Size of the Series and Channel array and indicates the maximum points that can be stored by the correlator object\&. The circuular buffer will then rewrite the older points to accomodate for the other points\&. } 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<index_t Series_size> void \fBLin_CrossCorr_RT_Teensy\fP< Series_size >::__attribute__ ((flatten))"
+
+.PP
+Stores the last active index → Post-increment\&. 
+.SS "template<index_t Series_size> void \fBLin_CrossCorr_RT_Teensy\fP< Series_size >::__attribute__ ((flatten)) const"
+
+.SS "template<index_t Series_size> \fBLin_CrossCorr_RT_Teensy\fP< Series_size >::for (unsigned int i = \fC0; i <= Series_size; i++\fP)\fC [inline]\fP"
+
+.SS "template<index_t Series_size> \fBSeries_array2\fP \fBLin_CrossCorr_RT_Teensy\fP< Series_size >::push_back (datum2)"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "template<index_t Series_size> \fBcounter_t\fP \fBLin_CrossCorr_RT_Teensy\fP< Series_size >::Channel_array12[Series_size] = {0}"
+
+.SS "template<index_t Series_size> \fBcounter_t\fP \fBLin_CrossCorr_RT_Teensy\fP< Series_size >::Channel_array21[Series_size] = {0}"
+
+.PP
+Stores the Channel output - 12\&. 
+.SS "template<index_t Series_size> void const \fBcounter_t\fP* \fBLin_CrossCorr_RT_Teensy\fP< Series_size >::container2"
+
+.SS "template<index_t Series_size> void \fBcounter_t\fP datum2 \fBLin_CrossCorr_RT_Teensy\fP< Series_size >::override"
+\fBInitial value:\fP
+.PP
+.nf
+{
+    Series_array1\&.push_back(datum1)
+.fi
+.SS "template<index_t Series_size> \fBSimpler_Circular_Buffer\fP<\fBcounter_t\fP, Series_size> \fBLin_CrossCorr_RT_Teensy\fP< Series_size >::Series_array1"
+
+.PP
+Stores the Channel output - 21\&. Stores the data points in a circular Buffer 
+.SS "template<index_t Series_size> \fBSimpler_Circular_Buffer\fP<\fBcounter_t\fP, Series_size> \fBLin_CrossCorr_RT_Teensy\fP< Series_size >::Series_array2"
+
+.SS "template<index_t Series_size> \fBindex_t\fP \fBLin_CrossCorr_RT_Teensy\fP< Series_size >::Series_index1 = 0"
+
+.SS "template<index_t Series_size> \fBLin_CrossCorr_RT_Teensy\fP< Series_size >::Series_index1"
+
+.SS "template<index_t Series_size> \fBindex_t\fP \fBLin_CrossCorr_RT_Teensy\fP< Series_size >::Series_index2 = 0"
+
+.PP
+Stores the last active index → Post-increment\&. 
+.SS "template<index_t Series_size> \fBLin_CrossCorr_RT_Teensy\fP< Series_size >::Series_index2"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator from the source code\&.

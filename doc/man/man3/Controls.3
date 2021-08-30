@@ -1,0 +1,84 @@
+.TH "Controls" 3 "Mon Aug 30 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Controls
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBPITController< ChID >::start\fP () \fB__attribute__\fP((always_inline))"
+.br
+.RI "Start counting on the timer\&. "
+.ti -1c
+.RI "void \fBPITController< ChID >::stop\fP () \fB__attribute__\fP((always_inline))"
+.br
+.RI "stop counting on the timer\&. "
+.ti -1c
+.RI "\fBError_t\fP \fBPITController< ChID >::set_gate_time\fP (double gt_microseconds) \fB__attribute__\fP((flatten))"
+.br
+.RI "Sets the gate time after which the counter returns to zero and marks the end of onegate interval\&. "
+.ti -1c
+.RI "double \fBPITController< ChID >::period_error_us\fP () const \fB__attribute__\fP((always_inline))"
+.br
+.RI "Returns the error in the gate timing period due to the finite resolution of the timers\&.  Error in microseconds\&. "
+.ti -1c
+.RI "double \fBPITController< ChID >::tick_period_us\fP () \fB__attribute__\fP((always_inline))"
+.br
+.RI "Returns the value of one \fBTick\fP - Minimum resolution of the timer\&. "
+.ti -1c
+.RI "void \fBPITController< ChID >::get_xbar_in_pin\fP () \fB__attribute__\fP((always_inline))"
+.br
+.RI "Returns the correspoding XBAR1-A Input Pins for the corresponding channel TRIGGER signal\&.  - Manual Page 63\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Function Documentation"
+.PP 
+.SS "template<unsigned int ChID> void \fBPITController\fP< ChID >::get_xbar_in_pin ()\fC [inline]\fP"
+
+.PP
+Returns the correspoding XBAR1-A Input Pins for the corresponding channel TRIGGER signal\&.  - Manual Page 63\&. 
+.PP
+\fBAttention:\fP
+.RS 4
+- This function does not initalize the xbar channels\&. It only returns the corresponding pin\&. 
+.RE
+.PP
+
+.SS "template<unsigned int ChID> double \fBPITController\fP< ChID >::period_error_us () const\fC [inline]\fP"
+
+.PP
+Returns the error in the gate timing period due to the finite resolution of the timers\&.  Error in microseconds\&. 
+.SS "template<unsigned int ChID> \fBError_t\fP \fBPITController\fP< ChID >::set_gate_time (double gt_microseconds)\fC [inline]\fP"
+
+.PP
+Sets the gate time after which the counter returns to zero and marks the end of onegate interval\&. 
+.PP
+\fBAttention:\fP
+.RS 4
+In case of an error, the gate time is set to the maximum\&. 
+.PP
+The clock source must be selected before calling this function\&. 
+.RE
+.PP
+
+.SS "template<unsigned int ChID> void \fBPITController\fP< ChID >::start ()\fC [inline]\fP"
+
+.PP
+Start counting on the timer\&. 
+.SS "template<unsigned int ChID> void \fBPITController\fP< ChID >::stop ()\fC [inline]\fP"
+
+.PP
+stop counting on the timer\&. 
+.SS "template<unsigned int ChID> double \fBPITController\fP< ChID >::tick_period_us ()\fC [inline]\fP"
+
+.PP
+Returns the value of one \fBTick\fP - Minimum resolution of the timer\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator from the source code\&.

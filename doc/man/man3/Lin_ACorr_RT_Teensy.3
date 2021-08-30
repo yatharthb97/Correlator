@@ -1,0 +1,79 @@
+.TH "Lin_ACorr_RT_Teensy< Series_size >" 3 "Mon Aug 30 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Lin_ACorr_RT_Teensy< Series_size > \- This is an implementation of \fBLin_ACorr_RT_Base\fP for Teensy with \fB\fP(No normalisation or baseline subtraction\&.)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Lin_ACorr_RT_Teensy\&.hpp>\fP
+.PP
+Inherits \fBLin_ACorr_RT_Base\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fB__attribute__\fP ((flatten)) \fBpush_datum\fP(\fBcounter_t\fP datum) override"
+.br
+.RI "Stores the last active index → Post-increment\&. "
+.ti -1c
+.RI "void \fB__attribute__\fP ((flatten)) \fBpush_data\fP(const \fBcounter_t\fP *container"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBcounter_t\fP \fBChannel_array\fP [Series_size] = {0}"
+.br
+.ti -1c
+.RI "\fBSimpler_Circular_Buffer\fP< \fBcounter_t\fP, Series_size > \fBSeries_array\fP"
+.br
+.RI "Stores the Channel output\&. "
+.ti -1c
+.RI "\fBindex_t\fP \fBSeries_index\fP = 0"
+.br
+.RI "Stores the data points in a circular Buffer\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<index_t Series_size>
+.br
+class Lin_ACorr_RT_Teensy< Series_size >"
+This is an implementation of \fBLin_ACorr_RT_Base\fP for Teensy with \fB\fP(No normalisation or baseline subtraction\&.) 
+
+
+.PP
+\fBNote:\fP
+.RS 4
+{ Template parameter - Size of the Series and Channel array and indicates the maximum points that can be stored by the correlator object\&. The circuular buffer will then rewrite the older points to accomodate for the other points\&. } 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<index_t Series_size> void \fBLin_ACorr_RT_Teensy\fP< Series_size >::__attribute__ ((flatten))\fC [inline]\fP, \fC [override]\fP"
+
+.PP
+Stores the last active index → Post-increment\&. 
+.SS "template<index_t Series_size> void \fBLin_ACorr_RT_Teensy\fP< Series_size >::__attribute__ ((flatten)) const"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "template<index_t Series_size> \fBcounter_t\fP \fBLin_ACorr_RT_Teensy\fP< Series_size >::Channel_array[Series_size] = {0}"
+
+.SS "template<index_t Series_size> \fBSimpler_Circular_Buffer\fP<\fBcounter_t\fP, Series_size> \fBLin_ACorr_RT_Teensy\fP< Series_size >::Series_array"
+
+.PP
+Stores the Channel output\&. 
+.SS "template<index_t Series_size> \fBindex_t\fP \fBLin_ACorr_RT_Teensy\fP< Series_size >::Series_index = 0"
+
+.PP
+Stores the data points in a circular Buffer\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator from the source code\&.

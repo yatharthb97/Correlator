@@ -1,0 +1,142 @@
+.TH "PIT_LifetimeTimer" 3 "Mon Aug 30 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PIT_LifetimeTimer \- Interface for using the 'Life Time TImer' functionality of the Periodic Interrut Timer on Teensy 4\&.x microcontrollers\&. The module uses Channel 0 and 1 of the 4 PIT channels\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <lifetime_timer\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPIT_LifetimeTimer\fP ()"
+.br
+.RI "Enforces a singleton template\&. "
+.ti -1c
+.RI "void \fBinit\fP () \fB__attribute__\fP((always_inline))"
+.br
+.RI "Sets up Timer 0 and Timer 1 channels for Lifetime timing - chained configuration\&. This function also makes a call to enable PIT timers\&. The timers are aet at maximum values and will start downcounting once ::start() method is called\&.  : Code adapted from IMXRT Manual Page 2977\&. "
+.ti -1c
+.RI "void \fBstart\fP () \fB__attribute__\fP((always_inline))"
+.br
+.RI "Starts the timers for down counting\&. "
+.ti -1c
+.RI "void \fBstop\fP () \fB__attribute__\fP((always_inline))"
+.br
+.RI "Stops the timers from counting\&. The timers values will freeze\&. "
+.ti -1c
+.RI "void \fBreset\fP () \fB__attribute__\fP((always_inline))"
+.br
+.RI "Stops the timers and resets the timer back to the init value (max) - 0xFFFFFFFFFFFFFF\&. "
+.ti -1c
+.RI "uint64_t \fBread_val\fP () \fB__attribute__\fP((always_inline))"
+.br
+.RI "Returns the complete 64-bit timing value\&. "
+.ti -1c
+.RI "uint32_t \fBread_low_val\fP () \fB__attribute__\fP((always_inline))"
+.br
+.RI "Returns the lower 32-bit half of the 64-bit timing value\&. "
+.ti -1c
+.RI "uint32_t \fBread_high_val\fP () \fB__attribute__\fP((always_inline))"
+.br
+.RI "Returns the higher 32-bit half of the 64-bit timing value\&. "
+.ti -1c
+.RI "uint64_t \fBelapsed64\fP () \fB__attribute__\fP((always_inline))"
+.br
+.RI "Returns the elapsed duration from the start call of the timer\&. The return is the complete 64bit value\&. "
+.ti -1c
+.RI "uint32_t \fBelapsed32\fP () \fB__attribute__\fP((always_inline))"
+.br
+.RI "Returns the elapsed duration from the start call of the timer\&. The return is the lower 32-bit half elapsed time value\&. "
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr bool \fBsingleton_flag\fP = false"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Interface for using the 'Life Time TImer' functionality of the Periodic Interrut Timer on Teensy 4\&.x microcontrollers\&. The module uses Channel 0 and 1 of the 4 PIT channels\&. 
+
+
+.PP
+\fBAttention:\fP
+.RS 4
+The module has no checks on the use of CH0 and CH1 by external drivers, however, the interface enforces a singleton template and can only be constructed once\&. 
+.PP
+The module does not set the clock frequency and uses either the default or the one set globally (as is the only use case) by external drivers outside its scope\&.  : Code adapted from IMXRT Manual Page 2977\&. 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "PIT_LifetimeTimer::PIT_LifetimeTimer ()\fC [inline]\fP"
+
+.PP
+Enforces a singleton template\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "uint32_t PIT_LifetimeTimer::elapsed32 ()\fC [inline]\fP"
+
+.PP
+Returns the elapsed duration from the start call of the timer\&. The return is the lower 32-bit half elapsed time value\&. 
+.PP
+\fBWarning:\fP
+.RS 4
+If the elapsed duration is greater than the 32-bit rollover time, then the quantity returned is meaningless\&. Hence, use of this function should be reserved for measuring small time durarions\&. 
+.RE
+.PP
+
+.SS "uint64_t PIT_LifetimeTimer::elapsed64 ()\fC [inline]\fP"
+
+.PP
+Returns the elapsed duration from the start call of the timer\&. The return is the complete 64bit value\&. 
+.SS "void PIT_LifetimeTimer::init ()\fC [inline]\fP"
+
+.PP
+Sets up Timer 0 and Timer 1 channels for Lifetime timing - chained configuration\&. This function also makes a call to enable PIT timers\&. The timers are aet at maximum values and will start downcounting once ::start() method is called\&.  : Code adapted from IMXRT Manual Page 2977\&. 
+.PP
+\fBAttention:\fP
+.RS 4
+: The timers will operate at the clock frequency set for PIT timers outside this library\&. 
+.RE
+.PP
+
+.SS "uint32_t PIT_LifetimeTimer::read_high_val ()\fC [inline]\fP"
+
+.PP
+Returns the higher 32-bit half of the 64-bit timing value\&. 
+.SS "uint32_t PIT_LifetimeTimer::read_low_val ()\fC [inline]\fP"
+
+.PP
+Returns the lower 32-bit half of the 64-bit timing value\&. 
+.SS "uint64_t PIT_LifetimeTimer::read_val ()\fC [inline]\fP"
+
+.PP
+Returns the complete 64-bit timing value\&. 
+.SS "void PIT_LifetimeTimer::reset ()\fC [inline]\fP"
+
+.PP
+Stops the timers and resets the timer back to the init value (max) - 0xFFFFFFFFFFFFFF\&. 
+.SS "void PIT_LifetimeTimer::start ()\fC [inline]\fP"
+
+.PP
+Starts the timers for down counting\&. 
+.SS "void PIT_LifetimeTimer::stop ()\fC [inline]\fP"
+
+.PP
+Stops the timers from counting\&. The timers values will freeze\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "constexpr bool PIT_LifetimeTimer::singleton_flag = false\fC [static]\fP, \fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator from the source code\&.

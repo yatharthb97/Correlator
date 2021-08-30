@@ -1,0 +1,64 @@
+.TH "Accumulator" 3 "Mon Aug 30 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Accumulator \- Adapter object responsible for accumulating the points and coarsening the time-series as per the relavent linear-correlator time-resolution\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <accumulator\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBpipe\fP (\fBLin_ACorr_RT_Base\fP &channel, \fBcounter_t\fP datum) \fB__attribute__\fP((flatten))"
+.br
+.RI "Maintains a cunter of the items to accumuate\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "unsigned int \fBReceivedPointsCounter\fP = 0"
+.br
+.ti -1c
+.RI "unsigned int \fBBufferPoints\fP = 0"
+.br
+.RI "Maximum number of points accepted by the accumulator\&. For debugging\&. "
+.ti -1c
+.RI "\fBcounter_t\fP \fBAccumulate\fP = 0\&.0"
+.br
+.RI "Nmber of points accumulated and binned together\&. "
+.ti -1c
+.RI "unsigned int \fBLocalCounter\fP = 0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Adapter object responsible for accumulating the points and coarsening the time-series as per the relavent linear-correlator time-resolution\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void Accumulator::pipe (\fBLin_ACorr_RT_Base\fP & channel, \fBcounter_t\fP datum)\fC [inline]\fP"
+
+.PP
+Maintains a cunter of the items to accumuate\&. Accumulates data points until the BufferPoints criteria is satisfied, after which the points are pushed to the channel\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBcounter_t\fP Accumulator::Accumulate = 0\&.0\fC [private]\fP"
+
+.PP
+Nmber of points accumulated and binned together\&. 
+.SS "unsigned int Accumulator::BufferPoints = 0\fC [private]\fP"
+
+.PP
+Maximum number of points accepted by the accumulator\&. For debugging\&. 
+.SS "unsigned int Accumulator::LocalCounter = 0\fC [private]\fP"
+
+.SS "unsigned int Accumulator::ReceivedPointsCounter = 0\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator from the source code\&.

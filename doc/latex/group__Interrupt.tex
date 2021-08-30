@@ -1,0 +1,66 @@
+\hypertarget{group__Interrupt}{}\section{\textquotesingle{}\textquotesingle{}Interrupt Functions\textquotesingle{}\textquotesingle{}}
+\label{group__Interrupt}\index{\textquotesingle{}\textquotesingle{}\+Interrupt Functions\textquotesingle{}\textquotesingle{}@{\textquotesingle{}\textquotesingle{}\+Interrupt Functions\textquotesingle{}\textquotesingle{}}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__Interrupt_gaf1a21e0b3f9a57e247aa40c457e15ee3}{P\+I\+T\+Controller$<$ Ch\+I\+D $>$\+::interrupt} () \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
+\begin{DoxyCompactList}\small\item\em Enable Interruptsthat are triggered after one gate time completion. \end{DoxyCompactList}\item 
+void \hyperlink{group__Interrupt_ga6e36c84f319e52e5a14ca20f299b64b5}{P\+I\+T\+Controller$<$ Ch\+I\+D $>$\+::no\+\_\+interrupt} () \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
+\begin{DoxyCompactList}\small\item\em Disable Interrupts that are triggered after one gate time completion. \end{DoxyCompactList}\item 
+static void \hyperlink{group__Interrupt_gaa94b6dc081d453c8dda54c3ade4b3d94}{P\+I\+T\+Controller$<$ Ch\+I\+D $>$\+::set\+\_\+interrupt} (void($\ast$isr\+\_\+fn)(), unsigned int priority) \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
+\begin{DoxyCompactList}\small\item\em Sets a common I\+SR and its priority for all P\+IT Channels. \end{DoxyCompactList}\item 
+void \hyperlink{group__Interrupt_gae3f9c981e88cced34153234475de5646}{P\+I\+T\+Controller$<$ Ch\+I\+D $>$\+::clear\+\_\+interrupt\+\_\+flag} () \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
+\begin{DoxyCompactList}\small\item\em Clears the interrupt flag and hence prepares the timer for the next gate interval. The clearing has to be done manually. If the flag is not cleared, the interrupt will be called again and again. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__Interrupt_gae3f9c981e88cced34153234475de5646}\label{group__Interrupt_gae3f9c981e88cced34153234475de5646}} 
+\index{\textquotesingle{}\textquotesingle{}\+Interrupt Functions\textquotesingle{}\textquotesingle{}@{\textquotesingle{}\textquotesingle{}\+Interrupt Functions\textquotesingle{}\textquotesingle{}}!clear\+\_\+interrupt\+\_\+flag@{clear\+\_\+interrupt\+\_\+flag}}
+\index{clear\+\_\+interrupt\+\_\+flag@{clear\+\_\+interrupt\+\_\+flag}!\textquotesingle{}\textquotesingle{}\+Interrupt Functions\textquotesingle{}\textquotesingle{}@{\textquotesingle{}\textquotesingle{}\+Interrupt Functions\textquotesingle{}\textquotesingle{}}}
+\subsubsection{\texorpdfstring{clear\+\_\+interrupt\+\_\+flag()}{clear\_interrupt\_flag()}}
+{\footnotesize\ttfamily template$<$unsigned int Ch\+ID$>$ \\
+void \hyperlink{classPITController}{P\+I\+T\+Controller}$<$ Ch\+ID $>$\+::clear\+\_\+interrupt\+\_\+flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Clears the interrupt flag and hence prepares the timer for the next gate interval. The clearing has to be done manually. If the flag is not cleared, the interrupt will be called again and again. 
+
+\mbox{\Hypertarget{group__Interrupt_gaf1a21e0b3f9a57e247aa40c457e15ee3}\label{group__Interrupt_gaf1a21e0b3f9a57e247aa40c457e15ee3}} 
+\index{\textquotesingle{}\textquotesingle{}\+Interrupt Functions\textquotesingle{}\textquotesingle{}@{\textquotesingle{}\textquotesingle{}\+Interrupt Functions\textquotesingle{}\textquotesingle{}}!interrupt@{interrupt}}
+\index{interrupt@{interrupt}!\textquotesingle{}\textquotesingle{}\+Interrupt Functions\textquotesingle{}\textquotesingle{}@{\textquotesingle{}\textquotesingle{}\+Interrupt Functions\textquotesingle{}\textquotesingle{}}}
+\subsubsection{\texorpdfstring{interrupt()}{interrupt()}}
+{\footnotesize\ttfamily template$<$unsigned int Ch\+ID$>$ \\
+void \hyperlink{classPITController}{P\+I\+T\+Controller}$<$ Ch\+ID $>$\+::interrupt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Enable Interruptsthat are triggered after one gate time completion. 
+
+\mbox{\Hypertarget{group__Interrupt_ga6e36c84f319e52e5a14ca20f299b64b5}\label{group__Interrupt_ga6e36c84f319e52e5a14ca20f299b64b5}} 
+\index{\textquotesingle{}\textquotesingle{}\+Interrupt Functions\textquotesingle{}\textquotesingle{}@{\textquotesingle{}\textquotesingle{}\+Interrupt Functions\textquotesingle{}\textquotesingle{}}!no\+\_\+interrupt@{no\+\_\+interrupt}}
+\index{no\+\_\+interrupt@{no\+\_\+interrupt}!\textquotesingle{}\textquotesingle{}\+Interrupt Functions\textquotesingle{}\textquotesingle{}@{\textquotesingle{}\textquotesingle{}\+Interrupt Functions\textquotesingle{}\textquotesingle{}}}
+\subsubsection{\texorpdfstring{no\+\_\+interrupt()}{no\_interrupt()}}
+{\footnotesize\ttfamily template$<$unsigned int Ch\+ID$>$ \\
+void \hyperlink{classPITController}{P\+I\+T\+Controller}$<$ Ch\+ID $>$\+::no\+\_\+interrupt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Disable Interrupts that are triggered after one gate time completion. 
+
+\mbox{\Hypertarget{group__Interrupt_gaa94b6dc081d453c8dda54c3ade4b3d94}\label{group__Interrupt_gaa94b6dc081d453c8dda54c3ade4b3d94}} 
+\index{\textquotesingle{}\textquotesingle{}\+Interrupt Functions\textquotesingle{}\textquotesingle{}@{\textquotesingle{}\textquotesingle{}\+Interrupt Functions\textquotesingle{}\textquotesingle{}}!set\+\_\+interrupt@{set\+\_\+interrupt}}
+\index{set\+\_\+interrupt@{set\+\_\+interrupt}!\textquotesingle{}\textquotesingle{}\+Interrupt Functions\textquotesingle{}\textquotesingle{}@{\textquotesingle{}\textquotesingle{}\+Interrupt Functions\textquotesingle{}\textquotesingle{}}}
+\subsubsection{\texorpdfstring{set\+\_\+interrupt()}{set\_interrupt()}}
+{\footnotesize\ttfamily template$<$unsigned int Ch\+ID$>$ \\
+static void \hyperlink{classPITController}{P\+I\+T\+Controller}$<$ Ch\+ID $>$\+::set\+\_\+interrupt (\begin{DoxyParamCaption}\item[{void($\ast$)()}]{isr\+\_\+fn,  }\item[{unsigned int}]{priority }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Sets a common I\+SR and its priority for all P\+IT Channels. 
+
+\begin{DoxyNote}{Note}
+All P\+IT channels share a single I\+SR on Teensy 4.\+x micro-\/controllers. 
+\end{DoxyNote}

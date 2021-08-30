@@ -1,0 +1,102 @@
+\hypertarget{errors_8hpp}{}\section{/mnt/m/code/\+Correlator/errors.hpp File Reference}
+\label{errors_8hpp}\index{/mnt/m/code/\+Correlator/errors.\+hpp@{/mnt/m/code/\+Correlator/errors.\+hpp}}
+{\ttfamily \#include \char`\"{}pins.\+hpp\char`\"{}}\newline
+Include dependency graph for errors.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{errors_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{errors_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceErrors}{Errors}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7f}{Error\+\_\+t} \{ \newline
+\hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa505a83f220c02df2f85c3810cd9ceb38}{Error\+\_\+t\+::\+Success} = 0, 
+\hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa8347bab2e74e4a640d76c916306a1a36}{Error\+\_\+t\+::\+Counter\+\_\+\+Overflow}, 
+\hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa02b02f5e5e61f24acdd91338b95997da}{Error\+\_\+t\+::\+Counter\+\_\+\+Underflow}, 
+\hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fabe5edab59de4ea30531374e506b03822}{Error\+\_\+t\+::\+Precision}, 
+\newline
+\hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa7e748bca7005cc737bad51b247997421}{Error\+\_\+t\+::\+Input\+\_\+\+Validation}
+ \}\begin{DoxyCompactList}\small\item\em Enumarates the error codes thrown by the different modules. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceErrors_a51461dff689e5f46ea124f1e13806c01}{Errors\+::\+Validate} (\hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7f}{Error\+\_\+t} error)
+\begin{DoxyCompactList}\small\item\em Receives an error state and sets up the corresponding L\+ED indicator. \mbox{[}\mbox{[}Incomplete\mbox{]}\mbox{]}. \end{DoxyCompactList}\item 
+void \hyperlink{namespaceErrors_a0caff7c325638cca6f2f4ebdb0bf81a2}{Errors\+::\+Precison\+\_\+\+Threshold} (double error\+\_\+val, double error\+\_\+limit)
+\begin{DoxyCompactList}\small\item\em Receives error value and error threshold and returns an appropriate error state. \end{DoxyCompactList}\item 
+{\footnotesize template$<$unsigned int Lin\+\_\+channels, index\+\_\+t Series\+\_\+size, unsigned int Bin\+\_\+\+Ratio$>$ }\\\hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7f}{Error\+\_\+t} \hyperlink{namespaceErrors_a7010d07de8236f9a17b302c78f37483e}{Errors\+::\+Auto\+\_\+\+Multi\+Tau\+\_\+\+Input\+\_\+\+Validator} ()
+\item 
+void \hyperlink{errors_8hpp_a15915712da576ebb870a4ec6987c5688}{\+\_\+assert\+\_\+} (bool expression, char $\ast$\hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((unused)) message=\char`\"{}\char`\"{}) \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((noreturn
+\begin{DoxyCompactList}\small\item\em Custom runtime assert function that sets all the dashboard L\+E\+Ds to high. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7f}\label{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7f}} 
+\index{errors.\+hpp@{errors.\+hpp}!Error\+\_\+t@{Error\+\_\+t}}
+\index{Error\+\_\+t@{Error\+\_\+t}!errors.\+hpp@{errors.\+hpp}}
+\subsubsection{\texorpdfstring{Error\+\_\+t}{Error\_t}}
+{\footnotesize\ttfamily enum \hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7f}{Error\+\_\+t}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumarates the error codes thrown by the different modules. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Success@{Success}!errors.\+hpp@{errors.\+hpp}}\index{errors.\+hpp@{errors.\+hpp}!Success@{Success}}}\mbox{\Hypertarget{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa505a83f220c02df2f85c3810cd9ceb38}\label{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa505a83f220c02df2f85c3810cd9ceb38}} 
+Success&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Counter\+\_\+\+Overflow@{Counter\+\_\+\+Overflow}!errors.\+hpp@{errors.\+hpp}}\index{errors.\+hpp@{errors.\+hpp}!Counter\+\_\+\+Overflow@{Counter\+\_\+\+Overflow}}}\mbox{\Hypertarget{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa8347bab2e74e4a640d76c916306a1a36}\label{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa8347bab2e74e4a640d76c916306a1a36}} 
+Counter\+\_\+\+Overflow&No error. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Counter\+\_\+\+Underflow@{Counter\+\_\+\+Underflow}!errors.\+hpp@{errors.\+hpp}}\index{errors.\+hpp@{errors.\+hpp}!Counter\+\_\+\+Underflow@{Counter\+\_\+\+Underflow}}}\mbox{\Hypertarget{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa02b02f5e5e61f24acdd91338b95997da}\label{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa02b02f5e5e61f24acdd91338b95997da}} 
+Counter\+\_\+\+Underflow&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Precision@{Precision}!errors.\+hpp@{errors.\+hpp}}\index{errors.\+hpp@{errors.\+hpp}!Precision@{Precision}}}\mbox{\Hypertarget{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fabe5edab59de4ea30531374e506b03822}\label{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fabe5edab59de4ea30531374e506b03822}} 
+Precision&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Input\+\_\+\+Validation@{Input\+\_\+\+Validation}!errors.\+hpp@{errors.\+hpp}}\index{errors.\+hpp@{errors.\+hpp}!Input\+\_\+\+Validation@{Input\+\_\+\+Validation}}}\mbox{\Hypertarget{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa7e748bca7005cc737bad51b247997421}\label{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa7e748bca7005cc737bad51b247997421}} 
+Input\+\_\+\+Validation&The error due to finite resolution is greater than acceptable. Input validation failed \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{errors_8hpp_a15915712da576ebb870a4ec6987c5688}\label{errors_8hpp_a15915712da576ebb870a4ec6987c5688}} 
+\index{errors.\+hpp@{errors.\+hpp}!\+\_\+assert\+\_\+@{\+\_\+assert\+\_\+}}
+\index{\+\_\+assert\+\_\+@{\+\_\+assert\+\_\+}!errors.\+hpp@{errors.\+hpp}}
+\subsubsection{\texorpdfstring{\+\_\+assert\+\_\+()}{\_assert\_()}}
+{\footnotesize\ttfamily void \+\_\+assert\+\_\+ (\begin{DoxyParamCaption}\item[{bool}]{expression,  }\item[{char $\ast$\hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((unused))}]{message = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Custom runtime assert function that sets all the dashboard L\+E\+Ds to high. 
+
+Custom assertion function. 
+\begin{DoxyParams}{Parameters}
+{\em expression} & which must evaluate to false for the assertion to call abort. \\
+\hline
+{\em message} & which is ignored in the function, but helps with code redability \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,83 @@
+\hypertarget{classAccumulator}{}\section{Accumulator Class Reference}
+\label{classAccumulator}\index{Accumulator@{Accumulator}}
+
+
+Adapter object responsible for accumulating the points and coarsening the time-\/series as per the relavent linear-\/correlator time-\/resolution.  
+
+
+
+
+{\ttfamily \#include $<$accumulator.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classAccumulator_aa1793bc1599bc2451fabc44954673164}{pipe} (\hyperlink{classLin__ACorr__RT__Base}{Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base} \&channel, \hyperlink{types_8hpp_ac89ac912f524b3e3fa3720ea55fec966}{counter\+\_\+t} datum) \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((flatten))
+\begin{DoxyCompactList}\small\item\em Maintains a cunter of the items to accumuate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{classAccumulator_a9cc7c392e99778c99593f7798cb2ab3b}{Received\+Points\+Counter} = 0
+\item 
+unsigned int \hyperlink{classAccumulator_a559e4fac031df015e47248599740b33c}{Buffer\+Points} = 0
+\begin{DoxyCompactList}\small\item\em Maximum number of points accepted by the accumulator. For debugging. \end{DoxyCompactList}\item 
+\hyperlink{types_8hpp_ac89ac912f524b3e3fa3720ea55fec966}{counter\+\_\+t} \hyperlink{classAccumulator_a8e615af8b85dd2c8500d1f8c473879ab}{Accumulate} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Nmber of points accumulated and binned together. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classAccumulator_a753e3878c3078a11ee9bc13b6185ec60}{Local\+Counter} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Adapter object responsible for accumulating the points and coarsening the time-\/series as per the relavent linear-\/correlator time-\/resolution. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classAccumulator_aa1793bc1599bc2451fabc44954673164}\label{classAccumulator_aa1793bc1599bc2451fabc44954673164}} 
+\index{Accumulator@{Accumulator}!pipe@{pipe}}
+\index{pipe@{pipe}!Accumulator@{Accumulator}}
+\subsubsection{\texorpdfstring{pipe()}{pipe()}}
+{\footnotesize\ttfamily void Accumulator\+::pipe (\begin{DoxyParamCaption}\item[{\hyperlink{classLin__ACorr__RT__Base}{Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base} \&}]{channel,  }\item[{\hyperlink{types_8hpp_ac89ac912f524b3e3fa3720ea55fec966}{counter\+\_\+t}}]{datum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Maintains a cunter of the items to accumuate. 
+
+Accumulates data points until the Buffer\+Points criteria is satisfied, after which the points are pushed to the channel. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classAccumulator_a8e615af8b85dd2c8500d1f8c473879ab}\label{classAccumulator_a8e615af8b85dd2c8500d1f8c473879ab}} 
+\index{Accumulator@{Accumulator}!Accumulate@{Accumulate}}
+\index{Accumulate@{Accumulate}!Accumulator@{Accumulator}}
+\subsubsection{\texorpdfstring{Accumulate}{Accumulate}}
+{\footnotesize\ttfamily \hyperlink{types_8hpp_ac89ac912f524b3e3fa3720ea55fec966}{counter\+\_\+t} Accumulator\+::\+Accumulate = 0.\+0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Nmber of points accumulated and binned together. 
+
+\mbox{\Hypertarget{classAccumulator_a559e4fac031df015e47248599740b33c}\label{classAccumulator_a559e4fac031df015e47248599740b33c}} 
+\index{Accumulator@{Accumulator}!Buffer\+Points@{Buffer\+Points}}
+\index{Buffer\+Points@{Buffer\+Points}!Accumulator@{Accumulator}}
+\subsubsection{\texorpdfstring{Buffer\+Points}{BufferPoints}}
+{\footnotesize\ttfamily unsigned int Accumulator\+::\+Buffer\+Points = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Maximum number of points accepted by the accumulator. For debugging. 
+
+\mbox{\Hypertarget{classAccumulator_a753e3878c3078a11ee9bc13b6185ec60}\label{classAccumulator_a753e3878c3078a11ee9bc13b6185ec60}} 
+\index{Accumulator@{Accumulator}!Local\+Counter@{Local\+Counter}}
+\index{Local\+Counter@{Local\+Counter}!Accumulator@{Accumulator}}
+\subsubsection{\texorpdfstring{Local\+Counter}{LocalCounter}}
+{\footnotesize\ttfamily unsigned int Accumulator\+::\+Local\+Counter = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classAccumulator_a9cc7c392e99778c99593f7798cb2ab3b}\label{classAccumulator_a9cc7c392e99778c99593f7798cb2ab3b}} 
+\index{Accumulator@{Accumulator}!Received\+Points\+Counter@{Received\+Points\+Counter}}
+\index{Received\+Points\+Counter@{Received\+Points\+Counter}!Accumulator@{Accumulator}}
+\subsubsection{\texorpdfstring{Received\+Points\+Counter}{ReceivedPointsCounter}}
+{\footnotesize\ttfamily unsigned int Accumulator\+::\+Received\+Points\+Counter = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/mnt/m/code/\+Correlator/\+Software/\hyperlink{accumulator_8hpp}{accumulator.\+hpp}\end{DoxyCompactItemize}

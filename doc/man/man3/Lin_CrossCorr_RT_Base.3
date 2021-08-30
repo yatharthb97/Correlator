@@ -1,0 +1,71 @@
+.TH "Lin_CrossCorr_RT_Base" 3 "Mon Aug 30 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Lin_CrossCorr_RT_Base \- This class is a blank interface for all objects that are — \fB{Linear\fP Real-Time Software Auto-Correlators}\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Lin_CrossCorr_RT_Base\&.hpp>\fP
+.PP
+Inherited by \fBLin_CrossCorr_RT_Teensy< Series_size >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBpush_datum\fP (\fBcounter_t\fP datum1, \fBcounter_t\fP datum2)=0"
+.br
+.RI "Accepts two single \fCdatum\fP from the counters — which is the lowest order of data aggregate, appends to Series_array(s) and updates relevant channels\&. "
+.ti -1c
+.RI "virtual void \fBpush_data\fP (const \fBcounter_t\fP *container1, const \fBcounter_t\fP *container2, const \fBindex_t\fP size)=0"
+.br
+.RI "Repeatedy calls \fCLin_CrossCorr_RT_Base::push_datam()\fP on all the elements of the countainers\&. "
+.ti -1c
+.RI "virtual double \fBnorm\fP (\fBindex_t\fP lag)=0"
+.br
+.RI "Takes in the lag value and returns the normalization (divider) for the passed lag value\&. "
+.ti -1c
+.RI "virtual void \fBch_out\fP () const =0"
+.br
+.RI "Outputs all the channels using specific implementation based methods\&. Both the channel outputs are appended together one after the other\&. 12-21\&. "
+.ti -1c
+.RI "virtual void \fBch_out_norm\fP () const =0"
+.br
+.RI "Outputs all the channels with \fB\fP <normalisation> using specific implementation based methods\&. "
+.ti -1c
+.RI "virtual \fBcounter_t\fP * \fBget_ch_array12\fP () const =0"
+.br
+.ti -1c
+.RI "virtual \fBcounter_t\fP * \fBget_ch_array21\fP () const =0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class is a blank interface for all objects that are — \fB{Linear\fP Real-Time Software Auto-Correlators}\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual double Lin_CrossCorr_RT_Base::norm (\fBindex_t\fP lag)\fC [inline]\fP, \fC [pure virtual]\fP"
+
+.PP
+Takes in the lag value and returns the normalization (divider) for the passed lag value\&. 
+.SS "virtual void Lin_CrossCorr_RT_Base::push_data (const \fBcounter_t\fP * container1, const \fBcounter_t\fP * container2, const \fBindex_t\fP size)\fC [inline]\fP, \fC [pure virtual]\fP"
+
+.PP
+Repeatedy calls \fCLin_CrossCorr_RT_Base::push_datam()\fP on all the elements of the countainers\&. 
+.PP
+\fBAttention:\fP
+.RS 4
+The containers must be of the same size\&. 
+.RE
+.PP
+
+.SS "virtual void Lin_CrossCorr_RT_Base::push_datum (\fBcounter_t\fP datum1, \fBcounter_t\fP datum2)\fC [inline]\fP, \fC [pure virtual]\fP"
+
+.PP
+Accepts two single \fCdatum\fP from the counters — which is the lowest order of data aggregate, appends to Series_array(s) and updates relevant channels\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator from the source code\&.

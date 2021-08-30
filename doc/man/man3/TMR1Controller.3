@@ -1,0 +1,187 @@
+.TH "TMR1Controller" 3 "Mon Aug 30 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TMR1Controller \- Templated interface for Quad Timer 1 channels for Gate Counting\&. The module uses the macro \fC_TMR1_CONTROLLER_CH_\fP to identify the main channel and then assigns the next channel's (\fITMR1_CONTROLLER_CH\fP + 1) external pin to the \fITMR1_CONTROLLER_CH\fP as the 'Capture Pin' or the 'Secondary Count Source'\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <qtmr1\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTMR1Controller\fP ()"
+.br
+.RI "Singleton template\&. "
+.ti -1c
+.RI "void \fBstart\fP () \fB__attribute__\fP((\fBalways_inline\fP))"
+.br
+.RI "Starts up-counting from the set counter value\&. "
+.ti -1c
+.RI "void \fBstop\fP () \fB__attribute__\fP((\fBalways_inline\fP))"
+.br
+.RI "Stops counting and freezes the current counter value\&. "
+.ti -1c
+.RI "void \fBreset\fP () \fB__attribute__\fP((\fBalways_inline\fP))"
+.br
+.RI "Resets the counter to zero\&. It also cleares the capture register and unsets the Input Edge Flag\&. "
+.ti -1c
+.RI "\fBcounter_t\fP \fBget_capture_val\fP () \fB__attribute__\fP((\fBalways_inline\fP))"
+.br
+.RI "Reads and returns the Capture Register\&. "
+.ti -1c
+.RI "\fBcounter_t\fP \fBget_capture_double_range\fP () \fB__attribute__\fP((flatten"
+.br
+.RI "Returns a value that has range (2 X 2**n - 1)\&. This is done by checking the overflow flag\&. "
+.ti -1c
+.RI "bool \fBis_overflow\fP () \fB__attribute__\fP((\fBalways_inline\fP))"
+.br
+.RI "Returns the overflow status of the Counter\&. Reads the TOF - Timer Overflow Flag\&. "
+.ti -1c
+.RI "void \fBclear_input_edge_flag\fP () \fB__attribute__\fP((\fBalways_inline\fP))"
+.br
+.ti -1c
+.RI "void \fBclear_overflow_flag\fP () \fB__attribute__\fP((\fBalways_inline\fP))"
+.br
+.ti -1c
+.RI "int \fBget_ttl_input_pin\fP () \fB__attribute__\fP((\fBalways_inline\fP))"
+.br
+.RI "Returns the pin number on which the TTL input must be connected\&. "
+.ti -1c
+.RI "void \fBinit\fP () \fB__attribute__\fP((\fBalways_inline\fP))"
+.br
+.ti -1c
+.RI "void \fBinit_pins\fP () \fB__attribute__\fP((\fBalways_inline\fP))"
+.br
+.RI "Sets the Primary and Secondary inputs for Capture Mode, routed through XBAR\&.  XBAR and IOMUX input selections → IOMUXC_GPR_GPR6 Manual Page 347\&. "
+.ti -1c
+.RI "unsigned int \fBget_xbar_out_pin\fP () \fB__attribute__\fP((\fBalways_inline\fP))"
+.br
+.RI "Returns the corresponding XBAR Output Pin to use for routing the Capture Signal\&.  Manual Page 70\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBtimers_freeze\fP () \fB__attribute__\fP((\fBalways_inline\fP))"
+.br
+.RI "Reset Counter and output flags\&.  Manual Page 332\&. "
+.ti -1c
+.RI "static void \fBtimers_anti_freeze\fP () \fB__attribute__\fP((\fBalways_inline\fP))"
+.br
+.RI "Enable counting normally\&.  Manual Page 332\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBcounter_t\fP \fBalways_inline\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr bool \fBSingleton_flag\fP = false"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Templated interface for Quad Timer 1 channels for Gate Counting\&. The module uses the macro \fC_TMR1_CONTROLLER_CH_\fP to identify the main channel and then assigns the next channel's (\fITMR1_CONTROLLER_CH\fP + 1) external pin to the \fITMR1_CONTROLLER_CH\fP as the 'Capture Pin' or the 'Secondary Count Source'\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TMR1Controller::TMR1Controller ()\fC [inline]\fP"
+
+.PP
+Singleton template\&. Default Constructor that assers if the user constructed object with a valid \fITMR1_CONTROLLER_CH\fP, and asserts a singleton template\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void TMR1Controller::clear_input_edge_flag ()\fC [inline]\fP"
+
+.SS "void TMR1Controller::clear_overflow_flag ()\fC [inline]\fP"
+
+.SS "\fBcounter_t\fP TMR1Controller::get_capture_double_range ()"
+
+.PP
+Returns a value that has range (2 X 2**n - 1)\&. This is done by checking the overflow flag\&. 
+.SS "\fBcounter_t\fP TMR1Controller::get_capture_val ()\fC [inline]\fP"
+
+.PP
+Reads and returns the Capture Register\&. 
+.SS "int TMR1Controller::get_ttl_input_pin ()\fC [inline]\fP"
+
+.PP
+Returns the pin number on which the TTL input must be connected\&. 
+.PP
+\fBAttention:\fP
+.RS 4
+This function does not configure the pin or assign it to the QTMR module\&. For that TMR1Controller::init_pin() must be called\&. 
+.RE
+.PP
+
+.SS "unsigned int TMR1Controller::get_xbar_out_pin ()\fC [inline]\fP"
+
+.PP
+Returns the corresponding XBAR Output Pin to use for routing the Capture Signal\&.  Manual Page 70\&. 
+.SS "void TMR1Controller::init ()\fC [inline]\fP"
+
+.SS "void TMR1Controller::init_pins ()\fC [inline]\fP"
+
+.PP
+Sets the Primary and Secondary inputs for Capture Mode, routed through XBAR\&.  XBAR and IOMUX input selections → IOMUXC_GPR_GPR6 Manual Page 347\&. 
+.SS "bool TMR1Controller::is_overflow ()\fC [inline]\fP"
+
+.PP
+Returns the overflow status of the Counter\&. Reads the TOF - Timer Overflow Flag\&. 
+.SS "void TMR1Controller::reset ()\fC [inline]\fP"
+
+.PP
+Resets the counter to zero\&. It also cleares the capture register and unsets the Input Edge Flag\&. 
+.SS "void TMR1Controller::start ()\fC [inline]\fP"
+
+.PP
+Starts up-counting from the set counter value\&. 
+.SS "void TMR1Controller::stop ()\fC [inline]\fP"
+
+.PP
+Stops counting and freezes the current counter value\&. 
+.SS "static void TMR1Controller::timers_anti_freeze ()\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Enable counting normally\&.  Manual Page 332\&. 
+.PP
+\fBAttention:\fP
+.RS 4
+This setting applies to all the channels of the Timer 1 group\&. 
+.RE
+.PP
+
+.SS "static void TMR1Controller::timers_freeze ()\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Reset Counter and output flags\&.  Manual Page 332\&. 
+.PP
+\fBAttention:\fP
+.RS 4
+This setting applies to all the channels of the Timer 1 group\&. 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBcounter_t\fP TMR1Controller::always_inline"
+\fBInitial value:\fP
+.PP
+.nf
+{
+        return (this->is_overflow() * 65535) + (this->get_capture_val())
+.fi
+.SS "constexpr bool TMR1Controller::Singleton_flag = false\fC [static]\fP, \fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator from the source code\&.

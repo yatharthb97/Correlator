@@ -1,0 +1,57 @@
+.TH "Lin_ACorr_Base_Out" 3 "Mon Aug 30 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Lin_ACorr_Base_Out
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBLin_ACorr_RT_Base::ch_out\fP () const =0"
+.br
+.RI "Outputs all the channels using specific implementation based methods\&. "
+.ti -1c
+.RI "virtual void \fBLin_ACorr_RT_Base::ch_out_norm\fP () const =0"
+.br
+.RI "Outputs all the channels with \fB\fP <normalisation> using specific implementation based methods\&. "
+.ti -1c
+.RI "virtual \fBcounter_t\fP * \fBLin_ACorr_RT_Base::get_ch_array\fP () const =0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Function Documentation"
+.PP 
+.SS "virtual void Lin_ACorr_RT_Base::ch_out () const\fC [inline]\fP, \fC [pure virtual]\fP"
+
+.PP
+Outputs all the channels using specific implementation based methods\&. 
+.PP
+\fBNote:\fP
+.RS 4
+{The output methods do not issue an endline character - '
+.br
+' after the output is complete\&. That responsibility is reserved for end user\&.} 
+.RE
+.PP
+
+.SS "virtual void Lin_ACorr_RT_Base::ch_out_norm () const\fC [inline]\fP, \fC [pure virtual]\fP"
+
+.PP
+Outputs all the channels with \fB\fP <normalisation> using specific implementation based methods\&. 
+.PP
+\fBAttention:\fP
+.RS 4
+{All types that inherit this interface must seperately provide an on-demand normalisation method\&.} 
+.RE
+.PP
+
+.SS "virtual \fBcounter_t\fP* Lin_ACorr_RT_Base::get_ch_array () const\fC [inline]\fP, \fC [pure virtual]\fP"
+Returns a pointer to the front of the Channel array\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator from the source code\&.
