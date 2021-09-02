@@ -106,10 +106,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abdc90b5ab6a5f7ac98e97b3d16261834 inherit pub_methods_classLin__CrossCorr__RT__Base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLin__CrossCorr__RT__Base.html#abdc90b5ab6a5f7ac98e97b3d16261834">push_datum</a> (<a class="el" href="types_8hpp.html#ac89ac912f524b3e3fa3720ea55fec966">counter_t</a> datum1, <a class="el" href="types_8hpp.html#ac89ac912f524b3e3fa3720ea55fec966">counter_t</a> datum2)=0</td></tr>
 <tr class="memdesc:abdc90b5ab6a5f7ac98e97b3d16261834 inherit pub_methods_classLin__CrossCorr__RT__Base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accepts two single <code>datum</code> from the counters — which is the lowest order of data aggregate, appends to Series_array(s) and updates relevant channels.  <a href="classLin__CrossCorr__RT__Base.html#abdc90b5ab6a5f7ac98e97b3d16261834">More...</a><br /></td></tr>
 <tr class="separator:abdc90b5ab6a5f7ac98e97b3d16261834 inherit pub_methods_classLin__CrossCorr__RT__Base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48faa93c6766605436fd8399949beb11 inherit pub_methods_classLin__CrossCorr__RT__Base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLin__CrossCorr__RT__Base.html#a48faa93c6766605436fd8399949beb11">push_data</a> (const <a class="el" href="types_8hpp.html#ac89ac912f524b3e3fa3720ea55fec966">counter_t</a> *container1, const <a class="el" href="types_8hpp.html#ac89ac912f524b3e3fa3720ea55fec966">counter_t</a> *container2, const <a class="el" href="types_8hpp.html#a7c40bb931c31595ed6308605f4537447">index_t</a> size)=0</td></tr>
+<tr class="memitem:a48faa93c6766605436fd8399949beb11 inherit pub_methods_classLin__CrossCorr__RT__Base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLin__CrossCorr__RT__Base.html#a48faa93c6766605436fd8399949beb11">push_data</a> (const <a class="el" href="types_8hpp.html#ac89ac912f524b3e3fa3720ea55fec966">counter_t</a> *container1, const <a class="el" href="types_8hpp.html#ac89ac912f524b3e3fa3720ea55fec966">counter_t</a> *container2, const index_t size)=0</td></tr>
 <tr class="memdesc:a48faa93c6766605436fd8399949beb11 inherit pub_methods_classLin__CrossCorr__RT__Base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Repeatedy calls <code>Lin_CrossCorr_RT_Base::push_datam()</code> on all the elements of the countainers.  <a href="classLin__CrossCorr__RT__Base.html#a48faa93c6766605436fd8399949beb11">More...</a><br /></td></tr>
 <tr class="separator:a48faa93c6766605436fd8399949beb11 inherit pub_methods_classLin__CrossCorr__RT__Base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43779bc7fd546fa8f73713de4bd6e285 inherit pub_methods_classLin__CrossCorr__RT__Base"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLin__CrossCorr__RT__Base.html#a43779bc7fd546fa8f73713de4bd6e285">norm</a> (<a class="el" href="types_8hpp.html#a7c40bb931c31595ed6308605f4537447">index_t</a> lag)=0</td></tr>
+<tr class="memitem:a43779bc7fd546fa8f73713de4bd6e285 inherit pub_methods_classLin__CrossCorr__RT__Base"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLin__CrossCorr__RT__Base.html#a43779bc7fd546fa8f73713de4bd6e285">norm</a> (index_t lag)=0</td></tr>
 <tr class="memdesc:a43779bc7fd546fa8f73713de4bd6e285 inherit pub_methods_classLin__CrossCorr__RT__Base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes in the lag value and returns the normalization (divider) for the passed lag value.  <a href="classLin__CrossCorr__RT__Base.html#a43779bc7fd546fa8f73713de4bd6e285">More...</a><br /></td></tr>
 <tr class="separator:a43779bc7fd546fa8f73713de4bd6e285 inherit pub_methods_classLin__CrossCorr__RT__Base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5d7bad992e07606a18ea828aeb768e1f inherit pub_methods_classLin__CrossCorr__RT__Base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Lin__CorrCorr__Base__Out.html#ga5d7bad992e07606a18ea828aeb768e1f">ch_out</a> () const =0</td></tr>
@@ -135,9 +135,9 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a13307ad04080703e9ef8c0cd9794a6b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a509bcfdab5a3239a014f5805c388172a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSimpler__Circular__Buffer.html">Simpler_Circular_Buffer</a>&lt; <a class="el" href="types_8hpp.html#ac89ac912f524b3e3fa3720ea55fec966">counter_t</a>, Series_size &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLin__CrossCorr__RT__Teensy.html#a509bcfdab5a3239a014f5805c388172a">Series_array2</a></td></tr>
 <tr class="separator:a509bcfdab5a3239a014f5805c388172a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcf9512277d8bd2183ae44b8da1096df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8hpp.html#a7c40bb931c31595ed6308605f4537447">index_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLin__CrossCorr__RT__Teensy.html#afcf9512277d8bd2183ae44b8da1096df">Series_index1</a> = 0</td></tr>
+<tr class="memitem:afcf9512277d8bd2183ae44b8da1096df"><td class="memItemLeft" align="right" valign="top">index_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLin__CrossCorr__RT__Teensy.html#afcf9512277d8bd2183ae44b8da1096df">Series_index1</a> = 0</td></tr>
 <tr class="separator:afcf9512277d8bd2183ae44b8da1096df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a945eda00978a28dd536e58e225821af6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8hpp.html#a7c40bb931c31595ed6308605f4537447">index_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLin__CrossCorr__RT__Teensy.html#a945eda00978a28dd536e58e225821af6">Series_index2</a> = 0</td></tr>
+<tr class="memitem:a945eda00978a28dd536e58e225821af6"><td class="memItemLeft" align="right" valign="top">index_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLin__CrossCorr__RT__Teensy.html#a945eda00978a28dd536e58e225821af6">Series_index2</a> = 0</td></tr>
 <tr class="memdesc:a945eda00978a28dd536e58e225821af6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the last active index → Post-increment.  <a href="#a945eda00978a28dd536e58e225821af6">More...</a><br /></td></tr>
 <tr class="separator:a945eda00978a28dd536e58e225821af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5baab98aab70338799de9f82e7c7cc06"><td class="memItemLeft" align="right" valign="top">void <a class="el" href="types_8hpp.html#ac89ac912f524b3e3fa3720ea55fec966">counter_t</a> datum2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLin__CrossCorr__RT__Teensy.html#a5baab98aab70338799de9f82e7c7cc06">override</a></td></tr>
@@ -357,7 +357,7 @@ template&lt;index_t Series_size&gt; </div>
 template&lt;index_t Series_size&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8hpp.html#a7c40bb931c31595ed6308605f4537447">index_t</a> <a class="el" href="classLin__CrossCorr__RT__Teensy.html">Lin_CrossCorr_RT_Teensy</a>&lt; Series_size &gt;::Series_index1 = 0</td>
+          <td class="memname">index_t <a class="el" href="classLin__CrossCorr__RT__Teensy.html">Lin_CrossCorr_RT_Teensy</a>&lt; Series_size &gt;::Series_index1 = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -389,7 +389,7 @@ template&lt;index_t Series_size&gt; </div>
 template&lt;index_t Series_size&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8hpp.html#a7c40bb931c31595ed6308605f4537447">index_t</a> <a class="el" href="classLin__CrossCorr__RT__Teensy.html">Lin_CrossCorr_RT_Teensy</a>&lt; Series_size &gt;::Series_index2 = 0</td>
+          <td class="memname">index_t <a class="el" href="classLin__CrossCorr__RT__Teensy.html">Lin_CrossCorr_RT_Teensy</a>&lt; Series_size &gt;::Series_index2 = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -415,7 +415,7 @@ template&lt;index_t Series_size&gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/mnt/m/code/Correlator/Software/<a class="el" href="Lin__CrossCorr__RT__Teensy_8hpp_source.html">Lin_CrossCorr_RT_Teensy.hpp</a></li>
+<li>lib/software/<a class="el" href="Lin__CrossCorr__RT__Teensy_8hpp_source.html">Lin_CrossCorr_RT_Teensy.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -1,4 +1,5 @@
-<map id="/mnt/m/code/Correlator/lifetime_timer.hpp" name="/mnt/m/code/Correlator/lifetime_timer.hpp">
-<area shape="rect" id="node2" href="$errors_8hpp.html" title="errors.hpp" alt="" coords="48,95,136,121"/>
-<area shape="rect" id="node3" href="$pins_8hpp.html" title="pins.hpp" alt="" coords="53,169,131,196"/>
+<map id="lib/hardware/lifetime_timer.hpp" name="lib/hardware/lifetime_timer.hpp">
+<area shape="rect" id="node2" href="$errors_8hpp.html" title="errors.hpp" alt="" coords="57,95,145,121"/>
+<area shape="rect" id="node3" href="$pins_8hpp.html" title="pins.hpp" alt="" coords="5,169,83,196"/>
+<area shape="rect" id="node4" href="$types_8hpp.html" title="./../types.hpp" alt="" coords="107,169,213,196"/>
 </map>

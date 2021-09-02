@@ -1,4 +1,4 @@
-.TH "Discarder_Teensy< Series_size, Front, End >" 3 "Mon Aug 30 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "Discarder_Teensy< Series_size, Front, End >" 3 "Wed Sep 1 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,7 +15,7 @@ Inherits \fBFrontBack_Discarder_Base< Series_size, Front, End >\fP\&.
 
 .in +1c
 .ti -1c
-.RI "void \fBoutput\fP (const \fBLin_ACorr_RT_Base\fP &channel) const override \fB__attribute__\fP((always\-inline))"
+.RI "void \fBoutput\fP (const \fBLin_ACorr_RT_Base\fP &channel) const override __attribute__((always\-inline))"
 .br
 .RI "Outputs the channel while discarding the selected channels, by using the implementation specific output method\&. "
 .in -1c

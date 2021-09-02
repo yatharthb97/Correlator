@@ -1,4 +1,4 @@
-.TH "Lin_ACorr_RT_Base" 3 "Mon Aug 30 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "Lin_ACorr_RT_Base" 3 "Wed Sep 1 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -19,11 +19,11 @@ Inherited by \fBLin_ACorr_RT_Teensy< Series_size >\fP\&.
 .br
 .RI "Accepts a single \fCdatum\fP from the counter — which is the lowest order of data aggregate, appends to Series_array and updates relevant channels\&. "
 .ti -1c
-.RI "virtual void \fBpush_data\fP (const \fBcounter_t\fP *container, const \fBindex_t\fP size)=0"
+.RI "virtual void \fBpush_data\fP (const \fBcounter_t\fP *container, const index_t size)=0"
 .br
 .RI "Repeatedy calls \fCLin_ACorr_RT_Base::push_datam()\fP on all the elements of the countainer\&. "
 .ti -1c
-.RI "virtual double \fBnorm\fP (\fBindex_t\fP lag)=0"
+.RI "virtual double \fBnorm\fP (index_t lag)=0"
 .br
 .RI "Takes in the lag value and returns the normalization (divider) for the passed lag value\&. "
 .ti -1c
@@ -43,11 +43,11 @@ Inherited by \fBLin_ACorr_RT_Teensy< Series_size >\fP\&.
 This class is a blank interface for all objects that are — \fB{Linear\fP Real-Time Software Auto-Correlators}\&. 
 .SH "Member Function Documentation"
 .PP 
-.SS "virtual double Lin_ACorr_RT_Base::norm (\fBindex_t\fP lag)\fC [inline]\fP, \fC [pure virtual]\fP"
+.SS "virtual double Lin_ACorr_RT_Base::norm (index_t lag)\fC [inline]\fP, \fC [pure virtual]\fP"
 
 .PP
 Takes in the lag value and returns the normalization (divider) for the passed lag value\&. 
-.SS "virtual void Lin_ACorr_RT_Base::push_data (const \fBcounter_t\fP * container, const \fBindex_t\fP size)\fC [inline]\fP, \fC [pure virtual]\fP"
+.SS "virtual void Lin_ACorr_RT_Base::push_data (const \fBcounter_t\fP * container, const index_t size)\fC [inline]\fP, \fC [pure virtual]\fP"
 
 .PP
 Repeatedy calls \fCLin_ACorr_RT_Base::push_datam()\fP on all the elements of the countainer\&. 

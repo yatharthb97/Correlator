@@ -11,7 +11,8 @@ This class is a blank interface for all objects that are — {\bfseries \{Linear
 
 
 
-Inheritance diagram for Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base\+:\nopagebreak
+Inheritance diagram for Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -23,9 +24,9 @@ Inheritance diagram for Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base\+:\nopagebrea
 \item 
 virtual void \hyperlink{classLin__ACorr__RT__Base_a398167525faf2a65f29722e943a0c57e}{push\+\_\+datum} (\hyperlink{types_8hpp_ac89ac912f524b3e3fa3720ea55fec966}{counter\+\_\+t} datum)=0
 \begin{DoxyCompactList}\small\item\em Accepts a single {\ttfamily datum} from the counter — which is the lowest order of data aggregate, appends to Series\+\_\+array and updates relevant channels. \end{DoxyCompactList}\item 
-virtual void \hyperlink{classLin__ACorr__RT__Base_a91c95a49619995f40aeae80916afed3e}{push\+\_\+data} (const \hyperlink{types_8hpp_ac89ac912f524b3e3fa3720ea55fec966}{counter\+\_\+t} $\ast$container, const \hyperlink{types_8hpp_a7c40bb931c31595ed6308605f4537447}{index\+\_\+t} size)=0
+virtual void \hyperlink{classLin__ACorr__RT__Base_a91c95a49619995f40aeae80916afed3e}{push\+\_\+data} (const \hyperlink{types_8hpp_ac89ac912f524b3e3fa3720ea55fec966}{counter\+\_\+t} $\ast$container, const index\+\_\+t size)=0
 \begin{DoxyCompactList}\small\item\em Repeatedy calls {\ttfamily Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base\+::push\+\_\+datam()} on all the elements of the countainer. \end{DoxyCompactList}\item 
-virtual double \hyperlink{classLin__ACorr__RT__Base_a06c0bbe593f87a9034aa34e95d9d46db}{norm} (\hyperlink{types_8hpp_a7c40bb931c31595ed6308605f4537447}{index\+\_\+t} lag)=0
+virtual double \hyperlink{classLin__ACorr__RT__Base_a06c0bbe593f87a9034aa34e95d9d46db}{norm} (index\+\_\+t lag)=0
 \begin{DoxyCompactList}\small\item\em Takes in the lag value and returns the normalization (divider) for the passed lag value. \end{DoxyCompactList}\item 
 virtual void \hyperlink{group__Lin__ACorr__Base__Out_ga4fe3bd7a6a98388d46827d22dc4596c9}{ch\+\_\+out} () const =0
 \begin{DoxyCompactList}\small\item\em Outputs all the channels using specific implementation based methods. \end{DoxyCompactList}\item 
@@ -43,7 +44,7 @@ This class is a blank interface for all objects that are — {\bfseries \{Linear
 \index{Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base@{Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base}!norm@{norm}}
 \index{norm@{norm}!Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base@{Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base}}
 \subsubsection{\texorpdfstring{norm()}{norm()}}
-{\footnotesize\ttfamily virtual double Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base\+::norm (\begin{DoxyParamCaption}\item[{\hyperlink{types_8hpp_a7c40bb931c31595ed6308605f4537447}{index\+\_\+t}}]{lag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual double Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base\+::norm (\begin{DoxyParamCaption}\item[{index\+\_\+t}]{lag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [pure virtual]}}
 
 
 
@@ -53,7 +54,7 @@ Takes in the lag value and returns the normalization (divider) for the passed la
 \index{Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base@{Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base}!push\+\_\+data@{push\+\_\+data}}
 \index{push\+\_\+data@{push\+\_\+data}!Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base@{Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base}}
 \subsubsection{\texorpdfstring{push\+\_\+data()}{push\_data()}}
-{\footnotesize\ttfamily virtual void Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base\+::push\+\_\+data (\begin{DoxyParamCaption}\item[{const \hyperlink{types_8hpp_ac89ac912f524b3e3fa3720ea55fec966}{counter\+\_\+t} $\ast$}]{container,  }\item[{const \hyperlink{types_8hpp_a7c40bb931c31595ed6308605f4537447}{index\+\_\+t}}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base\+::push\+\_\+data (\begin{DoxyParamCaption}\item[{const \hyperlink{types_8hpp_ac89ac912f524b3e3fa3720ea55fec966}{counter\+\_\+t} $\ast$}]{container,  }\item[{const index\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [pure virtual]}}
 
 
 
@@ -73,4 +74,4 @@ Accepts a single {\ttfamily datum} from the counter — which is the lowest orde
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/mnt/m/code/\+Correlator/\+Software/\hyperlink{Lin__ACorr__RT__Base_8hpp}{Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base.\+hpp}\end{DoxyCompactItemize}
+lib/software/\hyperlink{Lin__ACorr__RT__Base_8hpp}{Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base.\+hpp}\end{DoxyCompactItemize}

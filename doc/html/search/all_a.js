@@ -1,17 +1,15 @@
 var searchData=
 [
-  ['lc_5fdsep',['LC_DSep',['../types_8hpp.html#ad8d6b5b6c93d1fd358c0ad58e4e1828a',1,'types.hpp']]],
-  ['lc_5fsafety_5fchecks',['LC_SAFETY_CHECKS',['../accumulator_8hpp.html#a0d7d3ea961c5ab1caec4bb88bd57daf3',1,'types.hpp']]],
   ['led_5fblue',['LED_BLUE',['../pins_8hpp.html#a8046eca6ddcbe578777cfde489622a13',1,'pins.hpp']]],
   ['led_5fgreen',['LED_GREEN',['../pins_8hpp.html#a8d7df4222b2fde6205bebffc5a0ae070',1,'pins.hpp']]],
   ['led_5fred',['LED_RED',['../pins_8hpp.html#a735f426a390e22c0050b964328c5e06f',1,'pins.hpp']]],
   ['led_5fwhite',['LED_WHITE',['../pins_8hpp.html#a1be903f86639d50fb6ed02a0dbbe0e2c',1,'pins.hpp']]],
   ['led_5fyellow',['LED_YELLOW',['../pins_8hpp.html#af338796c804fbfe2e9fd4d249e3c5004',1,'pins.hpp']]],
-  ['leds',['LEDs',['../classLEDSet.html#a702b4369ddb5d8f4ca59056ebb6c4617',1,'LEDSet']]],
-  ['ledset',['LEDSet',['../classLEDSet.html',1,'']]],
+  ['leds',['LEDs',['../classLEDSet.html#a6d83c4cf19c09eb8fdb2a6724a8df99e',1,'LEDSet']]],
+  ['ledset',['LEDSet',['../classLEDSet.html',1,'LEDSet'],['../classLEDSet.html#a4a65c9b26a11c2e62e65170d1088e201',1,'LEDSet::LEDSet()'],['../main_8cpp.html#a40da5321d72e5a142e0c9719c8f9090a',1,'LEDset():&#160;main.cpp']]],
   ['ledset_2ehpp',['ledset.hpp',['../ledset_8hpp.html',1,'']]],
   ['ledset_5fallow_5fanalog',['LEDSET_ALLOW_ANALOG',['../ledset_8hpp.html#a079b73db813e0d821f315fb965ad9925',1,'ledset.hpp']]],
-  ['ledstatus',['LEDStatus',['../classLEDSet.html#a9a38ca32395095475ed89e7eea01e990',1,'LEDSet']]],
+  ['ledstatus',['LEDStatus',['../classLEDSet.html#a54945652a2ba428b70ad620e88b4ab60',1,'LEDSet']]],
   ['lifetime_5ftimer_2ehpp',['lifetime_timer.hpp',['../lifetime__timer_8hpp.html',1,'']]],
   ['lin_5facorr_5frt_5fbase',['Lin_ACorr_RT_Base',['../classLin__ACorr__RT__Base.html',1,'']]],
   ['lin_5facorr_5frt_5fbase_2ehpp',['Lin_ACorr_RT_Base.hpp',['../Lin__ACorr__RT__Base_8hpp.html',1,'']]],
@@ -23,5 +21,6 @@ var searchData=
   ['lin_5fcrosscorr_5frt_5fteensy',['Lin_CrossCorr_RT_Teensy',['../classLin__CrossCorr__RT__Teensy.html',1,'']]],
   ['lin_5fcrosscorr_5frt_5fteensy_2ehpp',['Lin_CrossCorr_RT_Teensy.hpp',['../Lin__CrossCorr__RT__Teensy_8hpp.html',1,'']]],
   ['localcounter',['LocalCounter',['../classAccumulator.html#a753e3878c3078a11ee9bc13b6185ec60',1,'Accumulator']]],
+  ['loop',['loop',['../main_8cpp.html#afe461d27b9c48d5921c00d521181f12f',1,'main.cpp']]],
   ['loop_5fled',['LOOP_LED',['../pins_8hpp.html#a1c1c13275493f645825a60c5710264e5',1,'pins.hpp']]]
 ];

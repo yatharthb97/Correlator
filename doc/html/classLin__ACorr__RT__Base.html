@@ -86,10 +86,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a398167525faf2a65f29722e943a0c57e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLin__ACorr__RT__Base.html#a398167525faf2a65f29722e943a0c57e">push_datum</a> (<a class="el" href="types_8hpp.html#ac89ac912f524b3e3fa3720ea55fec966">counter_t</a> datum)=0</td></tr>
 <tr class="memdesc:a398167525faf2a65f29722e943a0c57e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accepts a single <code>datum</code> from the counter — which is the lowest order of data aggregate, appends to Series_array and updates relevant channels.  <a href="#a398167525faf2a65f29722e943a0c57e">More...</a><br /></td></tr>
 <tr class="separator:a398167525faf2a65f29722e943a0c57e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91c95a49619995f40aeae80916afed3e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLin__ACorr__RT__Base.html#a91c95a49619995f40aeae80916afed3e">push_data</a> (const <a class="el" href="types_8hpp.html#ac89ac912f524b3e3fa3720ea55fec966">counter_t</a> *container, const <a class="el" href="types_8hpp.html#a7c40bb931c31595ed6308605f4537447">index_t</a> size)=0</td></tr>
+<tr class="memitem:a91c95a49619995f40aeae80916afed3e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLin__ACorr__RT__Base.html#a91c95a49619995f40aeae80916afed3e">push_data</a> (const <a class="el" href="types_8hpp.html#ac89ac912f524b3e3fa3720ea55fec966">counter_t</a> *container, const index_t size)=0</td></tr>
 <tr class="memdesc:a91c95a49619995f40aeae80916afed3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Repeatedy calls <code>Lin_ACorr_RT_Base::push_datam()</code> on all the elements of the countainer.  <a href="#a91c95a49619995f40aeae80916afed3e">More...</a><br /></td></tr>
 <tr class="separator:a91c95a49619995f40aeae80916afed3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06c0bbe593f87a9034aa34e95d9d46db"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLin__ACorr__RT__Base.html#a06c0bbe593f87a9034aa34e95d9d46db">norm</a> (<a class="el" href="types_8hpp.html#a7c40bb931c31595ed6308605f4537447">index_t</a> lag)=0</td></tr>
+<tr class="memitem:a06c0bbe593f87a9034aa34e95d9d46db"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLin__ACorr__RT__Base.html#a06c0bbe593f87a9034aa34e95d9d46db">norm</a> (index_t lag)=0</td></tr>
 <tr class="memdesc:a06c0bbe593f87a9034aa34e95d9d46db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes in the lag value and returns the normalization (divider) for the passed lag value.  <a href="#a06c0bbe593f87a9034aa34e95d9d46db">More...</a><br /></td></tr>
 <tr class="separator:a06c0bbe593f87a9034aa34e95d9d46db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4fe3bd7a6a98388d46827d22dc4596c9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Lin__ACorr__Base__Out.html#ga4fe3bd7a6a98388d46827d22dc4596c9">ch_out</a> () const =0</td></tr>
@@ -116,7 +116,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual double Lin_ACorr_RT_Base::norm </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="types_8hpp.html#a7c40bb931c31595ed6308605f4537447">index_t</a>&#160;</td>
+          <td class="paramtype">index_t&#160;</td>
           <td class="paramname"><em>lag</em></td><td>)</td>
           <td></td>
         </tr>
@@ -150,7 +150,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="types_8hpp.html#a7c40bb931c31595ed6308605f4537447">index_t</a>&#160;</td>
+          <td class="paramtype">const index_t&#160;</td>
           <td class="paramname"><em>size</em>&#160;</td>
         </tr>
         <tr>
@@ -199,7 +199,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/mnt/m/code/Correlator/Software/<a class="el" href="Lin__ACorr__RT__Base_8hpp_source.html">Lin_ACorr_RT_Base.hpp</a></li>
+<li>lib/software/<a class="el" href="Lin__ACorr__RT__Base_8hpp_source.html">Lin_ACorr_RT_Base.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

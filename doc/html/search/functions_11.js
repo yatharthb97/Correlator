@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['xbar_5fconnect',['xbar_connect',['../utilities_8hpp.html#aceb15fdf783b1e9be1ef0d0fff5b5907',1,'utilities.hpp']]]
+  ['validate',['Validate',['../namespaceErrors.html#a51461dff689e5f46ea124f1e13806c01',1,'Errors']]]
 ];

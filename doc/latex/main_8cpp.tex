@@ -1,0 +1,178 @@
+\hypertarget{main_8cpp}{}\section{src/main.cpp File Reference}
+\label{main_8cpp}\index{src/main.\+cpp@{src/main.\+cpp}}
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include $<$imxrt.\+h$>$}\newline
+{\ttfamily \#include $<$hardware/pins.\+hpp$>$}\newline
+{\ttfamily \#include $<$hardware/errors.\+hpp$>$}\newline
+{\ttfamily \#include $<$hardware/pit.\+hpp$>$}\newline
+{\ttfamily \#include $<$hardware/qtmr1.\+hpp$>$}\newline
+{\ttfamily \#include $<$hardware/ledset.\+hpp$>$}\newline
+{\ttfamily \#include $<$hardware/utilities.\+hpp$>$}\newline
+{\ttfamily \#include $<$software/multi\+\_\+tau$>$}\newline
+{\ttfamily \#include $<$hardware.\+hpp$>$}\newline
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{main_8cpp_adcc5d50bb7482faf811186cd946b4a7d}{P\+I\+T\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+T\+E\+S\+T\+\_\+\+P\+IN}~4
+\begin{DoxyCompactList}\small\item\em L\+ED Dashboard resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}{setup} ()
+\item 
+void \hyperlink{main_8cpp_afe461d27b9c48d5921c00d521181f12f}{loop} ()
+\item 
+void \hyperlink{main_8cpp_a4d7b9fc4c1fccb2b242ac7e5f2d51fb7}{pit\+\_\+isr} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPITController}{P\+I\+T\+Controller}$<$ 2 $>$ \hyperlink{main_8cpp_a30d4468a263e3498d6e00f5b8eb99275}{P\+I\+\_\+t}
+\begin{DoxyCompactList}\small\item\em P\+I\+\_\+t Resource. \end{DoxyCompactList}\item 
+\hyperlink{classTMR1Controller}{T\+M\+R1\+Controller} \hyperlink{main_8cpp_a691981c43e1bdddca6df5accb6927331}{T\+T\+L\+\_\+c}
+\begin{DoxyCompactList}\small\item\em T\+T\+L\+\_\+c Resource. \end{DoxyCompactList}\item 
+\hyperlink{classLEDSet}{L\+E\+D\+Set} \hyperlink{main_8cpp_a40da5321d72e5a142e0c9719c8f9090a}{L\+E\+Dset}
+\item 
+volatile \hyperlink{types_8hpp_ac89ac912f524b3e3fa3720ea55fec966}{counter\+\_\+t} \hyperlink{main_8cpp_afcac7adcea259024440f8d9257d82d08}{Counter\+\_\+val} = 0
+\begin{DoxyCompactList}\small\item\em Stores the value read by the counter. \end{DoxyCompactList}\item 
+volatile bool \hyperlink{main_8cpp_afaf7617e9ce0486d54a6c65fedeaf1f9}{Update\+\_\+flag} = false
+\begin{DoxyCompactList}\small\item\em Indicates if a new value has arrived from the counting module. \end{DoxyCompactList}\item 
+volatile unsigned int \hyperlink{main_8cpp_aec1fbfd9bfc90e447b39a9362a0c51de}{Update\+\_\+count} = 0
+\begin{DoxyCompactList}\small\item\em Stores the number of updates made on the correlator channels. \end{DoxyCompactList}\item 
+const unsigned int \hyperlink{main_8cpp_a3b247283a68292408b626904e422a52e}{Serial\+Out\+\_\+\+Count\+Max} = 1
+\begin{DoxyCompactList}\small\item\em Serial output is done after these many updates. \end{DoxyCompactList}\item 
+const double \hyperlink{main_8cpp_a1d18182f432f5b88cf58be9c367be457}{Gate\+\_\+time\+\_\+us} = 1
+\begin{DoxyCompactList}\small\item\em The gate time of T\+T\+L\+\_\+C in microseconds (us) \end{DoxyCompactList}\item 
+const double \hyperlink{main_8cpp_ada17f1639ca8a5932f17942031baa67f}{Allowed\+\_\+period\+\_\+error\+\_\+us} = 1e-\/3
+\begin{DoxyCompactList}\small\item\em Gate time precision error due to finite precision of timers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{main_8cpp_adcc5d50bb7482faf811186cd946b4a7d}\label{main_8cpp_adcc5d50bb7482faf811186cd946b4a7d}} 
+\index{main.\+cpp@{main.\+cpp}!P\+I\+T\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+T\+E\+S\+T\+\_\+\+P\+IN@{P\+I\+T\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+T\+E\+S\+T\+\_\+\+P\+IN}}
+\index{P\+I\+T\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+T\+E\+S\+T\+\_\+\+P\+IN@{P\+I\+T\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+T\+E\+S\+T\+\_\+\+P\+IN}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{P\+I\+T\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+T\+E\+S\+T\+\_\+\+P\+IN}{PIT\_TOGGLE\_TEST\_PIN}}
+{\footnotesize\ttfamily \#define P\+I\+T\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+T\+E\+S\+T\+\_\+\+P\+IN~4}
+
+
+
+L\+ED Dashboard resources. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_afe461d27b9c48d5921c00d521181f12f}\label{main_8cpp_afe461d27b9c48d5921c00d521181f12f}} 
+\index{main.\+cpp@{main.\+cpp}!loop@{loop}}
+\index{loop@{loop}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8cpp_a4d7b9fc4c1fccb2b242ac7e5f2d51fb7}\label{main_8cpp_a4d7b9fc4c1fccb2b242ac7e5f2d51fb7}} 
+\index{main.\+cpp@{main.\+cpp}!pit\+\_\+isr@{pit\+\_\+isr}}
+\index{pit\+\_\+isr@{pit\+\_\+isr}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{pit\+\_\+isr()}{pit\_isr()}}
+{\footnotesize\ttfamily void pit\+\_\+isr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}\label{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}} 
+\index{main.\+cpp@{main.\+cpp}!setup@{setup}}
+\index{setup@{setup}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{main_8cpp_ada17f1639ca8a5932f17942031baa67f}\label{main_8cpp_ada17f1639ca8a5932f17942031baa67f}} 
+\index{main.\+cpp@{main.\+cpp}!Allowed\+\_\+period\+\_\+error\+\_\+us@{Allowed\+\_\+period\+\_\+error\+\_\+us}}
+\index{Allowed\+\_\+period\+\_\+error\+\_\+us@{Allowed\+\_\+period\+\_\+error\+\_\+us}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{Allowed\+\_\+period\+\_\+error\+\_\+us}{Allowed\_period\_error\_us}}
+{\footnotesize\ttfamily const double Allowed\+\_\+period\+\_\+error\+\_\+us = 1e-\/3}
+
+
+
+Gate time precision error due to finite precision of timers. 
+
+\mbox{\Hypertarget{main_8cpp_afcac7adcea259024440f8d9257d82d08}\label{main_8cpp_afcac7adcea259024440f8d9257d82d08}} 
+\index{main.\+cpp@{main.\+cpp}!Counter\+\_\+val@{Counter\+\_\+val}}
+\index{Counter\+\_\+val@{Counter\+\_\+val}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{Counter\+\_\+val}{Counter\_val}}
+{\footnotesize\ttfamily volatile \hyperlink{types_8hpp_ac89ac912f524b3e3fa3720ea55fec966}{counter\+\_\+t} Counter\+\_\+val = 0}
+
+
+
+Stores the value read by the counter. 
+
+\mbox{\Hypertarget{main_8cpp_a1d18182f432f5b88cf58be9c367be457}\label{main_8cpp_a1d18182f432f5b88cf58be9c367be457}} 
+\index{main.\+cpp@{main.\+cpp}!Gate\+\_\+time\+\_\+us@{Gate\+\_\+time\+\_\+us}}
+\index{Gate\+\_\+time\+\_\+us@{Gate\+\_\+time\+\_\+us}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{Gate\+\_\+time\+\_\+us}{Gate\_time\_us}}
+{\footnotesize\ttfamily const double Gate\+\_\+time\+\_\+us = 1}
+
+
+
+The gate time of T\+T\+L\+\_\+C in microseconds (us) 
+
+\mbox{\Hypertarget{main_8cpp_a40da5321d72e5a142e0c9719c8f9090a}\label{main_8cpp_a40da5321d72e5a142e0c9719c8f9090a}} 
+\index{main.\+cpp@{main.\+cpp}!L\+E\+Dset@{L\+E\+Dset}}
+\index{L\+E\+Dset@{L\+E\+Dset}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{L\+E\+Dset}{LEDset}}
+{\footnotesize\ttfamily \hyperlink{classLEDSet}{L\+E\+D\+Set} L\+E\+Dset}
+
+\mbox{\Hypertarget{main_8cpp_a30d4468a263e3498d6e00f5b8eb99275}\label{main_8cpp_a30d4468a263e3498d6e00f5b8eb99275}} 
+\index{main.\+cpp@{main.\+cpp}!P\+I\+\_\+t@{P\+I\+\_\+t}}
+\index{P\+I\+\_\+t@{P\+I\+\_\+t}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{P\+I\+\_\+t}{PI\_t}}
+{\footnotesize\ttfamily \hyperlink{classPITController}{P\+I\+T\+Controller}$<$2$>$ P\+I\+\_\+t}
+
+
+
+P\+I\+\_\+t Resource. 
+
+\mbox{\Hypertarget{main_8cpp_a3b247283a68292408b626904e422a52e}\label{main_8cpp_a3b247283a68292408b626904e422a52e}} 
+\index{main.\+cpp@{main.\+cpp}!Serial\+Out\+\_\+\+Count\+Max@{Serial\+Out\+\_\+\+Count\+Max}}
+\index{Serial\+Out\+\_\+\+Count\+Max@{Serial\+Out\+\_\+\+Count\+Max}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{Serial\+Out\+\_\+\+Count\+Max}{SerialOut\_CountMax}}
+{\footnotesize\ttfamily const unsigned int Serial\+Out\+\_\+\+Count\+Max = 1}
+
+
+
+Serial output is done after these many updates. 
+
+\mbox{\Hypertarget{main_8cpp_a691981c43e1bdddca6df5accb6927331}\label{main_8cpp_a691981c43e1bdddca6df5accb6927331}} 
+\index{main.\+cpp@{main.\+cpp}!T\+T\+L\+\_\+c@{T\+T\+L\+\_\+c}}
+\index{T\+T\+L\+\_\+c@{T\+T\+L\+\_\+c}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{T\+T\+L\+\_\+c}{TTL\_c}}
+{\footnotesize\ttfamily \hyperlink{classTMR1Controller}{T\+M\+R1\+Controller} T\+T\+L\+\_\+c}
+
+
+
+T\+T\+L\+\_\+c Resource. 
+
+\mbox{\Hypertarget{main_8cpp_aec1fbfd9bfc90e447b39a9362a0c51de}\label{main_8cpp_aec1fbfd9bfc90e447b39a9362a0c51de}} 
+\index{main.\+cpp@{main.\+cpp}!Update\+\_\+count@{Update\+\_\+count}}
+\index{Update\+\_\+count@{Update\+\_\+count}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{Update\+\_\+count}{Update\_count}}
+{\footnotesize\ttfamily volatile unsigned int Update\+\_\+count = 0}
+
+
+
+Stores the number of updates made on the correlator channels. 
+
+\mbox{\Hypertarget{main_8cpp_afaf7617e9ce0486d54a6c65fedeaf1f9}\label{main_8cpp_afaf7617e9ce0486d54a6c65fedeaf1f9}} 
+\index{main.\+cpp@{main.\+cpp}!Update\+\_\+flag@{Update\+\_\+flag}}
+\index{Update\+\_\+flag@{Update\+\_\+flag}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{Update\+\_\+flag}{Update\_flag}}
+{\footnotesize\ttfamily volatile bool Update\+\_\+flag = false}
+
+
+
+Indicates if a new value has arrived from the counting module. 
+

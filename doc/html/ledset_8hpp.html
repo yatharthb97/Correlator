@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>DIY Auto-Correlator: /mnt/m/code/Correlator/ledset.hpp File Reference</title>
+<title>DIY Auto-Correlator: lib/hardware/ledset.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -58,16 +58,40 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="dir_e9b0431df823a22ce272de81331f9de3.html">hardware</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
-<div class="title">/mnt/m/code/Correlator/ledset.hpp File Reference</div>  </div>
+<div class="title">ledset.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
+<div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;array&gt;</code><br />
+<code>#include &quot;<a class="el" href="pins_8hpp_source.html">pins.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for ledset.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="ledset_8hpp__incl.png" border="0" usemap="#lib_2hardware_2ledset_8hpp" alt=""/></div>
+<map name="lib_2hardware_2ledset_8hpp" id="lib_2hardware_2ledset_8hpp">
+<area shape="rect" id="node5" href="pins_8hpp.html" title="pins.hpp" alt="" coords="303,80,381,107"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="ledset_8hpp__dep__incl.png" border="0" usemap="#lib_2hardware_2ledset_8hppdep" alt=""/></div>
+<map name="lib_2hardware_2ledset_8hppdep" id="lib_2hardware_2ledset_8hppdep">
+<area shape="rect" id="node2" href="main_8cpp.html" title="src/main.cpp" alt="" coords="40,80,145,107"/>
+</map>
+</div>
+</div>
 <p><a href="ledset_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -77,7 +101,7 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a079b73db813e0d821f315fb965ad9925"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ledset_8hpp.html#a079b73db813e0d821f315fb965ad9925">LEDSET_ALLOW_ANALOG</a>&#160;&#160;&#160;== 1</td></tr>
+<tr class="memitem:a079b73db813e0d821f315fb965ad9925"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ledset_8hpp.html#a079b73db813e0d821f315fb965ad9925">LEDSET_ALLOW_ANALOG</a>&#160;&#160;&#160;1</td></tr>
 <tr class="separator:a079b73db813e0d821f315fb965ad9925"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -88,7 +112,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define LEDSET_ALLOW_ANALOG&#160;&#160;&#160;== 1</td>
+          <td class="memname">#define LEDSET_ALLOW_ANALOG&#160;&#160;&#160;1</td>
         </tr>
       </table>
 </div><div class="memdoc">

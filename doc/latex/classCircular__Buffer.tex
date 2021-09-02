@@ -12,28 +12,28 @@ Implementation of simple Serial Buffer with bounded index random accessor.
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{classCircular__Buffer_a902eea867fd0c933af19b91f9b97ccee}{reset} () \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
+void \hyperlink{classCircular__Buffer_a902eea867fd0c933af19b91f9b97ccee}{reset} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
 \begin{DoxyCompactList}\small\item\em Resets the buffer (pointers) without clearing the elements. \end{DoxyCompactList}\item 
-bool \hyperlink{classCircular__Buffer_a5d5ae2d1423cb1e5fc8e4e05d356cdca}{is\+\_\+full} () const \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
+bool \hyperlink{classCircular__Buffer_a5d5ae2d1423cb1e5fc8e4e05d356cdca}{is\+\_\+full} () const \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
 \begin{DoxyCompactList}\small\item\em Returns whether the buffer is full. \end{DoxyCompactList}\item 
-bool \hyperlink{classCircular__Buffer_af2251f79c1509b7c1af0354ff7ac11fb}{is\+\_\+empty} () const \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
+bool \hyperlink{classCircular__Buffer_af2251f79c1509b7c1af0354ff7ac11fb}{is\+\_\+empty} () const \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
 \begin{DoxyCompactList}\small\item\em Returns whether the buffer is empty. \end{DoxyCompactList}\item 
-size\+\_\+t \hyperlink{classCircular__Buffer_ad5ffdcccb9212547871ea6c1e399caca}{capacity} () const \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
+size\+\_\+t \hyperlink{classCircular__Buffer_ad5ffdcccb9212547871ea6c1e399caca}{capacity} () const \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
 \begin{DoxyCompactList}\small\item\em Returns the maximum capacity of the buffer. \end{DoxyCompactList}\item 
-size\+\_\+t \hyperlink{classCircular__Buffer_a94a93c974e51a8a7ac9cefdfe896aaac}{size} () const \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
+size\+\_\+t \hyperlink{classCircular__Buffer_a94a93c974e51a8a7ac9cefdfe896aaac}{size} () const \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
 \begin{DoxyCompactList}\small\item\em Returns the current size of the buffer. \end{DoxyCompactList}\item 
-void \hyperlink{classCircular__Buffer_a2271c0b158052ae6491972ce7237f888}{push\+\_\+back} (const Type data) \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((flatten))
+void \hyperlink{classCircular__Buffer_a2271c0b158052ae6491972ce7237f888}{push\+\_\+back} (const Type data) \+\_\+\+\_\+attribute\+\_\+\+\_\+((flatten))
 \begin{DoxyCompactList}\small\item\em Adds a datum to the circular buffer. \end{DoxyCompactList}\item 
-Type \hyperlink{classCircular__Buffer_a0b7b0fb1ecffc75ba233fed043616313}{pop\+\_\+back} () \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
+Type \hyperlink{classCircular__Buffer_a0b7b0fb1ecffc75ba233fed043616313}{pop\+\_\+back} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
 \begin{DoxyCompactList}\small\item\em Returns the last element from the buffer and deletes it -\/ pop operation. \end{DoxyCompactList}\item 
-Type \hyperlink{classCircular__Buffer_a520f88f6e08b618a3b2923f157db541d}{operator\mbox{[}$\,$\mbox{]}} (const size\+\_\+t index) const \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
+Type \hyperlink{classCircular__Buffer_a520f88f6e08b618a3b2923f157db541d}{operator\mbox{[}$\,$\mbox{]}} (const size\+\_\+t index) const \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
 \begin{DoxyCompactList}\small\item\em Random access operator can be used to retrive the nth element in the buffer at any state of the buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{classCircular__Buffer_a4ec86fd625e56d17abe155895cc4cc1b}{advance\+\_\+pointer} () \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
+void \hyperlink{classCircular__Buffer_a4ec86fd625e56d17abe155895cc4cc1b}{advance\+\_\+pointer} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
 \begin{DoxyCompactList}\small\item\em Flag indicates whether the buffer is running at full capacity. \end{DoxyCompactList}\item 
-void \hyperlink{classCircular__Buffer_a2b13869f0a5a4904142241a3d15ff141}{retreat\+\_\+pointer} () \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
+void \hyperlink{classCircular__Buffer_a2b13869f0a5a4904142241a3d15ff141}{retreat\+\_\+pointer} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
 \begin{DoxyCompactList}\small\item\em Adjusts the pointers after a removal or \hyperlink{classCircular__Buffer_a0b7b0fb1ecffc75ba233fed043616313}{pop\+\_\+back()} operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -220,4 +220,4 @@ Index / Pointer of the first element of the buffer.
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/mnt/m/code/\+Correlator/\+Software/\hyperlink{circular__buffer_8hpp}{circular\+\_\+buffer.\+hpp}\end{DoxyCompactItemize}
+lib/software/\hyperlink{circular__buffer_8hpp}{circular\+\_\+buffer.\+hpp}\end{DoxyCompactItemize}

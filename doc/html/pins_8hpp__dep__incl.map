@@ -1,6 +1,8 @@
-<map id="/mnt/m/code/Correlator/pins.hpp" name="/mnt/m/code/Correlator/pins.hpp">
-<area shape="rect" id="node2" href="$errors_8hpp.html" title="/mnt/m/code/Correlator\l/errors.hpp" alt="" coords="203,95,376,136"/>
-<area shape="rect" id="node3" href="$lifetime__timer_8hpp.html" title="/mnt/m/code/Correlator\l/lifetime_timer.hpp" alt="" coords="5,184,179,225"/>
-<area shape="rect" id="node4" href="$pit_8hpp.html" title="/mnt/m/code/Correlator\l/pit.hpp" alt="" coords="203,184,376,225"/>
-<area shape="rect" id="node5" href="$qtmr1_8hpp.html" title="/mnt/m/code/Correlator\l/qtmr1.hpp" alt="" coords="400,184,573,225"/>
+<map id="lib/hardware/pins.hpp" name="lib/hardware/pins.hpp">
+<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="251,244,357,271"/>
+<area shape="rect" id="node3" href="$errors_8hpp.html" title="lib/hardware/errors.hpp" alt="" coords="111,80,284,107"/>
+<area shape="rect" id="node7" href="$ledset_8hpp.html" title="lib/hardware/ledset.hpp" alt="" coords="455,80,630,107"/>
+<area shape="rect" id="node4" href="$lifetime__timer_8hpp.html" title="lib/hardware/lifetime\l_timer.hpp" alt="" coords="45,155,203,196"/>
+<area shape="rect" id="node5" href="$pit_8hpp.html" title="lib/hardware/pit.hpp" alt="" coords="228,162,380,189"/>
+<area shape="rect" id="node6" href="$qtmr1_8hpp.html" title="lib/hardware/qtmr1.hpp" alt="" coords="405,162,579,189"/>
 </map>

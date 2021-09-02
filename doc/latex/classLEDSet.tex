@@ -4,80 +4,101 @@
 
 {\ttfamily \#include $<$ledset.\+hpp$>$}
 
-\subsection*{Static Public Member Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static unsigned int \hyperlink{classLEDSet_a090860287fc0ce0d09e2b3c6d4399005}{size} () \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
+\hyperlink{classLEDSet_a4a65c9b26a11c2e62e65170d1088e201}{L\+E\+D\+Set} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{classLEDSet}{L\+E\+D\+Set} class. \end{DoxyCompactList}\item 
+constexpr unsigned int \hyperlink{classLEDSet_a21b51a375a8487fb89deaa2fbd3701df}{size} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
 \begin{DoxyCompactList}\small\item\em Returns the size of the led sets. \end{DoxyCompactList}\item 
-static void \hyperlink{classLEDSet_aebc268353f21afffcf0a80c92b6444d2}{init} ()
+void \hyperlink{classLEDSet_a907747547c2967c4db9597247c0acd9c}{init} ()
 \begin{DoxyCompactList}\small\item\em Sets up the pin mode of all L\+E\+Ds. \end{DoxyCompactList}\item 
-static void \hyperlink{classLEDSet_a1cb98a2a56113493121873f294dbd35a}{state\+\_\+reload} ()
+void \hyperlink{classLEDSet_a52d7a48f6639ce1df579e960e5a78890}{state\+\_\+reload} ()
 \begin{DoxyCompactList}\small\item\em Sets the L\+E\+Ds digitally to max brighnes, based on their switch state. \end{DoxyCompactList}\item 
-static void \hyperlink{classLEDSet_aec21832638aa78f34f1ff5b4133b5620}{toggle\+\_\+all} ()
+void \hyperlink{classLEDSet_a555f8e48ff0989647cba6de505db8a5d}{toggle\+\_\+all} ()
 \begin{DoxyCompactList}\small\item\em Toggles the state of all the L\+E\+Ds. \end{DoxyCompactList}\item 
-static \hyperlink{classLEDSet_acf2788af34b7aebec813665763256d54}{toggle\+\_\+all\+\_\+routine} (int delay\+\_\+ms)
-\begin{DoxyCompactList}\small\item\em Toggles all the L\+E\+Ds twice, with some delay.  Animation. \end{DoxyCompactList}\item 
-static void \hyperlink{classLEDSet_a44ecd0c2c70984a4fade72e0bb79f059}{dim} (unsigned int analog\+\_\+val)
+void \hyperlink{classLEDSet_a5ba8bc8d99267bcaa579fea860ebe7d0}{toggle\+\_\+all\+\_\+routine} (int delay\+\_\+ms)
+\item 
+void \hyperlink{classLEDSet_a70e49efcd898014cb18b973b7f42b0fa}{dim} (unsigned int analog\+\_\+val)
 \begin{DoxyCompactList}\small\item\em Dims the O\+N-\/\+L\+E\+Ds with the provided analog voltage. Only affects L\+E\+Ds that are ON. \end{DoxyCompactList}\item 
-static void \hyperlink{classLEDSet_a8c3c9d0c3fb93e9722cb892d0ebf2f2f}{dim\+\_\+routine} (unsigned int end\+\_\+analog\+\_\+val)
-\begin{DoxyCompactList}\small\item\em Slowly dims the O\+N-\/\+L\+E\+Ds with a routine that lasts 1s.  Animation. \end{DoxyCompactList}\item 
-static void \hyperlink{classLEDSet_a3e97e2ccf25adfa7f5f752138e616c96}{min\+\_\+brighness} ()
+void \hyperlink{classLEDSet_a7b8c21a6888b762a42ee3292ddc6bba9}{dim\+\_\+routine} (unsigned int end\+\_\+analog\+\_\+val)
+\item 
+void \hyperlink{classLEDSet_ab0b5216d009c92273505d4f055f4676f}{min\+\_\+brighness} ()
 \begin{DoxyCompactList}\small\item\em Sets maximum brightness for all O\+N-\/\+L\+E\+Ds. \end{DoxyCompactList}\item 
-static void \hyperlink{classLEDSet_a27796646d2977615e6c040db6417a4f5}{min\+\_\+brightness} ()
+void \hyperlink{classLEDSet_a2f050dc20669252885e36f26a3af6a1d}{min\+\_\+brightness} ()
 \item 
-static \hyperlink{classLEDSet_a978f9404d139d17458d51fd05c5d7466}{set\+\_\+all} () \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
+void \hyperlink{classLEDSet_a9d54d89134276744267b15d362debf44}{set\+\_\+all} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
 \begin{DoxyCompactList}\small\item\em Turn on all available L\+E\+Ds. \end{DoxyCompactList}\item 
-static \hyperlink{classLEDSet_a127aca2f0cb95c1776622caa299437c9}{unset\+\_\+all} () \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
+void \hyperlink{classLEDSet_ae30b2c6d69caeada476829be609b95c2}{unset\+\_\+all} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
 \item 
-static void \hyperlink{classLEDSet_a7d1cc1a76c48f90ed581dd06808b672b}{set} (int led\+\_\+pin) \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
+void \hyperlink{classLEDSet_a187d19565bbb09a168635b384acc5dd7}{set} (int led\+\_\+pin) \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
 \begin{DoxyCompactList}\small\item\em Turn-\/\+ON a particular L\+ED Pin. \end{DoxyCompactList}\item 
-static void \hyperlink{classLEDSet_a7285285bd5359c0b7714badd34e9ee9b}{unset} (int led\+\_\+pin) \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
+void \hyperlink{classLEDSet_abfee31b85b957577a7ec07e101a36c8b}{unset} (int led\+\_\+pin) \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
 \begin{DoxyCompactList}\small\item\em Turn-\/\+O\+FF a particular L\+ED Pin. \end{DoxyCompactList}\item 
-static void \hyperlink{classLEDSet_abc6b67a569ff0835ac4ccc8f0615af70}{set} (int led\+\_\+pin1, int led\+\_\+pin2) \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
+void \hyperlink{classLEDSet_a8462339dbc47f4d979c9f783b8532d4f}{set} (int led\+\_\+pin1, int led\+\_\+pin2) \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
 \begin{DoxyCompactList}\small\item\em Turn-\/\+ON two L\+ED Pins simultaneously. \end{DoxyCompactList}\item 
-static void \hyperlink{classLEDSet_abf0914e193e85bf172455fa55049bd09}{unset} (int led\+\_\+pin1, int led\+\_\+pin2) \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
+void \hyperlink{classLEDSet_a32c76a9ee5328ed6b6c167b4ce8578c9}{unset} (int led\+\_\+pin1, int led\+\_\+pin2) \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
 \begin{DoxyCompactList}\small\item\em Turn-\/\+O\+FF two L\+ED Pins simultaneously. \end{DoxyCompactList}\item 
-static void \hyperlink{classLEDSet_a011daad7621d4b30d56d685bcff779d0}{set} (int led\+\_\+pin1, int led\+\_\+pin2, int led\+\_\+pin3) \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
+void \hyperlink{classLEDSet_ae2b77e5323305d3598c33e45e14c8cb4}{set} (int led\+\_\+pin1, int led\+\_\+pin2, int led\+\_\+pin3) \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
 \begin{DoxyCompactList}\small\item\em Turn-\/\+ON three L\+ED Pins simultaneously. \end{DoxyCompactList}\item 
-static void \hyperlink{classLEDSet_a021ebbfef0fa17171d6b4e47c32e78b5}{unset} (int led\+\_\+pin1, int led\+\_\+pin2, int led\+\_\+pin3) \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
-\begin{DoxyCompactList}\small\item\em Turn-\/\+FF three L\+ED Pins simultaneously. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Static Public Attributes}
+void \hyperlink{classLEDSet_a23a820fbb738a3ba1c6e2b454d20ac68}{unset} (int led\+\_\+pin1, int led\+\_\+pin2, int led\+\_\+pin3) \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
+\begin{DoxyCompactList}\small\item\em Turn-\/\+FF three L\+ED Pins simultaneously. \end{DoxyCompactList}\item 
+void \hyperlink{classLEDSet_aee9276cba956882a006f7cdd6124e487}{error} (int pin) \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-static constexpr int \hyperlink{classLEDSet_a702b4369ddb5d8f4ca59056ebb6c4617}{L\+E\+Ds} \mbox{[}6\mbox{]} = \{B\+U\+I\+L\+T\+L\+IN, \hyperlink{pins_8hpp_a735f426a390e22c0050b964328c5e06f}{L\+E\+D\+\_\+\+R\+ED}, \hyperlink{pins_8hpp_a8046eca6ddcbe578777cfde489622a13}{L\+E\+D\+\_\+\+B\+L\+UE}, \hyperlink{pins_8hpp_af338796c804fbfe2e9fd4d249e3c5004}{L\+E\+D\+\_\+\+Y\+E\+L\+L\+OW}, \hyperlink{pins_8hpp_a1be903f86639d50fb6ed02a0dbbe0e2c}{L\+E\+D\+\_\+\+W\+H\+I\+TE}, \hyperlink{pins_8hpp_a8d7df4222b2fde6205bebffc5a0ae070}{L\+E\+D\+\_\+\+G\+R\+E\+EN}\}
+const int \hyperlink{classLEDSet_a6d83c4cf19c09eb8fdb2a6724a8df99e}{L\+E\+Ds} \mbox{[}6\mbox{]} = \{L\+E\+D\+\_\+\+B\+U\+I\+L\+T\+IN, \hyperlink{pins_8hpp_a735f426a390e22c0050b964328c5e06f}{L\+E\+D\+\_\+\+R\+ED}, \hyperlink{pins_8hpp_a8046eca6ddcbe578777cfde489622a13}{L\+E\+D\+\_\+\+B\+L\+UE}, \hyperlink{pins_8hpp_af338796c804fbfe2e9fd4d249e3c5004}{L\+E\+D\+\_\+\+Y\+E\+L\+L\+OW}, \hyperlink{pins_8hpp_a1be903f86639d50fb6ed02a0dbbe0e2c}{L\+E\+D\+\_\+\+W\+H\+I\+TE}, \hyperlink{pins_8hpp_a8d7df4222b2fde6205bebffc5a0ae070}{L\+E\+D\+\_\+\+G\+R\+E\+EN}\}
 \item 
-static constexpr bool \hyperlink{classLEDSet_a9a38ca32395095475ed89e7eea01e990}{L\+E\+D\+Status} \mbox{[}6\mbox{]} = \{false\}
+bool \hyperlink{classLEDSet_a54945652a2ba428b70ad620e88b4ab60}{L\+E\+D\+Status} \mbox{[}6\mbox{]}
+\item 
+bool \hyperlink{classLEDSet_aed8105506190d87caa13c36174aa31bd}{Error\+\_\+\+State}
 \end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \hyperlink{classLEDSet_a2ab948b2ac81a4b4e0ace4b51579ad86}{fetch\+\_\+index} (int pin) \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
-\begin{DoxyCompactList}\small\item\em Retrive data structure index based on the pin number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+int \hyperlink{classLEDSet_a2ab948b2ac81a4b4e0ace4b51579ad86}{fetch\+\_\+index} (int pin) \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
+\begin{DoxyCompactList}\small\item\em Retrive data structure index based on the pin number. Returns -\/1 if the pin was not found. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 an interface for accessing the L\+E\+Ds on the dashboard and the B\+U\+I\+L\+T\+IN L\+ED. Theobject serves primarily as a bookeeping object, and hence, enables state conservation and switching. 
 
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLEDSet_a4a65c9b26a11c2e62e65170d1088e201}\label{classLEDSet_a4a65c9b26a11c2e62e65170d1088e201}} 
+\index{L\+E\+D\+Set@{L\+E\+D\+Set}!L\+E\+D\+Set@{L\+E\+D\+Set}}
+\index{L\+E\+D\+Set@{L\+E\+D\+Set}!L\+E\+D\+Set@{L\+E\+D\+Set}}
+\subsubsection{\texorpdfstring{L\+E\+D\+Set()}{LEDSet()}}
+{\footnotesize\ttfamily L\+E\+D\+Set\+::\+L\+E\+D\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for \hyperlink{classLEDSet}{L\+E\+D\+Set} class. 
+
+
+
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classLEDSet_a44ecd0c2c70984a4fade72e0bb79f059}\label{classLEDSet_a44ecd0c2c70984a4fade72e0bb79f059}} 
+\mbox{\Hypertarget{classLEDSet_a70e49efcd898014cb18b973b7f42b0fa}\label{classLEDSet_a70e49efcd898014cb18b973b7f42b0fa}} 
 \index{L\+E\+D\+Set@{L\+E\+D\+Set}!dim@{dim}}
 \index{dim@{dim}!L\+E\+D\+Set@{L\+E\+D\+Set}}
 \subsubsection{\texorpdfstring{dim()}{dim()}}
-{\footnotesize\ttfamily static void L\+E\+D\+Set\+::dim (\begin{DoxyParamCaption}\item[{unsigned int}]{analog\+\_\+val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+{\footnotesize\ttfamily void L\+E\+D\+Set\+::dim (\begin{DoxyParamCaption}\item[{unsigned int}]{analog\+\_\+val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Dims the O\+N-\/\+L\+E\+Ds with the provided analog voltage. Only affects L\+E\+Ds that are ON. 
 
-\mbox{\Hypertarget{classLEDSet_a8c3c9d0c3fb93e9722cb892d0ebf2f2f}\label{classLEDSet_a8c3c9d0c3fb93e9722cb892d0ebf2f2f}} 
+\mbox{\Hypertarget{classLEDSet_a7b8c21a6888b762a42ee3292ddc6bba9}\label{classLEDSet_a7b8c21a6888b762a42ee3292ddc6bba9}} 
 \index{L\+E\+D\+Set@{L\+E\+D\+Set}!dim\+\_\+routine@{dim\+\_\+routine}}
 \index{dim\+\_\+routine@{dim\+\_\+routine}!L\+E\+D\+Set@{L\+E\+D\+Set}}
 \subsubsection{\texorpdfstring{dim\+\_\+routine()}{dim\_routine()}}
-{\footnotesize\ttfamily static void L\+E\+D\+Set\+::dim\+\_\+routine (\begin{DoxyParamCaption}\item[{unsigned int}]{end\+\_\+analog\+\_\+val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+{\footnotesize\ttfamily void L\+E\+D\+Set\+::dim\+\_\+routine (\begin{DoxyParamCaption}\item[{unsigned int}]{end\+\_\+analog\+\_\+val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-
-
-Slowly dims the O\+N-\/\+L\+E\+Ds with a routine that lasts 1s.  Animation. 
+\mbox{\Hypertarget{classLEDSet_aee9276cba956882a006f7cdd6124e487}\label{classLEDSet_aee9276cba956882a006f7cdd6124e487}} 
+\index{L\+E\+D\+Set@{L\+E\+D\+Set}!error@{error}}
+\index{error@{error}!L\+E\+D\+Set@{L\+E\+D\+Set}}
+\subsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily void L\+E\+D\+Set\+::error (\begin{DoxyParamCaption}\item[{int}]{pin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 \mbox{\Hypertarget{classLEDSet_a2ab948b2ac81a4b4e0ace4b51579ad86}\label{classLEDSet_a2ab948b2ac81a4b4e0ace4b51579ad86}} 
 \index{L\+E\+D\+Set@{L\+E\+D\+Set}!fetch\+\_\+index@{fetch\+\_\+index}}
@@ -87,167 +108,172 @@ Slowly dims the O\+N-\/\+L\+E\+Ds with a routine that lasts 1s.  Animation.
 
 
 
-Retrive data structure index based on the pin number. 
+Retrive data structure index based on the pin number. Returns -\/1 if the pin was not found. 
 
-\mbox{\Hypertarget{classLEDSet_aebc268353f21afffcf0a80c92b6444d2}\label{classLEDSet_aebc268353f21afffcf0a80c92b6444d2}} 
+\begin{DoxyReturn}{Returns}
+Local array index of pin in the L\+E\+Ds array (bookeeping object). -\/1 if the search fails. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLEDSet_a907747547c2967c4db9597247c0acd9c}\label{classLEDSet_a907747547c2967c4db9597247c0acd9c}} 
 \index{L\+E\+D\+Set@{L\+E\+D\+Set}!init@{init}}
 \index{init@{init}!L\+E\+D\+Set@{L\+E\+D\+Set}}
 \subsubsection{\texorpdfstring{init()}{init()}}
-{\footnotesize\ttfamily static void L\+E\+D\+Set\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+{\footnotesize\ttfamily void L\+E\+D\+Set\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Sets up the pin mode of all L\+E\+Ds. 
 
-\mbox{\Hypertarget{classLEDSet_a3e97e2ccf25adfa7f5f752138e616c96}\label{classLEDSet_a3e97e2ccf25adfa7f5f752138e616c96}} 
+\mbox{\Hypertarget{classLEDSet_ab0b5216d009c92273505d4f055f4676f}\label{classLEDSet_ab0b5216d009c92273505d4f055f4676f}} 
 \index{L\+E\+D\+Set@{L\+E\+D\+Set}!min\+\_\+brighness@{min\+\_\+brighness}}
 \index{min\+\_\+brighness@{min\+\_\+brighness}!L\+E\+D\+Set@{L\+E\+D\+Set}}
 \subsubsection{\texorpdfstring{min\+\_\+brighness()}{min\_brighness()}}
-{\footnotesize\ttfamily static void L\+E\+D\+Set\+::min\+\_\+brighness (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+{\footnotesize\ttfamily void L\+E\+D\+Set\+::min\+\_\+brighness (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Sets maximum brightness for all O\+N-\/\+L\+E\+Ds. 
 
-\mbox{\Hypertarget{classLEDSet_a27796646d2977615e6c040db6417a4f5}\label{classLEDSet_a27796646d2977615e6c040db6417a4f5}} 
+\mbox{\Hypertarget{classLEDSet_a2f050dc20669252885e36f26a3af6a1d}\label{classLEDSet_a2f050dc20669252885e36f26a3af6a1d}} 
 \index{L\+E\+D\+Set@{L\+E\+D\+Set}!min\+\_\+brightness@{min\+\_\+brightness}}
 \index{min\+\_\+brightness@{min\+\_\+brightness}!L\+E\+D\+Set@{L\+E\+D\+Set}}
 \subsubsection{\texorpdfstring{min\+\_\+brightness()}{min\_brightness()}}
-{\footnotesize\ttfamily static void L\+E\+D\+Set\+::min\+\_\+brightness (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+{\footnotesize\ttfamily void L\+E\+D\+Set\+::min\+\_\+brightness (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Sets the minimum brighness for all O\+N-\/\+L\+E\+Ds. \mbox{\Hypertarget{classLEDSet_a7d1cc1a76c48f90ed581dd06808b672b}\label{classLEDSet_a7d1cc1a76c48f90ed581dd06808b672b}} 
+Sets the minimum brighness for all O\+N-\/\+L\+E\+Ds. \mbox{\Hypertarget{classLEDSet_a187d19565bbb09a168635b384acc5dd7}\label{classLEDSet_a187d19565bbb09a168635b384acc5dd7}} 
 \index{L\+E\+D\+Set@{L\+E\+D\+Set}!set@{set}}
 \index{set@{set}!L\+E\+D\+Set@{L\+E\+D\+Set}}
 \subsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily static void L\+E\+D\+Set\+::set (\begin{DoxyParamCaption}\item[{int}]{led\+\_\+pin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+{\footnotesize\ttfamily void L\+E\+D\+Set\+::set (\begin{DoxyParamCaption}\item[{int}]{led\+\_\+pin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Turn-\/\+ON a particular L\+ED Pin. 
 
-\mbox{\Hypertarget{classLEDSet_abc6b67a569ff0835ac4ccc8f0615af70}\label{classLEDSet_abc6b67a569ff0835ac4ccc8f0615af70}} 
+\mbox{\Hypertarget{classLEDSet_a8462339dbc47f4d979c9f783b8532d4f}\label{classLEDSet_a8462339dbc47f4d979c9f783b8532d4f}} 
 \index{L\+E\+D\+Set@{L\+E\+D\+Set}!set@{set}}
 \index{set@{set}!L\+E\+D\+Set@{L\+E\+D\+Set}}
 \subsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily static void L\+E\+D\+Set\+::set (\begin{DoxyParamCaption}\item[{int}]{led\+\_\+pin1,  }\item[{int}]{led\+\_\+pin2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+{\footnotesize\ttfamily void L\+E\+D\+Set\+::set (\begin{DoxyParamCaption}\item[{int}]{led\+\_\+pin1,  }\item[{int}]{led\+\_\+pin2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Turn-\/\+ON two L\+ED Pins simultaneously. 
 
-\mbox{\Hypertarget{classLEDSet_a011daad7621d4b30d56d685bcff779d0}\label{classLEDSet_a011daad7621d4b30d56d685bcff779d0}} 
+\mbox{\Hypertarget{classLEDSet_ae2b77e5323305d3598c33e45e14c8cb4}\label{classLEDSet_ae2b77e5323305d3598c33e45e14c8cb4}} 
 \index{L\+E\+D\+Set@{L\+E\+D\+Set}!set@{set}}
 \index{set@{set}!L\+E\+D\+Set@{L\+E\+D\+Set}}
 \subsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily static void L\+E\+D\+Set\+::set (\begin{DoxyParamCaption}\item[{int}]{led\+\_\+pin1,  }\item[{int}]{led\+\_\+pin2,  }\item[{int}]{led\+\_\+pin3 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+{\footnotesize\ttfamily void L\+E\+D\+Set\+::set (\begin{DoxyParamCaption}\item[{int}]{led\+\_\+pin1,  }\item[{int}]{led\+\_\+pin2,  }\item[{int}]{led\+\_\+pin3 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Turn-\/\+ON three L\+ED Pins simultaneously. 
 
-\mbox{\Hypertarget{classLEDSet_a978f9404d139d17458d51fd05c5d7466}\label{classLEDSet_a978f9404d139d17458d51fd05c5d7466}} 
+\mbox{\Hypertarget{classLEDSet_a9d54d89134276744267b15d362debf44}\label{classLEDSet_a9d54d89134276744267b15d362debf44}} 
 \index{L\+E\+D\+Set@{L\+E\+D\+Set}!set\+\_\+all@{set\+\_\+all}}
 \index{set\+\_\+all@{set\+\_\+all}!L\+E\+D\+Set@{L\+E\+D\+Set}}
 \subsubsection{\texorpdfstring{set\+\_\+all()}{set\_all()}}
-{\footnotesize\ttfamily static L\+E\+D\+Set\+::set\+\_\+all (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+{\footnotesize\ttfamily void L\+E\+D\+Set\+::set\+\_\+all (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Turn on all available L\+E\+Ds. 
 
-\mbox{\Hypertarget{classLEDSet_a090860287fc0ce0d09e2b3c6d4399005}\label{classLEDSet_a090860287fc0ce0d09e2b3c6d4399005}} 
+\mbox{\Hypertarget{classLEDSet_a21b51a375a8487fb89deaa2fbd3701df}\label{classLEDSet_a21b51a375a8487fb89deaa2fbd3701df}} 
 \index{L\+E\+D\+Set@{L\+E\+D\+Set}!size@{size}}
 \index{size@{size}!L\+E\+D\+Set@{L\+E\+D\+Set}}
 \subsubsection{\texorpdfstring{size()}{size()}}
-{\footnotesize\ttfamily static unsigned int L\+E\+D\+Set\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+{\footnotesize\ttfamily constexpr unsigned int L\+E\+D\+Set\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Returns the size of the led sets. 
 
-\mbox{\Hypertarget{classLEDSet_a1cb98a2a56113493121873f294dbd35a}\label{classLEDSet_a1cb98a2a56113493121873f294dbd35a}} 
+\mbox{\Hypertarget{classLEDSet_a52d7a48f6639ce1df579e960e5a78890}\label{classLEDSet_a52d7a48f6639ce1df579e960e5a78890}} 
 \index{L\+E\+D\+Set@{L\+E\+D\+Set}!state\+\_\+reload@{state\+\_\+reload}}
 \index{state\+\_\+reload@{state\+\_\+reload}!L\+E\+D\+Set@{L\+E\+D\+Set}}
 \subsubsection{\texorpdfstring{state\+\_\+reload()}{state\_reload()}}
-{\footnotesize\ttfamily static void L\+E\+D\+Set\+::state\+\_\+reload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+{\footnotesize\ttfamily void L\+E\+D\+Set\+::state\+\_\+reload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Sets the L\+E\+Ds digitally to max brighnes, based on their switch state. 
 
-\mbox{\Hypertarget{classLEDSet_aec21832638aa78f34f1ff5b4133b5620}\label{classLEDSet_aec21832638aa78f34f1ff5b4133b5620}} 
+\mbox{\Hypertarget{classLEDSet_a555f8e48ff0989647cba6de505db8a5d}\label{classLEDSet_a555f8e48ff0989647cba6de505db8a5d}} 
 \index{L\+E\+D\+Set@{L\+E\+D\+Set}!toggle\+\_\+all@{toggle\+\_\+all}}
 \index{toggle\+\_\+all@{toggle\+\_\+all}!L\+E\+D\+Set@{L\+E\+D\+Set}}
 \subsubsection{\texorpdfstring{toggle\+\_\+all()}{toggle\_all()}}
-{\footnotesize\ttfamily static void L\+E\+D\+Set\+::toggle\+\_\+all (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+{\footnotesize\ttfamily void L\+E\+D\+Set\+::toggle\+\_\+all (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Toggles the state of all the L\+E\+Ds. 
 
-\mbox{\Hypertarget{classLEDSet_acf2788af34b7aebec813665763256d54}\label{classLEDSet_acf2788af34b7aebec813665763256d54}} 
+\mbox{\Hypertarget{classLEDSet_a5ba8bc8d99267bcaa579fea860ebe7d0}\label{classLEDSet_a5ba8bc8d99267bcaa579fea860ebe7d0}} 
 \index{L\+E\+D\+Set@{L\+E\+D\+Set}!toggle\+\_\+all\+\_\+routine@{toggle\+\_\+all\+\_\+routine}}
 \index{toggle\+\_\+all\+\_\+routine@{toggle\+\_\+all\+\_\+routine}!L\+E\+D\+Set@{L\+E\+D\+Set}}
 \subsubsection{\texorpdfstring{toggle\+\_\+all\+\_\+routine()}{toggle\_all\_routine()}}
-{\footnotesize\ttfamily static L\+E\+D\+Set\+::toggle\+\_\+all\+\_\+routine (\begin{DoxyParamCaption}\item[{int}]{delay\+\_\+ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+{\footnotesize\ttfamily void L\+E\+D\+Set\+::toggle\+\_\+all\+\_\+routine (\begin{DoxyParamCaption}\item[{int}]{delay\+\_\+ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-
-
-Toggles all the L\+E\+Ds twice, with some delay.  Animation. 
-
-\mbox{\Hypertarget{classLEDSet_a7285285bd5359c0b7714badd34e9ee9b}\label{classLEDSet_a7285285bd5359c0b7714badd34e9ee9b}} 
+\mbox{\Hypertarget{classLEDSet_abfee31b85b957577a7ec07e101a36c8b}\label{classLEDSet_abfee31b85b957577a7ec07e101a36c8b}} 
 \index{L\+E\+D\+Set@{L\+E\+D\+Set}!unset@{unset}}
 \index{unset@{unset}!L\+E\+D\+Set@{L\+E\+D\+Set}}
 \subsubsection{\texorpdfstring{unset()}{unset()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily static void L\+E\+D\+Set\+::unset (\begin{DoxyParamCaption}\item[{int}]{led\+\_\+pin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+{\footnotesize\ttfamily void L\+E\+D\+Set\+::unset (\begin{DoxyParamCaption}\item[{int}]{led\+\_\+pin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Turn-\/\+O\+FF a particular L\+ED Pin. 
 
-\mbox{\Hypertarget{classLEDSet_abf0914e193e85bf172455fa55049bd09}\label{classLEDSet_abf0914e193e85bf172455fa55049bd09}} 
+\mbox{\Hypertarget{classLEDSet_a32c76a9ee5328ed6b6c167b4ce8578c9}\label{classLEDSet_a32c76a9ee5328ed6b6c167b4ce8578c9}} 
 \index{L\+E\+D\+Set@{L\+E\+D\+Set}!unset@{unset}}
 \index{unset@{unset}!L\+E\+D\+Set@{L\+E\+D\+Set}}
 \subsubsection{\texorpdfstring{unset()}{unset()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily static void L\+E\+D\+Set\+::unset (\begin{DoxyParamCaption}\item[{int}]{led\+\_\+pin1,  }\item[{int}]{led\+\_\+pin2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+{\footnotesize\ttfamily void L\+E\+D\+Set\+::unset (\begin{DoxyParamCaption}\item[{int}]{led\+\_\+pin1,  }\item[{int}]{led\+\_\+pin2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Turn-\/\+O\+FF two L\+ED Pins simultaneously. 
 
-\mbox{\Hypertarget{classLEDSet_a021ebbfef0fa17171d6b4e47c32e78b5}\label{classLEDSet_a021ebbfef0fa17171d6b4e47c32e78b5}} 
+\mbox{\Hypertarget{classLEDSet_a23a820fbb738a3ba1c6e2b454d20ac68}\label{classLEDSet_a23a820fbb738a3ba1c6e2b454d20ac68}} 
 \index{L\+E\+D\+Set@{L\+E\+D\+Set}!unset@{unset}}
 \index{unset@{unset}!L\+E\+D\+Set@{L\+E\+D\+Set}}
 \subsubsection{\texorpdfstring{unset()}{unset()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily static void L\+E\+D\+Set\+::unset (\begin{DoxyParamCaption}\item[{int}]{led\+\_\+pin1,  }\item[{int}]{led\+\_\+pin2,  }\item[{int}]{led\+\_\+pin3 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+{\footnotesize\ttfamily void L\+E\+D\+Set\+::unset (\begin{DoxyParamCaption}\item[{int}]{led\+\_\+pin1,  }\item[{int}]{led\+\_\+pin2,  }\item[{int}]{led\+\_\+pin3 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Turn-\/\+FF three L\+ED Pins simultaneously. 
 
-\mbox{\Hypertarget{classLEDSet_a127aca2f0cb95c1776622caa299437c9}\label{classLEDSet_a127aca2f0cb95c1776622caa299437c9}} 
+\mbox{\Hypertarget{classLEDSet_ae30b2c6d69caeada476829be609b95c2}\label{classLEDSet_ae30b2c6d69caeada476829be609b95c2}} 
 \index{L\+E\+D\+Set@{L\+E\+D\+Set}!unset\+\_\+all@{unset\+\_\+all}}
 \index{unset\+\_\+all@{unset\+\_\+all}!L\+E\+D\+Set@{L\+E\+D\+Set}}
 \subsubsection{\texorpdfstring{unset\+\_\+all()}{unset\_all()}}
-{\footnotesize\ttfamily static L\+E\+D\+Set\+::unset\+\_\+all (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+{\footnotesize\ttfamily void L\+E\+D\+Set\+::unset\+\_\+all (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Turn off all available L\+E\+Ds. 
 
 \subsection{Member Data Documentation}
-\mbox{\Hypertarget{classLEDSet_a702b4369ddb5d8f4ca59056ebb6c4617}\label{classLEDSet_a702b4369ddb5d8f4ca59056ebb6c4617}} 
+\mbox{\Hypertarget{classLEDSet_aed8105506190d87caa13c36174aa31bd}\label{classLEDSet_aed8105506190d87caa13c36174aa31bd}} 
+\index{L\+E\+D\+Set@{L\+E\+D\+Set}!Error\+\_\+\+State@{Error\+\_\+\+State}}
+\index{Error\+\_\+\+State@{Error\+\_\+\+State}!L\+E\+D\+Set@{L\+E\+D\+Set}}
+\subsubsection{\texorpdfstring{Error\+\_\+\+State}{Error\_State}}
+{\footnotesize\ttfamily bool L\+E\+D\+Set\+::\+Error\+\_\+\+State}
+
+\mbox{\Hypertarget{classLEDSet_a6d83c4cf19c09eb8fdb2a6724a8df99e}\label{classLEDSet_a6d83c4cf19c09eb8fdb2a6724a8df99e}} 
 \index{L\+E\+D\+Set@{L\+E\+D\+Set}!L\+E\+Ds@{L\+E\+Ds}}
 \index{L\+E\+Ds@{L\+E\+Ds}!L\+E\+D\+Set@{L\+E\+D\+Set}}
 \subsubsection{\texorpdfstring{L\+E\+Ds}{LEDs}}
-{\footnotesize\ttfamily constexpr int L\+E\+D\+Set\+::\+L\+E\+Ds\mbox{[}6\mbox{]} = \{B\+U\+I\+L\+T\+L\+IN, \hyperlink{pins_8hpp_a735f426a390e22c0050b964328c5e06f}{L\+E\+D\+\_\+\+R\+ED}, \hyperlink{pins_8hpp_a8046eca6ddcbe578777cfde489622a13}{L\+E\+D\+\_\+\+B\+L\+UE}, \hyperlink{pins_8hpp_af338796c804fbfe2e9fd4d249e3c5004}{L\+E\+D\+\_\+\+Y\+E\+L\+L\+OW}, \hyperlink{pins_8hpp_a1be903f86639d50fb6ed02a0dbbe0e2c}{L\+E\+D\+\_\+\+W\+H\+I\+TE}, \hyperlink{pins_8hpp_a8d7df4222b2fde6205bebffc5a0ae070}{L\+E\+D\+\_\+\+G\+R\+E\+EN}\}\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily const int L\+E\+D\+Set\+::\+L\+E\+Ds\mbox{[}6\mbox{]} = \{L\+E\+D\+\_\+\+B\+U\+I\+L\+T\+IN, \hyperlink{pins_8hpp_a735f426a390e22c0050b964328c5e06f}{L\+E\+D\+\_\+\+R\+ED}, \hyperlink{pins_8hpp_a8046eca6ddcbe578777cfde489622a13}{L\+E\+D\+\_\+\+B\+L\+UE}, \hyperlink{pins_8hpp_af338796c804fbfe2e9fd4d249e3c5004}{L\+E\+D\+\_\+\+Y\+E\+L\+L\+OW}, \hyperlink{pins_8hpp_a1be903f86639d50fb6ed02a0dbbe0e2c}{L\+E\+D\+\_\+\+W\+H\+I\+TE}, \hyperlink{pins_8hpp_a8d7df4222b2fde6205bebffc5a0ae070}{L\+E\+D\+\_\+\+G\+R\+E\+EN}\}}
 
-\mbox{\Hypertarget{classLEDSet_a9a38ca32395095475ed89e7eea01e990}\label{classLEDSet_a9a38ca32395095475ed89e7eea01e990}} 
+\mbox{\Hypertarget{classLEDSet_a54945652a2ba428b70ad620e88b4ab60}\label{classLEDSet_a54945652a2ba428b70ad620e88b4ab60}} 
 \index{L\+E\+D\+Set@{L\+E\+D\+Set}!L\+E\+D\+Status@{L\+E\+D\+Status}}
 \index{L\+E\+D\+Status@{L\+E\+D\+Status}!L\+E\+D\+Set@{L\+E\+D\+Set}}
 \subsubsection{\texorpdfstring{L\+E\+D\+Status}{LEDStatus}}
-{\footnotesize\ttfamily constexpr bool L\+E\+D\+Set\+::\+L\+E\+D\+Status\mbox{[}6\mbox{]} = \{false\}\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily bool L\+E\+D\+Set\+::\+L\+E\+D\+Status\mbox{[}6\mbox{]}}
 
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/mnt/m/code/\+Correlator/\hyperlink{ledset_8hpp}{ledset.\+hpp}\end{DoxyCompactItemize}
+lib/hardware/\hyperlink{ledset_8hpp}{ledset.\+hpp}\end{DoxyCompactItemize}

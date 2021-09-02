@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['no_5finterrupt',['no_interrupt',['../group__Interrupt.html#ga6e36c84f319e52e5a14ca20f299b64b5',1,'PITController']]],
-  ['norm',['norm',['../classLin__ACorr__RT__Base.html#a06c0bbe593f87a9034aa34e95d9d46db',1,'Lin_ACorr_RT_Base::norm()'],['../classLin__CrossCorr__RT__Base.html#a43779bc7fd546fa8f73713de4bd6e285',1,'Lin_CrossCorr_RT_Base::norm()']]]
+  ['min_5fbrighness',['min_brighness',['../classLEDSet.html#ab0b5216d009c92273505d4f055f4676f',1,'LEDSet']]],
+  ['min_5fbrightness',['min_brightness',['../classLEDSet.html#a2f050dc20669252885e36f26a3af6a1d',1,'LEDSet']]],
+  ['multitau_5facorr_5frt_5fteensy',['MultiTau_ACorr_RT_Teensy',['../classMultiTau__ACorr__RT__Teensy.html#a28cfdcd7468aac93693a4d4803fc95f9',1,'MultiTau_ACorr_RT_Teensy']]]
 ];

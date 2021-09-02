@@ -1,4 +1,4 @@
-.TH "MultiTau_ACorr_RT_Teensy< Lin_channels, Series_size, Bin_Ratio >" 3 "Mon Aug 30 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "MultiTau_ACorr_RT_Teensy< Lin_channels, Series_size, Bin_Ratio >" 3 "Wed Sep 1 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,22 +17,22 @@ MultiTau_ACorr_RT_Teensy< Lin_channels, Series_size, Bin_Ratio > \- MultiTau Aut
 .br
 .RI "Counts the total number of data points sent to the counter\&. "
 .ti -1c
-.RI "void \fBpush_datum\fP (\fBcounter_t\fP datum) \fB__attribute__\fP((flatten))"
+.RI "void \fBpush_datum\fP (\fBcounter_t\fP datum) __attribute__((flatten))"
 .br
 .RI "Pushes the datum to each of the Linear Correlators through the \fBAccumulator\fP adapter\&. "
 .ti -1c
-.RI "void \fBpush_data\fP (const \fBcounter_t\fP *container, const \fBindex_t\fP size) \fB__attribute__\fP((flatten))"
+.RI "void \fBpush_data\fP (const \fBcounter_t\fP *container, const index_t size) __attribute__((flatten))"
 .br
 .RI "Repeatedly calls the MultiTau_ACorr_RT::push_datum() on the given container of counter values\&. "
 .ti -1c
-.RI "void \fBch_out\fP () const \fB__attribute__\fP((flatten))"
+.RI "void \fBch_out\fP () const __attribute__((flatten))"
 .br
 .RI "Outputs the Linear Correlator channels through the discarder adapter\&. "
 .ti -1c
-.RI "\fBindex_t\fP \fBtime_scaling_factor\fP () const \fB__attribute__\fP((always_inline))"
+.RI "index_t \fBtime_scaling_factor\fP () const __attribute__((always_inline))"
 .br
 .ti -1c
-.RI "\fBindex_t\fP \fBtau_scaling_scheme\fP (unsigned int s) const \fB__attribute__\fP((always_inline))"
+.RI "index_t \fBtau_scaling_scheme\fP (unsigned int s) const __attribute__((always_inline))"
 .br
 .RI "Returns the relavent Tau scaling factor, based on the specialised scheme\&. It is used by the accumulator objects to set the BufferPoints attribute\&. "
 .in -1c
@@ -78,7 +78,7 @@ Counts the total number of data points sent to the counter\&. Default Contructor
 
 .PP
 Outputs the Linear Correlator channels through the discarder adapter\&. 
-.SS "template<unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Ratio> void \fBMultiTau_ACorr_RT_Teensy\fP< Lin_channels, Series_size, Bin_Ratio >::push_data (const \fBcounter_t\fP * container, const \fBindex_t\fP size)\fC [inline]\fP"
+.SS "template<unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Ratio> void \fBMultiTau_ACorr_RT_Teensy\fP< Lin_channels, Series_size, Bin_Ratio >::push_data (const \fBcounter_t\fP * container, const index_t size)\fC [inline]\fP"
 
 .PP
 Repeatedly calls the MultiTau_ACorr_RT::push_datum() on the given container of counter values\&. 
@@ -86,11 +86,11 @@ Repeatedly calls the MultiTau_ACorr_RT::push_datum() on the given container of c
 
 .PP
 Pushes the datum to each of the Linear Correlators through the \fBAccumulator\fP adapter\&. 
-.SS "template<unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Ratio> \fBindex_t\fP \fBMultiTau_ACorr_RT_Teensy\fP< Lin_channels, Series_size, Bin_Ratio >::tau_scaling_scheme (unsigned int s) const\fC [inline]\fP"
+.SS "template<unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Ratio> index_t \fBMultiTau_ACorr_RT_Teensy\fP< Lin_channels, Series_size, Bin_Ratio >::tau_scaling_scheme (unsigned int s) const\fC [inline]\fP"
 
 .PP
 Returns the relavent Tau scaling factor, based on the specialised scheme\&. It is used by the accumulator objects to set the BufferPoints attribute\&. 
-.SS "template<unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Ratio> \fBindex_t\fP \fBMultiTau_ACorr_RT_Teensy\fP< Lin_channels, Series_size, Bin_Ratio >::time_scaling_factor () const\fC [inline]\fP"
+.SS "template<unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Ratio> index_t \fBMultiTau_ACorr_RT_Teensy\fP< Lin_channels, Series_size, Bin_Ratio >::time_scaling_factor () const\fC [inline]\fP"
 Returns the number of data points after which, the timescale is scaled according to the MultiTau_ACorr_RT::tau_scaling_scheme()\&. 
 .SH "Member Data Documentation"
 .PP 

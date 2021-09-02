@@ -1,4 +1,4 @@
-.TH "Circular_Buffer< Type, MaxSize >" 3 "Mon Aug 30 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "Circular_Buffer< Type, MaxSize >" 3 "Wed Sep 1 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -13,35 +13,35 @@ Circular_Buffer< Type, MaxSize > \- Implementation of simple Serial Buffer with 
 
 .in +1c
 .ti -1c
-.RI "void \fBreset\fP () \fB__attribute__\fP((always_inline))"
+.RI "void \fBreset\fP () __attribute__((always_inline))"
 .br
 .RI "Resets the buffer (pointers) without clearing the elements\&. "
 .ti -1c
-.RI "bool \fBis_full\fP () const \fB__attribute__\fP((always_inline))"
+.RI "bool \fBis_full\fP () const __attribute__((always_inline))"
 .br
 .RI "Returns whether the buffer is full\&. "
 .ti -1c
-.RI "bool \fBis_empty\fP () const \fB__attribute__\fP((always_inline))"
+.RI "bool \fBis_empty\fP () const __attribute__((always_inline))"
 .br
 .RI "Returns whether the buffer is empty\&. "
 .ti -1c
-.RI "size_t \fBcapacity\fP () const \fB__attribute__\fP((always_inline))"
+.RI "size_t \fBcapacity\fP () const __attribute__((always_inline))"
 .br
 .RI "Returns the maximum capacity of the buffer\&. "
 .ti -1c
-.RI "size_t \fBsize\fP () const \fB__attribute__\fP((always_inline))"
+.RI "size_t \fBsize\fP () const __attribute__((always_inline))"
 .br
 .RI "Returns the current size of the buffer\&. "
 .ti -1c
-.RI "void \fBpush_back\fP (const Type data) \fB__attribute__\fP((flatten))"
+.RI "void \fBpush_back\fP (const Type data) __attribute__((flatten))"
 .br
 .RI "Adds a datum to the circular buffer\&. "
 .ti -1c
-.RI "Type \fBpop_back\fP () \fB__attribute__\fP((always_inline))"
+.RI "Type \fBpop_back\fP () __attribute__((always_inline))"
 .br
 .RI "Returns the last element from the buffer and deletes it - pop operation\&. "
 .ti -1c
-.RI "Type \fBoperator[]\fP (const size_t index) const \fB__attribute__\fP((always_inline))"
+.RI "Type \fBoperator[]\fP (const size_t index) const __attribute__((always_inline))"
 .br
 .RI "Random access operator can be used to retrive the nth element in the buffer at any state of the buffer\&. "
 .in -1c
@@ -49,11 +49,11 @@ Circular_Buffer< Type, MaxSize > \- Implementation of simple Serial Buffer with 
 
 .in +1c
 .ti -1c
-.RI "void \fBadvance_pointer\fP () \fB__attribute__\fP((always_inline))"
+.RI "void \fBadvance_pointer\fP () __attribute__((always_inline))"
 .br
 .RI "Flag indicates whether the buffer is running at full capacity\&. "
 .ti -1c
-.RI "void \fBretreat_pointer\fP () \fB__attribute__\fP((always_inline))"
+.RI "void \fBretreat_pointer\fP () __attribute__((always_inline))"
 .br
 .RI "Adjusts the pointers after a removal or \fBpop_back()\fP operation\&. "
 .in -1c

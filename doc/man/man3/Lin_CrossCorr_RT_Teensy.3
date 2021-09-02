@@ -1,4 +1,4 @@
-.TH "Lin_CrossCorr_RT_Teensy< Series_size >" 3 "Mon Aug 30 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "Lin_CrossCorr_RT_Teensy< Series_size >" 3 "Wed Sep 1 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -46,10 +46,10 @@ Inherits \fBLin_CrossCorr_RT_Base\fP\&.
 .RI "\fBSimpler_Circular_Buffer\fP< \fBcounter_t\fP, Series_size > \fBSeries_array2\fP"
 .br
 .ti -1c
-.RI "\fBindex_t\fP \fBSeries_index1\fP = 0"
+.RI "index_t \fBSeries_index1\fP = 0"
 .br
 .ti -1c
-.RI "\fBindex_t\fP \fBSeries_index2\fP = 0"
+.RI "index_t \fBSeries_index2\fP = 0"
 .br
 .RI "Stores the last active index → Post-increment\&. "
 .ti -1c
@@ -116,11 +116,11 @@ Stores the Channel output - 12\&.
 Stores the Channel output - 21\&. Stores the data points in a circular Buffer 
 .SS "template<index_t Series_size> \fBSimpler_Circular_Buffer\fP<\fBcounter_t\fP, Series_size> \fBLin_CrossCorr_RT_Teensy\fP< Series_size >::Series_array2"
 
-.SS "template<index_t Series_size> \fBindex_t\fP \fBLin_CrossCorr_RT_Teensy\fP< Series_size >::Series_index1 = 0"
+.SS "template<index_t Series_size> index_t \fBLin_CrossCorr_RT_Teensy\fP< Series_size >::Series_index1 = 0"
 
 .SS "template<index_t Series_size> \fBLin_CrossCorr_RT_Teensy\fP< Series_size >::Series_index1"
 
-.SS "template<index_t Series_size> \fBindex_t\fP \fBLin_CrossCorr_RT_Teensy\fP< Series_size >::Series_index2 = 0"
+.SS "template<index_t Series_size> index_t \fBLin_CrossCorr_RT_Teensy\fP< Series_size >::Series_index2 = 0"
 
 .PP
 Stores the last active index → Post-increment\&. 

@@ -1,4 +1,4 @@
-.TH "Accumulator" 3 "Mon Aug 30 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "Accumulator" 3 "Wed Sep 1 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -13,7 +13,7 @@ Accumulator \- Adapter object responsible for accumulating the points and coarse
 
 .in +1c
 .ti -1c
-.RI "void \fBpipe\fP (\fBLin_ACorr_RT_Base\fP &channel, \fBcounter_t\fP datum) \fB__attribute__\fP((flatten))"
+.RI "void \fBpipe\fP (\fBLin_ACorr_RT_Base\fP &channel, \fBcounter_t\fP datum) __attribute__((flatten))"
 .br
 .RI "Accumulates data points until the BufferPoints criteria is satisfied, after which the points are pushed to the channel\&. "
 .in -1c

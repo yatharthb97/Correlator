@@ -1,8 +1,8 @@
-.TH "/mnt/m/code/Correlator/utilities.hpp" 3 "Mon Aug 30 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "lib/hardware/utilities.hpp" 3 "Wed Sep 1 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-/mnt/m/code/Correlator/utilities.hpp
+lib/hardware/utilities.hpp
 .SH SYNOPSIS
 .br
 .PP
@@ -21,13 +21,10 @@
 .br
 .RI "Establishes connection over XBAR1-A, given the input and output xbar pins  - https://github.com/manitou48/teensy4/blob/bc8fc46af5065a3f84352e0474069ae7a1a13064/pitxbaradc.ino#L40  - Not specified\&. "
 .ti -1c
-.RI "uint32_t \fB__attribute__\fP ((always_inline)) F_CPU_tick_count()"
+.RI "uint32_t \fBF_CPU_tick_count\fP ()"
 .br
 .ti -1c
-.RI "float \fB__attribute__\fP ((flatten)) get_CPU_temp()"
-.br
-.ti -1c
-.RI "void \fBsingle_pulse\fP (const uint8_t PIN) \fB__attribute__\fP((always_inline))"
+.RI "float \fBget_CPU_temp\fP ()"
 .br
 .in -1c
 .SH "Macro Definition Documentation"
@@ -36,11 +33,9 @@
 
 .SH "Function Documentation"
 .PP 
-.SS "uint32_t __attribute__ ((always_inline))"
+.SS "uint32_t F_CPU_tick_count ()"
 
-.SS "float __attribute__ ((flatten))"
-
-.SS "void single_pulse (const uint8_t PIN)"
+.SS "float get_CPU_temp ()"
 
 .SS "void xbar_connect (unsigned int input, unsigned int output)"
 

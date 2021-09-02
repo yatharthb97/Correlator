@@ -1,5 +1,6 @@
-<map id="/mnt/m/code/Correlator/errors.hpp" name="/mnt/m/code/Correlator/errors.hpp">
-<area shape="rect" id="node2" href="$lifetime__timer_8hpp.html" title="/mnt/m/code/Correlator\l/lifetime_timer.hpp" alt="" coords="5,95,179,136"/>
-<area shape="rect" id="node3" href="$pit_8hpp.html" title="/mnt/m/code/Correlator\l/pit.hpp" alt="" coords="203,95,376,136"/>
-<area shape="rect" id="node4" href="$qtmr1_8hpp.html" title="/mnt/m/code/Correlator\l/qtmr1.hpp" alt="" coords="400,95,573,136"/>
+<map id="lib/hardware/errors.hpp" name="lib/hardware/errors.hpp">
+<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="234,169,339,196"/>
+<area shape="rect" id="node3" href="$lifetime__timer_8hpp.html" title="lib/hardware/lifetime\l_timer.hpp" alt="" coords="27,80,186,121"/>
+<area shape="rect" id="node4" href="$pit_8hpp.html" title="lib/hardware/pit.hpp" alt="" coords="211,87,363,114"/>
+<area shape="rect" id="node5" href="$qtmr1_8hpp.html" title="lib/hardware/qtmr1.hpp" alt="" coords="387,87,562,114"/>
 </map>

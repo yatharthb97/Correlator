@@ -1,5 +1,13 @@
-\hypertarget{utilities_8hpp}{}\section{/mnt/m/code/\+Correlator/utilities.hpp File Reference}
-\label{utilities_8hpp}\index{/mnt/m/code/\+Correlator/utilities.\+hpp@{/mnt/m/code/\+Correlator/utilities.\+hpp}}
+\hypertarget{utilities_8hpp}{}\section{lib/hardware/utilities.hpp File Reference}
+\label{utilities_8hpp}\index{lib/hardware/utilities.\+hpp@{lib/hardware/utilities.\+hpp}}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{utilities_8hpp__dep__incl}
+\end{center}
+\end{figure}
 \subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
@@ -10,11 +18,9 @@
 \item 
 void \hyperlink{utilities_8hpp_aceb15fdf783b1e9be1ef0d0fff5b5907}{xbar\+\_\+connect} (unsigned int input, unsigned int output)
 \begin{DoxyCompactList}\small\item\em Establishes connection over X\+B\+A\+R1-\/A, given the input and output xbar pins  -\/ \href{https://github.com/manitou48/teensy4/blob/bc8fc46af5065a3f84352e0474069ae7a1a13064/pitxbaradc.ino#L40}{\tt https\+://github.\+com/manitou48/teensy4/blob/bc8fc46af5065a3f84352e0474069ae7a1a13064/pitxbaradc.\+ino\#\+L40}  -\/ Not specified. \end{DoxyCompactList}\item 
-uint32\+\_\+t \hyperlink{utilities_8hpp_afc7cdee1276fb1bee0354280e5694173}{\+\_\+\+\_\+attribute\+\_\+\+\_\+} ((always\+\_\+inline)) F\+\_\+\+C\+P\+U\+\_\+tick\+\_\+count()
+uint32\+\_\+t \hyperlink{utilities_8hpp_a1fb00a623d8b292185132f57935148a9}{F\+\_\+\+C\+P\+U\+\_\+tick\+\_\+count} ()
 \item 
-float \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+} ((flatten)) get\+\_\+\+C\+P\+U\+\_\+temp()
-\item 
-void \hyperlink{utilities_8hpp_af1df2d8a5033c175edf62b8441b45178}{single\+\_\+pulse} (const uint8\+\_\+t P\+IN) \hyperlink{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}((always\+\_\+inline))
+float \hyperlink{utilities_8hpp_a126c38ddf2ada96665a56b590a631776}{get\+\_\+\+C\+P\+U\+\_\+temp} ()
 \end{DoxyCompactItemize}
 
 
@@ -28,23 +34,17 @@ void \hyperlink{utilities_8hpp_af1df2d8a5033c175edf62b8441b45178}{single\+\_\+pu
 
 
 \subsection{Function Documentation}
-\mbox{\Hypertarget{utilities_8hpp_afc7cdee1276fb1bee0354280e5694173}\label{utilities_8hpp_afc7cdee1276fb1bee0354280e5694173}} 
-\index{utilities.\+hpp@{utilities.\+hpp}!\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}
-\index{\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}!utilities.\+hpp@{utilities.\+hpp}}
-\subsubsection{\texorpdfstring{\+\_\+\+\_\+attribute\+\_\+\+\_\+()}{\_\_attribute\_\_()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily uint32\+\_\+t \+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(always\+\_\+inline)}]{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{utilities_8hpp_a1fb00a623d8b292185132f57935148a9}\label{utilities_8hpp_a1fb00a623d8b292185132f57935148a9}} 
+\index{utilities.\+hpp@{utilities.\+hpp}!F\+\_\+\+C\+P\+U\+\_\+tick\+\_\+count@{F\+\_\+\+C\+P\+U\+\_\+tick\+\_\+count}}
+\index{F\+\_\+\+C\+P\+U\+\_\+tick\+\_\+count@{F\+\_\+\+C\+P\+U\+\_\+tick\+\_\+count}!utilities.\+hpp@{utilities.\+hpp}}
+\subsubsection{\texorpdfstring{F\+\_\+\+C\+P\+U\+\_\+tick\+\_\+count()}{F\_CPU\_tick\_count()}}
+{\footnotesize\ttfamily uint32\+\_\+t F\+\_\+\+C\+P\+U\+\_\+tick\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}\label{utilities_8hpp_a103d5b3998e0dd804213c8f30a094f4d}} 
-\index{utilities.\+hpp@{utilities.\+hpp}!\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}
-\index{\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}!utilities.\+hpp@{utilities.\+hpp}}
-\subsubsection{\texorpdfstring{\+\_\+\+\_\+attribute\+\_\+\+\_\+()}{\_\_attribute\_\_()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily float \+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(flatten)}]{ }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{utilities_8hpp_af1df2d8a5033c175edf62b8441b45178}\label{utilities_8hpp_af1df2d8a5033c175edf62b8441b45178}} 
-\index{utilities.\+hpp@{utilities.\+hpp}!single\+\_\+pulse@{single\+\_\+pulse}}
-\index{single\+\_\+pulse@{single\+\_\+pulse}!utilities.\+hpp@{utilities.\+hpp}}
-\subsubsection{\texorpdfstring{single\+\_\+pulse()}{single\_pulse()}}
-{\footnotesize\ttfamily void single\+\_\+pulse (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{P\+IN }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{utilities_8hpp_a126c38ddf2ada96665a56b590a631776}\label{utilities_8hpp_a126c38ddf2ada96665a56b590a631776}} 
+\index{utilities.\+hpp@{utilities.\+hpp}!get\+\_\+\+C\+P\+U\+\_\+temp@{get\+\_\+\+C\+P\+U\+\_\+temp}}
+\index{get\+\_\+\+C\+P\+U\+\_\+temp@{get\+\_\+\+C\+P\+U\+\_\+temp}!utilities.\+hpp@{utilities.\+hpp}}
+\subsubsection{\texorpdfstring{get\+\_\+\+C\+P\+U\+\_\+temp()}{get\_CPU\_temp()}}
+{\footnotesize\ttfamily float get\+\_\+\+C\+P\+U\+\_\+temp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{utilities_8hpp_aceb15fdf783b1e9be1ef0d0fff5b5907}\label{utilities_8hpp_aceb15fdf783b1e9be1ef0d0fff5b5907}} 
 \index{utilities.\+hpp@{utilities.\+hpp}!xbar\+\_\+connect@{xbar\+\_\+connect}}

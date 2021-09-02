@@ -1,12 +1,14 @@
-.TH "/mnt/m/code/Correlator/errors.hpp" 3 "Mon Aug 30 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "lib/hardware/errors.hpp" 3 "Wed Sep 1 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-/mnt/m/code/Correlator/errors.hpp
+lib/hardware/errors.hpp
 .SH SYNOPSIS
 .br
 .PP
 \fC#include 'pins\&.hpp'\fP
+.br
+\fC#include '\&./\&.\&./types\&.hpp'\fP
 .br
 
 .SS "Namespaces"
@@ -21,7 +23,7 @@
 .in +1c
 .ti -1c
 .RI "enum \fBError_t\fP { \fBError_t::Success\fP = 0, \fBError_t::Counter_Overflow\fP, \fBError_t::Counter_Underflow\fP, \fBError_t::Precision\fP, \fBError_t::Input_Validation\fP }
-.RI "Enumarates the error codes thrown by the different modules\&. ""
+.RI "This file contain the Common Error Codes for Software-Hardware Interface\&. It defines the \fCError_t\fP and namespace \fC\fBErrors\fP\fP that are used to handle the errors and interact with the LED dashboard\&. ""
 .br
 .in -1c
 .SS "Functions"
@@ -30,43 +32,54 @@
 .ti -1c
 .RI "void \fBErrors::Validate\fP (\fBError_t\fP error)"
 .br
-.RI "Receives an error state and sets up the corresponding LED indicator\&. [[Incomplete]]\&. "
+.RI "Receives an error state and sets up the corresponding LED indicator\&. "
 .ti -1c
-.RI "void \fBErrors::Precison_Threshold\fP (double error_val, double error_limit)"
+.RI "\fBError_t\fP \fBErrors::Precison_Threshold\fP (double error_val, double error_limit)"
 .br
 .RI "Receives error value and error threshold and returns an appropriate error state\&. "
 .ti -1c
 .RI "template<unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Ratio> \fBError_t\fP \fBErrors::Auto_MultiTau_Input_Validator\fP ()"
 .br
 .ti -1c
-.RI "void \fB_assert_\fP (bool expression, char *\fB__attribute__\fP((unused)) message='') \fB__attribute__\fP((noreturn"
+.RI "void \fB_assert_\fP (bool expression, char *__attribute__((unused)) message='')"
 .br
 .RI "Custom runtime assert function that sets all the dashboard LEDs to high\&. "
+.ti -1c
+.RI "void \fB_assert_\fP (bool expression)"
+.br
 .in -1c
 .SH "Enumeration Type Documentation"
 .PP 
 .SS "enum \fBError_t\fP\fC [strong]\fP"
 
 .PP
-Enumarates the error codes thrown by the different modules\&. 
+This file contain the Common Error Codes for Software-Hardware Interface\&. It defines the \fCError_t\fP and namespace \fC\fBErrors\fP\fP that are used to handle the errors and interact with the LED dashboard\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Yatharth Bhasin (github → yatharthb97) *\\
+.RE
+.PP
+/**Enumarates the error codes thrown by the different modules\&. 
 .PP
 \fBEnumerator\fP
 .in +1c
 .TP
 \fB\fISuccess \fP\fP
+No error\&. 
 .TP
 \fB\fICounter_Overflow \fP\fP
-No error\&. 
 .TP
 \fB\fICounter_Underflow \fP\fP
 .TP
 \fB\fIPrecision \fP\fP
+The error due to finite resolution is greater than acceptable\&. 
 .TP
 \fB\fIInput_Validation \fP\fP
-The error due to finite resolution is greater than acceptable\&. Input validation failed 
+Input validation failed\&. 
 .SH "Function Documentation"
 .PP 
-.SS "void _assert_ (bool expression, char *\fB__attribute__\fP((unused)) message = \fC''\fP)"
+.SS "void _assert_ (bool expression, char *__attribute__((unused)) message = \fC''\fP)"
 
 .PP
 Custom runtime assert function that sets all the dashboard LEDs to high\&. Custom assertion function\&. 
@@ -78,6 +91,8 @@ Custom runtime assert function that sets all the dashboard LEDs to high\&. Custo
 \fImessage\fP which is ignored in the function, but helps with code redability 
 .RE
 .PP
+
+.SS "void _assert_ (bool expression)"
 
 .SH "Author"
 .PP 
