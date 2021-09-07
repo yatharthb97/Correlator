@@ -1,4 +1,4 @@
-.TH "src/main.cpp" 3 "Wed Sep 1 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "src/main.cpp" 3 "Fri Sep 3 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -8,32 +8,26 @@ src/main.cpp
 .PP
 \fC#include <Arduino\&.h>\fP
 .br
-\fC#include <imxrt\&.h>\fP
+\fC#include '\&./\&.\&./code/software/multi_tau\&.hpp'\fP
 .br
-\fC#include <hardware/pins\&.hpp>\fP
+\fC#include '\&./\&.\&./code/hardware/pit\&.hpp'\fP
 .br
-\fC#include <hardware/errors\&.hpp>\fP
+\fC#include '\&./\&.\&./code/hardware/pins\&.hpp'\fP
 .br
-\fC#include <hardware/pit\&.hpp>\fP
+\fC#include '\&./\&.\&./code/hardware/qtmr1\&.hpp'\fP
 .br
-\fC#include <hardware/qtmr1\&.hpp>\fP
-.br
-\fC#include <hardware/ledset\&.hpp>\fP
-.br
-\fC#include <hardware/utilities\&.hpp>\fP
-.br
-\fC#include <software/multi_tau>\fP
-.br
-\fC#include <hardware\&.hpp>\fP
+\fC#include '\&./\&.\&./code/hardware/utilities\&.hpp'\fP
 .br
 
 .SS "Macros"
 
 .in +1c
 .ti -1c
-.RI "#define \fBPIT_TOGGLE_TEST_PIN\fP   4"
+.RI "#define \fBOTHER_PIN\fP   4"
 .br
-.RI "LED Dashboard resources\&. "
+.ti -1c
+.RI "#define \fBDELAY\fP   100"
+.br
 .in -1c
 .SS "Functions"
 
@@ -44,99 +38,19 @@ src/main.cpp
 .ti -1c
 .RI "void \fBloop\fP ()"
 .br
-.ti -1c
-.RI "void \fBpit_isr\fP ()"
-.br
-.in -1c
-.SS "Variables"
-
-.in +1c
-.ti -1c
-.RI "\fBPITController\fP< 2 > \fBPI_t\fP"
-.br
-.RI "PI_t Resource\&. "
-.ti -1c
-.RI "\fBTMR1Controller\fP \fBTTL_c\fP"
-.br
-.RI "TTL_c Resource\&. "
-.ti -1c
-.RI "\fBLEDSet\fP \fBLEDset\fP"
-.br
-.ti -1c
-.RI "volatile \fBcounter_t\fP \fBCounter_val\fP = 0"
-.br
-.RI "Stores the value read by the counter\&. "
-.ti -1c
-.RI "volatile bool \fBUpdate_flag\fP = false"
-.br
-.RI "Indicates if a new value has arrived from the counting module\&. "
-.ti -1c
-.RI "volatile unsigned int \fBUpdate_count\fP = 0"
-.br
-.RI "Stores the number of updates made on the correlator channels\&. "
-.ti -1c
-.RI "const unsigned int \fBSerialOut_CountMax\fP = 1"
-.br
-.RI "Serial output is done after these many updates\&. "
-.ti -1c
-.RI "const double \fBGate_time_us\fP = 1"
-.br
-.RI "The gate time of TTL_C in microseconds (us) "
-.ti -1c
-.RI "const double \fBAllowed_period_error_us\fP = 1e\-3"
-.br
-.RI "Gate time precision error due to finite precision of timers\&. "
 .in -1c
 .SH "Macro Definition Documentation"
 .PP 
-.SS "#define PIT_TOGGLE_TEST_PIN   4"
+.SS "#define DELAY   100"
 
-.PP
-LED Dashboard resources\&. 
+.SS "#define OTHER_PIN   4"
+
 .SH "Function Documentation"
 .PP 
 .SS "void loop ()"
 
-.SS "void pit_isr ()"
-
 .SS "void setup ()"
 
-.SH "Variable Documentation"
-.PP 
-.SS "const double Allowed_period_error_us = 1e\-3"
-
-.PP
-Gate time precision error due to finite precision of timers\&. 
-.SS "volatile \fBcounter_t\fP Counter_val = 0"
-
-.PP
-Stores the value read by the counter\&. 
-.SS "const double Gate_time_us = 1"
-
-.PP
-The gate time of TTL_C in microseconds (us) 
-.SS "\fBLEDSet\fP LEDset"
-
-.SS "\fBPITController\fP<2> PI_t"
-
-.PP
-PI_t Resource\&. 
-.SS "const unsigned int SerialOut_CountMax = 1"
-
-.PP
-Serial output is done after these many updates\&. 
-.SS "\fBTMR1Controller\fP TTL_c"
-
-.PP
-TTL_c Resource\&. 
-.SS "volatile unsigned int Update_count = 0"
-
-.PP
-Stores the number of updates made on the correlator channels\&. 
-.SS "volatile bool Update_flag = false"
-
-.PP
-Indicates if a new value has arrived from the counting module\&. 
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for DIY Auto-Correlator from the source code\&.

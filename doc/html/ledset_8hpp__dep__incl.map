@@ -1,3 +1,7 @@
-<map id="lib/hardware/ledset.hpp" name="lib/hardware/ledset.hpp">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="40,80,145,107"/>
+<map id="code/hardware/ledset.hpp" name="code/hardware/ledset.hpp">
+<area shape="rect" id="node2" href="$errors_8hpp.html" title="code/hardware/errors.hpp" alt="" coords="197,80,385,107"/>
+<area shape="rect" id="node3" href="$pit_8hpp.html" title="code/hardware/pit.hpp" alt="" coords="5,162,172,189"/>
+<area shape="rect" id="node5" href="$qtmr1_8hpp.html" title="code/hardware/qtmr1.hpp" alt="" coords="197,162,386,189"/>
+<area shape="rect" id="node6" href="$lifetime__timer_8hpp.html" title="code/hardware/lifetime\l_timer.hpp" alt="" coords="410,155,583,196"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="137,244,243,271"/>
 </map>

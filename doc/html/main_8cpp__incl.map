@@ -1,9 +1,15 @@
 <map id="src/main.cpp" name="src/main.cpp">
-<area shape="rect" id="node4" href="$pins_8hpp.html" title="hardware/pins.hpp" alt="" coords="147,229,289,256"/>
-<area shape="rect" id="node5" href="$errors_8hpp.html" title="hardware/errors.hpp" alt="" coords="479,155,632,181"/>
-<area shape="rect" id="node8" href="$pit_8hpp.html" title="hardware/pit.hpp" alt="" coords="355,80,487,107"/>
-<area shape="rect" id="node9" href="$qtmr1_8hpp.html" title="hardware/qtmr1.hpp" alt="" coords="511,80,666,107"/>
-<area shape="rect" id="node10" href="$ledset_8hpp.html" title="hardware/ledset.hpp" alt="" coords="175,80,330,107"/>
-<area shape="rect" id="node13" href="$utilities_8hpp.html" title="hardware/utilities.hpp" alt="" coords="741,80,905,107"/>
-<area shape="rect" id="node6" href="$types_8hpp.html" title="./../types.hpp" alt="" coords="502,229,609,256"/>
+<area shape="rect" id="node3" href="$multi__tau_8hpp.html" title="./../code/software\l/multi_tau.hpp" alt="" coords="224,80,359,121"/>
+<area shape="rect" id="node13" href="$pit_8hpp.html" title="./../code/hardware\l/pit.hpp" alt="" coords="870,80,1009,121"/>
+<area shape="rect" id="node15" href="$pins_8hpp.html" title="pins.hpp" alt="" coords="877,319,954,345"/>
+<area shape="rect" id="node19" href="$qtmr1_8hpp.html" title="./../code/hardware\l/qtmr1.hpp" alt="" coords="1033,80,1172,121"/>
+<area shape="rect" id="node20" href="$utilities_8hpp.html" title="./../code/hardware\l/utilities.hpp" alt="" coords="1196,80,1334,121"/>
+<area shape="rect" id="node5" href="$types_8hpp.html" title="./../types.hpp" alt="" coords="193,319,300,345"/>
+<area shape="rect" id="node7" href="$Lin__ACorr__RT__Base_8hpp.html" title="Lin_ACorr_RT_Base.hpp" alt="" coords="96,244,271,271"/>
+<area shape="rect" id="node8" href="$Lin__ACorr__RT__Teensy_8hpp.html" title="Lin_ACorr_RT_Teensy.hpp" alt="" coords="458,169,648,196"/>
+<area shape="rect" id="node11" href="$accumulator_8hpp.html" title="accumulator.hpp" alt="" coords="30,169,161,196"/>
+<area shape="rect" id="node12" href="$discarder_8hpp.html" title="discarder.hpp" alt="" coords="236,169,347,196"/>
+<area shape="rect" id="node9" href="$simpler__circular__buffer_8hpp.html" title="simpler_circular_buffer.hpp" alt="" coords="397,244,597,271"/>
+<area shape="rect" id="node14" href="$errors_8hpp.html" title="errors.hpp" alt="" coords="896,169,984,196"/>
+<area shape="rect" id="node16" href="$ledset_8hpp.html" title="ledset.hpp" alt="" coords="976,244,1066,271"/>
 </map>

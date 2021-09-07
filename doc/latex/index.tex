@@ -45,21 +45,35 @@ File descriptions\+:
 
 \subsection*{Standard Flushing Procedure for U\+SB Serial on Teensy\+:}
 
-• Libraries will use {\ttfamily Serial.\+write(buffer, bytes);} for all outputs.
 
-• For line buffered outputs, at the end, user calls\+: `\+Serial.send\+\_\+now(\textquotesingle{}~\newline
-\textquotesingle{}){\ttfamily . Note\+: The libraries are not allowed to use endlines on output calls. This also solves the \char`\"{}$<$/tt$>$\textbackslash{}r\textbackslash{}n$<$tt$>$\char`\"{} problem of using}Serial.\+println()`.
+\begin{DoxyItemize}
+\item Libraries will use {\ttfamily Serial.\+write(buffer, bytes);} for all outputs.
+\item For line buffered outputs, at the end, user calls\+: 
+\begin{DoxyCode}
+Serial.write('\(\backslash\)n');
+Serial.send\_now(); // Which is an alias of usb\_serial::flush()
+\end{DoxyCode}
 
-• As per the P\+J\+RC website, {\ttfamily Serial.\+flush()} waits for the buffer to clear, but might not actually initiate the clearing. Hence, Using {\ttfamily Serial.\+send\+\_\+now()} might prove more judicious.
+\item Note\+: The libraries are not allowed to use endlines on output calls. This also solves the \char`\"{}`\textbackslash{}r\textbackslash{}n`\char`\"{} problem of using {\ttfamily Serial.\+println()}.
+\item As per the P\+J\+RC website, {\ttfamily Serial.\+flush()} waits for the buffer to clear, but might not actually initiate the clearing.
+\end{DoxyItemize}
 
 \subsection*{S\+L\+OC as on 28/08/21}
 
---- Result --- \begin{DoxyVerb}        Physical :  1873
-          Source :  1093
-         Comment :  503
-\end{DoxyVerb}
- Single-\/line comment \+: 284 Block comment \+: 223 Mixed \+: 132 Empty block comment \+: 0 Empty \+: 409 To Do \+: 0
+--- Result --- 
+\begin{DoxyCode}
+            Physical :  1873
+              Source :  1093
+             Comment :  503
+ Single-line comment :  284
+       Block comment :  223
+               Mixed :  132
+ Empty block comment :  0
+               Empty :  409
+               To Do :  0
 
-Number of files read \+: 23 
+Number of files read :  23
+\end{DoxyCode}
+
 
  

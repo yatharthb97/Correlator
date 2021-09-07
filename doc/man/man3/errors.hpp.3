@@ -1,8 +1,8 @@
-.TH "lib/hardware/errors.hpp" 3 "Wed Sep 1 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "code/hardware/errors.hpp" 3 "Fri Sep 3 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-lib/hardware/errors.hpp
+code/hardware/errors.hpp
 .SH SYNOPSIS
 .br
 .PP
@@ -10,12 +10,23 @@ lib/hardware/errors.hpp
 .br
 \fC#include '\&./\&.\&./types\&.hpp'\fP
 .br
+\fC#include 'ledset\&.hpp'\fP
+.br
+\fC#include <Arduino\&.h>\fP
+.br
 
 .SS "Namespaces"
 
 .in +1c
 .ti -1c
 .RI " \fBErrors\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTEENSY_MAX_ALLOCATION\fP   100"
 .br
 .in -1c
 .SS "Enumerations"
@@ -30,7 +41,7 @@ lib/hardware/errors.hpp
 
 .in +1c
 .ti -1c
-.RI "void \fBErrors::Validate\fP (\fBError_t\fP error)"
+.RI "void \fBErrors::Validate\fP (const \fBError_t\fP error, const \fBLEDSet\fP &ledset)"
 .br
 .RI "Receives an error state and sets up the corresponding LED indicator\&. "
 .ti -1c
@@ -48,6 +59,10 @@ lib/hardware/errors.hpp
 .RI "void \fB_assert_\fP (bool expression)"
 .br
 .in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define TEENSY_MAX_ALLOCATION   100"
+
 .SH "Enumeration Type Documentation"
 .PP 
 .SS "enum \fBError_t\fP\fC [strong]\fP"
@@ -57,10 +72,10 @@ This file contain the Common Error Codes for Software-Hardware Interface\&. It d
 .PP
 \fBAuthor:\fP
 .RS 4
-Yatharth Bhasin (github → yatharthb97) *\\
+Yatharth Bhasin (github → yatharthb97) Enumarates the error codes thrown by the different modules\&. 
 .RE
 .PP
-/**Enumarates the error codes thrown by the different modules\&. 
+
 .PP
 \fBEnumerator\fP
 .in +1c

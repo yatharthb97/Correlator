@@ -7,7 +7,7 @@ var searchData=
   ['set_5fgate_5ftime',['set_gate_time',['../classPITController.html#aaf7a79129a4ea5af057ea8f537b7ae9f',1,'PITController']]],
   ['set_5finterrupt',['set_interrupt',['../classPITController.html#aa94b6dc081d453c8dda54c3ade4b3d94',1,'PITController']]],
   ['setup',['setup',['../main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d',1,'main.cpp']]],
-  ['size',['size',['../classCircular__Buffer.html#a94a93c974e51a8a7ac9cefdfe896aaac',1,'Circular_Buffer::size()'],['../classLEDSet.html#a21b51a375a8487fb89deaa2fbd3701df',1,'LEDSet::size()']]],
+  ['size',['size',['../classCircular__Buffer.html#a94a93c974e51a8a7ac9cefdfe896aaac',1,'Circular_Buffer::size()'],['../classLEDSet.html#ad7a588c0ad5a73ef70cb465b39f83e0b',1,'LEDSet::size()']]],
   ['start',['start',['../classPIT__LifetimeTimer.html#a6feabeff2529cabaf27ef53d027a4fc9',1,'PIT_LifetimeTimer::start()'],['../classPITController.html#a4dae1ed0ada64ebc03665e8f39795e7e',1,'PITController::start()'],['../classTMR1Controller.html#a67bc04f0648176a681f6ac01ea483db9',1,'TMR1Controller::start()']]],
   ['state_5freload',['state_reload',['../classLEDSet.html#a52d7a48f6639ce1df579e960e5a78890',1,'LEDSet']]],
   ['stop',['stop',['../classPIT__LifetimeTimer.html#a92543f292044725b1dea4d009e01d9e4',1,'PIT_LifetimeTimer::stop()'],['../classPITController.html#a5a6e2b00c6355934531a77a62660bec7',1,'PITController::stop()'],['../classTMR1Controller.html#afcb0ea27107bfbe50b9dcbd54207dd00',1,'TMR1Controller::stop()']]]

@@ -1,4 +1,4 @@
-.TH "Lin_ACorr_RT_Teensy< Series_size >" 3 "Wed Sep 1 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "Lin_ACorr_RT_Teensy< Series_size >" 3 "Fri Sep 3 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,7 +15,7 @@ Inherits \fBLin_ACorr_RT_Base\fP\&.
 
 .in +1c
 .ti -1c
-.RI "void \fB__attribute__\fP ((flatten)) \fBpush_datum\fP(\fBcounter_t\fP datum) override"
+.RI "void \fBpush_datum\fP (\fBcounter_t\fP datum) override"
 .br
 .RI "Stores the last active index → Post-increment\&. "
 .ti -1c
@@ -55,12 +55,14 @@ This is an implementation of \fBLin_ACorr_RT_Base\fP for Teensy with \fB\fP(No n
 
 .SH "Member Function Documentation"
 .PP 
-.SS "template<index_t Series_size> void \fBLin_ACorr_RT_Teensy\fP< Series_size >::__attribute__ ((flatten))\fC [inline]\fP, \fC [override]\fP"
+.SS "template<index_t Series_size> void \fBLin_ACorr_RT_Teensy\fP< Series_size >::__attribute__ ((flatten)) const"
+
+.SS "template<index_t Series_size> void \fBLin_ACorr_RT_Teensy\fP< Series_size >::push_datum (\fBcounter_t\fP datum)\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 Stores the last active index → Post-increment\&. 
-.SS "template<index_t Series_size> void \fBLin_ACorr_RT_Teensy\fP< Series_size >::__attribute__ ((flatten)) const"
-
+.PP
+Implements \fBLin_ACorr_RT_Base\fP\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "template<index_t Series_size> \fBcounter_t\fP \fBLin_ACorr_RT_Teensy\fP< Series_size >::Channel_array[Series_size] = {0}"

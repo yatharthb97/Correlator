@@ -1,4 +1,4 @@
-.TH "MultiTau_ACorr_RT_Teensy< Lin_channels, Series_size, Bin_Ratio >" 3 "Wed Sep 1 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "MultiTau_ACorr_RT_Teensy< Lin_channels, Series_size, Bin_Ratio >" 3 "Fri Sep 3 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -55,7 +55,7 @@ MultiTau_ACorr_RT_Teensy< Lin_channels, Series_size, Bin_Ratio > \- MultiTau Aut
 .br
 .RI "\fBAccumulator\fP Objects for each channel (\fBAccumulator\fP '0' is redundant\&.) "
 .ti -1c
-.RI "Serial_Discarder_Teensy< Series_size, Bin_Ratio, 0 > \fBDiscarder\fP"
+.RI "\fBDiscarder_Teensy\fP< Series_size, Bin_Ratio, 0 > \fBDiscarder\fP"
 .br
 .RI "Linear ACorrelators\&. "
 .in -1c
@@ -100,7 +100,7 @@ Returns the number of data points after which, the timescale is scaled according
 
 .PP
 Discarder that discards first #Bin_Ratio points\&. 
-.SS "template<unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Ratio> Serial_Discarder_Teensy<Series_size, Bin_Ratio, 0> \fBMultiTau_ACorr_RT_Teensy\fP< Lin_channels, Series_size, Bin_Ratio >::Discarder\fC [private]\fP"
+.SS "template<unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Ratio> \fBDiscarder_Teensy\fP<Series_size, Bin_Ratio, 0> \fBMultiTau_ACorr_RT_Teensy\fP< Lin_channels, Series_size, Bin_Ratio >::Discarder\fC [private]\fP"
 
 .PP
 Linear ACorrelators\&. 

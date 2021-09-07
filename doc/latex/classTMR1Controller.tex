@@ -20,9 +20,9 @@ void \hyperlink{classTMR1Controller_afcb0ea27107bfbe50b9dcbd54207dd00}{stop} () 
 \begin{DoxyCompactList}\small\item\em Stops counting and freezes the current counter value. \end{DoxyCompactList}\item 
 void \hyperlink{classTMR1Controller_adf3746ffd24c5b55abff4fa18e05f6b3}{reset} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((\hyperlink{classTMR1Controller_adce8e8a496510485a88ccc5b88595672}{always\+\_\+inline}))
 \begin{DoxyCompactList}\small\item\em Resets the counter to zero. It also cleares the capture register and unsets the Input Edge Flag. \end{DoxyCompactList}\item 
-\hyperlink{types_8hpp_ac89ac912f524b3e3fa3720ea55fec966}{counter\+\_\+t} \hyperlink{classTMR1Controller_a3d07eed72365e7a7b44fadefb23b9ba6}{get\+\_\+capture\+\_\+val} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((\hyperlink{classTMR1Controller_adce8e8a496510485a88ccc5b88595672}{always\+\_\+inline}))
+\hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} \hyperlink{classTMR1Controller_a3d07eed72365e7a7b44fadefb23b9ba6}{get\+\_\+capture\+\_\+val} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((\hyperlink{classTMR1Controller_adce8e8a496510485a88ccc5b88595672}{always\+\_\+inline}))
 \begin{DoxyCompactList}\small\item\em Reads and returns the Capture Register. \end{DoxyCompactList}\item 
-\hyperlink{types_8hpp_ac89ac912f524b3e3fa3720ea55fec966}{counter\+\_\+t} \hyperlink{classTMR1Controller_a34042b5a735d4f8fd40fa36135bdec8c}{get\+\_\+capture\+\_\+double\+\_\+range} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((flatten
+\hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} \hyperlink{classTMR1Controller_a34042b5a735d4f8fd40fa36135bdec8c}{get\+\_\+capture\+\_\+double\+\_\+range} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((flatten
 \begin{DoxyCompactList}\small\item\em Returns a value that has range (2 X 2$\ast$$\ast$n -\/ 1). This is done by checking the overflow flag. \end{DoxyCompactList}\item 
 bool \hyperlink{classTMR1Controller_a06052b4a881156be3c7a4b6495d8ca11}{is\+\_\+overflow} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((\hyperlink{classTMR1Controller_adce8e8a496510485a88ccc5b88595672}{always\+\_\+inline}))
 \begin{DoxyCompactList}\small\item\em Returns the overflow status of the Counter. Reads the T\+OF -\/ Timer Overflow Flag. \end{DoxyCompactList}\item 
@@ -50,7 +50,7 @@ static void \hyperlink{classTMR1Controller_acb383aa5321f552f018e4e217e2211f4}{ti
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{types_8hpp_ac89ac912f524b3e3fa3720ea55fec966}{counter\+\_\+t} \hyperlink{classTMR1Controller_adce8e8a496510485a88ccc5b88595672}{always\+\_\+inline}
+\hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} \hyperlink{classTMR1Controller_adce8e8a496510485a88ccc5b88595672}{always\+\_\+inline}
 \end{DoxyCompactItemize}
 \subsection*{Static Private Attributes}
 \begin{DoxyCompactItemize}
@@ -92,7 +92,7 @@ Default Constructor that assers if the user constructed object with a valid {\it
 \index{T\+M\+R1\+Controller@{T\+M\+R1\+Controller}!get\+\_\+capture\+\_\+double\+\_\+range@{get\+\_\+capture\+\_\+double\+\_\+range}}
 \index{get\+\_\+capture\+\_\+double\+\_\+range@{get\+\_\+capture\+\_\+double\+\_\+range}!T\+M\+R1\+Controller@{T\+M\+R1\+Controller}}
 \subsubsection{\texorpdfstring{get\+\_\+capture\+\_\+double\+\_\+range()}{get\_capture\_double\_range()}}
-{\footnotesize\ttfamily \hyperlink{types_8hpp_ac89ac912f524b3e3fa3720ea55fec966}{counter\+\_\+t} T\+M\+R1\+Controller\+::get\+\_\+capture\+\_\+double\+\_\+range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} T\+M\+R1\+Controller\+::get\+\_\+capture\+\_\+double\+\_\+range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -102,7 +102,7 @@ Returns a value that has range (2 X 2$\ast$$\ast$n -\/ 1). This is done by check
 \index{T\+M\+R1\+Controller@{T\+M\+R1\+Controller}!get\+\_\+capture\+\_\+val@{get\+\_\+capture\+\_\+val}}
 \index{get\+\_\+capture\+\_\+val@{get\+\_\+capture\+\_\+val}!T\+M\+R1\+Controller@{T\+M\+R1\+Controller}}
 \subsubsection{\texorpdfstring{get\+\_\+capture\+\_\+val()}{get\_capture\_val()}}
-{\footnotesize\ttfamily \hyperlink{types_8hpp_ac89ac912f524b3e3fa3720ea55fec966}{counter\+\_\+t} T\+M\+R1\+Controller\+::get\+\_\+capture\+\_\+val (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} T\+M\+R1\+Controller\+::get\+\_\+capture\+\_\+val (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -233,7 +233,7 @@ This setting applies to all the channels of the Timer 1 group.
 \index{T\+M\+R1\+Controller@{T\+M\+R1\+Controller}!always\+\_\+inline@{always\+\_\+inline}}
 \index{always\+\_\+inline@{always\+\_\+inline}!T\+M\+R1\+Controller@{T\+M\+R1\+Controller}}
 \subsubsection{\texorpdfstring{always\+\_\+inline}{always\_inline}}
-{\footnotesize\ttfamily \hyperlink{types_8hpp_ac89ac912f524b3e3fa3720ea55fec966}{counter\+\_\+t} T\+M\+R1\+Controller\+::always\+\_\+inline}
+{\footnotesize\ttfamily \hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} T\+M\+R1\+Controller\+::always\+\_\+inline}
 
 {\bfseries Initial value\+:}
 \begin{DoxyCode}
@@ -250,4 +250,4 @@ This setting applies to all the channels of the Timer 1 group.
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-lib/hardware/\hyperlink{qtmr1_8hpp}{qtmr1.\+hpp}\end{DoxyCompactItemize}
+code/hardware/\hyperlink{qtmr1_8hpp}{qtmr1.\+hpp}\end{DoxyCompactItemize}

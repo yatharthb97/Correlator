@@ -1,11 +1,10 @@
 var searchData=
 [
-  ['software',['Software',['../md_lib_software_README.html',1,'']]],
+  ['software',['Software',['../md_code_software_README.html',1,'']]],
   ['safe_5finput_5fdump_5fpin',['SAFE_INPUT_DUMP_PIN',['../pins_8hpp.html#a6a5a6d5ec94efcbf2c8bffa0b660f013',1,'pins.hpp']]],
   ['safe_5foutput_5fdump_5fpin',['SAFE_OUTPUT_DUMP_PIN',['../pins_8hpp.html#a2b2fb4f846b45d396215a25f949a1bc7',1,'pins.hpp']]],
   ['sel_5f24mhz_5fclock',['sel_24MHz_clock',['../classPITController.html#adb0d04fa23f4ebd20d2f495a86af3ccd',1,'PITController']]],
   ['sel_5ffbus_5fclock',['sel_FBUS_clock',['../classPITController.html#a63e67e2ebfd6ceb5f5e38d9bd6a54754',1,'PITController']]],
-  ['serialout_5fcountmax',['SerialOut_CountMax',['../main_8cpp.html#a3b247283a68292408b626904e422a52e',1,'main.cpp']]],
   ['series_5farray',['Series_array',['../classLin__ACorr__RT__Teensy.html#a9a619d1a74076f0bac8b7f03acebbb75',1,'Lin_ACorr_RT_Teensy']]],
   ['series_5farray1',['Series_array1',['../classLin__CrossCorr__RT__Teensy.html#a13307ad04080703e9ef8c0cd9794a6b0',1,'Lin_CrossCorr_RT_Teensy']]],
   ['series_5farray2',['Series_array2',['../classLin__CrossCorr__RT__Teensy.html#a509bcfdab5a3239a014f5805c388172a',1,'Lin_CrossCorr_RT_Teensy']]],
@@ -22,7 +21,7 @@ var searchData=
   ['simpler_5fcircular_5fbuffer_2ehpp',['simpler_circular_buffer.hpp',['../simpler__circular__buffer_8hpp.html',1,'']]],
   ['simpler_5fcircular_5fbuffer_3c_20counter_5ft_2c_20series_5fsize_20_3e',['Simpler_Circular_Buffer&lt; counter_t, Series_size &gt;',['../classSimpler__Circular__Buffer.html',1,'']]],
   ['singleton_5fflag',['Singleton_flag',['../classTMR1Controller.html#a532b729ca9a7c28e5f4d221f80487241',1,'TMR1Controller']]],
-  ['size',['size',['../classCircular__Buffer.html#a94a93c974e51a8a7ac9cefdfe896aaac',1,'Circular_Buffer::size()'],['../classLEDSet.html#a21b51a375a8487fb89deaa2fbd3701df',1,'LEDSet::size()']]],
+  ['size',['size',['../classCircular__Buffer.html#a94a93c974e51a8a7ac9cefdfe896aaac',1,'Circular_Buffer::size()'],['../classLEDSet.html#ad7a588c0ad5a73ef70cb465b39f83e0b',1,'LEDSet::size()']]],
   ['start',['start',['../classPIT__LifetimeTimer.html#a6feabeff2529cabaf27ef53d027a4fc9',1,'PIT_LifetimeTimer::start()'],['../classPITController.html#a4dae1ed0ada64ebc03665e8f39795e7e',1,'PITController::start()'],['../classTMR1Controller.html#a67bc04f0648176a681f6ac01ea483db9',1,'TMR1Controller::start()']]],
   ['state_5freload',['state_reload',['../classLEDSet.html#a52d7a48f6639ce1df579e960e5a78890',1,'LEDSet']]],
   ['stop',['stop',['../classPIT__LifetimeTimer.html#a92543f292044725b1dea4d009e01d9e4',1,'PIT_LifetimeTimer::stop()'],['../classPITController.html#a5a6e2b00c6355934531a77a62660bec7',1,'PITController::stop()'],['../classTMR1Controller.html#afcb0ea27107bfbe50b9dcbd54207dd00',1,'TMR1Controller::stop()']]],

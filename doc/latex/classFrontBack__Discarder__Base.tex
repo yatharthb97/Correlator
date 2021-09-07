@@ -16,7 +16,7 @@ Inheritance diagram for Front\+Back\+\_\+\+Discarder\+\_\+\+Base$<$ Series\+\_\+
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=225pt]{classFrontBack__Discarder__Base__inherit__graph}
+\includegraphics[width=350pt]{classFrontBack__Discarder__Base__inherit__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -24,7 +24,7 @@ Inheritance diagram for Front\+Back\+\_\+\+Discarder\+\_\+\+Base$<$ Series\+\_\+
 \item 
 virtual void const \hyperlink{classFrontBack__Discarder__Base_ab8a1d0082f223c31da3c1374c520c4c4}{output} (const \hyperlink{classLin__ACorr__RT__Base}{Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base} \&channel) const =0
 \begin{DoxyCompactList}\small\item\em Outputs the channel while discarding the selected channels, by using the implementation specific output method. \end{DoxyCompactList}\item 
-virtual void \hyperlink{classFrontBack__Discarder__Base_a9cc129dd2be2f0894646a3db2aa2bebc}{discards} () const
+virtual void \hyperlink{classFrontBack__Discarder__Base_a3d996834bae795ee0242c0344a2bdfdd}{discard\+\_\+count} () const
 \begin{DoxyCompactList}\small\item\em Returns the number of elements discarded by the discarder object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -35,12 +35,12 @@ class Front\+Back\+\_\+\+Discarder\+\_\+\+Base$<$ Series\+\_\+size, Front, End $
 Base class for Front and Back discarder objects. 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classFrontBack__Discarder__Base_a9cc129dd2be2f0894646a3db2aa2bebc}\label{classFrontBack__Discarder__Base_a9cc129dd2be2f0894646a3db2aa2bebc}} 
-\index{Front\+Back\+\_\+\+Discarder\+\_\+\+Base@{Front\+Back\+\_\+\+Discarder\+\_\+\+Base}!discards@{discards}}
-\index{discards@{discards}!Front\+Back\+\_\+\+Discarder\+\_\+\+Base@{Front\+Back\+\_\+\+Discarder\+\_\+\+Base}}
-\subsubsection{\texorpdfstring{discards()}{discards()}}
+\mbox{\Hypertarget{classFrontBack__Discarder__Base_a3d996834bae795ee0242c0344a2bdfdd}\label{classFrontBack__Discarder__Base_a3d996834bae795ee0242c0344a2bdfdd}} 
+\index{Front\+Back\+\_\+\+Discarder\+\_\+\+Base@{Front\+Back\+\_\+\+Discarder\+\_\+\+Base}!discard\+\_\+count@{discard\+\_\+count}}
+\index{discard\+\_\+count@{discard\+\_\+count}!Front\+Back\+\_\+\+Discarder\+\_\+\+Base@{Front\+Back\+\_\+\+Discarder\+\_\+\+Base}}
+\subsubsection{\texorpdfstring{discard\+\_\+count()}{discard\_count()}}
 {\footnotesize\ttfamily template$<$unsigned int Series\+\_\+size, unsigned int Front, unsigned int End$>$ \\
-virtual void \hyperlink{classFrontBack__Discarder__Base}{Front\+Back\+\_\+\+Discarder\+\_\+\+Base}$<$ Series\+\_\+size, Front, End $>$\+::discards (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+virtual void \hyperlink{classFrontBack__Discarder__Base}{Front\+Back\+\_\+\+Discarder\+\_\+\+Base}$<$ Series\+\_\+size, Front, End $>$\+::discard\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
@@ -59,10 +59,10 @@ Outputs the channel while discarding the selected channels, by using the impleme
 
 
 
-Implemented in \hyperlink{classDiscarder__Teensy_a4edb6d02ac299d4c578a4c8522f0dffd}{Discarder\+\_\+\+Teensy$<$ Series\+\_\+size, Front, End $>$}.
+Implemented in \hyperlink{classDiscarder__Teensy_a968465e540ae1372c26c9c6d0e5c928b}{Discarder\+\_\+\+Teensy$<$ Series\+\_\+size, Front, End $>$}, and \hyperlink{classDiscarder__Teensy_a968465e540ae1372c26c9c6d0e5c928b}{Discarder\+\_\+\+Teensy$<$ Series\+\_\+size, Bin\+\_\+\+Ratio, 0 $>$}.
 
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-lib/software/\hyperlink{discarder_8hpp}{discarder.\+hpp}\end{DoxyCompactItemize}
+code/software/\hyperlink{discarder_8hpp}{discarder.\+hpp}\end{DoxyCompactItemize}

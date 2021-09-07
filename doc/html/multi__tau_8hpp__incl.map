@@ -1,7 +1,8 @@
-<map id="lib/software/multi_tau.hpp" name="lib/software/multi_tau.hpp">
-<area shape="rect" id="node3" href="$types_8hpp.html" title="types.hpp" alt="" coords="327,244,413,271"/>
-<area shape="rect" id="node5" href="$Lin__ACorr__RT__Base_8hpp.html" title="Lin_ACorr_RT_Base.hpp" alt="" coords="283,169,457,196"/>
-<area shape="rect" id="node6" href="$Lin__ACorr__RT__Teensy_8hpp.html" title="Lin_ACorr_RT_Teensy.hpp" alt="" coords="144,95,335,121"/>
-<area shape="rect" id="node7" href="$accumulator_8hpp.html" title="accumulator.hpp" alt="" coords="410,95,541,121"/>
-<area shape="rect" id="node8" href="$discarder_8hpp.html" title="discarder.hpp" alt="" coords="565,95,676,121"/>
+<map id="code/software/multi_tau.hpp" name="code/software/multi_tau.hpp">
+<area shape="rect" id="node3" href="$types_8hpp.html" title="./../types.hpp" alt="" coords="241,244,347,271"/>
+<area shape="rect" id="node5" href="$Lin__ACorr__RT__Base_8hpp.html" title="Lin_ACorr_RT_Base.hpp" alt="" coords="207,169,381,196"/>
+<area shape="rect" id="node6" href="$Lin__ACorr__RT__Teensy_8hpp.html" title="Lin_ACorr_RT_Teensy.hpp" alt="" coords="484,95,675,121"/>
+<area shape="rect" id="node10" href="$accumulator_8hpp.html" title="accumulator.hpp" alt="" coords="143,95,274,121"/>
+<area shape="rect" id="node11" href="$discarder_8hpp.html" title="discarder.hpp" alt="" coords="349,95,460,121"/>
+<area shape="rect" id="node8" href="$simpler__circular__buffer_8hpp.html" title="simpler_circular_buffer.hpp" alt="" coords="617,169,817,196"/>
 </map>

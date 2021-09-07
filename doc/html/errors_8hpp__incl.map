@@ -1,4 +1,5 @@
-<map id="lib/hardware/errors.hpp" name="lib/hardware/errors.hpp">
-<area shape="rect" id="node2" href="$pins_8hpp.html" title="pins.hpp" alt="" coords="5,80,83,107"/>
-<area shape="rect" id="node3" href="$types_8hpp.html" title="./../types.hpp" alt="" coords="107,80,213,107"/>
+<map id="code/hardware/errors.hpp" name="code/hardware/errors.hpp">
+<area shape="rect" id="node2" href="$pins_8hpp.html" title="pins.hpp" alt="" coords="5,155,83,181"/>
+<area shape="rect" id="node3" href="$types_8hpp.html" title="./../types.hpp" alt="" coords="343,80,449,107"/>
+<area shape="rect" id="node5" href="$ledset_8hpp.html" title="ledset.hpp" alt="" coords="187,80,277,107"/>
 </map>

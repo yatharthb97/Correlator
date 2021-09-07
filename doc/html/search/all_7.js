@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['gate_5ftime_5fus',['Gate_time_us',['../main_8cpp.html#a1d18182f432f5b88cf58be9c367be457',1,'main.cpp']]],
   ['get_5fcapture_5fdouble_5frange',['get_capture_double_range',['../classTMR1Controller.html#a34042b5a735d4f8fd40fa36135bdec8c',1,'TMR1Controller']]],
   ['get_5fcapture_5fval',['get_capture_val',['../classTMR1Controller.html#a3d07eed72365e7a7b44fadefb23b9ba6',1,'TMR1Controller']]],
   ['get_5fch_5farray',['get_ch_array',['../group__Lin__ACorr__Base__Out.html#gafb6585805776a54d5e4f120cfd1fea9e',1,'Lin_ACorr_RT_Base']]],

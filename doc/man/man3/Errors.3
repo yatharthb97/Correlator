@@ -1,4 +1,4 @@
-.TH "Errors" 3 "Wed Sep 1 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "Errors" 3 "Fri Sep 3 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -10,7 +10,7 @@ Errors
 
 .in +1c
 .ti -1c
-.RI "void \fBValidate\fP (\fBError_t\fP error)"
+.RI "void \fBValidate\fP (const \fBError_t\fP error, const \fBLEDSet\fP &ledset)"
 .br
 .RI "Receives an error state and sets up the corresponding LED indicator\&. "
 .ti -1c
@@ -32,7 +32,7 @@ Contains functions that handle errors of type \fCError_t\fP\&.
 
 .PP
 Receives error value and error threshold and returns an appropriate error state\&. 
-.SS "void Errors::Validate (\fBError_t\fP error)"
+.SS "void Errors::Validate (const \fBError_t\fP error, const \fBLEDSet\fP & ledset)"
 
 .PP
 Receives an error state and sets up the corresponding LED indicator\&. 

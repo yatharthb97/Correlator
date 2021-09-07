@@ -1,4 +1,4 @@
-.TH "FrontBack_Discarder_Base< Series_size, Front, End >" 3 "Wed Sep 1 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "FrontBack_Discarder_Base< Series_size, Front, End >" 3 "Fri Sep 3 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -10,7 +10,7 @@ FrontBack_Discarder_Base< Series_size, Front, End > \- Base class for Front and 
 .PP
 \fC#include <discarder\&.hpp>\fP
 .PP
-Inherited by \fBDiscarder_Teensy< Series_size, Front, End >\fP\&.
+Inherited by \fBDiscarder_Teensy< Series_size, Front, End >\fP, and \fBDiscarder_Teensy< Series_size, Bin_Ratio, 0 >\fP\&.
 .SS "Public Member Functions"
 
 .in +1c
@@ -19,7 +19,7 @@ Inherited by \fBDiscarder_Teensy< Series_size, Front, End >\fP\&.
 .br
 .RI "Outputs the channel while discarding the selected channels, by using the implementation specific output method\&. "
 .ti -1c
-.RI "virtual void \fBdiscards\fP () const"
+.RI "virtual void \fBdiscard_count\fP () const"
 .br
 .RI "Returns the number of elements discarded by the discarder object\&. "
 .in -1c
@@ -32,7 +32,7 @@ class FrontBack_Discarder_Base< Series_size, Front, End >"
 Base class for Front and Back discarder objects\&. 
 .SH "Member Function Documentation"
 .PP 
-.SS "template<unsigned int Series_size, unsigned int Front, unsigned int End> virtual void \fBFrontBack_Discarder_Base\fP< Series_size, Front, End >::discards () const\fC [inline]\fP, \fC [virtual]\fP"
+.SS "template<unsigned int Series_size, unsigned int Front, unsigned int End> virtual void \fBFrontBack_Discarder_Base\fP< Series_size, Front, End >::discard_count () const\fC [inline]\fP, \fC [virtual]\fP"
 
 .PP
 Returns the number of elements discarded by the discarder object\&. 
@@ -41,7 +41,7 @@ Returns the number of elements discarded by the discarder object\&.
 .PP
 Outputs the channel while discarding the selected channels, by using the implementation specific output method\&. 
 .PP
-Implemented in \fBDiscarder_Teensy< Series_size, Front, End >\fP\&.
+Implemented in \fBDiscarder_Teensy< Series_size, Front, End >\fP, and \fBDiscarder_Teensy< Series_size, Bin_Ratio, 0 >\fP\&.
 
 .SH "Author"
 .PP 

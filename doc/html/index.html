@@ -98,16 +98,14 @@ $(function() {
 <li><code><a class="el" href="utilities_8hpp.html">utilities.hpp</a></code> - Contains some utility functions</li>
 </ul>
 <h2>Standard Flushing Procedure for USB Serial on Teensy:</h2>
-<p>• Libraries will use <code>Serial.write(buffer, bytes);</code> for all outputs.</p>
-<p>• For line buffered outputs, at the end, user calls: `Serial.send_now('<br />
-')<code>. Note: The libraries are not allowed to use endlines on output calls. This also solves the "&lt;/tt&gt;\r\n&lt;tt&gt;" problem of using</code>Serial.println()`.</p>
-<p>• As per the PJRC website, <code>Serial.flush()</code> waits for the buffer to clear, but might not actually initiate the clearing. Hence, Using <code>Serial.send_now()</code> might prove more judicious.</p>
+<ul>
+<li>Libraries will use <code>Serial.write(buffer, bytes);</code> for all outputs.</li>
+<li>For line buffered outputs, at the end, user calls: <div class="fragment"><div class="line">Serial.write(&#39;\n&#39;);</div><div class="line">Serial.send_now(); // Which is an alias of usb_serial::flush()</div></div><!-- fragment --></li>
+<li>Note: The libraries are not allowed to use endlines on output calls. This also solves the "`\r\n`" problem of using <code>Serial.println()</code>.</li>
+<li>As per the PJRC website, <code>Serial.flush()</code> waits for the buffer to clear, but might not actually initiate the clearing.</li>
+</ul>
 <h2>SLOC as on 28/08/21</h2>
-<p>&mdash; Result &mdash; </p><pre class="fragment">        Physical :  1873
-          Source :  1093
-         Comment :  503
-</pre><p> Single-line comment : 284 Block comment : 223 Mixed : 132 Empty block comment : 0 Empty : 409 To Do : 0</p>
-<p>Number of files read : 23 </p><hr/>
+<p>&mdash; Result &mdash; </p><div class="fragment"><div class="line">            Physical :  1873</div><div class="line">              Source :  1093</div><div class="line">             Comment :  503</div><div class="line"> Single-line comment :  284</div><div class="line">       Block comment :  223</div><div class="line">               Mixed :  132</div><div class="line"> Empty block comment :  0</div><div class="line">               Empty :  409</div><div class="line">               To Do :  0</div><div class="line"></div><div class="line">Number of files read :  23</div></div><!-- fragment --><hr/>
  </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -79,7 +79,9 @@ Collaboration diagram for MultiTau_ACorr_RT_Teensy&lt; Lin_channels, Series_size
 <div class="dyncontent">
 <div class="center"><img src="classMultiTau__ACorr__RT__Teensy__coll__graph.png" border="0" usemap="#MultiTau__ACorr__RT__Teensy_3_01Lin__channels_00_01Series__size_00_01Bin__Ratio_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="MultiTau__ACorr__RT__Teensy_3_01Lin__channels_00_01Series__size_00_01Bin__Ratio_01_4_coll__map" id="MultiTau__ACorr__RT__Teensy_3_01Lin__channels_00_01Series__size_00_01Bin__Ratio_01_4_coll__map">
-<area shape="rect" id="node2" href="classAccumulator.html" title="Adapter object responsible for accumulating the points and coarsening the time&#45;series as per the rela..." alt="" coords="53,5,157,32"/>
+<area shape="rect" id="node2" href="classAccumulator.html" title="Adapter object responsible for accumulating the points and coarsening the time&#45;series as per the rela..." alt="" coords="5,118,109,145"/>
+<area shape="rect" id="node3" href="classDiscarder__Teensy.html" title="Discarder_Teensy\&lt; Series\l_size, Bin_Ratio, 0 \&gt;" alt="" coords="134,111,327,152"/>
+<area shape="rect" id="node4" href="classFrontBack__Discarder__Base.html" title="Base class for Front and Back discarder objects. " alt="" coords="153,5,309,61"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -88,10 +90,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a28cfdcd7468aac93693a4d4803fc95f9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMultiTau__ACorr__RT__Teensy.html#a28cfdcd7468aac93693a4d4803fc95f9">MultiTau_ACorr_RT_Teensy</a> ()</td></tr>
 <tr class="memdesc:a28cfdcd7468aac93693a4d4803fc95f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counts the total number of data points sent to the counter.  <a href="#a28cfdcd7468aac93693a4d4803fc95f9">More...</a><br /></td></tr>
 <tr class="separator:a28cfdcd7468aac93693a4d4803fc95f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ad6126310c987f53a0ec7ab3ae03a12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMultiTau__ACorr__RT__Teensy.html#a1ad6126310c987f53a0ec7ab3ae03a12">push_datum</a> (<a class="el" href="types_8hpp.html#ac89ac912f524b3e3fa3720ea55fec966">counter_t</a> datum) __attribute__((flatten))</td></tr>
+<tr class="memitem:a1ad6126310c987f53a0ec7ab3ae03a12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMultiTau__ACorr__RT__Teensy.html#a1ad6126310c987f53a0ec7ab3ae03a12">push_datum</a> (<a class="el" href="types_8hpp.html#a22f279793847eba127de149437848c48">counter_t</a> datum) __attribute__((flatten))</td></tr>
 <tr class="memdesc:a1ad6126310c987f53a0ec7ab3ae03a12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes the datum to each of the Linear Correlators through the <a class="el" href="classAccumulator.html" title="Adapter object responsible for accumulating the points and coarsening the time-series as per the rela...">Accumulator</a> adapter.  <a href="#a1ad6126310c987f53a0ec7ab3ae03a12">More...</a><br /></td></tr>
 <tr class="separator:a1ad6126310c987f53a0ec7ab3ae03a12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae36ab4fb6f646d068e638ab7e4ec9da8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMultiTau__ACorr__RT__Teensy.html#ae36ab4fb6f646d068e638ab7e4ec9da8">push_data</a> (const <a class="el" href="types_8hpp.html#ac89ac912f524b3e3fa3720ea55fec966">counter_t</a> *container, const index_t size) __attribute__((flatten))</td></tr>
+<tr class="memitem:ae36ab4fb6f646d068e638ab7e4ec9da8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMultiTau__ACorr__RT__Teensy.html#ae36ab4fb6f646d068e638ab7e4ec9da8">push_data</a> (const <a class="el" href="types_8hpp.html#a22f279793847eba127de149437848c48">counter_t</a> *container, const index_t size) __attribute__((flatten))</td></tr>
 <tr class="memdesc:ae36ab4fb6f646d068e638ab7e4ec9da8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Repeatedly calls the MultiTau_ACorr_RT::push_datum() on the given container of counter values.  <a href="#ae36ab4fb6f646d068e638ab7e4ec9da8">More...</a><br /></td></tr>
 <tr class="separator:ae36ab4fb6f646d068e638ab7e4ec9da8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37a29725971f15305398ac7c9c360eac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMultiTau__ACorr__RT__Teensy.html#a37a29725971f15305398ac7c9c360eac">ch_out</a> () const __attribute__((flatten))</td></tr>
@@ -116,9 +118,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a1dc1e665268e5774e2810b74e6dbebc4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLin__ACorr__RT__Teensy.html">Lin_ACorr_RT_Teensy</a>&lt; Series_size &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMultiTau__ACorr__RT__Teensy.html#a1dc1e665268e5774e2810b74e6dbebc4">Lin_Corrs</a> [Lin_channels]</td></tr>
 <tr class="memdesc:a1dc1e665268e5774e2810b74e6dbebc4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classAccumulator.html" title="Adapter object responsible for accumulating the points and coarsening the time-series as per the rela...">Accumulator</a> Objects for each channel (<a class="el" href="classAccumulator.html" title="Adapter object responsible for accumulating the points and coarsening the time-series as per the rela...">Accumulator</a> '0' is redundant.)  <a href="#a1dc1e665268e5774e2810b74e6dbebc4">More...</a><br /></td></tr>
 <tr class="separator:a1dc1e665268e5774e2810b74e6dbebc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad216281408b0f32892d3c554ad16309e"><td class="memItemLeft" align="right" valign="top">Serial_Discarder_Teensy&lt; Series_size, Bin_Ratio, 0 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMultiTau__ACorr__RT__Teensy.html#ad216281408b0f32892d3c554ad16309e">Discarder</a></td></tr>
-<tr class="memdesc:ad216281408b0f32892d3c554ad16309e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linear ACorrelators.  <a href="#ad216281408b0f32892d3c554ad16309e">More...</a><br /></td></tr>
-<tr class="separator:ad216281408b0f32892d3c554ad16309e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad399a3f451253fd6a1e5156b2207fac8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDiscarder__Teensy.html">Discarder_Teensy</a>&lt; Series_size, Bin_Ratio, 0 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMultiTau__ACorr__RT__Teensy.html#ad399a3f451253fd6a1e5156b2207fac8">Discarder</a></td></tr>
+<tr class="memdesc:ad399a3f451253fd6a1e5156b2207fac8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linear ACorrelators.  <a href="#ad399a3f451253fd6a1e5156b2207fac8">More...</a><br /></td></tr>
+<tr class="separator:ad399a3f451253fd6a1e5156b2207fac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Ratio&gt;<br />
@@ -200,7 +202,7 @@ template&lt;unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Rat
         <tr>
           <td class="memname">void <a class="el" href="classMultiTau__ACorr__RT__Teensy.html">MultiTau_ACorr_RT_Teensy</a>&lt; Lin_channels, Series_size, Bin_Ratio &gt;::push_data </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="types_8hpp.html#ac89ac912f524b3e3fa3720ea55fec966">counter_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="types_8hpp.html#a22f279793847eba127de149437848c48">counter_t</a> *&#160;</td>
           <td class="paramname"><em>container</em>, </td>
         </tr>
         <tr>
@@ -240,7 +242,7 @@ template&lt;unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Rat
         <tr>
           <td class="memname">void <a class="el" href="classMultiTau__ACorr__RT__Teensy.html">MultiTau_ACorr_RT_Teensy</a>&lt; Lin_channels, Series_size, Bin_Ratio &gt;::push_datum </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="types_8hpp.html#ac89ac912f524b3e3fa3720ea55fec966">counter_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="types_8hpp.html#a22f279793847eba127de149437848c48">counter_t</a>&#160;</td>
           <td class="paramname"><em>datum</em></td><td>)</td>
           <td></td>
         </tr>
@@ -357,8 +359,8 @@ template&lt;unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Rat
 
 </div>
 </div>
-<a id="ad216281408b0f32892d3c554ad16309e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad216281408b0f32892d3c554ad16309e">&#9670;&nbsp;</a></span>Discarder</h2>
+<a id="ad399a3f451253fd6a1e5156b2207fac8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad399a3f451253fd6a1e5156b2207fac8">&#9670;&nbsp;</a></span>Discarder</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -369,7 +371,7 @@ template&lt;unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Rat
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Serial_Discarder_Teensy&lt;Series_size, Bin_Ratio, 0&gt; <a class="el" href="classMultiTau__ACorr__RT__Teensy.html">MultiTau_ACorr_RT_Teensy</a>&lt; Lin_channels, Series_size, Bin_Ratio &gt;::Discarder</td>
+          <td class="memname"><a class="el" href="classDiscarder__Teensy.html">Discarder_Teensy</a>&lt;Series_size, Bin_Ratio, 0&gt; <a class="el" href="classMultiTau__ACorr__RT__Teensy.html">MultiTau_ACorr_RT_Teensy</a>&lt; Lin_channels, Series_size, Bin_Ratio &gt;::Discarder</td>
         </tr>
       </table>
   </td>
@@ -410,7 +412,7 @@ template&lt;unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Rat
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>lib/software/<a class="el" href="multi__tau_8hpp_source.html">multi_tau.hpp</a></li>
+<li>code/software/<a class="el" href="multi__tau_8hpp_source.html">multi_tau.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

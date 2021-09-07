@@ -14,7 +14,6 @@ var searchData=
   ['clk_5ffreq',['Clk_freq',['../classPITController.html#ae3d74bb18e5b22769e895f592cb16129',1,'PITController']]],
   ['container2',['container2',['../classLin__CrossCorr__RT__Teensy.html#a9c49e09d3817e1f1344c51928e3afb57',1,'Lin_CrossCorr_RT_Teensy']]],
   ['counter_5foverflow',['Counter_Overflow',['../errors_8hpp.html#a4e8c0d09726859e3d3369c0da5a1aa7fa8347bab2e74e4a640d76c916306a1a36',1,'errors.hpp']]],
-  ['counter_5ft',['counter_t',['../types_8hpp.html#ac89ac912f524b3e3fa3720ea55fec966',1,'types.hpp']]],
-  ['counter_5funderflow',['Counter_Underflow',['../errors_8hpp.html#a4e8c0d09726859e3d3369c0da5a1aa7fa02b02f5e5e61f24acdd91338b95997da',1,'errors.hpp']]],
-  ['counter_5fval',['Counter_val',['../main_8cpp.html#afcac7adcea259024440f8d9257d82d08',1,'main.cpp']]]
+  ['counter_5ft',['counter_t',['../types_8hpp.html#a22f279793847eba127de149437848c48',1,'types.hpp']]],
+  ['counter_5funderflow',['Counter_Underflow',['../errors_8hpp.html#a4e8c0d09726859e3d3369c0da5a1aa7fa02b02f5e5e61f24acdd91338b95997da',1,'errors.hpp']]]
 ];

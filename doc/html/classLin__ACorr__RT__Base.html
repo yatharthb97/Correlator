@@ -83,10 +83,10 @@ Inheritance diagram for Lin_ACorr_RT_Base:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a398167525faf2a65f29722e943a0c57e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLin__ACorr__RT__Base.html#a398167525faf2a65f29722e943a0c57e">push_datum</a> (<a class="el" href="types_8hpp.html#ac89ac912f524b3e3fa3720ea55fec966">counter_t</a> datum)=0</td></tr>
+<tr class="memitem:a398167525faf2a65f29722e943a0c57e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLin__ACorr__RT__Base.html#a398167525faf2a65f29722e943a0c57e">push_datum</a> (<a class="el" href="types_8hpp.html#a22f279793847eba127de149437848c48">counter_t</a> datum)=0</td></tr>
 <tr class="memdesc:a398167525faf2a65f29722e943a0c57e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accepts a single <code>datum</code> from the counter — which is the lowest order of data aggregate, appends to Series_array and updates relevant channels.  <a href="#a398167525faf2a65f29722e943a0c57e">More...</a><br /></td></tr>
 <tr class="separator:a398167525faf2a65f29722e943a0c57e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91c95a49619995f40aeae80916afed3e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLin__ACorr__RT__Base.html#a91c95a49619995f40aeae80916afed3e">push_data</a> (const <a class="el" href="types_8hpp.html#ac89ac912f524b3e3fa3720ea55fec966">counter_t</a> *container, const index_t size)=0</td></tr>
+<tr class="memitem:a91c95a49619995f40aeae80916afed3e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLin__ACorr__RT__Base.html#a91c95a49619995f40aeae80916afed3e">push_data</a> (const <a class="el" href="types_8hpp.html#a22f279793847eba127de149437848c48">counter_t</a> *container, const index_t size)=0</td></tr>
 <tr class="memdesc:a91c95a49619995f40aeae80916afed3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Repeatedy calls <code>Lin_ACorr_RT_Base::push_datam()</code> on all the elements of the countainer.  <a href="#a91c95a49619995f40aeae80916afed3e">More...</a><br /></td></tr>
 <tr class="separator:a91c95a49619995f40aeae80916afed3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06c0bbe593f87a9034aa34e95d9d46db"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLin__ACorr__RT__Base.html#a06c0bbe593f87a9034aa34e95d9d46db">norm</a> (index_t lag)=0</td></tr>
@@ -98,7 +98,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ga3e58cb03c3a93107758d506c53cf2461"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Lin__ACorr__Base__Out.html#ga3e58cb03c3a93107758d506c53cf2461">ch_out_norm</a> () const =0</td></tr>
 <tr class="memdesc:ga3e58cb03c3a93107758d506c53cf2461"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outputs all the channels with <b></b> &lt;normalisation&gt; using specific implementation based methods.  <a href="group__Lin__ACorr__Base__Out.html#ga3e58cb03c3a93107758d506c53cf2461">More...</a><br /></td></tr>
 <tr class="separator:ga3e58cb03c3a93107758d506c53cf2461"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafb6585805776a54d5e4f120cfd1fea9e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="types_8hpp.html#ac89ac912f524b3e3fa3720ea55fec966">counter_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Lin__ACorr__Base__Out.html#gafb6585805776a54d5e4f120cfd1fea9e">get_ch_array</a> () const =0</td></tr>
+<tr class="memitem:gafb6585805776a54d5e4f120cfd1fea9e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="types_8hpp.html#a22f279793847eba127de149437848c48">counter_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Lin__ACorr__Base__Out.html#gafb6585805776a54d5e4f120cfd1fea9e">get_ch_array</a> () const =0</td></tr>
 <tr class="separator:gafb6585805776a54d5e4f120cfd1fea9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -144,7 +144,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void Lin_ACorr_RT_Base::push_data </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="types_8hpp.html#ac89ac912f524b3e3fa3720ea55fec966">counter_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="types_8hpp.html#a22f279793847eba127de149437848c48">counter_t</a> *&#160;</td>
           <td class="paramname"><em>container</em>, </td>
         </tr>
         <tr>
@@ -182,7 +182,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void Lin_ACorr_RT_Base::push_datum </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="types_8hpp.html#ac89ac912f524b3e3fa3720ea55fec966">counter_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="types_8hpp.html#a22f279793847eba127de149437848c48">counter_t</a>&#160;</td>
           <td class="paramname"><em>datum</em></td><td>)</td>
           <td></td>
         </tr>
@@ -196,10 +196,12 @@ Public Member Functions</h2></td></tr>
 
 <p>Accepts a single <code>datum</code> from the counter — which is the lowest order of data aggregate, appends to Series_array and updates relevant channels. </p>
 
+<p>Implemented in <a class="el" href="classLin__ACorr__RT__Teensy.html#a0172fa99b6318008a5e623fa9b2ccdcb">Lin_ACorr_RT_Teensy&lt; Series_size &gt;</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>lib/software/<a class="el" href="Lin__ACorr__RT__Base_8hpp_source.html">Lin_ACorr_RT_Base.hpp</a></li>
+<li>code/software/<a class="el" href="Lin__ACorr__RT__Base_8hpp_source.html">Lin_ACorr_RT_Base.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

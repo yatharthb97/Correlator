@@ -11,8 +11,7 @@ This class is a blank interface for all objects that are — {\bfseries \{Linear
 
 
 
-Inheritance diagram for Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base\+:
-\nopagebreak
+Inheritance diagram for Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -22,9 +21,9 @@ Inheritance diagram for Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base\+:
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual void \hyperlink{classLin__ACorr__RT__Base_a398167525faf2a65f29722e943a0c57e}{push\+\_\+datum} (\hyperlink{types_8hpp_ac89ac912f524b3e3fa3720ea55fec966}{counter\+\_\+t} datum)=0
+virtual void \hyperlink{classLin__ACorr__RT__Base_a398167525faf2a65f29722e943a0c57e}{push\+\_\+datum} (\hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} datum)=0
 \begin{DoxyCompactList}\small\item\em Accepts a single {\ttfamily datum} from the counter — which is the lowest order of data aggregate, appends to Series\+\_\+array and updates relevant channels. \end{DoxyCompactList}\item 
-virtual void \hyperlink{classLin__ACorr__RT__Base_a91c95a49619995f40aeae80916afed3e}{push\+\_\+data} (const \hyperlink{types_8hpp_ac89ac912f524b3e3fa3720ea55fec966}{counter\+\_\+t} $\ast$container, const index\+\_\+t size)=0
+virtual void \hyperlink{classLin__ACorr__RT__Base_a91c95a49619995f40aeae80916afed3e}{push\+\_\+data} (const \hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} $\ast$container, const index\+\_\+t size)=0
 \begin{DoxyCompactList}\small\item\em Repeatedy calls {\ttfamily Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base\+::push\+\_\+datam()} on all the elements of the countainer. \end{DoxyCompactList}\item 
 virtual double \hyperlink{classLin__ACorr__RT__Base_a06c0bbe593f87a9034aa34e95d9d46db}{norm} (index\+\_\+t lag)=0
 \begin{DoxyCompactList}\small\item\em Takes in the lag value and returns the normalization (divider) for the passed lag value. \end{DoxyCompactList}\item 
@@ -32,7 +31,7 @@ virtual void \hyperlink{group__Lin__ACorr__Base__Out_ga4fe3bd7a6a98388d46827d22d
 \begin{DoxyCompactList}\small\item\em Outputs all the channels using specific implementation based methods. \end{DoxyCompactList}\item 
 virtual void \hyperlink{group__Lin__ACorr__Base__Out_ga3e58cb03c3a93107758d506c53cf2461}{ch\+\_\+out\+\_\+norm} () const =0
 \begin{DoxyCompactList}\small\item\em Outputs all the channels with {\bfseries } $<$normalisation$>$ using specific implementation based methods. \end{DoxyCompactList}\item 
-virtual \hyperlink{types_8hpp_ac89ac912f524b3e3fa3720ea55fec966}{counter\+\_\+t} $\ast$ \hyperlink{group__Lin__ACorr__Base__Out_gafb6585805776a54d5e4f120cfd1fea9e}{get\+\_\+ch\+\_\+array} () const =0
+virtual \hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} $\ast$ \hyperlink{group__Lin__ACorr__Base__Out_gafb6585805776a54d5e4f120cfd1fea9e}{get\+\_\+ch\+\_\+array} () const =0
 \end{DoxyCompactItemize}
 
 
@@ -54,7 +53,7 @@ Takes in the lag value and returns the normalization (divider) for the passed la
 \index{Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base@{Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base}!push\+\_\+data@{push\+\_\+data}}
 \index{push\+\_\+data@{push\+\_\+data}!Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base@{Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base}}
 \subsubsection{\texorpdfstring{push\+\_\+data()}{push\_data()}}
-{\footnotesize\ttfamily virtual void Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base\+::push\+\_\+data (\begin{DoxyParamCaption}\item[{const \hyperlink{types_8hpp_ac89ac912f524b3e3fa3720ea55fec966}{counter\+\_\+t} $\ast$}]{container,  }\item[{const index\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base\+::push\+\_\+data (\begin{DoxyParamCaption}\item[{const \hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} $\ast$}]{container,  }\item[{const index\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [pure virtual]}}
 
 
 
@@ -64,7 +63,7 @@ Repeatedy calls {\ttfamily Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base\+::push\+\
 \index{Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base@{Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base}!push\+\_\+datum@{push\+\_\+datum}}
 \index{push\+\_\+datum@{push\+\_\+datum}!Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base@{Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base}}
 \subsubsection{\texorpdfstring{push\+\_\+datum()}{push\_datum()}}
-{\footnotesize\ttfamily virtual void Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base\+::push\+\_\+datum (\begin{DoxyParamCaption}\item[{\hyperlink{types_8hpp_ac89ac912f524b3e3fa3720ea55fec966}{counter\+\_\+t}}]{datum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base\+::push\+\_\+datum (\begin{DoxyParamCaption}\item[{\hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t}}]{datum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [pure virtual]}}
 
 
 
@@ -72,6 +71,10 @@ Accepts a single {\ttfamily datum} from the counter — which is the lowest orde
 
 
 
+Implemented in \hyperlink{classLin__ACorr__RT__Teensy_a0172fa99b6318008a5e623fa9b2ccdcb}{Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Teensy$<$ Series\+\_\+size $>$}.
+
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-lib/software/\hyperlink{Lin__ACorr__RT__Base_8hpp}{Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base.\+hpp}\end{DoxyCompactItemize}
+code/software/\hyperlink{Lin__ACorr__RT__Base_8hpp}{Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base.\+hpp}\end{DoxyCompactItemize}

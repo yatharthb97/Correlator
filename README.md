@@ -43,19 +43,23 @@ File descriptions:
 
 ## Standard Flushing Procedure for USB Serial on Teensy:
 
-• Libraries will use `Serial.write(buffer, bytes);` for all outputs.
+* Libraries will use `Serial.write(buffer, bytes);` for all outputs.
 
-• For line buffered outputs, at the end, user calls: `Serial.send_now('\n')`. 
-Note: The libraries are not allowed to use endlines on output calls. This also solves the "`\r\n`" problem of using `Serial.println()`.
+* For line buffered outputs, at the end, user calls: 
+```
+Serial.write('\n');
+Serial.flush(); // Which is an alias of usb_serial::flush()
+``` 
+* Note: The libraries are not allowed to use endlines on output calls. This also solves the "`\r\n`" problem of using `Serial.println()`.
 
-• As per the PJRC website, `Serial.flush()` waits for the buffer to clear, but might not actually initiate the clearing. Hence, Using `Serial.send_now()` might prove more judicious.
+* Both `Serial.flush()` and `Serial.send_now()` wrap `usb_serial_flush_output();`. Reference ![here](https://github.com/PaulStoffregen/cores/blob/c87857a687f23902578f71f71b467486f847ca4e/teensy4/usb_serial.h#L93)
 
 
 
 ## SLOC as on 28/08/21
 
 --- Result ---
-
+```
             Physical :  1873
               Source :  1093
              Comment :  503
@@ -67,5 +71,5 @@ Note: The libraries are not allowed to use endlines on output calls. This also s
                To Do :  0
 
 Number of files read :  23
-
+```
 ---
