@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>DIY Auto-Correlator: LEDSet Class Reference</title>
+<title>DIY Auto-Correlator: LEDSet&lt; SET_SIZE &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,84 +64,357 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="classLEDSet-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">LEDSet Class Reference</div></div>
+  <div class="headertitle"><div class="title">LEDSet&lt; SET_SIZE &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="ledset_8hpp_source.html">ledset.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a090860287fc0ce0d09e2b3c6d4399005"><td class="memItemLeft" align="right" valign="top">static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a090860287fc0ce0d09e2b3c6d4399005">size</a> () <a class="el" href="utilities_8hpp.html#a103d5b3998e0dd804213c8f30a094f4d">__attribute__</a>((always_inline))</td></tr>
-<tr class="memdesc:a090860287fc0ce0d09e2b3c6d4399005"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the led sets.  <a href="classLEDSet.html#a090860287fc0ce0d09e2b3c6d4399005">More...</a><br /></td></tr>
-<tr class="separator:a090860287fc0ce0d09e2b3c6d4399005"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aebc268353f21afffcf0a80c92b6444d2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#aebc268353f21afffcf0a80c92b6444d2">init</a> ()</td></tr>
-<tr class="memdesc:aebc268353f21afffcf0a80c92b6444d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up the pin mode of all LEDs.  <a href="classLEDSet.html#aebc268353f21afffcf0a80c92b6444d2">More...</a><br /></td></tr>
-<tr class="separator:aebc268353f21afffcf0a80c92b6444d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1cb98a2a56113493121873f294dbd35a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a1cb98a2a56113493121873f294dbd35a">state_reload</a> ()</td></tr>
-<tr class="memdesc:a1cb98a2a56113493121873f294dbd35a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the LEDs digitally to max brighnes, based on their switch state.  <a href="classLEDSet.html#a1cb98a2a56113493121873f294dbd35a">More...</a><br /></td></tr>
-<tr class="separator:a1cb98a2a56113493121873f294dbd35a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec21832638aa78f34f1ff5b4133b5620"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#aec21832638aa78f34f1ff5b4133b5620">toggle_all</a> ()</td></tr>
-<tr class="memdesc:aec21832638aa78f34f1ff5b4133b5620"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggles the state of all the LEDs.  <a href="classLEDSet.html#aec21832638aa78f34f1ff5b4133b5620">More...</a><br /></td></tr>
-<tr class="separator:aec21832638aa78f34f1ff5b4133b5620"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf2788af34b7aebec813665763256d54"><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#acf2788af34b7aebec813665763256d54">toggle_all_routine</a> (int delay_ms)</td></tr>
-<tr class="memdesc:acf2788af34b7aebec813665763256d54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggles all the LEDs twice, with some delay. \label Animation.  <a href="classLEDSet.html#acf2788af34b7aebec813665763256d54">More...</a><br /></td></tr>
-<tr class="separator:acf2788af34b7aebec813665763256d54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a978f9404d139d17458d51fd05c5d7466"><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a978f9404d139d17458d51fd05c5d7466">set_all</a> () <a class="el" href="utilities_8hpp.html#a103d5b3998e0dd804213c8f30a094f4d">__attribute__</a>((always_inline))</td></tr>
-<tr class="memdesc:a978f9404d139d17458d51fd05c5d7466"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn on all available LEDs.  <a href="classLEDSet.html#a978f9404d139d17458d51fd05c5d7466">More...</a><br /></td></tr>
-<tr class="separator:a978f9404d139d17458d51fd05c5d7466"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a127aca2f0cb95c1776622caa299437c9"><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a127aca2f0cb95c1776622caa299437c9">unset_all</a> () <a class="el" href="utilities_8hpp.html#a103d5b3998e0dd804213c8f30a094f4d">__attribute__</a>((always_inline))</td></tr>
-<tr class="separator:a127aca2f0cb95c1776622caa299437c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d1cc1a76c48f90ed581dd06808b672b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a7d1cc1a76c48f90ed581dd06808b672b">set</a> (int led_pin) <a class="el" href="utilities_8hpp.html#a103d5b3998e0dd804213c8f30a094f4d">__attribute__</a>((always_inline))</td></tr>
-<tr class="memdesc:a7d1cc1a76c48f90ed581dd06808b672b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn-ON a particular LED Pin.  <a href="classLEDSet.html#a7d1cc1a76c48f90ed581dd06808b672b">More...</a><br /></td></tr>
-<tr class="separator:a7d1cc1a76c48f90ed581dd06808b672b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7285285bd5359c0b7714badd34e9ee9b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a7285285bd5359c0b7714badd34e9ee9b">unset</a> (int led_pin) <a class="el" href="utilities_8hpp.html#a103d5b3998e0dd804213c8f30a094f4d">__attribute__</a>((always_inline))</td></tr>
-<tr class="memdesc:a7285285bd5359c0b7714badd34e9ee9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn-OFF a particular LED Pin.  <a href="classLEDSet.html#a7285285bd5359c0b7714badd34e9ee9b">More...</a><br /></td></tr>
-<tr class="separator:a7285285bd5359c0b7714badd34e9ee9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc6b67a569ff0835ac4ccc8f0615af70"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#abc6b67a569ff0835ac4ccc8f0615af70">set</a> (int led_pin1, int led_pin2) <a class="el" href="utilities_8hpp.html#a103d5b3998e0dd804213c8f30a094f4d">__attribute__</a>((always_inline))</td></tr>
-<tr class="memdesc:abc6b67a569ff0835ac4ccc8f0615af70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn-ON two LED Pins simultaneously.  <a href="classLEDSet.html#abc6b67a569ff0835ac4ccc8f0615af70">More...</a><br /></td></tr>
-<tr class="separator:abc6b67a569ff0835ac4ccc8f0615af70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf0914e193e85bf172455fa55049bd09"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#abf0914e193e85bf172455fa55049bd09">unset</a> (int led_pin1, int led_pin2) <a class="el" href="utilities_8hpp.html#a103d5b3998e0dd804213c8f30a094f4d">__attribute__</a>((always_inline))</td></tr>
-<tr class="memdesc:abf0914e193e85bf172455fa55049bd09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn-OFF two LED Pins simultaneously.  <a href="classLEDSet.html#abf0914e193e85bf172455fa55049bd09">More...</a><br /></td></tr>
-<tr class="separator:abf0914e193e85bf172455fa55049bd09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a011daad7621d4b30d56d685bcff779d0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a011daad7621d4b30d56d685bcff779d0">set</a> (int led_pin1, int led_pin2, int led_pin3) <a class="el" href="utilities_8hpp.html#a103d5b3998e0dd804213c8f30a094f4d">__attribute__</a>((always_inline))</td></tr>
-<tr class="memdesc:a011daad7621d4b30d56d685bcff779d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn-ON three LED Pins simultaneously.  <a href="classLEDSet.html#a011daad7621d4b30d56d685bcff779d0">More...</a><br /></td></tr>
-<tr class="separator:a011daad7621d4b30d56d685bcff779d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a021ebbfef0fa17171d6b4e47c32e78b5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a021ebbfef0fa17171d6b4e47c32e78b5">unset</a> (int led_pin1, int led_pin2, int led_pin3) <a class="el" href="utilities_8hpp.html#a103d5b3998e0dd804213c8f30a094f4d">__attribute__</a>((always_inline))</td></tr>
-<tr class="memdesc:a021ebbfef0fa17171d6b4e47c32e78b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn-FF three LED Pins simultaneously.  <a href="classLEDSet.html#a021ebbfef0fa17171d6b4e47c32e78b5">More...</a><br /></td></tr>
-<tr class="separator:a021ebbfef0fa17171d6b4e47c32e78b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ae26a13b2d33c51351bc6d0acdf2a94a4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#ae26a13b2d33c51351bc6d0acdf2a94a4">ledstate_t</a> { <a class="el" href="classLEDSet.html#ae26a13b2d33c51351bc6d0acdf2a94a4a786545571f352fd284991e5fcdb79238">OFF</a> = 0
+, <a class="el" href="classLEDSet.html#ae26a13b2d33c51351bc6d0acdf2a94a4a1e073152d5525648a5bb26cf3eb98ea2">ON</a> = 1
+, <a class="el" href="classLEDSet.html#ae26a13b2d33c51351bc6d0acdf2a94a4a2c0806958e37c8d87bd57df8990b30eb">Analog</a> = 2
+ }</td></tr>
+<tr class="separator:ae26a13b2d33c51351bc6d0acdf2a94a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:a5b7976388a1b8069b0c05e05f2fd72a8"><td class="memItemLeft" align="right" valign="top">constexpr static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a5b7976388a1b8069b0c05e05f2fd72a8">LEDs</a> [6] = {BUILTLIN, <a class="el" href="pins_8hpp.html#a735f426a390e22c0050b964328c5e06f">LED_RED</a>, <a class="el" href="pins_8hpp.html#a8046eca6ddcbe578777cfde489622a13">LED_BLUE</a>, <a class="el" href="pins_8hpp.html#af338796c804fbfe2e9fd4d249e3c5004">LED_YELLOW</a>, <a class="el" href="pins_8hpp.html#a1be903f86639d50fb6ed02a0dbbe0e2c">LED_WHITE</a>, <a class="el" href="pins_8hpp.html#a8d7df4222b2fde6205bebffc5a0ae070">LED_GREEN</a>}</td></tr>
-<tr class="separator:a5b7976388a1b8069b0c05e05f2fd72a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bb052ba23283326c7ce2f432e9308a7"><td class="memItemLeft" align="right" valign="top">constexpr static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a2bb052ba23283326c7ce2f432e9308a7">LEDStatus</a> [6] = {false}</td></tr>
-<tr class="separator:a2bb052ba23283326c7ce2f432e9308a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a0d3339102ac73fb691f823bcd31a84b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a0d3339102ac73fb691f823bcd31a84b9">LEDSet</a> (std::initializer_list&lt; unsigned int &gt; pins)</td></tr>
+<tr class="memdesc:a0d3339102ac73fb691f823bcd31a84b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for <a class="el" href="classLEDSet.html">LEDSet</a> class.  <a href="classLEDSet.html#a0d3339102ac73fb691f823bcd31a84b9">More...</a><br /></td></tr>
+<tr class="separator:a0d3339102ac73fb691f823bcd31a84b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d153646b1a750421af1f3617d90ad04"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a0d153646b1a750421af1f3617d90ad04">size</a> () __attribute__((always_inline))</td></tr>
+<tr class="memdesc:a0d153646b1a750421af1f3617d90ad04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the led sets.  <a href="classLEDSet.html#a0d153646b1a750421af1f3617d90ad04">More...</a><br /></td></tr>
+<tr class="separator:a0d153646b1a750421af1f3617d90ad04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae4545d8f8cb6e41a3c2960fb7369e48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#aae4545d8f8cb6e41a3c2960fb7369e48">init</a> ()</td></tr>
+<tr class="memdesc:aae4545d8f8cb6e41a3c2960fb7369e48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up the pin mode of all LEDs.  <a href="classLEDSet.html#aae4545d8f8cb6e41a3c2960fb7369e48">More...</a><br /></td></tr>
+<tr class="separator:aae4545d8f8cb6e41a3c2960fb7369e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a520061aaf788486d2aa3aa3dfb3e32d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a520061aaf788486d2aa3aa3dfb3e32d6">state_reload</a> ()</td></tr>
+<tr class="memdesc:a520061aaf788486d2aa3aa3dfb3e32d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the LEDs based on the value of the corresponding state variable. This function is useful when the state is altered seperately from the digitalWrite calls. The function also calls pinMode() which muxes the pins to gpio. For State == Analog: The state maintains the analog dim state.  <a href="classLEDSet.html#a520061aaf788486d2aa3aa3dfb3e32d6">More...</a><br /></td></tr>
+<tr class="separator:a520061aaf788486d2aa3aa3dfb3e32d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a141bb664e7f58ae676455972ca9cd686"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a141bb664e7f58ae676455972ca9cd686">ON_todigital</a> ()</td></tr>
+<tr class="memdesc:a141bb664e7f58ae676455972ca9cd686"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all leds with states (ON == 1) and (Analog == 2) to (ON == 1).  <a href="classLEDSet.html#a141bb664e7f58ae676455972ca9cd686">More...</a><br /></td></tr>
+<tr class="separator:a141bb664e7f58ae676455972ca9cd686"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2bcd287ff637c2600603e83b0981c77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#ae2bcd287ff637c2600603e83b0981c77">toggle_all</a> ()</td></tr>
+<tr class="memdesc:ae2bcd287ff637c2600603e83b0981c77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggles the state of all the LEDs. This is a pure digital function and destroys all Analog dim states.  <a href="classLEDSet.html#ae2bcd287ff637c2600603e83b0981c77">More...</a><br /></td></tr>
+<tr class="separator:ae2bcd287ff637c2600603e83b0981c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08727d959328a2ecbab6c1e8c6ce4ada"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a08727d959328a2ecbab6c1e8c6ce4ada">toggle</a> (int pin, double time_ms)</td></tr>
+<tr class="memdesc:a08727d959328a2ecbab6c1e8c6ce4ada"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggles the state of a particular LED. This is a pure digital function and destroys all Analog dim states.  <a href="classLEDSet.html#a08727d959328a2ecbab6c1e8c6ce4ada">More...</a><br /></td></tr>
+<tr class="separator:a08727d959328a2ecbab6c1e8c6ce4ada"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61cc024950a5b66dff34c449cc73787f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a61cc024950a5b66dff34c449cc73787f">toggle_all_routine</a> (int delay_ms)</td></tr>
+<tr class="separator:a61cc024950a5b66dff34c449cc73787f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a5ef40584236c3793e4274688eac379"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a8a5ef40584236c3793e4274688eac379">dim</a> (int pin, unsigned int analog_val)</td></tr>
+<tr class="memdesc:a8a5ef40584236c3793e4274688eac379"><td class="mdescLeft">&#160;</td><td class="mdescRight">dims a particular valid led pin.  <a href="classLEDSet.html#a8a5ef40584236c3793e4274688eac379">More...</a><br /></td></tr>
+<tr class="separator:a8a5ef40584236c3793e4274688eac379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8313aa0c4fc34cd3481db0fade6318c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#ad8313aa0c4fc34cd3481db0fade6318c">dim_all</a> (unsigned int analog_val)</td></tr>
+<tr class="memdesc:ad8313aa0c4fc34cd3481db0fade6318c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dims the ON-LEDs with the provided analog voltage. Only affects LEDs that are ON or on Analog Mode.  <a href="classLEDSet.html#ad8313aa0c4fc34cd3481db0fade6318c">More...</a><br /></td></tr>
+<tr class="separator:ad8313aa0c4fc34cd3481db0fade6318c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02a191f4c6755092ffe30cca34922734"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a02a191f4c6755092ffe30cca34922734">dim_routine</a> (unsigned int end_analog_val, double time_s)</td></tr>
+<tr class="separator:a02a191f4c6755092ffe30cca34922734"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73dae073882d369a9cc9b9a93f446157"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a73dae073882d369a9cc9b9a93f446157">max_bright_all</a> ()</td></tr>
+<tr class="memdesc:a73dae073882d369a9cc9b9a93f446157"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets maximum brightness for all ON-LEDs.  <a href="classLEDSet.html#a73dae073882d369a9cc9b9a93f446157">More...</a><br /></td></tr>
+<tr class="separator:a73dae073882d369a9cc9b9a93f446157"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9479e36e91b5b1387cfc27722a4a6007"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a9479e36e91b5b1387cfc27722a4a6007">min_bright_all</a> ()</td></tr>
+<tr class="separator:a9479e36e91b5b1387cfc27722a4a6007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaebfea59ba933621c4f7d7d405119702"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#aaebfea59ba933621c4f7d7d405119702">set_all</a> () __attribute__((always_inline))</td></tr>
+<tr class="memdesc:aaebfea59ba933621c4f7d7d405119702"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn on all available LEDs.  <a href="classLEDSet.html#aaebfea59ba933621c4f7d7d405119702">More...</a><br /></td></tr>
+<tr class="separator:aaebfea59ba933621c4f7d7d405119702"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabff2609d8df733936dda53d60302b72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#aabff2609d8df733936dda53d60302b72">unset_all</a> () __attribute__((always_inline))</td></tr>
+<tr class="separator:aabff2609d8df733936dda53d60302b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f5431c0b3c059c43353cf7e3d02ca62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a8f5431c0b3c059c43353cf7e3d02ca62">set</a> (int led_pin) __attribute__((always_inline))</td></tr>
+<tr class="memdesc:a8f5431c0b3c059c43353cf7e3d02ca62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn-ON a particular LED Pin.  <a href="classLEDSet.html#a8f5431c0b3c059c43353cf7e3d02ca62">More...</a><br /></td></tr>
+<tr class="separator:a8f5431c0b3c059c43353cf7e3d02ca62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacc3566d74c4051350977b578ada3a4d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#aacc3566d74c4051350977b578ada3a4d">unset</a> (int led_pin) __attribute__((always_inline))</td></tr>
+<tr class="memdesc:aacc3566d74c4051350977b578ada3a4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn-OFF a particular LED Pin.  <a href="classLEDSet.html#aacc3566d74c4051350977b578ada3a4d">More...</a><br /></td></tr>
+<tr class="separator:aacc3566d74c4051350977b578ada3a4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9912385e65dddd78cf0f41cce4fbcba2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a9912385e65dddd78cf0f41cce4fbcba2">set</a> (int led_pin1, int led_pin2) __attribute__((always_inline))</td></tr>
+<tr class="memdesc:a9912385e65dddd78cf0f41cce4fbcba2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn-ON two LED Pins simultaneously. The function only works if both the Pins are valid pins.  <a href="classLEDSet.html#a9912385e65dddd78cf0f41cce4fbcba2">More...</a><br /></td></tr>
+<tr class="separator:a9912385e65dddd78cf0f41cce4fbcba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac84aa5b9e72689bbfd71f556995dfe03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#ac84aa5b9e72689bbfd71f556995dfe03">unset</a> (int led_pin1, int led_pin2) __attribute__((always_inline))</td></tr>
+<tr class="memdesc:ac84aa5b9e72689bbfd71f556995dfe03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn-OFF two LED Pins simultaneously.  <a href="classLEDSet.html#ac84aa5b9e72689bbfd71f556995dfe03">More...</a><br /></td></tr>
+<tr class="separator:ac84aa5b9e72689bbfd71f556995dfe03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dba15c24ec18e11f82368d203ceb9f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a5dba15c24ec18e11f82368d203ceb9f1">set</a> (int led_pin1, int led_pin2, int led_pin3) __attribute__((always_inline))</td></tr>
+<tr class="memdesc:a5dba15c24ec18e11f82368d203ceb9f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn-ON three LED Pins simultaneously.  <a href="classLEDSet.html#a5dba15c24ec18e11f82368d203ceb9f1">More...</a><br /></td></tr>
+<tr class="separator:a5dba15c24ec18e11f82368d203ceb9f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a6a52e4fd96dd8500861df0a9d0066d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a1a6a52e4fd96dd8500861df0a9d0066d">unset</a> (int led_pin1, int led_pin2, int led_pin3) __attribute__((always_inline))</td></tr>
+<tr class="memdesc:a1a6a52e4fd96dd8500861df0a9d0066d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn-FF three LED Pins simultaneously.  <a href="classLEDSet.html#a1a6a52e4fd96dd8500861df0a9d0066d">More...</a><br /></td></tr>
+<tr class="separator:a1a6a52e4fd96dd8500861df0a9d0066d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa392b74b090de60a25f7577195327afd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#aa392b74b090de60a25f7577195327afd">error</a> (int pin)</td></tr>
+<tr class="memdesc:aa392b74b090de60a25f7577195327afd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Special function that sets a valid pin and sets the flag <code>LedSet::Error_State</code> to true. This function also clears all LED states prior to the Error State but does not modify states set after the error state.  <a href="classLEDSet.html#aa392b74b090de60a25f7577195327afd">More...</a><br /></td></tr>
+<tr class="separator:aa392b74b090de60a25f7577195327afd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafb42531245febe55685c764c29d918f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#aafb42531245febe55685c764c29d918f">assert_errors</a> ()</td></tr>
+<tr class="memdesc:aafb42531245febe55685c764c29d918f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Special function that initiates a special routine if the device is in the Error State. It also calls <code>abort()</code> , if that feature macro is enabled.  <a href="classLEDSet.html#aafb42531245febe55685c764c29d918f">More...</a><br /></td></tr>
+<tr class="separator:aafb42531245febe55685c764c29d918f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3c7ec4740bab77f762dcd48fba26579"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#ab3c7ec4740bab77f762dcd48fba26579">is_valid_pin</a> (int pin)</td></tr>
+<tr class="memdesc:ab3c7ec4740bab77f762dcd48fba26579"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the given pin is a "valid pin". A valid pin is a pin that is registered with the <a class="el" href="classLEDSet.html">LEDSet</a>.  <a href="classLEDSet.html#ab3c7ec4740bab77f762dcd48fba26579">More...</a><br /></td></tr>
+<tr class="separator:ab3c7ec4740bab77f762dcd48fba26579"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a76dfe34c89f6161184583a5ffdcad2e1"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a76dfe34c89f6161184583a5ffdcad2e1">LEDs</a> [SET_SIZE] = {<a class="el" href="pins_8hpp.html#a2b2fb4f846b45d396215a25f949a1bc7">SAFE_OUTPUT_DUMP_PIN</a>}</td></tr>
+<tr class="memdesc:a76dfe34c89f6161184583a5ffdcad2e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">LED pins.  <a href="classLEDSet.html#a76dfe34c89f6161184583a5ffdcad2e1">More...</a><br /></td></tr>
+<tr class="separator:a76dfe34c89f6161184583a5ffdcad2e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7185bf98d8866da93847fde7b2145cc4"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a7185bf98d8866da93847fde7b2145cc4">State</a> [SET_SIZE]</td></tr>
+<tr class="memdesc:a7185bf98d8866da93847fde7b2145cc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">ON-OFF/Analog states for all LEDs.  <a href="classLEDSet.html#a7185bf98d8866da93847fde7b2145cc4">More...</a><br /></td></tr>
+<tr class="separator:a7185bf98d8866da93847fde7b2145cc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9c6ea1d0006d7427c82e8e56f9f2de5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#af9c6ea1d0006d7427c82e8e56f9f2de5">Error_State</a> = false</td></tr>
+<tr class="memdesc:af9c6ea1d0006d7427c82e8e56f9f2de5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the LED Panel is in an error state.  <a href="classLEDSet.html#af9c6ea1d0006d7427c82e8e56f9f2de5">More...</a><br /></td></tr>
+<tr class="separator:af9c6ea1d0006d7427c82e8e56f9f2de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a2ab948b2ac81a4b4e0ace4b51579ad86"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a2ab948b2ac81a4b4e0ace4b51579ad86">fetch_index</a> (int pin) <a class="el" href="utilities_8hpp.html#a103d5b3998e0dd804213c8f30a094f4d">__attribute__</a>((always_inline))</td></tr>
-<tr class="memdesc:a2ab948b2ac81a4b4e0ace4b51579ad86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrive data structure index based on the pin number.  <a href="classLEDSet.html#a2ab948b2ac81a4b4e0ace4b51579ad86">More...</a><br /></td></tr>
-<tr class="separator:a2ab948b2ac81a4b4e0ace4b51579ad86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ffb3b4a8a5cffdc03f4040ff67a33e9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a4ffb3b4a8a5cffdc03f4040ff67a33e9">fetch_index</a> (int pin) __attribute__((always_inline))</td></tr>
+<tr class="memdesc:a4ffb3b4a8a5cffdc03f4040ff67a33e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrive data structure index based on the pin number. Returns -1 if the pin was not found.  <a href="classLEDSet.html#a4ffb3b4a8a5cffdc03f4040ff67a33e9">More...</a><br /></td></tr>
+<tr class="separator:a4ffb3b4a8a5cffdc03f4040ff67a33e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >@Provides an interface for accessing the LEDs on the dashboard and the BUILTIN LED. Theobject serves primarily as a bookeeping object, and hence, enables state conservation and switching. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a2ab948b2ac81a4b4e0ace4b51579ad86" name="a2ab948b2ac81a4b4e0ace4b51579ad86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ab948b2ac81a4b4e0ace4b51579ad86">&#9670;&nbsp;</a></span>fetch_index()</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;unsigned int SET_SIZE&gt;<br />
+class LEDSet&lt; SET_SIZE &gt;</div><p >@Provides an interface for accessing the LEDs on the dashboar. The object serves primarily as a bookeeping object, and hence, enables state conservation and switching, and automatically manages dimming, and complex routines. </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="ae26a13b2d33c51351bc6d0acdf2a94a4" name="ae26a13b2d33c51351bc6d0acdf2a94a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae26a13b2d33c51351bc6d0acdf2a94a4">&#9670;&nbsp;</a></span>ledstate_t</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int SET_SIZE&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classLEDSet.html#ae26a13b2d33c51351bc6d0acdf2a94a4">LEDSet::ledstate_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ae26a13b2d33c51351bc6d0acdf2a94a4a786545571f352fd284991e5fcdb79238" name="ae26a13b2d33c51351bc6d0acdf2a94a4a786545571f352fd284991e5fcdb79238"></a>OFF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae26a13b2d33c51351bc6d0acdf2a94a4a1e073152d5525648a5bb26cf3eb98ea2" name="ae26a13b2d33c51351bc6d0acdf2a94a4a1e073152d5525648a5bb26cf3eb98ea2"></a>ON&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae26a13b2d33c51351bc6d0acdf2a94a4a2c0806958e37c8d87bd57df8990b30eb" name="ae26a13b2d33c51351bc6d0acdf2a94a4a2c0806958e37c8d87bd57df8990b30eb"></a>Analog&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a0d3339102ac73fb691f823bcd31a84b9" name="a0d3339102ac73fb691f823bcd31a84b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d3339102ac73fb691f823bcd31a84b9">&#9670;&nbsp;</a></span>LEDSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int SET_SIZE&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int LEDSet::fetch_index </td>
+          <td class="memname"><a class="el" href="classLEDSet.html">LEDSet</a>&lt; SET_SIZE &gt;::<a class="el" href="classLEDSet.html">LEDSet</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::initializer_list&lt; unsigned int &gt;&#160;</td>
+          <td class="paramname"><em>pins</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor for <a class="el" href="classLEDSet.html">LEDSet</a> class. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pins</td><td>- list of LED pins. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aafb42531245febe55685c764c29d918f" name="aafb42531245febe55685c764c29d918f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafb42531245febe55685c764c29d918f">&#9670;&nbsp;</a></span>assert_errors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int SET_SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classLEDSet.html">LEDSet</a>&lt; SET_SIZE &gt;::assert_errors </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Special function that initiates a special routine if the device is in the Error State. It also calls <code>abort()</code> , if that feature macro is enabled. </p>
+
+</div>
+</div>
+<a id="a8a5ef40584236c3793e4274688eac379" name="a8a5ef40584236c3793e4274688eac379"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a5ef40584236c3793e4274688eac379">&#9670;&nbsp;</a></span>dim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int SET_SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classLEDSet.html">LEDSet</a>&lt; SET_SIZE &gt;::dim </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>analog_val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>dims a particular valid led pin. </p>
+
+</div>
+</div>
+<a id="ad8313aa0c4fc34cd3481db0fade6318c" name="ad8313aa0c4fc34cd3481db0fade6318c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8313aa0c4fc34cd3481db0fade6318c">&#9670;&nbsp;</a></span>dim_all()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int SET_SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classLEDSet.html">LEDSet</a>&lt; SET_SIZE &gt;::dim_all </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>analog_val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dims the ON-LEDs with the provided analog voltage. Only affects LEDs that are ON or on Analog Mode. </p>
+
+</div>
+</div>
+<a id="a02a191f4c6755092ffe30cca34922734" name="a02a191f4c6755092ffe30cca34922734"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02a191f4c6755092ffe30cca34922734">&#9670;&nbsp;</a></span>dim_routine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int SET_SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classLEDSet.html">LEDSet</a>&lt; SET_SIZE &gt;::dim_routine </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>end_analog_val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>time_s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa392b74b090de60a25f7577195327afd" name="aa392b74b090de60a25f7577195327afd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa392b74b090de60a25f7577195327afd">&#9670;&nbsp;</a></span>error()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int SET_SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classLEDSet.html">LEDSet</a>&lt; SET_SIZE &gt;::error </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pin</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Special function that sets a valid pin and sets the flag <code>LedSet::Error_State</code> to true. This function also clears all LED states prior to the Error State but does not modify states set after the error state. </p>
+
+</div>
+</div>
+<a id="a4ffb3b4a8a5cffdc03f4040ff67a33e9" name="a4ffb3b4a8a5cffdc03f4040ff67a33e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ffb3b4a8a5cffdc03f4040ff67a33e9">&#9670;&nbsp;</a></span>fetch_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int SET_SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classLEDSet.html">LEDSet</a>&lt; SET_SIZE &gt;::fetch_index </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>pin</em></td><td>)</td>
@@ -155,21 +428,25 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Retrive data structure index based on the pin number. </p>
+<p>Retrive data structure index based on the pin number. Returns -1 if the pin was not found. </p>
+<dl class="section return"><dt>Returns</dt><dd>Local array index of pin in the LEDs array (bookeeping object). -1 if the search fails. <br  />
+ </dd></dl>
 
 </div>
 </div>
-<a id="aebc268353f21afffcf0a80c92b6444d2" name="aebc268353f21afffcf0a80c92b6444d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aebc268353f21afffcf0a80c92b6444d2">&#9670;&nbsp;</a></span>init()</h2>
+<a id="aae4545d8f8cb6e41a3c2960fb7369e48" name="aae4545d8f8cb6e41a3c2960fb7369e48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae4545d8f8cb6e41a3c2960fb7369e48">&#9670;&nbsp;</a></span>init()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int SET_SIZE&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void LEDSet::init </td>
+          <td class="memname">void <a class="el" href="classLEDSet.html">LEDSet</a>&lt; SET_SIZE &gt;::init </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -177,7 +454,7 @@ Private Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -186,17 +463,135 @@ Private Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a7d1cc1a76c48f90ed581dd06808b672b" name="a7d1cc1a76c48f90ed581dd06808b672b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d1cc1a76c48f90ed581dd06808b672b">&#9670;&nbsp;</a></span>set() <span class="overload">[1/3]</span></h2>
+<a id="ab3c7ec4740bab77f762dcd48fba26579" name="ab3c7ec4740bab77f762dcd48fba26579"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3c7ec4740bab77f762dcd48fba26579">&#9670;&nbsp;</a></span>is_valid_pin()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int SET_SIZE&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void LEDSet::set </td>
+          <td class="memname">bool <a class="el" href="classLEDSet.html">LEDSet</a>&lt; SET_SIZE &gt;::is_valid_pin </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pin</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns whether the given pin is a "valid pin". A valid pin is a pin that is registered with the <a class="el" href="classLEDSet.html">LEDSet</a>. </p>
+
+</div>
+</div>
+<a id="a73dae073882d369a9cc9b9a93f446157" name="a73dae073882d369a9cc9b9a93f446157"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73dae073882d369a9cc9b9a93f446157">&#9670;&nbsp;</a></span>max_bright_all()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int SET_SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classLEDSet.html">LEDSet</a>&lt; SET_SIZE &gt;::max_bright_all </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets maximum brightness for all ON-LEDs. </p>
+
+</div>
+</div>
+<a id="a9479e36e91b5b1387cfc27722a4a6007" name="a9479e36e91b5b1387cfc27722a4a6007"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9479e36e91b5b1387cfc27722a4a6007">&#9670;&nbsp;</a></span>min_bright_all()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int SET_SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classLEDSet.html">LEDSet</a>&lt; SET_SIZE &gt;::min_bright_all </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Sets the minimum brighness for all ON-LEDs. </p>
+
+</div>
+</div>
+<a id="a141bb664e7f58ae676455972ca9cd686" name="a141bb664e7f58ae676455972ca9cd686"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a141bb664e7f58ae676455972ca9cd686">&#9670;&nbsp;</a></span>ON_todigital()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int SET_SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classLEDSet.html">LEDSet</a>&lt; SET_SIZE &gt;::ON_todigital </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets all leds with states (ON == 1) and (Analog == 2) to (ON == 1). </p>
+
+</div>
+</div>
+<a id="a8f5431c0b3c059c43353cf7e3d02ca62" name="a8f5431c0b3c059c43353cf7e3d02ca62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f5431c0b3c059c43353cf7e3d02ca62">&#9670;&nbsp;</a></span>set() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int SET_SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classLEDSet.html">LEDSet</a>&lt; SET_SIZE &gt;::set </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>led_pin</em></td><td>)</td>
@@ -205,7 +600,7 @@ Private Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -214,17 +609,19 @@ Private Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="abc6b67a569ff0835ac4ccc8f0615af70" name="abc6b67a569ff0835ac4ccc8f0615af70"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc6b67a569ff0835ac4ccc8f0615af70">&#9670;&nbsp;</a></span>set() <span class="overload">[2/3]</span></h2>
+<a id="a9912385e65dddd78cf0f41cce4fbcba2" name="a9912385e65dddd78cf0f41cce4fbcba2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9912385e65dddd78cf0f41cce4fbcba2">&#9670;&nbsp;</a></span>set() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int SET_SIZE&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void LEDSet::set </td>
+          <td class="memname">void <a class="el" href="classLEDSet.html">LEDSet</a>&lt; SET_SIZE &gt;::set </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>led_pin1</em>, </td>
@@ -243,26 +640,28 @@ Private Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Turn-ON two LED Pins simultaneously. </p>
+<p>Turn-ON two LED Pins simultaneously. The function only works if both the Pins are valid pins. </p>
 
 </div>
 </div>
-<a id="a011daad7621d4b30d56d685bcff779d0" name="a011daad7621d4b30d56d685bcff779d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a011daad7621d4b30d56d685bcff779d0">&#9670;&nbsp;</a></span>set() <span class="overload">[3/3]</span></h2>
+<a id="a5dba15c24ec18e11f82368d203ceb9f1" name="a5dba15c24ec18e11f82368d203ceb9f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dba15c24ec18e11f82368d203ceb9f1">&#9670;&nbsp;</a></span>set() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int SET_SIZE&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void LEDSet::set </td>
+          <td class="memname">void <a class="el" href="classLEDSet.html">LEDSet</a>&lt; SET_SIZE &gt;::set </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>led_pin1</em>, </td>
@@ -287,7 +686,7 @@ Private Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -296,17 +695,19 @@ Private Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a978f9404d139d17458d51fd05c5d7466" name="a978f9404d139d17458d51fd05c5d7466"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a978f9404d139d17458d51fd05c5d7466">&#9670;&nbsp;</a></span>set_all()</h2>
+<a id="aaebfea59ba933621c4f7d7d405119702" name="aaebfea59ba933621c4f7d7d405119702"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaebfea59ba933621c4f7d7d405119702">&#9670;&nbsp;</a></span>set_all()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int SET_SIZE&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static LEDSet::set_all </td>
+          <td class="memname">void <a class="el" href="classLEDSet.html">LEDSet</a>&lt; SET_SIZE &gt;::set_all </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -314,7 +715,7 @@ Private Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -323,17 +724,19 @@ Private Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a090860287fc0ce0d09e2b3c6d4399005" name="a090860287fc0ce0d09e2b3c6d4399005"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a090860287fc0ce0d09e2b3c6d4399005">&#9670;&nbsp;</a></span>size()</h2>
+<a id="a0d153646b1a750421af1f3617d90ad04" name="a0d153646b1a750421af1f3617d90ad04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d153646b1a750421af1f3617d90ad04">&#9670;&nbsp;</a></span>size()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int SET_SIZE&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static unsigned int LEDSet::size </td>
+          <td class="memname">unsigned int <a class="el" href="classLEDSet.html">LEDSet</a>&lt; SET_SIZE &gt;::size </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -341,7 +744,7 @@ Private Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -350,17 +753,19 @@ Private Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a1cb98a2a56113493121873f294dbd35a" name="a1cb98a2a56113493121873f294dbd35a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1cb98a2a56113493121873f294dbd35a">&#9670;&nbsp;</a></span>state_reload()</h2>
+<a id="a520061aaf788486d2aa3aa3dfb3e32d6" name="a520061aaf788486d2aa3aa3dfb3e32d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a520061aaf788486d2aa3aa3dfb3e32d6">&#9670;&nbsp;</a></span>state_reload()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int SET_SIZE&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void LEDSet::state_reload </td>
+          <td class="memname">void <a class="el" href="classLEDSet.html">LEDSet</a>&lt; SET_SIZE &gt;::state_reload </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -368,26 +773,68 @@ Private Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sets the LEDs digitally to max brighnes, based on their switch state. </p>
+<p>Sets the LEDs based on the value of the corresponding state variable. This function is useful when the state is altered seperately from the digitalWrite calls. The function also calls pinMode() which muxes the pins to gpio. For State == Analog: The state maintains the analog dim state. </p>
 
 </div>
 </div>
-<a id="aec21832638aa78f34f1ff5b4133b5620" name="aec21832638aa78f34f1ff5b4133b5620"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec21832638aa78f34f1ff5b4133b5620">&#9670;&nbsp;</a></span>toggle_all()</h2>
+<a id="a08727d959328a2ecbab6c1e8c6ce4ada" name="a08727d959328a2ecbab6c1e8c6ce4ada"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08727d959328a2ecbab6c1e8c6ce4ada">&#9670;&nbsp;</a></span>toggle()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int SET_SIZE&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void LEDSet::toggle_all </td>
+          <td class="memname">void <a class="el" href="classLEDSet.html">LEDSet</a>&lt; SET_SIZE &gt;::toggle </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>time_ms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Toggles the state of a particular LED. This is a pure digital function and destroys all Analog dim states. </p>
+
+</div>
+</div>
+<a id="ae2bcd287ff637c2600603e83b0981c77" name="ae2bcd287ff637c2600603e83b0981c77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2bcd287ff637c2600603e83b0981c77">&#9670;&nbsp;</a></span>toggle_all()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int SET_SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classLEDSet.html">LEDSet</a>&lt; SET_SIZE &gt;::toggle_all </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -395,26 +842,28 @@ Private Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Toggles the state of all the LEDs. </p>
+<p>Toggles the state of all the LEDs. This is a pure digital function and destroys all Analog dim states. </p>
 
 </div>
 </div>
-<a id="acf2788af34b7aebec813665763256d54" name="acf2788af34b7aebec813665763256d54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf2788af34b7aebec813665763256d54">&#9670;&nbsp;</a></span>toggle_all_routine()</h2>
+<a id="a61cc024950a5b66dff34c449cc73787f" name="a61cc024950a5b66dff34c449cc73787f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61cc024950a5b66dff34c449cc73787f">&#9670;&nbsp;</a></span>toggle_all_routine()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int SET_SIZE&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static LEDSet::toggle_all_routine </td>
+          <td class="memname">void <a class="el" href="classLEDSet.html">LEDSet</a>&lt; SET_SIZE &gt;::toggle_all_routine </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>delay_ms</em></td><td>)</td>
@@ -423,26 +872,26 @@ Private Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Toggles all the LEDs twice, with some delay. \label Animation. </p>
-
 </div>
 </div>
-<a id="a7285285bd5359c0b7714badd34e9ee9b" name="a7285285bd5359c0b7714badd34e9ee9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7285285bd5359c0b7714badd34e9ee9b">&#9670;&nbsp;</a></span>unset() <span class="overload">[1/3]</span></h2>
+<a id="aacc3566d74c4051350977b578ada3a4d" name="aacc3566d74c4051350977b578ada3a4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacc3566d74c4051350977b578ada3a4d">&#9670;&nbsp;</a></span>unset() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int SET_SIZE&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void LEDSet::unset </td>
+          <td class="memname">void <a class="el" href="classLEDSet.html">LEDSet</a>&lt; SET_SIZE &gt;::unset </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>led_pin</em></td><td>)</td>
@@ -451,7 +900,7 @@ Private Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -460,17 +909,19 @@ Private Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="abf0914e193e85bf172455fa55049bd09" name="abf0914e193e85bf172455fa55049bd09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf0914e193e85bf172455fa55049bd09">&#9670;&nbsp;</a></span>unset() <span class="overload">[2/3]</span></h2>
+<a id="ac84aa5b9e72689bbfd71f556995dfe03" name="ac84aa5b9e72689bbfd71f556995dfe03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac84aa5b9e72689bbfd71f556995dfe03">&#9670;&nbsp;</a></span>unset() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int SET_SIZE&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void LEDSet::unset </td>
+          <td class="memname">void <a class="el" href="classLEDSet.html">LEDSet</a>&lt; SET_SIZE &gt;::unset </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>led_pin1</em>, </td>
@@ -489,7 +940,7 @@ Private Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -498,17 +949,19 @@ Private Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a021ebbfef0fa17171d6b4e47c32e78b5" name="a021ebbfef0fa17171d6b4e47c32e78b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a021ebbfef0fa17171d6b4e47c32e78b5">&#9670;&nbsp;</a></span>unset() <span class="overload">[3/3]</span></h2>
+<a id="a1a6a52e4fd96dd8500861df0a9d0066d" name="a1a6a52e4fd96dd8500861df0a9d0066d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a6a52e4fd96dd8500861df0a9d0066d">&#9670;&nbsp;</a></span>unset() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int SET_SIZE&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void LEDSet::unset </td>
+          <td class="memname">void <a class="el" href="classLEDSet.html">LEDSet</a>&lt; SET_SIZE &gt;::unset </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>led_pin1</em>, </td>
@@ -533,7 +986,7 @@ Private Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -542,17 +995,19 @@ Private Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a127aca2f0cb95c1776622caa299437c9" name="a127aca2f0cb95c1776622caa299437c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a127aca2f0cb95c1776622caa299437c9">&#9670;&nbsp;</a></span>unset_all()</h2>
+<a id="aabff2609d8df733936dda53d60302b72" name="aabff2609d8df733936dda53d60302b72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabff2609d8df733936dda53d60302b72">&#9670;&nbsp;</a></span>unset_all()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int SET_SIZE&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static LEDSet::unset_all </td>
+          <td class="memname">void <a class="el" href="classLEDSet.html">LEDSet</a>&lt; SET_SIZE &gt;::unset_all </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -560,7 +1015,7 @@ Private Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -569,52 +1024,62 @@ Private Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a5b7976388a1b8069b0c05e05f2fd72a8" name="a5b7976388a1b8069b0c05e05f2fd72a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5b7976388a1b8069b0c05e05f2fd72a8">&#9670;&nbsp;</a></span>LEDs</h2>
+<a id="af9c6ea1d0006d7427c82e8e56f9f2de5" name="af9c6ea1d0006d7427c82e8e56f9f2de5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9c6ea1d0006d7427c82e8e56f9f2de5">&#9670;&nbsp;</a></span>Error_State</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+<div class="memtemplate">
+template&lt;unsigned int SET_SIZE&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">constexpr static int LEDSet::LEDs[6] = {BUILTLIN, <a class="el" href="pins_8hpp.html#a735f426a390e22c0050b964328c5e06f">LED_RED</a>, <a class="el" href="pins_8hpp.html#a8046eca6ddcbe578777cfde489622a13">LED_BLUE</a>, <a class="el" href="pins_8hpp.html#af338796c804fbfe2e9fd4d249e3c5004">LED_YELLOW</a>, <a class="el" href="pins_8hpp.html#a1be903f86639d50fb6ed02a0dbbe0e2c">LED_WHITE</a>, <a class="el" href="pins_8hpp.html#a8d7df4222b2fde6205bebffc5a0ae070">LED_GREEN</a>}</td>
+          <td class="memname">bool <a class="el" href="classLEDSet.html">LEDSet</a>&lt; SET_SIZE &gt;::Error_State = false</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>Whether the LED Panel is in an error state. </p>
 
 </div>
 </div>
-<a id="a2bb052ba23283326c7ce2f432e9308a7" name="a2bb052ba23283326c7ce2f432e9308a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2bb052ba23283326c7ce2f432e9308a7">&#9670;&nbsp;</a></span>LEDStatus</h2>
+<a id="a76dfe34c89f6161184583a5ffdcad2e1" name="a76dfe34c89f6161184583a5ffdcad2e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76dfe34c89f6161184583a5ffdcad2e1">&#9670;&nbsp;</a></span>LEDs</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+<div class="memtemplate">
+template&lt;unsigned int SET_SIZE&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">constexpr static bool LEDSet::LEDStatus[6] = {false}</td>
+          <td class="memname">const int <a class="el" href="classLEDSet.html">LEDSet</a>&lt; SET_SIZE &gt;::LEDs[SET_SIZE] = {<a class="el" href="pins_8hpp.html#a2b2fb4f846b45d396215a25f949a1bc7">SAFE_OUTPUT_DUMP_PIN</a>}</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>LED pins. </p>
+
+</div>
+</div>
+<a id="a7185bf98d8866da93847fde7b2145cc4" name="a7185bf98d8866da93847fde7b2145cc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7185bf98d8866da93847fde7b2145cc4">&#9670;&nbsp;</a></span>State</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int SET_SIZE&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int <a class="el" href="classLEDSet.html">LEDSet</a>&lt; SET_SIZE &gt;::State[SET_SIZE]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ON-OFF/Analog states for all LEDs. </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/github/workspace/<a class="el" href="ledset_8hpp_source.html">ledset.hpp</a></li>
+<li>code/hardware/<a class="el" href="ledset_8hpp_source.html">ledset.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

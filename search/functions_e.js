@@ -1,11 +1,15 @@
 var searchData=
 [
-  ['tau_5fscaling_5fscheme_0',['tau_scaling_scheme',['../classMultiTau__ACorr__RT__Teensy.html#af90bc219b8b9dc316c56efd7c74aae6f',1,'MultiTau_ACorr_RT_Teensy']]],
-  ['tick_5fperiod_5fus_1',['tick_period_us',['../classPITController.html#a2b64ce8a01dc1254002c4ff3c384a6fd',1,'PITController']]],
-  ['time_5fscaling_5ffactor_2',['time_scaling_factor',['../classMultiTau__ACorr__RT__Teensy.html#a218fdc2fcc3bb7cd5d1c2f03ea2506da',1,'MultiTau_ACorr_RT_Teensy']]],
-  ['timers_5fanti_5ffreeze_3',['timers_anti_freeze',['../classTMR1Controller.html#acb383aa5321f552f018e4e217e2211f4',1,'TMR1Controller']]],
-  ['timers_5ffreeze_4',['timers_freeze',['../classTMR1Controller.html#aa00df5e2d591a36b1049275c9a293c51',1,'TMR1Controller']]],
-  ['tmr1controller_5',['TMR1Controller',['../classTMR1Controller.html#aebc677e795f673c6520d5a03eb6aa4f2',1,'TMR1Controller']]],
-  ['toggle_5fall_6',['toggle_all',['../classLEDSet.html#aec21832638aa78f34f1ff5b4133b5620',1,'LEDSet']]],
-  ['toggle_5fall_5froutine_7',['toggle_all_routine',['../classLEDSet.html#acf2788af34b7aebec813665763256d54',1,'LEDSet']]]
+  ['sel_5f24mhz_5fclock_0',['sel_24MHz_clock',['../classPITController.html#adb0d04fa23f4ebd20d2f495a86af3ccd',1,'PITController']]],
+  ['sel_5ffbus_5fclock_1',['sel_FBUS_clock',['../classPITController.html#a63e67e2ebfd6ceb5f5e38d9bd6a54754',1,'PITController']]],
+  ['serial_5fmax_5fcount_2',['serial_max_count',['../utilities_8cpp.html#a31bdce2737728fa77974f2cfc5abebaa',1,'utilities.cpp']]],
+  ['set_3',['set',['../classLEDSet.html#a8f5431c0b3c059c43353cf7e3d02ca62',1,'LEDSet::set(int led_pin) __attribute__((always_inline))'],['../classLEDSet.html#a9912385e65dddd78cf0f41cce4fbcba2',1,'LEDSet::set(int led_pin1, int led_pin2) __attribute__((always_inline))'],['../classLEDSet.html#a5dba15c24ec18e11f82368d203ceb9f1',1,'LEDSet::set(int led_pin1, int led_pin2, int led_pin3) __attribute__((always_inline))']]],
+  ['set_5fall_4',['set_all',['../classLEDSet.html#aaebfea59ba933621c4f7d7d405119702',1,'LEDSet']]],
+  ['set_5fgate_5ftime_5',['set_gate_time',['../classPITController.html#aaf7a79129a4ea5af057ea8f537b7ae9f',1,'PITController']]],
+  ['set_5finterrupt_6',['set_interrupt',['../classPITController.html#aa94b6dc081d453c8dda54c3ade4b3d94',1,'PITController']]],
+  ['setup_7',['setup',['../main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d',1,'main.cpp']]],
+  ['size_8',['size',['../classLEDSet.html#a0d153646b1a750421af1f3617d90ad04',1,'LEDSet']]],
+  ['start_9',['start',['../classPITController.html#a4dae1ed0ada64ebc03665e8f39795e7e',1,'PITController::start()'],['../classTMR1Controller.html#a67bc04f0648176a681f6ac01ea483db9',1,'TMR1Controller::start()'],['../classPIT__LifetimeTimer.html#a6feabeff2529cabaf27ef53d027a4fc9',1,'PIT_LifetimeTimer::start()']]],
+  ['state_5freload_10',['state_reload',['../classLEDSet.html#a520061aaf788486d2aa3aa3dfb3e32d6',1,'LEDSet']]],
+  ['stop_11',['stop',['../classPIT__LifetimeTimer.html#a92543f292044725b1dea4d009e01d9e4',1,'PIT_LifetimeTimer::stop()'],['../classPITController.html#a5a6e2b00c6355934531a77a62660bec7',1,'PITController::stop()'],['../classTMR1Controller.html#afcb0ea27107bfbe50b9dcbd54207dd00',1,'TMR1Controller::stop()']]]
 ];

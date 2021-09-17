@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tmr1controller_0',['TMR1Controller',['../classTMR1Controller.html',1,'']]]
+  ['tmr1controller',['TMR1Controller',['../classTMR1Controller.html',1,'']]]
 ];

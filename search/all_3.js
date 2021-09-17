@@ -1,11 +1,22 @@
 var searchData=
 [
-  ['accumulate_0',['Accumulate',['../classAccumulator.html#a8e615af8b85dd2c8500d1f8c473879ab',1,'Accumulator']]],
-  ['accumulator_1',['Accumulator',['../classAccumulator.html',1,'']]],
-  ['accumulator_2ehpp_2',['accumulator.hpp',['../accumulator_8hpp.html',1,'']]],
-  ['accumulators_3',['Accumulators',['../classMultiTau__ACorr__RT__Teensy.html#a5b6f2659e905f143bc898a9b803eae24',1,'MultiTau_ACorr_RT_Teensy']]],
-  ['actual_5fperiod_4',['Actual_period',['../classPITController.html#a549601e7c66941d7872a6e7d38ed9563',1,'PITController']]],
-  ['advance_5fpointer_5',['advance_pointer',['../classCircular__Buffer.html#a4ec86fd625e56d17abe155895cc4cc1b',1,'Circular_Buffer']]],
-  ['always_5finline_6',['always_inline',['../classTMR1Controller.html#adce8e8a496510485a88ccc5b88595672',1,'TMR1Controller']]],
-  ['auto_5fmultitau_5finput_5fvalidator_7',['Auto_MultiTau_Input_Validator',['../namespaceErrors.html#a7010d07de8236f9a17b302c78f37483e',1,'Errors']]]
+  ['ch_5fout_0',['ch_out',['../classMultiTau__ACorr__RT__Teensy.html#a37a29725971f15305398ac7c9c360eac',1,'MultiTau_ACorr_RT_Teensy']]],
+  ['channel_5farray_1',['Channel_array',['../classLin__ACorr__RT__Teensy.html#af4dda93e07198bae54553a8f11773e74',1,'Lin_ACorr_RT_Teensy']]],
+  ['channel_5farray12_2',['Channel_array12',['../classLin__CrossCorr__RT__Teensy.html#ad1a3471c7cbcee3bd9b800571cd2ae3d',1,'Lin_CrossCorr_RT_Teensy']]],
+  ['channel_5farray21_3',['Channel_array21',['../classLin__CrossCorr__RT__Teensy.html#a03a339977779908684cba60c8d3f9738',1,'Lin_CrossCorr_RT_Teensy']]],
+  ['channel_5fsize_4',['CHANNEL_SIZE',['../main_8cpp.html#a0ae4ccba91e13ad636bfb5099898d27d',1,'main.cpp']]],
+  ['channel_5fsize_5',['channel_size',['../namespacemultitau.html#a1022c52950a892396ac45e7de5379e12',1,'multitau']]],
+  ['clear_5finput_5fedge_5fflag_6',['clear_input_edge_flag',['../classTMR1Controller.html#aa59afefa545098e53cb2e0560142526c',1,'TMR1Controller']]],
+  ['clear_5finterrupt_5fflag_7',['clear_interrupt_flag',['../classPITController.html#ae3f9c981e88cced34153234475de5646',1,'PITController']]],
+  ['clear_5foverflow_5fflag_8',['clear_overflow_flag',['../classTMR1Controller.html#a7117e12d0cb8ec32aa6552fe541023da',1,'TMR1Controller']]],
+  ['clk_5ffreq_9',['Clk_freq',['../classPITController.html#ae3d74bb18e5b22769e895f592cb16129',1,'PITController']]],
+  ['config_10',['config',['../namespaceconfig.html',1,'config'],['../namespacepost__upload__actions.html#accb09cfbbad171dde59d37a322e7d426',1,'post_upload_actions.config()'],['../namespacepre__build__actions.html#ad21480457dbfecc6160a8ea8cdde2bbd',1,'pre_build_actions.config()']]],
+  ['config_2epy_11',['config.py',['../config_8py.html',1,'']]],
+  ['container2_12',['container2',['../classLin__CrossCorr__RT__Teensy.html#a9c49e09d3817e1f1344c51928e3afb57',1,'Lin_CrossCorr_RT_Teensy']]],
+  ['counter_5foverflow_13',['Counter_Overflow',['../errors_8hpp.html#a4e8c0d09726859e3d3369c0da5a1aa7fa8347bab2e74e4a640d76c916306a1a36',1,'errors.hpp']]],
+  ['counter_5ft_14',['counter_t',['../types_8hpp.html#a22f279793847eba127de149437848c48',1,'types.hpp']]],
+  ['counter_5funderflow_15',['Counter_Underflow',['../errors_8hpp.html#a4e8c0d09726859e3d3369c0da5a1aa7fa02b02f5e5e61f24acdd91338b95997da',1,'errors.hpp']]],
+  ['counter_5fval_16',['Counter_val',['../main_8cpp.html#afcac7adcea259024440f8d9257d82d08',1,'main.cpp']]],
+  ['cppdefines_17',['CPPDEFINES',['../namespacepre__build__actions.html#af276cd5a6479d0d283ca21e90df104b9',1,'pre_build_actions']]],
+  ['curve_18',['curve',['../namespacepost__upload__actions.html#aed0ea70905ed0bebf27087552b59f95c',1,'post_upload_actions']]]
 ];

@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['modules_2ehpp_0',['modules.hpp',['../modules_8hpp.html',1,'']]],
-  ['multi_5ftau_2ehpp_1',['multi_tau.hpp',['../multi__tau_8hpp.html',1,'']]],
-  ['multitau_5facorr_5frt_5fteensy_2',['MultiTau_ACorr_RT_Teensy',['../classMultiTau__ACorr__RT__Teensy.html',1,'MultiTau_ACorr_RT_Teensy&lt; Lin_channels, Series_size, Bin_Ratio &gt;'],['../classMultiTau__ACorr__RT__Teensy.html#a28cfdcd7468aac93693a4d4803fc95f9',1,'MultiTau_ACorr_RT_Teensy::MultiTau_ACorr_RT_Teensy()']]]
+  ['off_0',['OFF',['../classLEDSet.html#ae26a13b2d33c51351bc6d0acdf2a94a4a786545571f352fd284991e5fcdb79238',1,'LEDSet']]],
+  ['on_1',['ON',['../classLEDSet.html#ae26a13b2d33c51351bc6d0acdf2a94a4a1e073152d5525648a5bb26cf3eb98ea2',1,'LEDSet']]],
+  ['on_5ftodigital_2',['ON_todigital',['../classLEDSet.html#a141bb664e7f58ae676455972ca9cd686',1,'LEDSet']]],
+  ['operator_5b_5d_3',['operator[]',['../classSimpler__Circular__Buffer.html#a4ce53bc8ad0d231e9d013c771191696a',1,'Simpler_Circular_Buffer']]],
+  ['output_4',['output',['../classDiscarder__Teensy.html#a50787ecd4fc07a1d1cf2b692af979ac7',1,'Discarder_Teensy']]],
+  ['override_5',['override',['../classLin__CrossCorr__RT__Teensy.html#a5baab98aab70338799de9f82e7c7cc06',1,'Lin_CrossCorr_RT_Teensy']]]
 ];

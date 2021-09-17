@@ -71,14 +71,15 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a51461dff689e5f46ea124f1e13806c01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceErrors.html#a51461dff689e5f46ea124f1e13806c01">Validate</a> (<a class="el" href="errors_8hpp.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a> error)</td></tr>
-<tr class="memdesc:a51461dff689e5f46ea124f1e13806c01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives an error state and sets up the corresponding LED indicator. [[Incomplete]].  <a href="namespaceErrors.html#a51461dff689e5f46ea124f1e13806c01">More...</a><br /></td></tr>
-<tr class="separator:a51461dff689e5f46ea124f1e13806c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0caff7c325638cca6f2f4ebdb0bf81a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceErrors.html#a0caff7c325638cca6f2f4ebdb0bf81a2">Precison_Threshold</a> (double error_val, double error_limit)</td></tr>
-<tr class="memdesc:a0caff7c325638cca6f2f4ebdb0bf81a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives error value and error threshold and returns an appropriate error state.  <a href="namespaceErrors.html#a0caff7c325638cca6f2f4ebdb0bf81a2">More...</a><br /></td></tr>
-<tr class="separator:a0caff7c325638cca6f2f4ebdb0bf81a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fcd582e2074f8fad3a450d1b6b42aaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceErrors.html#a1fcd582e2074f8fad3a450d1b6b42aaa">Validate</a> (const <a class="el" href="errors_8hpp.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a> error)</td></tr>
+<tr class="memdesc:a1fcd582e2074f8fad3a450d1b6b42aaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives an error state and sets up the corresponding LED indicator.  <a href="namespaceErrors.html#a1fcd582e2074f8fad3a450d1b6b42aaa">More...</a><br /></td></tr>
+<tr class="separator:a1fcd582e2074f8fad3a450d1b6b42aaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13171d3d324164c9f7a9508d5a16b0c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="errors_8hpp.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceErrors.html#a13171d3d324164c9f7a9508d5a16b0c5">Precison_Threshold</a> (double error_val, double error_limit)</td></tr>
+<tr class="memdesc:a13171d3d324164c9f7a9508d5a16b0c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives error value and error threshold and returns an appropriate error state.  <a href="namespaceErrors.html#a13171d3d324164c9f7a9508d5a16b0c5">More...</a><br /></td></tr>
+<tr class="separator:a13171d3d324164c9f7a9508d5a16b0c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7010d07de8236f9a17b302c78f37483e"><td class="memTemplParams" colspan="2">template&lt;unsigned int Lin_channels, <a class="el" href="types_8hpp.html#a7c40bb931c31595ed6308605f4537447">index_t</a> Series_size, unsigned int Bin_Ratio&gt; </td></tr>
 <tr class="memitem:a7010d07de8236f9a17b302c78f37483e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="errors_8hpp.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceErrors.html#a7010d07de8236f9a17b302c78f37483e">Auto_MultiTau_Input_Validator</a> ()</td></tr>
+<tr class="memdesc:a7010d07de8236f9a17b302c78f37483e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input Validator for MultiTau auto-correlator.  <a href="namespaceErrors.html#a7010d07de8236f9a17b302c78f37483e">More...</a><br /></td></tr>
 <tr class="separator:a7010d07de8236f9a17b302c78f37483e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -101,16 +102,19 @@ template&lt;unsigned int Lin_channels, <a class="el" href="types_8hpp.html#a7c40
       </table>
 </div><div class="memdoc">
 
+<p>Input Validator for MultiTau auto-correlator. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>Change name to indicate <em>Auto</em> Correlator link. </dd></dl>
+
 </div>
 </div>
-<a id="a0caff7c325638cca6f2f4ebdb0bf81a2" name="a0caff7c325638cca6f2f4ebdb0bf81a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0caff7c325638cca6f2f4ebdb0bf81a2">&#9670;&nbsp;</a></span>Precison_Threshold()</h2>
+<a id="a13171d3d324164c9f7a9508d5a16b0c5" name="a13171d3d324164c9f7a9508d5a16b0c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13171d3d324164c9f7a9508d5a16b0c5">&#9670;&nbsp;</a></span>Precison_Threshold()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Errors::Precison_Threshold </td>
+          <td class="memname"><a class="el" href="errors_8hpp.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a> Errors::Precison_Threshold </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>error_val</em>, </td>
@@ -133,8 +137,8 @@ template&lt;unsigned int Lin_channels, <a class="el" href="types_8hpp.html#a7c40
 
 </div>
 </div>
-<a id="a51461dff689e5f46ea124f1e13806c01" name="a51461dff689e5f46ea124f1e13806c01"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51461dff689e5f46ea124f1e13806c01">&#9670;&nbsp;</a></span>Validate()</h2>
+<a id="a1fcd582e2074f8fad3a450d1b6b42aaa" name="a1fcd582e2074f8fad3a450d1b6b42aaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fcd582e2074f8fad3a450d1b6b42aaa">&#9670;&nbsp;</a></span>Validate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -142,14 +146,14 @@ template&lt;unsigned int Lin_channels, <a class="el" href="types_8hpp.html#a7c40
         <tr>
           <td class="memname">void Errors::Validate </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="errors_8hpp.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="errors_8hpp.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a>&#160;</td>
           <td class="paramname"><em>error</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Receives an error state and sets up the corresponding LED indicator. [[Incomplete]]. </p>
+<p>Receives an error state and sets up the corresponding LED indicator. </p>
 
 </div>
 </div>

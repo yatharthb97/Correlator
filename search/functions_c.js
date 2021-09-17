@@ -1,8 +1,15 @@
 var searchData=
 [
-  ['read_5fhigh_5fval_0',['read_high_val',['../classPIT__LifetimeTimer.html#a39b0861ac88aec5e53f326409d536bcf',1,'PIT_LifetimeTimer']]],
-  ['read_5flow_5fval_1',['read_low_val',['../classPIT__LifetimeTimer.html#a4f7f8cd3847b9edb19dfa27f048a08cc',1,'PIT_LifetimeTimer']]],
-  ['read_5fval_2',['read_val',['../classPIT__LifetimeTimer.html#a4ee08cce7812322a7a10fcba0463476c',1,'PIT_LifetimeTimer']]],
-  ['reset_3',['reset',['../classPIT__LifetimeTimer.html#a5c1c38cfa6c7a049a495ee3d89e13276',1,'PIT_LifetimeTimer::reset()'],['../classTMR1Controller.html#adf3746ffd24c5b55abff4fa18e05f6b3',1,'TMR1Controller::reset()'],['../classCircular__Buffer.html#a902eea867fd0c933af19b91f9b97ccee',1,'Circular_Buffer::reset()'],['../classSimpler__Circular__Buffer.html#a793cdb8134afe48ef9918fa0428dfbb6',1,'Simpler_Circular_Buffer::reset()']]],
-  ['retreat_5fpointer_4',['retreat_pointer',['../classCircular__Buffer.html#a2b13869f0a5a4904142241a3d15ff141',1,'Circular_Buffer']]]
+  ['pause_5fresume_5fpits_0',['pause_resume_PITs',['../classPITController.html#a24b7ea02555967ef945ab87aae338574',1,'PITController']]],
+  ['period_5ferror_5fus_1',['period_error_us',['../classPITController.html#a3fedb5ff5a44b664e8132f4e2836b155',1,'PITController']]],
+  ['pipe_2',['pipe',['../classAccumulator.html#a58b1133059f8c92fe6f5f0b229de668f',1,'Accumulator']]],
+  ['pit_5flifetimetimer_3',['PIT_LifetimeTimer',['../classPIT__LifetimeTimer.html#a826797e75688ab4e7cd5c8854fa6a7c0',1,'PIT_LifetimeTimer']]],
+  ['pitcontroller_4',['PITController',['../classPITController.html#ad9ef4f151495076fad7b0c556e48b117',1,'PITController']]],
+  ['points_5fnorm_5',['points_norm',['../namespacemultitau.html#a89bb2627a88498b04ebd436250310d71',1,'multitau']]],
+  ['points_5fnorm_5ftemplate_6',['points_norm_template',['../namespacemultitau.html#a6a712a94c13f6c08874ea710fc698ff7',1,'multitau']]],
+  ['precison_5fthreshold_7',['Precison_Threshold',['../namespaceErrors.html#a13171d3d324164c9f7a9508d5a16b0c5',1,'Errors']]],
+  ['pseudoconsole_8',['PseudoConsole',['../namespaceutilities.html#a85150e8e264f76b149785770210a7f1a',1,'utilities']]],
+  ['push_5fback_9',['push_back',['../classLin__CrossCorr__RT__Teensy.html#af39e68107a612ca22a83046b10f52afb',1,'Lin_CrossCorr_RT_Teensy::push_back()'],['../classMonitor__Channel.html#a4ed59419438e461cca7b211337840b0f',1,'Monitor_Channel::push_back()'],['../classSimpler__Circular__Buffer.html#af4bdd0a6d3fc7a8c06f62b0d996158f0',1,'Simpler_Circular_Buffer::push_back()']]],
+  ['push_5fdata_10',['push_data',['../classMultiTau__ACorr__RT__Teensy.html#ae36ab4fb6f646d068e638ab7e4ec9da8',1,'MultiTau_ACorr_RT_Teensy']]],
+  ['push_5fdatum_11',['push_datum',['../classLin__ACorr__RT__Teensy.html#a0f5e5701923977b24a432ed0024c1368',1,'Lin_ACorr_RT_Teensy::push_datum()'],['../classMultiTau__ACorr__RT__Teensy.html#a1ad6126310c987f53a0ec7ab3ae03a12',1,'MultiTau_ACorr_RT_Teensy::push_datum()']]]
 ];

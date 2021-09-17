@@ -66,11 +66,11 @@ $(function() {
   <div class="headertitle"><div class="title">DIY Teensy Correlator Project Repository </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md__github_workspace_README"></a> Online <em>doxygen</em> documentation Link: <a href="https://yatharthb97.github.io/Correlator/index.html">https://yatharthb97.github.io/Correlator/index.html</a></p>
+<div class="textblock"><p ><a class="anchor" id="md_README"></a> Online <em>doxygen</em> documentation Link: <a href="https://yatharthb97.github.io/Correlator/index.html">https://yatharthb97.github.io/Correlator/index.html</a></p>
 <h1>Software</h1>
 <p >This folder contains the implementation of the software correlator that will be used on Teensy. The file descriptions are as follows:</p>
 <ul>
-<li><code><a class="el" href="Lin__ACorr__RT__Base_8hpp.html">Lin_ACorr_RT_Base.hpp</a></code> - Base (Interface) for Linear Correlators</li>
+<li><code>Lin_ACorr_RT_Base.hpp</code> - Base (Interface) for Linear Correlators</li>
 <li><code><a class="el" href="Lin__ACorr__RT__Teensy_8hpp.html">Lin_ACorr_RT_Teensy.hpp</a></code> - Implementation specific to Teensy</li>
 <li><code><a class="el" href="multi__tau_8hpp.html">multi_tau.hpp</a></code> - Teensy specific implementation of multi-tau Auto-correlator</li>
 <li><code><a class="el" href="accumulator_8hpp.html">accumulator.hpp</a></code> - Adapter object used by Multi Tau ACorr</li>
@@ -81,36 +81,46 @@ $(function() {
 <li><code>index_t</code> - Type used to index arrays and buffers in the implementation</li>
 </ul>
 </li>
-<li><code><a class="el" href="test_8cpp.html">test.cpp</a></code> - File used for tsting</li>
+<li><code>test.cpp</code> - File used for tsting</li>
 <li><code>circlar_buffer.hpp</code> - Another implementation of circular buffer (unsued right now)</li>
-<li><code><a class="el" href="Lin__CrossCorr__RT__Base_8hpp.html">Lin_CrossCorr_RT_Base.hpp</a></code> - Base interface for Linear Cross Correlators</li>
+<li><code>Lin_CrossCorr_RT_Base.hpp</code> - Base interface for Linear Cross Correlators</li>
 <li><code><a class="el" href="Lin__CrossCorr__RT__Teensy_8hpp.html">Lin_CrossCorr_RT_Teensy.hpp</a></code> - Teensy specific Liner Cross Correlator interface</li>
 </ul>
 <h1>Hardware</h1>
 <p >File descriptions:</p>
 <ul>
 <li><code><a class="el" href="pit_8hpp.html">pit.hpp</a></code> - Defines <code>class <a class="el" href="classPITController.html" title="Interface for PIT timers on Teensy 4.x microcontrollers.">PITController</a></code> that provides an abstraction layer on the PIT timer controls.</li>
-</ul>
-<p ><code><a class="el" href="qtmr1_8hpp.html">qtmr1.hpp</a></code> - Defines 'class QTMR1Controller' that provides an abstraction layer on the QTMR1 timer controls.</p><ul>
+<li><code><a class="el" href="qtmr1_8hpp.html">qtmr1.hpp</a></code> - Defines 'class QTMR1Controller' that provides an abstraction layer on the QTMR1 timer controls.</li>
 <li><code><a class="el" href="lifetime__timer_8hpp.html">lifetime_timer.hpp</a></code> - Interface for using PIT timers in chained mode to create a 64-bit lifetime counter</li>
 </ul>
 <h1>Common Interface</h1>
 <ul>
-<li><code><a class="el" href="modules_8hpp.html">modules.hpp</a></code> - Defines functions that represent highest-abstracted modules in the system.</li>
+<li><code>modules.hpp</code> - Defines functions that represent highest-abstracted modules in the system.</li>
 <li><code><a class="el" href="errors_8hpp.html">errors.hpp</a></code> - Defines common error codes and error generating functions.</li>
 <li><code><a class="el" href="utilities_8hpp.html">utilities.hpp</a></code> - Contains some utility functions</li>
 </ul>
 <h1>Standard Flushing Procedure for USB Serial on Teensy:</h1>
-<p >• Libraries will use <code>Serial.write(buffer, bytes);</code> for all outputs.</p>
-<p >• For line buffered outputs, at the end, user calls: </p><pre class="fragment">`Serial.send_now('\n')`. Note: The libraries are not allowed to use endlines on output calls. This also solves the "`\r\n`" problem of using `Serial.println()`.
-</pre><p> • As per the PJRC website, <code>Serial.flush()</code> waits for the buffer to clear, but might not actually initiate the clearing. Hence, Using <code>Serial.send_now()</code> might prove more judicious.</p>
+<ul>
+<li>Libraries will use <code>Serial.write(buffer, bytes);</code> for all outputs.</li>
+<li>For line buffered outputs, at the end, user calls: <div class="fragment"><div class="line">Serial.write(&#39;\n&#39;);</div>
+<div class="line">Serial.flush(); // Which is an alias of usb_serial::flush()</div>
+</div><!-- fragment --></li>
+<li>Note: The libraries are not allowed to use endlines on output calls. This also solves the "`\r\n`" problem of using <code>Serial.println()</code>.</li>
+<li>Both <code>Serial.flush()</code> and <code>Serial.send_now()</code> wrap <code>usb_serial_flush_output();</code>. Reference <img src="https://github.com/PaulStoffregen/cores/blob/c87857a687f23902578f71f71b467486f847ca4e/teensy4/usb_serial.h#L93" alt="here" class="inline"/></li>
+</ul>
 <h1>SLOC as on 28/08/21</h1>
-<p >-------&mdash; Result ---------&mdash; </p><pre class="fragment">        Physical :  1873
-          Source :  1093
-         Comment :  503
-</pre><p> Single-line comment : 284 Block comment : 223 Mixed : 132 Empty block comment : 0 Empty : 409 To Do : 0</p>
-<p >Number of files read : 23</p>
-<hr  />
+<p >&mdash; Result &mdash; </p><div class="fragment"><div class="line">            Physical :  1873</div>
+<div class="line">              Source :  1093</div>
+<div class="line">             Comment :  503</div>
+<div class="line"> Single-line comment :  284</div>
+<div class="line">       Block comment :  223</div>
+<div class="line">               Mixed :  132</div>
+<div class="line"> Empty block comment :  0</div>
+<div class="line">               Empty :  409</div>
+<div class="line">               To Do :  0</div>
+<div class="line"> </div>
+<div class="line">Number of files read :  23</div>
+</div><!-- fragment --> <hr  />
  </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->

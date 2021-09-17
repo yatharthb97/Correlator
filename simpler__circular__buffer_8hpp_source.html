@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>DIY Auto-Correlator: /github/workspace/Software/simpler_circular_buffer.hpp Source File</title>
+<title>DIY Auto-Correlator: code/software/simpler_circular_buffer.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_4e9c05acfa2c3671b8618fcb95d57d96.html">Software</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_050edd66366d13764f98250ef6db77f6.html">code</a></li><li class="navelem"><a class="el" href="dir_722ffae3992ccc7995b00c0188be8a2c.html">software</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -85,13 +85,13 @@ $(function() {
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classSimpler__Circular__Buffer.html#a793cdb8134afe48ef9918fa0428dfbb6">   17</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classSimpler__Circular__Buffer.html#a793cdb8134afe48ef9918fa0428dfbb6">reset</a>() <a class="code hl_function" href="utilities_8hpp.html#afc7cdee1276fb1bee0354280e5694173">__attribute__</a>((always_inline))</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classSimpler__Circular__Buffer.html#a793cdb8134afe48ef9918fa0428dfbb6">   17</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classSimpler__Circular__Buffer.html#a793cdb8134afe48ef9918fa0428dfbb6">reset</a>() __attribute__((always_inline))</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    {</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <a class="code hl_variable" href="classSimpler__Circular__Buffer.html#aa6fea0e7b9d4b57aa825dfe11aec3c25">head</a> = 0;</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <a class="code hl_variable" href="classSimpler__Circular__Buffer.html#a2833e67d4d6cfae68e71306037015642">tail</a> = 0;</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    }</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classSimpler__Circular__Buffer.html#af4bdd0a6d3fc7a8c06f62b0d996158f0">   24</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classSimpler__Circular__Buffer.html#af4bdd0a6d3fc7a8c06f62b0d996158f0">push_back</a>(<span class="keyword">const</span> Type datum) <a class="code hl_function" href="utilities_8hpp.html#afc7cdee1276fb1bee0354280e5694173">__attribute__</a>((flatten))</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classSimpler__Circular__Buffer.html#af4bdd0a6d3fc7a8c06f62b0d996158f0">   24</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classSimpler__Circular__Buffer.html#af4bdd0a6d3fc7a8c06f62b0d996158f0">push_back</a>(<span class="keyword">const</span> Type datum) __attribute__((flatten))</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    {</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="comment">//Advance Pointer</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <a class="code hl_variable" href="classSimpler__Circular__Buffer.html#a05808047d226985470e02e84b44bee9a">buffer</a>[<a class="code hl_variable" href="classSimpler__Circular__Buffer.html#a2833e67d4d6cfae68e71306037015642">tail</a>] = datum;</div>
@@ -99,7 +99,7 @@ $(function() {
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classSimpler__Circular__Buffer.html#a4ce53bc8ad0d231e9d013c771191696a">   33</a></span>    Type <a class="code hl_function" href="classSimpler__Circular__Buffer.html#a4ce53bc8ad0d231e9d013c771191696a">operator[] </a>(<span class="keyword">const</span> <span class="keywordtype">size_t</span> index) <span class="keyword">const</span> <a class="code hl_function" href="utilities_8hpp.html#afc7cdee1276fb1bee0354280e5694173">__attribute__</a>((always_inline))</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classSimpler__Circular__Buffer.html#a4ce53bc8ad0d231e9d013c771191696a">   33</a></span>    Type <a class="code hl_function" href="classSimpler__Circular__Buffer.html#a4ce53bc8ad0d231e9d013c771191696a">operator[] </a>(<span class="keyword">const</span> <span class="keywordtype">size_t</span> index) <span class="keyword">const</span> __attribute__((always_inline))</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    {   </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSimpler__Circular__Buffer.html#a05808047d226985470e02e84b44bee9a">buffer</a>[index % MaxSize];</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
@@ -112,7 +112,6 @@ $(function() {
 <div class="ttc" id="aclassSimpler__Circular__Buffer_html_a793cdb8134afe48ef9918fa0428dfbb6"><div class="ttname"><a href="classSimpler__Circular__Buffer.html#a793cdb8134afe48ef9918fa0428dfbb6">Simpler_Circular_Buffer::reset</a></div><div class="ttdeci">void reset() __attribute__((always_inline))</div><div class="ttdoc">Index / Pointer to the last element of the buffer.</div><div class="ttdef"><b>Definition:</b> simpler_circular_buffer.hpp:17</div></div>
 <div class="ttc" id="aclassSimpler__Circular__Buffer_html_aa6fea0e7b9d4b57aa825dfe11aec3c25"><div class="ttname"><a href="classSimpler__Circular__Buffer.html#aa6fea0e7b9d4b57aa825dfe11aec3c25">Simpler_Circular_Buffer::head</a></div><div class="ttdeci">size_t head</div><div class="ttdoc">Fixed Size Buffer.</div><div class="ttdef"><b>Definition:</b> simpler_circular_buffer.hpp:11</div></div>
 <div class="ttc" id="aclassSimpler__Circular__Buffer_html_af4bdd0a6d3fc7a8c06f62b0d996158f0"><div class="ttname"><a href="classSimpler__Circular__Buffer.html#af4bdd0a6d3fc7a8c06f62b0d996158f0">Simpler_Circular_Buffer::push_back</a></div><div class="ttdeci">void push_back(const Type datum) __attribute__((flatten))</div><div class="ttdoc">Adds a datum to the circular buffer.</div><div class="ttdef"><b>Definition:</b> simpler_circular_buffer.hpp:24</div></div>
-<div class="ttc" id="autilities_8hpp_html_afc7cdee1276fb1bee0354280e5694173"><div class="ttname"><a href="utilities_8hpp.html#afc7cdee1276fb1bee0354280e5694173">__attribute__</a></div><div class="ttdeci">uint32_t __attribute__((always_inline)) F_CPU_tick_count()</div><div class="ttdef"><b>Definition:</b> utilities.hpp:31</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

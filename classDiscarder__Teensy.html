@@ -64,7 +64,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classDiscarder__Teensy-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Discarder_Teensy&lt; Series_size, Front, End &gt; Class Template Reference</div></div>
 </div><!--header-->
@@ -74,44 +74,50 @@ $(function() {
  <a href="classDiscarder__Teensy.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="discarder_8hpp_source.html">discarder.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for Discarder_Teensy&lt; Series_size, Front, End &gt;:</div>
-<div class="dyncontent">
-<div class="center"><img src="classDiscarder__Teensy__inherit__graph.png" border="0" usemap="#aDiscarder__Teensy_3_01Series__size_00_01Front_00_01End_01_4_inherit__map" alt="Inheritance graph"/></div>
-<map name="aDiscarder__Teensy_3_01Series__size_00_01Front_00_01End_01_4_inherit__map" id="aDiscarder__Teensy_3_01Series__size_00_01Front_00_01End_01_4_inherit__map">
-<area shape="rect" title="Teensy specific Front back discarder implementation." alt="" coords="5,109,180,151"/>
-<area shape="rect" href="classFrontBack__Discarder__Base.html" title="Base class for Front and Back discarder objects." alt="" coords="21,5,165,61"/>
-</map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for Discarder_Teensy&lt; Series_size, Front, End &gt;:</div>
-<div class="dyncontent">
-<div class="center"><img src="classDiscarder__Teensy__coll__graph.png" border="0" usemap="#aDiscarder__Teensy_3_01Series__size_00_01Front_00_01End_01_4_coll__map" alt="Collaboration graph"/></div>
-<map name="aDiscarder__Teensy_3_01Series__size_00_01Front_00_01End_01_4_coll__map" id="aDiscarder__Teensy_3_01Series__size_00_01Front_00_01End_01_4_coll__map">
-<area shape="rect" title="Teensy specific Front back discarder implementation." alt="" coords="5,109,180,151"/>
-<area shape="rect" href="classFrontBack__Discarder__Base.html" title="Base class for Front and Back discarder objects." alt="" coords="21,5,165,61"/>
-</map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a4edb6d02ac299d4c578a4c8522f0dffd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDiscarder__Teensy.html#a4edb6d02ac299d4c578a4c8522f0dffd">output</a> (const <a class="el" href="classLin__ACorr__RT__Base.html">Lin_ACorr_RT_Base</a> &amp;channel) const override <a class="el" href="utilities_8hpp.html#a103d5b3998e0dd804213c8f30a094f4d">__attribute__</a>((always-inline))</td></tr>
-<tr class="memdesc:a4edb6d02ac299d4c578a4c8522f0dffd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outputs the channel while discarding the selected channels, by using the implementation specific output method.  <a href="classDiscarder__Teensy.html#a4edb6d02ac299d4c578a4c8522f0dffd">More...</a><br /></td></tr>
-<tr class="separator:a4edb6d02ac299d4c578a4c8522f0dffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_methods_classFrontBack__Discarder__Base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classFrontBack__Discarder__Base')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classFrontBack__Discarder__Base.html">FrontBack_Discarder_Base&lt; Series_size, Front, End &gt;</a></td></tr>
-<tr class="memitem:a9cc129dd2be2f0894646a3db2aa2bebc inherit pub_methods_classFrontBack__Discarder__Base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFrontBack__Discarder__Base.html#a9cc129dd2be2f0894646a3db2aa2bebc">discards</a> () const</td></tr>
-<tr class="memdesc:a9cc129dd2be2f0894646a3db2aa2bebc inherit pub_methods_classFrontBack__Discarder__Base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of elements discarded by the discarder object.  <a href="classFrontBack__Discarder__Base.html#a9cc129dd2be2f0894646a3db2aa2bebc">More...</a><br /></td></tr>
-<tr class="separator:a9cc129dd2be2f0894646a3db2aa2bebc inherit pub_methods_classFrontBack__Discarder__Base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a50787ecd4fc07a1d1cf2b692af979ac7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDiscarder__Teensy.html#a50787ecd4fc07a1d1cf2b692af979ac7">output</a> (const <a class="el" href="classLin__ACorr__RT__Teensy.html">Lin_ACorr_RT_Teensy</a>&lt; Series_size &gt; &amp;channel) const __attribute__((always_inline))</td></tr>
+<tr class="separator:a50787ecd4fc07a1d1cf2b692af979ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b4c55953522a2404d7fe5c59bac0068"><td class="memItemLeft" align="right" valign="top">unsigned virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDiscarder__Teensy.html#a4b4c55953522a2404d7fe5c59bac0068">discard_count</a> () const</td></tr>
+<tr class="memdesc:a4b4c55953522a2404d7fe5c59bac0068"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of elements discarded by the discarder object.  <a href="classDiscarder__Teensy.html#a4b4c55953522a2404d7fe5c59bac0068">More...</a><br /></td></tr>
+<tr class="separator:a4b4c55953522a2404d7fe5c59bac0068"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;unsigned int Series_size, unsigned int Front, unsigned int End&gt;<br />
 class Discarder_Teensy&lt; Series_size, Front, End &gt;</div><p >Teensy specific Front back discarder implementation. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a4edb6d02ac299d4c578a4c8522f0dffd" name="a4edb6d02ac299d4c578a4c8522f0dffd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4edb6d02ac299d4c578a4c8522f0dffd">&#9670;&nbsp;</a></span>output()</h2>
+<a id="a4b4c55953522a2404d7fe5c59bac0068" name="a4b4c55953522a2404d7fe5c59bac0068"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b4c55953522a2404d7fe5c59bac0068">&#9670;&nbsp;</a></span>discard_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int Series_size, unsigned int Front, unsigned int End&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned virtual int <a class="el" href="classDiscarder__Teensy.html">Discarder_Teensy</a>&lt; Series_size, Front, End &gt;::discard_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the number of elements discarded by the discarder object. </p>
+
+</div>
+</div>
+<a id="a50787ecd4fc07a1d1cf2b692af979ac7" name="a50787ecd4fc07a1d1cf2b692af979ac7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50787ecd4fc07a1d1cf2b692af979ac7">&#9670;&nbsp;</a></span>output()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -124,26 +130,22 @@ template&lt;unsigned int Series_size, unsigned int Front, unsigned int End&gt; <
         <tr>
           <td class="memname">void <a class="el" href="classDiscarder__Teensy.html">Discarder_Teensy</a>&lt; Series_size, Front, End &gt;::output </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classLin__ACorr__RT__Base.html">Lin_ACorr_RT_Base</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classLin__ACorr__RT__Teensy.html">Lin_ACorr_RT_Teensy</a>&lt; Series_size &gt; &amp;&#160;</td>
           <td class="paramname"><em>channel</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Outputs the channel while discarding the selected channels, by using the implementation specific output method. </p>
-
-<p>Implements <a class="el" href="classFrontBack__Discarder__Base.html#ab8a1d0082f223c31da3c1374c520c4c4">FrontBack_Discarder_Base&lt; Series_size, Front, End &gt;</a>.</p>
-
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/github/workspace/Software/<a class="el" href="discarder_8hpp_source.html">discarder.hpp</a></li>
+<li>code/software/<a class="el" href="discarder_8hpp_source.html">discarder.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -1,14 +1,14 @@
 var searchData=
 [
-  ['index_5ft_0',['index_t',['../types_8hpp.html#a7c40bb931c31595ed6308605f4537447',1,'types.hpp']]],
-  ['init_1',['init',['../classLEDSet.html#aebc268353f21afffcf0a80c92b6444d2',1,'LEDSet::init()'],['../classPIT__LifetimeTimer.html#ad1c585d138123be94769afcca87f2dc6',1,'PIT_LifetimeTimer::init()'],['../classTMR1Controller.html#af92315e340766e3857eb6a20e7cab673',1,'TMR1Controller::init()']]],
-  ['init_5fextern_5fpins_2',['init_extern_pins',['../test_8hpp.html#a388f87d29fd84218390cb5eb7014dcfb',1,'test.hpp']]],
-  ['init_5fpins_3',['init_pins',['../classTMR1Controller.html#a1c5d358760aa98641333f63c7bcacd3a',1,'TMR1Controller']]],
-  ['input_5fvalidation_4',['Input_Validation',['../errors_8hpp.html#a4e8c0d09726859e3d3369c0da5a1aa7fa7e748bca7005cc737bad51b247997421',1,'errors.hpp']]],
-  ['interrupt_5',['interrupt',['../classPITController.html#af1a21e0b3f9a57e247aa40c457e15ee3',1,'PITController']]],
-  ['iomuxc_5fsw_5fmux_5fctl_5fpad_5fgpio_5fad_5fb0_5f04_6',['IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B0_04',['../modules_8hpp.html#ac7a8bd34b1dd79b846123bdcb6d911e0',1,'IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B0_04():&#160;modules.hpp'],['../test_8hpp.html#ac7a8bd34b1dd79b846123bdcb6d911e0',1,'IOMUXC_SW_MUX_CTL_PAD_GPIO_AD_B0_04():&#160;test.hpp']]],
-  ['is_5fempty_7',['is_empty',['../classCircular__Buffer.html#af2251f79c1509b7c1af0354ff7ac11fb',1,'Circular_Buffer']]],
-  ['is_5ffull_8',['is_full',['../classCircular__Buffer.html#a5d5ae2d1423cb1e5fc8e4e05d356cdca',1,'Circular_Buffer']]],
-  ['is_5ffull_5fflag_9',['is_full_flag',['../classCircular__Buffer.html#ad7a89f42768bbc146159221a0f101154',1,'Circular_Buffer']]],
-  ['is_5foverflow_10',['is_overflow',['../classTMR1Controller.html#a06052b4a881156be3c7a4b6495d8ca11',1,'TMR1Controller']]]
+  ['main_0',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
+  ['main_2ecpp_1',['main.cpp',['../main_8cpp.html',1,'']]],
+  ['max_5fbright_5fall_2',['max_bright_all',['../classLEDSet.html#a73dae073882d369a9cc9b9a93f446157',1,'LEDSet']]],
+  ['mean_3',['mean',['../classMonitor__Channel.html#af36bc5cdbc25444ae5941241d0edb6b0',1,'Monitor_Channel']]],
+  ['min_5fbright_5fall_4',['min_bright_all',['../classLEDSet.html#a9479e36e91b5b1387cfc27722a4a6007',1,'LEDSet']]],
+  ['monitor_5fchannel_5',['Monitor_Channel',['../classMonitor__Channel.html',1,'']]],
+  ['monitor_5fchannel_2ehpp_6',['monitor_channel.hpp',['../monitor__channel_8hpp.html',1,'']]],
+  ['multi_5ftau_2ehpp_7',['multi_tau.hpp',['../multi__tau_8hpp.html',1,'']]],
+  ['multitau_8',['multitau',['../namespacemultitau.html',1,'multitau'],['../main_8cpp.html#a5aa70a1764ec170a506e2f796777a933',1,'multitau():&#160;main.cpp']]],
+  ['multitau_2epy_9',['multitau.py',['../multitau_8py.html',1,'']]],
+  ['multitau_5facorr_5frt_5fteensy_10',['MultiTau_ACorr_RT_Teensy',['../classMultiTau__ACorr__RT__Teensy.html',1,'MultiTau_ACorr_RT_Teensy&lt; Lin_channels, Series_size, Bin_Ratio &gt;'],['../classMultiTau__ACorr__RT__Teensy.html#a28cfdcd7468aac93693a4d4803fc95f9',1,'MultiTau_ACorr_RT_Teensy::MultiTau_ACorr_RT_Teensy()']]]
 ];

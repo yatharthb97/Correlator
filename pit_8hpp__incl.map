@@ -1,5 +1,13 @@
-<map id="/github/workspace/pit.hpp" name="/github/workspace/pit.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,176,32"/>
-<area shape="rect" id="node2" href="$errors_8hpp.html" title=" " alt="" coords="51,80,130,107"/>
-<area shape="rect" id="node3" href="$pins_8hpp.html" title=" " alt="" coords="55,155,126,181"/>
+<map id="code/hardware/pit.hpp" name="code/hardware/pit.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="106,5,255,32"/>
+<area shape="rect" id="node2" href="$errors_8hpp.html" title=" " alt="" coords="141,80,220,107"/>
+<area shape="rect" id="node3" href="$pins_8hpp.html" title=" " alt="" coords="5,304,76,331"/>
+<area shape="rect" id="node4" href="$types_8hpp.html" title=" " alt="" coords="295,155,389,181"/>
+<area shape="rect" id="node6" href="$ledpanel_8hpp.html" title=" " alt="" coords="176,155,271,181"/>
+<area shape="rect" id="node8" title=" " alt="" coords="100,304,176,331"/>
+<area shape="rect" id="node5" title=" " alt="" coords="311,229,373,256"/>
+<area shape="rect" id="node7" href="$ledset_8hpp.html" title=" " alt="" coords="189,229,271,256"/>
+<area shape="rect" id="node9" title=" " alt="" coords="201,304,275,331"/>
+<area shape="rect" id="node10" title=" " alt="" coords="299,304,350,331"/>
+<area shape="rect" id="node11" title=" " alt="" coords="374,304,470,331"/>
 </map>

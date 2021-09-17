@@ -1,4 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classLin__ACorr__RT__Base.html" title="This class is a blank interface for all objects that are — {Linear Real&#45;Time Software Auto&#45;Correlator..." alt="" coords="5,13,147,39"/>
-<area shape="rect" id="node2" href="$classLin__ACorr__RT__Teensy.html" title="This is an implementation of Lin_ACorr_RT_Base for Teensy with (No normalisation or baseline subtract..." alt="" coords="195,5,348,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,13,172,39"/>
+<area shape="rect" id="node2" href="$classLin__CrossCorr__RT__Teensy.html" title="This is an implementation of Lin_ACorr_RT_Base for Teensy with (No normalisation or baseline subtract..." alt="" coords="220,5,399,47"/>
 </map>

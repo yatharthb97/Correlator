@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['datacounter_0',['DataCounter',['../classMultiTau__ACorr__RT__Teensy.html#ac403944f1456e09036bef6dc60d5a0b2',1,'MultiTau_ACorr_RT_Teensy']]],
-  ['disable_5fpits_1',['disable_PITs',['../classPITController.html#a5e1bf9f8053a51c68f0ff2178ab56954',1,'PITController']]],
-  ['discarder_2',['Discarder',['../classMultiTau__ACorr__RT__Teensy.html#ad216281408b0f32892d3c554ad16309e',1,'MultiTau_ACorr_RT_Teensy']]],
-  ['discarder_2ehpp_3',['discarder.hpp',['../discarder_8hpp.html',1,'']]],
-  ['discarder_5fteensy_4',['Discarder_Teensy',['../classDiscarder__Teensy.html',1,'']]],
-  ['discards_5',['discards',['../classFrontBack__Discarder__Base.html#a9cc129dd2be2f0894646a3db2aa2bebc',1,'FrontBack_Discarder_Base']]],
-  ['diy_20teensy_20correlator_20project_20repository_6',['DIY Teensy Correlator Project Repository',['../index.html',1,'']]]
+  ['f_0',['f',['../namespacepre__build__actions.html#af762757a92c7b9627973e0d434c58115',1,'pre_build_actions']]],
+  ['f_5fcpu_5ftick_5fcount_1',['F_CPU_tick_count',['../utilities_8hpp.html#a1fb00a623d8b292185132f57935148a9',1,'utilities.hpp']]],
+  ['fetch_5findex_2',['fetch_index',['../classLEDSet.html#a4ffb3b4a8a5cffdc03f4040ff67a33e9',1,'LEDSet']]],
+  ['fmt_3',['fmt',['../namespacepost__upload__actions.html#afffee9403d0b5fc3e9dab1f30f771e0e',1,'post_upload_actions']]],
+  ['for_4',['for',['../classLin__CrossCorr__RT__Teensy.html#aca7ed016d12272211206139cd120b359',1,'Lin_CrossCorr_RT_Teensy']]]
 ];

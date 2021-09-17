@@ -65,7 +65,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classPIT__LifetimeTimer-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">PIT_LifetimeTimer Class Reference</div></div>
 </div><!--header-->
@@ -79,46 +78,43 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a826797e75688ab4e7cd5c8854fa6a7c0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIT__LifetimeTimer.html#a826797e75688ab4e7cd5c8854fa6a7c0">PIT_LifetimeTimer</a> ()</td></tr>
-<tr class="memdesc:a826797e75688ab4e7cd5c8854fa6a7c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enforces a singleton template.  <a href="classPIT__LifetimeTimer.html#a826797e75688ab4e7cd5c8854fa6a7c0">More...</a><br /></td></tr>
 <tr class="separator:a826797e75688ab4e7cd5c8854fa6a7c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1c585d138123be94769afcca87f2dc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIT__LifetimeTimer.html#ad1c585d138123be94769afcca87f2dc6">init</a> () <a class="el" href="utilities_8hpp.html#a103d5b3998e0dd804213c8f30a094f4d">__attribute__</a>((always_inline))</td></tr>
-<tr class="memdesc:ad1c585d138123be94769afcca87f2dc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up Timer 0 and Timer 1 channels for Lifetime timing - chained configuration. This function also makes a call to enable PIT timers. The timers are aet at maximum values and will start downcounting once ::start() method is called. \reference : Code adapted from IMXRT Manual Page 2977.  <a href="classPIT__LifetimeTimer.html#ad1c585d138123be94769afcca87f2dc6">More...</a><br /></td></tr>
+<tr class="memitem:ad1c585d138123be94769afcca87f2dc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIT__LifetimeTimer.html#ad1c585d138123be94769afcca87f2dc6">init</a> () __attribute__((always_inline))</td></tr>
+<tr class="memdesc:ad1c585d138123be94769afcca87f2dc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up Timer 0 and Timer 1 channels for Lifetime timing - chained configuration. This function also makes a call to enable PIT timers. The timers are aet at maximum values and will start downcounting once <a class="el" href="classPIT__LifetimeTimer.html#a6feabeff2529cabaf27ef53d027a4fc9" title="Starts the timers for down counting.">PIT_LifetimeTimer::start()</a> method is called.  <a href="classPIT__LifetimeTimer.html#ad1c585d138123be94769afcca87f2dc6">More...</a><br /></td></tr>
 <tr class="separator:ad1c585d138123be94769afcca87f2dc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6feabeff2529cabaf27ef53d027a4fc9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIT__LifetimeTimer.html#a6feabeff2529cabaf27ef53d027a4fc9">start</a> () <a class="el" href="utilities_8hpp.html#a103d5b3998e0dd804213c8f30a094f4d">__attribute__</a>((always_inline))</td></tr>
+<tr class="memitem:a6feabeff2529cabaf27ef53d027a4fc9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIT__LifetimeTimer.html#a6feabeff2529cabaf27ef53d027a4fc9">start</a> () __attribute__((always_inline))</td></tr>
 <tr class="memdesc:a6feabeff2529cabaf27ef53d027a4fc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the timers for down counting.  <a href="classPIT__LifetimeTimer.html#a6feabeff2529cabaf27ef53d027a4fc9">More...</a><br /></td></tr>
 <tr class="separator:a6feabeff2529cabaf27ef53d027a4fc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92543f292044725b1dea4d009e01d9e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIT__LifetimeTimer.html#a92543f292044725b1dea4d009e01d9e4">stop</a> () <a class="el" href="utilities_8hpp.html#a103d5b3998e0dd804213c8f30a094f4d">__attribute__</a>((always_inline))</td></tr>
+<tr class="memitem:a92543f292044725b1dea4d009e01d9e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIT__LifetimeTimer.html#a92543f292044725b1dea4d009e01d9e4">stop</a> () __attribute__((always_inline))</td></tr>
 <tr class="memdesc:a92543f292044725b1dea4d009e01d9e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the timers from counting. The timers values will freeze.  <a href="classPIT__LifetimeTimer.html#a92543f292044725b1dea4d009e01d9e4">More...</a><br /></td></tr>
 <tr class="separator:a92543f292044725b1dea4d009e01d9e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c1c38cfa6c7a049a495ee3d89e13276"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIT__LifetimeTimer.html#a5c1c38cfa6c7a049a495ee3d89e13276">reset</a> () <a class="el" href="utilities_8hpp.html#a103d5b3998e0dd804213c8f30a094f4d">__attribute__</a>((always_inline))</td></tr>
+<tr class="memitem:a5c1c38cfa6c7a049a495ee3d89e13276"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIT__LifetimeTimer.html#a5c1c38cfa6c7a049a495ee3d89e13276">reset</a> () __attribute__((always_inline))</td></tr>
 <tr class="memdesc:a5c1c38cfa6c7a049a495ee3d89e13276"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the timers and resets the timer back to the init value (max) - 0xFFFFFFFFFFFFFF.  <a href="classPIT__LifetimeTimer.html#a5c1c38cfa6c7a049a495ee3d89e13276">More...</a><br /></td></tr>
 <tr class="separator:a5c1c38cfa6c7a049a495ee3d89e13276"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ee08cce7812322a7a10fcba0463476c"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIT__LifetimeTimer.html#a4ee08cce7812322a7a10fcba0463476c">read_val</a> () <a class="el" href="utilities_8hpp.html#a103d5b3998e0dd804213c8f30a094f4d">__attribute__</a>((always_inline))</td></tr>
+<tr class="memitem:a4ee08cce7812322a7a10fcba0463476c"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIT__LifetimeTimer.html#a4ee08cce7812322a7a10fcba0463476c">read_val</a> () __attribute__((always_inline))</td></tr>
 <tr class="memdesc:a4ee08cce7812322a7a10fcba0463476c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the complete 64-bit timing value.  <a href="classPIT__LifetimeTimer.html#a4ee08cce7812322a7a10fcba0463476c">More...</a><br /></td></tr>
 <tr class="separator:a4ee08cce7812322a7a10fcba0463476c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f7f8cd3847b9edb19dfa27f048a08cc"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIT__LifetimeTimer.html#a4f7f8cd3847b9edb19dfa27f048a08cc">read_low_val</a> () <a class="el" href="utilities_8hpp.html#a103d5b3998e0dd804213c8f30a094f4d">__attribute__</a>((always_inline))</td></tr>
+<tr class="memitem:a4f7f8cd3847b9edb19dfa27f048a08cc"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIT__LifetimeTimer.html#a4f7f8cd3847b9edb19dfa27f048a08cc">read_low_val</a> () __attribute__((always_inline))</td></tr>
 <tr class="memdesc:a4f7f8cd3847b9edb19dfa27f048a08cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the lower 32-bit half of the 64-bit timing value.  <a href="classPIT__LifetimeTimer.html#a4f7f8cd3847b9edb19dfa27f048a08cc">More...</a><br /></td></tr>
 <tr class="separator:a4f7f8cd3847b9edb19dfa27f048a08cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39b0861ac88aec5e53f326409d536bcf"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIT__LifetimeTimer.html#a39b0861ac88aec5e53f326409d536bcf">read_high_val</a> () <a class="el" href="utilities_8hpp.html#a103d5b3998e0dd804213c8f30a094f4d">__attribute__</a>((always_inline))</td></tr>
+<tr class="memitem:a39b0861ac88aec5e53f326409d536bcf"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIT__LifetimeTimer.html#a39b0861ac88aec5e53f326409d536bcf">read_high_val</a> () __attribute__((always_inline))</td></tr>
 <tr class="memdesc:a39b0861ac88aec5e53f326409d536bcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the higher 32-bit half of the 64-bit timing value.  <a href="classPIT__LifetimeTimer.html#a39b0861ac88aec5e53f326409d536bcf">More...</a><br /></td></tr>
 <tr class="separator:a39b0861ac88aec5e53f326409d536bcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04adf2272a47d4c81a28c6363e2da4fd"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIT__LifetimeTimer.html#a04adf2272a47d4c81a28c6363e2da4fd">elapsed64</a> () <a class="el" href="utilities_8hpp.html#a103d5b3998e0dd804213c8f30a094f4d">__attribute__</a>((always_inline))</td></tr>
+<tr class="memitem:a04adf2272a47d4c81a28c6363e2da4fd"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIT__LifetimeTimer.html#a04adf2272a47d4c81a28c6363e2da4fd">elapsed64</a> () __attribute__((always_inline))</td></tr>
 <tr class="memdesc:a04adf2272a47d4c81a28c6363e2da4fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the elapsed duration from the start call of the timer. The return is the complete 64bit value.  <a href="classPIT__LifetimeTimer.html#a04adf2272a47d4c81a28c6363e2da4fd">More...</a><br /></td></tr>
 <tr class="separator:a04adf2272a47d4c81a28c6363e2da4fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7481214070333f845a23456b4d75880"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIT__LifetimeTimer.html#af7481214070333f845a23456b4d75880">elapsed32</a> () <a class="el" href="utilities_8hpp.html#a103d5b3998e0dd804213c8f30a094f4d">__attribute__</a>((always_inline))</td></tr>
+<tr class="memitem:af7481214070333f845a23456b4d75880"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIT__LifetimeTimer.html#af7481214070333f845a23456b4d75880">elapsed32</a> () __attribute__((always_inline))</td></tr>
 <tr class="memdesc:af7481214070333f845a23456b4d75880"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the elapsed duration from the start call of the timer. The return is the lower 32-bit half elapsed time value.  <a href="classPIT__LifetimeTimer.html#af7481214070333f845a23456b4d75880">More...</a><br /></td></tr>
 <tr class="separator:af7481214070333f845a23456b4d75880"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
-Static Private Attributes</h2></td></tr>
-<tr class="memitem:ac864330dcb91ab7ef876f15ddd74f923"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIT__LifetimeTimer.html#ac864330dcb91ab7ef876f15ddd74f923">singleton_flag</a> = false</td></tr>
-<tr class="separator:ac864330dcb91ab7ef876f15ddd74f923"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Interface for using the "Life Time TImer" functionality of the Periodic Interrut Timer on Teensy 4.x microcontrollers. The module uses Channel 0 and 1 of the 4 PIT channels. </p>
 <dl class="section attention"><dt>Attention</dt><dd>The module has no checks on the use of CH0 and CH1 by external drivers, however, the interface enforces a singleton template and can only be constructed once. </dd>
 <dd>
-The module does not set the clock frequency and uses either the default or the one set globally (as is the only use case) by external drivers outside its scope. \reference : Code adapted from IMXRT Manual Page 2977. </dd></dl>
+The module does not set the clock frequency and uses either the default or the one set globally (as is the only use case) by external drivers outside its scope. </dd>
+<dd>
+Source : Code adapted from IMXRT Manual Page 2977. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Resolve Singleton template - constexpr static issue. </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a826797e75688ab4e7cd5c8854fa6a7c0" name="a826797e75688ab4e7cd5c8854fa6a7c0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a826797e75688ab4e7cd5c8854fa6a7c0">&#9670;&nbsp;</a></span>PIT_LifetimeTimer()</h2>
@@ -142,8 +138,6 @@ The module does not set the clock frequency and uses either the default or the o
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Enforces a singleton template. </p>
 
 </div>
 </div>
@@ -226,8 +220,10 @@ The module does not set the clock frequency and uses either the default or the o
 </table>
 </div><div class="memdoc">
 
-<p>Sets up Timer 0 and Timer 1 channels for Lifetime timing - chained configuration. This function also makes a call to enable PIT timers. The timers are aet at maximum values and will start downcounting once ::start() method is called. \reference : Code adapted from IMXRT Manual Page 2977. </p>
-<dl class="section attention"><dt>Attention</dt><dd>: The timers will operate at the clock frequency set for PIT timers outside this library. </dd></dl>
+<p>Sets up Timer 0 and Timer 1 channels for Lifetime timing - chained configuration. This function also makes a call to enable PIT timers. The timers are aet at maximum values and will start downcounting once <a class="el" href="classPIT__LifetimeTimer.html#a6feabeff2529cabaf27ef53d027a4fc9" title="Starts the timers for down counting.">PIT_LifetimeTimer::start()</a> method is called. </p>
+<dl class="section attention"><dt>Attention</dt><dd>Reference : Code adapted from IMXRT Manual Page 2977. </dd>
+<dd>
+The timers will operate at the clock frequency set for PIT timers outside this library. </dd></dl>
 
 </div>
 </div>
@@ -393,31 +389,8 @@ The module does not set the clock frequency and uses either the default or the o
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="ac864330dcb91ab7ef876f15ddd74f923" name="ac864330dcb91ab7ef876f15ddd74f923"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac864330dcb91ab7ef876f15ddd74f923">&#9670;&nbsp;</a></span>singleton_flag</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr bool PIT_LifetimeTimer::singleton_flag = false</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/github/workspace/<a class="el" href="lifetime__timer_8hpp_source.html">lifetime_timer.hpp</a></li>
+<li>code/hardware/<a class="el" href="lifetime__timer_8hpp_source.html">lifetime_timer.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
