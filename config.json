@@ -1,0 +1,15 @@
+{
+    "LinCorrs": 9,
+    "SeriesSize": 27,
+    "BinRatio": 3,
+    "ChannelSize": 171,
+    "LiveGraph": false,
+    "SamplingDelay_ms": 50,
+    "Baud": 9600,
+    "Port": "COM12",
+    "GateTime_us": 5,
+    "AllowedGateTimeError_us": 0.1,
+    "ISRPinToggle": true,
+    "AbortOnError": true,
+    "//# Comment": "Missing fields will generate warnings and a default value will be added to the configuration."
+}
