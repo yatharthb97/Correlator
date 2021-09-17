@@ -23,10 +23,6 @@
  }
 
 
-
-
-
-
 //#define F_CPU_TICK ARM_DWT_CYCCNT
 uint32_t F_CPU_tick_count() //Restructure as a MACRO
 {

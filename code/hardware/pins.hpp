@@ -4,7 +4,7 @@
 //Available LEDs → Assigned Flex PWM Pins
 //Pin 13 → LED_BUILTIN (On Teensy 4.1)
 const int LED_RED = 41;
-const int LED_BLUE = 42;
+const int LED_BLUE = 40;
 const int LED_YELLOW = 22;
 const int LED_WHITE = 23;
 const int LED_GREEN = 24;
@@ -14,20 +14,26 @@ const int LED_GREEN = 24;
 const int SAFE_INPUT_DUMP_PIN = 0;
 const int SAFE_OUTPUT_DUMP_PIN = 0;
 
+
 //TTL_c Pins
 const int TTL_C_PULSE_INPUT_PIN = 10; //TMR1CH0
 
 
 //Error Pins
-const int ER_PRECISION_PIN = LED_BUILTIN;
-const int ER_OVERFLOW_PIN = LED_BUILTIN;
+const int ER_PRECISION_PIN = LED_BLUE;
+const int ER_OVERFLOW_PIN = LED_WHITE;
 const int ER_INPUT_VALIDATION = LED_BUILTIN;
 
 
 // LED State Indicators
-const int SETUP_LED = LED_YELLOW;
-const int LOOP_LED = LED_RED;
+const int SETUP_LED = LED_RED;
+const int LOOP_LED = LED_GREEN;
 
+
+//Toggle pins → To crosscheck gate times on the oscilloscope
+#if ISR_PIN_TOGGLE == 1
+	#define PIT_TEST_TOOGLE_PIN1 3
+#endif
 
 /*
 FlexPWM1 Module0 - Controls PWM pins 1, 44, 45.

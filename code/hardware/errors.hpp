@@ -3,12 +3,12 @@
  * \author Yatharth Bhasin (github → yatharthb97) */
 
 #pragma once
-#include "pins.hpp"
+#include "pins.hpp" 
 #include "./../types.hpp"
 #include "ledpanel.hpp"
 #include <Arduino.h>
 
-#define TEENSY_MAX_ALLOCATION 100 //!< Maximum Allocations of 32-bit integers allowed on the microcontroller Teensy.
+#define TEENSY_MAX_ALLOCATION 125000 //!< Maximum Allocations of 32-bit integers allowed on the microcontroller Teensy.
 
 
 
@@ -25,8 +25,7 @@ enum class Error_t
 /** @breif Contains functions that handle errors of type `Error_t`. */
 namespace Errors{
 	
-	/** @brief Receives an error state and sets up the corresponding LED indicator. 
-	 * \todo Complete this function for all error codes.
+	/** @brief Receives an error state and sets up the corresponding LED indicator.
 	*/
 	void Validate(const Error_t error)
 	{
