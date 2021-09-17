@@ -6,6 +6,7 @@ var searchData=
   ['timers_5fanti_5ffreeze',['timers_anti_freeze',['../classTMR1Controller.html#acb383aa5321f552f018e4e217e2211f4',1,'TMR1Controller']]],
   ['timers_5ffreeze',['timers_freeze',['../classTMR1Controller.html#aa00df5e2d591a36b1049275c9a293c51',1,'TMR1Controller']]],
   ['tmr1controller',['TMR1Controller',['../classTMR1Controller.html#aebc677e795f673c6520d5a03eb6aa4f2',1,'TMR1Controller']]],
-  ['toggle_5fall',['toggle_all',['../classLEDSet.html#a555f8e48ff0989647cba6de505db8a5d',1,'LEDSet']]],
-  ['toggle_5fall_5froutine',['toggle_all_routine',['../classLEDSet.html#a5ba8bc8d99267bcaa579fea860ebe7d0',1,'LEDSet']]]
+  ['toggle',['toggle',['../classLEDSet.html#a08727d959328a2ecbab6c1e8c6ce4ada',1,'LEDSet']]],
+  ['toggle_5fall',['toggle_all',['../classLEDSet.html#ae2bcd287ff637c2600603e83b0981c77',1,'LEDSet']]],
+  ['toggle_5fall_5froutine',['toggle_all_routine',['../classLEDSet.html#a61cc024950a5b66dff34c449cc73787f',1,'LEDSet']]]
 ];

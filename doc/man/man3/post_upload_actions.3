@@ -1,0 +1,113 @@
+.TH "post_upload_actions" 3 "Fri Sep 17 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+post_upload_actions
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBupdate_fn\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBconfig\fP = json\&.load(f)"
+.br
+.ti -1c
+.RI "\fBx_tau_values\fP = x_tics(\fBconfig\fP['LinCorrs'], \fBconfig\fP['SeriesSize'], \fBconfig\fP['BinRatio'])"
+.br
+.ti -1c
+.RI "\fBnorm_values\fP = points_norm_template(\fBconfig\fP['LinCorrs'], \fBconfig\fP['SeriesSize'], \fBconfig\fP['BinRatio'])"
+.br
+.ti -1c
+.RI "\fBname_\fP = str(time\&.time_ns())"
+.br
+.ti -1c
+.RI "string \fBy_file_name\fP = f'{name_}_y\&.dat'"
+.br
+.ti -1c
+.RI "string \fBx_file_name\fP = f'{name_}_x_taus\&.dat'"
+.br
+.ti -1c
+.RI "\fBfmt\fP"
+.br
+.ti -1c
+.RI "\fBnewline\fP"
+.br
+.ti -1c
+.RI "\fBdatafile\fP = open(\fBy_file_name\fP, 'a')"
+.br
+.ti -1c
+.RI "\fBport\fP = Serial(port=\fBconfig\fP['Port'], baudrate=\fBconfig\fP['Baud'], timeout=0\&.5)"
+.br
+.ti -1c
+.RI "\fBapp\fP = QtGui\&.QApplication([])"
+.br
+.ti -1c
+.RI "\fBwindow\fP = pg\&.GraphicsLayoutWidget(show=True, title= f'Auto\-Correlation Plot \- {\fBconfig\fP['Port']}')"
+.br
+.ti -1c
+.RI "\fBantialias\fP"
+.br
+.ti -1c
+.RI "\fBgraph\fP = window\&.addPlot(title='Auto\-Correlation Plot')"
+.br
+.ti -1c
+.RI "\fBcurve\fP = graph\&.plot(pen='y')"
+.br
+.ti -1c
+.RI "\fBwait_time_ms\fP = \fBconfig\fP['SamplingDelay_ms']"
+.br
+.ti -1c
+.RI "\fBtimer\fP = QtCore\&.QTimer()"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "def post_upload_actions\&.update_fn ()"
+
+.SH "Variable Documentation"
+.PP 
+.SS "post_upload_actions\&.antialias"
+
+.SS "post_upload_actions\&.app = QtGui\&.QApplication([])"
+
+.SS "post_upload_actions\&.config = json\&.load(f)"
+
+.SS "post_upload_actions\&.curve = graph\&.plot(pen='y')"
+
+.SS "post_upload_actions\&.datafile = open(\fBy_file_name\fP, 'a')"
+
+.SS "post_upload_actions\&.fmt"
+
+.SS "post_upload_actions\&.graph = window\&.addPlot(title='Auto\-Correlation Plot')"
+
+.SS "post_upload_actions\&.name_ = str(time\&.time_ns())"
+
+.SS "post_upload_actions\&.newline"
+
+.SS "post_upload_actions\&.norm_values = points_norm_template(\fBconfig\fP['LinCorrs'], \fBconfig\fP['SeriesSize'], \fBconfig\fP['BinRatio'])"
+
+.SS "post_upload_actions\&.port = Serial(port=\fBconfig\fP['Port'], baudrate=\fBconfig\fP['Baud'], timeout=0\&.5)"
+
+.SS "post_upload_actions\&.timer = QtCore\&.QTimer()"
+
+.SS "int post_upload_actions\&.wait_time_ms = \fBconfig\fP['SamplingDelay_ms']"
+
+.SS "post_upload_actions\&.window = pg\&.GraphicsLayoutWidget(show=True, title= f'Auto\-Correlation Plot \- {\fBconfig\fP['Port']}')"
+
+.SS "string post_upload_actions\&.x_file_name = f'{name_}_x_taus\&.dat'"
+
+.SS "post_upload_actions\&.x_tau_values = x_tics(\fBconfig\fP['LinCorrs'], \fBconfig\fP['SeriesSize'], \fBconfig\fP['BinRatio'])"
+
+.SS "string post_upload_actions\&.y_file_name = f'{name_}_y\&.dat'"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator from the source code\&.

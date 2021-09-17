@@ -1,4 +1,4 @@
-.TH "code/software/Lin_ACorr_RT_Teensy.hpp" 3 "Fri Sep 3 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "code/software/Lin_ACorr_RT_Teensy.hpp" 3 "Fri Sep 17 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -10,9 +10,9 @@ code/software/Lin_ACorr_RT_Teensy.hpp
 .br
 \fC#include '\&./\&.\&./types\&.hpp'\fP
 .br
-\fC#include 'Lin_ACorr_RT_Base\&.hpp'\fP
-.br
 \fC#include 'simpler_circular_buffer\&.hpp'\fP
+.br
+\fC#include <algorithm>\fP
 .br
 
 .SS "Classes"
@@ -21,7 +21,7 @@ code/software/Lin_ACorr_RT_Teensy.hpp
 .ti -1c
 .RI "class \fBLin_ACorr_RT_Teensy< Series_size >\fP"
 .br
-.RI "This is an implementation of \fBLin_ACorr_RT_Base\fP for Teensy with \fB\fP(No normalisation or baseline subtraction\&.) "
+.RI "This is an implementation of Lin_ACorr_RT_Base for Teensy with \fB\fP(No normalisation or baseline subtraction\&.) "
 .in -1c
 .SH "Author"
 .PP 

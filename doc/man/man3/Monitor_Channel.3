@@ -1,0 +1,62 @@
+.TH "Monitor_Channel" 3 "Fri Sep 17 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Monitor_Channel \- A simple Averager Class that calculates the estimated mean\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <monitor_channel\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBpush_back\fP (const unsigned long data) __attribute__((always_inline))"
+.br
+.RI "Adds datum\&. "
+.ti -1c
+.RI "void \fBmean\fP () const __attribute__((always_inline))"
+.br
+.RI "Returns the estimated mean\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBcounter_t\fP \fBSample_Stack\fP = 0"
+.br
+.RI "Sum of the received values\&. "
+.ti -1c
+.RI "\fBcounter_t\fP \fBSample_Count\fP = 0"
+.br
+.RI "Count of the received values\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+A simple Averager Class that calculates the estimated mean\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void Monitor_Channel::mean () const\fC [inline]\fP"
+
+.PP
+Returns the estimated mean\&. 
+.SS "void Monitor_Channel::push_back (const unsigned long data)\fC [inline]\fP"
+
+.PP
+Adds datum\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBcounter_t\fP Monitor_Channel::Sample_Count = 0"
+
+.PP
+Count of the received values\&. 
+.SS "\fBcounter_t\fP Monitor_Channel::Sample_Stack = 0"
+
+.PP
+Sum of the received values\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator from the source code\&.

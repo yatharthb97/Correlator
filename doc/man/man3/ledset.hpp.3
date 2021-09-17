@@ -1,4 +1,4 @@
-.TH "code/hardware/ledset.hpp" 3 "Fri Sep 3 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "code/hardware/ledset.hpp" 3 "Fri Sep 17 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -10,29 +10,20 @@ code/hardware/ledset.hpp
 .br
 \fC#include <algorithm>\fP
 .br
+\fC#include 'pins\&.hpp'\fP
+.br
 \fC#include <array>\fP
 .br
-\fC#include 'pins\&.hpp'\fP
+\fC#include <initializer_list>\fP
 .br
 
 .SS "Classes"
 
 .in +1c
 .ti -1c
-.RI "class \fBLEDSet\fP"
+.RI "class \fBLEDSet< SET_SIZE >\fP"
 .br
 .in -1c
-.SS "Macros"
-
-.in +1c
-.ti -1c
-.RI "#define \fBLEDSET_ALLOW_ANALOG\fP   1"
-.br
-.in -1c
-.SH "Macro Definition Documentation"
-.PP 
-.SS "#define LEDSET_ALLOW_ANALOG   1"
-
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for DIY Auto-Correlator from the source code\&.

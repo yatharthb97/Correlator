@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ledset_5fallow_5fanalog',['LEDSET_ALLOW_ANALOG',['../ledset_8hpp.html#a079b73db813e0d821f315fb965ad9925',1,'ledset.hpp']]]
+  ['prreg',['PRREG',['../utilities_8hpp.html#a4063879653b587261fa428e2a9d662b4',1,'utilities.hpp']]]
 ];

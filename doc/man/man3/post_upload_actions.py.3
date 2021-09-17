@@ -1,0 +1,80 @@
+.TH "code/python/post_upload_actions.py" 3 "Fri Sep 17 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+code/python/post_upload_actions.py
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBpost_upload_actions\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBpost_upload_actions\&.update_fn\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBpost_upload_actions\&.config\fP = json\&.load(f)"
+.br
+.ti -1c
+.RI "\fBpost_upload_actions\&.x_tau_values\fP = x_tics(config['LinCorrs'], config['SeriesSize'], config['BinRatio'])"
+.br
+.ti -1c
+.RI "\fBpost_upload_actions\&.norm_values\fP = points_norm_template(config['LinCorrs'], config['SeriesSize'], config['BinRatio'])"
+.br
+.ti -1c
+.RI "\fBpost_upload_actions\&.name_\fP = str(time\&.time_ns())"
+.br
+.ti -1c
+.RI "string \fBpost_upload_actions\&.y_file_name\fP = f'{name_}_y\&.dat'"
+.br
+.ti -1c
+.RI "string \fBpost_upload_actions\&.x_file_name\fP = f'{name_}_x_taus\&.dat'"
+.br
+.ti -1c
+.RI "\fBpost_upload_actions\&.fmt\fP"
+.br
+.ti -1c
+.RI "\fBpost_upload_actions\&.newline\fP"
+.br
+.ti -1c
+.RI "\fBpost_upload_actions\&.datafile\fP = open(y_file_name, 'a')"
+.br
+.ti -1c
+.RI "\fBpost_upload_actions\&.port\fP = Serial(port=config['Port'], baudrate=config['Baud'], timeout=0\&.5)"
+.br
+.ti -1c
+.RI "\fBpost_upload_actions\&.app\fP = QtGui\&.QApplication([])"
+.br
+.ti -1c
+.RI "\fBpost_upload_actions\&.window\fP = pg\&.GraphicsLayoutWidget(show=True, title= f'Auto\-Correlation Plot \- {config['Port']}')"
+.br
+.ti -1c
+.RI "\fBpost_upload_actions\&.antialias\fP"
+.br
+.ti -1c
+.RI "\fBpost_upload_actions\&.graph\fP = window\&.addPlot(title='Auto\-Correlation Plot')"
+.br
+.ti -1c
+.RI "\fBpost_upload_actions\&.curve\fP = graph\&.plot(pen='y')"
+.br
+.ti -1c
+.RI "\fBpost_upload_actions\&.wait_time_ms\fP = config['SamplingDelay_ms']"
+.br
+.ti -1c
+.RI "\fBpost_upload_actions\&.timer\fP = QtCore\&.QTimer()"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator from the source code\&.

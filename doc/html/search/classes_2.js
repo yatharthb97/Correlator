@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['discarder_5fteensy',['Discarder_Teensy',['../classDiscarder__Teensy.html',1,'']]],
-  ['discarder_5fteensy_3c_20series_5fsize_2c_20bin_5fratio_2c_200_20_3e',['Discarder_Teensy&lt; Series_size, Bin_Ratio, 0 &gt;',['../classDiscarder__Teensy.html',1,'']]]
+  ['ledset',['LEDSet',['../classLEDSet.html',1,'']]],
+  ['lin_5facorr_5frt_5fteensy',['Lin_ACorr_RT_Teensy',['../classLin__ACorr__RT__Teensy.html',1,'']]],
+  ['lin_5fcrosscorr_5frt_5fteensy',['Lin_CrossCorr_RT_Teensy',['../classLin__CrossCorr__RT__Teensy.html',1,'']]]
 ];

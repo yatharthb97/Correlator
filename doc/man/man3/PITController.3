@@ -1,4 +1,4 @@
-.TH "PITController< ChID >" 3 "Fri Sep 3 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "PITController< ChID >" 3 "Fri Sep 17 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -76,7 +76,7 @@ PITController< ChID > \- Interface for PIT timers on Teensy 4\&.x microcontrolle
 .br
 .RI "Returns the correspoding XBAR1-A Input Pins for the corresponding channel TRIGGER signal\&. "
 .ti -1c
-.RI "static void \fBset_interrupt\fP (void(*isr_fn)(), unsigned int priority) __attribute__((always_inline))"
+.RI "static void \fBset_interrupt\fP (void(*\fBisr_fn\fP)(), unsigned int priority) __attribute__((always_inline))"
 .br
 .RI "Sets a common ISR and its priority for all PIT Channels\&. "
 .in -1c
@@ -95,6 +95,10 @@ PITController< ChID > \- Interface for PIT timers on Teensy 4\&.x microcontrolle
 .RI "uint32_t \fBClk_freq\fP = uint32_t(24 * 1e6)"
 .br
 .RI "Clock frequency used by the timer\&. Initalized to 24MHz → default oscillator clock\&. "
+.ti -1c
+.RI "uint32_t \fBLoadVal\fP = 0"
+.br
+.RI "The value loaded in to the counter during after overflow\&. "
 .in -1c
 .SS "Static Public Attributes"
 
@@ -226,6 +230,10 @@ Actual Time Period set by the device due to finite resolution\&.
 
 .PP
 Clock frequency used by the timer\&. Initalized to 24MHz → default oscillator clock\&. 
+.SS "template<unsigned int ChID> uint32_t \fBPITController\fP< ChID >::LoadVal = 0"
+
+.PP
+The value loaded in to the counter during after overflow\&. 
 .SS "template<unsigned int ChID> const constexpr uint32_t \fBPITController\fP< ChID >::PIT_MAX_COUNTER = 4294967295\fC [static]\fP"
 
 .PP

@@ -1,26 +1,25 @@
-.TH "Lin_ACorr_RT_Teensy< Series_size >" 3 "Fri Sep 3 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "Lin_ACorr_RT_Teensy< Series_size >" 3 "Fri Sep 17 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-Lin_ACorr_RT_Teensy< Series_size > \- This is an implementation of \fBLin_ACorr_RT_Base\fP for Teensy with \fB\fP(No normalisation or baseline subtraction\&.)  
+Lin_ACorr_RT_Teensy< Series_size > \- This is an implementation of Lin_ACorr_RT_Base for Teensy with \fB\fP(No normalisation or baseline subtraction\&.)  
 
 .SH SYNOPSIS
 .br
 .PP
 .PP
 \fC#include <Lin_ACorr_RT_Teensy\&.hpp>\fP
-.PP
-Inherits \fBLin_ACorr_RT_Base\fP\&.
 .SS "Public Member Functions"
 
 .in +1c
 .ti -1c
-.RI "void \fBpush_datum\fP (\fBcounter_t\fP datum) override"
+.RI "void \fBpush_datum\fP (\fBcounter_t\fP datum)"
 .br
 .RI "Stores the last active index → Post-increment\&. "
 .ti -1c
-.RI "void \fB__attribute__\fP ((flatten)) \fBpush_data\fP(const \fBcounter_t\fP *container"
+.RI "void \fB__attribute__\fP ((flatten)) push_data(const \fBcounter_t\fP *container"
 .br
+.RI "Repeatedly calls \fC\fBpush_datum()\fP\fP on the given container of values, one at a time\&. "
 .in -1c
 .SS "Public Attributes"
 
@@ -33,7 +32,7 @@ Inherits \fBLin_ACorr_RT_Base\fP\&.
 .br
 .RI "Stores the Channel output\&. "
 .ti -1c
-.RI "index_t \fBSeries_index\fP = 0"
+.RI "\fBindex_t\fP \fBSeries_index\fP = 0"
 .br
 .RI "Stores the data points in a circular Buffer\&. "
 .in -1c
@@ -43,7 +42,7 @@ Inherits \fBLin_ACorr_RT_Base\fP\&.
 .SS "template<index_t Series_size>
 .br
 class Lin_ACorr_RT_Teensy< Series_size >"
-This is an implementation of \fBLin_ACorr_RT_Base\fP for Teensy with \fB\fP(No normalisation or baseline subtraction\&.) 
+This is an implementation of Lin_ACorr_RT_Base for Teensy with \fB\fP(No normalisation or baseline subtraction\&.) 
 
 
 .PP
@@ -57,12 +56,12 @@ This is an implementation of \fBLin_ACorr_RT_Base\fP for Teensy with \fB\fP(No n
 .PP 
 .SS "template<index_t Series_size> void \fBLin_ACorr_RT_Teensy\fP< Series_size >::__attribute__ ((flatten)) const"
 
-.SS "template<index_t Series_size> void \fBLin_ACorr_RT_Teensy\fP< Series_size >::push_datum (\fBcounter_t\fP datum)\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+.PP
+Repeatedly calls \fC\fBpush_datum()\fP\fP on the given container of values, one at a time\&. 
+.SS "template<index_t Series_size> void \fBLin_ACorr_RT_Teensy\fP< Series_size >::push_datum (\fBcounter_t\fP datum)\fC [inline]\fP"
 
 .PP
-Stores the last active index → Post-increment\&. 
-.PP
-Implements \fBLin_ACorr_RT_Base\fP\&.
+Stores the last active index → Post-increment\&. Excepts new data value and processes it\&. 
 .SH "Member Data Documentation"
 .PP 
 .SS "template<index_t Series_size> \fBcounter_t\fP \fBLin_ACorr_RT_Teensy\fP< Series_size >::Channel_array[Series_size] = {0}"
@@ -71,7 +70,7 @@ Implements \fBLin_ACorr_RT_Base\fP\&.
 
 .PP
 Stores the Channel output\&. 
-.SS "template<index_t Series_size> index_t \fBLin_ACorr_RT_Teensy\fP< Series_size >::Series_index = 0"
+.SS "template<index_t Series_size> \fBindex_t\fP \fBLin_ACorr_RT_Teensy\fP< Series_size >::Series_index = 0"
 
 .PP
 Stores the data points in a circular Buffer\&. 

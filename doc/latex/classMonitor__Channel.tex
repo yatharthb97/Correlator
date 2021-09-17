@@ -1,0 +1,79 @@
+\hypertarget{classMonitor__Channel}{}\section{Monitor\+\_\+\+Channel Class Reference}
+\label{classMonitor__Channel}\index{Monitor\+\_\+\+Channel@{Monitor\+\_\+\+Channel}}
+
+
+A simple Averager Class that calculates the estimated mean.  
+
+
+
+
+{\ttfamily \#include $<$monitor\+\_\+channel.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classMonitor__Channel_a4ed59419438e461cca7b211337840b0f}{push\+\_\+back} (const unsigned long data) \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
+\begin{DoxyCompactList}\small\item\em Adds datum. \end{DoxyCompactList}\item 
+void \hyperlink{classMonitor__Channel_af36bc5cdbc25444ae5941241d0edb6b0}{mean} () const \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
+\begin{DoxyCompactList}\small\item\em Returns the estimated mean. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} \hyperlink{classMonitor__Channel_a5523d9f38c2910b4014e93d18a9267cd}{Sample\+\_\+\+Stack} = 0
+\begin{DoxyCompactList}\small\item\em Sum of the received values. \end{DoxyCompactList}\item 
+\hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} \hyperlink{classMonitor__Channel_a20d148ca870b96cb19b7befbb0b2cd2b}{Sample\+\_\+\+Count} = 0
+\begin{DoxyCompactList}\small\item\em Count of the received values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A simple Averager Class that calculates the estimated mean. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMonitor__Channel_af36bc5cdbc25444ae5941241d0edb6b0}\label{classMonitor__Channel_af36bc5cdbc25444ae5941241d0edb6b0}} 
+\index{Monitor\+\_\+\+Channel@{Monitor\+\_\+\+Channel}!mean@{mean}}
+\index{mean@{mean}!Monitor\+\_\+\+Channel@{Monitor\+\_\+\+Channel}}
+\subsubsection{\texorpdfstring{mean()}{mean()}}
+{\footnotesize\ttfamily void Monitor\+\_\+\+Channel\+::mean (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the estimated mean. 
+
+\mbox{\Hypertarget{classMonitor__Channel_a4ed59419438e461cca7b211337840b0f}\label{classMonitor__Channel_a4ed59419438e461cca7b211337840b0f}} 
+\index{Monitor\+\_\+\+Channel@{Monitor\+\_\+\+Channel}!push\+\_\+back@{push\+\_\+back}}
+\index{push\+\_\+back@{push\+\_\+back}!Monitor\+\_\+\+Channel@{Monitor\+\_\+\+Channel}}
+\subsubsection{\texorpdfstring{push\+\_\+back()}{push\_back()}}
+{\footnotesize\ttfamily void Monitor\+\_\+\+Channel\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{const unsigned long}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds datum. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classMonitor__Channel_a20d148ca870b96cb19b7befbb0b2cd2b}\label{classMonitor__Channel_a20d148ca870b96cb19b7befbb0b2cd2b}} 
+\index{Monitor\+\_\+\+Channel@{Monitor\+\_\+\+Channel}!Sample\+\_\+\+Count@{Sample\+\_\+\+Count}}
+\index{Sample\+\_\+\+Count@{Sample\+\_\+\+Count}!Monitor\+\_\+\+Channel@{Monitor\+\_\+\+Channel}}
+\subsubsection{\texorpdfstring{Sample\+\_\+\+Count}{Sample\_Count}}
+{\footnotesize\ttfamily \hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} Monitor\+\_\+\+Channel\+::\+Sample\+\_\+\+Count = 0}
+
+
+
+Count of the received values. 
+
+\mbox{\Hypertarget{classMonitor__Channel_a5523d9f38c2910b4014e93d18a9267cd}\label{classMonitor__Channel_a5523d9f38c2910b4014e93d18a9267cd}} 
+\index{Monitor\+\_\+\+Channel@{Monitor\+\_\+\+Channel}!Sample\+\_\+\+Stack@{Sample\+\_\+\+Stack}}
+\index{Sample\+\_\+\+Stack@{Sample\+\_\+\+Stack}!Monitor\+\_\+\+Channel@{Monitor\+\_\+\+Channel}}
+\subsubsection{\texorpdfstring{Sample\+\_\+\+Stack}{Sample\_Stack}}
+{\footnotesize\ttfamily \hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} Monitor\+\_\+\+Channel\+::\+Sample\+\_\+\+Stack = 0}
+
+
+
+Sum of the received values. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/software/\hyperlink{monitor__channel_8hpp}{monitor\+\_\+channel.\+hpp}\end{DoxyCompactItemize}

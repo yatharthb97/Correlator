@@ -1,6 +1,7 @@
 <map id="code/hardware/pit.hpp" name="code/hardware/pit.hpp">
-<area shape="rect" id="node2" href="$errors_8hpp.html" title="errors.hpp" alt="" coords="147,80,235,107"/>
-<area shape="rect" id="node3" href="$pins_8hpp.html" title="pins.hpp" alt="" coords="5,229,83,256"/>
-<area shape="rect" id="node4" href="$types_8hpp.html" title="./../types.hpp" alt="" coords="343,155,449,181"/>
-<area shape="rect" id="node6" href="$ledset_8hpp.html" title="ledset.hpp" alt="" coords="187,155,277,181"/>
+<area shape="rect" id="node2" href="$errors_8hpp.html" title="errors.hpp" alt="" coords="151,80,239,107"/>
+<area shape="rect" id="node3" href="$pins_8hpp.html" title="pins.hpp" alt="" coords="5,304,83,331"/>
+<area shape="rect" id="node4" href="$types_8hpp.html" title="./../types.hpp" alt="" coords="317,155,424,181"/>
+<area shape="rect" id="node6" href="$ledpanel_8hpp.html" title="ledpanel.hpp" alt="" coords="187,155,293,181"/>
+<area shape="rect" id="node7" href="$ledset_8hpp.html" title="ledset.hpp" alt="" coords="204,229,295,256"/>
 </map>

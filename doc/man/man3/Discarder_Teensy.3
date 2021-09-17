@@ -1,4 +1,4 @@
-.TH "Discarder_Teensy< Series_size, Front, End >" 3 "Fri Sep 3 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "Discarder_Teensy< Series_size, Front, End >" 3 "Fri Sep 17 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -9,17 +9,17 @@ Discarder_Teensy< Series_size, Front, End > \- Teensy specific Front back discar
 .PP
 .PP
 \fC#include <discarder\&.hpp>\fP
-.PP
-Inherits \fBFrontBack_Discarder_Base< Series_size, Front, End >\fP\&.
-.SS "Private Member Functions"
+.SS "Public Member Functions"
 
 .in +1c
 .ti -1c
-.RI "void \fBoutput\fP (const \fBLin_ACorr_RT_Base\fP &channel) const override __attribute__((always_inline))"
+.RI "void \fBoutput\fP (const \fBLin_ACorr_RT_Teensy\fP< Series_size > &channel) const __attribute__((always_inline))"
 .br
-.RI "Outputs the channel while discarding the selected channels, by using the implementation specific output method\&. "
+.ti -1c
+.RI "unsigned virtual int \fBdiscard_count\fP () const"
+.br
+.RI "Returns the number of elements discarded by the discarder object\&. "
 .in -1c
-.SS "Additional Inherited Members"
 .SH "Detailed Description"
 .PP 
 
@@ -29,12 +29,12 @@ class Discarder_Teensy< Series_size, Front, End >"
 Teensy specific Front back discarder implementation\&. 
 .SH "Member Function Documentation"
 .PP 
-.SS "template<unsigned int Series_size, unsigned int Front, unsigned int End> void \fBDiscarder_Teensy\fP< Series_size, Front, End >::output (const \fBLin_ACorr_RT_Base\fP & channel) const\fC [inline]\fP, \fC [override]\fP, \fC [private]\fP, \fC [virtual]\fP"
+.SS "template<unsigned int Series_size, unsigned int Front, unsigned int End> unsigned virtual int \fBDiscarder_Teensy\fP< Series_size, Front, End >::discard_count () const\fC [inline]\fP, \fC [virtual]\fP"
 
 .PP
-Outputs the channel while discarding the selected channels, by using the implementation specific output method\&. 
-.PP
-Implements \fBFrontBack_Discarder_Base< Series_size, Front, End >\fP\&.
+Returns the number of elements discarded by the discarder object\&. 
+.SS "template<unsigned int Series_size, unsigned int Front, unsigned int End> void \fBDiscarder_Teensy\fP< Series_size, Front, End >::output (const \fBLin_ACorr_RT_Teensy\fP< Series_size > & channel) const\fC [inline]\fP"
+
 
 .SH "Author"
 .PP 

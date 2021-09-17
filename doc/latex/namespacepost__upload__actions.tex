@@ -1,0 +1,158 @@
+\hypertarget{namespacepost__upload__actions}{}\section{post\+\_\+upload\+\_\+actions Namespace Reference}
+\label{namespacepost__upload__actions}\index{post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacepost__upload__actions_ae4fafb438c9b8b9c81fadfd36e414dbe}{update\+\_\+fn} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacepost__upload__actions_accb09cfbbad171dde59d37a322e7d426}{config} = json.\+load(f)
+\item 
+\hyperlink{namespacepost__upload__actions_adee53b372de24d69e9156b1df89e0611}{x\+\_\+tau\+\_\+values} = x\+\_\+tics(\hyperlink{namespacepost__upload__actions_accb09cfbbad171dde59d37a322e7d426}{config}\mbox{[}\textquotesingle{}Lin\+Corrs\textquotesingle{}\mbox{]}, \hyperlink{namespacepost__upload__actions_accb09cfbbad171dde59d37a322e7d426}{config}\mbox{[}\textquotesingle{}Series\+Size\textquotesingle{}\mbox{]}, \hyperlink{namespacepost__upload__actions_accb09cfbbad171dde59d37a322e7d426}{config}\mbox{[}\textquotesingle{}Bin\+Ratio\textquotesingle{}\mbox{]})
+\item 
+\hyperlink{namespacepost__upload__actions_a8ce1efa4da6c671aad5bd74a05d6491a}{norm\+\_\+values} = points\+\_\+norm\+\_\+template(\hyperlink{namespacepost__upload__actions_accb09cfbbad171dde59d37a322e7d426}{config}\mbox{[}\textquotesingle{}Lin\+Corrs\textquotesingle{}\mbox{]}, \hyperlink{namespacepost__upload__actions_accb09cfbbad171dde59d37a322e7d426}{config}\mbox{[}\textquotesingle{}Series\+Size\textquotesingle{}\mbox{]}, \hyperlink{namespacepost__upload__actions_accb09cfbbad171dde59d37a322e7d426}{config}\mbox{[}\textquotesingle{}Bin\+Ratio\textquotesingle{}\mbox{]})
+\item 
+\hyperlink{namespacepost__upload__actions_ab550bd3db3e82b8d71d3f5962bdf3b01}{name\+\_\+} = str(time.\+time\+\_\+ns())
+\item 
+string \hyperlink{namespacepost__upload__actions_a9989a70c849a81f874a7499fe566446c}{y\+\_\+file\+\_\+name} = f\char`\"{}\{name\+\_\+\}\+\_\+y.\+dat\char`\"{}
+\item 
+string \hyperlink{namespacepost__upload__actions_a69a8dece1cead975550839950d39ac2c}{x\+\_\+file\+\_\+name} = f\char`\"{}\{name\+\_\+\}\+\_\+x\+\_\+taus.\+dat\char`\"{}
+\item 
+\hyperlink{namespacepost__upload__actions_afffee9403d0b5fc3e9dab1f30f771e0e}{fmt}
+\item 
+\hyperlink{namespacepost__upload__actions_afb35f51de2003a038c02100770ee1ab9}{newline}
+\item 
+\hyperlink{namespacepost__upload__actions_a007e73e512c986469933678ddb96bf21}{datafile} = open(\hyperlink{namespacepost__upload__actions_a9989a70c849a81f874a7499fe566446c}{y\+\_\+file\+\_\+name}, \textquotesingle{}a\textquotesingle{})
+\item 
+\hyperlink{namespacepost__upload__actions_a93beac961ecb11f5cd375de68d537536}{port} = Serial(port=\hyperlink{namespacepost__upload__actions_accb09cfbbad171dde59d37a322e7d426}{config}\mbox{[}\char`\"{}Port\char`\"{}\mbox{]}, baudrate=\hyperlink{namespacepost__upload__actions_accb09cfbbad171dde59d37a322e7d426}{config}\mbox{[}\char`\"{}Baud\char`\"{}\mbox{]}, timeout=0.\+5)
+\item 
+\hyperlink{namespacepost__upload__actions_aa34f3f575b899b8e81ca18407b45eef7}{app} = Qt\+Gui.\+Q\+Application(\mbox{[}$\,$\mbox{]})
+\item 
+\hyperlink{namespacepost__upload__actions_a6cf065c9f8b86253545865d6e0a2a879}{window} = pg.\+Graphics\+Layout\+Widget(show=True, title= f\char`\"{}Auto-\/Correlation Plot -\/ \{\hyperlink{namespacepost__upload__actions_accb09cfbbad171dde59d37a322e7d426}{config}\mbox{[}\textquotesingle{}Port\textquotesingle{}\mbox{]}\}\char`\"{})
+\item 
+\hyperlink{namespacepost__upload__actions_a794b55b7fa3378176059f54fbf9b3b51}{antialias}
+\item 
+\hyperlink{namespacepost__upload__actions_a8296d2fcc016826c1f0cff7c58dbd49d}{graph} = window.\+add\+Plot(title=\char`\"{}Auto-\/Correlation Plot\char`\"{})
+\item 
+\hyperlink{namespacepost__upload__actions_aed0ea70905ed0bebf27087552b59f95c}{curve} = graph.\+plot(pen=\textquotesingle{}y\textquotesingle{})
+\item 
+\hyperlink{namespacepost__upload__actions_a48e3e214dacb2b33e0ac69daa02e824a}{wait\+\_\+time\+\_\+ms} = \hyperlink{namespacepost__upload__actions_accb09cfbbad171dde59d37a322e7d426}{config}\mbox{[}\textquotesingle{}Sampling\+Delay\+\_\+ms\textquotesingle{}\mbox{]}
+\item 
+\hyperlink{namespacepost__upload__actions_a2fb797e73ff270f11d2e2e5b67c23333}{timer} = Qt\+Core.\+Q\+Timer()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacepost__upload__actions_ae4fafb438c9b8b9c81fadfd36e414dbe}\label{namespacepost__upload__actions_ae4fafb438c9b8b9c81fadfd36e414dbe}} 
+\index{post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}!update\+\_\+fn@{update\+\_\+fn}}
+\index{update\+\_\+fn@{update\+\_\+fn}!post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}}
+\subsubsection{\texorpdfstring{update\+\_\+fn()}{update\_fn()}}
+{\footnotesize\ttfamily def post\+\_\+upload\+\_\+actions.\+update\+\_\+fn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepost__upload__actions_a794b55b7fa3378176059f54fbf9b3b51}\label{namespacepost__upload__actions_a794b55b7fa3378176059f54fbf9b3b51}} 
+\index{post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}!antialias@{antialias}}
+\index{antialias@{antialias}!post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}}
+\subsubsection{\texorpdfstring{antialias}{antialias}}
+{\footnotesize\ttfamily post\+\_\+upload\+\_\+actions.\+antialias}
+
+\mbox{\Hypertarget{namespacepost__upload__actions_aa34f3f575b899b8e81ca18407b45eef7}\label{namespacepost__upload__actions_aa34f3f575b899b8e81ca18407b45eef7}} 
+\index{post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}!app@{app}}
+\index{app@{app}!post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}}
+\subsubsection{\texorpdfstring{app}{app}}
+{\footnotesize\ttfamily post\+\_\+upload\+\_\+actions.\+app = Qt\+Gui.\+Q\+Application(\mbox{[}$\,$\mbox{]})}
+
+\mbox{\Hypertarget{namespacepost__upload__actions_accb09cfbbad171dde59d37a322e7d426}\label{namespacepost__upload__actions_accb09cfbbad171dde59d37a322e7d426}} 
+\index{post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}!config@{config}}
+\index{config@{config}!post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}}
+\subsubsection{\texorpdfstring{config}{config}}
+{\footnotesize\ttfamily post\+\_\+upload\+\_\+actions.\+config = json.\+load(f)}
+
+\mbox{\Hypertarget{namespacepost__upload__actions_aed0ea70905ed0bebf27087552b59f95c}\label{namespacepost__upload__actions_aed0ea70905ed0bebf27087552b59f95c}} 
+\index{post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}!curve@{curve}}
+\index{curve@{curve}!post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}}
+\subsubsection{\texorpdfstring{curve}{curve}}
+{\footnotesize\ttfamily post\+\_\+upload\+\_\+actions.\+curve = graph.\+plot(pen=\textquotesingle{}y\textquotesingle{})}
+
+\mbox{\Hypertarget{namespacepost__upload__actions_a007e73e512c986469933678ddb96bf21}\label{namespacepost__upload__actions_a007e73e512c986469933678ddb96bf21}} 
+\index{post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}!datafile@{datafile}}
+\index{datafile@{datafile}!post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}}
+\subsubsection{\texorpdfstring{datafile}{datafile}}
+{\footnotesize\ttfamily post\+\_\+upload\+\_\+actions.\+datafile = open(\hyperlink{namespacepost__upload__actions_a9989a70c849a81f874a7499fe566446c}{y\+\_\+file\+\_\+name}, \textquotesingle{}a\textquotesingle{})}
+
+\mbox{\Hypertarget{namespacepost__upload__actions_afffee9403d0b5fc3e9dab1f30f771e0e}\label{namespacepost__upload__actions_afffee9403d0b5fc3e9dab1f30f771e0e}} 
+\index{post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}!fmt@{fmt}}
+\index{fmt@{fmt}!post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}}
+\subsubsection{\texorpdfstring{fmt}{fmt}}
+{\footnotesize\ttfamily post\+\_\+upload\+\_\+actions.\+fmt}
+
+\mbox{\Hypertarget{namespacepost__upload__actions_a8296d2fcc016826c1f0cff7c58dbd49d}\label{namespacepost__upload__actions_a8296d2fcc016826c1f0cff7c58dbd49d}} 
+\index{post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}!graph@{graph}}
+\index{graph@{graph}!post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}}
+\subsubsection{\texorpdfstring{graph}{graph}}
+{\footnotesize\ttfamily post\+\_\+upload\+\_\+actions.\+graph = window.\+add\+Plot(title=\char`\"{}Auto-\/Correlation Plot\char`\"{})}
+
+\mbox{\Hypertarget{namespacepost__upload__actions_ab550bd3db3e82b8d71d3f5962bdf3b01}\label{namespacepost__upload__actions_ab550bd3db3e82b8d71d3f5962bdf3b01}} 
+\index{post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}!name\+\_\+@{name\+\_\+}}
+\index{name\+\_\+@{name\+\_\+}!post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}}
+\subsubsection{\texorpdfstring{name\+\_\+}{name\_}}
+{\footnotesize\ttfamily post\+\_\+upload\+\_\+actions.\+name\+\_\+ = str(time.\+time\+\_\+ns())}
+
+\mbox{\Hypertarget{namespacepost__upload__actions_afb35f51de2003a038c02100770ee1ab9}\label{namespacepost__upload__actions_afb35f51de2003a038c02100770ee1ab9}} 
+\index{post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}!newline@{newline}}
+\index{newline@{newline}!post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}}
+\subsubsection{\texorpdfstring{newline}{newline}}
+{\footnotesize\ttfamily post\+\_\+upload\+\_\+actions.\+newline}
+
+\mbox{\Hypertarget{namespacepost__upload__actions_a8ce1efa4da6c671aad5bd74a05d6491a}\label{namespacepost__upload__actions_a8ce1efa4da6c671aad5bd74a05d6491a}} 
+\index{post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}!norm\+\_\+values@{norm\+\_\+values}}
+\index{norm\+\_\+values@{norm\+\_\+values}!post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}}
+\subsubsection{\texorpdfstring{norm\+\_\+values}{norm\_values}}
+{\footnotesize\ttfamily post\+\_\+upload\+\_\+actions.\+norm\+\_\+values = points\+\_\+norm\+\_\+template(\hyperlink{namespacepost__upload__actions_accb09cfbbad171dde59d37a322e7d426}{config}\mbox{[}\textquotesingle{}Lin\+Corrs\textquotesingle{}\mbox{]}, \hyperlink{namespacepost__upload__actions_accb09cfbbad171dde59d37a322e7d426}{config}\mbox{[}\textquotesingle{}Series\+Size\textquotesingle{}\mbox{]}, \hyperlink{namespacepost__upload__actions_accb09cfbbad171dde59d37a322e7d426}{config}\mbox{[}\textquotesingle{}Bin\+Ratio\textquotesingle{}\mbox{]})}
+
+\mbox{\Hypertarget{namespacepost__upload__actions_a93beac961ecb11f5cd375de68d537536}\label{namespacepost__upload__actions_a93beac961ecb11f5cd375de68d537536}} 
+\index{post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}!port@{port}}
+\index{port@{port}!post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}}
+\subsubsection{\texorpdfstring{port}{port}}
+{\footnotesize\ttfamily post\+\_\+upload\+\_\+actions.\+port = Serial(port=\hyperlink{namespacepost__upload__actions_accb09cfbbad171dde59d37a322e7d426}{config}\mbox{[}\char`\"{}Port\char`\"{}\mbox{]}, baudrate=\hyperlink{namespacepost__upload__actions_accb09cfbbad171dde59d37a322e7d426}{config}\mbox{[}\char`\"{}Baud\char`\"{}\mbox{]}, timeout=0.\+5)}
+
+\mbox{\Hypertarget{namespacepost__upload__actions_a2fb797e73ff270f11d2e2e5b67c23333}\label{namespacepost__upload__actions_a2fb797e73ff270f11d2e2e5b67c23333}} 
+\index{post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}!timer@{timer}}
+\index{timer@{timer}!post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}}
+\subsubsection{\texorpdfstring{timer}{timer}}
+{\footnotesize\ttfamily post\+\_\+upload\+\_\+actions.\+timer = Qt\+Core.\+Q\+Timer()}
+
+\mbox{\Hypertarget{namespacepost__upload__actions_a48e3e214dacb2b33e0ac69daa02e824a}\label{namespacepost__upload__actions_a48e3e214dacb2b33e0ac69daa02e824a}} 
+\index{post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}!wait\+\_\+time\+\_\+ms@{wait\+\_\+time\+\_\+ms}}
+\index{wait\+\_\+time\+\_\+ms@{wait\+\_\+time\+\_\+ms}!post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}}
+\subsubsection{\texorpdfstring{wait\+\_\+time\+\_\+ms}{wait\_time\_ms}}
+{\footnotesize\ttfamily int post\+\_\+upload\+\_\+actions.\+wait\+\_\+time\+\_\+ms = \hyperlink{namespacepost__upload__actions_accb09cfbbad171dde59d37a322e7d426}{config}\mbox{[}\textquotesingle{}Sampling\+Delay\+\_\+ms\textquotesingle{}\mbox{]}}
+
+\mbox{\Hypertarget{namespacepost__upload__actions_a6cf065c9f8b86253545865d6e0a2a879}\label{namespacepost__upload__actions_a6cf065c9f8b86253545865d6e0a2a879}} 
+\index{post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}!window@{window}}
+\index{window@{window}!post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}}
+\subsubsection{\texorpdfstring{window}{window}}
+{\footnotesize\ttfamily post\+\_\+upload\+\_\+actions.\+window = pg.\+Graphics\+Layout\+Widget(show=True, title= f\char`\"{}Auto-\/Correlation Plot -\/ \{\hyperlink{namespacepost__upload__actions_accb09cfbbad171dde59d37a322e7d426}{config}\mbox{[}\textquotesingle{}Port\textquotesingle{}\mbox{]}\}\char`\"{})}
+
+\mbox{\Hypertarget{namespacepost__upload__actions_a69a8dece1cead975550839950d39ac2c}\label{namespacepost__upload__actions_a69a8dece1cead975550839950d39ac2c}} 
+\index{post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}!x\+\_\+file\+\_\+name@{x\+\_\+file\+\_\+name}}
+\index{x\+\_\+file\+\_\+name@{x\+\_\+file\+\_\+name}!post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}}
+\subsubsection{\texorpdfstring{x\+\_\+file\+\_\+name}{x\_file\_name}}
+{\footnotesize\ttfamily string post\+\_\+upload\+\_\+actions.\+x\+\_\+file\+\_\+name = f\char`\"{}\{name\+\_\+\}\+\_\+x\+\_\+taus.\+dat\char`\"{}}
+
+\mbox{\Hypertarget{namespacepost__upload__actions_adee53b372de24d69e9156b1df89e0611}\label{namespacepost__upload__actions_adee53b372de24d69e9156b1df89e0611}} 
+\index{post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}!x\+\_\+tau\+\_\+values@{x\+\_\+tau\+\_\+values}}
+\index{x\+\_\+tau\+\_\+values@{x\+\_\+tau\+\_\+values}!post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}}
+\subsubsection{\texorpdfstring{x\+\_\+tau\+\_\+values}{x\_tau\_values}}
+{\footnotesize\ttfamily post\+\_\+upload\+\_\+actions.\+x\+\_\+tau\+\_\+values = x\+\_\+tics(\hyperlink{namespacepost__upload__actions_accb09cfbbad171dde59d37a322e7d426}{config}\mbox{[}\textquotesingle{}Lin\+Corrs\textquotesingle{}\mbox{]}, \hyperlink{namespacepost__upload__actions_accb09cfbbad171dde59d37a322e7d426}{config}\mbox{[}\textquotesingle{}Series\+Size\textquotesingle{}\mbox{]}, \hyperlink{namespacepost__upload__actions_accb09cfbbad171dde59d37a322e7d426}{config}\mbox{[}\textquotesingle{}Bin\+Ratio\textquotesingle{}\mbox{]})}
+
+\mbox{\Hypertarget{namespacepost__upload__actions_a9989a70c849a81f874a7499fe566446c}\label{namespacepost__upload__actions_a9989a70c849a81f874a7499fe566446c}} 
+\index{post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}!y\+\_\+file\+\_\+name@{y\+\_\+file\+\_\+name}}
+\index{y\+\_\+file\+\_\+name@{y\+\_\+file\+\_\+name}!post\+\_\+upload\+\_\+actions@{post\+\_\+upload\+\_\+actions}}
+\subsubsection{\texorpdfstring{y\+\_\+file\+\_\+name}{y\_file\_name}}
+{\footnotesize\ttfamily string post\+\_\+upload\+\_\+actions.\+y\+\_\+file\+\_\+name = f\char`\"{}\{name\+\_\+\}\+\_\+y.\+dat\char`\"{}}
+

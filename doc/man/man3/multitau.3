@@ -1,0 +1,60 @@
+.TH "multitau" 3 "Fri Sep 17 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+multitau
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBchannel_size\fP (lin_corrs, series_size, bin_ratio)"
+.br
+.ti -1c
+.RI "def \fBx_tics\fP (lin_corrs, series_size, bin_ratio)"
+.br
+.ti -1c
+.RI "def \fBpoints_norm\fP (lin_corrs, series_size, bin_ratio, LC0_points)"
+.br
+.ti -1c
+.RI "def \fBpoints_norm_template\fP (lin_corrs, series_size, bin_ratio)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "def multitau\&.channel_size ( lin_corrs,  series_size,  bin_ratio)"
+
+.PP
+.nf
+Returns the expected channel size based on the multi-tau parameters.
+
+.fi
+.PP
+ 
+.SS "def multitau\&.points_norm ( lin_corrs,  series_size,  bin_ratio,  LC0_points)"
+
+.PP
+.nf
+Generates and returns a list of normalisation values based on the data points fed to 
+the 0th Linear Correlator.
+
+.fi
+.PP
+ 
+.SS "def multitau\&.points_norm_template ( lin_corrs,  series_size,  bin_ratio)"
+
+.SS "def multitau\&.x_tics ( lin_corrs,  series_size,  bin_ratio)"
+
+.PP
+.nf
+Generates and returns a list of x-ticks that can be used for plotting, using the 
+multi-tau parameters.
+
+.fi
+.PP
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator from the source code\&.

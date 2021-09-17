@@ -45,7 +45,7 @@ static void \hyperlink{classPITController_a24b7ea02555967ef945ab87aae338574}{pau
 \begin{DoxyCompactList}\small\item\em Pause/\+Resume -\/ {\bfseries Toggle} {\bfseries all} {\bfseries P\+IT} {\bfseries Channels}. \end{DoxyCompactList}\item 
 unsigned static int \hyperlink{classPITController_a7cb352b2deb5bba48b8e2f0671a66801}{get\+\_\+xbar\+\_\+in\+\_\+pin} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
 \begin{DoxyCompactList}\small\item\em Returns the correspoding X\+B\+A\+R1-\/A Input Pins for the corresponding channel T\+R\+I\+G\+G\+ER signal. \end{DoxyCompactList}\item 
-static void \hyperlink{classPITController_aa94b6dc081d453c8dda54c3ade4b3d94}{set\+\_\+interrupt} (void($\ast$isr\+\_\+fn)(), unsigned int priority) \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
+static void \hyperlink{classPITController_aa94b6dc081d453c8dda54c3ade4b3d94}{set\+\_\+interrupt} (void($\ast$\hyperlink{main_8cpp_a4fc8f622f69a856a51bd3d4b1b42233a}{isr\+\_\+fn})(), unsigned int priority) \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
 \begin{DoxyCompactList}\small\item\em Sets a common I\+SR and its priority for all P\+IT Channels. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -55,7 +55,9 @@ double \hyperlink{classPITController_a549601e7c66941d7872a6e7d38ed9563}{Actual\+
 double \hyperlink{classPITController_a9de0af49a52145c8d2a8f4e90a519b60}{Req\+\_\+period} = 0
 \begin{DoxyCompactList}\small\item\em Time Period requested by the user. \end{DoxyCompactList}\item 
 uint32\+\_\+t \hyperlink{classPITController_ae3d74bb18e5b22769e895f592cb16129}{Clk\+\_\+freq} = uint32\+\_\+t(24 $\ast$ 1e6)
-\begin{DoxyCompactList}\small\item\em Clock frequency used by the timer. Initalized to 24\+M\+Hz → default oscillator clock. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Clock frequency used by the timer. Initalized to 24\+M\+Hz → default oscillator clock. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{classPITController_ad253f0ac646573e5b08e050b6fab5e32}{Load\+Val} = 0
+\begin{DoxyCompactList}\small\item\em The value loaded in to the counter during after overflow. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -288,6 +290,17 @@ uint32\+\_\+t \hyperlink{classPITController}{P\+I\+T\+Controller}$<$ Ch\+ID $>$\
 
 
 Clock frequency used by the timer. Initalized to 24\+M\+Hz → default oscillator clock. 
+
+\mbox{\Hypertarget{classPITController_ad253f0ac646573e5b08e050b6fab5e32}\label{classPITController_ad253f0ac646573e5b08e050b6fab5e32}} 
+\index{P\+I\+T\+Controller@{P\+I\+T\+Controller}!Load\+Val@{Load\+Val}}
+\index{Load\+Val@{Load\+Val}!P\+I\+T\+Controller@{P\+I\+T\+Controller}}
+\subsubsection{\texorpdfstring{Load\+Val}{LoadVal}}
+{\footnotesize\ttfamily template$<$unsigned int Ch\+ID$>$ \\
+uint32\+\_\+t \hyperlink{classPITController}{P\+I\+T\+Controller}$<$ Ch\+ID $>$\+::Load\+Val = 0}
+
+
+
+The value loaded in to the counter during after overflow. 
 
 \mbox{\Hypertarget{classPITController_a53778fe7e47ac9741bef0bc190e0646a}\label{classPITController_a53778fe7e47ac9741bef0bc190e0646a}} 
 \index{P\+I\+T\+Controller@{P\+I\+T\+Controller}!P\+I\+T\+\_\+\+M\+A\+X\+\_\+\+C\+O\+U\+N\+T\+ER@{P\+I\+T\+\_\+\+M\+A\+X\+\_\+\+C\+O\+U\+N\+T\+ER}}

@@ -9,30 +9,13 @@ Teensy specific Front back discarder implementation.
 
 {\ttfamily \#include $<$discarder.\+hpp$>$}
 
-
-
-Inheritance diagram for Discarder\+\_\+\+Teensy$<$ Series\+\_\+size, Front, End $>$\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=225pt]{classDiscarder__Teensy__inherit__graph}
-\end{center}
-\end{figure}
-
-
-Collaboration diagram for Discarder\+\_\+\+Teensy$<$ Series\+\_\+size, Front, End $>$\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=225pt]{classDiscarder__Teensy__coll__graph}
-\end{center}
-\end{figure}
-\subsection*{Private Member Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{classDiscarder__Teensy_a968465e540ae1372c26c9c6d0e5c928b}{output} (const \hyperlink{classLin__ACorr__RT__Base}{Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base} \&channel) const override \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
-\begin{DoxyCompactList}\small\item\em Outputs the channel while discarding the selected channels, by using the implementation specific output method. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Additional Inherited Members}
+void \hyperlink{classDiscarder__Teensy_a50787ecd4fc07a1d1cf2b692af979ac7}{output} (const \hyperlink{classLin__ACorr__RT__Teensy}{Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Teensy}$<$ Series\+\_\+size $>$ \&channel) const \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
+\item 
+unsigned virtual int \hyperlink{classDiscarder__Teensy_a4b4c55953522a2404d7fe5c59bac0068}{discard\+\_\+count} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of elements discarded by the discarder object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -42,20 +25,23 @@ class Discarder\+\_\+\+Teensy$<$ Series\+\_\+size, Front, End $>$}
 Teensy specific Front back discarder implementation. 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classDiscarder__Teensy_a968465e540ae1372c26c9c6d0e5c928b}\label{classDiscarder__Teensy_a968465e540ae1372c26c9c6d0e5c928b}} 
+\mbox{\Hypertarget{classDiscarder__Teensy_a4b4c55953522a2404d7fe5c59bac0068}\label{classDiscarder__Teensy_a4b4c55953522a2404d7fe5c59bac0068}} 
+\index{Discarder\+\_\+\+Teensy@{Discarder\+\_\+\+Teensy}!discard\+\_\+count@{discard\+\_\+count}}
+\index{discard\+\_\+count@{discard\+\_\+count}!Discarder\+\_\+\+Teensy@{Discarder\+\_\+\+Teensy}}
+\subsubsection{\texorpdfstring{discard\+\_\+count()}{discard\_count()}}
+{\footnotesize\ttfamily template$<$unsigned int Series\+\_\+size, unsigned int Front, unsigned int End$>$ \\
+unsigned virtual int \hyperlink{classDiscarder__Teensy}{Discarder\+\_\+\+Teensy}$<$ Series\+\_\+size, Front, End $>$\+::discard\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the number of elements discarded by the discarder object. 
+
+\mbox{\Hypertarget{classDiscarder__Teensy_a50787ecd4fc07a1d1cf2b692af979ac7}\label{classDiscarder__Teensy_a50787ecd4fc07a1d1cf2b692af979ac7}} 
 \index{Discarder\+\_\+\+Teensy@{Discarder\+\_\+\+Teensy}!output@{output}}
 \index{output@{output}!Discarder\+\_\+\+Teensy@{Discarder\+\_\+\+Teensy}}
 \subsubsection{\texorpdfstring{output()}{output()}}
 {\footnotesize\ttfamily template$<$unsigned int Series\+\_\+size, unsigned int Front, unsigned int End$>$ \\
-void \hyperlink{classDiscarder__Teensy}{Discarder\+\_\+\+Teensy}$<$ Series\+\_\+size, Front, End $>$\+::output (\begin{DoxyParamCaption}\item[{const \hyperlink{classLin__ACorr__RT__Base}{Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base} \&}]{channel }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
-
-
-
-Outputs the channel while discarding the selected channels, by using the implementation specific output method. 
-
-
-
-Implements \hyperlink{classFrontBack__Discarder__Base_ab8a1d0082f223c31da3c1374c520c4c4}{Front\+Back\+\_\+\+Discarder\+\_\+\+Base$<$ Series\+\_\+size, Front, End $>$}.
+void \hyperlink{classDiscarder__Teensy}{Discarder\+\_\+\+Teensy}$<$ Series\+\_\+size, Front, End $>$\+::output (\begin{DoxyParamCaption}\item[{const \hyperlink{classLin__ACorr__RT__Teensy}{Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Teensy}$<$ Series\+\_\+size $>$ \&}]{channel }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 

@@ -1,4 +1,4 @@
-.TH "code/hardware/pins.hpp" 3 "Fri Sep 3 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "code/hardware/pins.hpp" 3 "Fri Sep 17 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -13,7 +13,7 @@ code/hardware/pins.hpp
 .RI "const int \fBLED_RED\fP = 41"
 .br
 .ti -1c
-.RI "const int \fBLED_BLUE\fP = 42"
+.RI "const int \fBLED_BLUE\fP = 40"
 .br
 .ti -1c
 .RI "const int \fBLED_YELLOW\fP = 22"
@@ -37,13 +37,13 @@ code/hardware/pins.hpp
 .RI "const int \fBER_PRECISION_PIN\fP = \fBLED_BLUE\fP"
 .br
 .ti -1c
-.RI "const int \fBER_OVERFLOW_PIN\fP = \fBLED_RED\fP"
+.RI "const int \fBER_OVERFLOW_PIN\fP = \fBLED_WHITE\fP"
 .br
 .ti -1c
-.RI "const int \fBER_INPUT_VALIDATION\fP = \fBLED_YELLOW\fP"
+.RI "const int \fBER_INPUT_VALIDATION\fP = LED_BUILTIN"
 .br
 .ti -1c
-.RI "const int \fBSETUP_LED\fP = LED_BUILTIN"
+.RI "const int \fBSETUP_LED\fP = \fBLED_RED\fP"
 .br
 .ti -1c
 .RI "const int \fBLOOP_LED\fP = \fBLED_GREEN\fP"
@@ -51,13 +51,13 @@ code/hardware/pins.hpp
 .in -1c
 .SH "Variable Documentation"
 .PP 
-.SS "const int ER_INPUT_VALIDATION = \fBLED_YELLOW\fP"
+.SS "const int ER_INPUT_VALIDATION = LED_BUILTIN"
 
-.SS "const int ER_OVERFLOW_PIN = \fBLED_RED\fP"
+.SS "const int ER_OVERFLOW_PIN = \fBLED_WHITE\fP"
 
 .SS "const int ER_PRECISION_PIN = \fBLED_BLUE\fP"
 
-.SS "const int LED_BLUE = 42"
+.SS "const int LED_BLUE = 40"
 
 .SS "const int LED_GREEN = 24"
 
@@ -73,7 +73,7 @@ code/hardware/pins.hpp
 
 .SS "const int SAFE_OUTPUT_DUMP_PIN = 0"
 
-.SS "const int SETUP_LED = LED_BUILTIN"
+.SS "const int SETUP_LED = \fBLED_RED\fP"
 
 .SS "const int TTL_C_PULSE_INPUT_PIN = 10"
 

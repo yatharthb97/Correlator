@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['tail',['tail',['../classCircular__Buffer.html#a6eb4d6b77a513a6b9bd8465197e48ad4',1,'Circular_Buffer::tail()'],['../classSimpler__Circular__Buffer.html#a2833e67d4d6cfae68e71306037015642',1,'Simpler_Circular_Buffer::tail()']]],
-  ['ttl_5fc',['TTL_c',['../main_8cpp.html#a691981c43e1bdddca6df5accb6927331',1,'main.cpp']]],
-  ['ttl_5fc_5fpulse_5finput_5fpin',['TTL_C_PULSE_INPUT_PIN',['../pins_8hpp.html#a5017daf6b9fb9330e86878ec983ed163',1,'pins.hpp']]]
+  ['receivedpointscounter',['ReceivedPointsCounter',['../classAccumulator.html#a7c73ca34e36c1bf882aebe96187f30bb',1,'Accumulator']]],
+  ['req_5fperiod',['Req_period',['../classPITController.html#a9de0af49a52145c8d2a8f4e90a519b60',1,'PITController']]]
 ];

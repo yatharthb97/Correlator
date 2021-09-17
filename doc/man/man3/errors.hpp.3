@@ -1,4 +1,4 @@
-.TH "code/hardware/errors.hpp" 3 "Fri Sep 3 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "code/hardware/errors.hpp" 3 "Fri Sep 17 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -10,7 +10,7 @@ code/hardware/errors.hpp
 .br
 \fC#include '\&./\&.\&./types\&.hpp'\fP
 .br
-\fC#include 'ledset\&.hpp'\fP
+\fC#include 'ledpanel\&.hpp'\fP
 .br
 \fC#include <Arduino\&.h>\fP
 .br
@@ -26,22 +26,23 @@ code/hardware/errors.hpp
 
 .in +1c
 .ti -1c
-.RI "#define \fBTEENSY_MAX_ALLOCATION\fP   100"
+.RI "#define \fBTEENSY_MAX_ALLOCATION\fP   125000"
 .br
+.RI "This file contain the Common Error Codes for Software-Hardware Interface\&. It defines the \fCError_t\fP and namespace \fC\fBErrors\fP\fP that are used to handle the errors and interact with the LED dashboard\&. "
 .in -1c
 .SS "Enumerations"
 
 .in +1c
 .ti -1c
 .RI "enum \fBError_t\fP { \fBError_t::Success\fP = 0, \fBError_t::Counter_Overflow\fP, \fBError_t::Counter_Underflow\fP, \fBError_t::Precision\fP, \fBError_t::Input_Validation\fP }
-.RI "This file contain the Common Error Codes for Software-Hardware Interface\&. It defines the \fCError_t\fP and namespace \fC\fBErrors\fP\fP that are used to handle the errors and interact with the LED dashboard\&. ""
+.RI "Enumarates the error codes thrown by the different modules\&. ""
 .br
 .in -1c
 .SS "Functions"
 
 .in +1c
 .ti -1c
-.RI "void \fBErrors::Validate\fP (const \fBError_t\fP error, const \fBLEDSet\fP &ledset)"
+.RI "void \fBErrors::Validate\fP (const \fBError_t\fP error)"
 .br
 .RI "Receives an error state and sets up the corresponding LED indicator\&. "
 .ti -1c
@@ -51,31 +52,31 @@ code/hardware/errors.hpp
 .ti -1c
 .RI "template<unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Ratio> \fBError_t\fP \fBErrors::Auto_MultiTau_Input_Validator\fP ()"
 .br
+.RI "Input Validator for MultiTau auto-correlator\&. "
 .ti -1c
-.RI "void \fB_assert_\fP (bool expression, char *__attribute__((unused)) message='')"
+.RI "void \fB_assert_\fP (bool expression, const char *__attribute__((unused)) message='')"
 .br
-.RI "Custom runtime assert function that sets all the dashboard LEDs to high\&. "
-.ti -1c
-.RI "void \fB_assert_\fP (bool expression)"
-.br
+.RI "Custom assertion function\&. "
 .in -1c
 .SH "Macro Definition Documentation"
 .PP 
-.SS "#define TEENSY_MAX_ALLOCATION   100"
-
-.SH "Enumeration Type Documentation"
-.PP 
-.SS "enum \fBError_t\fP\fC [strong]\fP"
+.SS "#define TEENSY_MAX_ALLOCATION   125000"
 
 .PP
 This file contain the Common Error Codes for Software-Hardware Interface\&. It defines the \fCError_t\fP and namespace \fC\fBErrors\fP\fP that are used to handle the errors and interact with the LED dashboard\&. 
 .PP
 \fBAuthor:\fP
 .RS 4
-Yatharth Bhasin (github → yatharthb97) Enumarates the error codes thrown by the different modules\&. 
+Yatharth Bhasin (github → yatharthb97) Maximum Allocations of 32-bit integers allowed on the microcontroller Teensy\&. 
 .RE
 .PP
 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBError_t\fP\fC [strong]\fP"
+
+.PP
+Enumarates the error codes thrown by the different modules\&. 
 .PP
 \fBEnumerator\fP
 .in +1c
@@ -84,20 +85,22 @@ Yatharth Bhasin (github → yatharthb97) Enumarates the error codes thrown by th
 No error\&. 
 .TP
 \fB\fICounter_Overflow \fP\fP
+Passed Value caused a counter overflow\&. 
 .TP
 \fB\fICounter_Underflow \fP\fP
+Passed Value caused a counter underflow\&. 
 .TP
 \fB\fIPrecision \fP\fP
-The error due to finite resolution is greater than acceptable\&. 
+Error generated when difference due to finite resolution is greater than acceptable\&. 
 .TP
 \fB\fIInput_Validation \fP\fP
 Input validation failed\&. 
 .SH "Function Documentation"
 .PP 
-.SS "void _assert_ (bool expression, char *__attribute__((unused)) message = \fC''\fP)"
+.SS "void _assert_ (bool expression, const char *__attribute__((unused)) message = \fC''\fP)"
 
 .PP
-Custom runtime assert function that sets all the dashboard LEDs to high\&. Custom assertion function\&. 
+Custom assertion function\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -106,8 +109,6 @@ Custom runtime assert function that sets all the dashboard LEDs to high\&. Custo
 \fImessage\fP which is ignored in the function, but helps with code redability 
 .RE
 .PP
-
-.SS "void _assert_ (bool expression)"
 
 .SH "Author"
 .PP 

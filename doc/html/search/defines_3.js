@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['other_5fpin',['OTHER_PIN',['../main_8cpp.html#a3992a2e54fef91d7572838b36d7ef633',1,'main.cpp']]]
+  ['teensy_5fmax_5fallocation',['TEENSY_MAX_ALLOCATION',['../errors_8hpp.html#a0eb326048ed31037a6e5ec5634a6202e',1,'errors.hpp']]]
 ];

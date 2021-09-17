@@ -6,7 +6,7 @@ This folder contains the implementation of the software correlator that will be 
 
 
 \begin{DoxyItemize}
-\item {\ttfamily \hyperlink{Lin__ACorr__RT__Base_8hpp}{Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base.\+hpp}} -\/ Base (Interface) for Linear Correlators
+\item {\ttfamily Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base.\+hpp} -\/ Base (Interface) for Linear Correlators
 \item {\ttfamily \hyperlink{Lin__ACorr__RT__Teensy_8hpp}{Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Teensy.\+hpp}} -\/ Implementation specific to Teensy
 \item {\ttfamily \hyperlink{multi__tau_8hpp}{multi\+\_\+tau.\+hpp}} -\/ Teensy specific implementation of multi-\/tau Auto-\/correlator
 \item {\ttfamily \hyperlink{accumulator_8hpp}{accumulator.\+hpp}} -\/ Adapter object used by Multi Tau A\+Corr
@@ -19,7 +19,7 @@ This folder contains the implementation of the software correlator that will be 
 \end{DoxyItemize}
 \item {\ttfamily test.\+cpp} -\/ File used for tsting
 \item {\ttfamily circlar\+\_\+buffer.\+hpp} -\/ Another implementation of circular buffer (unsued right now)
-\item {\ttfamily \hyperlink{Lin__CrossCorr__RT__Base_8hpp}{Lin\+\_\+\+Cross\+Corr\+\_\+\+R\+T\+\_\+\+Base.\+hpp}} -\/ Base interface for Linear Cross Correlators
+\item {\ttfamily Lin\+\_\+\+Cross\+Corr\+\_\+\+R\+T\+\_\+\+Base.\+hpp} -\/ Base interface for Linear Cross Correlators
 \item {\ttfamily \hyperlink{Lin__CrossCorr__RT__Teensy_8hpp}{Lin\+\_\+\+Cross\+Corr\+\_\+\+R\+T\+\_\+\+Teensy.\+hpp}} -\/ Teensy specific Liner Cross Correlator interface
 \end{DoxyItemize}
 
@@ -51,11 +51,11 @@ File descriptions\+:
 \item For line buffered outputs, at the end, user calls\+: 
 \begin{DoxyCode}
 Serial.write('\(\backslash\)n');
-Serial.send\_now(); // Which is an alias of usb\_serial::flush()
+Serial.flush(); // Which is an alias of usb\_serial::flush()
 \end{DoxyCode}
 
 \item Note\+: The libraries are not allowed to use endlines on output calls. This also solves the \char`\"{}`\textbackslash{}r\textbackslash{}n`\char`\"{} problem of using {\ttfamily Serial.\+println()}.
-\item As per the P\+J\+RC website, {\ttfamily Serial.\+flush()} waits for the buffer to clear, but might not actually initiate the clearing.
+\item Both {\ttfamily Serial.\+flush()} and {\ttfamily Serial.\+send\+\_\+now()} wrap {\ttfamily usb\+\_\+serial\+\_\+flush\+\_\+output();}. Reference 
 \end{DoxyItemize}
 
 \subsection*{S\+L\+OC as on 28/08/21}

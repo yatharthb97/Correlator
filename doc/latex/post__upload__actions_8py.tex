@@ -1,0 +1,49 @@
+\hypertarget{post__upload__actions_8py}{}\section{code/python/post\+\_\+upload\+\_\+actions.py File Reference}
+\label{post__upload__actions_8py}\index{code/python/post\+\_\+upload\+\_\+actions.\+py@{code/python/post\+\_\+upload\+\_\+actions.\+py}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacepost__upload__actions}{post\+\_\+upload\+\_\+actions}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacepost__upload__actions_ae4fafb438c9b8b9c81fadfd36e414dbe}{post\+\_\+upload\+\_\+actions.\+update\+\_\+fn} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacepost__upload__actions_accb09cfbbad171dde59d37a322e7d426}{post\+\_\+upload\+\_\+actions.\+config} = json.\+load(f)
+\item 
+\hyperlink{namespacepost__upload__actions_adee53b372de24d69e9156b1df89e0611}{post\+\_\+upload\+\_\+actions.\+x\+\_\+tau\+\_\+values} = x\+\_\+tics(config\mbox{[}\textquotesingle{}Lin\+Corrs\textquotesingle{}\mbox{]}, config\mbox{[}\textquotesingle{}Series\+Size\textquotesingle{}\mbox{]}, config\mbox{[}\textquotesingle{}Bin\+Ratio\textquotesingle{}\mbox{]})
+\item 
+\hyperlink{namespacepost__upload__actions_a8ce1efa4da6c671aad5bd74a05d6491a}{post\+\_\+upload\+\_\+actions.\+norm\+\_\+values} = points\+\_\+norm\+\_\+template(config\mbox{[}\textquotesingle{}Lin\+Corrs\textquotesingle{}\mbox{]}, config\mbox{[}\textquotesingle{}Series\+Size\textquotesingle{}\mbox{]}, config\mbox{[}\textquotesingle{}Bin\+Ratio\textquotesingle{}\mbox{]})
+\item 
+\hyperlink{namespacepost__upload__actions_ab550bd3db3e82b8d71d3f5962bdf3b01}{post\+\_\+upload\+\_\+actions.\+name\+\_\+} = str(time.\+time\+\_\+ns())
+\item 
+string \hyperlink{namespacepost__upload__actions_a9989a70c849a81f874a7499fe566446c}{post\+\_\+upload\+\_\+actions.\+y\+\_\+file\+\_\+name} = f\char`\"{}\{name\+\_\+\}\+\_\+y.\+dat\char`\"{}
+\item 
+string \hyperlink{namespacepost__upload__actions_a69a8dece1cead975550839950d39ac2c}{post\+\_\+upload\+\_\+actions.\+x\+\_\+file\+\_\+name} = f\char`\"{}\{name\+\_\+\}\+\_\+x\+\_\+taus.\+dat\char`\"{}
+\item 
+\hyperlink{namespacepost__upload__actions_afffee9403d0b5fc3e9dab1f30f771e0e}{post\+\_\+upload\+\_\+actions.\+fmt}
+\item 
+\hyperlink{namespacepost__upload__actions_afb35f51de2003a038c02100770ee1ab9}{post\+\_\+upload\+\_\+actions.\+newline}
+\item 
+\hyperlink{namespacepost__upload__actions_a007e73e512c986469933678ddb96bf21}{post\+\_\+upload\+\_\+actions.\+datafile} = open(y\+\_\+file\+\_\+name, \textquotesingle{}a\textquotesingle{})
+\item 
+\hyperlink{namespacepost__upload__actions_a93beac961ecb11f5cd375de68d537536}{post\+\_\+upload\+\_\+actions.\+port} = Serial(port=config\mbox{[}\char`\"{}Port\char`\"{}\mbox{]}, baudrate=config\mbox{[}\char`\"{}Baud\char`\"{}\mbox{]}, timeout=0.\+5)
+\item 
+\hyperlink{namespacepost__upload__actions_aa34f3f575b899b8e81ca18407b45eef7}{post\+\_\+upload\+\_\+actions.\+app} = Qt\+Gui.\+Q\+Application(\mbox{[}$\,$\mbox{]})
+\item 
+\hyperlink{namespacepost__upload__actions_a6cf065c9f8b86253545865d6e0a2a879}{post\+\_\+upload\+\_\+actions.\+window} = pg.\+Graphics\+Layout\+Widget(show=True, title= f\char`\"{}Auto-\/Correlation Plot -\/ \{config\mbox{[}\textquotesingle{}Port\textquotesingle{}\mbox{]}\}\char`\"{})
+\item 
+\hyperlink{namespacepost__upload__actions_a794b55b7fa3378176059f54fbf9b3b51}{post\+\_\+upload\+\_\+actions.\+antialias}
+\item 
+\hyperlink{namespacepost__upload__actions_a8296d2fcc016826c1f0cff7c58dbd49d}{post\+\_\+upload\+\_\+actions.\+graph} = window.\+add\+Plot(title=\char`\"{}Auto-\/Correlation Plot\char`\"{})
+\item 
+\hyperlink{namespacepost__upload__actions_aed0ea70905ed0bebf27087552b59f95c}{post\+\_\+upload\+\_\+actions.\+curve} = graph.\+plot(pen=\textquotesingle{}y\textquotesingle{})
+\item 
+\hyperlink{namespacepost__upload__actions_a48e3e214dacb2b33e0ac69daa02e824a}{post\+\_\+upload\+\_\+actions.\+wait\+\_\+time\+\_\+ms} = config\mbox{[}\textquotesingle{}Sampling\+Delay\+\_\+ms\textquotesingle{}\mbox{]}
+\item 
+\hyperlink{namespacepost__upload__actions_a2fb797e73ff270f11d2e2e5b67c23333}{post\+\_\+upload\+\_\+actions.\+timer} = Qt\+Core.\+Q\+Timer()
+\end{DoxyCompactItemize}

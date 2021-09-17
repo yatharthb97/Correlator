@@ -1,18 +1,25 @@
-.TH "LEDSet" 3 "Fri Sep 3 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "LEDSet< SET_SIZE >" 3 "Fri Sep 17 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-LEDSet
+LEDSet< SET_SIZE >
 .SH SYNOPSIS
 .br
 .PP
 .PP
 \fC#include <ledset\&.hpp>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBledstate_t\fP { \fBOFF\fP = 0, \fBON\fP = 1, \fBAnalog\fP = 2 }"
+.br
+.in -1c
 .SS "Public Member Functions"
 
 .in +1c
 .ti -1c
-.RI "\fBLEDSet\fP ()"
+.RI "\fBLEDSet\fP (std::initializer_list< unsigned int > pins)"
 .br
 .RI "Constructor for \fBLEDSet\fP class\&. "
 .ti -1c
@@ -26,27 +33,39 @@ LEDSet
 .ti -1c
 .RI "void \fBstate_reload\fP ()"
 .br
-.RI "Sets the LEDs digitally to max brighnes, based on their switch state\&. "
+.RI "Sets the LEDs based on the value of the corresponding state variable\&. This function is useful when the state is altered seperately from the digitalWrite calls\&. The function also calls pinMode() which muxes the pins to gpio\&. For State == Analog: The state maintains the analog dim state\&. "
+.ti -1c
+.RI "void \fBON_todigital\fP ()"
+.br
+.RI "Sets all leds with states (ON == 1) and (Analog == 2) to (ON == 1)\&. "
 .ti -1c
 .RI "void \fBtoggle_all\fP ()"
 .br
-.RI "Toggles the state of all the LEDs\&. "
+.RI "Toggles the state of all the LEDs\&. This is a pure digital function and destroys all Analog dim states\&. "
+.ti -1c
+.RI "void \fBtoggle\fP (int pin, double time_ms)"
+.br
+.RI "Toggles the state of a particular LED\&. This is a pure digital function and destroys all Analog dim states\&. "
 .ti -1c
 .RI "void \fBtoggle_all_routine\fP (int delay_ms)"
 .br
 .ti -1c
-.RI "void \fBdim\fP (unsigned int analog_val)"
+.RI "void \fBdim\fP (int pin, unsigned int analog_val)"
 .br
-.RI "Dims the ON-LEDs with the provided analog voltage\&. Only affects LEDs that are ON\&. "
+.RI "dims a particular valid led pin\&. "
 .ti -1c
-.RI "void \fBdim_routine\fP (unsigned int end_analog_val)"
+.RI "void \fBdim_all\fP (unsigned int analog_val)"
+.br
+.RI "Dims the ON-LEDs with the provided analog voltage\&. Only affects LEDs that are ON or on Analog Mode\&. "
+.ti -1c
+.RI "void \fBdim_routine\fP (unsigned int end_analog_val, double time_s)"
 .br
 .ti -1c
-.RI "void \fBmin_brighness\fP ()"
+.RI "void \fBmax_bright_all\fP ()"
 .br
 .RI "Sets maximum brightness for all ON-LEDs\&. "
 .ti -1c
-.RI "void \fBmin_brightness\fP ()"
+.RI "void \fBmin_bright_all\fP ()"
 .br
 .ti -1c
 .RI "void \fBset_all\fP () __attribute__((always_inline))"
@@ -66,7 +85,7 @@ LEDSet
 .ti -1c
 .RI "void \fBset\fP (int led_pin1, int led_pin2) __attribute__((always_inline))"
 .br
-.RI "Turn-ON two LED Pins simultaneously\&. "
+.RI "Turn-ON two LED Pins simultaneously\&. The function only works if both the Pins are valid pins\&. "
 .ti -1c
 .RI "void \fBunset\fP (int led_pin1, int led_pin2) __attribute__((always_inline))"
 .br
@@ -80,21 +99,33 @@ LEDSet
 .br
 .RI "Turn-FF three LED Pins simultaneously\&. "
 .ti -1c
-.RI "void \fBerror\fP (int pin) __attribute__((always_inline))"
+.RI "void \fBerror\fP (int pin)"
 .br
+.RI "Special function that sets a valid pin and sets the flag \fCLedSet::Error_State\fP to true\&. This function also clears all LED states prior to the Error State but does not modify states set after the error state\&. "
+.ti -1c
+.RI "void \fBassert_errors\fP ()"
+.br
+.RI "Special function that initiates a special routine if the device is in the Error State\&. It also calls \fCabort()\fP , if that feature macro is enabled\&. "
+.ti -1c
+.RI "bool \fBis_valid_pin\fP (int pin)"
+.br
+.RI "Returns whether the given pin is a 'valid pin'\&. A valid pin is a pin that is registered with the \fBLEDSet\fP\&. "
 .in -1c
 .SS "Public Attributes"
 
 .in +1c
 .ti -1c
-.RI "const int \fBLEDs\fP [6] = {LED_BUILTIN, \fBLED_RED\fP, \fBLED_BLUE\fP, \fBLED_YELLOW\fP, \fBLED_WHITE\fP, \fBLED_GREEN\fP}"
+.RI "const int \fBLEDs\fP [SET_SIZE] = {\fBSAFE_OUTPUT_DUMP_PIN\fP}"
 .br
+.RI "LED pins\&. "
 .ti -1c
-.RI "bool \fBLEDStatus\fP [6]"
+.RI "unsigned int \fBState\fP [SET_SIZE]"
 .br
+.RI "ON-OFF/Analog states for all LEDs\&. "
 .ti -1c
-.RI "bool \fBError_State\fP"
+.RI "bool \fBError_State\fP = false"
 .br
+.RI "Whether the LED Panel is in an error state\&. "
 .in -1c
 .SS "Private Member Functions"
 
@@ -106,24 +137,58 @@ LEDSet
 .in -1c
 .SH "Detailed Description"
 .PP 
-an interface for accessing the LEDs on the dashboard and the BUILTIN LED\&. Theobject serves primarily as a bookeeping object, and hence, enables state conservation and switching\&. 
+
+.SS "template<unsigned int SET_SIZE>
+.br
+class LEDSet< SET_SIZE >"
+an interface for accessing the LEDs on the dashboar\&. The object serves primarily as a bookeeping object, and hence, enables state conservation and switching, and automatically manages dimming, and complex routines\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "template<unsigned int SET_SIZE> enum \fBLEDSet::ledstate_t\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIOFF \fP\fP
+.TP
+\fB\fION \fP\fP
+.TP
+\fB\fIAnalog \fP\fP
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "LEDSet::LEDSet ()\fC [inline]\fP"
+.SS "template<unsigned int SET_SIZE> \fBLEDSet\fP< SET_SIZE >::\fBLEDSet\fP (std::initializer_list< unsigned int > pins)\fC [inline]\fP"
 
 .PP
 Constructor for \fBLEDSet\fP class\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpins\fP - list of LED pins\&. 
+.RE
+.PP
+
 .SH "Member Function Documentation"
 .PP 
-.SS "void LEDSet::dim (unsigned int analog_val)\fC [inline]\fP"
+.SS "template<unsigned int SET_SIZE> void \fBLEDSet\fP< SET_SIZE >::assert_errors ()\fC [inline]\fP"
 
 .PP
-Dims the ON-LEDs with the provided analog voltage\&. Only affects LEDs that are ON\&. 
-.SS "void LEDSet::dim_routine (unsigned int end_analog_val)\fC [inline]\fP"
+Special function that initiates a special routine if the device is in the Error State\&. It also calls \fCabort()\fP , if that feature macro is enabled\&. 
+.SS "template<unsigned int SET_SIZE> void \fBLEDSet\fP< SET_SIZE >::dim (int pin, unsigned int analog_val)\fC [inline]\fP"
 
-.SS "void LEDSet::error (int pin)\fC [inline]\fP"
+.PP
+dims a particular valid led pin\&. 
+.SS "template<unsigned int SET_SIZE> void \fBLEDSet\fP< SET_SIZE >::dim_all (unsigned int analog_val)\fC [inline]\fP"
 
-.SS "int LEDSet::fetch_index (int pin)\fC [inline]\fP, \fC [private]\fP"
+.PP
+Dims the ON-LEDs with the provided analog voltage\&. Only affects LEDs that are ON or on Analog Mode\&. 
+.SS "template<unsigned int SET_SIZE> void \fBLEDSet\fP< SET_SIZE >::dim_routine (unsigned int end_analog_val, double time_s)\fC [inline]\fP"
+
+.SS "template<unsigned int SET_SIZE> void \fBLEDSet\fP< SET_SIZE >::error (int pin)\fC [inline]\fP"
+
+.PP
+Special function that sets a valid pin and sets the flag \fCLedSet::Error_State\fP to true\&. This function also clears all LED states prior to the Error State but does not modify states set after the error state\&. 
+.SS "template<unsigned int SET_SIZE> int \fBLEDSet\fP< SET_SIZE >::fetch_index (int pin)\fC [inline]\fP, \fC [private]\fP"
 
 .PP
 Retrive data structure index based on the pin number\&. Returns -1 if the pin was not found\&. 
@@ -134,68 +199,86 @@ Local array index of pin in the LEDs array (bookeeping object)\&. -1 if the sear
 .RE
 .PP
 
-.SS "void LEDSet::init ()\fC [inline]\fP"
+.SS "template<unsigned int SET_SIZE> void \fBLEDSet\fP< SET_SIZE >::init ()\fC [inline]\fP"
 
 .PP
 Sets up the pin mode of all LEDs\&. 
-.SS "void LEDSet::min_brighness ()\fC [inline]\fP"
+.SS "template<unsigned int SET_SIZE> bool \fBLEDSet\fP< SET_SIZE >::is_valid_pin (int pin)\fC [inline]\fP"
+
+.PP
+Returns whether the given pin is a 'valid pin'\&. A valid pin is a pin that is registered with the \fBLEDSet\fP\&. 
+.SS "template<unsigned int SET_SIZE> void \fBLEDSet\fP< SET_SIZE >::max_bright_all ()\fC [inline]\fP"
 
 .PP
 Sets maximum brightness for all ON-LEDs\&. 
-.SS "void LEDSet::min_brightness ()\fC [inline]\fP"
+.SS "template<unsigned int SET_SIZE> void \fBLEDSet\fP< SET_SIZE >::min_bright_all ()\fC [inline]\fP"
 Sets the minimum brighness for all ON-LEDs\&. 
-.SS "void LEDSet::set (int led_pin)\fC [inline]\fP"
+.SS "template<unsigned int SET_SIZE> void \fBLEDSet\fP< SET_SIZE >::ON_todigital ()\fC [inline]\fP"
+
+.PP
+Sets all leds with states (ON == 1) and (Analog == 2) to (ON == 1)\&. 
+.SS "template<unsigned int SET_SIZE> void \fBLEDSet\fP< SET_SIZE >::set (int led_pin)\fC [inline]\fP"
 
 .PP
 Turn-ON a particular LED Pin\&. 
-.SS "void LEDSet::set (int led_pin1, int led_pin2)\fC [inline]\fP"
+.SS "template<unsigned int SET_SIZE> void \fBLEDSet\fP< SET_SIZE >::set (int led_pin1, int led_pin2)\fC [inline]\fP"
 
 .PP
-Turn-ON two LED Pins simultaneously\&. 
-.SS "void LEDSet::set (int led_pin1, int led_pin2, int led_pin3)\fC [inline]\fP"
+Turn-ON two LED Pins simultaneously\&. The function only works if both the Pins are valid pins\&. 
+.SS "template<unsigned int SET_SIZE> void \fBLEDSet\fP< SET_SIZE >::set (int led_pin1, int led_pin2, int led_pin3)\fC [inline]\fP"
 
 .PP
 Turn-ON three LED Pins simultaneously\&. 
-.SS "void LEDSet::set_all ()\fC [inline]\fP"
+.SS "template<unsigned int SET_SIZE> void \fBLEDSet\fP< SET_SIZE >::set_all ()\fC [inline]\fP"
 
 .PP
 Turn on all available LEDs\&. 
-.SS "unsigned int LEDSet::size ()\fC [inline]\fP"
+.SS "template<unsigned int SET_SIZE> unsigned int \fBLEDSet\fP< SET_SIZE >::size ()\fC [inline]\fP"
 
 .PP
 Returns the size of the led sets\&. 
-.SS "void LEDSet::state_reload ()\fC [inline]\fP"
+.SS "template<unsigned int SET_SIZE> void \fBLEDSet\fP< SET_SIZE >::state_reload ()\fC [inline]\fP"
 
 .PP
-Sets the LEDs digitally to max brighnes, based on their switch state\&. 
-.SS "void LEDSet::toggle_all ()\fC [inline]\fP"
+Sets the LEDs based on the value of the corresponding state variable\&. This function is useful when the state is altered seperately from the digitalWrite calls\&. The function also calls pinMode() which muxes the pins to gpio\&. For State == Analog: The state maintains the analog dim state\&. 
+.SS "template<unsigned int SET_SIZE> void \fBLEDSet\fP< SET_SIZE >::toggle (int pin, double time_ms)\fC [inline]\fP"
 
 .PP
-Toggles the state of all the LEDs\&. 
-.SS "void LEDSet::toggle_all_routine (int delay_ms)\fC [inline]\fP"
+Toggles the state of a particular LED\&. This is a pure digital function and destroys all Analog dim states\&. 
+.SS "template<unsigned int SET_SIZE> void \fBLEDSet\fP< SET_SIZE >::toggle_all ()\fC [inline]\fP"
 
-.SS "void LEDSet::unset (int led_pin)\fC [inline]\fP"
+.PP
+Toggles the state of all the LEDs\&. This is a pure digital function and destroys all Analog dim states\&. 
+.SS "template<unsigned int SET_SIZE> void \fBLEDSet\fP< SET_SIZE >::toggle_all_routine (int delay_ms)\fC [inline]\fP"
+
+.SS "template<unsigned int SET_SIZE> void \fBLEDSet\fP< SET_SIZE >::unset (int led_pin)\fC [inline]\fP"
 
 .PP
 Turn-OFF a particular LED Pin\&. 
-.SS "void LEDSet::unset (int led_pin1, int led_pin2)\fC [inline]\fP"
+.SS "template<unsigned int SET_SIZE> void \fBLEDSet\fP< SET_SIZE >::unset (int led_pin1, int led_pin2)\fC [inline]\fP"
 
 .PP
 Turn-OFF two LED Pins simultaneously\&. 
-.SS "void LEDSet::unset (int led_pin1, int led_pin2, int led_pin3)\fC [inline]\fP"
+.SS "template<unsigned int SET_SIZE> void \fBLEDSet\fP< SET_SIZE >::unset (int led_pin1, int led_pin2, int led_pin3)\fC [inline]\fP"
 
 .PP
 Turn-FF three LED Pins simultaneously\&. 
-.SS "void LEDSet::unset_all ()\fC [inline]\fP"
+.SS "template<unsigned int SET_SIZE> void \fBLEDSet\fP< SET_SIZE >::unset_all ()\fC [inline]\fP"
 Turn off all available LEDs\&. 
 .SH "Member Data Documentation"
 .PP 
-.SS "bool LEDSet::Error_State"
+.SS "template<unsigned int SET_SIZE> bool \fBLEDSet\fP< SET_SIZE >::Error_State = false"
 
-.SS "const int LEDSet::LEDs[6] = {LED_BUILTIN, \fBLED_RED\fP, \fBLED_BLUE\fP, \fBLED_YELLOW\fP, \fBLED_WHITE\fP, \fBLED_GREEN\fP}"
+.PP
+Whether the LED Panel is in an error state\&. 
+.SS "template<unsigned int SET_SIZE> const int \fBLEDSet\fP< SET_SIZE >::LEDs[SET_SIZE] = {\fBSAFE_OUTPUT_DUMP_PIN\fP}"
 
-.SS "bool LEDSet::LEDStatus[6]"
+.PP
+LED pins\&. 
+.SS "template<unsigned int SET_SIZE> unsigned int \fBLEDSet\fP< SET_SIZE >::State[SET_SIZE]"
 
+.PP
+ON-OFF/Analog states for all LEDs\&. 
 
 .SH "Author"
 .PP 

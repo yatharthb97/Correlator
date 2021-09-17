@@ -1,8 +1,7 @@
 \hypertarget{types_8hpp}{}\section{code/types.hpp File Reference}
 \label{types_8hpp}\index{code/types.\+hpp@{code/types.\+hpp}}
 {\ttfamily \#include $<$cstdint$>$}\newline
-Include dependency graph for types.\+hpp\+:
-\nopagebreak
+Include dependency graph for types.\+hpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,7 +20,9 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{DoxyCompactItemize}
 \item 
 using \hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} = uint32\+\_\+t
-\begin{DoxyCompactList}\small\item\em Data type received from the pulse counter. It is the fundamental type used for representing series data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Data type received from the pulse counter. It is the fundamental type used for representing series data. \end{DoxyCompactList}\item 
+using \hyperlink{types_8hpp_a7c40bb931c31595ed6308605f4537447}{index\+\_\+t} = uint\+\_\+fast8\+\_\+t
+\begin{DoxyCompactList}\small\item\em It is used as the array indices and thus determine the maximum size of the Channel\+\_\+array and the Series\+\_\+array. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Typedef Documentation}
@@ -34,4 +35,14 @@ using \hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} =
 
 
 Data type received from the pulse counter. It is the fundamental type used for representing series data. 
+
+\mbox{\Hypertarget{types_8hpp_a7c40bb931c31595ed6308605f4537447}\label{types_8hpp_a7c40bb931c31595ed6308605f4537447}} 
+\index{types.\+hpp@{types.\+hpp}!index\+\_\+t@{index\+\_\+t}}
+\index{index\+\_\+t@{index\+\_\+t}!types.\+hpp@{types.\+hpp}}
+\subsubsection{\texorpdfstring{index\+\_\+t}{index\_t}}
+{\footnotesize\ttfamily using \hyperlink{types_8hpp_a7c40bb931c31595ed6308605f4537447}{index\+\_\+t} =  uint\+\_\+fast8\+\_\+t}
+
+
+
+It is used as the array indices and thus determine the maximum size of the Channel\+\_\+array and the Series\+\_\+array. 
 

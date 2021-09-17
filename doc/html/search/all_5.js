@@ -6,8 +6,8 @@ var searchData=
   ['er_5finput_5fvalidation',['ER_INPUT_VALIDATION',['../pins_8hpp.html#a3bf66a7f687091434a704c61863c3141',1,'pins.hpp']]],
   ['er_5foverflow_5fpin',['ER_OVERFLOW_PIN',['../pins_8hpp.html#ae73bc7e4372631b754daf933169b2a16',1,'pins.hpp']]],
   ['er_5fprecision_5fpin',['ER_PRECISION_PIN',['../pins_8hpp.html#a01ff5c1b8f46ca9504e840c5aaf9fd64',1,'pins.hpp']]],
-  ['error',['error',['../classLEDSet.html#aee9276cba956882a006f7cdd6124e487',1,'LEDSet']]],
-  ['error_5fstate',['Error_State',['../classLEDSet.html#aed8105506190d87caa13c36174aa31bd',1,'LEDSet']]],
+  ['error',['error',['../classLEDSet.html#aa392b74b090de60a25f7577195327afd',1,'LEDSet']]],
+  ['error_5fstate',['Error_State',['../classLEDSet.html#af9c6ea1d0006d7427c82e8e56f9f2de5',1,'LEDSet']]],
   ['error_5ft',['Error_t',['../errors_8hpp.html#a4e8c0d09726859e3d3369c0da5a1aa7f',1,'errors.hpp']]],
   ['errors',['Errors',['../namespaceErrors.html',1,'']]],
   ['errors_2ehpp',['errors.hpp',['../errors_8hpp.html',1,'']]]

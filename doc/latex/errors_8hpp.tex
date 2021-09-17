@@ -2,7 +2,7 @@
 \label{errors_8hpp}\index{code/hardware/errors.\+hpp@{code/hardware/errors.\+hpp}}
 {\ttfamily \#include \char`\"{}pins.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}./../types.\+hpp\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}ledset.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ledpanel.\+hpp\char`\"{}}\newline
 {\ttfamily \#include $<$Arduino.\+h$>$}\newline
 Include dependency graph for errors.\+hpp\+:
 \nopagebreak
@@ -28,8 +28,8 @@ This graph shows which files directly or indirectly include this file\+:
 \subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{errors_8hpp_a0eb326048ed31037a6e5ec5634a6202e}{T\+E\+E\+N\+S\+Y\+\_\+\+M\+A\+X\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+ON}~100
-\end{DoxyCompactItemize}
+\#define \hyperlink{errors_8hpp_a0eb326048ed31037a6e5ec5634a6202e}{T\+E\+E\+N\+S\+Y\+\_\+\+M\+A\+X\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+ON}~125000
+\begin{DoxyCompactList}\small\item\em This file contain the Common Error Codes for Software-\/\+Hardware Interface. It defines the {\ttfamily Error\+\_\+t} and namespace {\ttfamily \hyperlink{namespaceErrors}{Errors}} that are used to handle the errors and interact with the L\+ED dashboard. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
@@ -40,21 +40,19 @@ enum \hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7f}{Error\+\_\+t} \{ 
 \hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fabe5edab59de4ea30531374e506b03822}{Error\+\_\+t\+::\+Precision}, 
 \newline
 \hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa7e748bca7005cc737bad51b247997421}{Error\+\_\+t\+::\+Input\+\_\+\+Validation}
- \}\begin{DoxyCompactList}\small\item\em This file contain the Common Error Codes for Software-\/\+Hardware Interface. It defines the {\ttfamily Error\+\_\+t} and namespace {\ttfamily \hyperlink{namespaceErrors}{Errors}} that are used to handle the errors and interact with the L\+ED dashboard. \end{DoxyCompactList}
+ \}\begin{DoxyCompactList}\small\item\em Enumarates the error codes thrown by the different modules. \end{DoxyCompactList}
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{namespaceErrors_a8f082a1fb43d231480a51452d20a60ad}{Errors\+::\+Validate} (const \hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7f}{Error\+\_\+t} error, const \hyperlink{classLEDSet}{L\+E\+D\+Set} \&ledset)
+void \hyperlink{namespaceErrors_a1fcd582e2074f8fad3a450d1b6b42aaa}{Errors\+::\+Validate} (const \hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7f}{Error\+\_\+t} error)
 \begin{DoxyCompactList}\small\item\em Receives an error state and sets up the corresponding L\+ED indicator. \end{DoxyCompactList}\item 
 \hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7f}{Error\+\_\+t} \hyperlink{namespaceErrors_a13171d3d324164c9f7a9508d5a16b0c5}{Errors\+::\+Precison\+\_\+\+Threshold} (double error\+\_\+val, double error\+\_\+limit)
 \begin{DoxyCompactList}\small\item\em Receives error value and error threshold and returns an appropriate error state. \end{DoxyCompactList}\item 
 {\footnotesize template$<$unsigned int Lin\+\_\+channels, index\+\_\+t Series\+\_\+size, unsigned int Bin\+\_\+\+Ratio$>$ }\\\hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7f}{Error\+\_\+t} \hyperlink{namespaceErrors_a7010d07de8236f9a17b302c78f37483e}{Errors\+::\+Auto\+\_\+\+Multi\+Tau\+\_\+\+Input\+\_\+\+Validator} ()
-\item 
-void \hyperlink{errors_8hpp_acf8eb186ad61c771416f4f05fcfe5ab0}{\+\_\+assert\+\_\+} (bool expression, char $\ast$\+\_\+\+\_\+attribute\+\_\+\+\_\+((unused)) message=\char`\"{}\char`\"{})
-\begin{DoxyCompactList}\small\item\em Custom runtime assert function that sets all the dashboard L\+E\+Ds to high. \end{DoxyCompactList}\item 
-void \hyperlink{errors_8hpp_a0e6cbb0b01783d31c096f813e8e3a1d5}{\+\_\+assert\+\_\+} (bool expression)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Input Validator for Multi\+Tau auto-\/correlator. \end{DoxyCompactList}\item 
+void \hyperlink{errors_8hpp_a869de67c8fd9dd06b265e93a6741ede6}{\+\_\+assert\+\_\+} (bool expression, const char $\ast$\+\_\+\+\_\+attribute\+\_\+\+\_\+((unused)) message=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Custom assertion function. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Macro Definition Documentation}
@@ -62,8 +60,15 @@ void \hyperlink{errors_8hpp_a0e6cbb0b01783d31c096f813e8e3a1d5}{\+\_\+assert\+\_\
 \index{errors.\+hpp@{errors.\+hpp}!T\+E\+E\+N\+S\+Y\+\_\+\+M\+A\+X\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+ON@{T\+E\+E\+N\+S\+Y\+\_\+\+M\+A\+X\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+ON}}
 \index{T\+E\+E\+N\+S\+Y\+\_\+\+M\+A\+X\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+ON@{T\+E\+E\+N\+S\+Y\+\_\+\+M\+A\+X\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+ON}!errors.\+hpp@{errors.\+hpp}}
 \subsubsection{\texorpdfstring{T\+E\+E\+N\+S\+Y\+\_\+\+M\+A\+X\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+ON}{TEENSY\_MAX\_ALLOCATION}}
-{\footnotesize\ttfamily \#define T\+E\+E\+N\+S\+Y\+\_\+\+M\+A\+X\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+ON~100}
+{\footnotesize\ttfamily \#define T\+E\+E\+N\+S\+Y\+\_\+\+M\+A\+X\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+ON~125000}
 
+
+
+This file contain the Common Error Codes for Software-\/\+Hardware Interface. It defines the {\ttfamily Error\+\_\+t} and namespace {\ttfamily \hyperlink{namespaceErrors}{Errors}} that are used to handle the errors and interact with the L\+ED dashboard. 
+
+\begin{DoxyAuthor}{Author}
+Yatharth Bhasin (github → yatharthb97) Maximum Allocations of 32-\/bit integers allowed on the microcontroller Teensy. 
+\end{DoxyAuthor}
 
 
 \subsection{Enumeration Type Documentation}
@@ -75,26 +80,23 @@ void \hyperlink{errors_8hpp_a0e6cbb0b01783d31c096f813e8e3a1d5}{\+\_\+assert\+\_\
 
 
 
-This file contain the Common Error Codes for Software-\/\+Hardware Interface. It defines the {\ttfamily Error\+\_\+t} and namespace {\ttfamily \hyperlink{namespaceErrors}{Errors}} that are used to handle the errors and interact with the L\+ED dashboard. 
+Enumarates the error codes thrown by the different modules. 
 
-\begin{DoxyAuthor}{Author}
-Yatharth Bhasin (github → yatharthb97) Enumarates the error codes thrown by the different modules. 
-\end{DoxyAuthor}
 \begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{Success@{Success}!errors.\+hpp@{errors.\+hpp}}\index{errors.\+hpp@{errors.\+hpp}!Success@{Success}}}\mbox{\Hypertarget{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa505a83f220c02df2f85c3810cd9ceb38}\label{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa505a83f220c02df2f85c3810cd9ceb38}} 
 Success&No error. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{Counter\+\_\+\+Overflow@{Counter\+\_\+\+Overflow}!errors.\+hpp@{errors.\+hpp}}\index{errors.\+hpp@{errors.\+hpp}!Counter\+\_\+\+Overflow@{Counter\+\_\+\+Overflow}}}\mbox{\Hypertarget{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa8347bab2e74e4a640d76c916306a1a36}\label{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa8347bab2e74e4a640d76c916306a1a36}} 
-Counter\+\_\+\+Overflow&\\
+Counter\+\_\+\+Overflow&Passed Value caused a counter overflow. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{Counter\+\_\+\+Underflow@{Counter\+\_\+\+Underflow}!errors.\+hpp@{errors.\+hpp}}\index{errors.\+hpp@{errors.\+hpp}!Counter\+\_\+\+Underflow@{Counter\+\_\+\+Underflow}}}\mbox{\Hypertarget{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa02b02f5e5e61f24acdd91338b95997da}\label{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa02b02f5e5e61f24acdd91338b95997da}} 
-Counter\+\_\+\+Underflow&\\
+Counter\+\_\+\+Underflow&Passed Value caused a counter underflow. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{Precision@{Precision}!errors.\+hpp@{errors.\+hpp}}\index{errors.\+hpp@{errors.\+hpp}!Precision@{Precision}}}\mbox{\Hypertarget{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fabe5edab59de4ea30531374e506b03822}\label{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fabe5edab59de4ea30531374e506b03822}} 
-Precision&The error due to finite resolution is greater than acceptable. \\
+Precision&Error generated when difference due to finite resolution is greater than acceptable. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{Input\+\_\+\+Validation@{Input\+\_\+\+Validation}!errors.\+hpp@{errors.\+hpp}}\index{errors.\+hpp@{errors.\+hpp}!Input\+\_\+\+Validation@{Input\+\_\+\+Validation}}}\mbox{\Hypertarget{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa7e748bca7005cc737bad51b247997421}\label{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa7e748bca7005cc737bad51b247997421}} 
@@ -105,26 +107,20 @@ Input\+\_\+\+Validation&Input validation failed. \\
 
 
 \subsection{Function Documentation}
-\mbox{\Hypertarget{errors_8hpp_acf8eb186ad61c771416f4f05fcfe5ab0}\label{errors_8hpp_acf8eb186ad61c771416f4f05fcfe5ab0}} 
+\mbox{\Hypertarget{errors_8hpp_a869de67c8fd9dd06b265e93a6741ede6}\label{errors_8hpp_a869de67c8fd9dd06b265e93a6741ede6}} 
 \index{errors.\+hpp@{errors.\+hpp}!\+\_\+assert\+\_\+@{\+\_\+assert\+\_\+}}
 \index{\+\_\+assert\+\_\+@{\+\_\+assert\+\_\+}!errors.\+hpp@{errors.\+hpp}}
-\subsubsection{\texorpdfstring{\+\_\+assert\+\_\+()}{\_assert\_()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void \+\_\+assert\+\_\+ (\begin{DoxyParamCaption}\item[{bool}]{expression,  }\item[{char $\ast$\+\_\+\+\_\+attribute\+\_\+\+\_\+((unused))}]{message = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+\subsubsection{\texorpdfstring{\+\_\+assert\+\_\+()}{\_assert\_()}}
+{\footnotesize\ttfamily void \+\_\+assert\+\_\+ (\begin{DoxyParamCaption}\item[{bool}]{expression,  }\item[{const char $\ast$\+\_\+\+\_\+attribute\+\_\+\+\_\+((unused))}]{message = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
 
 
-
-Custom runtime assert function that sets all the dashboard L\+E\+Ds to high. 
 
 Custom assertion function. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em expression} & which must evaluate to false for the assertion to call abort. \\
 \hline
 {\em message} & which is ignored in the function, but helps with code redability \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{errors_8hpp_a0e6cbb0b01783d31c096f813e8e3a1d5}\label{errors_8hpp_a0e6cbb0b01783d31c096f813e8e3a1d5}} 
-\index{errors.\+hpp@{errors.\+hpp}!\+\_\+assert\+\_\+@{\+\_\+assert\+\_\+}}
-\index{\+\_\+assert\+\_\+@{\+\_\+assert\+\_\+}!errors.\+hpp@{errors.\+hpp}}
-\subsubsection{\texorpdfstring{\+\_\+assert\+\_\+()}{\_assert\_()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void \+\_\+assert\+\_\+ (\begin{DoxyParamCaption}\item[{bool}]{expression }\end{DoxyParamCaption})}
-
