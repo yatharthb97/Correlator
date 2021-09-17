@@ -2,15 +2,16 @@
 
 #include <Arduino.h>
 #include "./../types.hpp"
-//#include "Lin_ACorr_RT_Base.hpp"
 #include "simpler_circular_buffer.hpp"
+
+#include <algorithm>
 
 
 /** @brief This is an implementation of Lin_ACorr_RT_Base for Teensy with \b(No normalisation or baseline subtraction.)
  * \note{ Template parameter -  Size of the Series and Channel array and indicates the maximum points that can be stored by the correlator object. The circuular buffer will then rewrite the older points to accomodate for the other points. }
  * */
 template <index_t Series_size>
-class Lin_ACorr_RT_Teensy// : public Lin_ACorr_RT_Base
+class Lin_ACorr_RT_Teensy
 {
 
 public:
@@ -20,7 +21,8 @@ public:
 
   index_t Series_index = 0; //! Stores the last active index → Post-increment
 
-  void inline push_datum(counter_t datum) //override
+  /** @brief Excepts new data value and processes it. */
+  void inline push_datum(counter_t datum)
   {
     Series_array.push_back(datum);
 
@@ -34,9 +36,9 @@ public:
 
 
   //2
-  void __attribute__((flatten)) push_data(const counter_t *container, const index_t size) //override
+  /** @brief Repeatedly calls `push_datum()` on the given container of values, one at a time. */
+  void __attribute__((flatten)) push_data(const counter_t *container, const index_t size)
   {
-    //unsigned int size = std::distance(std::begin(container), std::end(container));
     for (int i = 0; i < size; i++)
     {
       push_datum(container[i]);
@@ -51,16 +53,19 @@ public:
 
 
   //4
-  void __attribute__((flatten)) ch_out() const //override
+  /** @brief Outputs the complete channel to the Serial port. */
+  void __attribute__((flatten)) ch_out() const
   {
      //                                             ↓ Which is usually uint32_t.
-    uint8_t *buffer = reinterpret_cast<const uint8_t *> (Channel_array); 
-    Serial.write(buffer, sizeof(counter_t) * Series_size);
+    //uint8_t *buffer = reinterpret_cast<const uint8_t *> (Channel_array); 
+    Serial.write((char*)&Channel_array, sizeof(counter_t) * Series_size);
   }
+ 
 
 
   //5
-  void __attribute__((flatten)) ch_out_norm() const //override
+  /** @brief Outputs the channel array to the Serial port after normalising it. */
+  void __attribute__((flatten)) ch_out_norm() const
   {
     // TODO - Try to unroll
     for(unsigned int i = 0; i < Series_size; i++)
@@ -71,9 +76,10 @@ public:
 
 
   //6
-  counter_t* __attribute__((always_inline)) get_ch_array()
+  /** @Returns a reference to the channel array. */
+  counter_t* get_ch_array(unsigned int index = 0)
   {
-    return Channel_array;
+    return (const_cast<counter_t*>(Channel_array) +  index);
   }
   
 };

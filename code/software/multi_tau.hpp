@@ -2,7 +2,7 @@
  
 #include <cmath>
 #include "./../types.hpp"
-//#include "Lin_ACorr_RT_Base.hpp"
+
 #include "Lin_ACorr_RT_Teensy.hpp"
 #include "accumulator.hpp"
 #include "discarder.hpp"
@@ -22,7 +22,7 @@ private:
 
 	Accumulator<Series_size> Accumulators[Lin_channels]; //! Accumulator Objects for each channel (Accumulator '0' is redundant.)
 	Lin_ACorr_RT_Teensy<Series_size> Lin_Corrs[Lin_channels]; //! Linear ACorrelators
-	Discarder_Teensy<Series_size, Bin_Ratio, 0> Discarder; //! Discarder that discards first #Bin_Ratio points
+	Discarder_Teensy<Series_size, int(Series_size/Bin_Ratio), 0> Discarder; //! Discarder that discards first #Bin_Ratio points
 	
 public:
 
@@ -82,6 +82,8 @@ public:
 		{
 			Discarder.output(Lin_Corrs[s]);
 		}
+		Serial.println();
+		Serial.flush();
 	}
 
 
