@@ -2,6 +2,7 @@
 
 #include<Arduino.h>
 #include <imxrt.h>
+#include <Entropy.h>
 
 #include "./../code/software/multi_tau.hpp"
 #include "./../code/hardware/pit.hpp"
@@ -24,16 +25,16 @@ volatile bool Update_flag = false; //!< Indicates if a new value has arrived fro
 volatile unsigned int Update_count = 0; //!< Stores the number of updates made on the correlator channels since the last serialout
 
 //Time Values
-uint32_t SerialOut_After = 100000; //! Serial output is done after these many updates
+uint32_t SerialOut_After = 100; //! Serial output is done after these many updates
 const double Gate_time_us = 500; //! The gate time of TTL_C in microseconds (us) 
-const double Allowed_period_error_us = 1; //! Gate time precision error due to finite precision of timers.
+const double Allowed_period_error_us = 0.1; //! Gate time precision error due to finite precision of timers.
 
 //const double Gate_time_us = GATE_TIME; //! The gate time of TTL_C in microseconds (us) 
 //const double Allowed_period_error_us = ALLOWED_GATE_TIME_ERROR; //! Gate time precision error due to finite precision of timers.
 
 // Resources for Testing (temporary)
-#define CHANNEL_SIZE 171
-int array[CHANNEL_SIZE];
+counter_t zeros[CHANNEL_SIZE] = {0};
+
 
 //======================================================
 
@@ -87,8 +88,7 @@ void setup()
   //1. LEDPanel Indicator Setup
   LEDPanel.init(); //Set Pinmode for all LEDs.
   LEDPanel.set(SETUP_LED);
-  LEDPanel.toggle_all_routine(500);
-  LEDPanel.toggle_all_routine(500);
+  LEDPanel.toggle_twice(SETUP_LED, 2000);
 
   //2. Pin Modes
   #if ISR_PIN_TOGGLE == 1
@@ -99,7 +99,7 @@ void setup()
   //3. Serial Setup
   Serial.begin(115200);
   while(!Serial){}
-  Serial.println("Serial Connected!");
+  Serial.write((uint8_t*)&(zeros), sizeof(counter_t)*CHANNEL_SIZE);
 
 
   //3. PIT_t Setup
@@ -116,8 +116,8 @@ void setup()
   TTL_c.init_pins();
 
   //6. Setup is complete
-  LEDPanel.toggle(SETUP_LED, 500);
-  LEDPanel.toggle(SETUP_LED, 500);
+  LEDPanel.toggle_twice(SETUP_LED, 2000);
+  LEDPanel.toggle_twice(SETUP_LED, 2000);
 
   LEDPanel.unset(SETUP_LED);
 
@@ -130,12 +130,6 @@ void setup()
   LEDPanel.assert_errors();
   asm volatile ("dsb");
 
-  //7. Testing block
-  for (int i=0; i < CHANNEL_SIZE; i++) 
-  {
-    array[i] = i;
-  }
-  
 } // End of setup()
 
 
@@ -158,11 +152,12 @@ void loop()
   if(!LEDPanel.Error_State)
   {
     LEDPanel.set(LOOP_LED);
-    LEDPanel.min_bright_all();
+    LEDPanel.dim(LOOP_LED, 124);
   }
-
+  //Entropy.Initialize();
   TTL_c.start();
   PI_t.start();
+  LEDPanel.set(LED_BLUE);
   asm volatile ("dsb");
 
   while(1)
@@ -172,16 +167,21 @@ void loop()
       //Multitau.push_datum(Counter_val);
       Update_flag = false;
       Update_count++;
+      multitau.push_datum(Counter_val);
 
       if(Update_count >= SerialOut_After)
       {
-        //Testing → Serial Out Block
-        Serial.write((char*)&(array), sizeof(int)*CHANNEL_SIZE);
-        Serial.print('\n');
-        Serial.flush();
+
+        //Serial.write((uint8_t*)&(array), sizeof(uint32_t)*CHANNEL_SIZE);
+        LEDPanel.set(LED_WHITE);
+        multitau.ch_out();
+        //Serial.write(Counter_val);
+        //Serial.write((uint8_t*)&(zeros), sizeof(uint32_t)*(CHANNEL_SIZE-1));
+        Serial.send_now();
+        LEDPanel.unset(LED_WHITE);
       
       }//Serial Block
-    
+
     }//Update Block
   
   }//While Loop

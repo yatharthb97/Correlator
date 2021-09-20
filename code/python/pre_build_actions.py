@@ -20,13 +20,15 @@ config = json.load(f)
 f.close()
 
 
+ch_size = channel_size(config['LinCorrs'], config['SeriesSize'], config['BinRatio'])
+
 #3. Append Macros to the build environment
 env.Append(
 CPPDEFINES=[
               ("BIN_RATIO", config["BinRatio"]),
               ("SERIES_SIZE", config["SeriesSize"]),
               ("LIN_CORRS", config["LinCorrs"]),
-              
+              ("CHANNEL_SIZE", ch_size),
               ("GATE_TIME", config["GateTime_us"]),
               ("ALLOWED_GATE_TIME_ERROR", config["AllowedGateTimeError_us"]),
               ("ISR_PIN_TOGGLE", config["ISRPinToggle"]),
@@ -39,7 +41,7 @@ Building Multi-Tau object with:
 Series Size -> {config['SeriesSize']}
 Bin Ratio -> {config["BinRatio"]}
 Linear Correlators -> {config["LinCorrs"]}
-Channel Size -> {channel_size(config['LinCorrs'], config['SeriesSize'], config['BinRatio'])}
+Channel Size -> {ch_size}
 """)
 
 

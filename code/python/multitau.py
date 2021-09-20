@@ -53,28 +53,23 @@ def points_norm(lin_corrs, series_size, bin_ratio, LC0_points):
 
 
 def points_norm_template(lin_corrs, series_size, bin_ratio):
-	return np.array([1] * channel_size(lin_corrs, series_size, bin_ratio))
+	'''
+	Generates and returns a list of normalisation values, which when multiplied by the points
+	fed to the 0th linear Correlator - gives a list of points normalization values for all
+	the tau values.
+	'''
 
+	def points_scale(s): 
+		''' Points handled by the sth linear correlator.'''
+		return (bin_ratio**(-s))
 
+	norm = []
 
-# def points_norm_template(lin_corrs, series_size, bin_ratio):
-# 	'''
-# 	Generates and returns a list of normalisation values, which whn multiplied by the points
-# 	fed to the 0th linear Correlator - gives a list of points normalization values for all
-# 	the tau values.
-# 	'''
-
-# 	def points_scale(s): 
-# 		''' Points handled by the sth linear correlator.'''
-# 		return (bin_ratio**(-s))
-
-# 	norm = []
-
-# 	for s in range(0, Lin_corrs):
-# 		lin_norm_group = [1.0] * series_size
-# 		lin_norm_group = [(points_scale(s) * val) for val in lin_norm_group]
-# 		if s != 0:
-# 		  norm.extend(lin_norm_group[int(series_size/bin_ratio):]) #Discard initial values
-# 		else:
-# 		  norm.extend(lin_norm_group) #Append full list
-# 	return np.array(norm)
+	for s in range(0, lin_corrs):
+		lin_norm_group = [1.0] * series_size
+		lin_norm_group = [(points_scale(s) * val) for val in lin_norm_group]
+		if s != 0:
+			norm.extend(lin_norm_group[int(series_size/bin_ratio):]) #Discard initial values
+		else:
+			norm.extend(lin_norm_group) #Append full list
+	return np.array(norm)

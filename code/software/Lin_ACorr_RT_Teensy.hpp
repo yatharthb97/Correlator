@@ -21,12 +21,20 @@ public:
 
   index_t Series_index = 0; //! Stores the last active index → Post-increment
 
+  Lin_ACorr_RT_Teensy()
+  {
+    for(unsigned int i = 0; i < Series_size; i++)
+    {
+      Channel_array[i] = 0;
+    }
+  }
+
   /** @brief Excepts new data value and processes it. */
   void inline push_datum(counter_t datum)
   {
     Series_array.push_back(datum);
 
-    for(unsigned int i = 0; i <= Series_size; i++)
+    for(unsigned int i = 0; i < Series_size; i++)
     {
       Channel_array[i] += (Series_array[Series_index] * Series_array[Series_index - i]);
     }
@@ -56,9 +64,8 @@ public:
   /** @brief Outputs the complete channel to the Serial port. */
   void __attribute__((flatten)) ch_out() const
   {
-     //                                             ↓ Which is usually uint32_t.
-    //uint8_t *buffer = reinterpret_cast<const uint8_t *> (Channel_array); 
-    Serial.write((char*)&Channel_array, sizeof(counter_t) * Series_size);
+     //                                              ↓ Which is usually uint32_t. 
+    Serial.write((uint8_t*)&(Channel_array), sizeof(counter_t)*Series_size);
   }
  
 
@@ -77,9 +84,9 @@ public:
 
   //6
   /** @Returns a reference to the channel array. */
-  counter_t* get_ch_array(unsigned int index = 0)
+  counter_t* get_ch_array()
   {
-    return (const_cast<counter_t*>(Channel_array) +  index);
+    return (Channel_array);
   }
   
 };

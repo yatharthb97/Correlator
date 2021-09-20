@@ -94,7 +94,7 @@ public:
 
 	//6
 	/** @brief Toggles the state of a particular LED. This is a pure digital function and destroys all Analog dim states. */
-	inline void toggle(int pin, double time_ms)
+	inline void toggle_twice(int pin, double time_ms)
 	{
 		int index = fetch_index(pin);
 		if(index != -1)
@@ -102,7 +102,9 @@ public:
 			pinMode(pin, OUTPUT);
 			State[index] = !(State[index] != OFF); //Collapse (ON and ANALOG) to just ON.
 			digitalWrite(pin, State[index]);
+			
 			delay(time_ms);
+
 			State[index] = !(State[index] != OFF); //Collapse (ON and ANALOG) to just ON.
 			digitalWrite(pin, State[index]);
 		}
@@ -116,7 +118,9 @@ public:
 	inline void toggle_all_routine(int delay_ms)
 	{
 		toggle_all();
+		
 		delay(delay_ms);
+		
 		toggle_all();
 	}
 
@@ -148,20 +152,20 @@ public:
 	//10
 	/** @brief Slowly dims the ON-LEDs with a routine that lasts `time_s` seconds.
 	 * \property(Animation) */
-	inline void dim_routine(unsigned int end_analog_val, double time_s)
+	inline void dim_all_routine(unsigned int end_analog_val, double time_s)
 	{
 		int cycles = (time_s * 1000) / 50; //Dimming Resolution is 50 ms.
 		int steps = int(double(255 - end_analog_val)/cycles);
 		this->dim_all(255); //Max Brightness
-		int analog_val = 255;
+		volatile int analog_val = 255;
 		delay(50);
 		for(int j = 0; j < cycles-1; j++)
 		{
 			analog_val -= steps;
-			dim(analog_val);
+			dim_all(analog_val);
 			delay(50);
 		}
-		dim_all(end_analog_val);
+		this->dim_all(end_analog_val);
 	}
 
 	//11

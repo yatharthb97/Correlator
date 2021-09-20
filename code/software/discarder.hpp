@@ -14,8 +14,9 @@ public:
     //                                             ↓ Which is usually uint32_t.
     //uint8_t *buffer = reinterpret_cast<const uint8_t *> (channel.get_ch_array()[Front]); 
     //Serial.write(buffer, sizeof(counter_t) * (Series_size - End));
-    
-    Serial.write((char*)&(channel.get_ch_array()[Front]), sizeof(counter_t) * (Series_size - End));
+    auto ptr = channel.get_ch_array();
+    ptr += Front;
+    Serial.write((uint8_t*)(ptr), sizeof(counter_t)*(Series_size - End));
   }
 
   /** @brief Returns the number of elements discarded by the discarder object.*/
