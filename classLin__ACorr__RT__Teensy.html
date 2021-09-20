@@ -78,11 +78,14 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a9ec301f0227b11a171a6712a941c1a14"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLin__ACorr__RT__Teensy.html#a9ec301f0227b11a171a6712a941c1a14">Lin_ACorr_RT_Teensy</a> ()</td></tr>
+<tr class="memdesc:a9ec301f0227b11a171a6712a941c1a14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the last active index → Post-increment.  <a href="classLin__ACorr__RT__Teensy.html#a9ec301f0227b11a171a6712a941c1a14">More...</a><br /></td></tr>
+<tr class="separator:a9ec301f0227b11a171a6712a941c1a14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f5e5701923977b24a432ed0024c1368"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLin__ACorr__RT__Teensy.html#a0f5e5701923977b24a432ed0024c1368">push_datum</a> (<a class="el" href="types_8hpp.html#a22f279793847eba127de149437848c48">counter_t</a> datum)</td></tr>
-<tr class="memdesc:a0f5e5701923977b24a432ed0024c1368"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the last active index → Post-increment.  <a href="classLin__ACorr__RT__Teensy.html#a0f5e5701923977b24a432ed0024c1368">More...</a><br /></td></tr>
+<tr class="memdesc:a0f5e5701923977b24a432ed0024c1368"><td class="mdescLeft">&#160;</td><td class="mdescRight">Excepts new data value and processes it.  <a href="classLin__ACorr__RT__Teensy.html#a0f5e5701923977b24a432ed0024c1368">More...</a><br /></td></tr>
 <tr class="separator:a0f5e5701923977b24a432ed0024c1368"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bfee7278e28c759cca2497749aeecf7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLin__ACorr__RT__Teensy.html#a0bfee7278e28c759cca2497749aeecf7">__attribute__</a> ((flatten)) push_data(const <a class="el" href="types_8hpp.html#a22f279793847eba127de149437848c48">counter_t</a> *container</td></tr>
-<tr class="memdesc:a0bfee7278e28c759cca2497749aeecf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Repeatedly calls <code><a class="el" href="classLin__ACorr__RT__Teensy.html#a0f5e5701923977b24a432ed0024c1368" title="Stores the last active index → Post-increment.">push_datum()</a></code> on the given container of values, one at a time.  <a href="classLin__ACorr__RT__Teensy.html#a0bfee7278e28c759cca2497749aeecf7">More...</a><br /></td></tr>
+<tr class="memdesc:a0bfee7278e28c759cca2497749aeecf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Repeatedly calls <code><a class="el" href="classLin__ACorr__RT__Teensy.html#a0f5e5701923977b24a432ed0024c1368" title="Excepts new data value and processes it.">push_datum()</a></code> on the given container of values, one at a time.  <a href="classLin__ACorr__RT__Teensy.html#a0bfee7278e28c759cca2497749aeecf7">More...</a><br /></td></tr>
 <tr class="separator:a0bfee7278e28c759cca2497749aeecf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -100,7 +103,37 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="types_8hpp.html#a7c40bb931c31595ed6308605f4537447">index_t</a> Series_size&gt;<br />
 class Lin_ACorr_RT_Teensy&lt; Series_size &gt;</div><p >This is an implementation of Lin_ACorr_RT_Base for Teensy with <b></b>(No normalisation or baseline subtraction.) </p>
 <dl class="section note"><dt>Note</dt><dd>{ Template parameter - Size of the Series and Channel array and indicates the maximum points that can be stored by the correlator object. The circuular buffer will then rewrite the older points to accomodate for the other points. } </dd></dl>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a9ec301f0227b11a171a6712a941c1a14" name="a9ec301f0227b11a171a6712a941c1a14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ec301f0227b11a171a6712a941c1a14">&#9670;&nbsp;</a></span>Lin_ACorr_RT_Teensy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="types_8hpp.html#a7c40bb931c31595ed6308605f4537447">index_t</a> Series_size&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classLin__ACorr__RT__Teensy.html">Lin_ACorr_RT_Teensy</a>&lt; Series_size &gt;::<a class="el" href="classLin__ACorr__RT__Teensy.html">Lin_ACorr_RT_Teensy</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stores the last active index → Post-increment. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a0bfee7278e28c759cca2497749aeecf7" name="a0bfee7278e28c759cca2497749aeecf7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0bfee7278e28c759cca2497749aeecf7">&#9670;&nbsp;</a></span>__attribute__()</h2>
 
@@ -119,7 +152,7 @@ template&lt;<a class="el" href="types_8hpp.html#a7c40bb931c31595ed6308605f453744
       </table>
 </div><div class="memdoc">
 
-<p>Repeatedly calls <code><a class="el" href="classLin__ACorr__RT__Teensy.html#a0f5e5701923977b24a432ed0024c1368" title="Stores the last active index → Post-increment.">push_datum()</a></code> on the given container of values, one at a time. </p>
+<p>Repeatedly calls <code><a class="el" href="classLin__ACorr__RT__Teensy.html#a0f5e5701923977b24a432ed0024c1368" title="Excepts new data value and processes it.">push_datum()</a></code> on the given container of values, one at a time. </p>
 
 </div>
 </div>
@@ -149,8 +182,7 @@ template&lt;<a class="el" href="types_8hpp.html#a7c40bb931c31595ed6308605f453744
 </table>
 </div><div class="memdoc">
 
-<p>Stores the last active index → Post-increment. </p>
-<p >Excepts new data value and processes it. </p>
+<p>Excepts new data value and processes it. </p>
 
 </div>
 </div>

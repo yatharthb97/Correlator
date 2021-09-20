@@ -68,7 +68,6 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">main.cpp File Reference</div></div>
@@ -76,6 +75,7 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
 <code>#include &lt;imxrt.h&gt;</code><br />
+<code>#include &lt;Entropy.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="multi__tau_8hpp_source.html">./../code/software/multi_tau.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="pit_8hpp_source.html">./../code/hardware/pit.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="pins_8hpp_source.html">./../code/hardware/pins.hpp</a>&quot;</code><br />
@@ -87,14 +87,15 @@ Include dependency graph for main.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#asrc_2main_8cpp" alt=""/></div>
 <map name="asrc_2main_8cpp" id="asrc_2main_8cpp">
-<area shape="rect" title=" " alt="" coords="632,5,728,32"/>
+<area shape="rect" title=" " alt="" coords="559,5,655,32"/>
 <area shape="rect" title=" " alt="" coords="530,408,606,435"/>
-<area shape="rect" title=" " alt="" coords="409,87,469,114"/>
-<area shape="rect" href="multi__tau_8hpp.html" title=" " alt="" coords="179,169,301,211"/>
-<area shape="rect" href="pit_8hpp.html" title=" " alt="" coords="545,80,669,121"/>
+<area shape="rect" title=" " alt="" coords="310,87,370,114"/>
+<area shape="rect" title=" " alt="" coords="395,87,469,114"/>
+<area shape="rect" href="multi__tau_8hpp.html" title=" " alt="" coords="155,169,277,211"/>
+<area shape="rect" href="pit_8hpp.html" title=" " alt="" coords="693,80,817,121"/>
 <area shape="rect" href="pins_8hpp.html" title=" " alt="" coords="826,408,897,435"/>
 <area shape="rect" href="ledpanel_8hpp.html" title=" " alt="" coords="773,259,867,285"/>
-<area shape="rect" href="qtmr1_8hpp.html" title=" " alt="" coords="693,80,817,121"/>
+<area shape="rect" href="qtmr1_8hpp.html" title=" " alt="" coords="545,80,669,121"/>
 <area shape="rect" href="utilities_8hpp.html" title=" " alt="" coords="943,80,1067,121"/>
 <area shape="rect" title=" " alt="" coords="5,259,64,285"/>
 <area shape="rect" href="types_8hpp.html" title=" " alt="" coords="111,408,206,435"/>
@@ -112,12 +113,6 @@ Include dependency graph for main.cpp:</div>
 </map>
 </div>
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a0ae4ccba91e13ad636bfb5099898d27d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a0ae4ccba91e13ad636bfb5099898d27d">CHANNEL_SIZE</a>&#160;&#160;&#160;171</td></tr>
-<tr class="memdesc:a0ae4ccba91e13ad636bfb5099898d27d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gate time precision error due to finite precision of timers.  <a href="main_8cpp.html#a0ae4ccba91e13ad636bfb5099898d27d">More...</a><br /></td></tr>
-<tr class="separator:a0ae4ccba91e13ad636bfb5099898d27d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a4fc8f622f69a856a51bd3d4b1b42233a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a4fc8f622f69a856a51bd3d4b1b42233a">isr_fn</a> ()</td></tr>
@@ -152,34 +147,18 @@ Variables</h2></td></tr>
 <tr class="memitem:aec1fbfd9bfc90e447b39a9362a0c51de"><td class="memItemLeft" align="right" valign="top">volatile unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aec1fbfd9bfc90e447b39a9362a0c51de">Update_count</a> = 0</td></tr>
 <tr class="memdesc:aec1fbfd9bfc90e447b39a9362a0c51de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the number of updates made on the correlator channels since the last serialout.  <a href="main_8cpp.html#aec1fbfd9bfc90e447b39a9362a0c51de">More...</a><br /></td></tr>
 <tr class="separator:aec1fbfd9bfc90e447b39a9362a0c51de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7687ee385c82b3ac600720b79678755a"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a7687ee385c82b3ac600720b79678755a">SerialOut_After</a> = 100000</td></tr>
+<tr class="memitem:a7687ee385c82b3ac600720b79678755a"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a7687ee385c82b3ac600720b79678755a">SerialOut_After</a> = 100</td></tr>
 <tr class="separator:a7687ee385c82b3ac600720b79678755a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d18182f432f5b88cf58be9c367be457"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a1d18182f432f5b88cf58be9c367be457">Gate_time_us</a> = 500</td></tr>
 <tr class="memdesc:a1d18182f432f5b88cf58be9c367be457"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serial output is done after these many updates.  <a href="main_8cpp.html#a1d18182f432f5b88cf58be9c367be457">More...</a><br /></td></tr>
 <tr class="separator:a1d18182f432f5b88cf58be9c367be457"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada17f1639ca8a5932f17942031baa67f"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ada17f1639ca8a5932f17942031baa67f">Allowed_period_error_us</a> = 1</td></tr>
+<tr class="memitem:ada17f1639ca8a5932f17942031baa67f"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ada17f1639ca8a5932f17942031baa67f">Allowed_period_error_us</a> = 0.1</td></tr>
 <tr class="memdesc:ada17f1639ca8a5932f17942031baa67f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The gate time of TTL_C in microseconds (us)  <a href="main_8cpp.html#ada17f1639ca8a5932f17942031baa67f">More...</a><br /></td></tr>
 <tr class="separator:ada17f1639ca8a5932f17942031baa67f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28accc555688fa589a8d5848f17938ef"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a28accc555688fa589a8d5848f17938ef">array</a> [<a class="el" href="main_8cpp.html#a0ae4ccba91e13ad636bfb5099898d27d">CHANNEL_SIZE</a>]</td></tr>
-<tr class="separator:a28accc555688fa589a8d5848f17938ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ed72f8121146b498fb96fe56d3e1205"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8hpp.html#a22f279793847eba127de149437848c48">counter_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a9ed72f8121146b498fb96fe56d3e1205">zeros</a> [CHANNEL_SIZE] = {0}</td></tr>
+<tr class="memdesc:a9ed72f8121146b498fb96fe56d3e1205"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gate time precision error due to finite precision of timers.  <a href="main_8cpp.html#a9ed72f8121146b498fb96fe56d3e1205">More...</a><br /></td></tr>
+<tr class="separator:a9ed72f8121146b498fb96fe56d3e1205"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a0ae4ccba91e13ad636bfb5099898d27d" name="a0ae4ccba91e13ad636bfb5099898d27d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ae4ccba91e13ad636bfb5099898d27d">&#9670;&nbsp;</a></span>CHANNEL_SIZE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CHANNEL_SIZE&#160;&#160;&#160;171</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Gate time precision error due to finite precision of timers. </p>
-
-</div>
-</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a4fc8f622f69a856a51bd3d4b1b42233a" name="a4fc8f622f69a856a51bd3d4b1b42233a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4fc8f622f69a856a51bd3d4b1b42233a">&#9670;&nbsp;</a></span>isr_fn()</h2>
@@ -265,26 +244,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const double Allowed_period_error_us = 1</td>
+          <td class="memname">const double Allowed_period_error_us = 0.1</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>The gate time of TTL_C in microseconds (us) </p>
-
-</div>
-</div>
-<a id="a28accc555688fa589a8d5848f17938ef" name="a28accc555688fa589a8d5848f17938ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28accc555688fa589a8d5848f17938ef">&#9670;&nbsp;</a></span>array</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int array[<a class="el" href="main_8cpp.html#a0ae4ccba91e13ad636bfb5099898d27d">CHANNEL_SIZE</a>]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -357,7 +322,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t SerialOut_After = 100000</td>
+          <td class="memname">uint32_t SerialOut_After = 100</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -409,6 +374,22 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Indicates if a new value has arrived from the counting module. </p>
+
+</div>
+</div>
+<a id="a9ed72f8121146b498fb96fe56d3e1205" name="a9ed72f8121146b498fb96fe56d3e1205"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ed72f8121146b498fb96fe56d3e1205">&#9670;&nbsp;</a></span>zeros</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8hpp.html#a22f279793847eba127de149437848c48">counter_t</a> zeros[CHANNEL_SIZE] = {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gate time precision error due to finite precision of timers. </p>
 
 </div>
 </div>

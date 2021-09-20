@@ -13,13 +13,16 @@ var searchData=
   ['ledset_2ehpp_10',['ledset.hpp',['../ledset_8hpp.html',1,'']]],
   ['ledstate_5ft_11',['ledstate_t',['../classLEDSet.html#ae26a13b2d33c51351bc6d0acdf2a94a4',1,'LEDSet']]],
   ['lifetime_5ftimer_2ehpp_12',['lifetime_timer.hpp',['../lifetime__timer_8hpp.html',1,'']]],
-  ['lin_5facorr_5frt_5fteensy_13',['Lin_ACorr_RT_Teensy',['../classLin__ACorr__RT__Teensy.html',1,'']]],
+  ['lin_5facorr_5frt_5fteensy_13',['Lin_ACorr_RT_Teensy',['../classLin__ACorr__RT__Teensy.html',1,'Lin_ACorr_RT_Teensy&lt; Series_size &gt;'],['../classLin__ACorr__RT__Teensy.html#a9ec301f0227b11a171a6712a941c1a14',1,'Lin_ACorr_RT_Teensy::Lin_ACorr_RT_Teensy()']]],
   ['lin_5facorr_5frt_5fteensy_2ehpp_14',['Lin_ACorr_RT_Teensy.hpp',['../Lin__ACorr__RT__Teensy_8hpp.html',1,'']]],
   ['lin_5fcorrs_15',['Lin_Corrs',['../classMultiTau__ACorr__RT__Teensy.html#a1dc1e665268e5774e2810b74e6dbebc4',1,'MultiTau_ACorr_RT_Teensy']]],
   ['lin_5fcrosscorr_5frt_5fteensy_16',['Lin_CrossCorr_RT_Teensy',['../classLin__CrossCorr__RT__Teensy.html',1,'']]],
   ['lin_5fcrosscorr_5frt_5fteensy_2ehpp_17',['Lin_CrossCorr_RT_Teensy.hpp',['../Lin__CrossCorr__RT__Teensy_8hpp.html',1,'']]],
-  ['loadval_18',['LoadVal',['../classPITController.html#ad253f0ac646573e5b08e050b6fab5e32',1,'PITController']]],
-  ['localcounter_19',['LocalCounter',['../classAccumulator.html#a3eca18da4beff6509551889f43e07633',1,'Accumulator']]],
-  ['loop_20',['loop',['../main_8cpp.html#afe461d27b9c48d5921c00d521181f12f',1,'main.cpp']]],
-  ['loop_5fled_21',['LOOP_LED',['../pins_8hpp.html#a1c1c13275493f645825a60c5710264e5',1,'pins.hpp']]]
+  ['livegraph_18',['livegraph',['../namespacelivegraph.html',1,'']]],
+  ['livegraph_19',['LiveGraph',['../namespacelivegraph.html#ad8ca12209f8e05ff3aa6d42262df119f',1,'livegraph']]],
+  ['livegraph_2epy_20',['livegraph.py',['../livegraph_8py.html',1,'']]],
+  ['loadval_21',['LoadVal',['../classPITController.html#ad253f0ac646573e5b08e050b6fab5e32',1,'PITController']]],
+  ['localcounter_22',['LocalCounter',['../classAccumulator.html#a3eca18da4beff6509551889f43e07633',1,'Accumulator']]],
+  ['loop_23',['loop',['../main_8cpp.html#afe461d27b9c48d5921c00d521181f12f',1,'main.cpp']]],
+  ['loop_5fled_24',['LOOP_LED',['../pins_8hpp.html#a1c1c13275493f645825a60c5710264e5',1,'pins.hpp']]]
 ];

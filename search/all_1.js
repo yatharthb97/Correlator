@@ -11,7 +11,6 @@ var searchData=
   ['analog_8',['Analog',['../classLEDSet.html#ae26a13b2d33c51351bc6d0acdf2a94a4a2c0806958e37c8d87bd57df8990b30eb',1,'LEDSet']]],
   ['antialias_9',['antialias',['../namespacepost__upload__actions.html#a794b55b7fa3378176059f54fbf9b3b51',1,'post_upload_actions']]],
   ['app_10',['app',['../namespacepost__upload__actions.html#aa34f3f575b899b8e81ca18407b45eef7',1,'post_upload_actions']]],
-  ['array_11',['array',['../main_8cpp.html#a28accc555688fa589a8d5848f17938ef',1,'main.cpp']]],
-  ['assert_5ferrors_12',['assert_errors',['../classLEDSet.html#aafb42531245febe55685c764c29d918f',1,'LEDSet']]],
-  ['auto_5fmultitau_5finput_5fvalidator_13',['Auto_MultiTau_Input_Validator',['../namespaceErrors.html#a7010d07de8236f9a17b302c78f37483e',1,'Errors']]]
+  ['assert_5ferrors_11',['assert_errors',['../classLEDSet.html#aafb42531245febe55685c764c29d918f',1,'LEDSet']]],
+  ['auto_5fmultitau_5finput_5fvalidator_12',['Auto_MultiTau_Input_Validator',['../namespaceErrors.html#a7010d07de8236f9a17b302c78f37483e',1,'Errors']]]
 ];

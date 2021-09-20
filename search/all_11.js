@@ -29,5 +29,6 @@ var searchData=
   ['state_26',['State',['../classLEDSet.html#a7185bf98d8866da93847fde7b2145cc4',1,'LEDSet']]],
   ['state_5freload_27',['state_reload',['../classLEDSet.html#a520061aaf788486d2aa3aa3dfb3e32d6',1,'LEDSet']]],
   ['stop_28',['stop',['../classPIT__LifetimeTimer.html#a92543f292044725b1dea4d009e01d9e4',1,'PIT_LifetimeTimer::stop()'],['../classPITController.html#a5a6e2b00c6355934531a77a62660bec7',1,'PITController::stop()'],['../classTMR1Controller.html#afcb0ea27107bfbe50b9dcbd54207dd00',1,'TMR1Controller::stop()']]],
-  ['success_29',['Success',['../errors_8hpp.html#a4e8c0d09726859e3d3369c0da5a1aa7fa505a83f220c02df2f85c3810cd9ceb38',1,'errors.hpp']]]
+  ['stop_5fcode_5fasserted_29',['stop_code_asserted',['../namespacepost__upload__actions.html#a2eb0c1f0d253907108574abad6354f4e',1,'post_upload_actions']]],
+  ['success_30',['Success',['../errors_8hpp.html#a4e8c0d09726859e3d3369c0da5a1aa7fa505a83f220c02df2f85c3810cd9ceb38',1,'errors.hpp']]]
 ];

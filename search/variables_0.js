@@ -6,6 +6,5 @@ var searchData=
   ['allowed_5fperiod_5ferror_5fus_3',['Allowed_period_error_us',['../main_8cpp.html#ada17f1639ca8a5932f17942031baa67f',1,'main.cpp']]],
   ['always_5finline_4',['always_inline',['../classTMR1Controller.html#adce8e8a496510485a88ccc5b88595672',1,'TMR1Controller']]],
   ['antialias_5',['antialias',['../namespacepost__upload__actions.html#a794b55b7fa3378176059f54fbf9b3b51',1,'post_upload_actions']]],
-  ['app_6',['app',['../namespacepost__upload__actions.html#aa34f3f575b899b8e81ca18407b45eef7',1,'post_upload_actions']]],
-  ['array_7',['array',['../main_8cpp.html#a28accc555688fa589a8d5848f17938ef',1,'main.cpp']]]
+  ['app_6',['app',['../namespacepost__upload__actions.html#aa34f3f575b899b8e81ca18407b45eef7',1,'post_upload_actions']]]
 ];
