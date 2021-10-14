@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['simpler_5fcircular_5fbuffer',['Simpler_Circular_Buffer',['../classSimpler__Circular__Buffer.html',1,'']]],
-  ['simpler_5fcircular_5fbuffer_3c_20counter_5ft_2c_20series_5fsize_20_3e',['Simpler_Circular_Buffer&lt; counter_t, Series_size &gt;',['../classSimpler__Circular__Buffer.html',1,'']]]
+  ['pchistogram',['PCHistogram',['../de/d83/classPCHistogram.html',1,'']]],
+  ['perfcounter',['PerfCounter',['../dd/dd6/classPerfCounter.html',1,'']]],
+  ['pit_5flifetimetimer',['PIT_LifetimeTimer',['../db/db4/classPIT__LifetimeTimer.html',1,'']]],
+  ['pitcontroller',['PITController',['../d8/d03/classPITController.html',1,'']]],
+  ['pstatlivegraph',['PStatLiveGraph',['../de/d71/classlive__graph_1_1PStatLiveGraph.html',1,'live_graph']]]
 ];

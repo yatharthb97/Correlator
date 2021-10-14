@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tmr1controller',['TMR1Controller',['../classTMR1Controller.html',1,'']]]
+  ['rtcoarsegrainer',['RTCoarseGrainer',['../d1/d05/classRTCoarseGrainer.html',1,'']]]
 ];

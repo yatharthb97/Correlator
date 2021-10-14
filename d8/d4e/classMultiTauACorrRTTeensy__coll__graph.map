@@ -1,0 +1,7 @@
+<map id="MultiTauACorrRTTeensy&lt; Lin_channels, Series_size, Bin_Ratio &gt;" name="MultiTauACorrRTTeensy&lt; Lin_channels, Series_size, Bin_Ratio &gt;">
+<area shape="rect" id="node2" href="$d6/d4e/classAccumulator.html" title="Adapter object responsible for accumulating the points and coarsening the time&#45;series as per the rela..." alt="" coords="5,248,152,369"/>
+<area shape="rect" id="node3" href="$d4/dca/classLinACorrRTTeensy.html" title="{LinACorrRTTeensy\&lt; Series\l_size, false \&gt;\n|+ Channel_array\l+ Series_index\l|+ LinACorrRTTeensy()\l+ push_datum()\l+ push_data()\l+ norm()\l+ ch_out()\l+ ch_out_norm()\l}" alt="" coords="177,219,373,399"/>
+<area shape="rect" id="node4" href="$d8/d1f/classSimpler__Circular__Buffer.html" title="{Simpler_Circular_Buffer\l\&lt; counter_t, Series_Size \&gt;\n|&#45; buffer\l&#45; head\l&#45; tail\l|+ reset()\l+ push_back()\l+ operator[]()\l}" alt="" coords="177,5,372,156"/>
+<area shape="rect" id="node5" href="$dc/d0e/classDiscarderTeensy.html" title="{DiscarderTeensy\&lt; Series\l_size, int(Series_size\l/Bin_Ratio), 0 \&gt;\n||+ output()\l+ discard_count()\l}" alt="" coords="397,248,584,369"/>
+<area shape="rect" id="node6" href="$d8/d25/classMonitorChannel_3_01true_01_4.html" title="Template specialization. " alt="" coords="609,241,789,377"/>
+</map>
