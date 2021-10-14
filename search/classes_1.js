@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['discarder_5fteensy_0',['Discarder_Teensy',['../classDiscarder__Teensy.html',1,'']]]
+  ['discarderteensy_0',['DiscarderTeensy',['../classDiscarderTeensy.html',1,'']]]
 ];

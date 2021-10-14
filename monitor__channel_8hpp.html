@@ -72,15 +72,18 @@ $(function() {
   <div class="headertitle"><div class="title">monitor_channel.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="types_8hpp_source.html">./../types.hpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &quot;<a class="el" href="types_8hpp_source.html">./../types.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for monitor_channel.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="monitor__channel_8hpp__incl.png" border="0" usemap="#acode_2software_2monitor__channel_8hpp" alt=""/></div>
 <map name="acode_2software_2monitor__channel_8hpp" id="acode_2software_2monitor__channel_8hpp">
 <area shape="rect" title=" " alt="" coords="5,5,156,47"/>
-<area shape="rect" href="types_8hpp.html" title=" " alt="" coords="33,95,128,121"/>
-<area shape="rect" title=" " alt="" coords="50,169,111,196"/>
+<area shape="rect" title=" " alt="" coords="67,169,129,196"/>
+<area shape="rect" title=" " alt="" coords="51,95,110,121"/>
+<area shape="rect" href="types_8hpp.html" title=" " alt="" coords="135,95,229,121"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -88,10 +91,15 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="monitor__channel_8hpp__dep__incl.png" border="0" usemap="#acode_2software_2monitor__channel_8hppdep" alt=""/></div>
 <map name="acode_2software_2monitor__channel_8hppdep" id="acode_2software_2monitor__channel_8hppdep">
-<area shape="rect" title=" " alt="" coords="76,5,227,47"/>
-<area shape="rect" href="featureline1_8hpp.html" title=" " alt="" coords="5,95,140,121"/>
-<area shape="rect" href="featureline3_8hpp.html" title=" " alt="" coords="164,95,299,121"/>
-<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="103,169,199,196"/>
+<area shape="rect" title=" " alt="" coords="254,5,405,47"/>
+<area shape="rect" href="interarrival_8hpp.html" title=" " alt="" coords="165,102,360,129"/>
+<area shape="rect" href="featureline1_8hpp.html" title=" " alt="" coords="291,259,426,285"/>
+<area shape="rect" href="featureline3_8hpp.html" title=" " alt="" coords="450,259,585,285"/>
+<area shape="rect" href="multi__tau_8hpp.html" title=" " alt="" coords="5,95,141,136"/>
+<area shape="rect" href="global_8hpp.html" title=" " alt="" coords="187,184,290,211"/>
+<area shape="rect" href="featureline2_8hpp.html" title=" " alt="" coords="6,259,141,285"/>
+<area shape="rect" href="global_8cpp.html" title=" " alt="" coords="165,259,267,285"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="311,333,407,360"/>
 </map>
 </div>
 </div>
@@ -99,8 +107,17 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonitor__Channel.html">Monitor_Channel</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A simple Averager Class that calculates the estimated mean.  <a href="classMonitor__Channel.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonitorChannel_3_01true_01_4.html">MonitorChannel&lt; true &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template specialization.  <a href="classMonitorChannel_3_01true_01_4.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonitorChannel_3_01false_01_4.html">MonitorChannel&lt; false &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization -&gt; Counter Monitor (degenerated mean monitor).  <a href="classMonitorChannel_3_01false_01_4.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZeroLagMonitor.html">ZeroLagMonitor</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measures the zeroth auto-correlation, which is equal to the second moment of the sampled time series. This object was intended for experimentation with Linear-autocorrelators, which start from lag1, instead of lag0.  <a href="classZeroLagMonitor.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTCoarseGrainer.html">RTCoarseGrainer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An object that can accumulate data into a fixed size bin before changing its output value.  <a href="classRTCoarseGrainer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['utilities_0',['utilities',['../namespaceutilities.html',1,'']]]
+  ['statmethods',['statmethods',['../d4/dee/namespacestatmethods.html',1,'']]]
 ];

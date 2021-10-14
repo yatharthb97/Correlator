@@ -94,7 +94,7 @@ $(function() {
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">//Error Pins</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="pins_8hpp.html#a01ff5c1b8f46ca9504e840c5aaf9fd64">   23</a></span><span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="pins_8hpp.html#a01ff5c1b8f46ca9504e840c5aaf9fd64">ER_PRECISION_PIN</a> = <a class="code hl_variable" href="pins_8hpp.html#a8046eca6ddcbe578777cfde489622a13">LED_BLUE</a>;</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="pins_8hpp.html#ae73bc7e4372631b754daf933169b2a16">   24</a></span><span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="pins_8hpp.html#ae73bc7e4372631b754daf933169b2a16">ER_OVERFLOW_PIN</a> = <a class="code hl_variable" href="pins_8hpp.html#a1be903f86639d50fb6ed02a0dbbe0e2c">LED_WHITE</a>;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="pins_8hpp.html#a3bf66a7f687091434a704c61863c3141">   25</a></span><span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="pins_8hpp.html#a3bf66a7f687091434a704c61863c3141">ER_INPUT_VALIDATION</a> = LED_BUILTIN;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="pins_8hpp.html#a3bf66a7f687091434a704c61863c3141">   25</a></span><span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="pins_8hpp.html#a3bf66a7f687091434a704c61863c3141">ER_INPUT_VALIDATION</a> = <a class="code hl_variable" href="pins_8hpp.html#a735f426a390e22c0050b964328c5e06f">LED_RED</a>;</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">// LED State Indicators</span></div>
@@ -104,7 +104,7 @@ $(function() {
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">//Toggle pins → To crosscheck gate times on the oscilloscope</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#if ISR_PIN_TOGGLE == 1</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">    #define PIT_TEST_TOOGLE_PIN1 3</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">    #define ISR_TEST_TOOGLE_PIN 3</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">/*</span></div>

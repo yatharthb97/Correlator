@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['livegraph_0',['livegraph',['../namespacelivegraph.html',1,'']]]
+  ['multitau_0',['multitau',['../namespacemultitau.html',1,'']]]
 ];

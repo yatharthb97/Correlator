@@ -11,8 +11,8 @@ var searchData=
   ['set_5fgate_5ftime_8',['set_gate_time',['../classPITController.html#aaf7a79129a4ea5af057ea8f537b7ae9f',1,'PITController']]],
   ['set_5finterrupt_9',['set_interrupt',['../classPITController.html#aa94b6dc081d453c8dda54c3ade4b3d94',1,'PITController']]],
   ['setup_5finterarrival_10',['setup_interarrival',['../featureline2_8hpp.html#a2f630755ed6ea8b32810b12b33b9871f',1,'featureline2.hpp']]],
-  ['size_11',['size',['../classLEDSet.html#a0d153646b1a750421af1f3617d90ad04',1,'LEDSet']]],
-  ['start_12',['start',['../classTMR1Controller.html#a67bc04f0648176a681f6ac01ea483db9',1,'TMR1Controller::start()'],['../classPITController.html#a4dae1ed0ada64ebc03665e8f39795e7e',1,'PITController::start()'],['../classPIT__LifetimeTimer.html#a6feabeff2529cabaf27ef53d027a4fc9',1,'PIT_LifetimeTimer::start()']]],
+  ['size_11',['size',['../classPCHistogram.html#a4c7558c7cebdd928c0b6e0c548baf1b9',1,'PCHistogram::size()'],['../classLEDSet.html#a0d153646b1a750421af1f3617d90ad04',1,'LEDSet::size()']]],
+  ['start_12',['start',['../classTMR1Controller.html#a67bc04f0648176a681f6ac01ea483db9',1,'TMR1Controller::start()'],['../classPITController.html#a4dae1ed0ada64ebc03665e8f39795e7e',1,'PITController::start()'],['../classPerfCounter.html#a5fdd73c1d604decd6dc745aada8092d1',1,'PerfCounter::start()'],['../classPIT__LifetimeTimer.html#a6feabeff2529cabaf27ef53d027a4fc9',1,'PIT_LifetimeTimer::start()']]],
   ['state_5freload_13',['state_reload',['../classLEDSet.html#a520061aaf788486d2aa3aa3dfb3e32d6',1,'LEDSet']]],
   ['stop_14',['stop',['../classPIT__LifetimeTimer.html#a92543f292044725b1dea4d009e01d9e4',1,'PIT_LifetimeTimer::stop()'],['../classPITController.html#a5a6e2b00c6355934531a77a62660bec7',1,'PITController::stop()'],['../classTMR1Controller.html#afcb0ea27107bfbe50b9dcbd54207dd00',1,'TMR1Controller::stop()']]]
 ];

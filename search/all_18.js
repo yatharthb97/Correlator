@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['zerolagmonitor',['ZeroLagMonitor',['../d9/ddf/classZeroLagMonitor.html',1,'']]]
+  ['zerolagmonitor_0',['ZeroLagMonitor',['../classZeroLagMonitor.html',1,'']]]
 ];
