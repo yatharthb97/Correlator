@@ -1,14 +1,47 @@
 {
+    "Feature Line": "ACF",
+    "EnableACFCalc": true,
+    "Log xAxis ACF": false,
+    
+    "GateTime_us": 5,
+    "AllowedGateTimeError_us": 0.1,
+    
     "LinCorrs": 9,
     "SeriesSize": 27,
     "BinRatio": 3,
+    
     "LiveGraph": true,
-    "SamplingDelay_ms": 100,
+    
+    "SamplingDelay_ms": 200,
+    
     "Baud": 115200,
     "Port": "COM12",
-    "GateTime_us": 5,
-    "AllowedGateTimeError_us": 0.01,
+    
     "ISRPinToggle": true,
     "AbortOnError": true,
-    "//# Comment": "Missing fields will generate warnings and a default value will be added to the configuration."
+
+    "EnableCountRate": true,
+    "EnableSyncCode": true,
+    "SyncCode": -123456789,
+
+    "CPUClockFrequency_MHz": 600,
+
+    "CRCoarseGrainingInterval_s": 1.0,
+    "SomeDebugValue": 1.23456,
+
+    "EnablePointsNorm": true,
+    "EnableMeanNorm": true,
+    
+    "Enable PC Histogram": false,
+    "PC Histogram Bins": 10,
+    
+    "Enable Performance Counters": true,
+    
+    "Instructions": {
+        "0": "Feature Lines: {\"ACF\", \"Interarrival\", \"Sampler\"}.",
+        "1": "Missing fields will generate warnings and a default value will be added to the configuration.",
+        "2": "SomeDebug value is set as a macro to help debug build system, macro conversion of different data types, etc.",
+        "3": "Enabling Interarrival Mode will disable all other functionality.",
+        "4": "Options specific to a Feature Line are ignored unless that Feature Line is selected."
+    }
 }
