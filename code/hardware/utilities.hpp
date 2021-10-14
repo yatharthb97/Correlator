@@ -1,10 +1,13 @@
 #pragma once
+#include <imxrt.h>
+
+
 
 #define PRREG(x) Serial.print(#x" 0x"); Serial.println(x,HEX)
 
 
 
-//xbar_connect function
+
 /** @brief Establishes connection over XBAR1-A, given the input and output xbar pins
  * \reference - https://github.com/manitou48/teensy4/blob/bc8fc46af5065a3f84352e0474069ae7a1a13064/pitxbaradc.ino#L40
  * \licence - Not specified*/
@@ -24,13 +27,13 @@
 
 
 //#define F_CPU_TICK ARM_DWT_CYCCNT
-uint32_t F_CPU_tick_count() //Restructure as a MACRO
+uint32_t F_CPU_tick_count() //__attribute__((always_inline))
 {
   return ARM_DWT_CYCCNT;
 }
 
 
-float get_CPU_temp()
+float get_CPU_temp() //__attribute__((always_inline))
 {
   return tempmonGetTemp();
 }
