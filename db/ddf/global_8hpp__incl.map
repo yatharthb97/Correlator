@@ -1,0 +1,18 @@
+<map id="src/global.hpp" name="src/global.hpp">
+<area shape="rect" id="node2" href="$df/d96/multi__tau_8hpp.html" title="./../code/software\l/multi_tau.hpp" alt="" coords="430,80,565,121"/>
+<area shape="rect" id="node13" href="$d5/d6e/histogram_8hpp.html" title="./../code/software\l/histogram.hpp" alt="" coords="782,80,917,121"/>
+<area shape="rect" id="node15" href="$d1/df0/pit_8hpp.html" title="./../code/hardware\l/pit.hpp" alt="" coords="1104,80,1243,121"/>
+<area shape="rect" id="node23" href="$d0/d11/qtmr1_8hpp.html" title="./../code/hardware\l/qtmr1.hpp" alt="" coords="1267,80,1405,121"/>
+<area shape="rect" id="node24" href="$d3/d5e/interarrival_8hpp.html" title="./../code/hardware\l/interarrival.hpp" alt="" coords="619,80,757,121"/>
+<area shape="rect" id="node25" href="$de/d94/perf__counter_8hpp.html" title="./../code/hardware\l/perf_counter.hpp" alt="" coords="941,80,1080,121"/>
+<area shape="rect" id="node4" href="$dd/de3/types_8hpp.html" title="./../types.hpp" alt="" coords="589,319,696,345"/>
+<area shape="rect" id="node6" href="$d3/d93/Lin__ACorr__RT__Teensy_8hpp.html" title="Lin_ACorr_RT_Teensy.hpp" alt="" coords="65,244,255,271"/>
+<area shape="rect" id="node10" href="$d8/d5e/accumulator_8hpp.html" title="accumulator.hpp" alt="" coords="381,244,512,271"/>
+<area shape="rect" id="node11" href="$d2/dc3/discarder_8hpp.html" title="discarder.hpp" alt="" coords="263,169,374,196"/>
+<area shape="rect" id="node12" href="$d4/d18/monitor__channel_8hpp.html" title="monitor_channel.hpp" alt="" coords="586,169,745,196"/>
+<area shape="rect" id="node7" href="$d8/d97/simpler__circular__buffer_8hpp.html" title="simpler_circular_buffer.hpp" alt="" coords="5,319,205,345"/>
+<area shape="rect" id="node16" href="$df/d52/errors_8hpp.html" title="errors.hpp" alt="" coords="1140,169,1228,196"/>
+<area shape="rect" id="node17" href="$dd/d48/pins_8hpp.html" title="pins.hpp" alt="" coords="1339,393,1416,420"/>
+<area shape="rect" id="node18" href="$df/dcd/ledpanel_8hpp.html" title="ledpanel.hpp" alt="" coords="1139,244,1245,271"/>
+<area shape="rect" id="node19" href="$d0/d46/ledset_8hpp.html" title="ledset.hpp" alt="" coords="1147,319,1237,345"/>
+</map>
