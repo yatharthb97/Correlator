@@ -1,26 +1,30 @@
 #pragma once
 
-#include <Arduino.h>
+//#include <Arduino.h>
 #include "./../types.hpp"
 #include "Lin_ACorr_RT_Teensy.hpp"
+#ifdef CORR_SIMULATOR
+  #include "pseudoSerial.hpp"
+#else
+  #include <Arduino.h>
+#endif
 
 /** @brief Teensy specific Front back discarder implementation. */
 template <unsigned int Series_size, unsigned int Front, unsigned int End>
-class Discarder_Teensy
+class DiscarderTeensy
 {
 public:
-  void output(const Lin_ACorr_RT_Teensy<Series_size> &channel) const __attribute__((always_inline))
+  template <typename LinCorrType>
+  void output(const LinCorrType &channel) const //__attribute__((always_inline))
   {
-    //                                             ↓ Which is usually uint32_t.
-    //uint8_t *buffer = reinterpret_cast<const uint8_t *> (channel.get_ch_array()[Front]); 
-    //Serial.write(buffer, sizeof(counter_t) * (Series_size - End));
-    auto ptr = channel.get_ch_array();
-    ptr += Front;
-    Serial.write((uint8_t*)(ptr), sizeof(counter_t)*(Series_size - End));
+    //                      ↓ Which is usually uint32_t or 32-bit float
+    Serial.write((char8cast_t*)(channel.Channel_array + Front), 
+                 sizeof(channel_t)*(Series_size - (Front + End))
+                );
   }
 
   /** @brief Returns the number of elements discarded by the discarder object.*/
-  unsigned int inline virtual discard_count() const
+  unsigned int discard_count() const //__attribute__((always_inline))
   {
     return (Front + End);
   }
