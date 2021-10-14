@@ -1,5 +1,4 @@
 #pragma once
-#include "errors.hpp"
 #include <imxrt.h>
 
 /** @brief Interface for using the "Life Time TImer" functionality of the Periodic Interrut Timer on Teensy 4.x microcontrollers. The module uses Channel 0 and 1 of the 4 PIT channels.
@@ -91,7 +90,7 @@ public:
 	/** @brief Returns the higher 32-bit half of the 64-bit timing value. */
 	uint32_t read_high_val() __attribute__((always_inline))
 	{
-		PIT_LTMR64H;
+		return PIT_LTMR64H;
 	}
 
 

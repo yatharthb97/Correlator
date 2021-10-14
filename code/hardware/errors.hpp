@@ -17,17 +17,18 @@ enum class Error_t
 {
 	Success = 0,      //!< No error
 	Counter_Overflow, //!< Passed Value caused a counter overflow
-	Counter_Underflow, //!< Passed Value caused a counter underflow
-	Precision, 		 //!< Error generated when difference due to finite resolution is greater than acceptable
-	Input_Validation //!< Input validation failed
+	Counter_Underflow,//!< Passed Value caused a counter underflow
+	Precision, 		  //!< Error generated when difference due to finite resolution is greater than acceptable
+	Input_Validation, //!< Input validation failed
+	Generic_Error 	  //!< Only here for development and debugging
 };
 
 /** @breif Contains functions that handle errors of type `Error_t`. */
-namespace Errors{
-	
+class Errors{
+public:	
 	/** @brief Receives an error state and sets up the corresponding LED indicator.
 	*/
-	void Validate(const Error_t error)
+	void static Validate(const Error_t error)
 	{
 		if(error == Error_t::Success)
 			return;
@@ -40,7 +41,7 @@ namespace Errors{
 	}
 
 	/** @brief Receives error value and error threshold and returns an appropriate error state. */
-	Error_t Precison_Threshold(double error_val, double error_limit)
+	Error_t static Precison_Threshold(double error_val, double error_limit)
 	{
 		if(error_val <= error_limit)
 			{ return Error_t::Success; }
@@ -52,7 +53,7 @@ namespace Errors{
 	/** @brief Input Validator for MultiTau auto-correlator. 
 	 * \todo Change name to indicate *Auto* Correlator link. */
 	template <unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Ratio>
-	Error_t Auto_MultiTau_Input_Validator()
+	Error_t static Auto_MultiTau_Input_Validator()
 	{
 		bool input_ok = (Series_size * Lin_channels <= TEENSY_MAX_ALLOCATION);
 
@@ -68,31 +69,33 @@ namespace Errors{
 			!input_ok * static_cast<unsigned int>(Error_t::Input_Validation)
 		);
 	}
-};
 
-/** \if NDEBUG is not defined: 
- * @brief Custom runtime assert function that sets all the dashboard LEDs to high. */
-#ifndef NDEBUG
-	
-	/** @brief Custom assertion function. 
-	 * @param expression which must evaluate to false for the assertion to call abort.
-	 * @param message which is ignored in the function,  but helps with code redability*/
-	void _assert_(bool expression, const char* __attribute__((unused)) message = "") //__attribute__((noreturn, flatten))
-	{
-		if(!expression)
+	/** \if NDEBUG is not defined: 
+	 * @brief Custom runtime assert function that sets all the dashboard LEDs to high. */
+	#ifndef NDEBUG
+		
+		/** @brief Custom assertion function. 
+		 * @param expression which must evaluate to false for the assertion to call abort.
+		 * @param message which is ignored in the function,  but helps with code redability*/
+		void static _assert_(bool expression, const char* __attribute__((unused)) message = "") //__attribute__((noreturn, flatten))
 		{
-			LEDPanel.set_all(); //Set all LED Pins to High
-			abort(); //Call abort
+			if(!expression)
+			{
+				LEDPanel.set_all(); //Set all LED Pins to High
+				abort(); //Call abort
+			}
+
 		}
 
-	}
+	#elif /** \else if NDEBUG is defined: */
+		/** @brief Empty version that is uded in release mode. */
+		void _assert_(bool expression)
+		{
+			return;
+		}
 
-#elif /** \else if NDEBUG is defined: */
-	/** @brief Empty version that is uded in release mode. */
-	void _assert_(bool expression)
-	{
-		return;
-	}
+	#endif
+};
 
-#endif
+
 

@@ -7,7 +7,7 @@
 class TMR1Controller
 {
 private:
-	static constexpr bool Singleton_flag = false; //! Singleton template
+	static constexpr bool Singleton_flag = false; //!< Singleton template
 public:
 
 	//0
@@ -16,7 +16,7 @@ public:
 	{
 		static_assert((_TMR1_CONTROLLER_CH_ <= 2 && _TMR1_CONTROLLER_CH_ >= 0), 
 					  "TMR1Controller: CHID is invalid (try <= 2).");
-		_assert_(!Singleton_flag,  "TMR1Controller: The resource is already constructed."); //Assert Singleton
+		//_assert_(!Singleton_flag,  "TMR1Controller: The resource is already constructed."); //Assert Singleton
 	}
 
 	//1

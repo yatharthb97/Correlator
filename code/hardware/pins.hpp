@@ -22,7 +22,7 @@ const int TTL_C_PULSE_INPUT_PIN = 10; //TMR1CH0
 //Error Pins
 const int ER_PRECISION_PIN = LED_BLUE;
 const int ER_OVERFLOW_PIN = LED_WHITE;
-const int ER_INPUT_VALIDATION = LED_BUILTIN;
+const int ER_INPUT_VALIDATION = LED_RED;
 
 
 // LED State Indicators
@@ -32,7 +32,7 @@ const int LOOP_LED = LED_GREEN;
 
 //Toggle pins → To crosscheck gate times on the oscilloscope
 #if ISR_PIN_TOGGLE == 1
-	#define PIT_TEST_TOOGLE_PIN1 3
+	#define ISR_TEST_TOOGLE_PIN 3
 #endif
 
 /*

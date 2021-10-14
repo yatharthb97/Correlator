@@ -1,4 +1,4 @@
 # Hardware
 
-This folder contains hardware peripheral specific libraries.
+This folder contains hardware libraries that are specific to *Teensy 4.1 microcontrollers.*
 
