@@ -41,16 +41,23 @@ config['channel_size'] = this_channel_size
 
 byte_size = 4 # No of bytes used by the incoming data for one value both float and uint
 
-total_struct_size = (	(config['EnableACFCalc'] * this_channel_size) + 
-						config['EnableCountRate'] +
-						config['EnablePointsNorm'] +
-						config['EnableSyncCode'] +
-						config['EnableMeanNorm'] + 
-						config['Enable PC Histogram'] * config['PC Histogram Bins'] +
-						((config['EnableACFCalc'] + 1) * config['Enable Performance Counters'])
-					) * byte_size
-if config['EnableInterArrivalMode']:
+if config["Feature Line"] == "ACF":
+	total_struct_size = (	(config['EnableACFCalc'] * this_channel_size) + 
+							config['EnableCountRate'] +
+							config['EnablePointsNorm'] +
+							config['EnableSyncCode'] +
+							config['EnableMeanNorm'] + 
+							config['Enable PC Histogram'] * config['PC Histogram Bins'] +
+							((config['EnableACFCalc'] + 1) * config['Enable Performance Counters'])
+						) * byte_size
+
+elif config['Feature Line'] == "Interarrival":
 	total_struct_size = (config['EnableSyncCode'] + 1) * byte_size
+elif config['Feature Line'] == "Sampler":
+	total_struct_size = 1 #TODO Fix
+else:
+	print(f"[ERROR] Invalid Feature Line - {config['Feature Line']}")
+	sys.exit(1)
 
 stop_code_asserted = False # True means that the user has asserted the end of measurement
 update_id = 0 # Set update ID to zero
@@ -207,11 +214,11 @@ def update_fn():
 
 
 		# INTERARRIVAL
-		if config['EnableInterArrivalMode']:
+		if config['Feature Line'] == 'Interarrival':
 			ia_stats = np.frombuffer(raw_data, dtype = np.uint32, count = 1, offset=config['EnableSyncCode']*byte_size)
 			print(f"{measurement_time:.3f} -   {ia_stats}")
 
-		else:
+		elif config['Feature Line'] == 'ACF':
 			# COUNT RATE
 			if config['EnableCountRate']:
 				count_rate = np.frombuffer(raw_data, dtype = 'f4', count = 1, offset=config['EnableSyncCode']*byte_size)
