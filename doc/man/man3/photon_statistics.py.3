@@ -1,0 +1,173 @@
+.TH "code/pc_app/photon_statistics.py" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator and Photon Statistics" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+code/pc_app/photon_statistics.py
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBphoton_statistics\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBphoton_statistics\&.update_fn\fP ()"
+.br
+.ti -1c
+.RI "def \fBphoton_statistics\&.periodic_callback_fn\fP (period_ms=measurement_sampling_delay)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBphoton_statistics\&.name_\fP = sys\&.argv[1]"
+.br
+.ti -1c
+.RI "\fBphoton_statistics\&.config\fP = json\&.load(f)"
+.br
+.ti -1c
+.RI "list \fBphoton_statistics\&.multitau_param_set\fP = [config['LinCorrs'], config['SeriesSize'], config['BinRatio']]"
+.br
+.ti -1c
+.RI "\fBphoton_statistics\&.this_channel_size\fP = \fBmultitau\&.channel_size\fP(*multitau_param_set)"
+.br
+.ti -1c
+.RI "int \fBphoton_statistics\&.byte_size\fP = 4"
+.br
+.ti -1c
+.RI "tuple \fBphoton_statistics\&.total_struct_size\fP"
+.br
+.ti -1c
+.RI "bool \fBphoton_statistics\&.stop_code_asserted\fP = False"
+.br
+.ti -1c
+.RI "int \fBphoton_statistics\&.update_id\fP = 0"
+.br
+.ti -1c
+.RI "list \fBphoton_statistics\&.openfilelist\fP = []"
+.br
+.ti -1c
+.RI "string \fBphoton_statistics\&.parent_dir\fP = '\&./runs/'"
+.br
+.ti -1c
+.RI "string \fBphoton_statistics\&.DATASEP\fP = ','"
+.br
+.ti -1c
+.RI "\fBphoton_statistics\&.now_tmp\fP = time\&.perf_counter()"
+.br
+.ti -1c
+.RI "\fBphoton_statistics\&.update_time_start\fP = now_tmp"
+.br
+.ti -1c
+.RI "\fBphoton_statistics\&.update_time_stop\fP = now_tmp"
+.br
+.ti -1c
+.RI "\fBphoton_statistics\&.measure_clock_start\fP = now_tmp"
+.br
+.ti -1c
+.RI "\fBphoton_statistics\&.measure_clock_stop\fP = now_tmp"
+.br
+.ti -1c
+.RI "\fBphoton_statistics\&.x_tau_values\fP = \fBmultitau\&.x_tics\fP(*multitau_param_set)"
+.br
+.ti -1c
+.RI "\fBphoton_statistics\&.normalizer\fP = Normalizer(*multitau_param_set)"
+.br
+.ti -1c
+.RI "tuple \fBphoton_statistics\&.norm_mode\fP = ('no' * (not config['EnablePointsNorm'])) + ('points' * (not config['EnableMeanNorm']) * config['EnablePointsNorm']) + ('mean' * config['EnableMeanNorm'] * config['EnablePointsNorm'])"
+.br
+.ti -1c
+.RI "list \fBphoton_statistics\&.norm_args\fP = []"
+.br
+.ti -1c
+.RI "\fBphoton_statistics\&.struct_rep\fP = StructRepresentation(config)"
+.br
+.ti -1c
+.RI "\fBphoton_statistics\&.time_x\fP = deque(maxlen = 100)"
+.br
+.ti -1c
+.RI "\fBphoton_statistics\&.count_rate_y\fP = deque(maxlen = 100)"
+.br
+.ti -1c
+.RI "\fBphoton_statistics\&.mean_int_y\fP = deque(maxlen = 100)"
+.br
+.ti -1c
+.RI "\fBphoton_statistics\&.pf_serial_y\fP = deque(maxlen = 100)"
+.br
+.ti -1c
+.RI "\fBphoton_statistics\&.pf_acf_y\fP = deque(maxlen = 100)"
+.br
+.ti -1c
+.RI "string \fBphoton_statistics\&.y_file_name\fP = f'{name_}_y\&.dat'"
+.br
+.ti -1c
+.RI "string \fBphoton_statistics\&.x_file_name\fP = f'{name_}_x_taus\&.dat'"
+.br
+.ti -1c
+.RI "\fBphoton_statistics\&.fmt\fP"
+.br
+.ti -1c
+.RI "\fBphoton_statistics\&.newline\fP"
+.br
+.ti -1c
+.RI "\fBphoton_statistics\&.acffile\fP = open(os\&.path\&.join(parent_dir, y_file_name), 'a')"
+.br
+.ti -1c
+.RI "string \fBphoton_statistics\&.count_file_name\fP = f'{name_}_countrate\&.dat'"
+.br
+.ti -1c
+.RI "\fBphoton_statistics\&.countratefile\fP = open(os\&.path\&.join(parent_dir, count_file_name), 'w')"
+.br
+.ti -1c
+.RI "string \fBphoton_statistics\&.mean_file_name\fP = f'{name_}_meanintensity\&.dat'"
+.br
+.ti -1c
+.RI "\fBphoton_statistics\&.meanfile\fP = open(os\&.path\&.join(parent_dir, mean_file_name), 'w')"
+.br
+.ti -1c
+.RI "\fBphoton_statistics\&.live_graph\fP = LiveGraph(xRange=x_tau_values[\-1], port=config['Port'], title='Auto\-Correlation Function', x_label = 'Lag', y_label='ACF', x_units='Tau', y_units='G(Tau)', config=config )"
+.br
+.ti -1c
+.RI "\fBphoton_statistics\&.title\fP"
+.br
+.ti -1c
+.RI "\fBphoton_statistics\&.row\fP"
+.br
+.ti -1c
+.RI "\fBphoton_statistics\&.col\fP"
+.br
+.ti -1c
+.RI "\fBphoton_statistics\&.rowspan\fP"
+.br
+.ti -1c
+.RI "\fBphoton_statistics\&.pen\fP"
+.br
+.ti -1c
+.RI "\fBphoton_statistics\&.symbolBrush\fP"
+.br
+.ti -1c
+.RI "\fBphoton_statistics\&.symbolSize\fP"
+.br
+.ti -1c
+.RI "\fBphoton_statistics\&.port\fP = Serial(port=config['Port'], baudrate=config['Baud'], timeout=None)"
+.br
+.ti -1c
+.RI "\fBphoton_statistics\&.measurement_sampling_delay\fP = int(config['SamplingDelay_ms']/2)"
+.br
+.ti -1c
+.RI "\fBphoton_statistics\&.measurement_thread\fP = QtCore\&.QTimer()"
+.br
+.ti -1c
+.RI "tuple \fBphoton_statistics\&.received_data_estimate\fP = total_struct_size * update_id"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator and Photon Statistics from the source code\&.

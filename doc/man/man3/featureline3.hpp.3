@@ -1,0 +1,54 @@
+.TH "src/featureline3.hpp" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator and Photon Statistics" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/featureline3.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <Arduino\&.h>\fP
+.br
+\fC#include <imxrt\&.h>\fP
+.br
+\fC#include 'global\&.hpp'\fP
+.br
+\fC#include '\&./\&.\&./code/hardware/pins\&.hpp'\fP
+.br
+\fC#include '\&./\&.\&./code/hardware/ledpanel\&.hpp'\fP
+.br
+\fC#include '\&./\&.\&./code/hardware/errors\&.hpp'\fP
+.br
+\fC#include '\&./\&.\&./code/hardware/pit\&.hpp'\fP
+.br
+\fC#include '\&./\&.\&./code/hardware/qtmr1\&.hpp'\fP
+.br
+\fC#include '\&./\&.\&./code/software/monitor_channel\&.hpp'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBisr_fn3\fP ()"
+.br
+.RI "This featureline (see \fCfeaturelines\&.md) samples Counter values at periodic intervals and prints it to the Serial buffer(using\fPprintln()\fC)\&. This machinary is a subset of\fP*featureline1*`, which is the complete Gate Counting featureline\&. "
+.ti -1c
+.RI "void \fBsampler_setup\fP ()"
+.br
+.ti -1c
+.RI "void \fBsampler_loop\fP ()"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void isr_fn3 ()"
+
+.PP
+This featureline (see \fCfeaturelines\&.md) samples Counter values at periodic intervals and prints it to the Serial buffer(using\fPprintln()\fC)\&. This machinary is a subset of\fP*featureline1*`, which is the complete Gate Counting featureline\&. 
+.SS "void sampler_loop ()"
+
+.SS "void sampler_setup ()"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator and Photon Statistics from the source code\&.

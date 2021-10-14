@@ -1,0 +1,74 @@
+.TH "src/featureline1.hpp" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator and Photon Statistics" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/featureline1.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <Arduino\&.h>\fP
+.br
+\fC#include <imxrt\&.h>\fP
+.br
+\fC#include 'global\&.hpp'\fP
+.br
+\fC#include '\&./\&.\&./code/software/monitor_channel\&.hpp'\fP
+.br
+\fC#include '\&./\&.\&./code/software/histogram\&.hpp'\fP
+.br
+\fC#include '\&./\&.\&./code/hardware/pins\&.hpp'\fP
+.br
+\fC#include '\&./\&.\&./code/hardware/utilities\&.hpp'\fP
+.br
+\fC#include '\&./\&.\&./code/hardware/ledpanel\&.hpp'\fP
+.br
+\fC#include '\&./\&.\&./code/hardware/errors\&.hpp'\fP
+.br
+\fC#include '\&./\&.\&./code/hardware/pit\&.hpp'\fP
+.br
+\fC#include '\&./\&.\&./code/hardware/qtmr1\&.hpp'\fP
+.br
+\fC#include '\&./\&.\&./code/hardware/perf_counter\&.hpp'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBisr_fn\fP ()"
+.br
+.RI "ISR function used for processing counter values\&. "
+.ti -1c
+.RI "void \fBserial_out\fP ()"
+.br
+.RI "Outputs the data struct to the serial buffer\&. "
+.ti -1c
+.RI "void \fBgt_setup\fP ()"
+.br
+.RI "Setup function for Initalization and setup\&. "
+.ti -1c
+.RI "void \fBgt_loop\fP ()"
+.br
+.RI "Loop function that processes the updates from the counters\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void gt_loop ()"
+
+.PP
+Loop function that processes the updates from the counters\&. 
+.SS "void gt_setup ()"
+
+.PP
+Setup function for Initalization and setup\&. 
+.SS "void isr_fn ()"
+
+.PP
+ISR function used for processing counter values\&. 
+.SS "void serial_out ()\fC [inline]\fP"
+
+.PP
+Outputs the data struct to the serial buffer\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator and Photon Statistics from the source code\&.

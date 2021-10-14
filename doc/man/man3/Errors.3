@@ -1,4 +1,4 @@
-.TH "Errors" 3 "Fri Sep 17 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "Errors" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator and Photon Statistics" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -6,28 +6,47 @@ Errors
 .SH SYNOPSIS
 .br
 .PP
-.SS "Functions"
+.PP
+\fC#include <errors\&.hpp>\fP
+.SS "Static Public Member Functions"
 
 .in +1c
 .ti -1c
-.RI "void \fBValidate\fP (const \fBError_t\fP error)"
+.RI "static void \fBValidate\fP (const \fBError_t\fP error)"
 .br
 .RI "Receives an error state and sets up the corresponding LED indicator\&. "
 .ti -1c
-.RI "\fBError_t\fP \fBPrecison_Threshold\fP (double error_val, double error_limit)"
+.RI "static \fBError_t\fP \fBPrecison_Threshold\fP (double error_val, double error_limit)"
 .br
 .RI "Receives error value and error threshold and returns an appropriate error state\&. "
 .ti -1c
-.RI "template<unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Ratio> \fBError_t\fP \fBAuto_MultiTau_Input_Validator\fP ()"
+.RI "template<unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Ratio> static \fBError_t\fP \fBAuto_MultiTau_Input_Validator\fP ()"
 .br
 .RI "Input Validator for MultiTau auto-correlator\&. "
+.ti -1c
+.RI "static void \fB_assert_\fP (bool expression, const char *__attribute__((unused)) message='')"
+.br
+.RI "Custom assertion function\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
 Contains functions that handle errors of type \fCError_t\fP\&. 
-.SH "Function Documentation"
+.SH "Member Function Documentation"
 .PP 
-.SS "template<unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Ratio> \fBError_t\fP Errors::Auto_MultiTau_Input_Validator ()"
+.SS "static void Errors::_assert_ (bool expression, const char *__attribute__((unused)) message = \fC''\fP)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Custom assertion function\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIexpression\fP which must evaluate to false for the assertion to call abort\&. 
+.br
+\fImessage\fP which is ignored in the function, but helps with code redability 
+.RE
+.PP
+
+.SS "template<unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Ratio> static \fBError_t\fP Errors::Auto_MultiTau_Input_Validator ()\fC [inline]\fP, \fC [static]\fP"
 
 .PP
 Input Validator for MultiTau auto-correlator\&. 
@@ -38,14 +57,15 @@ Change name to indicate \fIAuto\fP Correlator link\&.
 .RE
 .PP
 
-.SS "\fBError_t\fP Errors::Precison_Threshold (double error_val, double error_limit)"
+.SS "static \fBError_t\fP Errors::Precison_Threshold (double error_val, double error_limit)\fC [inline]\fP, \fC [static]\fP"
 
 .PP
 Receives error value and error threshold and returns an appropriate error state\&. 
-.SS "void Errors::Validate (const \fBError_t\fP error)"
+.SS "static void Errors::Validate (const \fBError_t\fP error)\fC [inline]\fP, \fC [static]\fP"
 
 .PP
 Receives an error state and sets up the corresponding LED indicator\&. 
+
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for DIY Auto-Correlator from the source code\&.
+Generated automatically by Doxygen for DIY Auto-Correlator and Photon Statistics from the source code\&.

@@ -1,0 +1,66 @@
+\hypertarget{utilities_8hpp}{}\section{code/hardware/utilities.hpp File Reference}
+\label{utilities_8hpp}\index{code/hardware/utilities.\+hpp@{code/hardware/utilities.\+hpp}}
+{\ttfamily \#include $<$imxrt.\+h$>$}\newline
+Include dependency graph for utilities.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{df/d46/utilities_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{db/d84/utilities_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{utilities_8hpp_a4063879653b587261fa428e2a9d662b4}{P\+R\+R\+EG}(x)~Serial.\+print(\#x\char`\"{} 0x\char`\"{}); Serial.\+println(x,\+H\+E\+X)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{utilities_8hpp_aceb15fdf783b1e9be1ef0d0fff5b5907}{xbar\+\_\+connect} (unsigned int input, unsigned int output)
+\begin{DoxyCompactList}\small\item\em Establishes connection over X\+B\+A\+R1-\/A, given the input and output xbar pins  -\/ \href{https://github.com/manitou48/teensy4/blob/bc8fc46af5065a3f84352e0474069ae7a1a13064/pitxbaradc.ino#L40}{\tt https\+://github.\+com/manitou48/teensy4/blob/bc8fc46af5065a3f84352e0474069ae7a1a13064/pitxbaradc.\+ino\#\+L40}  -\/ Not specified. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{utilities_8hpp_a1fb00a623d8b292185132f57935148a9}{F\+\_\+\+C\+P\+U\+\_\+tick\+\_\+count} ()
+\item 
+float \hyperlink{utilities_8hpp_a126c38ddf2ada96665a56b590a631776}{get\+\_\+\+C\+P\+U\+\_\+temp} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{utilities_8hpp_a4063879653b587261fa428e2a9d662b4}\label{utilities_8hpp_a4063879653b587261fa428e2a9d662b4}} 
+\index{utilities.\+hpp@{utilities.\+hpp}!P\+R\+R\+EG@{P\+R\+R\+EG}}
+\index{P\+R\+R\+EG@{P\+R\+R\+EG}!utilities.\+hpp@{utilities.\+hpp}}
+\subsubsection{\texorpdfstring{P\+R\+R\+EG}{PRREG}}
+{\footnotesize\ttfamily \#define P\+R\+R\+EG(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~Serial.\+print(\#x\char`\"{} 0x\char`\"{}); Serial.\+println(x,\+H\+E\+X)}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{utilities_8hpp_a1fb00a623d8b292185132f57935148a9}\label{utilities_8hpp_a1fb00a623d8b292185132f57935148a9}} 
+\index{utilities.\+hpp@{utilities.\+hpp}!F\+\_\+\+C\+P\+U\+\_\+tick\+\_\+count@{F\+\_\+\+C\+P\+U\+\_\+tick\+\_\+count}}
+\index{F\+\_\+\+C\+P\+U\+\_\+tick\+\_\+count@{F\+\_\+\+C\+P\+U\+\_\+tick\+\_\+count}!utilities.\+hpp@{utilities.\+hpp}}
+\subsubsection{\texorpdfstring{F\+\_\+\+C\+P\+U\+\_\+tick\+\_\+count()}{F\_CPU\_tick\_count()}}
+{\footnotesize\ttfamily uint32\+\_\+t F\+\_\+\+C\+P\+U\+\_\+tick\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{utilities_8hpp_a126c38ddf2ada96665a56b590a631776}\label{utilities_8hpp_a126c38ddf2ada96665a56b590a631776}} 
+\index{utilities.\+hpp@{utilities.\+hpp}!get\+\_\+\+C\+P\+U\+\_\+temp@{get\+\_\+\+C\+P\+U\+\_\+temp}}
+\index{get\+\_\+\+C\+P\+U\+\_\+temp@{get\+\_\+\+C\+P\+U\+\_\+temp}!utilities.\+hpp@{utilities.\+hpp}}
+\subsubsection{\texorpdfstring{get\+\_\+\+C\+P\+U\+\_\+temp()}{get\_CPU\_temp()}}
+{\footnotesize\ttfamily float get\+\_\+\+C\+P\+U\+\_\+temp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{utilities_8hpp_aceb15fdf783b1e9be1ef0d0fff5b5907}\label{utilities_8hpp_aceb15fdf783b1e9be1ef0d0fff5b5907}} 
+\index{utilities.\+hpp@{utilities.\+hpp}!xbar\+\_\+connect@{xbar\+\_\+connect}}
+\index{xbar\+\_\+connect@{xbar\+\_\+connect}!utilities.\+hpp@{utilities.\+hpp}}
+\subsubsection{\texorpdfstring{xbar\+\_\+connect()}{xbar\_connect()}}
+{\footnotesize\ttfamily void xbar\+\_\+connect (\begin{DoxyParamCaption}\item[{unsigned int}]{input,  }\item[{unsigned int}]{output }\end{DoxyParamCaption})}
+
+
+
+Establishes connection over X\+B\+A\+R1-\/A, given the input and output xbar pins  -\/ \href{https://github.com/manitou48/teensy4/blob/bc8fc46af5065a3f84352e0474069ae7a1a13064/pitxbaradc.ino#L40}{\tt https\+://github.\+com/manitou48/teensy4/blob/bc8fc46af5065a3f84352e0474069ae7a1a13064/pitxbaradc.\+ino\#\+L40}  -\/ Not specified. 
+

@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['simpler_5fcircular_5fbuffer',['Simpler_Circular_Buffer',['../classSimpler__Circular__Buffer.html',1,'']]],
-  ['simpler_5fcircular_5fbuffer_3c_20counter_5ft_2c_20series_5fsize_20_3e',['Simpler_Circular_Buffer&lt; counter_t, Series_size &gt;',['../classSimpler__Circular__Buffer.html',1,'']]]
+  ['monitorchannel',['MonitorChannel',['../d0/d68/classMonitorChannel.html',1,'']]],
+  ['monitorchannel_3c_20false_20_3e',['MonitorChannel&lt; false &gt;',['../de/dda/classMonitorChannel_3_01false_01_4.html',1,'']]],
+  ['monitorchannel_3c_20true_20_3e',['MonitorChannel&lt; true &gt;',['../d8/d25/classMonitorChannel_3_01true_01_4.html',1,'']]],
+  ['multitauacorrrtteensy',['MultiTauACorrRTTeensy',['../db/d02/classMultiTauACorrRTTeensy.html',1,'']]]
 ];

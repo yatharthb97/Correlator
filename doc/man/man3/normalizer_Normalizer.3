@@ -1,0 +1,139 @@
+.TH "normalizer.Normalizer" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator and Photon Statistics" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+normalizer.Normalizer
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP (self, lin_corrs, series_size, bin_ratio)"
+.br
+.ti -1c
+.RI "def \fBset_mode\fP (self, mode_str)"
+.br
+.ti -1c
+.RI "def \fBnormalize\fP (self, input_y, args)"
+.br
+.ti -1c
+.RI "def \fBno_norm\fP (self, input_y)"
+.br
+.ti -1c
+.RI "def \fBpoints_norm\fP (self, input_y, points_no)"
+.br
+.ti -1c
+.RI "def \fBmean_norm\fP (self, input_y, points_no, accumulate)"
+.br
+.ti -1c
+.RI "def \fB__repr__\fP (self)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBmt_param\fP"
+.br
+.ti -1c
+.RI "\fBpoints_scale_template\fP"
+.br
+.ti -1c
+.RI "\fBbin_ratio_scale\fP"
+.br
+.ti -1c
+.RI "\fBbin_ratio_scale_sq\fP"
+.br
+.ti -1c
+.RI "\fBtau_values\fP"
+.br
+.ti -1c
+.RI "\fBavailable_modes\fP"
+.br
+.ti -1c
+.RI "\fBnorm_fn\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "def normalizer\&.Normalizer\&.__init__ ( self,  lin_corrs,  series_size,  bin_ratio)"
+
+.PP
+.nf
+Constructor that accepts multi-tau configuration parameters.
+
+.fi
+.PP
+ 
+.SH "Member Function Documentation"
+.PP 
+.SS "def normalizer\&.Normalizer\&.__repr__ ( self)"
+
+.SS "def normalizer\&.Normalizer\&.mean_norm ( self,  input_y,  points_no,  accumulate)"
+
+.PP
+.nf
+Returns the mean normalized transformation of the input. Accepts the number of points received by each 
+channel and the mean monitor accumulate. Mean = accumulate / points_no.
+
+.fi
+.PP
+ 
+.SS "def normalizer\&.Normalizer\&.no_norm ( self,  input_y)"
+
+.PP
+.nf
+Returns a non-normalized sequence. This function does nothing except return its input.
+
+.fi
+.PP
+ 
+.SS "def normalizer\&.Normalizer\&.normalize ( self,  input_y,  args)"
+
+.PP
+.nf
+Callable normalization function - single interface.
+
+.fi
+.PP
+ 
+.SS "def normalizer\&.Normalizer\&.points_norm ( self,  input_y,  points_no)"
+
+.PP
+.nf
+Returns the input by dividing it with the number of points received by that particular channel.
+
+.fi
+.PP
+ 
+.SS "def normalizer\&.Normalizer\&.set_mode ( self,  mode_str)"
+
+.PP
+.nf
+Sets the normalization mode for the normalizer. Accepted modes -> {"no", "points", "mean"}
+
+.fi
+.PP
+ 
+.SH "Member Data Documentation"
+.PP 
+.SS "normalizer\&.Normalizer\&.available_modes"
+
+.SS "normalizer\&.Normalizer\&.bin_ratio_scale"
+
+.SS "normalizer\&.Normalizer\&.bin_ratio_scale_sq"
+
+.SS "normalizer\&.Normalizer\&.mt_param"
+
+.SS "normalizer\&.Normalizer\&.norm_fn"
+
+.SS "normalizer\&.Normalizer\&.points_scale_template"
+
+.SS "normalizer\&.Normalizer\&.tau_values"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator and Photon Statistics from the source code\&.

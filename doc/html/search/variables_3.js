@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['datacounter',['DataCounter',['../classMultiTau__ACorr__RT__Teensy.html#ac403944f1456e09036bef6dc60d5a0b2',1,'MultiTau_ACorr_RT_Teensy']]],
-  ['datafile',['datafile',['../namespacepost__upload__actions.html#a007e73e512c986469933678ddb96bf21',1,'post_upload_actions']]],
-  ['default_5fconfig',['default_config',['../namespaceconfig.html#ac321195dcb6ced179a85db093e63a1c9',1,'config']]],
-  ['discarder',['Discarder',['../classMultiTau__ACorr__RT__Teensy.html#ae5ab139ae929212ccdc4eec86d257495',1,'MultiTau_ACorr_RT_Teensy']]]
+  ['dashboard',['dashboard',['../de/d71/classlive__graph_1_1PStatLiveGraph.html#aff87cd16c9d35e895cd3d9657fade256',1,'live_graph::PStatLiveGraph']]],
+  ['datacounter',['DataCounter',['../db/d02/classMultiTauACorrRTTeensy.html#ab2fa5a0800fa7d9ee52900ced06ce935',1,'MultiTauACorrRTTeensy']]],
+  ['datasep',['DATASEP',['../da/d66/namespacephoton__statistics.html#ab381c3496e1a3a8d6dae99e66447c10c',1,'photon_statistics']]],
+  ['default_5fconfig',['default_config',['../d6/d7f/namespaceconfig.html#ac321195dcb6ced179a85db093e63a1c9',1,'config']]],
+  ['discarder',['Discarder',['../db/d02/classMultiTauACorrRTTeensy.html#ad7bd7663180cdc3702ada3e726486311',1,'MultiTauACorrRTTeensy']]]
 ];

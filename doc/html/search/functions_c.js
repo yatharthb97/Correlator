@@ -1,15 +1,6 @@
 var searchData=
 [
-  ['pause_5fresume_5fpits',['pause_resume_PITs',['../classPITController.html#a24b7ea02555967ef945ab87aae338574',1,'PITController']]],
-  ['period_5ferror_5fus',['period_error_us',['../classPITController.html#a3fedb5ff5a44b664e8132f4e2836b155',1,'PITController']]],
-  ['pipe',['pipe',['../classAccumulator.html#a58b1133059f8c92fe6f5f0b229de668f',1,'Accumulator']]],
-  ['pit_5flifetimetimer',['PIT_LifetimeTimer',['../classPIT__LifetimeTimer.html#a826797e75688ab4e7cd5c8854fa6a7c0',1,'PIT_LifetimeTimer']]],
-  ['pitcontroller',['PITController',['../classPITController.html#ad9ef4f151495076fad7b0c556e48b117',1,'PITController']]],
-  ['points_5fnorm',['points_norm',['../namespacemultitau.html#a89bb2627a88498b04ebd436250310d71',1,'multitau']]],
-  ['points_5fnorm_5ftemplate',['points_norm_template',['../namespacemultitau.html#a6a712a94c13f6c08874ea710fc698ff7',1,'multitau']]],
-  ['precison_5fthreshold',['Precison_Threshold',['../namespaceErrors.html#a13171d3d324164c9f7a9508d5a16b0c5',1,'Errors']]],
-  ['pseudoconsole',['PseudoConsole',['../namespaceutilities.html#a85150e8e264f76b149785770210a7f1a',1,'utilities']]],
-  ['push_5fback',['push_back',['../classLin__CrossCorr__RT__Teensy.html#af39e68107a612ca22a83046b10f52afb',1,'Lin_CrossCorr_RT_Teensy::push_back()'],['../classMonitor__Channel.html#a4ed59419438e461cca7b211337840b0f',1,'Monitor_Channel::push_back()'],['../classSimpler__Circular__Buffer.html#af4bdd0a6d3fc7a8c06f62b0d996158f0',1,'Simpler_Circular_Buffer::push_back()']]],
-  ['push_5fdata',['push_data',['../classMultiTau__ACorr__RT__Teensy.html#ae36ab4fb6f646d068e638ab7e4ec9da8',1,'MultiTau_ACorr_RT_Teensy']]],
-  ['push_5fdatum',['push_datum',['../classLin__ACorr__RT__Teensy.html#a0f5e5701923977b24a432ed0024c1368',1,'Lin_ACorr_RT_Teensy::push_datum()'],['../classMultiTau__ACorr__RT__Teensy.html#a1ad6126310c987f53a0ec7ab3ae03a12',1,'MultiTau_ACorr_RT_Teensy::push_datum()']]]
+  ['on_5ftodigital',['ON_todigital',['../d8/d06/classLEDSet.html#a141bb664e7f58ae676455972ca9cd686',1,'LEDSet']]],
+  ['operator_5b_5d',['operator[]',['../d8/d1f/classSimpler__Circular__Buffer.html#a4ce53bc8ad0d231e9d013c771191696a',1,'Simpler_Circular_Buffer']]],
+  ['output',['output',['../dc/d0e/classDiscarderTeensy.html#ae7f8709724630ac3cc82a7a3ee202f2c',1,'DiscarderTeensy::output()'],['../de/d83/classPCHistogram.html#af4391ac8ad3f4d9865ee6335fb563b4c',1,'PCHistogram::output()'],['../d1/d05/classRTCoarseGrainer.html#a2d0cd547401422150d1293a156abc86e',1,'RTCoarseGrainer::output()'],['../da/d03/classInterArrivalTime.html#a8a12081f1132d4a2c7a3898b01897c8d',1,'InterArrivalTime::output()'],['../dd/dd6/classPerfCounter.html#a291ce8187d35e1f97a68339fe51931a4',1,'PerfCounter::output()']]]
 ];

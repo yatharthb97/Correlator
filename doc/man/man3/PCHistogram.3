@@ -1,0 +1,87 @@
+.TH "PCHistogram< BinType, Bins >" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator and Photon Statistics" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PCHistogram< BinType, Bins > \- Photon Counting Histogram module for Real time calculation on \fITeensy 4\&.1 microcontrollers\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <histogram\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr unsigned int \fBsize\fP () __attribute__((always_inline))"
+.br
+.RI "Returns the total number of buns, including the overflow bin\&. "
+.ti -1c
+.RI "template<typename DataType > void \fBpush_back\fP (DataType datum)"
+.br
+.RI "Receives a single datum and processes it to into the Histogram\&. "
+.ti -1c
+.RI "void \fBoutput\fP () __attribute__((always_inline))"
+.br
+.RI "Sends the complete Histogram to the Serial output\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "BinType \fBHistogram\fP [Bins+1] = {0}"
+.br
+.RI "Histogram function array\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "unsigned int \fBIndex\fP"
+.br
+.RI "Index used by the pushback function\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename BinType, unsigned int Bins>
+.br
+class PCHistogram< BinType, Bins >"
+Photon Counting Histogram module for Real time calculation on \fITeensy 4\&.1 microcontrollers\fP\&. 
+
+Describes a real time histogram function that is updated point by point\&. \fIThe Bin index starts from zero\&.\fP The histogram's lasrt bin, which is \fCBins + 1\fPth bin is the overflow bin and includes all points above the maximum bin size\&. The histogram bin is left centred, i\&.e\&., the bin contains all numbers lower or equal to the Bin value\&. 
+.PP
+.nf
+* [Bin 0][Bin 1][Bin 2][Bin 3][Bin 4]...[Bin Max][•|Bin Overflow|•]
+* 
+.fi
+.PP
+ 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename BinType, unsigned int Bins> void \fBPCHistogram\fP< BinType, Bins >::output ()\fC [inline]\fP"
+
+.PP
+Sends the complete Histogram to the Serial output\&. 
+.SS "template<typename BinType, unsigned int Bins> template<typename DataType > void \fBPCHistogram\fP< BinType, Bins >::push_back (DataType datum)\fC [inline]\fP"
+
+.PP
+Receives a single datum and processes it to into the Histogram\&. 
+.SS "template<typename BinType, unsigned int Bins> constexpr unsigned int \fBPCHistogram\fP< BinType, Bins >::size ()\fC [inline]\fP"
+
+.PP
+Returns the total number of buns, including the overflow bin\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "template<typename BinType, unsigned int Bins> BinType \fBPCHistogram\fP< BinType, Bins >::Histogram[Bins+1] = {0}"
+
+.PP
+Histogram function array\&. 
+.SS "template<typename BinType, unsigned int Bins> unsigned int \fBPCHistogram\fP< BinType, Bins >::Index\fC [private]\fP"
+
+.PP
+Index used by the pushback function\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator and Photon Statistics from the source code\&.

@@ -1,0 +1,116 @@
+\hypertarget{classPCHistogram}{}\section{P\+C\+Histogram$<$ Bin\+Type, Bins $>$ Class Template Reference}
+\label{classPCHistogram}\index{P\+C\+Histogram$<$ Bin\+Type, Bins $>$@{P\+C\+Histogram$<$ Bin\+Type, Bins $>$}}
+
+
+Photon Counting Histogram module for Real time calculation on {\itshape Teensy 4.\+1 microcontrollers}.  
+
+
+
+
+{\ttfamily \#include $<$histogram.\+hpp$>$}
+
+
+
+Collaboration diagram for P\+C\+Histogram$<$ Bin\+Type, Bins $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{da/dd0/classPCHistogram__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr unsigned int \hyperlink{classPCHistogram_a4c7558c7cebdd928c0b6e0c548baf1b9}{size} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
+\begin{DoxyCompactList}\small\item\em Returns the total number of buns, including the overflow bin. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Data\+Type $>$ }\\void \hyperlink{classPCHistogram_a0885e66d0de46bd16b72b870d7f410fc}{push\+\_\+back} (Data\+Type datum)
+\begin{DoxyCompactList}\small\item\em Receives a single datum and processes it to into the Histogram. \end{DoxyCompactList}\item 
+void \hyperlink{classPCHistogram_af4391ac8ad3f4d9865ee6335fb563b4c}{output} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
+\begin{DoxyCompactList}\small\item\em Sends the complete Histogram to the Serial output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Bin\+Type \hyperlink{classPCHistogram_a239c7b1e34b2ecc1808e2304d71bc1e2}{Histogram} \mbox{[}Bins+1\mbox{]} = \{0\}
+\begin{DoxyCompactList}\small\item\em Histogram function array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{classPCHistogram_a3d0371659763511d752c3348db978f79}{Index}
+\begin{DoxyCompactList}\small\item\em Index used by the pushback function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Bin\+Type, unsigned int Bins$>$\newline
+class P\+C\+Histogram$<$ Bin\+Type, Bins $>$}
+
+Photon Counting Histogram module for Real time calculation on {\itshape Teensy 4.\+1 microcontrollers}. 
+
+Describes a real time histogram function that is updated point by point. {\itshape The Bin index starts from zero.} The histogram\textquotesingle{}s lasrt bin, which is {\ttfamily Bins + 1}th bin is the overflow bin and includes all points above the maximum bin size. The histogram bin is left centred, i.\+e., the bin contains all numbers lower or equal to the Bin value. \begin{DoxyVerb}* [Bin 0][Bin 1][Bin 2][Bin 3][Bin 4]...[Bin Max][•|Bin Overflow|•]
+* \end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPCHistogram_af4391ac8ad3f4d9865ee6335fb563b4c}\label{classPCHistogram_af4391ac8ad3f4d9865ee6335fb563b4c}} 
+\index{P\+C\+Histogram@{P\+C\+Histogram}!output@{output}}
+\index{output@{output}!P\+C\+Histogram@{P\+C\+Histogram}}
+\subsubsection{\texorpdfstring{output()}{output()}}
+{\footnotesize\ttfamily template$<$typename Bin\+Type, unsigned int Bins$>$ \\
+void \hyperlink{classPCHistogram}{P\+C\+Histogram}$<$ Bin\+Type, Bins $>$\+::output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sends the complete Histogram to the Serial output. 
+
+\mbox{\Hypertarget{classPCHistogram_a0885e66d0de46bd16b72b870d7f410fc}\label{classPCHistogram_a0885e66d0de46bd16b72b870d7f410fc}} 
+\index{P\+C\+Histogram@{P\+C\+Histogram}!push\+\_\+back@{push\+\_\+back}}
+\index{push\+\_\+back@{push\+\_\+back}!P\+C\+Histogram@{P\+C\+Histogram}}
+\subsubsection{\texorpdfstring{push\+\_\+back()}{push\_back()}}
+{\footnotesize\ttfamily template$<$typename Bin\+Type, unsigned int Bins$>$ \\
+template$<$typename Data\+Type $>$ \\
+void \hyperlink{classPCHistogram}{P\+C\+Histogram}$<$ Bin\+Type, Bins $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{Data\+Type}]{datum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Receives a single datum and processes it to into the Histogram. 
+
+\mbox{\Hypertarget{classPCHistogram_a4c7558c7cebdd928c0b6e0c548baf1b9}\label{classPCHistogram_a4c7558c7cebdd928c0b6e0c548baf1b9}} 
+\index{P\+C\+Histogram@{P\+C\+Histogram}!size@{size}}
+\index{size@{size}!P\+C\+Histogram@{P\+C\+Histogram}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename Bin\+Type, unsigned int Bins$>$ \\
+constexpr unsigned int \hyperlink{classPCHistogram}{P\+C\+Histogram}$<$ Bin\+Type, Bins $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the total number of buns, including the overflow bin. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classPCHistogram_a239c7b1e34b2ecc1808e2304d71bc1e2}\label{classPCHistogram_a239c7b1e34b2ecc1808e2304d71bc1e2}} 
+\index{P\+C\+Histogram@{P\+C\+Histogram}!Histogram@{Histogram}}
+\index{Histogram@{Histogram}!P\+C\+Histogram@{P\+C\+Histogram}}
+\subsubsection{\texorpdfstring{Histogram}{Histogram}}
+{\footnotesize\ttfamily template$<$typename Bin\+Type, unsigned int Bins$>$ \\
+Bin\+Type \hyperlink{classPCHistogram}{P\+C\+Histogram}$<$ Bin\+Type, Bins $>$\+::Histogram\mbox{[}Bins+1\mbox{]} = \{0\}}
+
+
+
+Histogram function array. 
+
+\mbox{\Hypertarget{classPCHistogram_a3d0371659763511d752c3348db978f79}\label{classPCHistogram_a3d0371659763511d752c3348db978f79}} 
+\index{P\+C\+Histogram@{P\+C\+Histogram}!Index@{Index}}
+\index{Index@{Index}!P\+C\+Histogram@{P\+C\+Histogram}}
+\subsubsection{\texorpdfstring{Index}{Index}}
+{\footnotesize\ttfamily template$<$typename Bin\+Type, unsigned int Bins$>$ \\
+unsigned int \hyperlink{classPCHistogram}{P\+C\+Histogram}$<$ Bin\+Type, Bins $>$\+::Index\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Index used by the pushback function. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/software/\hyperlink{histogram_8hpp}{histogram.\+hpp}\end{DoxyCompactItemize}

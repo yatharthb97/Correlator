@@ -1,79 +1,179 @@
-Online {\itshape doxygen} documentation Link\+: \href{https://yatharthb97.github.io/Correlator/index.html}{\tt https\+://yatharthb97.\+github.\+io/\+Correlator/index.\+html}
 
-\subsection*{Software}
+
+
+
+Online {\itshape doxygen} documentation Link\+: \href{https://yatharthb97.github.io/Correlator/index.html}{\tt https\+://yatharthb97.\+github.\+io/\+Correlator/index.\+html} 
+
+
+
+→ {\itshape Photon Statistics Device}\+: This repo contains code that is used to set up, configure, and record photon-\/statistics at real time from a detector that generates T\+TL pulses. The device is {\bfseries multi-\/modal} and is built with $\ast$$\ast$\char`\"{}feature lines\char`\"{}$\ast$$\ast$, i.\+e. a set of features are compatible during a specific mode of operation. This was implemented to make the device more \char`\"{}feature rich\char`\"{}, but the main purpose was to organize the code and different tests into a single easy to understand framework.
+
+\subsubsection*{Usage}
+
+
+\begin{DoxyEnumerate}
+\item Set the configuration in {\ttfamily config.\+json}.
+\item Upload code to the device using Plateform\+IO.
+\item Start the PC application (instructions below). 
+
+
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item The (microcontroller) board configuration used by Plateform\+IO is defined in the file {\ttfamily plateformio.\+ini}.
+\item The feature configurations are defined in the file {\ttfamily config.\+json}.
+\item These two files must exist for the program to compile and run. The {\ttfamily config.\+json} file will be auto-\/generated, if it is missing in the root directory. Missing fields will also be added with default values, while generating a warning message at compile time. 
+
+
+\item The file {\ttfamily build\+\_\+system.\+py} constructs the build environment from the {\ttfamily config.\+json} file.
+\end{DoxyItemize}
+
+\subsubsection*{Error Mechanism and Debugging}
+
+
+\begin{DoxyItemize}
+\item If the device turns on all the L\+E\+Ds on the panel, that means that an error was generated. If the configuration {\ttfamily \char`\"{}\+Abort\+On\+Error\char`\"{}} is set to the {\ttfamily true}, the device would be put to a \char`\"{}hung state\char`\"{} and would not generate any output in that case before a restart. The error type can be deduced by the blinking of particular L\+ED colors. This blinking would occur for 10 seconds, before all the L\+E\+Ds are switched on. The color assignments are are given below\+:
+\begin{DoxyEnumerate}
+\item {\ttfamily \hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa8347bab2e74e4a640d76c916306a1a36}{Error\+\_\+t\+::\+Counter\+\_\+\+Overflow}} or {\ttfamily \hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa02b02f5e5e61f24acdd91338b95997da}{Error\+\_\+t\+::\+Counter\+\_\+\+Underflow}} → White L\+ED
+\item {\ttfamily \hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fabe5edab59de4ea30531374e506b03822}{Error\+\_\+t\+::\+Precision}} → Blue L\+ED
+\item {\ttfamily \hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa7e748bca7005cc737bad51b247997421}{Error\+\_\+t\+::\+Input\+\_\+\+Validation}} → Red L\+ED
+\end{DoxyEnumerate}
+\item Pin Toggling during I\+SR firing \+: If the config option {\ttfamily I\+SR Pin Toggle} is turned on, a {\ttfamily gpio pin} is toggled every time the I\+SR (Interrupt Service Routine) function is fired during gate counting. The output of this pin can be visualized on an oscilloscope to measure timing and performance of the device. The particular pin is defined as {\ttfamily I\+S\+R\+\_\+\+T\+E\+S\+T\+\_\+\+T\+O\+O\+G\+L\+E\+\_\+\+P\+IN} in the file {\ttfamily \hyperlink{pins_8hpp}{pins.\+hpp}}.
+\item The config option {\ttfamily Some\+Debug\+Value} can be used to insert an arbitrary value from the {\ttfamily config.\+json} file to the compilation units and can be used for any testing purpose.
+\item The program validates the options in {\ttfamily config.\+json} and generates errors at compile time if the configurations are incompatible or incorrect.
+\end{DoxyItemize}
+
+\subsection*{Feature Lines}
+
+The feature line can be selected via this option in the {\ttfamily config.\+json} file\+: {\ttfamily \char`\"{}\+Feature Line\char`\"{}}. This option takes three valid inputs as of now\+:
+
+
+\begin{DoxyEnumerate}
+\item {\ttfamily \char`\"{}\+A\+C\+F\char`\"{}}
+\item {\ttfamily \char`\"{}\+Interarrival\char`\"{}}
+\item {\ttfamily \char`\"{}\+Sampler\char`\"{}}
+\end{DoxyEnumerate}
+
+\subsubsection*{Common features across feature branches}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Enable Synchronization} \+: Enables transmission and reception of a unique {\ttfamily Sync Code}, which precedes every struct that is sent and marks its beginning. In the event of a mismatch of sync code, it can be deduced that the struct transmission and subsequent reception is misaligned. An E\+R\+R\+OR is generated at the PC end when that happens.
+
+An easy way to emulate this mismatch is to change the configuration file {\ttfamily \hyperlink{config_8py}{config.\+py}} and launch the software, without pushing the changed configuration to the device via Plateform\+IO.
+\end{DoxyItemize}
+
+\subsubsection*{Feature Branch 1 -\/ {\ttfamily A\+CF} (uses Gate Counting)}
+
+This is sort of the main feature branch. {\itshape Device ready} state is indicated by the {\ttfamily R\+ED L\+ED} and {\itshape device running} state is indicated by the {\ttfamily G\+R\+E\+EN L\+ED}.
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Enable A\+CF} \+: Enable A\+CF Calculation
+\item {\ttfamily Enable Count Rate} \+: Enable Count Rate Measurement
+\item {\ttfamily Enable PC Histogram} \+: Enable Photon Counting Histogram
+\item {\ttfamily Enable Perf\+Couter} \+: Enables Performance Counters for A\+CF and Serial output.
+\item {\ttfamily Enable I\+SR Pin Toggle} \+: Enables toggling of a specific pin {\ttfamily P\+I\+T\+\_\+\+T\+E\+S\+T\+\_\+\+T\+O\+O\+G\+L\+E\+\_\+\+P\+IN} (pin 3) during each I\+SR. This pin can be used to monitor timing on a oscilloscope.
+\item {\ttfamily Enable Points Normalization} \+: Enables simple normalization using points used. (under review)
+\item {\ttfamily Enable Mean Normalization} \+: Enables normalization using the estimated mean from a separate {\ttfamily \hyperlink{classMonitorChannel}{Monitor\+Channel}}. (under review)
+
+$<$u$>$Note\+:$<$/u$>$ Enabling each feature would reduce the overall performance of the device. Whereas, if a feature is disabled, it has no footprint.
+\end{DoxyItemize}
+
+\subsection*{Feature Branch 2 -\/ {\ttfamily Photon Interarrival Time}}
+
+{\itshape Device ready} state is indicated by the {\ttfamily B\+L\+UE L\+ED} and {\itshape device running} state is indicated by the {\ttfamily W\+H\+I\+TE L\+ED}.
+
+Uses tight-\/polling and hence a separate feature branch is needed. ==Implementation Pending==
+
+\subsection*{Feature Branch 3 -\/ {\ttfamily Sampler} (Gate Counting)}
+
+{\itshape Device ready} state is indicated by the {\ttfamily W\+H\+I\+TE L\+ED} and {\itshape device running} state is indicated by the {\ttfamily G\+R\+E\+EN L\+ED}.
+
+This branch periodically (As per {\ttfamily Sampling Delay ms} option) samples and prints the Counter value, the mean of the Counter, and the overall count of the values received. The output of the device is line separated and hence, does not require {\ttfamily Synchronization Code} feature.
+
+Typical Output\+: cv\+: counter value (sampled), m\+: mean, a\+: accumulate, c\+: count (Mean = Accumulate/\+Count)
+
+
+\begin{DoxyCode}
+cv: 10  m: 0.10  c: 2667240000  a: 268435456.00
+\end{DoxyCode}
+
+
+\subsection*{Feature Branch 4 -\/ Photon Trace}
+
+Uses tight-\/polling and hence a separate feature branch is needed. ==Implementation Pending==
+
+\subsection*{Description of Modules}
+
+\subsubsection*{Software Libraries}
 
 This folder contains the implementation of the software correlator that will be used on Teensy. The file descriptions are as follows\+:
 
 
 \begin{DoxyItemize}
-\item {\ttfamily Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base.\+hpp} -\/ Base (Interface) for Linear Correlators
-\item {\ttfamily \hyperlink{Lin__ACorr__RT__Teensy_8hpp}{Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Teensy.\+hpp}} -\/ Implementation specific to Teensy
+\item {\ttfamily \hyperlink{accumulator_8hpp}{accumulator.\+hpp}} -\/ Adapter object used by Multi Tau A\+Corr.
+\item {\ttfamily \hyperlink{discarder_8hpp}{discarder.\+hpp}} -\/ Adapter object used by Multi Tau A\+Corr.
+\item {\ttfamily \hyperlink{histogram_8hpp}{histogram.\+hpp}} -\/ Defines a real-\/time histogram class.
+\item {\ttfamily \hyperlink{Lin__ACorr__RT__Teensy_8hpp}{Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Teensy.\+hpp}} -\/ Linear Auto Correlator module.
+\item {\ttfamily \hyperlink{monitor__channel_8hpp}{monitor\+\_\+channel.\+hpp}} -\/ Defines classes {\ttfamily \hyperlink{classMonitorChannel}{Monitor\+Channel}} and {\ttfamily \hyperlink{classRTCoarseGrainer}{R\+T\+Coarse\+Grainer}}.
 \item {\ttfamily \hyperlink{multi__tau_8hpp}{multi\+\_\+tau.\+hpp}} -\/ Teensy specific implementation of multi-\/tau Auto-\/correlator
-\item {\ttfamily \hyperlink{accumulator_8hpp}{accumulator.\+hpp}} -\/ Adapter object used by Multi Tau A\+Corr
-\item {\ttfamily \hyperlink{discarder_8hpp}{discarder.\+hpp}} -\/ Adapter object used by Multi Tau A\+Corr
-\item {\ttfamily \hyperlink{simpler__circular__buffer_8hpp}{simpler\+\_\+circular\+\_\+buffer.\+hpp}} -\/ Simple circlar buffer used for storing the cout values.
-\item {\ttfamily \hyperlink{types_8hpp}{types.\+hpp}} -\/ Contains the {\ttfamily typedef} of the abstracted typenames
-\begin{DoxyItemize}
-\item {\ttfamily counter\+\_\+t} -\/ Type returned by the Counter module
-\item {\ttfamily index\+\_\+t} -\/ Type used to index arrays and buffers in the implementation
-\end{DoxyItemize}
-\item {\ttfamily test.\+cpp} -\/ File used for tsting
-\item {\ttfamily circlar\+\_\+buffer.\+hpp} -\/ Another implementation of circular buffer (unsued right now)
-\item {\ttfamily Lin\+\_\+\+Cross\+Corr\+\_\+\+R\+T\+\_\+\+Base.\+hpp} -\/ Base interface for Linear Cross Correlators
+\item {\ttfamily \hyperlink{simpler__circular__buffer_8hpp}{simpler\+\_\+circular\+\_\+buffer.\+hpp}} -\/ Simple circlar buffer used for storing the cout values. 
+
+
+\item {\ttfamily \hyperlink{test_8cpp}{test.\+cpp}} -\/ File used for testing software modules.
+\item {\ttfamily \hyperlink{pseudoSerial_8hpp}{pseudo\+Serial.\+hpp}} -\/ File that defines a {\ttfamily char Buffer} that is used in place of {\ttfamily Arduino\+::\+Serial} buffer.
+\item {\ttfamily \hyperlink{pseudoSerial_8cpp}{pseudo\+Serial.\+cpp}} -\/ File that implements a {\ttfamily char Buffer} that is used in place of {\ttfamily Arduino\+::\+Serial} buffer. 
+
+
 \item {\ttfamily \hyperlink{Lin__CrossCorr__RT__Teensy_8hpp}{Lin\+\_\+\+Cross\+Corr\+\_\+\+R\+T\+\_\+\+Teensy.\+hpp}} -\/ Teensy specific Liner Cross Correlator interface
 \end{DoxyItemize}
 
-\subsection*{Hardware}
+\subsection*{Hardware Libraries}
 
 File descriptions\+:
 
 
 \begin{DoxyItemize}
-\item {\ttfamily \hyperlink{pit_8hpp}{pit.\+hpp}} -\/ Defines {\ttfamily class \hyperlink{classPITController}{P\+I\+T\+Controller}} that provides an abstraction layer on the P\+IT timer controls.
+\item {\ttfamily \hyperlink{interarrival_8hpp}{interarrival.\+hpp}} -\/ Defines a class that measures and stores the inter-\/arrival time between two events.
+\item {\ttfamily \hyperlink{pit_8hpp}{pit.\+hpp}} -\/ Defines {\ttfamily class \hyperlink{classPITController}{P\+I\+T\+Controller}} that provides an abstraction layer on the P\+IT timer controls for triggering {\itshape Gate Counting}.
 \item {\ttfamily \hyperlink{qtmr1_8hpp}{qtmr1.\+hpp}} -\/ Defines \textquotesingle{}class Q\+T\+M\+R1\+Controller\textquotesingle{} that provides an abstraction layer on the Q\+T\+M\+R1 timer controls.
 \item {\ttfamily \hyperlink{lifetime__timer_8hpp}{lifetime\+\_\+timer.\+hpp}} -\/ Interface for using P\+IT timers in chained mode to create a 64-\/bit lifetime counter
+\item {\ttfamily \hyperlink{ledset_8hpp}{ledset.\+hpp}} -\/ Defines the L\+ED controller class.
+\item {\ttfamily \hyperlink{ledpanel_8hpp}{ledpanel.\+hpp}} -\/ Defines a global {\ttfamily \hyperlink{classLEDSet}{L\+E\+D\+Set}} instance used across the library.
+\item {\ttfamily \hyperlink{perf__counter_8hpp}{perf\+\_\+counter.\+hpp}} -\/ Defines a {\ttfamily \hyperlink{classPerfCounter}{Perf\+Counter}} (Performance Counter) class that measures the C\+PU clock pulses between {\ttfamily \hyperlink{classPerfCounter_a5fdd73c1d604decd6dc745aada8092d1}{Perf\+Counter\+::start()}} and {\ttfamily \hyperlink{classPerfCounter_ab5d9f05bb15139451eaa857989ed8bd8}{Perf\+Counter\+::end()}}.
+\item {\ttfamily \hyperlink{pins_8hpp}{pins.\+hpp}} -\/ Defines the gpio pin assignments.
+\item {\ttfamily \hyperlink{utilities_8hpp}{utilities.\+hpp}} -\/ Utility functions.
+\item {\ttfamily \hyperlink{errors_8hpp}{errors.\+hpp}} -\/ Defines common error codes and error generating functions.
 \end{DoxyItemize}
 
 \subsection*{Common Interface}
 
 
 \begin{DoxyItemize}
-\item {\ttfamily modules.\+hpp} -\/ Defines functions that represent highest-\/abstracted modules in the system.
-\item {\ttfamily \hyperlink{errors_8hpp}{errors.\+hpp}} -\/ Defines common error codes and error generating functions.
-\item {\ttfamily \hyperlink{utilities_8hpp}{utilities.\+hpp}} -\/ Contains some utility functions
+\item {\ttfamily \hyperlink{types_8hpp}{types.\+hpp}} -\/ Defines the abstract data types used in the library.
+\begin{DoxyItemize}
+\item {\ttfamily counter\+\_\+t} -\/ Type returned by the Counter module.
+\item {\ttfamily index\+\_\+t} -\/ Type used to index arrays and buffers in the implementation.
+\item float\+\_\+t -\/ Type used commonly for floating types.
+\end{DoxyItemize}
 \end{DoxyItemize}
 
-\subsection*{Standard Flushing Procedure for U\+SB Serial on Teensy\+:}
+\subsection*{PC Application}
+
+Execute PC Program\+: {\ttfamily $>$$>$ python ./photon\+\_\+statistics.py $<$session\+\_\+name$>$}.
+
+→ (Session name is optional and will be autogenerated if not passed.)
 
 
 \begin{DoxyItemize}
-\item Libraries will use {\ttfamily Serial.\+write(buffer, bytes);} for all outputs.
-\item For line buffered outputs, at the end, user calls\+: 
-\begin{DoxyCode}
-Serial.write('\(\backslash\)n');
-Serial.flush(); // Which is an alias of usb\_serial::flush()
-\end{DoxyCode}
+\item {\ttfamily \hyperlink{photon__statistics_8py}{photon\+\_\+statistics.\+py}} -\/ PC Side program for data acquisition and plotting -\/ Callable. 
 
-\item Note\+: The libraries are not allowed to use endlines on output calls. This also solves the \char`\"{}`\textbackslash{}r\textbackslash{}n`\char`\"{} problem of using {\ttfamily Serial.\+println()}.
-\item Both {\ttfamily Serial.\+flush()} and {\ttfamily Serial.\+send\+\_\+now()} wrap {\ttfamily usb\+\_\+serial\+\_\+flush\+\_\+output();}. Reference 
+
+\item {\ttfamily \hyperlink{config_8py}{config.\+py}} -\/ Configuration file generator and validator.
+\item {\ttfamily icon.\+png} -\/ Window Icon for G\+UI.
+\item {\ttfamily \hyperlink{live__graph_8py}{live\+\_\+graph.\+py}} -\/ Defines a G\+UI for live plotting that uses {\ttfamily pyqtgraph}.
+\item {\ttfamily \hyperlink{multitau_8py}{multitau.\+py}} -\/ Defines functions specific to Multitau method.
+\item {\ttfamily \hyperlink{normalizer_8py}{normalizer.\+py}} -\/ Defines a class that implements various normalization methods.
+\item {\ttfamily \hyperlink{statmethods_8py}{statmethods.\+py}} -\/ Defines statistical methods for estimation of various quantities.
+\item {\ttfamily \hyperlink{utilities_8py}{utilities.\+py}} -\/ Defines misc functions that serve as utilities. 
 \end{DoxyItemize}
-
-\subsection*{S\+L\+OC as on 28/08/21}
-
---- Result --- 
-\begin{DoxyCode}
-            Physical :  1873
-              Source :  1093
-             Comment :  503
- Single-line comment :  284
-       Block comment :  223
-               Mixed :  132
- Empty block comment :  0
-               Empty :  409
-               To Do :  0
-
-Number of files read :  23
-\end{DoxyCode}
-
-
- 

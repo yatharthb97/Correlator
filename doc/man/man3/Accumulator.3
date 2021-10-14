@@ -1,8 +1,8 @@
-.TH "Accumulator< Series_size >" 3 "Fri Sep 17 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "Accumulator" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator and Photon Statistics" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-Accumulator< Series_size > \- Adapter object responsible for accumulating the points and coarsening the time-series as per the relavent linear-correlator time-resolution\&.  
+Accumulator \- Adapter object responsible for accumulating the points and coarsening the time-series as per the relavent linear-correlator time-resolution\&.  
 
 .SH SYNOPSIS
 .br
@@ -13,7 +13,11 @@ Accumulator< Series_size > \- Adapter object responsible for accumulating the po
 
 .in +1c
 .ti -1c
-.RI "void \fBpipe\fP (\fBLin_ACorr_RT_Teensy\fP< Series_size > &channel, \fBcounter_t\fP datum) __attribute__((flatten))"
+.RI "void \fBdo_accumulate\fP (unsigned int buffer_cnt)"
+.br
+.RI "Sets the number of points to buffer(accumulate) before pushing to Correlator object\&. "
+.ti -1c
+.RI "template<typename LinCorrType > void \fBpipe\fP (LinCorrType &channel, const \fBcounter_t\fP datum)"
 .br
 .RI "Accumulates data points until the BufferPoints criteria is satisfied, after which the points are pushed to the channel\&. "
 .in -1c
@@ -21,7 +25,7 @@ Accumulator< Series_size > \- Adapter object responsible for accumulating the po
 
 .in +1c
 .ti -1c
-.RI "unsigned int \fBBufferPoints\fP = 0"
+.RI "unsigned int \fBBuffer_count\fP = 0"
 .br
 .RI "Number of points accumulated and binned together\&. "
 .in -1c
@@ -29,50 +33,42 @@ Accumulator< Series_size > \- Adapter object responsible for accumulating the po
 
 .in +1c
 .ti -1c
-.RI "unsigned int \fBReceivedPointsCounter\fP = 0"
-.br
-.RI "Maximum number of points accepted by the accumulator\&. For debugging\&. "
-.ti -1c
-.RI "\fBcounter_t\fP \fBAccumulate\fP = 0\&.0"
+.RI "\fBcounter_t\fP \fBAccumulate\fP = 0"
 .br
 .RI "Stores the value of the accumulate\&. "
 .ti -1c
-.RI "unsigned int \fBLocalCounter\fP = 0"
+.RI "unsigned int \fBUpdate_count\fP = 0"
 .br
-.RI "Maintains a cunter of the items to accumuate\&. "
+.RI "Maintains a counter of the items to accumuate\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
-
-.SS "template<index_t Series_size>
-.br
-class Accumulator< Series_size >"
 Adapter object responsible for accumulating the points and coarsening the time-series as per the relavent linear-correlator time-resolution\&. 
 .SH "Member Function Documentation"
 .PP 
-.SS "template<index_t Series_size> void \fBAccumulator\fP< Series_size >::pipe (\fBLin_ACorr_RT_Teensy\fP< Series_size > & channel, \fBcounter_t\fP datum)\fC [inline]\fP"
+.SS "void Accumulator::do_accumulate (unsigned int buffer_cnt)\fC [inline]\fP"
+
+.PP
+Sets the number of points to buffer(accumulate) before pushing to Correlator object\&. 
+.SS "template<typename LinCorrType > void Accumulator::pipe (LinCorrType & channel, const \fBcounter_t\fP datum)\fC [inline]\fP"
 
 .PP
 Accumulates data points until the BufferPoints criteria is satisfied, after which the points are pushed to the channel\&. 
 .SH "Member Data Documentation"
 .PP 
-.SS "template<index_t Series_size> \fBcounter_t\fP \fBAccumulator\fP< Series_size >::Accumulate = 0\&.0\fC [private]\fP"
+.SS "\fBcounter_t\fP Accumulator::Accumulate = 0\fC [private]\fP"
 
 .PP
 Stores the value of the accumulate\&. 
-.SS "template<index_t Series_size> unsigned int \fBAccumulator\fP< Series_size >::BufferPoints = 0"
+.SS "unsigned int Accumulator::Buffer_count = 0"
 
 .PP
 Number of points accumulated and binned together\&. 
-.SS "template<index_t Series_size> unsigned int \fBAccumulator\fP< Series_size >::LocalCounter = 0\fC [private]\fP"
+.SS "unsigned int Accumulator::Update_count = 0\fC [private]\fP"
 
 .PP
-Maintains a cunter of the items to accumuate\&. 
-.SS "template<index_t Series_size> unsigned int \fBAccumulator\fP< Series_size >::ReceivedPointsCounter = 0\fC [private]\fP"
-
-.PP
-Maximum number of points accepted by the accumulator\&. For debugging\&. 
+Maintains a counter of the items to accumuate\&. 
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for DIY Auto-Correlator from the source code\&.
+Generated automatically by Doxygen for DIY Auto-Correlator and Photon Statistics from the source code\&.

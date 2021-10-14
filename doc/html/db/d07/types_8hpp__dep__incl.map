@@ -1,0 +1,19 @@
+<map id="code/types.hpp" name="code/types.hpp">
+<area shape="rect" id="node2" href="$df/d96/multi__tau_8hpp.html" title="code/software/multi\l_tau.hpp" alt="" coords="1071,259,1223,300"/>
+<area shape="rect" id="node9" href="$d3/d93/Lin__ACorr__RT__Teensy_8hpp.html" title="code/software/Lin_ACorr\l_RT_Teensy.hpp" alt="" coords="873,80,1053,121"/>
+<area shape="rect" id="node10" href="$d2/dc3/discarder_8hpp.html" title="code/software/discarder.hpp" alt="" coords="894,177,1101,203"/>
+<area shape="rect" id="node11" href="$d8/d5e/accumulator_8hpp.html" title="code/software/accumulator.hpp" alt="" coords="1078,87,1304,114"/>
+<area shape="rect" id="node12" href="$d4/d18/monitor__channel_8hpp.html" title="code/software/monitor\l_channel.hpp" alt="" coords="701,169,870,211"/>
+<area shape="rect" id="node14" href="$d5/d6e/histogram_8hpp.html" title="code/software/histogram.hpp" alt="" coords="538,266,750,293"/>
+<area shape="rect" id="node15" href="$df/d52/errors_8hpp.html" title="code/hardware/errors.hpp" alt="" coords="193,177,381,203"/>
+<area shape="rect" id="node18" href="$d4/d7b/Lin__CrossCorr__RT__Teensy_8hpp.html" title="code/software/Lin_CrossCorr\l_RT_Teensy.hpp" alt="" coords="1380,80,1586,121"/>
+<area shape="rect" id="node3" href="$d9/d3a/global_8hpp.html" title="src/global.hpp" alt="" coords="578,348,692,375"/>
+<area shape="rect" id="node6" href="$dd/d52/featureline2_8hpp.html" title="src/featureline2.hpp" alt="" coords="874,423,1026,449"/>
+<area shape="rect" id="node4" href="$d0/dc7/featureline1_8hpp.html" title="src/featureline1.hpp" alt="" coords="368,423,520,449"/>
+<area shape="rect" id="node7" href="$de/d19/featureline3_8hpp.html" title="src/featureline3.hpp" alt="" coords="190,423,342,449"/>
+<area shape="rect" id="node8" href="$db/d7d/global_8cpp.html" title="src/global.cpp" alt="" coords="579,423,691,449"/>
+<area shape="rect" id="node5" href="$df/d0a/main_8cpp.html" title="src/main.cpp" alt="" coords="392,497,497,524"/>
+<area shape="rect" id="node13" href="$d3/d5e/interarrival_8hpp.html" title="code/hardware/interarrival.hpp" alt="" coords="774,266,997,293"/>
+<area shape="rect" id="node16" href="$d1/df0/pit_8hpp.html" title="code/hardware/pit.hpp" alt="" coords="32,266,198,293"/>
+<area shape="rect" id="node17" href="$d0/d11/qtmr1_8hpp.html" title="code/hardware/qtmr1.hpp" alt="" coords="324,266,514,293"/>
+</map>

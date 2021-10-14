@@ -1,0 +1,99 @@
+\hypertarget{errors_8hpp}{}\section{code/hardware/errors.hpp File Reference}
+\label{errors_8hpp}\index{code/hardware/errors.\+hpp@{code/hardware/errors.\+hpp}}
+{\ttfamily \#include \char`\"{}pins.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}./../types.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ledpanel.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+Include dependency graph for errors.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d0e/errors_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dcb/errors_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classErrors}{Errors}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{errors_8hpp_a0eb326048ed31037a6e5ec5634a6202e}{T\+E\+E\+N\+S\+Y\+\_\+\+M\+A\+X\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+ON}~125000
+\begin{DoxyCompactList}\small\item\em This file contain the Common Error Codes for Software-\/\+Hardware Interface. It defines the {\ttfamily Error\+\_\+t} and namespace {\ttfamily \hyperlink{classErrors}{Errors}} that are used to handle the errors and interact with the L\+ED dashboard. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7f}{Error\+\_\+t} \{ \newline
+\hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa505a83f220c02df2f85c3810cd9ceb38}{Error\+\_\+t\+::\+Success} = 0, 
+\hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa8347bab2e74e4a640d76c916306a1a36}{Error\+\_\+t\+::\+Counter\+\_\+\+Overflow}, 
+\hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa02b02f5e5e61f24acdd91338b95997da}{Error\+\_\+t\+::\+Counter\+\_\+\+Underflow}, 
+\hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fabe5edab59de4ea30531374e506b03822}{Error\+\_\+t\+::\+Precision}, 
+\newline
+\hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa7e748bca7005cc737bad51b247997421}{Error\+\_\+t\+::\+Input\+\_\+\+Validation}, 
+\hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fac7e40b9218d101cde2dc4c43b9fed0fe}{Error\+\_\+t\+::\+Generic\+\_\+\+Error}
+ \}\begin{DoxyCompactList}\small\item\em Enumarates the error codes thrown by the different modules. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{errors_8hpp_a0eb326048ed31037a6e5ec5634a6202e}\label{errors_8hpp_a0eb326048ed31037a6e5ec5634a6202e}} 
+\index{errors.\+hpp@{errors.\+hpp}!T\+E\+E\+N\+S\+Y\+\_\+\+M\+A\+X\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+ON@{T\+E\+E\+N\+S\+Y\+\_\+\+M\+A\+X\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+ON}}
+\index{T\+E\+E\+N\+S\+Y\+\_\+\+M\+A\+X\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+ON@{T\+E\+E\+N\+S\+Y\+\_\+\+M\+A\+X\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+ON}!errors.\+hpp@{errors.\+hpp}}
+\subsubsection{\texorpdfstring{T\+E\+E\+N\+S\+Y\+\_\+\+M\+A\+X\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+ON}{TEENSY\_MAX\_ALLOCATION}}
+{\footnotesize\ttfamily \#define T\+E\+E\+N\+S\+Y\+\_\+\+M\+A\+X\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+ON~125000}
+
+
+
+This file contain the Common Error Codes for Software-\/\+Hardware Interface. It defines the {\ttfamily Error\+\_\+t} and namespace {\ttfamily \hyperlink{classErrors}{Errors}} that are used to handle the errors and interact with the L\+ED dashboard. 
+
+\begin{DoxyAuthor}{Author}
+Yatharth Bhasin (github → yatharthb97) Maximum Allocations of 32-\/bit integers allowed on the microcontroller Teensy. 
+\end{DoxyAuthor}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7f}\label{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7f}} 
+\index{errors.\+hpp@{errors.\+hpp}!Error\+\_\+t@{Error\+\_\+t}}
+\index{Error\+\_\+t@{Error\+\_\+t}!errors.\+hpp@{errors.\+hpp}}
+\subsubsection{\texorpdfstring{Error\+\_\+t}{Error\_t}}
+{\footnotesize\ttfamily enum \hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7f}{Error\+\_\+t}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumarates the error codes thrown by the different modules. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Success@{Success}!errors.\+hpp@{errors.\+hpp}}\index{errors.\+hpp@{errors.\+hpp}!Success@{Success}}}\mbox{\Hypertarget{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa505a83f220c02df2f85c3810cd9ceb38}\label{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa505a83f220c02df2f85c3810cd9ceb38}} 
+Success&No error. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Counter\+\_\+\+Overflow@{Counter\+\_\+\+Overflow}!errors.\+hpp@{errors.\+hpp}}\index{errors.\+hpp@{errors.\+hpp}!Counter\+\_\+\+Overflow@{Counter\+\_\+\+Overflow}}}\mbox{\Hypertarget{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa8347bab2e74e4a640d76c916306a1a36}\label{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa8347bab2e74e4a640d76c916306a1a36}} 
+Counter\+\_\+\+Overflow&Passed Value caused a counter overflow. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Counter\+\_\+\+Underflow@{Counter\+\_\+\+Underflow}!errors.\+hpp@{errors.\+hpp}}\index{errors.\+hpp@{errors.\+hpp}!Counter\+\_\+\+Underflow@{Counter\+\_\+\+Underflow}}}\mbox{\Hypertarget{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa02b02f5e5e61f24acdd91338b95997da}\label{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa02b02f5e5e61f24acdd91338b95997da}} 
+Counter\+\_\+\+Underflow&Passed Value caused a counter underflow. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Precision@{Precision}!errors.\+hpp@{errors.\+hpp}}\index{errors.\+hpp@{errors.\+hpp}!Precision@{Precision}}}\mbox{\Hypertarget{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fabe5edab59de4ea30531374e506b03822}\label{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fabe5edab59de4ea30531374e506b03822}} 
+Precision&Error generated when difference due to finite resolution is greater than acceptable. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Input\+\_\+\+Validation@{Input\+\_\+\+Validation}!errors.\+hpp@{errors.\+hpp}}\index{errors.\+hpp@{errors.\+hpp}!Input\+\_\+\+Validation@{Input\+\_\+\+Validation}}}\mbox{\Hypertarget{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa7e748bca7005cc737bad51b247997421}\label{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fa7e748bca7005cc737bad51b247997421}} 
+Input\+\_\+\+Validation&Input validation failed. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Generic\+\_\+\+Error@{Generic\+\_\+\+Error}!errors.\+hpp@{errors.\+hpp}}\index{errors.\+hpp@{errors.\+hpp}!Generic\+\_\+\+Error@{Generic\+\_\+\+Error}}}\mbox{\Hypertarget{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fac7e40b9218d101cde2dc4c43b9fed0fe}\label{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7fac7e40b9218d101cde2dc4c43b9fed0fe}} 
+Generic\+\_\+\+Error&Only here for development and debugging. \\
+\hline
+
+\end{DoxyEnumFields}

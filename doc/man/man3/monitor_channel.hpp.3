@@ -1,4 +1,4 @@
-.TH "code/software/monitor_channel.hpp" 3 "Fri Sep 17 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "code/software/monitor_channel.hpp" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator and Photon Statistics" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -6,6 +6,10 @@ code/software/monitor_channel.hpp
 .SH SYNOPSIS
 .br
 .PP
+\fC#include <cstdint>\fP
+.br
+\fC#include <cmath>\fP
+.br
 \fC#include '\&./\&.\&./types\&.hpp'\fP
 .br
 
@@ -13,10 +17,26 @@ code/software/monitor_channel.hpp
 
 .in +1c
 .ti -1c
-.RI "class \fBMonitor_Channel\fP"
+.RI "class \fBMonitorChannel< MeanChannel >\fP"
 .br
-.RI "A simple Averager Class that calculates the estimated mean\&. "
+.RI "A simple Averager Class that calculates the estimated mean\&. Template parameter \fCConstruct\fP specifies a template specialization that either constructs a functional object when it is \fCtrue\fP or constructs a near zerp-signature \fBdummy object\fP when set to \fCfalse\fP\&. "
+.ti -1c
+.RI "class \fBMonitorChannel< true >\fP"
+.br
+.RI "Template specialization\&. "
+.ti -1c
+.RI "class \fBMonitorChannel< false >\fP"
+.br
+.RI "Specialization -> Counter Monitor (degenerated mean monitor)\&. "
+.ti -1c
+.RI "class \fBZeroLagMonitor\fP"
+.br
+.RI "Measures the zeroth auto-correlation, which is equal to the second moment of the sampled time series\&. This object was intended for experimentation with Linear-autocorrelators, which start from lag1, instead of lag0\&. "
+.ti -1c
+.RI "class \fBRTCoarseGrainer\fP"
+.br
+.RI "An object that can accumulate data into a fixed size bin before changing its output value\&. "
 .in -1c
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for DIY Auto-Correlator from the source code\&.
+Generated automatically by Doxygen for DIY Auto-Correlator and Photon Statistics from the source code\&.

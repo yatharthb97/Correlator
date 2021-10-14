@@ -1,0 +1,132 @@
+.TH "PerfCounter" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator and Photon Statistics" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PerfCounter \- Performance Counter class for teensy 4\&.1 microcontrollers\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <perf_counter\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBstart\fP () __attribute__((always_inline))"
+.br
+.RI "Start Measurement\&. "
+.ti -1c
+.RI "void \fBend\fP () __attribute__((always_inline))"
+.br
+.RI "End measurement\&. "
+.ti -1c
+.RI "float \fBmean\fP ()"
+.br
+.RI "Returns the mean number of cycles between \fC\fBstart()\fP\fP and \fCstop()\fP\&. "
+.ti -1c
+.RI "uint32_t \fBlast_duration\fP ()"
+.br
+.RI "Returns the last recorded duration\&. "
+.ti -1c
+.RI "void \fBreset\fP () __attribute__((always_inline))"
+.br
+.ti -1c
+.RI "void \fBoutput\fP () __attribute__((always_inline))"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBinit\fP () __attribute__((always_inline))"
+.br
+.RI "Set up the debug module for clock cycle counting\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBStack\fP = 0"
+.br
+.RI "Stack for mean calculation\&. "
+.ti -1c
+.RI "uint32_t \fBCount\fP = 0"
+.br
+.RI "Count for mean calculation\&. "
+.ti -1c
+.RI "uint32_t \fBCycles\fP = 0"
+.br
+.RI "Last recorded duration (difference in clock cycles recorded) "
+.ti -1c
+.RI "uint32_t \fBStartTime\fP = 0"
+.br
+.RI "Stored starting time of the measurement\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Performance Counter class for teensy 4\&.1 microcontrollers\&. 
+
+
+.PP
+\fBNote:\fP
+.RS 4
+\fCimxrt\&.h\fP defines \fCARM_DWT_CYCCNT\fP as \fC(*(volatile uint32_t *)0xE0001004)\fP\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void PerfCounter::end ()\fC [inline]\fP"
+
+.PP
+End measurement\&. 
+.SS "static void PerfCounter::init ()\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Set up the debug module for clock cycle counting\&. 
+.PP
+\fBWarning:\fP
+.RS 4
+This function sets the registers globally and will affect all instances and also the overall performance\&. 
+.RE
+.PP
+
+.SS "uint32_t PerfCounter::last_duration ()\fC [inline]\fP"
+
+.PP
+Returns the last recorded duration\&. 
+.SS "float PerfCounter::mean ()\fC [inline]\fP"
+
+.PP
+Returns the mean number of cycles between \fC\fBstart()\fP\fP and \fCstop()\fP\&. 
+.SS "void PerfCounter::output ()\fC [inline]\fP"
+
+.SS "void PerfCounter::reset ()\fC [inline]\fP"
+
+.SS "void PerfCounter::start ()\fC [inline]\fP"
+
+.PP
+Start Measurement\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "uint32_t PerfCounter::Count = 0"
+
+.PP
+Count for mean calculation\&. 
+.SS "uint32_t PerfCounter::Cycles = 0"
+
+.PP
+Last recorded duration (difference in clock cycles recorded) 
+.SS "uint32_t PerfCounter::Stack = 0"
+
+.PP
+Stack for mean calculation\&. 
+.SS "uint32_t PerfCounter::StartTime = 0"
+
+.PP
+Stored starting time of the measurement\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator and Photon Statistics from the source code\&.

@@ -1,0 +1,76 @@
+.TH "MonitorChannel< false >" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator and Photon Statistics" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MonitorChannel< false > \- Specialization -> Counter Monitor (degenerated mean monitor)\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <monitor_channel\&.hpp>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBAccumulateType\fP = uint32_t"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBpush_back\fP () __attribute__((always_inline))"
+.br
+.ti -1c
+.RI "float_t \fBmean\fP () const __attribute__((always_inline))"
+.br
+.ti -1c
+.RI "\fBAccumulateType\fP \fBaccumulate\fP () const __attribute__((always_inline))"
+.br
+.RI "Returns the accumulate so far, which is the same as 'Count`\&. "
+.ti -1c
+.RI "void \fBreset\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "volatile uint32_t \fBCount\fP = 0"
+.br
+.RI "Count of the received values (Initialized to prevent DivideByZero error) "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<>
+.br
+class MonitorChannel< false >"
+Specialization -> Counter Monitor (degenerated mean monitor)\&. 
+.SH "Member Typedef Documentation"
+.PP 
+.SS "using \fBMonitorChannel\fP< false >::\fBAccumulateType\fP =  uint32_t"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBAccumulateType\fP \fBMonitorChannel\fP< false >::accumulate () const\fC [inline]\fP"
+
+.PP
+Returns the accumulate so far, which is the same as 'Count`\&. 
+.SS "float_t \fBMonitorChannel\fP< false >::mean () const\fC [inline]\fP"
+Returns a mean value of 1\&.0\&. 
+.SS "void \fBMonitorChannel\fP< false >::push_back ()\fC [inline]\fP"
+Increments the \fCCount\fP\&. 
+.SS "void \fBMonitorChannel\fP< false >::reset ()\fC [inline]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "volatile uint32_t \fBMonitorChannel\fP< false >::Count = 0"
+
+.PP
+Count of the received values (Initialized to prevent DivideByZero error) 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator and Photon Statistics from the source code\&.

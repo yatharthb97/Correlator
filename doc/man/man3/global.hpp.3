@@ -1,0 +1,109 @@
+.TH "src/global.hpp" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator and Photon Statistics" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/global.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include '\&./\&.\&./code/software/multi_tau\&.hpp'\fP
+.br
+\fC#include '\&./\&.\&./code/software/histogram\&.hpp'\fP
+.br
+\fC#include '\&./\&.\&./code/hardware/pit\&.hpp'\fP
+.br
+\fC#include '\&./\&.\&./code/hardware/qtmr1\&.hpp'\fP
+.br
+\fC#include '\&./\&.\&./code/hardware/interarrival\&.hpp'\fP
+.br
+\fC#include '\&./\&.\&./code/hardware/perf_counter\&.hpp'\fP
+.br
+
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBMultiTauACorrRTTeensy\fP< LIN_CORRS, SERIES_SIZE, BIN_RATIO > \fBmultitau\fP"
+.br
+.ti -1c
+.RI "\fBPITController\fP< \fBPIT_CHANNEL_IN_USE\fP > \fBPI_t\fP"
+.br
+.RI "PI_t Resource\&. "
+.ti -1c
+.RI "\fBTMR1Controller\fP \fBTTL_c\fP"
+.br
+.RI "TTL_c Resource\&. "
+.ti -1c
+.RI "volatile \fBcounter_t\fP \fBCounter_val\fP"
+.br
+.RI "Stores the value read from the counter\&. "
+.ti -1c
+.RI "volatile bool \fBUpdate_flag\fP"
+.br
+.RI "Indicates if a new value has arrived from the counting module\&. "
+.ti -1c
+.RI "volatile unsigned int \fBUpdate_count\fP"
+.br
+.RI "Stores the number of updates made on the correlator channels since the last serialout\&. "
+.ti -1c
+.RI "uint32_t \fBSerialOut_After\fP"
+.br
+.ti -1c
+.RI "const double \fBGate_time_us\fP"
+.br
+.RI "Serial output is done after these many updates (default → overriden in the setup function)\&. "
+.ti -1c
+.RI "const double \fBAllowed_period_error_us\fP"
+.br
+.RI "The gate time of TTL_C in microseconds (us) "
+.ti -1c
+.RI "const int32_t \fBsync_code\fP"
+.br
+.RI "Gate time precision error due to finite precision of timers\&. "
+.ti -1c
+.RI "float \fBarray\fP [CHANNEL_SIZE]"
+.br
+.in -1c
+.SH "Variable Documentation"
+.PP 
+.SS "const double Allowed_period_error_us"
+
+.PP
+The gate time of TTL_C in microseconds (us) 
+.SS "float array[CHANNEL_SIZE]"
+
+.SS "volatile \fBcounter_t\fP Counter_val"
+
+.PP
+Stores the value read from the counter\&. 
+.SS "const double Gate_time_us"
+
+.PP
+Serial output is done after these many updates (default → overriden in the setup function)\&. 
+.SS "\fBMultiTauACorrRTTeensy\fP<LIN_CORRS, SERIES_SIZE, BIN_RATIO> multitau"
+
+.SS "\fBPITController\fP<\fBPIT_CHANNEL_IN_USE\fP> PI_t"
+
+.PP
+PI_t Resource\&. 
+.SS "uint32_t SerialOut_After"
+
+.SS "const int32_t sync_code"
+
+.PP
+Gate time precision error due to finite precision of timers\&. 
+.SS "\fBTMR1Controller\fP TTL_c"
+
+.PP
+TTL_c Resource\&. 
+.SS "volatile unsigned int Update_count"
+
+.PP
+Stores the number of updates made on the correlator channels since the last serialout\&. 
+.SS "volatile bool Update_flag"
+
+.PP
+Indicates if a new value has arrived from the counting module\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator and Photon Statistics from the source code\&.

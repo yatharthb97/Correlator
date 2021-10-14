@@ -1,0 +1,124 @@
+.TH "LinACorrRTTeensy< Series_Size, hasMonitorChannel >" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator and Photon Statistics" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+LinACorrRTTeensy< Series_Size, hasMonitorChannel > \- This is an implementation of Lin_ACorr_RT_Base for Teensy with \fB\fP(No normalisation or baseline subtraction\&.)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Lin_ACorr_RT_Teensy\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLinACorrRTTeensy\fP ()"
+.br
+.RI "Default Constructor\&. "
+.ti -1c
+.RI "void \fBpush_datum\fP (\fBcounter_t\fP datum)"
+.br
+.RI "Adds new \fIsingle\fP data point and processes it to the \fCChannel\fP\&. "
+.ti -1c
+.RI "void \fBpush_data\fP (const \fBcounter_t\fP *container, const \fBindex_t\fP size) __attribute__((flatten))"
+.br
+.RI "Repeatedly calls \fC\fBpush_datum()\fP\fP on the given container of values, one at a time\&. "
+.ti -1c
+.RI "float_t \fBnorm\fP ()"
+.br
+.RI "Returns the accumulate of the channel so far\&. "
+.ti -1c
+.RI "void \fBch_out\fP () const __attribute__((always_inline))"
+.br
+.RI "Outputs the complete channel to the Serial port\&. "
+.ti -1c
+.RI "void \fBch_out_norm\fP () const __attribute__((flatten))"
+.br
+.RI "Outputs the channel array to the Serial port after normalising it\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBchannel_t\fP \fBChannel_array\fP [Series_Size] = {0}"
+.br
+.RI "Defines a run-time polymorphic \fBMonitorChannel\fP object, which decomposes to \fCghost\fP channel (UnitMeanChannel) if \fChasMonitorChannel\fP is true\&. Basically \fCUnitMeanChannel\fP does nothing\&. "
+.ti -1c
+.RI "\fBSimpler_Circular_Buffer\fP< \fBcounter_t\fP, Series_Size > \fBSeries_array\fP"
+.br
+.RI "Stores the data points in a circular Buffer\&. "
+.ti -1c
+.RI "\fBindex_t\fP \fBSeries_index\fP = 0"
+.br
+.RI "Stores the last active index → Post-increment\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<index_t Series_Size, bool hasMonitorChannel>
+.br
+class LinACorrRTTeensy< Series_Size, hasMonitorChannel >"
+This is an implementation of Lin_ACorr_RT_Base for Teensy with \fB\fP(No normalisation or baseline subtraction\&.) 
+
+
+.PP
+\fBNote:\fP
+.RS 4
+{ Template parameter - Size of the Series and Channel array and indicates the maximum points that can be stored by the correlator object\&. The circuular buffer will then rewrite the older points to accomodate for the other points\&. } 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<index_t Series_Size, bool hasMonitorChannel> \fBLinACorrRTTeensy\fP< Series_Size, hasMonitorChannel >::\fBLinACorrRTTeensy\fP ()\fC [inline]\fP"
+
+.PP
+Default Constructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<index_t Series_Size, bool hasMonitorChannel> void \fBLinACorrRTTeensy\fP< Series_Size, hasMonitorChannel >::ch_out () const\fC [inline]\fP"
+
+.PP
+Outputs the complete channel to the Serial port\&. 
+.SS "template<index_t Series_Size, bool hasMonitorChannel> void \fBLinACorrRTTeensy\fP< Series_Size, hasMonitorChannel >::ch_out_norm () const\fC [inline]\fP"
+
+.PP
+Outputs the channel array to the Serial port after normalising it\&. 
+.SS "template<index_t Series_Size, bool hasMonitorChannel> float_t \fBLinACorrRTTeensy\fP< Series_Size, hasMonitorChannel >::norm ()\fC [inline]\fP"
+
+.PP
+Returns the accumulate of the channel so far\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fILag\fP time that is ignored by the function\&. 
+.RE
+.PP
+
+.SS "template<index_t Series_Size, bool hasMonitorChannel> void \fBLinACorrRTTeensy\fP< Series_Size, hasMonitorChannel >::push_data (const \fBcounter_t\fP * container, const \fBindex_t\fP size)\fC [inline]\fP"
+
+.PP
+Repeatedly calls \fC\fBpush_datum()\fP\fP on the given container of values, one at a time\&. 
+.SS "template<index_t Series_Size, bool hasMonitorChannel> void \fBLinACorrRTTeensy\fP< Series_Size, hasMonitorChannel >::push_datum (\fBcounter_t\fP datum)\fC [inline]\fP"
+
+.PP
+Adds new \fIsingle\fP data point and processes it to the \fCChannel\fP\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "template<index_t Series_Size, bool hasMonitorChannel> \fBchannel_t\fP \fBLinACorrRTTeensy\fP< Series_Size, hasMonitorChannel >::Channel_array[Series_Size] = {0}"
+
+.PP
+Defines a run-time polymorphic \fBMonitorChannel\fP object, which decomposes to \fCghost\fP channel (UnitMeanChannel) if \fChasMonitorChannel\fP is true\&. Basically \fCUnitMeanChannel\fP does nothing\&. Stores the Channel output 
+.SS "template<index_t Series_Size, bool hasMonitorChannel> \fBSimpler_Circular_Buffer\fP<\fBcounter_t\fP, Series_Size> \fBLinACorrRTTeensy\fP< Series_Size, hasMonitorChannel >::Series_array"
+
+.PP
+Stores the data points in a circular Buffer\&. 
+.SS "template<index_t Series_Size, bool hasMonitorChannel> \fBindex_t\fP \fBLinACorrRTTeensy\fP< Series_Size, hasMonitorChannel >::Series_index = 0"
+
+.PP
+Stores the last active index → Post-increment\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator and Photon Statistics from the source code\&.

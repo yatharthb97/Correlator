@@ -1,0 +1,157 @@
+\hypertarget{classnormalizer_1_1Normalizer}{}\section{normalizer.\+Normalizer Class Reference}
+\label{classnormalizer_1_1Normalizer}\index{normalizer.\+Normalizer@{normalizer.\+Normalizer}}
+
+
+Collaboration diagram for normalizer.\+Normalizer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{dc/d77/classnormalizer_1_1Normalizer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classnormalizer_1_1Normalizer_afccec17549a3a8de54c39b7b5de3d4b7}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, lin\+\_\+corrs, series\+\_\+size, bin\+\_\+ratio)
+\item 
+def \hyperlink{classnormalizer_1_1Normalizer_ab4e48dd4987836c7254f148672dc32f0}{set\+\_\+mode} (self, mode\+\_\+str)
+\item 
+def \hyperlink{classnormalizer_1_1Normalizer_acae7ff724a12ef29c97f6eb2d30f5d62}{normalize} (self, input\+\_\+y, args)
+\item 
+def \hyperlink{classnormalizer_1_1Normalizer_a7965c29d7d3a867dbb82cc7f3e7e69b3}{no\+\_\+norm} (self, input\+\_\+y)
+\item 
+def \hyperlink{classnormalizer_1_1Normalizer_a44aea90aa5ab90fbc6cc617acdc589c5}{points\+\_\+norm} (self, input\+\_\+y, points\+\_\+no)
+\item 
+def \hyperlink{classnormalizer_1_1Normalizer_ac9530ba0efaa543756ecfef0e871b63e}{mean\+\_\+norm} (self, input\+\_\+y, points\+\_\+no, accumulate)
+\item 
+def \hyperlink{classnormalizer_1_1Normalizer_a09b6d62bec3fca383a1a9c82cc74836a}{\+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnormalizer_1_1Normalizer_a63904e0449ec33d948edb1e00eda6bec}{mt\+\_\+param}
+\item 
+\hyperlink{classnormalizer_1_1Normalizer_adbbbab69e55b4a0593122aa61e7853bc}{points\+\_\+scale\+\_\+template}
+\item 
+\hyperlink{classnormalizer_1_1Normalizer_a0d063c22fb9e3ee66192bbeb570c2c3e}{bin\+\_\+ratio\+\_\+scale}
+\item 
+\hyperlink{classnormalizer_1_1Normalizer_a0db45b11e7934a2ce3cdbabc54467164}{bin\+\_\+ratio\+\_\+scale\+\_\+sq}
+\item 
+\hyperlink{classnormalizer_1_1Normalizer_ae6fdb25c519b72b0f95cc4b2ce150f45}{tau\+\_\+values}
+\item 
+\hyperlink{classnormalizer_1_1Normalizer_a0fe7ba5c6b5ba3df8578d7edf8bd3ade}{available\+\_\+modes}
+\item 
+\hyperlink{classnormalizer_1_1Normalizer_a36df68fe4c6f2dbe72f08a71ad1c5fe1}{norm\+\_\+fn}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classnormalizer_1_1Normalizer_afccec17549a3a8de54c39b7b5de3d4b7}\label{classnormalizer_1_1Normalizer_afccec17549a3a8de54c39b7b5de3d4b7}} 
+\index{normalizer\+::\+Normalizer@{normalizer\+::\+Normalizer}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!normalizer\+::\+Normalizer@{normalizer\+::\+Normalizer}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def normalizer.\+Normalizer.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{lin\+\_\+corrs,  }\item[{}]{series\+\_\+size,  }\item[{}]{bin\+\_\+ratio }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Constructor that accepts multi-tau configuration parameters.
+\end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classnormalizer_1_1Normalizer_a09b6d62bec3fca383a1a9c82cc74836a}\label{classnormalizer_1_1Normalizer_a09b6d62bec3fca383a1a9c82cc74836a}} 
+\index{normalizer\+::\+Normalizer@{normalizer\+::\+Normalizer}!\+\_\+\+\_\+repr\+\_\+\+\_\+@{\+\_\+\+\_\+repr\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+repr\+\_\+\+\_\+@{\+\_\+\+\_\+repr\+\_\+\+\_\+}!normalizer\+::\+Normalizer@{normalizer\+::\+Normalizer}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+repr\+\_\+\+\_\+()}{\_\_repr\_\_()}}
+{\footnotesize\ttfamily def normalizer.\+Normalizer.\+\_\+\+\_\+repr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classnormalizer_1_1Normalizer_ac9530ba0efaa543756ecfef0e871b63e}\label{classnormalizer_1_1Normalizer_ac9530ba0efaa543756ecfef0e871b63e}} 
+\index{normalizer\+::\+Normalizer@{normalizer\+::\+Normalizer}!mean\+\_\+norm@{mean\+\_\+norm}}
+\index{mean\+\_\+norm@{mean\+\_\+norm}!normalizer\+::\+Normalizer@{normalizer\+::\+Normalizer}}
+\subsubsection{\texorpdfstring{mean\+\_\+norm()}{mean\_norm()}}
+{\footnotesize\ttfamily def normalizer.\+Normalizer.\+mean\+\_\+norm (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{input\+\_\+y,  }\item[{}]{points\+\_\+no,  }\item[{}]{accumulate }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the mean normalized transformation of the input. Accepts the number of points received by each 
+channel and the mean monitor accumulate. Mean = accumulate / points_no.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classnormalizer_1_1Normalizer_a7965c29d7d3a867dbb82cc7f3e7e69b3}\label{classnormalizer_1_1Normalizer_a7965c29d7d3a867dbb82cc7f3e7e69b3}} 
+\index{normalizer\+::\+Normalizer@{normalizer\+::\+Normalizer}!no\+\_\+norm@{no\+\_\+norm}}
+\index{no\+\_\+norm@{no\+\_\+norm}!normalizer\+::\+Normalizer@{normalizer\+::\+Normalizer}}
+\subsubsection{\texorpdfstring{no\+\_\+norm()}{no\_norm()}}
+{\footnotesize\ttfamily def normalizer.\+Normalizer.\+no\+\_\+norm (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{input\+\_\+y }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns a non-normalized sequence. This function does nothing except return its input.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classnormalizer_1_1Normalizer_acae7ff724a12ef29c97f6eb2d30f5d62}\label{classnormalizer_1_1Normalizer_acae7ff724a12ef29c97f6eb2d30f5d62}} 
+\index{normalizer\+::\+Normalizer@{normalizer\+::\+Normalizer}!normalize@{normalize}}
+\index{normalize@{normalize}!normalizer\+::\+Normalizer@{normalizer\+::\+Normalizer}}
+\subsubsection{\texorpdfstring{normalize()}{normalize()}}
+{\footnotesize\ttfamily def normalizer.\+Normalizer.\+normalize (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{input\+\_\+y,  }\item[{}]{args }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Callable normalization function - single interface.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classnormalizer_1_1Normalizer_a44aea90aa5ab90fbc6cc617acdc589c5}\label{classnormalizer_1_1Normalizer_a44aea90aa5ab90fbc6cc617acdc589c5}} 
+\index{normalizer\+::\+Normalizer@{normalizer\+::\+Normalizer}!points\+\_\+norm@{points\+\_\+norm}}
+\index{points\+\_\+norm@{points\+\_\+norm}!normalizer\+::\+Normalizer@{normalizer\+::\+Normalizer}}
+\subsubsection{\texorpdfstring{points\+\_\+norm()}{points\_norm()}}
+{\footnotesize\ttfamily def normalizer.\+Normalizer.\+points\+\_\+norm (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{input\+\_\+y,  }\item[{}]{points\+\_\+no }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the input by dividing it with the number of points received by that particular channel.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classnormalizer_1_1Normalizer_ab4e48dd4987836c7254f148672dc32f0}\label{classnormalizer_1_1Normalizer_ab4e48dd4987836c7254f148672dc32f0}} 
+\index{normalizer\+::\+Normalizer@{normalizer\+::\+Normalizer}!set\+\_\+mode@{set\+\_\+mode}}
+\index{set\+\_\+mode@{set\+\_\+mode}!normalizer\+::\+Normalizer@{normalizer\+::\+Normalizer}}
+\subsubsection{\texorpdfstring{set\+\_\+mode()}{set\_mode()}}
+{\footnotesize\ttfamily def normalizer.\+Normalizer.\+set\+\_\+mode (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mode\+\_\+str }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Sets the normalization mode for the normalizer. Accepted modes -> {"no", "points", "mean"}
+\end{DoxyVerb}
+ 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classnormalizer_1_1Normalizer_a0fe7ba5c6b5ba3df8578d7edf8bd3ade}\label{classnormalizer_1_1Normalizer_a0fe7ba5c6b5ba3df8578d7edf8bd3ade}} 
+\index{normalizer\+::\+Normalizer@{normalizer\+::\+Normalizer}!available\+\_\+modes@{available\+\_\+modes}}
+\index{available\+\_\+modes@{available\+\_\+modes}!normalizer\+::\+Normalizer@{normalizer\+::\+Normalizer}}
+\subsubsection{\texorpdfstring{available\+\_\+modes}{available\_modes}}
+{\footnotesize\ttfamily normalizer.\+Normalizer.\+available\+\_\+modes}
+
+\mbox{\Hypertarget{classnormalizer_1_1Normalizer_a0d063c22fb9e3ee66192bbeb570c2c3e}\label{classnormalizer_1_1Normalizer_a0d063c22fb9e3ee66192bbeb570c2c3e}} 
+\index{normalizer\+::\+Normalizer@{normalizer\+::\+Normalizer}!bin\+\_\+ratio\+\_\+scale@{bin\+\_\+ratio\+\_\+scale}}
+\index{bin\+\_\+ratio\+\_\+scale@{bin\+\_\+ratio\+\_\+scale}!normalizer\+::\+Normalizer@{normalizer\+::\+Normalizer}}
+\subsubsection{\texorpdfstring{bin\+\_\+ratio\+\_\+scale}{bin\_ratio\_scale}}
+{\footnotesize\ttfamily normalizer.\+Normalizer.\+bin\+\_\+ratio\+\_\+scale}
+
+\mbox{\Hypertarget{classnormalizer_1_1Normalizer_a0db45b11e7934a2ce3cdbabc54467164}\label{classnormalizer_1_1Normalizer_a0db45b11e7934a2ce3cdbabc54467164}} 
+\index{normalizer\+::\+Normalizer@{normalizer\+::\+Normalizer}!bin\+\_\+ratio\+\_\+scale\+\_\+sq@{bin\+\_\+ratio\+\_\+scale\+\_\+sq}}
+\index{bin\+\_\+ratio\+\_\+scale\+\_\+sq@{bin\+\_\+ratio\+\_\+scale\+\_\+sq}!normalizer\+::\+Normalizer@{normalizer\+::\+Normalizer}}
+\subsubsection{\texorpdfstring{bin\+\_\+ratio\+\_\+scale\+\_\+sq}{bin\_ratio\_scale\_sq}}
+{\footnotesize\ttfamily normalizer.\+Normalizer.\+bin\+\_\+ratio\+\_\+scale\+\_\+sq}
+
+\mbox{\Hypertarget{classnormalizer_1_1Normalizer_a63904e0449ec33d948edb1e00eda6bec}\label{classnormalizer_1_1Normalizer_a63904e0449ec33d948edb1e00eda6bec}} 
+\index{normalizer\+::\+Normalizer@{normalizer\+::\+Normalizer}!mt\+\_\+param@{mt\+\_\+param}}
+\index{mt\+\_\+param@{mt\+\_\+param}!normalizer\+::\+Normalizer@{normalizer\+::\+Normalizer}}
+\subsubsection{\texorpdfstring{mt\+\_\+param}{mt\_param}}
+{\footnotesize\ttfamily normalizer.\+Normalizer.\+mt\+\_\+param}
+
+\mbox{\Hypertarget{classnormalizer_1_1Normalizer_a36df68fe4c6f2dbe72f08a71ad1c5fe1}\label{classnormalizer_1_1Normalizer_a36df68fe4c6f2dbe72f08a71ad1c5fe1}} 
+\index{normalizer\+::\+Normalizer@{normalizer\+::\+Normalizer}!norm\+\_\+fn@{norm\+\_\+fn}}
+\index{norm\+\_\+fn@{norm\+\_\+fn}!normalizer\+::\+Normalizer@{normalizer\+::\+Normalizer}}
+\subsubsection{\texorpdfstring{norm\+\_\+fn}{norm\_fn}}
+{\footnotesize\ttfamily normalizer.\+Normalizer.\+norm\+\_\+fn}
+
+\mbox{\Hypertarget{classnormalizer_1_1Normalizer_adbbbab69e55b4a0593122aa61e7853bc}\label{classnormalizer_1_1Normalizer_adbbbab69e55b4a0593122aa61e7853bc}} 
+\index{normalizer\+::\+Normalizer@{normalizer\+::\+Normalizer}!points\+\_\+scale\+\_\+template@{points\+\_\+scale\+\_\+template}}
+\index{points\+\_\+scale\+\_\+template@{points\+\_\+scale\+\_\+template}!normalizer\+::\+Normalizer@{normalizer\+::\+Normalizer}}
+\subsubsection{\texorpdfstring{points\+\_\+scale\+\_\+template}{points\_scale\_template}}
+{\footnotesize\ttfamily normalizer.\+Normalizer.\+points\+\_\+scale\+\_\+template}
+
+\mbox{\Hypertarget{classnormalizer_1_1Normalizer_ae6fdb25c519b72b0f95cc4b2ce150f45}\label{classnormalizer_1_1Normalizer_ae6fdb25c519b72b0f95cc4b2ce150f45}} 
+\index{normalizer\+::\+Normalizer@{normalizer\+::\+Normalizer}!tau\+\_\+values@{tau\+\_\+values}}
+\index{tau\+\_\+values@{tau\+\_\+values}!normalizer\+::\+Normalizer@{normalizer\+::\+Normalizer}}
+\subsubsection{\texorpdfstring{tau\+\_\+values}{tau\_values}}
+{\footnotesize\ttfamily normalizer.\+Normalizer.\+tau\+\_\+values}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/pc\+\_\+app/\hyperlink{normalizer_8py}{normalizer.\+py}\end{DoxyCompactItemize}

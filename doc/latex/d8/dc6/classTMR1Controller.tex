@@ -1,0 +1,266 @@
+\hypertarget{classTMR1Controller}{}\section{T\+M\+R1\+Controller Class Reference}
+\label{classTMR1Controller}\index{T\+M\+R1\+Controller@{T\+M\+R1\+Controller}}
+
+
+Templated interface for Quad Timer 1 channels for Gate Counting. The module uses the macro {\ttfamily \+\_\+\+T\+M\+R1\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+C\+H\+\_\+} to identify the main channel and then assigns the next channel\textquotesingle{}s ({\itshape T\+M\+R1\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+CH} + 1) external pin to the {\itshape T\+M\+R1\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+CH} as the \char`\"{}\+Capture Pin\char`\"{} or the \char`\"{}\+Secondary Count Source\char`\"{}.  
+
+
+
+
+{\ttfamily \#include $<$qtmr1.\+hpp$>$}
+
+
+
+Collaboration diagram for T\+M\+R1\+Controller\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{da/d98/classTMR1Controller__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTMR1Controller_aebc677e795f673c6520d5a03eb6aa4f2}{T\+M\+R1\+Controller} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor that assers if the user constructed object with a valid {\itshape T\+M\+R1\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+CH}, and asserts a singleton template. \end{DoxyCompactList}\item 
+void \hyperlink{classTMR1Controller_a67bc04f0648176a681f6ac01ea483db9}{start} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((\hyperlink{classTMR1Controller_adce8e8a496510485a88ccc5b88595672}{always\+\_\+inline}))
+\begin{DoxyCompactList}\small\item\em Starts up-\/counting from the set counter value. \end{DoxyCompactList}\item 
+void \hyperlink{classTMR1Controller_afcb0ea27107bfbe50b9dcbd54207dd00}{stop} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((\hyperlink{classTMR1Controller_adce8e8a496510485a88ccc5b88595672}{always\+\_\+inline}))
+\begin{DoxyCompactList}\small\item\em Stops counting and freezes the current counter value. \end{DoxyCompactList}\item 
+void \hyperlink{classTMR1Controller_adf3746ffd24c5b55abff4fa18e05f6b3}{reset} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((\hyperlink{classTMR1Controller_adce8e8a496510485a88ccc5b88595672}{always\+\_\+inline}))
+\begin{DoxyCompactList}\small\item\em Resets the counter to zero. It also cleares the capture register and unsets the Input Edge Flag. \end{DoxyCompactList}\item 
+\hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} \hyperlink{classTMR1Controller_a3d07eed72365e7a7b44fadefb23b9ba6}{get\+\_\+capture\+\_\+val} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((\hyperlink{classTMR1Controller_adce8e8a496510485a88ccc5b88595672}{always\+\_\+inline}))
+\begin{DoxyCompactList}\small\item\em Reads and returns the Capture Register. \end{DoxyCompactList}\item 
+\hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} \hyperlink{classTMR1Controller_a34042b5a735d4f8fd40fa36135bdec8c}{get\+\_\+capture\+\_\+double\+\_\+range} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((flatten
+\begin{DoxyCompactList}\small\item\em Returns a value that has range (2 X 2$\ast$$\ast$n -\/ 1). This is done by checking the overflow flag. \end{DoxyCompactList}\item 
+bool \hyperlink{classTMR1Controller_a06052b4a881156be3c7a4b6495d8ca11}{is\+\_\+overflow} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((\hyperlink{classTMR1Controller_adce8e8a496510485a88ccc5b88595672}{always\+\_\+inline}))
+\begin{DoxyCompactList}\small\item\em Returns the overflow status of the Counter. Reads the T\+OF -\/ Timer Overflow Flag. \end{DoxyCompactList}\item 
+void \hyperlink{classTMR1Controller_aa59afefa545098e53cb2e0560142526c}{clear\+\_\+input\+\_\+edge\+\_\+flag} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((\hyperlink{classTMR1Controller_adce8e8a496510485a88ccc5b88595672}{always\+\_\+inline}))
+\item 
+void \hyperlink{classTMR1Controller_a7117e12d0cb8ec32aa6552fe541023da}{clear\+\_\+overflow\+\_\+flag} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((\hyperlink{classTMR1Controller_adce8e8a496510485a88ccc5b88595672}{always\+\_\+inline}))
+\item 
+int \hyperlink{classTMR1Controller_a084c153e1a888f72456c54b29e3fa957}{get\+\_\+ttl\+\_\+input\+\_\+pin} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((\hyperlink{classTMR1Controller_adce8e8a496510485a88ccc5b88595672}{always\+\_\+inline}))
+\begin{DoxyCompactList}\small\item\em Returns the pin number on which the T\+TL input must be connected. \end{DoxyCompactList}\item 
+void \hyperlink{classTMR1Controller_af92315e340766e3857eb6a20e7cab673}{init} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((\hyperlink{classTMR1Controller_adce8e8a496510485a88ccc5b88595672}{always\+\_\+inline}))
+\item 
+void \hyperlink{classTMR1Controller_a1c5d358760aa98641333f63c7bcacd3a}{init\+\_\+pins} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((\hyperlink{classTMR1Controller_adce8e8a496510485a88ccc5b88595672}{always\+\_\+inline}))
+\begin{DoxyCompactList}\small\item\em Sets the Primary and Secondary inputs for Capture Mode, routed through X\+B\+AR. {\bfseries Reference} X\+B\+AR and I\+O\+M\+UX input selections → I\+O\+M\+U\+X\+C\+\_\+\+G\+P\+R\+\_\+\+G\+P\+R6 Manual Page 347. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classTMR1Controller_a5b2f74d17a84db6a9c2957b75d79ab98}{get\+\_\+xbar\+\_\+out\+\_\+pin} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((\hyperlink{classTMR1Controller_adce8e8a496510485a88ccc5b88595672}{always\+\_\+inline}))
+\begin{DoxyCompactList}\small\item\em Returns the corresponding X\+B\+AR Output Pin to use for routing the Capture Signal. {\bfseries Reference} Manual Page 70. \end{DoxyCompactList}\item 
+int \hyperlink{classTMR1Controller_a49a1a48db1600173eeb24858645a0366}{get\+\_\+extern\+\_\+capture\+\_\+signal\+\_\+pin} ()
+\begin{DoxyCompactList}\small\item\em Returns the pin number on which the capture signal must be connected. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classTMR1Controller_aa00df5e2d591a36b1049275c9a293c51}{timers\+\_\+freeze} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((\hyperlink{classTMR1Controller_adce8e8a496510485a88ccc5b88595672}{always\+\_\+inline}))
+\begin{DoxyCompactList}\small\item\em Reset Counter and output flags. {\bfseries Reference} Manual Page 332. \end{DoxyCompactList}\item 
+static void \hyperlink{classTMR1Controller_acb383aa5321f552f018e4e217e2211f4}{timers\+\_\+anti\+\_\+freeze} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((\hyperlink{classTMR1Controller_adce8e8a496510485a88ccc5b88595672}{always\+\_\+inline}))
+\begin{DoxyCompactList}\small\item\em Enable counting normally. {\bfseries Reference} Manual Page 332. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} \hyperlink{classTMR1Controller_adce8e8a496510485a88ccc5b88595672}{always\+\_\+inline}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr bool \hyperlink{classTMR1Controller_a532b729ca9a7c28e5f4d221f80487241}{Singleton\+\_\+flag} = false
+\begin{DoxyCompactList}\small\item\em Singleton template. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Templated interface for Quad Timer 1 channels for Gate Counting. The module uses the macro {\ttfamily \+\_\+\+T\+M\+R1\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+C\+H\+\_\+} to identify the main channel and then assigns the next channel\textquotesingle{}s ({\itshape T\+M\+R1\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+CH} + 1) external pin to the {\itshape T\+M\+R1\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+CH} as the \char`\"{}\+Capture Pin\char`\"{} or the \char`\"{}\+Secondary Count Source\char`\"{}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTMR1Controller_aebc677e795f673c6520d5a03eb6aa4f2}\label{classTMR1Controller_aebc677e795f673c6520d5a03eb6aa4f2}} 
+\index{T\+M\+R1\+Controller@{T\+M\+R1\+Controller}!T\+M\+R1\+Controller@{T\+M\+R1\+Controller}}
+\index{T\+M\+R1\+Controller@{T\+M\+R1\+Controller}!T\+M\+R1\+Controller@{T\+M\+R1\+Controller}}
+\subsubsection{\texorpdfstring{T\+M\+R1\+Controller()}{TMR1Controller()}}
+{\footnotesize\ttfamily T\+M\+R1\+Controller\+::\+T\+M\+R1\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default Constructor that assers if the user constructed object with a valid {\itshape T\+M\+R1\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+CH}, and asserts a singleton template. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classTMR1Controller_aa59afefa545098e53cb2e0560142526c}\label{classTMR1Controller_aa59afefa545098e53cb2e0560142526c}} 
+\index{T\+M\+R1\+Controller@{T\+M\+R1\+Controller}!clear\+\_\+input\+\_\+edge\+\_\+flag@{clear\+\_\+input\+\_\+edge\+\_\+flag}}
+\index{clear\+\_\+input\+\_\+edge\+\_\+flag@{clear\+\_\+input\+\_\+edge\+\_\+flag}!T\+M\+R1\+Controller@{T\+M\+R1\+Controller}}
+\subsubsection{\texorpdfstring{clear\+\_\+input\+\_\+edge\+\_\+flag()}{clear\_input\_edge\_flag()}}
+{\footnotesize\ttfamily void T\+M\+R1\+Controller\+::clear\+\_\+input\+\_\+edge\+\_\+flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classTMR1Controller_a7117e12d0cb8ec32aa6552fe541023da}\label{classTMR1Controller_a7117e12d0cb8ec32aa6552fe541023da}} 
+\index{T\+M\+R1\+Controller@{T\+M\+R1\+Controller}!clear\+\_\+overflow\+\_\+flag@{clear\+\_\+overflow\+\_\+flag}}
+\index{clear\+\_\+overflow\+\_\+flag@{clear\+\_\+overflow\+\_\+flag}!T\+M\+R1\+Controller@{T\+M\+R1\+Controller}}
+\subsubsection{\texorpdfstring{clear\+\_\+overflow\+\_\+flag()}{clear\_overflow\_flag()}}
+{\footnotesize\ttfamily void T\+M\+R1\+Controller\+::clear\+\_\+overflow\+\_\+flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classTMR1Controller_a34042b5a735d4f8fd40fa36135bdec8c}\label{classTMR1Controller_a34042b5a735d4f8fd40fa36135bdec8c}} 
+\index{T\+M\+R1\+Controller@{T\+M\+R1\+Controller}!get\+\_\+capture\+\_\+double\+\_\+range@{get\+\_\+capture\+\_\+double\+\_\+range}}
+\index{get\+\_\+capture\+\_\+double\+\_\+range@{get\+\_\+capture\+\_\+double\+\_\+range}!T\+M\+R1\+Controller@{T\+M\+R1\+Controller}}
+\subsubsection{\texorpdfstring{get\+\_\+capture\+\_\+double\+\_\+range()}{get\_capture\_double\_range()}}
+{\footnotesize\ttfamily \hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} T\+M\+R1\+Controller\+::get\+\_\+capture\+\_\+double\+\_\+range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a value that has range (2 X 2$\ast$$\ast$n -\/ 1). This is done by checking the overflow flag. 
+
+\mbox{\Hypertarget{classTMR1Controller_a3d07eed72365e7a7b44fadefb23b9ba6}\label{classTMR1Controller_a3d07eed72365e7a7b44fadefb23b9ba6}} 
+\index{T\+M\+R1\+Controller@{T\+M\+R1\+Controller}!get\+\_\+capture\+\_\+val@{get\+\_\+capture\+\_\+val}}
+\index{get\+\_\+capture\+\_\+val@{get\+\_\+capture\+\_\+val}!T\+M\+R1\+Controller@{T\+M\+R1\+Controller}}
+\subsubsection{\texorpdfstring{get\+\_\+capture\+\_\+val()}{get\_capture\_val()}}
+{\footnotesize\ttfamily \hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} T\+M\+R1\+Controller\+::get\+\_\+capture\+\_\+val (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reads and returns the Capture Register. 
+
+\mbox{\Hypertarget{classTMR1Controller_a49a1a48db1600173eeb24858645a0366}\label{classTMR1Controller_a49a1a48db1600173eeb24858645a0366}} 
+\index{T\+M\+R1\+Controller@{T\+M\+R1\+Controller}!get\+\_\+extern\+\_\+capture\+\_\+signal\+\_\+pin@{get\+\_\+extern\+\_\+capture\+\_\+signal\+\_\+pin}}
+\index{get\+\_\+extern\+\_\+capture\+\_\+signal\+\_\+pin@{get\+\_\+extern\+\_\+capture\+\_\+signal\+\_\+pin}!T\+M\+R1\+Controller@{T\+M\+R1\+Controller}}
+\subsubsection{\texorpdfstring{get\+\_\+extern\+\_\+capture\+\_\+signal\+\_\+pin()}{get\_extern\_capture\_signal\_pin()}}
+{\footnotesize\ttfamily int T\+M\+R1\+Controller\+::get\+\_\+extern\+\_\+capture\+\_\+signal\+\_\+pin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the pin number on which the capture signal must be connected. 
+
+\begin{DoxyAttention}{Attention}
+This function does not configure the pin and assign it to the Q\+T\+MR module, for that T\+M\+R1\+Controller\+::init\+\_\+pin() must be called. It can only be used if the input is actually routed to G\+P\+IO instead of X\+B\+AR. 
+\end{DoxyAttention}
+\mbox{\Hypertarget{classTMR1Controller_a084c153e1a888f72456c54b29e3fa957}\label{classTMR1Controller_a084c153e1a888f72456c54b29e3fa957}} 
+\index{T\+M\+R1\+Controller@{T\+M\+R1\+Controller}!get\+\_\+ttl\+\_\+input\+\_\+pin@{get\+\_\+ttl\+\_\+input\+\_\+pin}}
+\index{get\+\_\+ttl\+\_\+input\+\_\+pin@{get\+\_\+ttl\+\_\+input\+\_\+pin}!T\+M\+R1\+Controller@{T\+M\+R1\+Controller}}
+\subsubsection{\texorpdfstring{get\+\_\+ttl\+\_\+input\+\_\+pin()}{get\_ttl\_input\_pin()}}
+{\footnotesize\ttfamily int T\+M\+R1\+Controller\+::get\+\_\+ttl\+\_\+input\+\_\+pin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the pin number on which the T\+TL input must be connected. 
+
+\begin{DoxyAttention}{Attention}
+This function does not configure the pin or assign it to the Q\+T\+MR module. For that T\+M\+R1\+Controller\+::init\+\_\+pin() must be called. 
+\end{DoxyAttention}
+\mbox{\Hypertarget{classTMR1Controller_a5b2f74d17a84db6a9c2957b75d79ab98}\label{classTMR1Controller_a5b2f74d17a84db6a9c2957b75d79ab98}} 
+\index{T\+M\+R1\+Controller@{T\+M\+R1\+Controller}!get\+\_\+xbar\+\_\+out\+\_\+pin@{get\+\_\+xbar\+\_\+out\+\_\+pin}}
+\index{get\+\_\+xbar\+\_\+out\+\_\+pin@{get\+\_\+xbar\+\_\+out\+\_\+pin}!T\+M\+R1\+Controller@{T\+M\+R1\+Controller}}
+\subsubsection{\texorpdfstring{get\+\_\+xbar\+\_\+out\+\_\+pin()}{get\_xbar\_out\_pin()}}
+{\footnotesize\ttfamily unsigned int T\+M\+R1\+Controller\+::get\+\_\+xbar\+\_\+out\+\_\+pin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the corresponding X\+B\+AR Output Pin to use for routing the Capture Signal. {\bfseries Reference} Manual Page 70. 
+
+\mbox{\Hypertarget{classTMR1Controller_af92315e340766e3857eb6a20e7cab673}\label{classTMR1Controller_af92315e340766e3857eb6a20e7cab673}} 
+\index{T\+M\+R1\+Controller@{T\+M\+R1\+Controller}!init@{init}}
+\index{init@{init}!T\+M\+R1\+Controller@{T\+M\+R1\+Controller}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void T\+M\+R1\+Controller\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classTMR1Controller_a1c5d358760aa98641333f63c7bcacd3a}\label{classTMR1Controller_a1c5d358760aa98641333f63c7bcacd3a}} 
+\index{T\+M\+R1\+Controller@{T\+M\+R1\+Controller}!init\+\_\+pins@{init\+\_\+pins}}
+\index{init\+\_\+pins@{init\+\_\+pins}!T\+M\+R1\+Controller@{T\+M\+R1\+Controller}}
+\subsubsection{\texorpdfstring{init\+\_\+pins()}{init\_pins()}}
+{\footnotesize\ttfamily void T\+M\+R1\+Controller\+::init\+\_\+pins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the Primary and Secondary inputs for Capture Mode, routed through X\+B\+AR. {\bfseries Reference} X\+B\+AR and I\+O\+M\+UX input selections → I\+O\+M\+U\+X\+C\+\_\+\+G\+P\+R\+\_\+\+G\+P\+R6 Manual Page 347. 
+
+\mbox{\Hypertarget{classTMR1Controller_a06052b4a881156be3c7a4b6495d8ca11}\label{classTMR1Controller_a06052b4a881156be3c7a4b6495d8ca11}} 
+\index{T\+M\+R1\+Controller@{T\+M\+R1\+Controller}!is\+\_\+overflow@{is\+\_\+overflow}}
+\index{is\+\_\+overflow@{is\+\_\+overflow}!T\+M\+R1\+Controller@{T\+M\+R1\+Controller}}
+\subsubsection{\texorpdfstring{is\+\_\+overflow()}{is\_overflow()}}
+{\footnotesize\ttfamily bool T\+M\+R1\+Controller\+::is\+\_\+overflow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the overflow status of the Counter. Reads the T\+OF -\/ Timer Overflow Flag. 
+
+\mbox{\Hypertarget{classTMR1Controller_adf3746ffd24c5b55abff4fa18e05f6b3}\label{classTMR1Controller_adf3746ffd24c5b55abff4fa18e05f6b3}} 
+\index{T\+M\+R1\+Controller@{T\+M\+R1\+Controller}!reset@{reset}}
+\index{reset@{reset}!T\+M\+R1\+Controller@{T\+M\+R1\+Controller}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void T\+M\+R1\+Controller\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Resets the counter to zero. It also cleares the capture register and unsets the Input Edge Flag. 
+
+\mbox{\Hypertarget{classTMR1Controller_a67bc04f0648176a681f6ac01ea483db9}\label{classTMR1Controller_a67bc04f0648176a681f6ac01ea483db9}} 
+\index{T\+M\+R1\+Controller@{T\+M\+R1\+Controller}!start@{start}}
+\index{start@{start}!T\+M\+R1\+Controller@{T\+M\+R1\+Controller}}
+\subsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void T\+M\+R1\+Controller\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Starts up-\/counting from the set counter value. 
+
+\mbox{\Hypertarget{classTMR1Controller_afcb0ea27107bfbe50b9dcbd54207dd00}\label{classTMR1Controller_afcb0ea27107bfbe50b9dcbd54207dd00}} 
+\index{T\+M\+R1\+Controller@{T\+M\+R1\+Controller}!stop@{stop}}
+\index{stop@{stop}!T\+M\+R1\+Controller@{T\+M\+R1\+Controller}}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void T\+M\+R1\+Controller\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Stops counting and freezes the current counter value. 
+
+\mbox{\Hypertarget{classTMR1Controller_acb383aa5321f552f018e4e217e2211f4}\label{classTMR1Controller_acb383aa5321f552f018e4e217e2211f4}} 
+\index{T\+M\+R1\+Controller@{T\+M\+R1\+Controller}!timers\+\_\+anti\+\_\+freeze@{timers\+\_\+anti\+\_\+freeze}}
+\index{timers\+\_\+anti\+\_\+freeze@{timers\+\_\+anti\+\_\+freeze}!T\+M\+R1\+Controller@{T\+M\+R1\+Controller}}
+\subsubsection{\texorpdfstring{timers\+\_\+anti\+\_\+freeze()}{timers\_anti\_freeze()}}
+{\footnotesize\ttfamily static void T\+M\+R1\+Controller\+::timers\+\_\+anti\+\_\+freeze (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Enable counting normally. {\bfseries Reference} Manual Page 332. 
+
+\begin{DoxyAttention}{Attention}
+This setting applies to all the channels of the Timer 1 group. 
+\end{DoxyAttention}
+\mbox{\Hypertarget{classTMR1Controller_aa00df5e2d591a36b1049275c9a293c51}\label{classTMR1Controller_aa00df5e2d591a36b1049275c9a293c51}} 
+\index{T\+M\+R1\+Controller@{T\+M\+R1\+Controller}!timers\+\_\+freeze@{timers\+\_\+freeze}}
+\index{timers\+\_\+freeze@{timers\+\_\+freeze}!T\+M\+R1\+Controller@{T\+M\+R1\+Controller}}
+\subsubsection{\texorpdfstring{timers\+\_\+freeze()}{timers\_freeze()}}
+{\footnotesize\ttfamily static void T\+M\+R1\+Controller\+::timers\+\_\+freeze (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Reset Counter and output flags. {\bfseries Reference} Manual Page 332. 
+
+\begin{DoxyAttention}{Attention}
+This setting applies to all the channels of the Timer 1 group. 
+\end{DoxyAttention}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classTMR1Controller_adce8e8a496510485a88ccc5b88595672}\label{classTMR1Controller_adce8e8a496510485a88ccc5b88595672}} 
+\index{T\+M\+R1\+Controller@{T\+M\+R1\+Controller}!always\+\_\+inline@{always\+\_\+inline}}
+\index{always\+\_\+inline@{always\+\_\+inline}!T\+M\+R1\+Controller@{T\+M\+R1\+Controller}}
+\subsubsection{\texorpdfstring{always\+\_\+inline}{always\_inline}}
+{\footnotesize\ttfamily \hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} T\+M\+R1\+Controller\+::always\+\_\+inline}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+        \textcolor{keywordflow}{return} (this->\hyperlink{classTMR1Controller_a06052b4a881156be3c7a4b6495d8ca11}{is\_overflow}() * 65535) + (this->\hyperlink{classTMR1Controller_a3d07eed72365e7a7b44fadefb23b9ba6}{get\_capture\_val}())
+\end{DoxyCode}
+\mbox{\Hypertarget{classTMR1Controller_a532b729ca9a7c28e5f4d221f80487241}\label{classTMR1Controller_a532b729ca9a7c28e5f4d221f80487241}} 
+\index{T\+M\+R1\+Controller@{T\+M\+R1\+Controller}!Singleton\+\_\+flag@{Singleton\+\_\+flag}}
+\index{Singleton\+\_\+flag@{Singleton\+\_\+flag}!T\+M\+R1\+Controller@{T\+M\+R1\+Controller}}
+\subsubsection{\texorpdfstring{Singleton\+\_\+flag}{Singleton\_flag}}
+{\footnotesize\ttfamily constexpr bool T\+M\+R1\+Controller\+::\+Singleton\+\_\+flag = false\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Singleton template. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hardware/\hyperlink{qtmr1_8hpp}{qtmr1.\+hpp}\end{DoxyCompactItemize}

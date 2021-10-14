@@ -1,0 +1,88 @@
+\hypertarget{classErrors}{}\section{Errors Class Reference}
+\label{classErrors}\index{Errors@{Errors}}
+
+
+{\ttfamily \#include $<$errors.\+hpp$>$}
+
+
+
+Collaboration diagram for Errors\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{dc/dc7/classErrors__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classErrors_a9e43e14a2d0834f192b954cce71c387b}{Validate} (const \hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7f}{Error\+\_\+t} error)
+\begin{DoxyCompactList}\small\item\em Receives an error state and sets up the corresponding L\+ED indicator. \end{DoxyCompactList}\item 
+static \hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7f}{Error\+\_\+t} \hyperlink{classErrors_a1568635c69e70e2422a5a632d8d6809d}{Precison\+\_\+\+Threshold} (double error\+\_\+val, double error\+\_\+limit)
+\begin{DoxyCompactList}\small\item\em Receives error value and error threshold and returns an appropriate error state. \end{DoxyCompactList}\item 
+{\footnotesize template$<$unsigned int Lin\+\_\+channels, index\+\_\+t Series\+\_\+size, unsigned int Bin\+\_\+\+Ratio$>$ }\\static \hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7f}{Error\+\_\+t} \hyperlink{classErrors_a8578169dc7b56d2080f07a0647f627e1}{Auto\+\_\+\+Multi\+Tau\+\_\+\+Input\+\_\+\+Validator} ()
+\begin{DoxyCompactList}\small\item\em Input Validator for Multi\+Tau auto-\/correlator. \end{DoxyCompactList}\item 
+static void \hyperlink{classErrors_a3618ed0e7aba69be0759fa821a987b3b}{\+\_\+assert\+\_\+} (bool expression, const char $\ast$\+\_\+\+\_\+attribute\+\_\+\+\_\+((unused)) message=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Custom assertion function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains functions that handle errors of type {\ttfamily Error\+\_\+t}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classErrors_a3618ed0e7aba69be0759fa821a987b3b}\label{classErrors_a3618ed0e7aba69be0759fa821a987b3b}} 
+\index{Errors@{Errors}!\+\_\+assert\+\_\+@{\+\_\+assert\+\_\+}}
+\index{\+\_\+assert\+\_\+@{\+\_\+assert\+\_\+}!Errors@{Errors}}
+\subsubsection{\texorpdfstring{\+\_\+assert\+\_\+()}{\_assert\_()}}
+{\footnotesize\ttfamily static void Errors\+::\+\_\+assert\+\_\+ (\begin{DoxyParamCaption}\item[{bool}]{expression,  }\item[{const char $\ast$\+\_\+\+\_\+attribute\+\_\+\+\_\+((unused))}]{message = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Custom assertion function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expression} & which must evaluate to false for the assertion to call abort. \\
+\hline
+{\em message} & which is ignored in the function, but helps with code redability \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classErrors_a8578169dc7b56d2080f07a0647f627e1}\label{classErrors_a8578169dc7b56d2080f07a0647f627e1}} 
+\index{Errors@{Errors}!Auto\+\_\+\+Multi\+Tau\+\_\+\+Input\+\_\+\+Validator@{Auto\+\_\+\+Multi\+Tau\+\_\+\+Input\+\_\+\+Validator}}
+\index{Auto\+\_\+\+Multi\+Tau\+\_\+\+Input\+\_\+\+Validator@{Auto\+\_\+\+Multi\+Tau\+\_\+\+Input\+\_\+\+Validator}!Errors@{Errors}}
+\subsubsection{\texorpdfstring{Auto\+\_\+\+Multi\+Tau\+\_\+\+Input\+\_\+\+Validator()}{Auto\_MultiTau\_Input\_Validator()}}
+{\footnotesize\ttfamily template$<$unsigned int Lin\+\_\+channels, index\+\_\+t Series\+\_\+size, unsigned int Bin\+\_\+\+Ratio$>$ \\
+static \hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7f}{Error\+\_\+t} Errors\+::\+Auto\+\_\+\+Multi\+Tau\+\_\+\+Input\+\_\+\+Validator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Input Validator for Multi\+Tau auto-\/correlator. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]Change name to indicate {\itshape Auto} Correlator link. \end{DoxyRefDesc}
+\mbox{\Hypertarget{classErrors_a1568635c69e70e2422a5a632d8d6809d}\label{classErrors_a1568635c69e70e2422a5a632d8d6809d}} 
+\index{Errors@{Errors}!Precison\+\_\+\+Threshold@{Precison\+\_\+\+Threshold}}
+\index{Precison\+\_\+\+Threshold@{Precison\+\_\+\+Threshold}!Errors@{Errors}}
+\subsubsection{\texorpdfstring{Precison\+\_\+\+Threshold()}{Precison\_Threshold()}}
+{\footnotesize\ttfamily static \hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7f}{Error\+\_\+t} Errors\+::\+Precison\+\_\+\+Threshold (\begin{DoxyParamCaption}\item[{double}]{error\+\_\+val,  }\item[{double}]{error\+\_\+limit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Receives error value and error threshold and returns an appropriate error state. 
+
+\mbox{\Hypertarget{classErrors_a9e43e14a2d0834f192b954cce71c387b}\label{classErrors_a9e43e14a2d0834f192b954cce71c387b}} 
+\index{Errors@{Errors}!Validate@{Validate}}
+\index{Validate@{Validate}!Errors@{Errors}}
+\subsubsection{\texorpdfstring{Validate()}{Validate()}}
+{\footnotesize\ttfamily static void Errors\+::\+Validate (\begin{DoxyParamCaption}\item[{const \hyperlink{errors_8hpp_a4e8c0d09726859e3d3369c0da5a1aa7f}{Error\+\_\+t}}]{error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Receives an error state and sets up the corresponding L\+ED indicator. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hardware/\hyperlink{errors_8hpp}{errors.\+hpp}\end{DoxyCompactItemize}

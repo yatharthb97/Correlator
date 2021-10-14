@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['x_5ffile_5fname',['x_file_name',['../namespacepost__upload__actions.html#a69a8dece1cead975550839950d39ac2c',1,'post_upload_actions']]],
-  ['x_5ftau_5fvalues',['x_tau_values',['../namespacepost__upload__actions.html#adee53b372de24d69e9156b1df89e0611',1,'post_upload_actions']]]
+  ['window',['window',['../de/d71/classlive__graph_1_1PStatLiveGraph.html#a8cc1373f90af09e389d1da5a5b594492',1,'live_graph::PStatLiveGraph']]]
 ];

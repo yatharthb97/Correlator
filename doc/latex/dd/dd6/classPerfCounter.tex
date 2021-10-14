@@ -1,0 +1,175 @@
+\hypertarget{classPerfCounter}{}\section{Perf\+Counter Class Reference}
+\label{classPerfCounter}\index{Perf\+Counter@{Perf\+Counter}}
+
+
+Performance Counter class for teensy 4.\+1 microcontrollers.  
+
+
+
+
+{\ttfamily \#include $<$perf\+\_\+counter.\+hpp$>$}
+
+
+
+Collaboration diagram for Perf\+Counter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=179pt]{d3/dba/classPerfCounter__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classPerfCounter_a5fdd73c1d604decd6dc745aada8092d1}{start} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
+\begin{DoxyCompactList}\small\item\em Start Measurement. \end{DoxyCompactList}\item 
+void \hyperlink{classPerfCounter_ab5d9f05bb15139451eaa857989ed8bd8}{end} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
+\begin{DoxyCompactList}\small\item\em End measurement. \end{DoxyCompactList}\item 
+float \hyperlink{classPerfCounter_a5992367178f424e486a7709659e276a6}{mean} ()
+\begin{DoxyCompactList}\small\item\em Returns the mean number of cycles between {\ttfamily \hyperlink{classPerfCounter_a5fdd73c1d604decd6dc745aada8092d1}{start()}} and {\ttfamily stop()}. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{classPerfCounter_a5239f46d98a619e0145f09320052bfc8}{last\+\_\+duration} ()
+\begin{DoxyCompactList}\small\item\em Returns the last recorded duration. \end{DoxyCompactList}\item 
+void \hyperlink{classPerfCounter_a60f7428eabd82437280b662d6829e184}{reset} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
+\item 
+void \hyperlink{classPerfCounter_a291ce8187d35e1f97a68339fe51931a4}{output} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classPerfCounter_ae1897d617e84a28c141d554810fcaee9}{init} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
+\begin{DoxyCompactList}\small\item\em Set up the debug module for clock cycle counting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{classPerfCounter_ad440629d44a2bfd9b4d8de185ff66d27}{Stack} = 0
+\begin{DoxyCompactList}\small\item\em Stack for mean calculation. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{classPerfCounter_a8f86300240da2178dea60346ea72651c}{Count} = 0
+\begin{DoxyCompactList}\small\item\em Count for mean calculation. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{classPerfCounter_a60984f26cf145882c0355d28d8233e0a}{Cycles} = 0
+\begin{DoxyCompactList}\small\item\em Last recorded duration (difference in clock cycles recorded) \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{classPerfCounter_adefe85b05d9c8920877053f6a8ed743c}{Start\+Time} = 0
+\begin{DoxyCompactList}\small\item\em Stored starting time of the measurement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Performance Counter class for teensy 4.\+1 microcontrollers. 
+
+\begin{DoxyNote}{Note}
+{\ttfamily imxrt.\+h} defines {\ttfamily A\+R\+M\+\_\+\+D\+W\+T\+\_\+\+C\+Y\+C\+C\+NT} as {\ttfamily ($\ast$(volatile uint32\+\_\+t $\ast$)0x\+E0001004)}. 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPerfCounter_ab5d9f05bb15139451eaa857989ed8bd8}\label{classPerfCounter_ab5d9f05bb15139451eaa857989ed8bd8}} 
+\index{Perf\+Counter@{Perf\+Counter}!end@{end}}
+\index{end@{end}!Perf\+Counter@{Perf\+Counter}}
+\subsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily void Perf\+Counter\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+End measurement. 
+
+\mbox{\Hypertarget{classPerfCounter_ae1897d617e84a28c141d554810fcaee9}\label{classPerfCounter_ae1897d617e84a28c141d554810fcaee9}} 
+\index{Perf\+Counter@{Perf\+Counter}!init@{init}}
+\index{init@{init}!Perf\+Counter@{Perf\+Counter}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily static void Perf\+Counter\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Set up the debug module for clock cycle counting. 
+
+\begin{DoxyWarning}{Warning}
+This function sets the registers globally and will affect all instances and also the overall performance. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classPerfCounter_a5239f46d98a619e0145f09320052bfc8}\label{classPerfCounter_a5239f46d98a619e0145f09320052bfc8}} 
+\index{Perf\+Counter@{Perf\+Counter}!last\+\_\+duration@{last\+\_\+duration}}
+\index{last\+\_\+duration@{last\+\_\+duration}!Perf\+Counter@{Perf\+Counter}}
+\subsubsection{\texorpdfstring{last\+\_\+duration()}{last\_duration()}}
+{\footnotesize\ttfamily uint32\+\_\+t Perf\+Counter\+::last\+\_\+duration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the last recorded duration. 
+
+\mbox{\Hypertarget{classPerfCounter_a5992367178f424e486a7709659e276a6}\label{classPerfCounter_a5992367178f424e486a7709659e276a6}} 
+\index{Perf\+Counter@{Perf\+Counter}!mean@{mean}}
+\index{mean@{mean}!Perf\+Counter@{Perf\+Counter}}
+\subsubsection{\texorpdfstring{mean()}{mean()}}
+{\footnotesize\ttfamily float Perf\+Counter\+::mean (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the mean number of cycles between {\ttfamily \hyperlink{classPerfCounter_a5fdd73c1d604decd6dc745aada8092d1}{start()}} and {\ttfamily stop()}. 
+
+\mbox{\Hypertarget{classPerfCounter_a291ce8187d35e1f97a68339fe51931a4}\label{classPerfCounter_a291ce8187d35e1f97a68339fe51931a4}} 
+\index{Perf\+Counter@{Perf\+Counter}!output@{output}}
+\index{output@{output}!Perf\+Counter@{Perf\+Counter}}
+\subsubsection{\texorpdfstring{output()}{output()}}
+{\footnotesize\ttfamily void Perf\+Counter\+::output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classPerfCounter_a60f7428eabd82437280b662d6829e184}\label{classPerfCounter_a60f7428eabd82437280b662d6829e184}} 
+\index{Perf\+Counter@{Perf\+Counter}!reset@{reset}}
+\index{reset@{reset}!Perf\+Counter@{Perf\+Counter}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Perf\+Counter\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classPerfCounter_a5fdd73c1d604decd6dc745aada8092d1}\label{classPerfCounter_a5fdd73c1d604decd6dc745aada8092d1}} 
+\index{Perf\+Counter@{Perf\+Counter}!start@{start}}
+\index{start@{start}!Perf\+Counter@{Perf\+Counter}}
+\subsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void Perf\+Counter\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Start Measurement. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classPerfCounter_a8f86300240da2178dea60346ea72651c}\label{classPerfCounter_a8f86300240da2178dea60346ea72651c}} 
+\index{Perf\+Counter@{Perf\+Counter}!Count@{Count}}
+\index{Count@{Count}!Perf\+Counter@{Perf\+Counter}}
+\subsubsection{\texorpdfstring{Count}{Count}}
+{\footnotesize\ttfamily uint32\+\_\+t Perf\+Counter\+::\+Count = 0}
+
+
+
+Count for mean calculation. 
+
+\mbox{\Hypertarget{classPerfCounter_a60984f26cf145882c0355d28d8233e0a}\label{classPerfCounter_a60984f26cf145882c0355d28d8233e0a}} 
+\index{Perf\+Counter@{Perf\+Counter}!Cycles@{Cycles}}
+\index{Cycles@{Cycles}!Perf\+Counter@{Perf\+Counter}}
+\subsubsection{\texorpdfstring{Cycles}{Cycles}}
+{\footnotesize\ttfamily uint32\+\_\+t Perf\+Counter\+::\+Cycles = 0}
+
+
+
+Last recorded duration (difference in clock cycles recorded) 
+
+\mbox{\Hypertarget{classPerfCounter_ad440629d44a2bfd9b4d8de185ff66d27}\label{classPerfCounter_ad440629d44a2bfd9b4d8de185ff66d27}} 
+\index{Perf\+Counter@{Perf\+Counter}!Stack@{Stack}}
+\index{Stack@{Stack}!Perf\+Counter@{Perf\+Counter}}
+\subsubsection{\texorpdfstring{Stack}{Stack}}
+{\footnotesize\ttfamily uint32\+\_\+t Perf\+Counter\+::\+Stack = 0}
+
+
+
+Stack for mean calculation. 
+
+\mbox{\Hypertarget{classPerfCounter_adefe85b05d9c8920877053f6a8ed743c}\label{classPerfCounter_adefe85b05d9c8920877053f6a8ed743c}} 
+\index{Perf\+Counter@{Perf\+Counter}!Start\+Time@{Start\+Time}}
+\index{Start\+Time@{Start\+Time}!Perf\+Counter@{Perf\+Counter}}
+\subsubsection{\texorpdfstring{Start\+Time}{StartTime}}
+{\footnotesize\ttfamily uint32\+\_\+t Perf\+Counter\+::\+Start\+Time = 0}
+
+
+
+Stored starting time of the measurement. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hardware/\hyperlink{perf__counter_8hpp}{perf\+\_\+counter.\+hpp}\end{DoxyCompactItemize}

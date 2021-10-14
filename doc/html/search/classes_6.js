@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tmr1controller',['TMR1Controller',['../classTMR1Controller.html',1,'']]]
+  ['normalizer',['Normalizer',['../d2/d9c/classnormalizer_1_1Normalizer.html',1,'normalizer']]]
 ];

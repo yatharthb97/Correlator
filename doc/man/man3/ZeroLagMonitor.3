@@ -1,0 +1,45 @@
+.TH "ZeroLagMonitor" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator and Photon Statistics" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ZeroLagMonitor \- Measures the zeroth auto-correlation, which is equal to the second moment of the sampled time series\&. This object was intended for experimentation with Linear-autocorrelators, which start from lag1, instead of lag0\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <monitor_channel\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBpush_back\fP (\fBcounter_t\fP datum) __attribute__((always_inline))"
+.br
+.ti -1c
+.RI "float_t \fBget_output\fP () __attribute__((always_inline))"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "float_t \fBSecond_Moment\fP = 0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Measures the zeroth auto-correlation, which is equal to the second moment of the sampled time series\&. This object was intended for experimentation with Linear-autocorrelators, which start from lag1, instead of lag0\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "float_t ZeroLagMonitor::get_output ()\fC [inline]\fP"
+
+.SS "void ZeroLagMonitor::push_back (\fBcounter_t\fP datum)\fC [inline]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "float_t ZeroLagMonitor::Second_Moment = 0"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator and Photon Statistics from the source code\&.

@@ -5,13 +5,19 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>DIY Auto-Correlator: DIY Teensy Correlator Project Repository</title>
+<title>DIY Auto-Correlator and Photon Statistics: DIY Teensy Correlator Project Repository</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -21,7 +27,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">DIY Auto-Correlator
+   <div id="projectname">DIY Auto-Correlator and Photon Statistics
    &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">Auto-Correlator Card implementation using Teensy 4.x microcontrollers.</div>
@@ -64,55 +70,129 @@ $(function() {
 <div class="title">DIY Teensy Correlator Project Repository </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Online <em>doxygen</em> documentation Link: <a href="https://yatharthb97.github.io/Correlator/index.html">https://yatharthb97.github.io/Correlator/index.html</a></p>
-<h2>Software</h2>
+<div class="textblock"><hr/>
+<p>Online <em>doxygen</em> documentation Link: <a href="https://yatharthb97.github.io/Correlator/index.html">https://yatharthb97.github.io/Correlator/index.html</a> </p><hr/>
+<p>→ <em>Photon Statistics Device</em>: This repo contains code that is used to set up, configure, and record photon-statistics at real time from a detector that generates TTL pulses. The device is <b>multi-modal</b> and is built with **"feature lines"**, i.e. a set of features are compatible during a specific mode of operation. This was implemented to make the device more "feature rich", but the main purpose was to organize the code and different tests into a single easy to understand framework.</p>
+<h3>Usage</h3>
+<ol type="1">
+<li>Set the configuration in <code>config.json</code>.</li>
+<li>Upload code to the device using PlateformIO.</li>
+<li>Start the PC application (instructions below). <hr/>
+</li>
+</ol>
+<ul>
+<li>The (microcontroller) board configuration used by PlateformIO is defined in the file <code>plateformio.ini</code>.</li>
+<li>The feature configurations are defined in the file <code>config.json</code>.</li>
+<li>These two files must exist for the program to compile and run. The <code>config.json</code> file will be auto-generated, if it is missing in the root directory. Missing fields will also be added with default values, while generating a warning message at compile time. <hr/>
+</li>
+<li>The file <code>build_system.py</code> constructs the build environment from the <code>config.json</code> file.</li>
+</ul>
+<h3>Error Mechanism and Debugging</h3>
+<ul>
+<li>If the device turns on all the LEDs on the panel, that means that an error was generated. If the configuration <code>"AbortOnError"</code> is set to the <code>true</code>, the device would be put to a "hung state" and would not generate any output in that case before a restart. The error type can be deduced by the blinking of particular LED colors. This blinking would occur for 10 seconds, before all the LEDs are switched on. The color assignments are are given below:<ol type="1">
+<li><code><a class="el" href="df/d52/errors_8hpp.html#a4e8c0d09726859e3d3369c0da5a1aa7fa8347bab2e74e4a640d76c916306a1a36" title="Passed Value caused a counter overflow. ">Error_t::Counter_Overflow</a></code> or <code><a class="el" href="df/d52/errors_8hpp.html#a4e8c0d09726859e3d3369c0da5a1aa7fa02b02f5e5e61f24acdd91338b95997da" title="Passed Value caused a counter underflow. ">Error_t::Counter_Underflow</a></code> → White LED</li>
+<li><code><a class="el" href="df/d52/errors_8hpp.html#a4e8c0d09726859e3d3369c0da5a1aa7fabe5edab59de4ea30531374e506b03822" title="Error generated when difference due to finite resolution is greater than acceptable. ">Error_t::Precision</a></code> → Blue LED</li>
+<li><code><a class="el" href="df/d52/errors_8hpp.html#a4e8c0d09726859e3d3369c0da5a1aa7fa7e748bca7005cc737bad51b247997421" title="Input validation failed. ">Error_t::Input_Validation</a></code> → Red LED</li>
+</ol>
+</li>
+<li>Pin Toggling during ISR firing : If the config option <code>ISR Pin Toggle</code> is turned on, a <code>gpio pin</code> is toggled every time the ISR (Interrupt Service Routine) function is fired during gate counting. The output of this pin can be visualized on an oscilloscope to measure timing and performance of the device. The particular pin is defined as <code>ISR_TEST_TOOGLE_PIN</code> in the file <code><a class="el" href="dd/d48/pins_8hpp.html">pins.hpp</a></code>.</li>
+<li>The config option <code>SomeDebugValue</code> can be used to insert an arbitrary value from the <code>config.json</code> file to the compilation units and can be used for any testing purpose.</li>
+<li>The program validates the options in <code>config.json</code> and generates errors at compile time if the configurations are incompatible or incorrect.</li>
+</ul>
+<h2>Feature Lines</h2>
+<p>The feature line can be selected via this option in the <code>config.json</code> file: <code>"Feature Line"</code>. This option takes three valid inputs as of now:</p>
+<ol type="1">
+<li><code>"ACF"</code></li>
+<li><code>"Interarrival"</code></li>
+<li><code>"Sampler"</code></li>
+</ol>
+<h3>Common features across feature branches</h3>
+<ul>
+<li><p class="startli"><code>Enable Synchronization</code> : Enables transmission and reception of a unique <code>Sync Code</code>, which precedes every struct that is sent and marks its beginning. In the event of a mismatch of sync code, it can be deduced that the struct transmission and subsequent reception is misaligned. An ERROR is generated at the PC end when that happens.</p>
+<p class="startli">An easy way to emulate this mismatch is to change the configuration file <code><a class="el" href="dd/deb/config_8py.html">config.py</a></code> and launch the software, without pushing the changed configuration to the device via PlateformIO.</p>
+</li>
+</ul>
+<h3>Feature Branch 1 - <code>ACF</code> (uses Gate Counting)</h3>
+<p>This is sort of the main feature branch. <em>Device ready</em> state is indicated by the <code>RED LED</code> and <em>device running</em> state is indicated by the <code>GREEN LED</code>.</p>
+<ul>
+<li><code>Enable ACF</code> : Enable ACF Calculation</li>
+<li><code>Enable Count Rate</code> : Enable Count Rate Measurement</li>
+<li><code>Enable PC Histogram</code> : Enable Photon Counting Histogram</li>
+<li><code>Enable PerfCouter</code> : Enables Performance Counters for ACF and Serial output.</li>
+<li><code>Enable ISR Pin Toggle</code> : Enables toggling of a specific pin <code>PIT_TEST_TOOGLE_PIN</code> (pin 3) during each ISR. This pin can be used to monitor timing on a oscilloscope.</li>
+<li><code>Enable Points Normalization</code> : Enables simple normalization using points used. (under review)</li>
+<li><p class="startli"><code>Enable Mean Normalization</code> : Enables normalization using the estimated mean from a separate <code><a class="el" href="d0/d68/classMonitorChannel.html" title="A simple Averager Class that calculates the estimated mean. Template parameter Construct specifies a ...">MonitorChannel</a></code>. (under review)</p>
+<p class="startli">&lt;u&gt;Note:&lt;/u&gt; Enabling each feature would reduce the overall performance of the device. Whereas, if a feature is disabled, it has no footprint.</p>
+</li>
+</ul>
+<h2>Feature Branch 2 - <code>Photon Interarrival Time</code></h2>
+<p><em>Device ready</em> state is indicated by the <code>BLUE LED</code> and <em>device running</em> state is indicated by the <code>WHITE LED</code>.</p>
+<p>Uses tight-polling and hence a separate feature branch is needed. ==Implementation Pending==</p>
+<h2>Feature Branch 3 - <code>Sampler</code> (Gate Counting)</h2>
+<p><em>Device ready</em> state is indicated by the <code>WHITE LED</code> and <em>device running</em> state is indicated by the <code>GREEN LED</code>.</p>
+<p>This branch periodically (As per <code>Sampling Delay ms</code> option) samples and prints the Counter value, the mean of the Counter, and the overall count of the values received. The output of the device is line separated and hence, does not require <code>Synchronization Code</code> feature.</p>
+<p>Typical Output: cv: counter value (sampled), m: mean, a: accumulate, c: count (Mean = Accumulate/Count)</p>
+<div class="fragment"><div class="line">cv: 10  m: 0.10  c: 2667240000  a: 268435456.00</div></div><!-- fragment --><h2>Feature Branch 4 - Photon Trace</h2>
+<p>Uses tight-polling and hence a separate feature branch is needed. ==Implementation Pending==</p>
+<h2>Description of Modules</h2>
+<h3>Software Libraries</h3>
 <p>This folder contains the implementation of the software correlator that will be used on Teensy. The file descriptions are as follows:</p>
 <ul>
-<li><code>Lin_ACorr_RT_Base.hpp</code> - Base (Interface) for Linear Correlators</li>
-<li><code><a class="el" href="Lin__ACorr__RT__Teensy_8hpp.html">Lin_ACorr_RT_Teensy.hpp</a></code> - Implementation specific to Teensy</li>
-<li><code><a class="el" href="multi__tau_8hpp.html">multi_tau.hpp</a></code> - Teensy specific implementation of multi-tau Auto-correlator</li>
-<li><code><a class="el" href="accumulator_8hpp.html">accumulator.hpp</a></code> - Adapter object used by Multi Tau ACorr</li>
-<li><code><a class="el" href="discarder_8hpp.html">discarder.hpp</a></code> - Adapter object used by Multi Tau ACorr</li>
-<li><code><a class="el" href="simpler__circular__buffer_8hpp.html">simpler_circular_buffer.hpp</a></code> - Simple circlar buffer used for storing the cout values.</li>
-<li><code><a class="el" href="types_8hpp.html">types.hpp</a></code> - Contains the <code>typedef</code> of the abstracted typenames<ul>
-<li><code>counter_t</code> - Type returned by the Counter module</li>
-<li><code>index_t</code> - Type used to index arrays and buffers in the implementation</li>
-</ul>
+<li><code><a class="el" href="d8/d5e/accumulator_8hpp.html">accumulator.hpp</a></code> - Adapter object used by Multi Tau ACorr.</li>
+<li><code><a class="el" href="d2/dc3/discarder_8hpp.html">discarder.hpp</a></code> - Adapter object used by Multi Tau ACorr.</li>
+<li><code><a class="el" href="d5/d6e/histogram_8hpp.html">histogram.hpp</a></code> - Defines a real-time histogram class.</li>
+<li><code><a class="el" href="d3/d93/Lin__ACorr__RT__Teensy_8hpp.html">Lin_ACorr_RT_Teensy.hpp</a></code> - Linear Auto Correlator module.</li>
+<li><code><a class="el" href="d4/d18/monitor__channel_8hpp.html">monitor_channel.hpp</a></code> - Defines classes <code><a class="el" href="d0/d68/classMonitorChannel.html" title="A simple Averager Class that calculates the estimated mean. Template parameter Construct specifies a ...">MonitorChannel</a></code> and <code><a class="el" href="d1/d05/classRTCoarseGrainer.html" title="An object that can accumulate data into a fixed size bin before changing its output value...">RTCoarseGrainer</a></code>.</li>
+<li><code><a class="el" href="df/d96/multi__tau_8hpp.html">multi_tau.hpp</a></code> - Teensy specific implementation of multi-tau Auto-correlator</li>
+<li><code><a class="el" href="d8/d97/simpler__circular__buffer_8hpp.html">simpler_circular_buffer.hpp</a></code> - Simple circlar buffer used for storing the cout values. <hr/>
 </li>
-<li><code>test.cpp</code> - File used for tsting</li>
-<li><code>circlar_buffer.hpp</code> - Another implementation of circular buffer (unsued right now)</li>
-<li><code>Lin_CrossCorr_RT_Base.hpp</code> - Base interface for Linear Cross Correlators</li>
-<li><code><a class="el" href="Lin__CrossCorr__RT__Teensy_8hpp.html">Lin_CrossCorr_RT_Teensy.hpp</a></code> - Teensy specific Liner Cross Correlator interface</li>
+<li><code><a class="el" href="df/dac/test_8cpp.html">test.cpp</a></code> - File used for testing software modules.</li>
+<li><code><a class="el" href="dd/de9/pseudoSerial_8hpp.html">pseudoSerial.hpp</a></code> - File that defines a <code>char Buffer</code> that is used in place of <code>Arduino::Serial</code> buffer.</li>
+<li><code><a class="el" href="d7/db3/pseudoSerial_8cpp.html">pseudoSerial.cpp</a></code> - File that implements a <code>char Buffer</code> that is used in place of <code>Arduino::Serial</code> buffer. <hr/>
+</li>
+<li><code><a class="el" href="d4/d7b/Lin__CrossCorr__RT__Teensy_8hpp.html">Lin_CrossCorr_RT_Teensy.hpp</a></code> - Teensy specific Liner Cross Correlator interface</li>
 </ul>
-<h2>Hardware</h2>
+<h2>Hardware Libraries</h2>
 <p>File descriptions:</p>
 <ul>
-<li><code><a class="el" href="pit_8hpp.html">pit.hpp</a></code> - Defines <code>class <a class="el" href="classPITController.html" title="Interface for PIT timers on Teensy 4.x microcontrollers. ">PITController</a></code> that provides an abstraction layer on the PIT timer controls.</li>
-<li><code><a class="el" href="qtmr1_8hpp.html">qtmr1.hpp</a></code> - Defines 'class QTMR1Controller' that provides an abstraction layer on the QTMR1 timer controls.</li>
-<li><code><a class="el" href="lifetime__timer_8hpp.html">lifetime_timer.hpp</a></code> - Interface for using PIT timers in chained mode to create a 64-bit lifetime counter</li>
+<li><code><a class="el" href="d3/d5e/interarrival_8hpp.html">interarrival.hpp</a></code> - Defines a class that measures and stores the inter-arrival time between two events.</li>
+<li><code><a class="el" href="d1/df0/pit_8hpp.html">pit.hpp</a></code> - Defines <code>class <a class="el" href="d8/d03/classPITController.html" title="Interface for PIT timers on Teensy 4.x microcontrollers. ">PITController</a></code> that provides an abstraction layer on the PIT timer controls for triggering <em>Gate Counting</em>.</li>
+<li><code><a class="el" href="d0/d11/qtmr1_8hpp.html">qtmr1.hpp</a></code> - Defines 'class QTMR1Controller' that provides an abstraction layer on the QTMR1 timer controls.</li>
+<li><code><a class="el" href="d0/d82/lifetime__timer_8hpp.html">lifetime_timer.hpp</a></code> - Interface for using PIT timers in chained mode to create a 64-bit lifetime counter</li>
+<li><code><a class="el" href="d0/d46/ledset_8hpp.html">ledset.hpp</a></code> - Defines the LED controller class.</li>
+<li><code><a class="el" href="df/dcd/ledpanel_8hpp.html">ledpanel.hpp</a></code> - Defines a global <code><a class="el" href="d8/d06/classLEDSet.html">LEDSet</a></code> instance used across the library.</li>
+<li><code><a class="el" href="de/d94/perf__counter_8hpp.html">perf_counter.hpp</a></code> - Defines a <code><a class="el" href="dd/dd6/classPerfCounter.html" title="Performance Counter class for teensy 4.1 microcontrollers. ">PerfCounter</a></code> (Performance Counter) class that measures the CPU clock pulses between <code><a class="el" href="dd/dd6/classPerfCounter.html#a5fdd73c1d604decd6dc745aada8092d1" title="Start Measurement. ">PerfCounter::start()</a></code> and <code><a class="el" href="dd/dd6/classPerfCounter.html#ab5d9f05bb15139451eaa857989ed8bd8" title="End measurement. ">PerfCounter::end()</a></code>.</li>
+<li><code><a class="el" href="dd/d48/pins_8hpp.html">pins.hpp</a></code> - Defines the gpio pin assignments.</li>
+<li><code><a class="el" href="dc/d5f/utilities_8hpp.html">utilities.hpp</a></code> - Utility functions.</li>
+<li><code><a class="el" href="df/d52/errors_8hpp.html">errors.hpp</a></code> - Defines common error codes and error generating functions.</li>
 </ul>
 <h2>Common Interface</h2>
 <ul>
-<li><code>modules.hpp</code> - Defines functions that represent highest-abstracted modules in the system.</li>
-<li><code><a class="el" href="errors_8hpp.html">errors.hpp</a></code> - Defines common error codes and error generating functions.</li>
-<li><code><a class="el" href="utilities_8hpp.html">utilities.hpp</a></code> - Contains some utility functions</li>
+<li><code><a class="el" href="dd/de3/types_8hpp.html">types.hpp</a></code> - Defines the abstract data types used in the library.<ul>
+<li><code>counter_t</code> - Type returned by the Counter module.</li>
+<li><code>index_t</code> - Type used to index arrays and buffers in the implementation.</li>
+<li>float_t - Type used commonly for floating types.</li>
 </ul>
-<h2>Standard Flushing Procedure for USB Serial on Teensy:</h2>
-<ul>
-<li>Libraries will use <code>Serial.write(buffer, bytes);</code> for all outputs.</li>
-<li>For line buffered outputs, at the end, user calls: <div class="fragment"><div class="line">Serial.write(&#39;\n&#39;);</div><div class="line">Serial.flush(); // Which is an alias of usb_serial::flush()</div></div><!-- fragment --></li>
-<li>Note: The libraries are not allowed to use endlines on output calls. This also solves the "`\r\n`" problem of using <code>Serial.println()</code>.</li>
-<li>Both <code>Serial.flush()</code> and <code>Serial.send_now()</code> wrap <code>usb_serial_flush_output();</code>. Reference <div class="image">
-<img src="https://github.com/PaulStoffregen/cores/blob/c87857a687f23902578f71f71b467486f847ca4e/teensy4/usb_serial.h#L93" alt="here"/>
-</div>
 </li>
 </ul>
-<h2>SLOC as on 28/08/21</h2>
-<p>&mdash; Result &mdash; </p><div class="fragment"><div class="line">            Physical :  1873</div><div class="line">              Source :  1093</div><div class="line">             Comment :  503</div><div class="line"> Single-line comment :  284</div><div class="line">       Block comment :  223</div><div class="line">               Mixed :  132</div><div class="line"> Empty block comment :  0</div><div class="line">               Empty :  409</div><div class="line">               To Do :  0</div><div class="line"></div><div class="line">Number of files read :  23</div></div><!-- fragment --><hr/>
- </div></div><!-- contents -->
+<h2>PC Application</h2>
+<p>Execute PC Program: <code>&gt;&gt; python ./photon_statistics.py &lt;session_name&gt;</code>.</p>
+<p>→ (Session name is optional and will be autogenerated if not passed.)</p>
+<ul>
+<li><code><a class="el" href="dd/ddc/photon__statistics_8py.html">photon_statistics.py</a></code> - PC Side program for data acquisition and plotting - Callable. <hr/>
+</li>
+<li><code><a class="el" href="dd/deb/config_8py.html">config.py</a></code> - Configuration file generator and validator.</li>
+<li><code>icon.png</code> - Window Icon for GUI.</li>
+<li><code><a class="el" href="dd/d6e/live__graph_8py.html">live_graph.py</a></code> - Defines a GUI for live plotting that uses <code>pyqtgraph</code>.</li>
+<li><code><a class="el" href="df/d05/multitau_8py.html">multitau.py</a></code> - Defines functions specific to Multitau method.</li>
+<li><code><a class="el" href="d4/df3/normalizer_8py.html">normalizer.py</a></code> - Defines a class that implements various normalization methods.</li>
+<li><code><a class="el" href="dc/d5a/statmethods_8py.html">statmethods.py</a></code> - Defines statistical methods for estimation of various quantities.</li>
+<li><code><a class="el" href="d7/dd3/utilities_8py.html">utilities.py</a></code> - Defines misc functions that serve as utilities. </li>
+</ul>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Oct 14 2021 11:21:55 for DIY Auto-Correlator and Photon Statistics by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

@@ -1,0 +1,113 @@
+.TH "live_graph.PStatLiveGraph" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator and Photon Statistics" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+live_graph.PStatLiveGraph
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP (self, port=None)"
+.br
+.ti -1c
+.RI "def \fBinit_plots\fP (config)"
+.br
+.ti -1c
+.RI "def \fBscreen_size_calc\fP (final_row, final_col)"
+.br
+.ti -1c
+.RI "def \fBgrid_allocator\fP (halfcol=False)"
+.br
+.ti -1c
+.RI "def \fBupdate_dashboard\fP (self, update_id=0, update_time=0, current_time=0)"
+.br
+.ti -1c
+.RI "def \fBadd_canvas_plot\fP (self, ref_name, title=None, half_plot=False, xRange=None, yRange=None, xLabel=None, yLabel=None, xLog=False, yLog=False)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBapp\fP"
+.br
+.ti -1c
+.RI "\fBwindow\fP"
+.br
+.ti -1c
+.RI "\fBdashboard\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "def live_graph\&.PStatLiveGraph\&.__init__ ( self,  port = \fCNone\fP)"
+
+.PP
+.nf
+Constructor : takes optional parameter "port" which adds the port-address to the window title
+
+.fi
+.PP
+ 
+.SH "Member Function Documentation"
+.PP 
+.SS "def live_graph\&.PStatLiveGraph\&.add_canvas_plot ( self,  ref_name,  title = \fCNone\fP,  half_plot = \fCFalse\fP,  xRange = \fCNone\fP,  yRange = \fCNone\fP,  xLabel = \fCNone\fP,  yLabel = \fCNone\fP,  xLog = \fCFalse\fP,  yLog = \fCFalse\fP)"
+
+.PP
+.nf
+Adds a canvas to the canvas list with the set attributes.
+
+.fi
+.PP
+ 
+.SS "def live_graph\&.PStatLiveGraph\&.grid_allocator ( halfcol = \fCFalse\fP)"
+
+.PP
+.nf
+Allocates a row and column number based on the size of the plot (full-row plot or half-row plot)
+
+.fi
+.PP
+ 
+.SS "def live_graph\&.PStatLiveGraph\&.init_plots ( config)"
+
+.PP
+.nf
+Sets plots based on the `config` dictionary.
+
+.fi
+.PP
+ 
+.SS "def live_graph\&.PStatLiveGraph\&.screen_size_calc ( final_row,  final_col)"
+
+.PP
+.nf
+Returns screen resolution based on number of plots.
+
+.fi
+.PP
+ 
+.SS "def live_graph\&.PStatLiveGraph\&.update_dashboard ( self,  update_id = \fC0\fP,  update_time = \fC0\fP,  current_time = \fC0\fP)"
+
+.PP
+.nf
+Updates the plot dashboard with the passed values.
+
+.fi
+.PP
+ 
+.SH "Member Data Documentation"
+.PP 
+.SS "live_graph\&.PStatLiveGraph\&.app"
+
+.SS "live_graph\&.PStatLiveGraph\&.dashboard"
+
+.SS "live_graph\&.PStatLiveGraph\&.window"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator and Photon Statistics from the source code\&.

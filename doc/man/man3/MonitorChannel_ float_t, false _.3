@@ -1,0 +1,52 @@
+.TH "MonitorChannel< float_t, false >" 3 "Sat Oct 9 2021" "Version 1.0" "DIY Auto-Correlator and Photon Statistics" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MonitorChannel< float_t, false >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <monitor_channel\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBpush_back\fP () __attribute__((always_inline))"
+.br
+.ti -1c
+.RI "float_t \fBmean\fP () const __attribute__((always_inline))"
+.br
+.ti -1c
+.RI "float_t \fBaccumulate\fP () const __attribute__((always_inline))"
+.br
+.RI "Returns the accumulate so far, which is the same as 'Count`\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBCount\fP = 0"
+.br
+.RI "Count of the received values (Initialized to prevent DivideByZero error) "
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "float_t \fBMonitorChannel\fP< float_t, false >::accumulate () const\fC [inline]\fP"
+
+.PP
+Returns the accumulate so far, which is the same as 'Count`\&. 
+.SS "float_t \fBMonitorChannel\fP< float_t, false >::mean () const\fC [inline]\fP"
+Returns a mean value of 1\&.0\&. 
+.SS "void \fBMonitorChannel\fP< float_t, false >::push_back ()\fC [inline]\fP"
+Increments the \fCCount\fP\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "uint32_t \fBMonitorChannel\fP< float_t, false >::Count = 0"
+
+.PP
+Count of the received values (Initialized to prevent DivideByZero error) 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator and Photon Statistics from the source code\&.

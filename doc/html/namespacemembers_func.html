@@ -5,13 +5,19 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>DIY Auto-Correlator: Namespace Members</title>
+<title>DIY Auto-Correlator and Photon Statistics: Namespace Members</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -21,7 +27,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">DIY Auto-Correlator
+   <div id="projectname">DIY Auto-Correlator and Photon Statistics
    &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">Auto-Correlator Card implementation using Teensy 4.x microcontrollers.</div>
@@ -61,47 +67,62 @@ $(function() {
 
 <div class="contents">
 &#160;<ul>
-<li>after_upload_action()
-: <a class="el" href="namespacepre__build__actions.html#ad170ea3bcfc9770de7ae33943d181a4f">pre_build_actions</a>
-</li>
-<li>Auto_MultiTau_Input_Validator()
-: <a class="el" href="namespaceErrors.html#a7010d07de8236f9a17b302c78f37483e">Errors</a>
+<li>bin_ratio_scale()
+: <a class="el" href="d4/dba/namespacemultitau.html#a40d600d74abad18e71cccd90988a5cd7">multitau</a>
 </li>
 <li>channel_size()
-: <a class="el" href="namespacemultitau.html#a1022c52950a892396ac45e7de5379e12">multitau</a>
+: <a class="el" href="d4/dba/namespacemultitau.html#a1022c52950a892396ac45e7de5379e12">multitau</a>
+</li>
+<li>config_validation()
+: <a class="el" href="d6/d7f/namespaceconfig.html#a4097152d333d323cef0159878ff205fc">config</a>
+</li>
+<li>fill_missing_in_config_file()
+: <a class="el" href="d6/d7f/namespaceconfig.html#ac7ad14f68cd9aec9e9b9d3cf08b3db07">config</a>
 </li>
 <li>generate_config_file()
-: <a class="el" href="namespaceconfig.html#a8e5e09166a67c11eb868143f4e85607f">config</a>
+: <a class="el" href="d6/d7f/namespaceconfig.html#a8e5e09166a67c11eb868143f4e85607f">config</a>
+</li>
+<li>LiveGraph()
+: <a class="el" href="d9/d04/namespacelivegraph.html#aee36bd101e4ca90cf4635c2c7f3da10e">livegraph</a>
+</li>
+<li>periodic_callback_fn()
+: <a class="el" href="da/d66/namespacephoton__statistics.html#a3d8a4bcc1566dd71aab0925749e1416f">photon_statistics</a>
+</li>
+<li>periodic_callbacks()
+: <a class="el" href="d2/d96/namespaceutilities.html#a35dce39ce5efc1ca1a29b30ffc373bd0">utilities</a>
 </li>
 <li>points_norm()
-: <a class="el" href="namespacemultitau.html#a89bb2627a88498b04ebd436250310d71">multitau</a>
+: <a class="el" href="d4/dba/namespacemultitau.html#a89bb2627a88498b04ebd436250310d71">multitau</a>
 </li>
-<li>points_norm_template()
-: <a class="el" href="namespacemultitau.html#a6a712a94c13f6c08874ea710fc698ff7">multitau</a>
-</li>
-<li>Precison_Threshold()
-: <a class="el" href="namespaceErrors.html#a13171d3d324164c9f7a9508d5a16b0c5">Errors</a>
+<li>points_scale_template()
+: <a class="el" href="d4/dba/namespacemultitau.html#a265372a8ef814094424e2d787eb6304f">multitau</a>
 </li>
 <li>PseudoConsole()
-: <a class="el" href="namespaceutilities.html#a85150e8e264f76b149785770210a7f1a">utilities</a>
+: <a class="el" href="d2/d96/namespaceutilities.html#a85150e8e264f76b149785770210a7f1a">utilities</a>
+</li>
+<li>StructRepresentation()
+: <a class="el" href="d2/d96/namespaceutilities.html#aa2added918da29f1fa28d3ea24d570d9">utilities</a>
+</li>
+<li>tau_max()
+: <a class="el" href="d4/dba/namespacemultitau.html#a9516fc9217f79f4dc1c4f2dfb28c9b7a">multitau</a>
+</li>
+<li>time_axis_s()
+: <a class="el" href="d4/dba/namespacemultitau.html#aa907c1cffb653422b45f46332192b2a4">multitau</a>
 </li>
 <li>update_fn()
-: <a class="el" href="namespacepost__upload__actions.html#ae4fafb438c9b8b9c81fadfd36e414dbe">post_upload_actions</a>
+: <a class="el" href="da/d66/namespacephoton__statistics.html#ad67c22ae3d8b73d690282b77915fa984">photon_statistics</a>
 </li>
-<li>Validate()
-: <a class="el" href="namespaceErrors.html#a1fcd582e2074f8fad3a450d1b6b42aaa">Errors</a>
-</li>
-<li>validate_config_file()
-: <a class="el" href="namespaceconfig.html#ab97d69eb9e4097d1e43e248b73676d6a">config</a>
+<li>WelcomeText()
+: <a class="el" href="d2/d96/namespaceutilities.html#a7c64a494f834c091373f2bb148dc2e8c">utilities</a>
 </li>
 <li>x_tics()
-: <a class="el" href="namespacemultitau.html#a775aea685fe55a6707400660fadf9c35">multitau</a>
+: <a class="el" href="d4/dba/namespacemultitau.html#a775aea685fe55a6707400660fadf9c35">multitau</a>
 </li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Oct 14 2021 11:21:55 for DIY Auto-Correlator and Photon Statistics by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

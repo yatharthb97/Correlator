@@ -1,0 +1,112 @@
+.TH "RTCoarseGrainer" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator and Photon Statistics" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RTCoarseGrainer \- An object that can accumulate data into a fixed size bin before changing its output value\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <monitor_channel\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBRTCoarseGrainer\fP (float coarsing_interval, float minimum_resolution)"
+.br
+.RI "Constructor that accepts a \fCcoarsening_interval\fP and the \fCminimum_resolution\fP of data and assumes the coarse graining factor (\fCCGFactor\fP) as the \fCcoarsening_interval\fP divide by \fCminimum_resolution\fP\&. "
+.ti -1c
+.RI "constexpr \fBRTCoarseGrainer\fP (float coarsing_interval)"
+.br
+.RI "Constructor that accepts a \fCcoarsening_interval\fP and the \fCminimum_resolution\fP of data and assumes the coarse graining factor (\fCCGFactor\fP) as the \fCcoarsening_interval\fP divide by \fCminimum_resolution\fP\&. "
+.ti -1c
+.RI "template<typename DataType > void \fBpush_back\fP (const DataType datum)"
+.br
+.RI "Updates the \fC\fBRTCoarseGrainer\fP\fP object with the passed datum\&. "
+.ti -1c
+.RI "float \fBoutput\fP () const"
+.br
+.RI "Returns the last available coarse-grained value\&. "
+.ti -1c
+.RI "float \fBerror\fP () const"
+.br
+.RI "Returns the discretization error\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "float \fBAccumulate\fP = 0\&.0"
+.br
+.RI "Accumulate of the data\&. "
+.ti -1c
+.RI "float \fBOut\fP = 0\&.0"
+.br
+.RI "Last Ready Coarse Grained Value\&. "
+.ti -1c
+.RI "uint32_t \fBUpdateCntr\fP = 0"
+.br
+.RI "Local counter that keep tracks of the updates made\&. "
+.ti -1c
+.RI "const uint32_t \fBCGFactor\fP"
+.br
+.RI "Number of points that are coarse-grained together\&. "
+.ti -1c
+.RI "float \fBError\fP = 0\&.0"
+.br
+.RI "Error in the coarsening interval due to discretization\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+An object that can accumulate data into a fixed size bin before changing its output value\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "constexpr RTCoarseGrainer::RTCoarseGrainer (float coarsing_interval, float minimum_resolution)\fC [inline]\fP"
+
+.PP
+Constructor that accepts a \fCcoarsening_interval\fP and the \fCminimum_resolution\fP of data and assumes the coarse graining factor (\fCCGFactor\fP) as the \fCcoarsening_interval\fP divide by \fCminimum_resolution\fP\&. 
+.SS "constexpr RTCoarseGrainer::RTCoarseGrainer (float coarsing_interval)\fC [inline]\fP"
+
+.PP
+Constructor that accepts a \fCcoarsening_interval\fP and the \fCminimum_resolution\fP of data and assumes the coarse graining factor (\fCCGFactor\fP) as the \fCcoarsening_interval\fP divide by \fCminimum_resolution\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "float RTCoarseGrainer::error () const\fC [inline]\fP"
+
+.PP
+Returns the discretization error\&. 
+.SS "float RTCoarseGrainer::output () const\fC [inline]\fP"
+
+.PP
+Returns the last available coarse-grained value\&. 
+.SS "template<typename DataType > void RTCoarseGrainer::push_back (const DataType datum)\fC [inline]\fP"
+
+.PP
+Updates the \fC\fBRTCoarseGrainer\fP\fP object with the passed datum\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "float RTCoarseGrainer::Accumulate = 0\&.0"
+
+.PP
+Accumulate of the data\&. 
+.SS "const uint32_t RTCoarseGrainer::CGFactor"
+
+.PP
+Number of points that are coarse-grained together\&. 
+.SS "float RTCoarseGrainer::Error = 0\&.0"
+
+.PP
+Error in the coarsening interval due to discretization\&. 
+.SS "float RTCoarseGrainer::Out = 0\&.0"
+
+.PP
+Last Ready Coarse Grained Value\&. 
+.SS "uint32_t RTCoarseGrainer::UpdateCntr = 0"
+
+.PP
+Local counter that keep tracks of the updates made\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator and Photon Statistics from the source code\&.

@@ -1,0 +1,101 @@
+.TH "InterArrivalTime< CounterType, CPUTickType >" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator and Photon Statistics" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+InterArrivalTime< CounterType, CPUTickType >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <interarrival\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBInterArrivalTime\fP (const CounterType *cntr_location)"
+.br
+.RI "Constructor that accepts the counter location, that it frequently samples\&. It only accepts \fCunsigned int\fP types\&. "
+.ti -1c
+.RI "void \fBmeasure\fP () __attribute__((flatten))"
+.br
+.RI "Measures the difference between two \fIobservable\fP counts\&. If the mean is closer to 1, the pulse inter-arrival time will be implemented later using the CPU cycle count\&. "
+.ti -1c
+.RI "void \fBoutput\fP () __attribute__((always_inline))"
+.br
+.RI "Outputs the calculated statistics as a binary struct\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "CounterType * \fBCntr\fP"
+.br
+.RI "Saves the address of the counter location\&. "
+.ti -1c
+.RI "CounterType \fBCountDiff\fP = 0"
+.br
+.RI "The difference between the arrival time of last two photons\&. "
+.ti -1c
+.RI "CounterType \fBLastCntr\fP = 0"
+.br
+.RI "Last Counter value recorded\&. "
+.ti -1c
+.RI "CounterType \fBNow\fP = 0"
+.br
+.RI "Current Counter value storage\&. "
+.ti -1c
+.RI "\fBMonitorChannel\fP< true > \fBMean\fP"
+.br
+.RI "Mean Inter-arrival time\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "CounterType \fBget_counter\fP () __attribute__((always_inline))"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename CounterType , typename CPUTickType > constexpr \fBInterArrivalTime\fP< CounterType, CPUTickType >::\fBInterArrivalTime\fP (const CounterType * cntr_location)\fC [inline]\fP"
+
+.PP
+Constructor that accepts the counter location, that it frequently samples\&. It only accepts \fCunsigned int\fP types\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename CounterType , typename CPUTickType > CounterType \fBInterArrivalTime\fP< CounterType, CPUTickType >::get_counter ()\fC [inline]\fP, \fC [private]\fP"
+
+.SS "template<typename CounterType , typename CPUTickType > void \fBInterArrivalTime\fP< CounterType, CPUTickType >::measure ()\fC [inline]\fP"
+
+.PP
+Measures the difference between two \fIobservable\fP counts\&. If the mean is closer to 1, the pulse inter-arrival time will be implemented later using the CPU cycle count\&. 
+.SS "template<typename CounterType , typename CPUTickType > void \fBInterArrivalTime\fP< CounterType, CPUTickType >::output ()\fC [inline]\fP"
+
+.PP
+Outputs the calculated statistics as a binary struct\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "template<typename CounterType , typename CPUTickType > CounterType* \fBInterArrivalTime\fP< CounterType, CPUTickType >::Cntr"
+
+.PP
+Saves the address of the counter location\&. 
+.SS "template<typename CounterType , typename CPUTickType > CounterType \fBInterArrivalTime\fP< CounterType, CPUTickType >::CountDiff = 0"
+
+.PP
+The difference between the arrival time of last two photons\&. 
+.SS "template<typename CounterType , typename CPUTickType > CounterType \fBInterArrivalTime\fP< CounterType, CPUTickType >::LastCntr = 0"
+
+.PP
+Last Counter value recorded\&. 
+.SS "template<typename CounterType , typename CPUTickType > \fBMonitorChannel\fP<true> \fBInterArrivalTime\fP< CounterType, CPUTickType >::Mean"
+
+.PP
+Mean Inter-arrival time\&. 
+.SS "template<typename CounterType , typename CPUTickType > CounterType \fBInterArrivalTime\fP< CounterType, CPUTickType >::Now = 0"
+
+.PP
+Current Counter value storage\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator and Photon Statistics from the source code\&.

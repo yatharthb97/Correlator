@@ -1,0 +1,119 @@
+.TH "MultiTauACorrRTTeensy< Lin_channels, Series_size, Bin_Ratio >" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator and Photon Statistics" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MultiTauACorrRTTeensy< Lin_channels, Series_size, Bin_Ratio > \- MultiTau Auto-Correlator object that is composed of multiple linear - autocorrelators\&. Specialised for teensy\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <multi_tau\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMultiTauACorrRTTeensy\fP ()"
+.br
+.RI "Counts the total number of data points sent to the counter\&. "
+.ti -1c
+.RI "void \fBpush_datum\fP (\fBcounter_t\fP datum) __attribute__((flatten))"
+.br
+.RI "Pushes the datum to each of the Linear Correlators through the \fBAccumulator\fP adapter\&. "
+.ti -1c
+.RI "void \fBpush_data\fP (const \fBcounter_t\fP *container, const \fBindex_t\fP size) __attribute__((flatten))"
+.br
+.RI "Repeatedly calls the MultiTau_ACorr_RT::push_datum() on the given container of counter values\&. "
+.ti -1c
+.RI "void \fBch_out\fP () const __attribute__((flatten))"
+.br
+.RI "Outputs the Linear Correlator channels through the discarder adapter\&. "
+.ti -1c
+.RI "\fBindex_t\fP \fBtime_scaling_factor\fP () const __attribute__((always_inline))"
+.br
+.ti -1c
+.RI "\fBindex_t\fP \fBtau_scaling_scheme\fP (unsigned int s) const __attribute__((always_inline))"
+.br
+.RI "Returns the relavent Tau scaling factor, based on the specialised scheme\&. It is used by the accumulator objects to set the BufferPoints attribute\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBMonitorChannel\fP< true > \fBMeanMonitor\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDataCounter\fP = 0"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBAccumulator\fP \fBAccumulators\fP [Lin_channels]"
+.br
+.RI "\fBAccumulator\fP Objects for each channel (\fBAccumulator\fP '0' is redundant\&.) "
+.ti -1c
+.RI "\fBLinACorrRTTeensy\fP< Series_size, false > \fBLin_Corrs\fP [Lin_channels]"
+.br
+.RI "Linear ACorrelators\&. "
+.ti -1c
+.RI "\fBDiscarderTeensy\fP< Series_size, int(Series_size/Bin_Ratio), 0 > \fBDiscarder\fP"
+.br
+.RI "Discarder that discards first #Bin_Ratio points\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Ratio>
+.br
+class MultiTauACorrRTTeensy< Lin_channels, Series_size, Bin_Ratio >"
+MultiTau Auto-Correlator object that is composed of multiple linear - autocorrelators\&. Specialised for teensy\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Ratio> \fBMultiTauACorrRTTeensy\fP< Lin_channels, Series_size, Bin_Ratio >::\fBMultiTauACorrRTTeensy\fP ()\fC [inline]\fP"
+
+.PP
+Counts the total number of data points sent to the counter\&. Default Contructor - Initalizes the BufferPoints attribute in the correlators\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Ratio> void \fBMultiTauACorrRTTeensy\fP< Lin_channels, Series_size, Bin_Ratio >::ch_out () const\fC [inline]\fP"
+
+.PP
+Outputs the Linear Correlator channels through the discarder adapter\&. 
+.SS "template<unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Ratio> void \fBMultiTauACorrRTTeensy\fP< Lin_channels, Series_size, Bin_Ratio >::push_data (const \fBcounter_t\fP * container, const \fBindex_t\fP size)\fC [inline]\fP"
+
+.PP
+Repeatedly calls the MultiTau_ACorr_RT::push_datum() on the given container of counter values\&. 
+.SS "template<unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Ratio> void \fBMultiTauACorrRTTeensy\fP< Lin_channels, Series_size, Bin_Ratio >::push_datum (\fBcounter_t\fP datum)\fC [inline]\fP"
+
+.PP
+Pushes the datum to each of the Linear Correlators through the \fBAccumulator\fP adapter\&. 
+.SS "template<unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Ratio> \fBindex_t\fP \fBMultiTauACorrRTTeensy\fP< Lin_channels, Series_size, Bin_Ratio >::tau_scaling_scheme (unsigned int s) const\fC [inline]\fP"
+
+.PP
+Returns the relavent Tau scaling factor, based on the specialised scheme\&. It is used by the accumulator objects to set the BufferPoints attribute\&. 
+.SS "template<unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Ratio> \fBindex_t\fP \fBMultiTauACorrRTTeensy\fP< Lin_channels, Series_size, Bin_Ratio >::time_scaling_factor () const\fC [inline]\fP"
+Returns the number of data points after which, the timescale is scaled according to the MultiTau_ACorr_RT::tau_scaling_scheme()\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "template<unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Ratio> \fBAccumulator\fP \fBMultiTauACorrRTTeensy\fP< Lin_channels, Series_size, Bin_Ratio >::Accumulators[Lin_channels]\fC [private]\fP"
+
+.PP
+\fBAccumulator\fP Objects for each channel (\fBAccumulator\fP '0' is redundant\&.) 
+.SS "template<unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Ratio> uint32_t \fBMultiTauACorrRTTeensy\fP< Lin_channels, Series_size, Bin_Ratio >::DataCounter = 0"
+
+.SS "template<unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Ratio> \fBDiscarderTeensy\fP<Series_size, int(Series_size/Bin_Ratio), 0> \fBMultiTauACorrRTTeensy\fP< Lin_channels, Series_size, Bin_Ratio >::Discarder\fC [private]\fP"
+
+.PP
+Discarder that discards first #Bin_Ratio points\&. 
+.SS "template<unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Ratio> \fBLinACorrRTTeensy\fP<Series_size, false> \fBMultiTauACorrRTTeensy\fP< Lin_channels, Series_size, Bin_Ratio >::Lin_Corrs[Lin_channels]\fC [private]\fP"
+
+.PP
+Linear ACorrelators\&. 
+.SS "template<unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Ratio> \fBMonitorChannel\fP<true> \fBMultiTauACorrRTTeensy\fP< Lin_channels, Series_size, Bin_Ratio >::MeanMonitor"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator and Photon Statistics from the source code\&.

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['x_5ftics',['x_tics',['../namespacemultitau.html#a775aea685fe55a6707400660fadf9c35',1,'multitau']]],
-  ['xbar_5fconnect',['xbar_connect',['../utilities_8hpp.html#aceb15fdf783b1e9be1ef0d0fff5b5907',1,'utilities.hpp']]]
+  ['validate',['Validate',['../dc/d9a/classErrors.html#a9e43e14a2d0834f192b954cce71c387b',1,'Errors']]],
+  ['var_5festimator',['var_estimator',['../d9/d4d/classstatmethods_1_1StatMethods.html#ae9dd94cc0586ae5ea83ac6cf4a81cb69',1,'statmethods::StatMethods']]]
 ];

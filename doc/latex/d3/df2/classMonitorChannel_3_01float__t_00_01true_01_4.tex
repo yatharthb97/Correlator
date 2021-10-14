@@ -1,0 +1,112 @@
+\hypertarget{classMonitorChannel_3_01float__t_00_01true_01_4}{}\section{Monitor\+Channel$<$ float\+\_\+t, true $>$ Class Template Reference}
+\label{classMonitorChannel_3_01float__t_00_01true_01_4}\index{Monitor\+Channel$<$ float\+\_\+t, true $>$@{Monitor\+Channel$<$ float\+\_\+t, true $>$}}
+
+
+Template specialization.  
+
+
+
+
+{\ttfamily \#include $<$monitor\+\_\+channel.\+hpp$>$}
+
+
+
+Collaboration diagram for Monitor\+Channel$<$ float\+\_\+t, true $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{d1/d6e/classMonitorChannel_3_01float__t_00_01true_01_4__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Data\+Type $>$ }\\void \hyperlink{classMonitorChannel_3_01float__t_00_01true_01_4_a7cbf938f25adc1827fac9efc88e42c90}{push\+\_\+back} (Data\+Type data)
+\begin{DoxyCompactList}\small\item\em Adds datum to the channel. \end{DoxyCompactList}\item 
+float\+\_\+t \hyperlink{classMonitorChannel_3_01float__t_00_01true_01_4_adcd78d97979f01547d020df57de1228c}{mean} () const \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
+\begin{DoxyCompactList}\small\item\em Returns the estimated mean. \end{DoxyCompactList}\item 
+float\+\_\+t \hyperlink{classMonitorChannel_3_01float__t_00_01true_01_4_a980a02eba695a4fa8058115c61b08d78}{accumulate} () const \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
+\begin{DoxyCompactList}\small\item\em Returns the {\ttfamily Accumulate} so far. \end{DoxyCompactList}\item 
+void \hyperlink{classMonitorChannel_3_01float__t_00_01true_01_4_ad3fb6db48e2c334db6230e2062aaa654}{reset} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float\+\_\+t \hyperlink{classMonitorChannel_3_01float__t_00_01true_01_4_ade309c9281e672ec50a1f515d7aee499}{Accumulate} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Sum of the received values. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{classMonitorChannel_3_01float__t_00_01true_01_4_ad62fe4fb25e1877eb23333448ad101d2}{Count} = 0
+\begin{DoxyCompactList}\small\item\em Count of the received values (Initialized to prevent Divide\+By\+Zero error) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$$>$\newline
+class Monitor\+Channel$<$ float\+\_\+t, true $>$}
+
+Template specialization. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMonitorChannel_3_01float__t_00_01true_01_4_a980a02eba695a4fa8058115c61b08d78}\label{classMonitorChannel_3_01float__t_00_01true_01_4_a980a02eba695a4fa8058115c61b08d78}} 
+\index{Monitor\+Channel$<$ float\+\_\+t, true $>$@{Monitor\+Channel$<$ float\+\_\+t, true $>$}!accumulate@{accumulate}}
+\index{accumulate@{accumulate}!Monitor\+Channel$<$ float\+\_\+t, true $>$@{Monitor\+Channel$<$ float\+\_\+t, true $>$}}
+\subsubsection{\texorpdfstring{accumulate()}{accumulate()}}
+{\footnotesize\ttfamily float\+\_\+t \hyperlink{classMonitorChannel}{Monitor\+Channel}$<$ float\+\_\+t, true $>$\+::accumulate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the {\ttfamily Accumulate} so far. 
+
+\mbox{\Hypertarget{classMonitorChannel_3_01float__t_00_01true_01_4_adcd78d97979f01547d020df57de1228c}\label{classMonitorChannel_3_01float__t_00_01true_01_4_adcd78d97979f01547d020df57de1228c}} 
+\index{Monitor\+Channel$<$ float\+\_\+t, true $>$@{Monitor\+Channel$<$ float\+\_\+t, true $>$}!mean@{mean}}
+\index{mean@{mean}!Monitor\+Channel$<$ float\+\_\+t, true $>$@{Monitor\+Channel$<$ float\+\_\+t, true $>$}}
+\subsubsection{\texorpdfstring{mean()}{mean()}}
+{\footnotesize\ttfamily float\+\_\+t \hyperlink{classMonitorChannel}{Monitor\+Channel}$<$ float\+\_\+t, true $>$\+::mean (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the estimated mean. 
+
+\mbox{\Hypertarget{classMonitorChannel_3_01float__t_00_01true_01_4_a7cbf938f25adc1827fac9efc88e42c90}\label{classMonitorChannel_3_01float__t_00_01true_01_4_a7cbf938f25adc1827fac9efc88e42c90}} 
+\index{Monitor\+Channel$<$ float\+\_\+t, true $>$@{Monitor\+Channel$<$ float\+\_\+t, true $>$}!push\+\_\+back@{push\+\_\+back}}
+\index{push\+\_\+back@{push\+\_\+back}!Monitor\+Channel$<$ float\+\_\+t, true $>$@{Monitor\+Channel$<$ float\+\_\+t, true $>$}}
+\subsubsection{\texorpdfstring{push\+\_\+back()}{push\_back()}}
+{\footnotesize\ttfamily template$<$typename Data\+Type $>$ \\
+void \hyperlink{classMonitorChannel}{Monitor\+Channel}$<$ float\+\_\+t, true $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{Data\+Type}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds datum to the channel. 
+
+\mbox{\Hypertarget{classMonitorChannel_3_01float__t_00_01true_01_4_ad3fb6db48e2c334db6230e2062aaa654}\label{classMonitorChannel_3_01float__t_00_01true_01_4_ad3fb6db48e2c334db6230e2062aaa654}} 
+\index{Monitor\+Channel$<$ float\+\_\+t, true $>$@{Monitor\+Channel$<$ float\+\_\+t, true $>$}!reset@{reset}}
+\index{reset@{reset}!Monitor\+Channel$<$ float\+\_\+t, true $>$@{Monitor\+Channel$<$ float\+\_\+t, true $>$}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void \hyperlink{classMonitorChannel}{Monitor\+Channel}$<$ float\+\_\+t, true $>$\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classMonitorChannel_3_01float__t_00_01true_01_4_ade309c9281e672ec50a1f515d7aee499}\label{classMonitorChannel_3_01float__t_00_01true_01_4_ade309c9281e672ec50a1f515d7aee499}} 
+\index{Monitor\+Channel$<$ float\+\_\+t, true $>$@{Monitor\+Channel$<$ float\+\_\+t, true $>$}!Accumulate@{Accumulate}}
+\index{Accumulate@{Accumulate}!Monitor\+Channel$<$ float\+\_\+t, true $>$@{Monitor\+Channel$<$ float\+\_\+t, true $>$}}
+\subsubsection{\texorpdfstring{Accumulate}{Accumulate}}
+{\footnotesize\ttfamily float\+\_\+t \hyperlink{classMonitorChannel}{Monitor\+Channel}$<$ float\+\_\+t, true $>$\+::Accumulate = 0.\+0}
+
+
+
+Sum of the received values. 
+
+\mbox{\Hypertarget{classMonitorChannel_3_01float__t_00_01true_01_4_ad62fe4fb25e1877eb23333448ad101d2}\label{classMonitorChannel_3_01float__t_00_01true_01_4_ad62fe4fb25e1877eb23333448ad101d2}} 
+\index{Monitor\+Channel$<$ float\+\_\+t, true $>$@{Monitor\+Channel$<$ float\+\_\+t, true $>$}!Count@{Count}}
+\index{Count@{Count}!Monitor\+Channel$<$ float\+\_\+t, true $>$@{Monitor\+Channel$<$ float\+\_\+t, true $>$}}
+\subsubsection{\texorpdfstring{Count}{Count}}
+{\footnotesize\ttfamily uint32\+\_\+t \hyperlink{classMonitorChannel}{Monitor\+Channel}$<$ float\+\_\+t, true $>$\+::Count = 0}
+
+
+
+Count of the received values (Initialized to prevent Divide\+By\+Zero error) 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/software/\hyperlink{monitor__channel_8hpp}{monitor\+\_\+channel.\+hpp}\end{DoxyCompactItemize}

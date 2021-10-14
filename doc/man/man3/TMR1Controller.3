@@ -1,4 +1,4 @@
-.TH "TMR1Controller" 3 "Fri Sep 17 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "TMR1Controller" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator and Photon Statistics" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,7 +15,7 @@ TMR1Controller \- Templated interface for Quad Timer 1 channels for Gate Countin
 .ti -1c
 .RI "\fBTMR1Controller\fP ()"
 .br
-.RI "Singleton template\&. "
+.RI "Default Constructor that assers if the user constructed object with a valid \fITMR1_CONTROLLER_CH\fP, and asserts a singleton template\&. "
 .ti -1c
 .RI "void \fBstart\fP () __attribute__((\fBalways_inline\fP))"
 .br
@@ -91,6 +91,7 @@ TMR1Controller \- Templated interface for Quad Timer 1 channels for Gate Countin
 .ti -1c
 .RI "static constexpr bool \fBSingleton_flag\fP = false"
 .br
+.RI "Singleton template\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -100,7 +101,7 @@ Templated interface for Quad Timer 1 channels for Gate Counting\&. The module us
 .SS "TMR1Controller::TMR1Controller ()\fC [inline]\fP"
 
 .PP
-Singleton template\&. Default Constructor that assers if the user constructed object with a valid \fITMR1_CONTROLLER_CH\fP, and asserts a singleton template\&. 
+Default Constructor that assers if the user constructed object with a valid \fITMR1_CONTROLLER_CH\fP, and asserts a singleton template\&. 
 .SH "Member Function Documentation"
 .PP 
 .SS "void TMR1Controller::clear_input_edge_flag ()\fC [inline]\fP"
@@ -196,7 +197,9 @@ This setting applies to all the channels of the Timer 1 group\&.
 .fi
 .SS "constexpr bool TMR1Controller::Singleton_flag = false\fC [static]\fP, \fC [private]\fP"
 
+.PP
+Singleton template\&. 
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for DIY Auto-Correlator from the source code\&.
+Generated automatically by Doxygen for DIY Auto-Correlator and Photon Statistics from the source code\&.

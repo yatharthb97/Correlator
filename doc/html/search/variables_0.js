@@ -1,11 +1,12 @@
 var searchData=
 [
-  ['accumulate',['Accumulate',['../classAccumulator.html#a5b21e86275e8a4fb3223ddbd3d9d09fc',1,'Accumulator']]],
-  ['accumulators',['Accumulators',['../classMultiTau__ACorr__RT__Teensy.html#a1ad4057e0ab46e2919bfee2ba619113b',1,'MultiTau_ACorr_RT_Teensy']]],
-  ['actual_5fperiod',['Actual_period',['../classPITController.html#a549601e7c66941d7872a6e7d38ed9563',1,'PITController']]],
-  ['allowed_5fperiod_5ferror_5fus',['Allowed_period_error_us',['../main_8cpp.html#ada17f1639ca8a5932f17942031baa67f',1,'main.cpp']]],
-  ['always_5finline',['always_inline',['../classTMR1Controller.html#adce8e8a496510485a88ccc5b88595672',1,'TMR1Controller']]],
-  ['antialias',['antialias',['../namespacepost__upload__actions.html#a794b55b7fa3378176059f54fbf9b3b51',1,'post_upload_actions']]],
-  ['app',['app',['../namespacepost__upload__actions.html#aa34f3f575b899b8e81ca18407b45eef7',1,'post_upload_actions']]],
-  ['array',['array',['../main_8cpp.html#a28accc555688fa589a8d5848f17938ef',1,'main.cpp']]]
+  ['accumulate',['Accumulate',['../d6/d4e/classAccumulator.html#a8e615af8b85dd2c8500d1f8c473879ab',1,'Accumulator::Accumulate()'],['../d8/d25/classMonitorChannel_3_01true_01_4.html#a8453948b697c84ac31a0d3d6305e7e9a',1,'MonitorChannel&lt; true &gt;::Accumulate()'],['../d1/d05/classRTCoarseGrainer.html#a7912b13e79da3e88b1ea1c4067be7e08',1,'RTCoarseGrainer::Accumulate()']]],
+  ['accumulators',['Accumulators',['../db/d02/classMultiTauACorrRTTeensy.html#aac3d87dfb6b995e83e20f444d3d5eb0d',1,'MultiTauACorrRTTeensy']]],
+  ['acffile',['acffile',['../da/d66/namespacephoton__statistics.html#ad37c8420c6a43ec4997809c4c236b145',1,'photon_statistics']]],
+  ['actual_5fperiod',['Actual_period',['../d8/d03/classPITController.html#a549601e7c66941d7872a6e7d38ed9563',1,'PITController']]],
+  ['allowed_5fperiod_5ferror_5fus',['Allowed_period_error_us',['../db/d7d/global_8cpp.html#ada17f1639ca8a5932f17942031baa67f',1,'Allowed_period_error_us():&#160;global.cpp'],['../d9/d3a/global_8hpp.html#ada17f1639ca8a5932f17942031baa67f',1,'Allowed_period_error_us():&#160;global.cpp']]],
+  ['always_5finline',['always_inline',['../d8/dc6/classTMR1Controller.html#adce8e8a496510485a88ccc5b88595672',1,'TMR1Controller']]],
+  ['app',['app',['../de/d71/classlive__graph_1_1PStatLiveGraph.html#ad6b3c5024c9472884e04570fd1890f17',1,'live_graph::PStatLiveGraph']]],
+  ['array',['array',['../db/d7d/global_8cpp.html#ac6c0b94aa91631e1cf6f4f55e97c52b2',1,'array():&#160;global.cpp'],['../d9/d3a/global_8hpp.html#ac6c0b94aa91631e1cf6f4f55e97c52b2',1,'array():&#160;global.cpp']]],
+  ['available_5fmodes',['available_modes',['../d2/d9c/classnormalizer_1_1Normalizer.html#a0fe7ba5c6b5ba3df8578d7edf8bd3ade',1,'normalizer::Normalizer']]]
 ];

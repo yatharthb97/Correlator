@@ -1,0 +1,79 @@
+.TH "MonitorChannel< float_t, true >" 3 "Sat Oct 9 2021" "Version 1.0" "DIY Auto-Correlator and Photon Statistics" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MonitorChannel< float_t, true > \- Template specialization\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <monitor_channel\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename DataType > void \fBpush_back\fP (DataType data)"
+.br
+.RI "Adds datum to the channel\&. "
+.ti -1c
+.RI "float_t \fBmean\fP () const __attribute__((always_inline))"
+.br
+.RI "Returns the estimated mean\&. "
+.ti -1c
+.RI "float_t \fBaccumulate\fP () const __attribute__((always_inline))"
+.br
+.RI "Returns the \fCAccumulate\fP so far\&. "
+.ti -1c
+.RI "void \fBreset\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "float_t \fBAccumulate\fP = 0\&.0"
+.br
+.RI "Sum of the received values\&. "
+.ti -1c
+.RI "uint32_t \fBCount\fP = 0"
+.br
+.RI "Count of the received values (Initialized to prevent DivideByZero error) "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<>
+.br
+class MonitorChannel< float_t, true >"
+Template specialization\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "float_t \fBMonitorChannel\fP< float_t, true >::accumulate () const\fC [inline]\fP"
+
+.PP
+Returns the \fCAccumulate\fP so far\&. 
+.SS "float_t \fBMonitorChannel\fP< float_t, true >::mean () const\fC [inline]\fP"
+
+.PP
+Returns the estimated mean\&. 
+.SS "template<typename DataType > void \fBMonitorChannel\fP< float_t, true >::push_back (DataType data)\fC [inline]\fP"
+
+.PP
+Adds datum to the channel\&. 
+.SS "void \fBMonitorChannel\fP< float_t, true >::reset ()\fC [inline]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "float_t \fBMonitorChannel\fP< float_t, true >::Accumulate = 0\&.0"
+
+.PP
+Sum of the received values\&. 
+.SS "uint32_t \fBMonitorChannel\fP< float_t, true >::Count = 0"
+
+.PP
+Count of the received values (Initialized to prevent DivideByZero error) 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator and Photon Statistics from the source code\&.

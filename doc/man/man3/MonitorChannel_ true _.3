@@ -1,0 +1,90 @@
+.TH "MonitorChannel< true >" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator and Photon Statistics" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MonitorChannel< true > \- Template specialization\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <monitor_channel\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename DataType > void \fBpush_back\fP (DataType data)"
+.br
+.RI "Adds datum to the channel\&. "
+.ti -1c
+.RI "float_t \fBmean\fP () const __attribute__((always_inline))"
+.br
+.RI "Returns the estimated mean\&. "
+.ti -1c
+.RI "\fBAccumulateType\fP \fBaccumulate\fP () const __attribute__((always_inline))"
+.br
+.RI "Returns the \fCAccumulate\fP so far\&. "
+.ti -1c
+.RI "void \fBreset\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "volatile \fBAccumulateType\fP \fBAccumulate\fP = 0\&.0"
+.br
+.RI "Sum of the received values\&. "
+.ti -1c
+.RI "volatile uint32_t \fBCount\fP = 0"
+.br
+.RI "Count of the received values (Initialized to prevent DivideByZero error) "
+.in -1c
+.SS "Private Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBAccumulateType\fP = float"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<>
+.br
+class MonitorChannel< true >"
+Template specialization\&. 
+.SH "Member Typedef Documentation"
+.PP 
+.SS "using \fBMonitorChannel\fP< true >::\fBAccumulateType\fP =  float\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBAccumulateType\fP \fBMonitorChannel\fP< true >::accumulate () const\fC [inline]\fP"
+
+.PP
+Returns the \fCAccumulate\fP so far\&. 
+.SS "float_t \fBMonitorChannel\fP< true >::mean () const\fC [inline]\fP"
+
+.PP
+Returns the estimated mean\&. 
+.SS "template<typename DataType > void \fBMonitorChannel\fP< true >::push_back (DataType data)\fC [inline]\fP"
+
+.PP
+Adds datum to the channel\&. 
+.SS "void \fBMonitorChannel\fP< true >::reset ()\fC [inline]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "volatile \fBAccumulateType\fP \fBMonitorChannel\fP< true >::Accumulate = 0\&.0"
+
+.PP
+Sum of the received values\&. 
+.SS "volatile uint32_t \fBMonitorChannel\fP< true >::Count = 0"
+
+.PP
+Count of the received values (Initialized to prevent DivideByZero error) 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator and Photon Statistics from the source code\&.

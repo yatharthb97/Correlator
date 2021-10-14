@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['channel_5fsize',['CHANNEL_SIZE',['../main_8cpp.html#a0ae4ccba91e13ad636bfb5099898d27d',1,'main.cpp']]]
+  ['interarrivaltime_5fminmax_5fstatistics',['INTERARRIVALTIME_MINMAX_STATISTICS',['../d3/d5e/interarrival_8hpp.html#a10bd13bb1bfb1df851899b75e175035b',1,'interarrival.hpp']]]
 ];

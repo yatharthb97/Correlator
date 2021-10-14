@@ -1,4 +1,4 @@
-.TH "src/main.cpp" 3 "Fri Sep 17 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "src/main.cpp" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator and Photon Statistics" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -6,152 +6,27 @@ src/main.cpp
 .SH SYNOPSIS
 .br
 .PP
-\fC#include <Arduino\&.h>\fP
+\fC#include 'featureline1\&.hpp'\fP
 .br
-\fC#include <imxrt\&.h>\fP
+\fC#include 'featureline2\&.hpp'\fP
 .br
-\fC#include '\&./\&.\&./code/software/multi_tau\&.hpp'\fP
-.br
-\fC#include '\&./\&.\&./code/hardware/pit\&.hpp'\fP
-.br
-\fC#include '\&./\&.\&./code/hardware/pins\&.hpp'\fP
-.br
-\fC#include '\&./\&.\&./code/hardware/qtmr1\&.hpp'\fP
-.br
-\fC#include '\&./\&.\&./code/hardware/utilities\&.hpp'\fP
-.br
-\fC#include '\&./\&.\&./code/hardware/ledpanel\&.hpp'\fP
+\fC#include 'featureline3\&.hpp'\fP
 .br
 
-.SS "Macros"
-
-.in +1c
-.ti -1c
-.RI "#define \fBCHANNEL_SIZE\fP   171"
-.br
-.RI "Gate time precision error due to finite precision of timers\&. "
-.in -1c
 .SS "Functions"
 
 .in +1c
-.ti -1c
-.RI "void \fBisr_fn\fP ()"
-.br
-.RI "ISR function used for processing counter values\&. "
-.ti -1c
-.RI "void \fBsetup\fP ()"
-.br
-.RI "Setup function for Initalization and setup\&. "
-.ti -1c
-.RI "void \fBloop\fP ()"
-.br
-.RI "Loop function that processes the updates from the counters\&. "
 .ti -1c
 .RI "int \fBmain\fP ()"
 .br
 .RI "Main Function\&. "
 .in -1c
-.SS "Variables"
-
-.in +1c
-.ti -1c
-.RI "\fBMultiTau_ACorr_RT_Teensy\fP< LIN_CORRS, SERIES_SIZE, BIN_RATIO > \fBmultitau\fP"
-.br
-.ti -1c
-.RI "\fBPITController\fP< PIT_CHANNEL_IN_USE > \fBPI_t\fP"
-.br
-.RI "PI_t Resource\&. "
-.ti -1c
-.RI "\fBTMR1Controller\fP \fBTTL_c\fP"
-.br
-.RI "TTL_c Resource\&. "
-.ti -1c
-.RI "volatile \fBcounter_t\fP \fBCounter_val\fP = 0"
-.br
-.RI "Stores the value read from the counter\&. "
-.ti -1c
-.RI "volatile bool \fBUpdate_flag\fP = false"
-.br
-.RI "Indicates if a new value has arrived from the counting module\&. "
-.ti -1c
-.RI "volatile unsigned int \fBUpdate_count\fP = 0"
-.br
-.RI "Stores the number of updates made on the correlator channels since the last serialout\&. "
-.ti -1c
-.RI "uint32_t \fBSerialOut_After\fP = 100000"
-.br
-.ti -1c
-.RI "const double \fBGate_time_us\fP = 500"
-.br
-.RI "Serial output is done after these many updates\&. "
-.ti -1c
-.RI "const double \fBAllowed_period_error_us\fP = 1"
-.br
-.RI "The gate time of TTL_C in microseconds (us) "
-.ti -1c
-.RI "int \fBarray\fP [\fBCHANNEL_SIZE\fP]"
-.br
-.in -1c
-.SH "Macro Definition Documentation"
-.PP 
-.SS "#define CHANNEL_SIZE   171"
-
-.PP
-Gate time precision error due to finite precision of timers\&. 
 .SH "Function Documentation"
 .PP 
-.SS "void isr_fn ()"
-
-.PP
-ISR function used for processing counter values\&. 
-.SS "void loop ()"
-
-.PP
-Loop function that processes the updates from the counters\&. 
 .SS "int main ()"
 
 .PP
 Main Function\&. 
-.SS "void setup ()"
-
-.PP
-Setup function for Initalization and setup\&. 
-.SH "Variable Documentation"
-.PP 
-.SS "const double Allowed_period_error_us = 1"
-
-.PP
-The gate time of TTL_C in microseconds (us) 
-.SS "int array[\fBCHANNEL_SIZE\fP]"
-
-.SS "volatile \fBcounter_t\fP Counter_val = 0"
-
-.PP
-Stores the value read from the counter\&. 
-.SS "const double Gate_time_us = 500"
-
-.PP
-Serial output is done after these many updates\&. 
-.SS "\fBMultiTau_ACorr_RT_Teensy\fP<LIN_CORRS, SERIES_SIZE, BIN_RATIO> multitau"
-
-.SS "\fBPITController\fP<PIT_CHANNEL_IN_USE> PI_t"
-
-.PP
-PI_t Resource\&. 
-.SS "uint32_t SerialOut_After = 100000"
-
-.SS "\fBTMR1Controller\fP TTL_c"
-
-.PP
-TTL_c Resource\&. 
-.SS "volatile unsigned int Update_count = 0"
-
-.PP
-Stores the number of updates made on the correlator channels since the last serialout\&. 
-.SS "volatile bool Update_flag = false"
-
-.PP
-Indicates if a new value has arrived from the counting module\&. 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for DIY Auto-Correlator from the source code\&.
+Generated automatically by Doxygen for DIY Auto-Correlator and Photon Statistics from the source code\&.
