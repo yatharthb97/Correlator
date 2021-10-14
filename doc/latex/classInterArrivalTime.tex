@@ -1,0 +1,152 @@
+\hypertarget{classInterArrivalTime}{}\section{Inter\+Arrival\+Time$<$ Counter\+Type, C\+P\+U\+Tick\+Type $>$ Class Template Reference}
+\label{classInterArrivalTime}\index{Inter\+Arrival\+Time$<$ Counter\+Type, C\+P\+U\+Tick\+Type $>$@{Inter\+Arrival\+Time$<$ Counter\+Type, C\+P\+U\+Tick\+Type $>$}}
+
+
+{\ttfamily \#include $<$interarrival.\+hpp$>$}
+
+
+
+Collaboration diagram for Inter\+Arrival\+Time$<$ Counter\+Type, C\+P\+U\+Tick\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classInterArrivalTime__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \hyperlink{classInterArrivalTime_a2b5ea12da6c38e85b7e92403abcade5f}{Inter\+Arrival\+Time} (const Counter\+Type $\ast$cntr\+\_\+location)
+\begin{DoxyCompactList}\small\item\em Constructor that accepts the counter location, that it frequently samples. It only accepts {\ttfamily unsigned int} types. \end{DoxyCompactList}\item 
+void \hyperlink{classInterArrivalTime_a2da37f684151d0cfefb97b50fcffd9a0}{measure} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((flatten))
+\begin{DoxyCompactList}\small\item\em Measures the difference between two {\itshape observable} counts. If the mean is closer to 1, the pulse inter-\/arrival time will be implemented later using the C\+PU cycle count. \end{DoxyCompactList}\item 
+void \hyperlink{classInterArrivalTime_a8a12081f1132d4a2c7a3898b01897c8d}{output} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
+\begin{DoxyCompactList}\small\item\em Outputs the calculated statistics as a binary struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Counter\+Type $\ast$ \hyperlink{classInterArrivalTime_a6873d0052064c8db918fd0a813524c6f}{Cntr}
+\begin{DoxyCompactList}\small\item\em Saves the address of the counter location. \end{DoxyCompactList}\item 
+Counter\+Type \hyperlink{classInterArrivalTime_ac73e4d6bbfc5daea67b53723ede5e9fd}{Count\+Diff} = 0
+\begin{DoxyCompactList}\small\item\em The difference between the arrival time of last two photons. \end{DoxyCompactList}\item 
+Counter\+Type \hyperlink{classInterArrivalTime_a8a24e1acb445c45b2934955fb0dcc8f5}{Last\+Cntr} = 0
+\begin{DoxyCompactList}\small\item\em Last Counter value recorded. \end{DoxyCompactList}\item 
+Counter\+Type \hyperlink{classInterArrivalTime_aa0126b0de317f9b1b7660cfe305b5779}{Now} = 0
+\begin{DoxyCompactList}\small\item\em Current Counter value storage. \end{DoxyCompactList}\item 
+\hyperlink{classMonitorChannel}{Monitor\+Channel}$<$ true $>$ \hyperlink{classInterArrivalTime_a108e8d20e7a26f7b9b6ac75c38632cd0}{Mean}
+\begin{DoxyCompactList}\small\item\em Mean Inter-\/arrival time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Counter\+Type \hyperlink{classInterArrivalTime_a64985dc80cad0a2e79718bad59ca7341}{get\+\_\+counter} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classInterArrivalTime_a2b5ea12da6c38e85b7e92403abcade5f}\label{classInterArrivalTime_a2b5ea12da6c38e85b7e92403abcade5f}} 
+\index{Inter\+Arrival\+Time@{Inter\+Arrival\+Time}!Inter\+Arrival\+Time@{Inter\+Arrival\+Time}}
+\index{Inter\+Arrival\+Time@{Inter\+Arrival\+Time}!Inter\+Arrival\+Time@{Inter\+Arrival\+Time}}
+\subsubsection{\texorpdfstring{Inter\+Arrival\+Time()}{InterArrivalTime()}}
+{\footnotesize\ttfamily template$<$typename Counter\+Type , typename C\+P\+U\+Tick\+Type $>$ \\
+constexpr \hyperlink{classInterArrivalTime}{Inter\+Arrival\+Time}$<$ Counter\+Type, C\+P\+U\+Tick\+Type $>$\+::\hyperlink{classInterArrivalTime}{Inter\+Arrival\+Time} (\begin{DoxyParamCaption}\item[{const Counter\+Type $\ast$}]{cntr\+\_\+location }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor that accepts the counter location, that it frequently samples. It only accepts {\ttfamily unsigned int} types. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classInterArrivalTime_a64985dc80cad0a2e79718bad59ca7341}\label{classInterArrivalTime_a64985dc80cad0a2e79718bad59ca7341}} 
+\index{Inter\+Arrival\+Time@{Inter\+Arrival\+Time}!get\+\_\+counter@{get\+\_\+counter}}
+\index{get\+\_\+counter@{get\+\_\+counter}!Inter\+Arrival\+Time@{Inter\+Arrival\+Time}}
+\subsubsection{\texorpdfstring{get\+\_\+counter()}{get\_counter()}}
+{\footnotesize\ttfamily template$<$typename Counter\+Type , typename C\+P\+U\+Tick\+Type $>$ \\
+Counter\+Type \hyperlink{classInterArrivalTime}{Inter\+Arrival\+Time}$<$ Counter\+Type, C\+P\+U\+Tick\+Type $>$\+::get\+\_\+counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classInterArrivalTime_a2da37f684151d0cfefb97b50fcffd9a0}\label{classInterArrivalTime_a2da37f684151d0cfefb97b50fcffd9a0}} 
+\index{Inter\+Arrival\+Time@{Inter\+Arrival\+Time}!measure@{measure}}
+\index{measure@{measure}!Inter\+Arrival\+Time@{Inter\+Arrival\+Time}}
+\subsubsection{\texorpdfstring{measure()}{measure()}}
+{\footnotesize\ttfamily template$<$typename Counter\+Type , typename C\+P\+U\+Tick\+Type $>$ \\
+void \hyperlink{classInterArrivalTime}{Inter\+Arrival\+Time}$<$ Counter\+Type, C\+P\+U\+Tick\+Type $>$\+::measure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Measures the difference between two {\itshape observable} counts. If the mean is closer to 1, the pulse inter-\/arrival time will be implemented later using the C\+PU cycle count. 
+
+\mbox{\Hypertarget{classInterArrivalTime_a8a12081f1132d4a2c7a3898b01897c8d}\label{classInterArrivalTime_a8a12081f1132d4a2c7a3898b01897c8d}} 
+\index{Inter\+Arrival\+Time@{Inter\+Arrival\+Time}!output@{output}}
+\index{output@{output}!Inter\+Arrival\+Time@{Inter\+Arrival\+Time}}
+\subsubsection{\texorpdfstring{output()}{output()}}
+{\footnotesize\ttfamily template$<$typename Counter\+Type , typename C\+P\+U\+Tick\+Type $>$ \\
+void \hyperlink{classInterArrivalTime}{Inter\+Arrival\+Time}$<$ Counter\+Type, C\+P\+U\+Tick\+Type $>$\+::output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Outputs the calculated statistics as a binary struct. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classInterArrivalTime_a6873d0052064c8db918fd0a813524c6f}\label{classInterArrivalTime_a6873d0052064c8db918fd0a813524c6f}} 
+\index{Inter\+Arrival\+Time@{Inter\+Arrival\+Time}!Cntr@{Cntr}}
+\index{Cntr@{Cntr}!Inter\+Arrival\+Time@{Inter\+Arrival\+Time}}
+\subsubsection{\texorpdfstring{Cntr}{Cntr}}
+{\footnotesize\ttfamily template$<$typename Counter\+Type , typename C\+P\+U\+Tick\+Type $>$ \\
+Counter\+Type$\ast$ \hyperlink{classInterArrivalTime}{Inter\+Arrival\+Time}$<$ Counter\+Type, C\+P\+U\+Tick\+Type $>$\+::Cntr}
+
+
+
+Saves the address of the counter location. 
+
+\mbox{\Hypertarget{classInterArrivalTime_ac73e4d6bbfc5daea67b53723ede5e9fd}\label{classInterArrivalTime_ac73e4d6bbfc5daea67b53723ede5e9fd}} 
+\index{Inter\+Arrival\+Time@{Inter\+Arrival\+Time}!Count\+Diff@{Count\+Diff}}
+\index{Count\+Diff@{Count\+Diff}!Inter\+Arrival\+Time@{Inter\+Arrival\+Time}}
+\subsubsection{\texorpdfstring{Count\+Diff}{CountDiff}}
+{\footnotesize\ttfamily template$<$typename Counter\+Type , typename C\+P\+U\+Tick\+Type $>$ \\
+Counter\+Type \hyperlink{classInterArrivalTime}{Inter\+Arrival\+Time}$<$ Counter\+Type, C\+P\+U\+Tick\+Type $>$\+::Count\+Diff = 0}
+
+
+
+The difference between the arrival time of last two photons. 
+
+\mbox{\Hypertarget{classInterArrivalTime_a8a24e1acb445c45b2934955fb0dcc8f5}\label{classInterArrivalTime_a8a24e1acb445c45b2934955fb0dcc8f5}} 
+\index{Inter\+Arrival\+Time@{Inter\+Arrival\+Time}!Last\+Cntr@{Last\+Cntr}}
+\index{Last\+Cntr@{Last\+Cntr}!Inter\+Arrival\+Time@{Inter\+Arrival\+Time}}
+\subsubsection{\texorpdfstring{Last\+Cntr}{LastCntr}}
+{\footnotesize\ttfamily template$<$typename Counter\+Type , typename C\+P\+U\+Tick\+Type $>$ \\
+Counter\+Type \hyperlink{classInterArrivalTime}{Inter\+Arrival\+Time}$<$ Counter\+Type, C\+P\+U\+Tick\+Type $>$\+::Last\+Cntr = 0}
+
+
+
+Last Counter value recorded. 
+
+\mbox{\Hypertarget{classInterArrivalTime_a108e8d20e7a26f7b9b6ac75c38632cd0}\label{classInterArrivalTime_a108e8d20e7a26f7b9b6ac75c38632cd0}} 
+\index{Inter\+Arrival\+Time@{Inter\+Arrival\+Time}!Mean@{Mean}}
+\index{Mean@{Mean}!Inter\+Arrival\+Time@{Inter\+Arrival\+Time}}
+\subsubsection{\texorpdfstring{Mean}{Mean}}
+{\footnotesize\ttfamily template$<$typename Counter\+Type , typename C\+P\+U\+Tick\+Type $>$ \\
+\hyperlink{classMonitorChannel}{Monitor\+Channel}$<$true$>$ \hyperlink{classInterArrivalTime}{Inter\+Arrival\+Time}$<$ Counter\+Type, C\+P\+U\+Tick\+Type $>$\+::Mean}
+
+
+
+Mean Inter-\/arrival time. 
+
+\mbox{\Hypertarget{classInterArrivalTime_aa0126b0de317f9b1b7660cfe305b5779}\label{classInterArrivalTime_aa0126b0de317f9b1b7660cfe305b5779}} 
+\index{Inter\+Arrival\+Time@{Inter\+Arrival\+Time}!Now@{Now}}
+\index{Now@{Now}!Inter\+Arrival\+Time@{Inter\+Arrival\+Time}}
+\subsubsection{\texorpdfstring{Now}{Now}}
+{\footnotesize\ttfamily template$<$typename Counter\+Type , typename C\+P\+U\+Tick\+Type $>$ \\
+Counter\+Type \hyperlink{classInterArrivalTime}{Inter\+Arrival\+Time}$<$ Counter\+Type, C\+P\+U\+Tick\+Type $>$\+::Now = 0}
+
+
+
+Current Counter value storage. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hardware/\hyperlink{interarrival_8hpp}{interarrival.\+hpp}\end{DoxyCompactItemize}

@@ -1,0 +1,61 @@
+\hypertarget{featureline3_8hpp}{}\section{src/featureline3.hpp File Reference}
+\label{featureline3_8hpp}\index{src/featureline3.\+hpp@{src/featureline3.\+hpp}}
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include $<$imxrt.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}global.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}./../code/hardware/pins.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}./../code/hardware/ledpanel.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}./../code/hardware/errors.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}./../code/hardware/pit.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}./../code/hardware/qtmr1.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}./../code/software/monitor\+\_\+channel.\+hpp\char`\"{}}\newline
+Include dependency graph for featureline3.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{featureline3_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{featureline3_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{featureline3_8hpp_a25ace3177d8ee7b01dc98fd605f07ee8}{isr\+\_\+fn3} ()
+\begin{DoxyCompactList}\small\item\em This featureline (see {\ttfamily featurelines.\+md) samples Counter values at periodic intervals and prints it to the Serial buffer(using}println(){\ttfamily ). This machinary is a subset of}$\ast$featureline1$\ast$`, which is the complete Gate Counting featureline. \end{DoxyCompactList}\item 
+void \hyperlink{featureline3_8hpp_a13ba355c388354ef55c85e39c02b6b20}{sampler\+\_\+setup} ()
+\item 
+void \hyperlink{featureline3_8hpp_acaf2bd0b8ea25302fbcfd07139c11a86}{sampler\+\_\+loop} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{featureline3_8hpp_a25ace3177d8ee7b01dc98fd605f07ee8}\label{featureline3_8hpp_a25ace3177d8ee7b01dc98fd605f07ee8}} 
+\index{featureline3.\+hpp@{featureline3.\+hpp}!isr\+\_\+fn3@{isr\+\_\+fn3}}
+\index{isr\+\_\+fn3@{isr\+\_\+fn3}!featureline3.\+hpp@{featureline3.\+hpp}}
+\subsubsection{\texorpdfstring{isr\+\_\+fn3()}{isr\_fn3()}}
+{\footnotesize\ttfamily void isr\+\_\+fn3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This featureline (see {\ttfamily featurelines.\+md) samples Counter values at periodic intervals and prints it to the Serial buffer(using}println(){\ttfamily ). This machinary is a subset of}$\ast$featureline1$\ast$`, which is the complete Gate Counting featureline. 
+
+\mbox{\Hypertarget{featureline3_8hpp_acaf2bd0b8ea25302fbcfd07139c11a86}\label{featureline3_8hpp_acaf2bd0b8ea25302fbcfd07139c11a86}} 
+\index{featureline3.\+hpp@{featureline3.\+hpp}!sampler\+\_\+loop@{sampler\+\_\+loop}}
+\index{sampler\+\_\+loop@{sampler\+\_\+loop}!featureline3.\+hpp@{featureline3.\+hpp}}
+\subsubsection{\texorpdfstring{sampler\+\_\+loop()}{sampler\_loop()}}
+{\footnotesize\ttfamily void sampler\+\_\+loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{featureline3_8hpp_a13ba355c388354ef55c85e39c02b6b20}\label{featureline3_8hpp_a13ba355c388354ef55c85e39c02b6b20}} 
+\index{featureline3.\+hpp@{featureline3.\+hpp}!sampler\+\_\+setup@{sampler\+\_\+setup}}
+\index{sampler\+\_\+setup@{sampler\+\_\+setup}!featureline3.\+hpp@{featureline3.\+hpp}}
+\subsubsection{\texorpdfstring{sampler\+\_\+setup()}{sampler\_setup()}}
+{\footnotesize\ttfamily void sampler\+\_\+setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+

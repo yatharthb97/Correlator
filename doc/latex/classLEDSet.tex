@@ -27,7 +27,7 @@ void \hyperlink{classLEDSet_a141bb664e7f58ae676455972ca9cd686}{O\+N\+\_\+todigit
 \begin{DoxyCompactList}\small\item\em Sets all leds with states (ON == 1) and (Analog == 2) to (ON == 1). \end{DoxyCompactList}\item 
 void \hyperlink{classLEDSet_ae2bcd287ff637c2600603e83b0981c77}{toggle\+\_\+all} ()
 \begin{DoxyCompactList}\small\item\em Toggles the state of all the L\+E\+Ds. This is a pure digital function and destroys all Analog dim states. \end{DoxyCompactList}\item 
-void \hyperlink{classLEDSet_a08727d959328a2ecbab6c1e8c6ce4ada}{toggle} (int pin, double time\+\_\+ms)
+void \hyperlink{classLEDSet_a6062da843aabdf8fbdcedb70fed00dec}{toggle\+\_\+twice} (int pin, double time\+\_\+ms)
 \begin{DoxyCompactList}\small\item\em Toggles the state of a particular L\+ED. This is a pure digital function and destroys all Analog dim states. \end{DoxyCompactList}\item 
 void \hyperlink{classLEDSet_a61cc024950a5b66dff34c449cc73787f}{toggle\+\_\+all\+\_\+routine} (int delay\+\_\+ms)
 \item 
@@ -35,7 +35,7 @@ void \hyperlink{classLEDSet_a8a5ef40584236c3793e4274688eac379}{dim} (int pin, un
 \begin{DoxyCompactList}\small\item\em dims a particular valid led pin. \end{DoxyCompactList}\item 
 void \hyperlink{classLEDSet_ad8313aa0c4fc34cd3481db0fade6318c}{dim\+\_\+all} (unsigned int analog\+\_\+val)
 \begin{DoxyCompactList}\small\item\em Dims the O\+N-\/\+L\+E\+Ds with the provided analog voltage. Only affects L\+E\+Ds that are ON or on Analog Mode. \end{DoxyCompactList}\item 
-void \hyperlink{classLEDSet_a02a191f4c6755092ffe30cca34922734}{dim\+\_\+routine} (unsigned int end\+\_\+analog\+\_\+val, double time\+\_\+s)
+void \hyperlink{classLEDSet_a30c6efe7fc286c3d0a7e2ac210dd2c1e}{dim\+\_\+all\+\_\+routine} (unsigned int end\+\_\+analog\+\_\+val, double time\+\_\+s)
 \item 
 void \hyperlink{classLEDSet_a73dae073882d369a9cc9b9a93f446157}{max\+\_\+bright\+\_\+all} ()
 \begin{DoxyCompactList}\small\item\em Sets maximum brightness for all O\+N-\/\+L\+E\+Ds. \end{DoxyCompactList}\item 
@@ -162,12 +162,12 @@ void \hyperlink{classLEDSet}{L\+E\+D\+Set}$<$ S\+E\+T\+\_\+\+S\+I\+ZE $>$\+::dim
 
 Dims the O\+N-\/\+L\+E\+Ds with the provided analog voltage. Only affects L\+E\+Ds that are ON or on Analog Mode. 
 
-\mbox{\Hypertarget{classLEDSet_a02a191f4c6755092ffe30cca34922734}\label{classLEDSet_a02a191f4c6755092ffe30cca34922734}} 
-\index{L\+E\+D\+Set@{L\+E\+D\+Set}!dim\+\_\+routine@{dim\+\_\+routine}}
-\index{dim\+\_\+routine@{dim\+\_\+routine}!L\+E\+D\+Set@{L\+E\+D\+Set}}
-\subsubsection{\texorpdfstring{dim\+\_\+routine()}{dim\_routine()}}
+\mbox{\Hypertarget{classLEDSet_a30c6efe7fc286c3d0a7e2ac210dd2c1e}\label{classLEDSet_a30c6efe7fc286c3d0a7e2ac210dd2c1e}} 
+\index{L\+E\+D\+Set@{L\+E\+D\+Set}!dim\+\_\+all\+\_\+routine@{dim\+\_\+all\+\_\+routine}}
+\index{dim\+\_\+all\+\_\+routine@{dim\+\_\+all\+\_\+routine}!L\+E\+D\+Set@{L\+E\+D\+Set}}
+\subsubsection{\texorpdfstring{dim\+\_\+all\+\_\+routine()}{dim\_all\_routine()}}
 {\footnotesize\ttfamily template$<$unsigned int S\+E\+T\+\_\+\+S\+I\+ZE$>$ \\
-void \hyperlink{classLEDSet}{L\+E\+D\+Set}$<$ S\+E\+T\+\_\+\+S\+I\+ZE $>$\+::dim\+\_\+routine (\begin{DoxyParamCaption}\item[{unsigned int}]{end\+\_\+analog\+\_\+val,  }\item[{double}]{time\+\_\+s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void \hyperlink{classLEDSet}{L\+E\+D\+Set}$<$ S\+E\+T\+\_\+\+S\+I\+ZE $>$\+::dim\+\_\+all\+\_\+routine (\begin{DoxyParamCaption}\item[{unsigned int}]{end\+\_\+analog\+\_\+val,  }\item[{double}]{time\+\_\+s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 \mbox{\Hypertarget{classLEDSet_aa392b74b090de60a25f7577195327afd}\label{classLEDSet_aa392b74b090de60a25f7577195327afd}} 
 \index{L\+E\+D\+Set@{L\+E\+D\+Set}!error@{error}}
@@ -311,17 +311,6 @@ void \hyperlink{classLEDSet}{L\+E\+D\+Set}$<$ S\+E\+T\+\_\+\+S\+I\+ZE $>$\+::sta
 
 Sets the L\+E\+Ds based on the value of the corresponding state variable. This function is useful when the state is altered seperately from the digital\+Write calls. The function also calls pin\+Mode() which muxes the pins to gpio. For State == Analog\+: The state maintains the analog dim state. 
 
-\mbox{\Hypertarget{classLEDSet_a08727d959328a2ecbab6c1e8c6ce4ada}\label{classLEDSet_a08727d959328a2ecbab6c1e8c6ce4ada}} 
-\index{L\+E\+D\+Set@{L\+E\+D\+Set}!toggle@{toggle}}
-\index{toggle@{toggle}!L\+E\+D\+Set@{L\+E\+D\+Set}}
-\subsubsection{\texorpdfstring{toggle()}{toggle()}}
-{\footnotesize\ttfamily template$<$unsigned int S\+E\+T\+\_\+\+S\+I\+ZE$>$ \\
-void \hyperlink{classLEDSet}{L\+E\+D\+Set}$<$ S\+E\+T\+\_\+\+S\+I\+ZE $>$\+::toggle (\begin{DoxyParamCaption}\item[{int}]{pin,  }\item[{double}]{time\+\_\+ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Toggles the state of a particular L\+ED. This is a pure digital function and destroys all Analog dim states. 
-
 \mbox{\Hypertarget{classLEDSet_ae2bcd287ff637c2600603e83b0981c77}\label{classLEDSet_ae2bcd287ff637c2600603e83b0981c77}} 
 \index{L\+E\+D\+Set@{L\+E\+D\+Set}!toggle\+\_\+all@{toggle\+\_\+all}}
 \index{toggle\+\_\+all@{toggle\+\_\+all}!L\+E\+D\+Set@{L\+E\+D\+Set}}
@@ -339,6 +328,17 @@ Toggles the state of all the L\+E\+Ds. This is a pure digital function and destr
 \subsubsection{\texorpdfstring{toggle\+\_\+all\+\_\+routine()}{toggle\_all\_routine()}}
 {\footnotesize\ttfamily template$<$unsigned int S\+E\+T\+\_\+\+S\+I\+ZE$>$ \\
 void \hyperlink{classLEDSet}{L\+E\+D\+Set}$<$ S\+E\+T\+\_\+\+S\+I\+ZE $>$\+::toggle\+\_\+all\+\_\+routine (\begin{DoxyParamCaption}\item[{int}]{delay\+\_\+ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classLEDSet_a6062da843aabdf8fbdcedb70fed00dec}\label{classLEDSet_a6062da843aabdf8fbdcedb70fed00dec}} 
+\index{L\+E\+D\+Set@{L\+E\+D\+Set}!toggle\+\_\+twice@{toggle\+\_\+twice}}
+\index{toggle\+\_\+twice@{toggle\+\_\+twice}!L\+E\+D\+Set@{L\+E\+D\+Set}}
+\subsubsection{\texorpdfstring{toggle\+\_\+twice()}{toggle\_twice()}}
+{\footnotesize\ttfamily template$<$unsigned int S\+E\+T\+\_\+\+S\+I\+ZE$>$ \\
+void \hyperlink{classLEDSet}{L\+E\+D\+Set}$<$ S\+E\+T\+\_\+\+S\+I\+ZE $>$\+::toggle\+\_\+twice (\begin{DoxyParamCaption}\item[{int}]{pin,  }\item[{double}]{time\+\_\+ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Toggles the state of a particular L\+ED. This is a pure digital function and destroys all Analog dim states. 
 
 \mbox{\Hypertarget{classLEDSet_aacc3566d74c4051350977b578ada3a4d}\label{classLEDSet_aacc3566d74c4051350977b578ada3a4d}} 
 \index{L\+E\+D\+Set@{L\+E\+D\+Set}!unset@{unset}}

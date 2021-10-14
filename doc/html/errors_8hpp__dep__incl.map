@@ -1,6 +1,10 @@
 <map id="code/hardware/errors.hpp" name="code/hardware/errors.hpp">
-<area shape="rect" id="node2" href="$pit_8hpp.html" title="code/hardware/pit.hpp" alt="" coords="5,87,172,114"/>
-<area shape="rect" id="node4" href="$qtmr1_8hpp.html" title="code/hardware/qtmr1.hpp" alt="" coords="197,87,386,114"/>
-<area shape="rect" id="node5" href="$lifetime__timer_8hpp.html" title="code/hardware/lifetime\l_timer.hpp" alt="" coords="410,80,583,121"/>
-<area shape="rect" id="node3" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="137,169,243,196"/>
+<area shape="rect" id="node2" href="$pit_8hpp.html" title="code/hardware/pit.hpp" alt="" coords="347,80,514,107"/>
+<area shape="rect" id="node4" href="$featureline1_8hpp.html" title="src/featureline1.hpp" alt="" coords="493,229,645,256"/>
+<area shape="rect" id="node7" href="$featureline3_8hpp.html" title="src/featureline3.hpp" alt="" coords="5,229,157,256"/>
+<area shape="rect" id="node9" href="$qtmr1_8hpp.html" title="code/hardware/qtmr1.hpp" alt="" coords="133,80,323,107"/>
+<area shape="rect" id="node3" href="$global_8hpp.html" title="src/global.hpp" alt="" coords="317,155,430,181"/>
+<area shape="rect" id="node6" href="$featureline2_8hpp.html" title="src/featureline2.hpp" alt="" coords="181,229,333,256"/>
+<area shape="rect" id="node8" href="$global_8cpp.html" title="src/global.cpp" alt="" coords="357,229,469,256"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="205,304,310,331"/>
 </map>

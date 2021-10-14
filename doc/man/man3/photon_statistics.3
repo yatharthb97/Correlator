@@ -1,4 +1,4 @@
-.TH "photon_statistics" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator and Photon Statistics" \" -*- nroff -*-
+.TH "photon_statistics" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -249,18 +249,18 @@ photon_statistics
 
 .SS "photon_statistics\&.title"
 
-.SS "tuple photon_statistics\&.total_struct_size"
+.SS "int photon_statistics\&.total_struct_size"
 \fBInitial value:\fP
 .PP
 .nf
-1 =  (   (config['EnableACFCalc'] * this_channel_size) + 
-2                         config['EnableCountRate'] +
-3                         config['EnablePointsNorm'] +
-4                         config['EnableSyncCode'] +
-5                         config['EnableMeanNorm'] + 
-6                         config['Enable PC Histogram'] * config['PC Histogram Bins'] +
-7                         ((config['EnableACFCalc'] + 1) * config['Enable Performance Counters'])
-8                     ) * byte_size
+1 =  ( (config['EnableACFCalc'] * this_channel_size) + 
+2                             config['EnableCountRate'] +
+3                             config['EnablePointsNorm'] +
+4                             config['EnableSyncCode'] +
+5                             config['EnableMeanNorm'] + 
+6                             config['Enable PC Histogram'] * config['PC Histogram Bins'] +
+7                             ((config['EnableACFCalc'] + 1) * config['Enable Performance Counters'])
+8                         ) * byte_size
 .fi
 .SS "int photon_statistics\&.update_id = 0"
 
@@ -276,4 +276,4 @@ photon_statistics
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for DIY Auto-Correlator and Photon Statistics from the source code\&.
+Generated automatically by Doxygen for DIY Auto-Correlator from the source code\&.

@@ -3,9 +3,11 @@
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+def \hyperlink{namespaceconfig_a4097152d333d323cef0159878ff205fc}{config\+\_\+validation} (config)
+\item 
 def \hyperlink{namespaceconfig_a8e5e09166a67c11eb868143f4e85607f}{generate\+\_\+config\+\_\+file} ()
 \item 
-def \hyperlink{namespaceconfig_ab97d69eb9e4097d1e43e248b73676d6a}{validate\+\_\+config\+\_\+file} (config\+\_\+file)
+def \hyperlink{namespaceconfig_ac7ad14f68cd9aec9e9b9d3cf08b3db07}{fill\+\_\+missing\+\_\+in\+\_\+config\+\_\+file} (config\+\_\+file)
 \end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
@@ -15,20 +17,26 @@ dictionary \hyperlink{namespaceconfig_ac321195dcb6ced179a85db093e63a1c9}{default
 
 
 \subsection{Function Documentation}
-\mbox{\Hypertarget{namespaceconfig_a8e5e09166a67c11eb868143f4e85607f}\label{namespaceconfig_a8e5e09166a67c11eb868143f4e85607f}} 
+\mbox{\Hypertarget{namespaceconfig_a4097152d333d323cef0159878ff205fc}\label{namespaceconfig_a4097152d333d323cef0159878ff205fc}} 
+\index{config@{config}!config\+\_\+validation@{config\+\_\+validation}}
+\index{config\+\_\+validation@{config\+\_\+validation}!config@{config}}
+\subsubsection{\texorpdfstring{config\+\_\+validation()}{config\_validation()}}
+{\footnotesize\ttfamily def config.\+config\+\_\+validation (\begin{DoxyParamCaption}\item[{}]{config }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceconfig_ac7ad14f68cd9aec9e9b9d3cf08b3db07}\label{namespaceconfig_ac7ad14f68cd9aec9e9b9d3cf08b3db07}} 
+\index{config@{config}!fill\+\_\+missing\+\_\+in\+\_\+config\+\_\+file@{fill\+\_\+missing\+\_\+in\+\_\+config\+\_\+file}}
+\index{fill\+\_\+missing\+\_\+in\+\_\+config\+\_\+file@{fill\+\_\+missing\+\_\+in\+\_\+config\+\_\+file}!config@{config}}
+\subsubsection{\texorpdfstring{fill\+\_\+missing\+\_\+in\+\_\+config\+\_\+file()}{fill\_missing\_in\_config\_file()}}
+{\footnotesize\ttfamily def config.\+fill\+\_\+missing\+\_\+in\+\_\+config\+\_\+file (\begin{DoxyParamCaption}\item[{}]{config\+\_\+file }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Checks for missing fields in the configuration file and adds default values, if missing fields are found.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceconfig_a8e5e09166a67c11eb868143f4e85607f}\label{namespaceconfig_a8e5e09166a67c11eb868143f4e85607f}} 
 \index{config@{config}!generate\+\_\+config\+\_\+file@{generate\+\_\+config\+\_\+file}}
 \index{generate\+\_\+config\+\_\+file@{generate\+\_\+config\+\_\+file}!config@{config}}
 \subsubsection{\texorpdfstring{generate\+\_\+config\+\_\+file()}{generate\_config\_file()}}
 {\footnotesize\ttfamily def config.\+generate\+\_\+config\+\_\+file (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 \begin{DoxyVerb}Generates the json configuration file in the current working directory \end{DoxyVerb}
- \mbox{\Hypertarget{namespaceconfig_ab97d69eb9e4097d1e43e248b73676d6a}\label{namespaceconfig_ab97d69eb9e4097d1e43e248b73676d6a}} 
-\index{config@{config}!validate\+\_\+config\+\_\+file@{validate\+\_\+config\+\_\+file}}
-\index{validate\+\_\+config\+\_\+file@{validate\+\_\+config\+\_\+file}!config@{config}}
-\subsubsection{\texorpdfstring{validate\+\_\+config\+\_\+file()}{validate\_config\_file()}}
-{\footnotesize\ttfamily def config.\+validate\+\_\+config\+\_\+file (\begin{DoxyParamCaption}\item[{}]{config\+\_\+file }\end{DoxyParamCaption})}
-
-\begin{DoxyVerb}Checks for missing fields in the configuration file and adds default values, if missing fields are found.\end{DoxyVerb}
  
 
 \subsection{Variable Documentation}
@@ -38,20 +46,3 @@ dictionary \hyperlink{namespaceconfig_ac321195dcb6ced179a85db093e63a1c9}{default
 \subsubsection{\texorpdfstring{default\+\_\+config}{default\_config}}
 {\footnotesize\ttfamily dictionary config.\+default\+\_\+config}
 
-{\bfseries Initial value\+:}
-\begin{DoxyCode}
-1 =   \{ \textcolor{stringliteral}{"GateTime\_us"}: 5,
-2                     \textcolor{stringliteral}{"AllowedGateTimeError\_us"}: 0.1,
-3                     \textcolor{stringliteral}{"LinCorrs"}: 9,
-4                     \textcolor{stringliteral}{"SeriesSize"}: 27,
-5                     \textcolor{stringliteral}{"BinRatio"}: 3,
-6                     \textcolor{stringliteral}{"LiveGraph"}: \textcolor{keyword}{False},
-7                     \textcolor{stringliteral}{"SamplingDelay\_ms"}: 50,
-8                     \textcolor{stringliteral}{"Baud"}: 9600,
-9                     \textcolor{stringliteral}{"Port"}: \textcolor{stringliteral}{""},
-10                     \textcolor{stringliteral}{"ISRPinToggle"}: \textcolor{keyword}{True},
-11                     \textcolor{stringliteral}{"AbortOnError"}: \textcolor{keyword}{True},
-12                     \textcolor{stringliteral}{"//# Comment"}  : \textcolor{stringliteral}{"Missing fields will generate warnings and a default value will be
-       added to the configuration."}
-13                      \}
-\end{DoxyCode}

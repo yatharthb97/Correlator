@@ -101,9 +101,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae2bcd287ff637c2600603e83b0981c77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#ae2bcd287ff637c2600603e83b0981c77">toggle_all</a> ()</td></tr>
 <tr class="memdesc:ae2bcd287ff637c2600603e83b0981c77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggles the state of all the LEDs. This is a pure digital function and destroys all Analog dim states.  <a href="#ae2bcd287ff637c2600603e83b0981c77">More...</a><br /></td></tr>
 <tr class="separator:ae2bcd287ff637c2600603e83b0981c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08727d959328a2ecbab6c1e8c6ce4ada"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a08727d959328a2ecbab6c1e8c6ce4ada">toggle</a> (int pin, double time_ms)</td></tr>
-<tr class="memdesc:a08727d959328a2ecbab6c1e8c6ce4ada"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggles the state of a particular LED. This is a pure digital function and destroys all Analog dim states.  <a href="#a08727d959328a2ecbab6c1e8c6ce4ada">More...</a><br /></td></tr>
-<tr class="separator:a08727d959328a2ecbab6c1e8c6ce4ada"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6062da843aabdf8fbdcedb70fed00dec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a6062da843aabdf8fbdcedb70fed00dec">toggle_twice</a> (int pin, double time_ms)</td></tr>
+<tr class="memdesc:a6062da843aabdf8fbdcedb70fed00dec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggles the state of a particular LED. This is a pure digital function and destroys all Analog dim states.  <a href="#a6062da843aabdf8fbdcedb70fed00dec">More...</a><br /></td></tr>
+<tr class="separator:a6062da843aabdf8fbdcedb70fed00dec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61cc024950a5b66dff34c449cc73787f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a61cc024950a5b66dff34c449cc73787f">toggle_all_routine</a> (int delay_ms)</td></tr>
 <tr class="separator:a61cc024950a5b66dff34c449cc73787f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a5ef40584236c3793e4274688eac379"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a8a5ef40584236c3793e4274688eac379">dim</a> (int pin, unsigned int analog_val)</td></tr>
@@ -112,8 +112,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad8313aa0c4fc34cd3481db0fade6318c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#ad8313aa0c4fc34cd3481db0fade6318c">dim_all</a> (unsigned int analog_val)</td></tr>
 <tr class="memdesc:ad8313aa0c4fc34cd3481db0fade6318c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dims the ON-LEDs with the provided analog voltage. Only affects LEDs that are ON or on Analog Mode.  <a href="#ad8313aa0c4fc34cd3481db0fade6318c">More...</a><br /></td></tr>
 <tr class="separator:ad8313aa0c4fc34cd3481db0fade6318c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02a191f4c6755092ffe30cca34922734"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a02a191f4c6755092ffe30cca34922734">dim_routine</a> (unsigned int end_analog_val, double time_s)</td></tr>
-<tr class="separator:a02a191f4c6755092ffe30cca34922734"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30c6efe7fc286c3d0a7e2ac210dd2c1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a30c6efe7fc286c3d0a7e2ac210dd2c1e">dim_all_routine</a> (unsigned int end_analog_val, double time_s)</td></tr>
+<tr class="separator:a30c6efe7fc286c3d0a7e2ac210dd2c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73dae073882d369a9cc9b9a93f446157"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLEDSet.html#a73dae073882d369a9cc9b9a93f446157">max_bright_all</a> ()</td></tr>
 <tr class="memdesc:a73dae073882d369a9cc9b9a93f446157"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets maximum brightness for all ON-LEDs.  <a href="#a73dae073882d369a9cc9b9a93f446157">More...</a><br /></td></tr>
 <tr class="separator:a73dae073882d369a9cc9b9a93f446157"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -334,8 +334,8 @@ template&lt;unsigned int SET_SIZE&gt; </div>
 
 </div>
 </div>
-<a id="a02a191f4c6755092ffe30cca34922734"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02a191f4c6755092ffe30cca34922734">&#9670;&nbsp;</a></span>dim_routine()</h2>
+<a id="a30c6efe7fc286c3d0a7e2ac210dd2c1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30c6efe7fc286c3d0a7e2ac210dd2c1e">&#9670;&nbsp;</a></span>dim_all_routine()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -346,7 +346,7 @@ template&lt;unsigned int SET_SIZE&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classLEDSet.html">LEDSet</a>&lt; SET_SIZE &gt;::dim_routine </td>
+          <td class="memname">void <a class="el" href="classLEDSet.html">LEDSet</a>&lt; SET_SIZE &gt;::dim_all_routine </td>
           <td>(</td>
           <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>end_analog_val</em>, </td>
@@ -781,46 +781,6 @@ template&lt;unsigned int SET_SIZE&gt; </div>
 
 </div>
 </div>
-<a id="a08727d959328a2ecbab6c1e8c6ce4ada"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08727d959328a2ecbab6c1e8c6ce4ada">&#9670;&nbsp;</a></span>toggle()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;unsigned int SET_SIZE&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classLEDSet.html">LEDSet</a>&lt; SET_SIZE &gt;::toggle </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>pin</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>time_ms</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Toggles the state of a particular LED. This is a pure digital function and destroys all Analog dim states. </p>
-
-</div>
-</div>
 <a id="ae2bcd287ff637c2600603e83b0981c77"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae2bcd287ff637c2600603e83b0981c77">&#9670;&nbsp;</a></span>toggle_all()</h2>
 
@@ -875,6 +835,46 @@ template&lt;unsigned int SET_SIZE&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6062da843aabdf8fbdcedb70fed00dec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6062da843aabdf8fbdcedb70fed00dec">&#9670;&nbsp;</a></span>toggle_twice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int SET_SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classLEDSet.html">LEDSet</a>&lt; SET_SIZE &gt;::toggle_twice </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>time_ms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Toggles the state of a particular LED. This is a pure digital function and destroys all Analog dim states. </p>
 
 </div>
 </div>

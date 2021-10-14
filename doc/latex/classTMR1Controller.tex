@@ -13,7 +13,7 @@ Templated interface for Quad Timer 1 channels for Gate Counting. The module uses
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classTMR1Controller_aebc677e795f673c6520d5a03eb6aa4f2}{T\+M\+R1\+Controller} ()
-\begin{DoxyCompactList}\small\item\em Singleton template. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Default Constructor that assers if the user constructed object with a valid {\itshape T\+M\+R1\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+CH}, and asserts a singleton template. \end{DoxyCompactList}\item 
 void \hyperlink{classTMR1Controller_a67bc04f0648176a681f6ac01ea483db9}{start} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((\hyperlink{classTMR1Controller_adce8e8a496510485a88ccc5b88595672}{always\+\_\+inline}))
 \begin{DoxyCompactList}\small\item\em Starts up-\/counting from the set counter value. \end{DoxyCompactList}\item 
 void \hyperlink{classTMR1Controller_afcb0ea27107bfbe50b9dcbd54207dd00}{stop} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((\hyperlink{classTMR1Controller_adce8e8a496510485a88ccc5b88595672}{always\+\_\+inline}))
@@ -56,7 +56,7 @@ static void \hyperlink{classTMR1Controller_acb383aa5321f552f018e4e217e2211f4}{ti
 \begin{DoxyCompactItemize}
 \item 
 static constexpr bool \hyperlink{classTMR1Controller_a532b729ca9a7c28e5f4d221f80487241}{Singleton\+\_\+flag} = false
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Singleton template. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -71,9 +71,9 @@ Templated interface for Quad Timer 1 channels for Gate Counting. The module uses
 
 
 
-Singleton template. 
-
 Default Constructor that assers if the user constructed object with a valid {\itshape T\+M\+R1\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+CH}, and asserts a singleton template. 
+
+
 
 \subsection{Member Function Documentation}
 \mbox{\Hypertarget{classTMR1Controller_aa59afefa545098e53cb2e0560142526c}\label{classTMR1Controller_aa59afefa545098e53cb2e0560142526c}} 
@@ -245,6 +245,10 @@ This setting applies to all the channels of the Timer 1 group.
 \index{Singleton\+\_\+flag@{Singleton\+\_\+flag}!T\+M\+R1\+Controller@{T\+M\+R1\+Controller}}
 \subsubsection{\texorpdfstring{Singleton\+\_\+flag}{Singleton\_flag}}
 {\footnotesize\ttfamily constexpr bool T\+M\+R1\+Controller\+::\+Singleton\+\_\+flag = false\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Singleton template. 
 
 
 

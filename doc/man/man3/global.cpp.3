@@ -1,4 +1,4 @@
-.TH "src/global.cpp" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator and Photon Statistics" \" -*- nroff -*-
+.TH "src/global.cpp" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -16,7 +16,7 @@ src/global.cpp
 .RI "\fBMultiTauACorrRTTeensy\fP< LIN_CORRS, SERIES_SIZE, BIN_RATIO > \fBmultitau\fP"
 .br
 .ti -1c
-.RI "\fBPITController\fP< \fBPIT_CHANNEL_IN_USE\fP > \fBPI_t\fP"
+.RI "\fBPITController\fP< PIT_CHANNEL_IN_USE > \fBPI_t\fP"
 .br
 .RI "PI_t Resource\&. "
 .ti -1c
@@ -72,7 +72,7 @@ Stores the value read from the counter\&.
 Serial output is done after these many updates (default → overriden in the setup function)\&. 
 .SS "\fBMultiTauACorrRTTeensy\fP<LIN_CORRS, SERIES_SIZE, BIN_RATIO> multitau"
 
-.SS "\fBPITController\fP<\fBPIT_CHANNEL_IN_USE\fP> PI_t"
+.SS "\fBPITController\fP<PIT_CHANNEL_IN_USE> PI_t"
 
 .PP
 PI_t Resource\&. 
@@ -96,4 +96,4 @@ Stores the number of updates made on the correlator channels since the last seri
 Indicates if a new value has arrived from the counting module\&. 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for DIY Auto-Correlator and Photon Statistics from the source code\&.
+Generated automatically by Doxygen for DIY Auto-Correlator from the source code\&.

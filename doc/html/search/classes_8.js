@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rtcoarsegrainer',['RTCoarseGrainer',['../d1/d05/classRTCoarseGrainer.html',1,'']]]
+  ['rtcoarsegrainer',['RTCoarseGrainer',['../classRTCoarseGrainer.html',1,'']]]
 ];

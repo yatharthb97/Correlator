@@ -1,16 +1,34 @@
 \hypertarget{monitor__channel_8hpp}{}\section{code/software/monitor\+\_\+channel.hpp File Reference}
 \label{monitor__channel_8hpp}\index{code/software/monitor\+\_\+channel.\+hpp@{code/software/monitor\+\_\+channel.\+hpp}}
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
 {\ttfamily \#include \char`\"{}./../types.\+hpp\char`\"{}}\newline
 Include dependency graph for monitor\+\_\+channel.\+hpp\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=207pt]{monitor__channel_8hpp__incl}
+\includegraphics[width=266pt]{monitor__channel_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{monitor__channel_8hpp__dep__incl}
 \end{center}
 \end{figure}
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \hyperlink{classMonitor__Channel}{Monitor\+\_\+\+Channel}
-\begin{DoxyCompactList}\small\item\em A simple Averager Class that calculates the estimated mean. \end{DoxyCompactList}\end{DoxyCompactItemize}
+class \hyperlink{classMonitorChannel}{Monitor\+Channel$<$ Mean\+Channel $>$}
+\begin{DoxyCompactList}\small\item\em A simple Averager Class that calculates the estimated mean. Template parameter {\ttfamily Construct} specifies a template specialization that either constructs a functional object when it is {\ttfamily true} or constructs a near zerp-\/signature {\bfseries dummy object} when set to {\ttfamily false}. \end{DoxyCompactList}\item 
+class \hyperlink{classMonitorChannel_3_01true_01_4}{Monitor\+Channel$<$ true $>$}
+\begin{DoxyCompactList}\small\item\em Template specialization. \end{DoxyCompactList}\item 
+class \hyperlink{classMonitorChannel_3_01false_01_4}{Monitor\+Channel$<$ false $>$}
+\begin{DoxyCompactList}\small\item\em Specialization -\/$>$ Counter Monitor (degenerated mean monitor). \end{DoxyCompactList}\item 
+class \hyperlink{classZeroLagMonitor}{Zero\+Lag\+Monitor}
+\begin{DoxyCompactList}\small\item\em Measures the zeroth auto-\/correlation, which is equal to the second moment of the sampled time series. This object was intended for experimentation with Linear-\/autocorrelators, which start from lag1, instead of lag0. \end{DoxyCompactList}\item 
+class \hyperlink{classRTCoarseGrainer}{R\+T\+Coarse\+Grainer}
+\begin{DoxyCompactList}\small\item\em An object that can accumulate data into a fixed size bin before changing its output value. \end{DoxyCompactList}\end{DoxyCompactItemize}

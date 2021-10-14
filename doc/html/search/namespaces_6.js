@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['test',['test',['../df/d04/namespacetest.html',1,'']]]
+  ['test',['test',['../namespacetest.html',1,'']]]
 ];

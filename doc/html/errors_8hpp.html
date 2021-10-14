@@ -65,10 +65,9 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#define-members">Macros</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
 <div class="title">errors.hpp File Reference</div>  </div>
 </div><!--header-->
@@ -93,24 +92,28 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="errors_8hpp__dep__incl.png" border="0" usemap="#code_2hardware_2errors_8hppdep" alt=""/></div>
 <map name="code_2hardware_2errors_8hppdep" id="code_2hardware_2errors_8hppdep">
-<area shape="rect" id="node2" href="pit_8hpp.html" title="code/hardware/pit.hpp" alt="" coords="5,87,172,114"/>
-<area shape="rect" id="node4" href="qtmr1_8hpp.html" title="code/hardware/qtmr1.hpp" alt="" coords="197,87,386,114"/>
-<area shape="rect" id="node5" href="lifetime__timer_8hpp.html" title="code/hardware/lifetime\l_timer.hpp" alt="" coords="410,80,583,121"/>
-<area shape="rect" id="node3" href="main_8cpp.html" title="src/main.cpp" alt="" coords="137,169,243,196"/>
+<area shape="rect" id="node2" href="pit_8hpp.html" title="code/hardware/pit.hpp" alt="" coords="347,80,514,107"/>
+<area shape="rect" id="node4" href="featureline1_8hpp.html" title="src/featureline1.hpp" alt="" coords="493,229,645,256"/>
+<area shape="rect" id="node7" href="featureline3_8hpp.html" title="src/featureline3.hpp" alt="" coords="5,229,157,256"/>
+<area shape="rect" id="node9" href="qtmr1_8hpp.html" title="code/hardware/qtmr1.hpp" alt="" coords="133,80,323,107"/>
+<area shape="rect" id="node3" href="global_8hpp.html" title="src/global.hpp" alt="" coords="317,155,430,181"/>
+<area shape="rect" id="node6" href="featureline2_8hpp.html" title="src/featureline2.hpp" alt="" coords="181,229,333,256"/>
+<area shape="rect" id="node8" href="global_8cpp.html" title="src/global.cpp" alt="" coords="357,229,469,256"/>
+<area shape="rect" id="node5" href="main_8cpp.html" title="src/main.cpp" alt="" coords="205,304,310,331"/>
 </map>
 </div>
 </div>
 <p><a href="errors_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespaceErrors"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceErrors.html">Errors</a></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classErrors.html">Errors</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a0eb326048ed31037a6e5ec5634a6202e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8hpp.html#a0eb326048ed31037a6e5ec5634a6202e">TEENSY_MAX_ALLOCATION</a>&#160;&#160;&#160;125000</td></tr>
-<tr class="memdesc:a0eb326048ed31037a6e5ec5634a6202e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This file contain the Common Error Codes for Software-Hardware Interface. It defines the <code>Error_t</code> and namespace <code><a class="el" href="namespaceErrors.html">Errors</a></code> that are used to handle the errors and interact with the LED dashboard.  <a href="#a0eb326048ed31037a6e5ec5634a6202e">More...</a><br /></td></tr>
+<tr class="memdesc:a0eb326048ed31037a6e5ec5634a6202e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This file contain the Common Error Codes for Software-Hardware Interface. It defines the <code>Error_t</code> and namespace <code><a class="el" href="classErrors.html">Errors</a></code> that are used to handle the errors and interact with the LED dashboard.  <a href="#a0eb326048ed31037a6e5ec5634a6202e">More...</a><br /></td></tr>
 <tr class="separator:a0eb326048ed31037a6e5ec5634a6202e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
@@ -121,27 +124,12 @@ Enumerations</h2></td></tr>
 <a class="el" href="errors_8hpp.html#a4e8c0d09726859e3d3369c0da5a1aa7fa02b02f5e5e61f24acdd91338b95997da">Error_t::Counter_Underflow</a>, 
 <a class="el" href="errors_8hpp.html#a4e8c0d09726859e3d3369c0da5a1aa7fabe5edab59de4ea30531374e506b03822">Error_t::Precision</a>, 
 <br />
-&#160;&#160;<a class="el" href="errors_8hpp.html#a4e8c0d09726859e3d3369c0da5a1aa7fa7e748bca7005cc737bad51b247997421">Error_t::Input_Validation</a>
+&#160;&#160;<a class="el" href="errors_8hpp.html#a4e8c0d09726859e3d3369c0da5a1aa7fa7e748bca7005cc737bad51b247997421">Error_t::Input_Validation</a>, 
+<a class="el" href="errors_8hpp.html#a4e8c0d09726859e3d3369c0da5a1aa7fac7e40b9218d101cde2dc4c43b9fed0fe">Error_t::Generic_Error</a>
 <br />
  }<tr class="memdesc:a4e8c0d09726859e3d3369c0da5a1aa7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumarates the error codes thrown by the different modules.  <a href="errors_8hpp.html#a4e8c0d09726859e3d3369c0da5a1aa7f">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:a4e8c0d09726859e3d3369c0da5a1aa7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a1fcd582e2074f8fad3a450d1b6b42aaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceErrors.html#a1fcd582e2074f8fad3a450d1b6b42aaa">Errors::Validate</a> (const <a class="el" href="errors_8hpp.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a> error)</td></tr>
-<tr class="memdesc:a1fcd582e2074f8fad3a450d1b6b42aaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives an error state and sets up the corresponding LED indicator.  <a href="namespaceErrors.html#a1fcd582e2074f8fad3a450d1b6b42aaa">More...</a><br /></td></tr>
-<tr class="separator:a1fcd582e2074f8fad3a450d1b6b42aaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13171d3d324164c9f7a9508d5a16b0c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="errors_8hpp.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceErrors.html#a13171d3d324164c9f7a9508d5a16b0c5">Errors::Precison_Threshold</a> (double error_val, double error_limit)</td></tr>
-<tr class="memdesc:a13171d3d324164c9f7a9508d5a16b0c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives error value and error threshold and returns an appropriate error state.  <a href="namespaceErrors.html#a13171d3d324164c9f7a9508d5a16b0c5">More...</a><br /></td></tr>
-<tr class="separator:a13171d3d324164c9f7a9508d5a16b0c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7010d07de8236f9a17b302c78f37483e"><td class="memTemplParams" colspan="2">template&lt;unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Ratio&gt; </td></tr>
-<tr class="memitem:a7010d07de8236f9a17b302c78f37483e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="errors_8hpp.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceErrors.html#a7010d07de8236f9a17b302c78f37483e">Errors::Auto_MultiTau_Input_Validator</a> ()</td></tr>
-<tr class="memdesc:a7010d07de8236f9a17b302c78f37483e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input Validator for MultiTau auto-correlator.  <a href="namespaceErrors.html#a7010d07de8236f9a17b302c78f37483e">More...</a><br /></td></tr>
-<tr class="separator:a7010d07de8236f9a17b302c78f37483e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a869de67c8fd9dd06b265e93a6741ede6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8hpp.html#a869de67c8fd9dd06b265e93a6741ede6">_assert_</a> (bool expression, const char *__attribute__((unused)) message=&quot;&quot;)</td></tr>
-<tr class="memdesc:a869de67c8fd9dd06b265e93a6741ede6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom assertion function.  <a href="#a869de67c8fd9dd06b265e93a6741ede6">More...</a><br /></td></tr>
-<tr class="separator:a869de67c8fd9dd06b265e93a6741ede6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a0eb326048ed31037a6e5ec5634a6202e"></a>
@@ -156,7 +144,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>This file contain the Common Error Codes for Software-Hardware Interface. It defines the <code>Error_t</code> and namespace <code><a class="el" href="namespaceErrors.html">Errors</a></code> that are used to handle the errors and interact with the LED dashboard. </p>
+<p>This file contain the Common Error Codes for Software-Hardware Interface. It defines the <code>Error_t</code> and namespace <code><a class="el" href="classErrors.html">Errors</a></code> that are used to handle the errors and interact with the LED dashboard. </p>
 <dl class="section author"><dt>Author</dt><dd>Yatharth Bhasin (github → yatharthb97) Maximum Allocations of 32-bit integers allowed on the microcontroller Teensy. </dd></dl>
 
 </div>
@@ -194,45 +182,9 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a4e8c0d09726859e3d3369c0da5a1aa7fa7e748bca7005cc737bad51b247997421"></a>Input_Validation&#160;</td><td class="fielddoc"><p>Input validation failed. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="a4e8c0d09726859e3d3369c0da5a1aa7fac7e40b9218d101cde2dc4c43b9fed0fe"></a>Generic_Error&#160;</td><td class="fielddoc"><p>Only here for development and debugging. </p>
+</td></tr>
 </table>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a869de67c8fd9dd06b265e93a6741ede6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a869de67c8fd9dd06b265e93a6741ede6">&#9670;&nbsp;</a></span>_assert_()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void _assert_ </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>expression</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *__attribute__((unused))&#160;</td>
-          <td class="paramname"><em>message</em> = <code>&quot;&quot;</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Custom assertion function. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">expression</td><td>which must evaluate to false for the assertion to call abort. </td></tr>
-    <tr><td class="paramname">message</td><td>which is ignored in the function, but helps with code redability </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>

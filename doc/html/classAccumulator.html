@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>DIY Auto-Correlator: Accumulator&lt; Series_size &gt; Class Template Reference</title>
+<title>DIY Auto-Correlator: Accumulator Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -66,7 +66,7 @@ $(function() {
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classAccumulator-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Accumulator&lt; Series_size &gt; Class Template Reference</div>  </div>
+<div class="title">Accumulator Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -77,55 +77,81 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a58b1133059f8c92fe6f5f0b229de668f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAccumulator.html#a58b1133059f8c92fe6f5f0b229de668f">pipe</a> (<a class="el" href="classLin__ACorr__RT__Teensy.html">Lin_ACorr_RT_Teensy</a>&lt; Series_size &gt; &amp;channel, <a class="el" href="types_8hpp.html#a22f279793847eba127de149437848c48">counter_t</a> datum) __attribute__((flatten))</td></tr>
-<tr class="memdesc:a58b1133059f8c92fe6f5f0b229de668f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accumulates data points until the BufferPoints criteria is satisfied, after which the points are pushed to the channel.  <a href="#a58b1133059f8c92fe6f5f0b229de668f">More...</a><br /></td></tr>
-<tr class="separator:a58b1133059f8c92fe6f5f0b229de668f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adab342ee6d376a45ed38fe1e1679a1e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAccumulator.html#adab342ee6d376a45ed38fe1e1679a1e2">do_accumulate</a> (unsigned int buffer_cnt)</td></tr>
+<tr class="memdesc:adab342ee6d376a45ed38fe1e1679a1e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the number of points to buffer(accumulate) before pushing to Correlator object.  <a href="#adab342ee6d376a45ed38fe1e1679a1e2">More...</a><br /></td></tr>
+<tr class="separator:adab342ee6d376a45ed38fe1e1679a1e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7494b569b7f4f2d2ab115e623ab135d"><td class="memTemplParams" colspan="2">template&lt;typename LinCorrType &gt; </td></tr>
+<tr class="memitem:aa7494b569b7f4f2d2ab115e623ab135d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classAccumulator.html#aa7494b569b7f4f2d2ab115e623ab135d">pipe</a> (LinCorrType &amp;channel, const <a class="el" href="types_8hpp.html#a22f279793847eba127de149437848c48">counter_t</a> datum)</td></tr>
+<tr class="memdesc:aa7494b569b7f4f2d2ab115e623ab135d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accumulates data points until the BufferPoints criteria is satisfied, after which the points are pushed to the channel.  <a href="#aa7494b569b7f4f2d2ab115e623ab135d">More...</a><br /></td></tr>
+<tr class="separator:aa7494b569b7f4f2d2ab115e623ab135d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a1c24cae338768ee66f18f0abc2adea8c"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAccumulator.html#a1c24cae338768ee66f18f0abc2adea8c">BufferPoints</a> = 0</td></tr>
-<tr class="memdesc:a1c24cae338768ee66f18f0abc2adea8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of points accumulated and binned together.  <a href="#a1c24cae338768ee66f18f0abc2adea8c">More...</a><br /></td></tr>
-<tr class="separator:a1c24cae338768ee66f18f0abc2adea8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e4595169413a77122fe56cdd39137ae"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAccumulator.html#a6e4595169413a77122fe56cdd39137ae">Buffer_count</a> = 0</td></tr>
+<tr class="memdesc:a6e4595169413a77122fe56cdd39137ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of points accumulated and binned together.  <a href="#a6e4595169413a77122fe56cdd39137ae">More...</a><br /></td></tr>
+<tr class="separator:a6e4595169413a77122fe56cdd39137ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a7c73ca34e36c1bf882aebe96187f30bb"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAccumulator.html#a7c73ca34e36c1bf882aebe96187f30bb">ReceivedPointsCounter</a> = 0</td></tr>
-<tr class="memdesc:a7c73ca34e36c1bf882aebe96187f30bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of points accepted by the accumulator. For debugging.  <a href="#a7c73ca34e36c1bf882aebe96187f30bb">More...</a><br /></td></tr>
-<tr class="separator:a7c73ca34e36c1bf882aebe96187f30bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b21e86275e8a4fb3223ddbd3d9d09fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8hpp.html#a22f279793847eba127de149437848c48">counter_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAccumulator.html#a5b21e86275e8a4fb3223ddbd3d9d09fc">Accumulate</a> = 0.0</td></tr>
-<tr class="memdesc:a5b21e86275e8a4fb3223ddbd3d9d09fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the value of the accumulate.  <a href="#a5b21e86275e8a4fb3223ddbd3d9d09fc">More...</a><br /></td></tr>
-<tr class="separator:a5b21e86275e8a4fb3223ddbd3d9d09fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3eca18da4beff6509551889f43e07633"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAccumulator.html#a3eca18da4beff6509551889f43e07633">LocalCounter</a> = 0</td></tr>
-<tr class="memdesc:a3eca18da4beff6509551889f43e07633"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maintains a cunter of the items to accumuate.  <a href="#a3eca18da4beff6509551889f43e07633">More...</a><br /></td></tr>
-<tr class="separator:a3eca18da4beff6509551889f43e07633"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e615af8b85dd2c8500d1f8c473879ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8hpp.html#a22f279793847eba127de149437848c48">counter_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAccumulator.html#a8e615af8b85dd2c8500d1f8c473879ab">Accumulate</a> = 0</td></tr>
+<tr class="memdesc:a8e615af8b85dd2c8500d1f8c473879ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the value of the accumulate.  <a href="#a8e615af8b85dd2c8500d1f8c473879ab">More...</a><br /></td></tr>
+<tr class="separator:a8e615af8b85dd2c8500d1f8c473879ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb010cbe82265d22e5d577033574a16b"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAccumulator.html#afb010cbe82265d22e5d577033574a16b">Update_count</a> = 0</td></tr>
+<tr class="memdesc:afb010cbe82265d22e5d577033574a16b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maintains a counter of the items to accumuate.  <a href="#afb010cbe82265d22e5d577033574a16b">More...</a><br /></td></tr>
+<tr class="separator:afb010cbe82265d22e5d577033574a16b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;index_t Series_size&gt;<br />
-class Accumulator&lt; Series_size &gt;</h3>
-
-<p>Adapter object responsible for accumulating the points and coarsening the time-series as per the relavent linear-correlator time-resolution. </p>
+<div class="textblock"><p>Adapter object responsible for accumulating the points and coarsening the time-series as per the relavent linear-correlator time-resolution. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a58b1133059f8c92fe6f5f0b229de668f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58b1133059f8c92fe6f5f0b229de668f">&#9670;&nbsp;</a></span>pipe()</h2>
+<a id="adab342ee6d376a45ed38fe1e1679a1e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adab342ee6d376a45ed38fe1e1679a1e2">&#9670;&nbsp;</a></span>do_accumulate()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;index_t Series_size&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classAccumulator.html">Accumulator</a>&lt; Series_size &gt;::pipe </td>
+          <td class="memname">void Accumulator::do_accumulate </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classLin__ACorr__RT__Teensy.html">Lin_ACorr_RT_Teensy</a>&lt; Series_size &gt; &amp;&#160;</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>buffer_cnt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the number of points to buffer(accumulate) before pushing to Correlator object. </p>
+
+</div>
+</div>
+<a id="aa7494b569b7f4f2d2ab115e623ab135d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7494b569b7f4f2d2ab115e623ab135d">&#9670;&nbsp;</a></span>pipe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename LinCorrType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Accumulator::pipe </td>
+          <td>(</td>
+          <td class="paramtype">LinCorrType &amp;&#160;</td>
           <td class="paramname"><em>channel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="types_8hpp.html#a22f279793847eba127de149437848c48">counter_t</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="types_8hpp.html#a22f279793847eba127de149437848c48">counter_t</a>&#160;</td>
           <td class="paramname"><em>datum</em>&#160;</td>
         </tr>
         <tr>
@@ -146,19 +172,17 @@ template&lt;index_t Series_size&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a5b21e86275e8a4fb3223ddbd3d9d09fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5b21e86275e8a4fb3223ddbd3d9d09fc">&#9670;&nbsp;</a></span>Accumulate</h2>
+<a id="a8e615af8b85dd2c8500d1f8c473879ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e615af8b85dd2c8500d1f8c473879ab">&#9670;&nbsp;</a></span>Accumulate</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;index_t Series_size&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8hpp.html#a22f279793847eba127de149437848c48">counter_t</a> <a class="el" href="classAccumulator.html">Accumulator</a>&lt; Series_size &gt;::Accumulate = 0.0</td>
+          <td class="memname"><a class="el" href="types_8hpp.html#a22f279793847eba127de149437848c48">counter_t</a> Accumulator::Accumulate = 0</td>
         </tr>
       </table>
   </td>
@@ -172,16 +196,14 @@ template&lt;index_t Series_size&gt; </div>
 
 </div>
 </div>
-<a id="a1c24cae338768ee66f18f0abc2adea8c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c24cae338768ee66f18f0abc2adea8c">&#9670;&nbsp;</a></span>BufferPoints</h2>
+<a id="a6e4595169413a77122fe56cdd39137ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e4595169413a77122fe56cdd39137ae">&#9670;&nbsp;</a></span>Buffer_count</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;index_t Series_size&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int <a class="el" href="classAccumulator.html">Accumulator</a>&lt; Series_size &gt;::BufferPoints = 0</td>
+          <td class="memname">unsigned int Accumulator::Buffer_count = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -190,19 +212,17 @@ template&lt;index_t Series_size&gt; </div>
 
 </div>
 </div>
-<a id="a3eca18da4beff6509551889f43e07633"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3eca18da4beff6509551889f43e07633">&#9670;&nbsp;</a></span>LocalCounter</h2>
+<a id="afb010cbe82265d22e5d577033574a16b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb010cbe82265d22e5d577033574a16b">&#9670;&nbsp;</a></span>Update_count</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;index_t Series_size&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int <a class="el" href="classAccumulator.html">Accumulator</a>&lt; Series_size &gt;::LocalCounter = 0</td>
+          <td class="memname">unsigned int Accumulator::Update_count = 0</td>
         </tr>
       </table>
   </td>
@@ -212,33 +232,7 @@ template&lt;index_t Series_size&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Maintains a cunter of the items to accumuate. </p>
-
-</div>
-</div>
-<a id="a7c73ca34e36c1bf882aebe96187f30bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c73ca34e36c1bf882aebe96187f30bb">&#9670;&nbsp;</a></span>ReceivedPointsCounter</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;index_t Series_size&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned int <a class="el" href="classAccumulator.html">Accumulator</a>&lt; Series_size &gt;::ReceivedPointsCounter = 0</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Maximum number of points accepted by the accumulator. For debugging. </p>
+<p>Maintains a counter of the items to accumuate. </p>
 
 </div>
 </div>

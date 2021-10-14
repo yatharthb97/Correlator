@@ -1,0 +1,150 @@
+\hypertarget{global_8hpp}{}\section{src/global.hpp File Reference}
+\label{global_8hpp}\index{src/global.\+hpp@{src/global.\+hpp}}
+{\ttfamily \#include \char`\"{}./../code/software/multi\+\_\+tau.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}./../code/software/histogram.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}./../code/hardware/pit.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}./../code/hardware/qtmr1.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}./../code/hardware/interarrival.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}./../code/hardware/perf\+\_\+counter.\+hpp\char`\"{}}\newline
+Include dependency graph for global.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{global_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{global_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMultiTauACorrRTTeensy}{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}$<$ L\+I\+N\+\_\+\+C\+O\+R\+RS, S\+E\+R\+I\+E\+S\+\_\+\+S\+I\+ZE, B\+I\+N\+\_\+\+R\+A\+T\+IO $>$ \hyperlink{global_8hpp_ac9447f67aa187aba18d60e3fd3a51bd3}{multitau}
+\item 
+\hyperlink{classPITController}{P\+I\+T\+Controller}$<$ P\+I\+T\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+I\+N\+\_\+\+U\+SE $>$ \hyperlink{global_8hpp_af11c331fc1c91504e3f7d2dccf67b739}{P\+I\+\_\+t}
+\begin{DoxyCompactList}\small\item\em P\+I\+\_\+t Resource. \end{DoxyCompactList}\item 
+\hyperlink{classTMR1Controller}{T\+M\+R1\+Controller} \hyperlink{global_8hpp_a691981c43e1bdddca6df5accb6927331}{T\+T\+L\+\_\+c}
+\begin{DoxyCompactList}\small\item\em T\+T\+L\+\_\+c Resource. \end{DoxyCompactList}\item 
+volatile \hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} \hyperlink{global_8hpp_afcac7adcea259024440f8d9257d82d08}{Counter\+\_\+val}
+\begin{DoxyCompactList}\small\item\em Stores the value read from the counter. \end{DoxyCompactList}\item 
+volatile bool \hyperlink{global_8hpp_afaf7617e9ce0486d54a6c65fedeaf1f9}{Update\+\_\+flag}
+\begin{DoxyCompactList}\small\item\em Indicates if a new value has arrived from the counting module. \end{DoxyCompactList}\item 
+volatile unsigned int \hyperlink{global_8hpp_aec1fbfd9bfc90e447b39a9362a0c51de}{Update\+\_\+count}
+\begin{DoxyCompactList}\small\item\em Stores the number of updates made on the correlator channels since the last serialout. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{global_8hpp_a7687ee385c82b3ac600720b79678755a}{Serial\+Out\+\_\+\+After}
+\item 
+const double \hyperlink{global_8hpp_a1d18182f432f5b88cf58be9c367be457}{Gate\+\_\+time\+\_\+us}
+\begin{DoxyCompactList}\small\item\em Serial output is done after these many updates (default → overriden in the setup function). \end{DoxyCompactList}\item 
+const double \hyperlink{global_8hpp_ada17f1639ca8a5932f17942031baa67f}{Allowed\+\_\+period\+\_\+error\+\_\+us}
+\begin{DoxyCompactList}\small\item\em The gate time of T\+T\+L\+\_\+C in microseconds (us) \end{DoxyCompactList}\item 
+const int32\+\_\+t \hyperlink{global_8hpp_abaef541ea152f1c10c21aab606888f1b}{sync\+\_\+code}
+\begin{DoxyCompactList}\small\item\em Gate time precision error due to finite precision of timers. \end{DoxyCompactList}\item 
+float \hyperlink{global_8hpp_ac6c0b94aa91631e1cf6f4f55e97c52b2}{array} \mbox{[}C\+H\+A\+N\+N\+E\+L\+\_\+\+S\+I\+ZE\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{global_8hpp_ada17f1639ca8a5932f17942031baa67f}\label{global_8hpp_ada17f1639ca8a5932f17942031baa67f}} 
+\index{global.\+hpp@{global.\+hpp}!Allowed\+\_\+period\+\_\+error\+\_\+us@{Allowed\+\_\+period\+\_\+error\+\_\+us}}
+\index{Allowed\+\_\+period\+\_\+error\+\_\+us@{Allowed\+\_\+period\+\_\+error\+\_\+us}!global.\+hpp@{global.\+hpp}}
+\subsubsection{\texorpdfstring{Allowed\+\_\+period\+\_\+error\+\_\+us}{Allowed\_period\_error\_us}}
+{\footnotesize\ttfamily const double Allowed\+\_\+period\+\_\+error\+\_\+us}
+
+
+
+The gate time of T\+T\+L\+\_\+C in microseconds (us) 
+
+\mbox{\Hypertarget{global_8hpp_ac6c0b94aa91631e1cf6f4f55e97c52b2}\label{global_8hpp_ac6c0b94aa91631e1cf6f4f55e97c52b2}} 
+\index{global.\+hpp@{global.\+hpp}!array@{array}}
+\index{array@{array}!global.\+hpp@{global.\+hpp}}
+\subsubsection{\texorpdfstring{array}{array}}
+{\footnotesize\ttfamily float array\mbox{[}C\+H\+A\+N\+N\+E\+L\+\_\+\+S\+I\+ZE\mbox{]}}
+
+\mbox{\Hypertarget{global_8hpp_afcac7adcea259024440f8d9257d82d08}\label{global_8hpp_afcac7adcea259024440f8d9257d82d08}} 
+\index{global.\+hpp@{global.\+hpp}!Counter\+\_\+val@{Counter\+\_\+val}}
+\index{Counter\+\_\+val@{Counter\+\_\+val}!global.\+hpp@{global.\+hpp}}
+\subsubsection{\texorpdfstring{Counter\+\_\+val}{Counter\_val}}
+{\footnotesize\ttfamily volatile \hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} Counter\+\_\+val}
+
+
+
+Stores the value read from the counter. 
+
+\mbox{\Hypertarget{global_8hpp_a1d18182f432f5b88cf58be9c367be457}\label{global_8hpp_a1d18182f432f5b88cf58be9c367be457}} 
+\index{global.\+hpp@{global.\+hpp}!Gate\+\_\+time\+\_\+us@{Gate\+\_\+time\+\_\+us}}
+\index{Gate\+\_\+time\+\_\+us@{Gate\+\_\+time\+\_\+us}!global.\+hpp@{global.\+hpp}}
+\subsubsection{\texorpdfstring{Gate\+\_\+time\+\_\+us}{Gate\_time\_us}}
+{\footnotesize\ttfamily const double Gate\+\_\+time\+\_\+us}
+
+
+
+Serial output is done after these many updates (default → overriden in the setup function). 
+
+\mbox{\Hypertarget{global_8hpp_ac9447f67aa187aba18d60e3fd3a51bd3}\label{global_8hpp_ac9447f67aa187aba18d60e3fd3a51bd3}} 
+\index{global.\+hpp@{global.\+hpp}!multitau@{multitau}}
+\index{multitau@{multitau}!global.\+hpp@{global.\+hpp}}
+\subsubsection{\texorpdfstring{multitau}{multitau}}
+{\footnotesize\ttfamily \hyperlink{classMultiTauACorrRTTeensy}{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}$<$L\+I\+N\+\_\+\+C\+O\+R\+RS, S\+E\+R\+I\+E\+S\+\_\+\+S\+I\+ZE, B\+I\+N\+\_\+\+R\+A\+T\+IO$>$ multitau}
+
+\mbox{\Hypertarget{global_8hpp_af11c331fc1c91504e3f7d2dccf67b739}\label{global_8hpp_af11c331fc1c91504e3f7d2dccf67b739}} 
+\index{global.\+hpp@{global.\+hpp}!P\+I\+\_\+t@{P\+I\+\_\+t}}
+\index{P\+I\+\_\+t@{P\+I\+\_\+t}!global.\+hpp@{global.\+hpp}}
+\subsubsection{\texorpdfstring{P\+I\+\_\+t}{PI\_t}}
+{\footnotesize\ttfamily \hyperlink{classPITController}{P\+I\+T\+Controller}$<$P\+I\+T\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+I\+N\+\_\+\+U\+SE$>$ P\+I\+\_\+t}
+
+
+
+P\+I\+\_\+t Resource. 
+
+\mbox{\Hypertarget{global_8hpp_a7687ee385c82b3ac600720b79678755a}\label{global_8hpp_a7687ee385c82b3ac600720b79678755a}} 
+\index{global.\+hpp@{global.\+hpp}!Serial\+Out\+\_\+\+After@{Serial\+Out\+\_\+\+After}}
+\index{Serial\+Out\+\_\+\+After@{Serial\+Out\+\_\+\+After}!global.\+hpp@{global.\+hpp}}
+\subsubsection{\texorpdfstring{Serial\+Out\+\_\+\+After}{SerialOut\_After}}
+{\footnotesize\ttfamily uint32\+\_\+t Serial\+Out\+\_\+\+After}
+
+\mbox{\Hypertarget{global_8hpp_abaef541ea152f1c10c21aab606888f1b}\label{global_8hpp_abaef541ea152f1c10c21aab606888f1b}} 
+\index{global.\+hpp@{global.\+hpp}!sync\+\_\+code@{sync\+\_\+code}}
+\index{sync\+\_\+code@{sync\+\_\+code}!global.\+hpp@{global.\+hpp}}
+\subsubsection{\texorpdfstring{sync\+\_\+code}{sync\_code}}
+{\footnotesize\ttfamily const int32\+\_\+t sync\+\_\+code}
+
+
+
+Gate time precision error due to finite precision of timers. 
+
+\mbox{\Hypertarget{global_8hpp_a691981c43e1bdddca6df5accb6927331}\label{global_8hpp_a691981c43e1bdddca6df5accb6927331}} 
+\index{global.\+hpp@{global.\+hpp}!T\+T\+L\+\_\+c@{T\+T\+L\+\_\+c}}
+\index{T\+T\+L\+\_\+c@{T\+T\+L\+\_\+c}!global.\+hpp@{global.\+hpp}}
+\subsubsection{\texorpdfstring{T\+T\+L\+\_\+c}{TTL\_c}}
+{\footnotesize\ttfamily \hyperlink{classTMR1Controller}{T\+M\+R1\+Controller} T\+T\+L\+\_\+c}
+
+
+
+T\+T\+L\+\_\+c Resource. 
+
+\mbox{\Hypertarget{global_8hpp_aec1fbfd9bfc90e447b39a9362a0c51de}\label{global_8hpp_aec1fbfd9bfc90e447b39a9362a0c51de}} 
+\index{global.\+hpp@{global.\+hpp}!Update\+\_\+count@{Update\+\_\+count}}
+\index{Update\+\_\+count@{Update\+\_\+count}!global.\+hpp@{global.\+hpp}}
+\subsubsection{\texorpdfstring{Update\+\_\+count}{Update\_count}}
+{\footnotesize\ttfamily volatile unsigned int Update\+\_\+count}
+
+
+
+Stores the number of updates made on the correlator channels since the last serialout. 
+
+\mbox{\Hypertarget{global_8hpp_afaf7617e9ce0486d54a6c65fedeaf1f9}\label{global_8hpp_afaf7617e9ce0486d54a6c65fedeaf1f9}} 
+\index{global.\+hpp@{global.\+hpp}!Update\+\_\+flag@{Update\+\_\+flag}}
+\index{Update\+\_\+flag@{Update\+\_\+flag}!global.\+hpp@{global.\+hpp}}
+\subsubsection{\texorpdfstring{Update\+\_\+flag}{Update\_flag}}
+{\footnotesize\ttfamily volatile bool Update\+\_\+flag}
+
+
+
+Indicates if a new value has arrived from the counting module. 
+

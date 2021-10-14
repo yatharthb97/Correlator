@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['normalizer',['normalizer',['../d5/d96/namespacenormalizer.html',1,'']]]
+  ['normalizer',['normalizer',['../namespacenormalizer.html',1,'']]]
 ];

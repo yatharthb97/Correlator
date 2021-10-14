@@ -1,0 +1,181 @@
+\hypertarget{classMultiTauACorrRTTeensy}{}\section{Multi\+Tau\+A\+Corr\+R\+T\+Teensy$<$ Lin\+\_\+channels, Series\+\_\+size, Bin\+\_\+\+Ratio $>$ Class Template Reference}
+\label{classMultiTauACorrRTTeensy}\index{Multi\+Tau\+A\+Corr\+R\+T\+Teensy$<$ Lin\+\_\+channels, Series\+\_\+size, Bin\+\_\+\+Ratio $>$@{Multi\+Tau\+A\+Corr\+R\+T\+Teensy$<$ Lin\+\_\+channels, Series\+\_\+size, Bin\+\_\+\+Ratio $>$}}
+
+
+Multi\+Tau Auto-\/\+Correlator object that is composed of multiple linear -\/ autocorrelators. Specialised for teensy.  
+
+
+
+
+{\ttfamily \#include $<$multi\+\_\+tau.\+hpp$>$}
+
+
+
+Collaboration diagram for Multi\+Tau\+A\+Corr\+R\+T\+Teensy$<$ Lin\+\_\+channels, Series\+\_\+size, Bin\+\_\+\+Ratio $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMultiTauACorrRTTeensy__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMultiTauACorrRTTeensy_a46b73c98f07f536603a8f5b2b3174d91}{Multi\+Tau\+A\+Corr\+R\+T\+Teensy} ()
+\begin{DoxyCompactList}\small\item\em Counts the total number of data points sent to the counter. \end{DoxyCompactList}\item 
+void \hyperlink{classMultiTauACorrRTTeensy_a85777a221b7a15de34b252ed804ab0f8}{push\+\_\+datum} (\hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} datum) \+\_\+\+\_\+attribute\+\_\+\+\_\+((flatten))
+\begin{DoxyCompactList}\small\item\em Pushes the datum to each of the Linear Correlators through the \hyperlink{classAccumulator}{Accumulator} adapter. \end{DoxyCompactList}\item 
+void \hyperlink{classMultiTauACorrRTTeensy_ad3c078b834bb1682c93ba4cd5639d450}{push\+\_\+data} (const \hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} $\ast$container, const \hyperlink{types_8hpp_a7c40bb931c31595ed6308605f4537447}{index\+\_\+t} size) \+\_\+\+\_\+attribute\+\_\+\+\_\+((flatten))
+\begin{DoxyCompactList}\small\item\em Repeatedly calls the Multi\+Tau\+\_\+\+A\+Corr\+\_\+\+R\+T\+::push\+\_\+datum() on the given container of counter values. \end{DoxyCompactList}\item 
+void \hyperlink{classMultiTauACorrRTTeensy_af9ab6f055c1efc4a28c7c5bfa3aea074}{ch\+\_\+out} () const \+\_\+\+\_\+attribute\+\_\+\+\_\+((flatten))
+\begin{DoxyCompactList}\small\item\em Outputs the Linear Correlator channels through the discarder adapter. \end{DoxyCompactList}\item 
+\hyperlink{types_8hpp_a7c40bb931c31595ed6308605f4537447}{index\+\_\+t} \hyperlink{classMultiTauACorrRTTeensy_a56fbc9bf757ac74e0dad862ec45def82}{time\+\_\+scaling\+\_\+factor} () const \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
+\item 
+\hyperlink{types_8hpp_a7c40bb931c31595ed6308605f4537447}{index\+\_\+t} \hyperlink{classMultiTauACorrRTTeensy_a1a677c901b40aecdd00a4f2135d8c2bb}{tau\+\_\+scaling\+\_\+scheme} (unsigned int s) const \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
+\begin{DoxyCompactList}\small\item\em Returns the relavent Tau scaling factor, based on the specialised scheme. It is used by the accumulator objects to set the Buffer\+Points attribute. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMonitorChannel}{Monitor\+Channel}$<$ true $>$ \hyperlink{classMultiTauACorrRTTeensy_a88f0486f59451fb97a787741c80badf9}{Mean\+Monitor}
+\item 
+uint32\+\_\+t \hyperlink{classMultiTauACorrRTTeensy_ab2fa5a0800fa7d9ee52900ced06ce935}{Data\+Counter} = 0
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAccumulator}{Accumulator} \hyperlink{classMultiTauACorrRTTeensy_aac3d87dfb6b995e83e20f444d3d5eb0d}{Accumulators} \mbox{[}Lin\+\_\+channels\mbox{]}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classAccumulator}{Accumulator} Objects for each channel (\hyperlink{classAccumulator}{Accumulator} \textquotesingle{}0\textquotesingle{} is redundant.) \end{DoxyCompactList}\item 
+\hyperlink{classLinACorrRTTeensy}{Lin\+A\+Corr\+R\+T\+Teensy}$<$ Series\+\_\+size, false $>$ \hyperlink{classMultiTauACorrRTTeensy_abd0498010dea716140e242ccbf426174}{Lin\+\_\+\+Corrs} \mbox{[}Lin\+\_\+channels\mbox{]}
+\begin{DoxyCompactList}\small\item\em Linear A\+Correlators. \end{DoxyCompactList}\item 
+\hyperlink{classDiscarderTeensy}{Discarder\+Teensy}$<$ Series\+\_\+size, int(Series\+\_\+size/Bin\+\_\+\+Ratio), 0 $>$ \hyperlink{classMultiTauACorrRTTeensy_ad7bd7663180cdc3702ada3e726486311}{Discarder}
+\begin{DoxyCompactList}\small\item\em Discarder that discards first \#\+Bin\+\_\+\+Ratio points. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$unsigned int Lin\+\_\+channels, index\+\_\+t Series\+\_\+size, unsigned int Bin\+\_\+\+Ratio$>$\newline
+class Multi\+Tau\+A\+Corr\+R\+T\+Teensy$<$ Lin\+\_\+channels, Series\+\_\+size, Bin\+\_\+\+Ratio $>$}
+
+Multi\+Tau Auto-\/\+Correlator object that is composed of multiple linear -\/ autocorrelators. Specialised for teensy. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMultiTauACorrRTTeensy_a46b73c98f07f536603a8f5b2b3174d91}\label{classMultiTauACorrRTTeensy_a46b73c98f07f536603a8f5b2b3174d91}} 
+\index{Multi\+Tau\+A\+Corr\+R\+T\+Teensy@{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}!Multi\+Tau\+A\+Corr\+R\+T\+Teensy@{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}}
+\index{Multi\+Tau\+A\+Corr\+R\+T\+Teensy@{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}!Multi\+Tau\+A\+Corr\+R\+T\+Teensy@{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}}
+\subsubsection{\texorpdfstring{Multi\+Tau\+A\+Corr\+R\+T\+Teensy()}{MultiTauACorrRTTeensy()}}
+{\footnotesize\ttfamily template$<$unsigned int Lin\+\_\+channels, index\+\_\+t Series\+\_\+size, unsigned int Bin\+\_\+\+Ratio$>$ \\
+\hyperlink{classMultiTauACorrRTTeensy}{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}$<$ Lin\+\_\+channels, Series\+\_\+size, Bin\+\_\+\+Ratio $>$\+::\hyperlink{classMultiTauACorrRTTeensy}{Multi\+Tau\+A\+Corr\+R\+T\+Teensy} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Counts the total number of data points sent to the counter. 
+
+Default Contructor -\/ Initalizes the Buffer\+Points attribute in the correlators. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMultiTauACorrRTTeensy_af9ab6f055c1efc4a28c7c5bfa3aea074}\label{classMultiTauACorrRTTeensy_af9ab6f055c1efc4a28c7c5bfa3aea074}} 
+\index{Multi\+Tau\+A\+Corr\+R\+T\+Teensy@{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}!ch\+\_\+out@{ch\+\_\+out}}
+\index{ch\+\_\+out@{ch\+\_\+out}!Multi\+Tau\+A\+Corr\+R\+T\+Teensy@{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}}
+\subsubsection{\texorpdfstring{ch\+\_\+out()}{ch\_out()}}
+{\footnotesize\ttfamily template$<$unsigned int Lin\+\_\+channels, index\+\_\+t Series\+\_\+size, unsigned int Bin\+\_\+\+Ratio$>$ \\
+void \hyperlink{classMultiTauACorrRTTeensy}{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}$<$ Lin\+\_\+channels, Series\+\_\+size, Bin\+\_\+\+Ratio $>$\+::ch\+\_\+out (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Outputs the Linear Correlator channels through the discarder adapter. 
+
+\mbox{\Hypertarget{classMultiTauACorrRTTeensy_ad3c078b834bb1682c93ba4cd5639d450}\label{classMultiTauACorrRTTeensy_ad3c078b834bb1682c93ba4cd5639d450}} 
+\index{Multi\+Tau\+A\+Corr\+R\+T\+Teensy@{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}!push\+\_\+data@{push\+\_\+data}}
+\index{push\+\_\+data@{push\+\_\+data}!Multi\+Tau\+A\+Corr\+R\+T\+Teensy@{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}}
+\subsubsection{\texorpdfstring{push\+\_\+data()}{push\_data()}}
+{\footnotesize\ttfamily template$<$unsigned int Lin\+\_\+channels, index\+\_\+t Series\+\_\+size, unsigned int Bin\+\_\+\+Ratio$>$ \\
+void \hyperlink{classMultiTauACorrRTTeensy}{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}$<$ Lin\+\_\+channels, Series\+\_\+size, Bin\+\_\+\+Ratio $>$\+::push\+\_\+data (\begin{DoxyParamCaption}\item[{const \hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} $\ast$}]{container,  }\item[{const \hyperlink{types_8hpp_a7c40bb931c31595ed6308605f4537447}{index\+\_\+t}}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Repeatedly calls the Multi\+Tau\+\_\+\+A\+Corr\+\_\+\+R\+T\+::push\+\_\+datum() on the given container of counter values. 
+
+\mbox{\Hypertarget{classMultiTauACorrRTTeensy_a85777a221b7a15de34b252ed804ab0f8}\label{classMultiTauACorrRTTeensy_a85777a221b7a15de34b252ed804ab0f8}} 
+\index{Multi\+Tau\+A\+Corr\+R\+T\+Teensy@{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}!push\+\_\+datum@{push\+\_\+datum}}
+\index{push\+\_\+datum@{push\+\_\+datum}!Multi\+Tau\+A\+Corr\+R\+T\+Teensy@{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}}
+\subsubsection{\texorpdfstring{push\+\_\+datum()}{push\_datum()}}
+{\footnotesize\ttfamily template$<$unsigned int Lin\+\_\+channels, index\+\_\+t Series\+\_\+size, unsigned int Bin\+\_\+\+Ratio$>$ \\
+void \hyperlink{classMultiTauACorrRTTeensy}{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}$<$ Lin\+\_\+channels, Series\+\_\+size, Bin\+\_\+\+Ratio $>$\+::push\+\_\+datum (\begin{DoxyParamCaption}\item[{\hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t}}]{datum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Pushes the datum to each of the Linear Correlators through the \hyperlink{classAccumulator}{Accumulator} adapter. 
+
+\mbox{\Hypertarget{classMultiTauACorrRTTeensy_a1a677c901b40aecdd00a4f2135d8c2bb}\label{classMultiTauACorrRTTeensy_a1a677c901b40aecdd00a4f2135d8c2bb}} 
+\index{Multi\+Tau\+A\+Corr\+R\+T\+Teensy@{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}!tau\+\_\+scaling\+\_\+scheme@{tau\+\_\+scaling\+\_\+scheme}}
+\index{tau\+\_\+scaling\+\_\+scheme@{tau\+\_\+scaling\+\_\+scheme}!Multi\+Tau\+A\+Corr\+R\+T\+Teensy@{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}}
+\subsubsection{\texorpdfstring{tau\+\_\+scaling\+\_\+scheme()}{tau\_scaling\_scheme()}}
+{\footnotesize\ttfamily template$<$unsigned int Lin\+\_\+channels, index\+\_\+t Series\+\_\+size, unsigned int Bin\+\_\+\+Ratio$>$ \\
+\hyperlink{types_8hpp_a7c40bb931c31595ed6308605f4537447}{index\+\_\+t} \hyperlink{classMultiTauACorrRTTeensy}{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}$<$ Lin\+\_\+channels, Series\+\_\+size, Bin\+\_\+\+Ratio $>$\+::tau\+\_\+scaling\+\_\+scheme (\begin{DoxyParamCaption}\item[{unsigned int}]{s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the relavent Tau scaling factor, based on the specialised scheme. It is used by the accumulator objects to set the Buffer\+Points attribute. 
+
+\mbox{\Hypertarget{classMultiTauACorrRTTeensy_a56fbc9bf757ac74e0dad862ec45def82}\label{classMultiTauACorrRTTeensy_a56fbc9bf757ac74e0dad862ec45def82}} 
+\index{Multi\+Tau\+A\+Corr\+R\+T\+Teensy@{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}!time\+\_\+scaling\+\_\+factor@{time\+\_\+scaling\+\_\+factor}}
+\index{time\+\_\+scaling\+\_\+factor@{time\+\_\+scaling\+\_\+factor}!Multi\+Tau\+A\+Corr\+R\+T\+Teensy@{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}}
+\subsubsection{\texorpdfstring{time\+\_\+scaling\+\_\+factor()}{time\_scaling\_factor()}}
+{\footnotesize\ttfamily template$<$unsigned int Lin\+\_\+channels, index\+\_\+t Series\+\_\+size, unsigned int Bin\+\_\+\+Ratio$>$ \\
+\hyperlink{types_8hpp_a7c40bb931c31595ed6308605f4537447}{index\+\_\+t} \hyperlink{classMultiTauACorrRTTeensy}{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}$<$ Lin\+\_\+channels, Series\+\_\+size, Bin\+\_\+\+Ratio $>$\+::time\+\_\+scaling\+\_\+factor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the number of data points after which, the timescale is scaled according to the Multi\+Tau\+\_\+\+A\+Corr\+\_\+\+R\+T\+::tau\+\_\+scaling\+\_\+scheme(). 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classMultiTauACorrRTTeensy_aac3d87dfb6b995e83e20f444d3d5eb0d}\label{classMultiTauACorrRTTeensy_aac3d87dfb6b995e83e20f444d3d5eb0d}} 
+\index{Multi\+Tau\+A\+Corr\+R\+T\+Teensy@{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}!Accumulators@{Accumulators}}
+\index{Accumulators@{Accumulators}!Multi\+Tau\+A\+Corr\+R\+T\+Teensy@{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}}
+\subsubsection{\texorpdfstring{Accumulators}{Accumulators}}
+{\footnotesize\ttfamily template$<$unsigned int Lin\+\_\+channels, index\+\_\+t Series\+\_\+size, unsigned int Bin\+\_\+\+Ratio$>$ \\
+\hyperlink{classAccumulator}{Accumulator} \hyperlink{classMultiTauACorrRTTeensy}{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}$<$ Lin\+\_\+channels, Series\+\_\+size, Bin\+\_\+\+Ratio $>$\+::Accumulators\mbox{[}Lin\+\_\+channels\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\hyperlink{classAccumulator}{Accumulator} Objects for each channel (\hyperlink{classAccumulator}{Accumulator} \textquotesingle{}0\textquotesingle{} is redundant.) 
+
+\mbox{\Hypertarget{classMultiTauACorrRTTeensy_ab2fa5a0800fa7d9ee52900ced06ce935}\label{classMultiTauACorrRTTeensy_ab2fa5a0800fa7d9ee52900ced06ce935}} 
+\index{Multi\+Tau\+A\+Corr\+R\+T\+Teensy@{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}!Data\+Counter@{Data\+Counter}}
+\index{Data\+Counter@{Data\+Counter}!Multi\+Tau\+A\+Corr\+R\+T\+Teensy@{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}}
+\subsubsection{\texorpdfstring{Data\+Counter}{DataCounter}}
+{\footnotesize\ttfamily template$<$unsigned int Lin\+\_\+channels, index\+\_\+t Series\+\_\+size, unsigned int Bin\+\_\+\+Ratio$>$ \\
+uint32\+\_\+t \hyperlink{classMultiTauACorrRTTeensy}{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}$<$ Lin\+\_\+channels, Series\+\_\+size, Bin\+\_\+\+Ratio $>$\+::Data\+Counter = 0}
+
+\mbox{\Hypertarget{classMultiTauACorrRTTeensy_ad7bd7663180cdc3702ada3e726486311}\label{classMultiTauACorrRTTeensy_ad7bd7663180cdc3702ada3e726486311}} 
+\index{Multi\+Tau\+A\+Corr\+R\+T\+Teensy@{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}!Discarder@{Discarder}}
+\index{Discarder@{Discarder}!Multi\+Tau\+A\+Corr\+R\+T\+Teensy@{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}}
+\subsubsection{\texorpdfstring{Discarder}{Discarder}}
+{\footnotesize\ttfamily template$<$unsigned int Lin\+\_\+channels, index\+\_\+t Series\+\_\+size, unsigned int Bin\+\_\+\+Ratio$>$ \\
+\hyperlink{classDiscarderTeensy}{Discarder\+Teensy}$<$Series\+\_\+size, int(Series\+\_\+size/Bin\+\_\+\+Ratio), 0$>$ \hyperlink{classMultiTauACorrRTTeensy}{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}$<$ Lin\+\_\+channels, Series\+\_\+size, Bin\+\_\+\+Ratio $>$\+::Discarder\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Discarder that discards first \#\+Bin\+\_\+\+Ratio points. 
+
+\mbox{\Hypertarget{classMultiTauACorrRTTeensy_abd0498010dea716140e242ccbf426174}\label{classMultiTauACorrRTTeensy_abd0498010dea716140e242ccbf426174}} 
+\index{Multi\+Tau\+A\+Corr\+R\+T\+Teensy@{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}!Lin\+\_\+\+Corrs@{Lin\+\_\+\+Corrs}}
+\index{Lin\+\_\+\+Corrs@{Lin\+\_\+\+Corrs}!Multi\+Tau\+A\+Corr\+R\+T\+Teensy@{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}}
+\subsubsection{\texorpdfstring{Lin\+\_\+\+Corrs}{Lin\_Corrs}}
+{\footnotesize\ttfamily template$<$unsigned int Lin\+\_\+channels, index\+\_\+t Series\+\_\+size, unsigned int Bin\+\_\+\+Ratio$>$ \\
+\hyperlink{classLinACorrRTTeensy}{Lin\+A\+Corr\+R\+T\+Teensy}$<$Series\+\_\+size, false$>$ \hyperlink{classMultiTauACorrRTTeensy}{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}$<$ Lin\+\_\+channels, Series\+\_\+size, Bin\+\_\+\+Ratio $>$\+::Lin\+\_\+\+Corrs\mbox{[}Lin\+\_\+channels\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Linear A\+Correlators. 
+
+\mbox{\Hypertarget{classMultiTauACorrRTTeensy_a88f0486f59451fb97a787741c80badf9}\label{classMultiTauACorrRTTeensy_a88f0486f59451fb97a787741c80badf9}} 
+\index{Multi\+Tau\+A\+Corr\+R\+T\+Teensy@{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}!Mean\+Monitor@{Mean\+Monitor}}
+\index{Mean\+Monitor@{Mean\+Monitor}!Multi\+Tau\+A\+Corr\+R\+T\+Teensy@{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}}
+\subsubsection{\texorpdfstring{Mean\+Monitor}{MeanMonitor}}
+{\footnotesize\ttfamily template$<$unsigned int Lin\+\_\+channels, index\+\_\+t Series\+\_\+size, unsigned int Bin\+\_\+\+Ratio$>$ \\
+\hyperlink{classMonitorChannel}{Monitor\+Channel}$<$true$>$ \hyperlink{classMultiTauACorrRTTeensy}{Multi\+Tau\+A\+Corr\+R\+T\+Teensy}$<$ Lin\+\_\+channels, Series\+\_\+size, Bin\+\_\+\+Ratio $>$\+::Mean\+Monitor}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/software/\hyperlink{multi__tau_8hpp}{multi\+\_\+tau.\+hpp}\end{DoxyCompactItemize}

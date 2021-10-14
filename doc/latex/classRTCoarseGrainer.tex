@@ -1,0 +1,155 @@
+\hypertarget{classRTCoarseGrainer}{}\section{R\+T\+Coarse\+Grainer Class Reference}
+\label{classRTCoarseGrainer}\index{R\+T\+Coarse\+Grainer@{R\+T\+Coarse\+Grainer}}
+
+
+An object that can accumulate data into a fixed size bin before changing its output value.  
+
+
+
+
+{\ttfamily \#include $<$monitor\+\_\+channel.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \hyperlink{classRTCoarseGrainer_a67187c9ba3d8142c23379392dec4e35d}{R\+T\+Coarse\+Grainer} (float coarsing\+\_\+interval, float minimum\+\_\+resolution)
+\begin{DoxyCompactList}\small\item\em Constructor that accepts a {\ttfamily coarsening\+\_\+interval} and the {\ttfamily minimum\+\_\+resolution} of data and assumes the coarse graining factor ({\ttfamily C\+G\+Factor}) as the {\ttfamily coarsening\+\_\+interval} divide by {\ttfamily minimum\+\_\+resolution}. \end{DoxyCompactList}\item 
+constexpr \hyperlink{classRTCoarseGrainer_af46c3757bdda8ce79f8655d5556d845b}{R\+T\+Coarse\+Grainer} (float coarsing\+\_\+interval)
+\begin{DoxyCompactList}\small\item\em Constructor that accepts a {\ttfamily coarsening\+\_\+interval} and the {\ttfamily minimum\+\_\+resolution} of data and assumes the coarse graining factor ({\ttfamily C\+G\+Factor}) as the {\ttfamily coarsening\+\_\+interval} divide by {\ttfamily minimum\+\_\+resolution}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Data\+Type $>$ }\\void \hyperlink{classRTCoarseGrainer_a92ba58efd22b7c3c9e79cd4d5e065e70}{push\+\_\+back} (const Data\+Type datum)
+\begin{DoxyCompactList}\small\item\em Updates the {\ttfamily \hyperlink{classRTCoarseGrainer}{R\+T\+Coarse\+Grainer}} object with the passed datum. \end{DoxyCompactList}\item 
+float \hyperlink{classRTCoarseGrainer_a2d0cd547401422150d1293a156abc86e}{output} () const
+\begin{DoxyCompactList}\small\item\em Returns the last available coarse-\/grained value. \end{DoxyCompactList}\item 
+float \hyperlink{classRTCoarseGrainer_a0a2a0cf51154b2ed00d18e397e0e0c95}{error} () const
+\begin{DoxyCompactList}\small\item\em Returns the discretization error. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classRTCoarseGrainer_a7912b13e79da3e88b1ea1c4067be7e08}{Accumulate} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Accumulate of the data. \end{DoxyCompactList}\item 
+float \hyperlink{classRTCoarseGrainer_a341ec4b52b5f79b15102fc1641a93b8f}{Out} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Last Ready Coarse Grained Value. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{classRTCoarseGrainer_aea262e8f08584c79ac097e8d57dfa909}{Update\+Cntr} = 0
+\begin{DoxyCompactList}\small\item\em Local counter that keep tracks of the updates made. \end{DoxyCompactList}\item 
+const uint32\+\_\+t \hyperlink{classRTCoarseGrainer_a99dc7fa0624717d9ec0a3b1786dfb89a}{C\+G\+Factor}
+\begin{DoxyCompactList}\small\item\em Number of points that are coarse-\/grained together. \end{DoxyCompactList}\item 
+float \hyperlink{classRTCoarseGrainer_a80a8cf362112f12a0f7acbeabf2477b2}{Error} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Error in the coarsening interval due to discretization. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An object that can accumulate data into a fixed size bin before changing its output value. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classRTCoarseGrainer_a67187c9ba3d8142c23379392dec4e35d}\label{classRTCoarseGrainer_a67187c9ba3d8142c23379392dec4e35d}} 
+\index{R\+T\+Coarse\+Grainer@{R\+T\+Coarse\+Grainer}!R\+T\+Coarse\+Grainer@{R\+T\+Coarse\+Grainer}}
+\index{R\+T\+Coarse\+Grainer@{R\+T\+Coarse\+Grainer}!R\+T\+Coarse\+Grainer@{R\+T\+Coarse\+Grainer}}
+\subsubsection{\texorpdfstring{R\+T\+Coarse\+Grainer()}{RTCoarseGrainer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily constexpr R\+T\+Coarse\+Grainer\+::\+R\+T\+Coarse\+Grainer (\begin{DoxyParamCaption}\item[{float}]{coarsing\+\_\+interval,  }\item[{float}]{minimum\+\_\+resolution }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor that accepts a {\ttfamily coarsening\+\_\+interval} and the {\ttfamily minimum\+\_\+resolution} of data and assumes the coarse graining factor ({\ttfamily C\+G\+Factor}) as the {\ttfamily coarsening\+\_\+interval} divide by {\ttfamily minimum\+\_\+resolution}. 
+
+\mbox{\Hypertarget{classRTCoarseGrainer_af46c3757bdda8ce79f8655d5556d845b}\label{classRTCoarseGrainer_af46c3757bdda8ce79f8655d5556d845b}} 
+\index{R\+T\+Coarse\+Grainer@{R\+T\+Coarse\+Grainer}!R\+T\+Coarse\+Grainer@{R\+T\+Coarse\+Grainer}}
+\index{R\+T\+Coarse\+Grainer@{R\+T\+Coarse\+Grainer}!R\+T\+Coarse\+Grainer@{R\+T\+Coarse\+Grainer}}
+\subsubsection{\texorpdfstring{R\+T\+Coarse\+Grainer()}{RTCoarseGrainer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily constexpr R\+T\+Coarse\+Grainer\+::\+R\+T\+Coarse\+Grainer (\begin{DoxyParamCaption}\item[{float}]{coarsing\+\_\+interval }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor that accepts a {\ttfamily coarsening\+\_\+interval} and the {\ttfamily minimum\+\_\+resolution} of data and assumes the coarse graining factor ({\ttfamily C\+G\+Factor}) as the {\ttfamily coarsening\+\_\+interval} divide by {\ttfamily minimum\+\_\+resolution}. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classRTCoarseGrainer_a0a2a0cf51154b2ed00d18e397e0e0c95}\label{classRTCoarseGrainer_a0a2a0cf51154b2ed00d18e397e0e0c95}} 
+\index{R\+T\+Coarse\+Grainer@{R\+T\+Coarse\+Grainer}!error@{error}}
+\index{error@{error}!R\+T\+Coarse\+Grainer@{R\+T\+Coarse\+Grainer}}
+\subsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily float R\+T\+Coarse\+Grainer\+::error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the discretization error. 
+
+\mbox{\Hypertarget{classRTCoarseGrainer_a2d0cd547401422150d1293a156abc86e}\label{classRTCoarseGrainer_a2d0cd547401422150d1293a156abc86e}} 
+\index{R\+T\+Coarse\+Grainer@{R\+T\+Coarse\+Grainer}!output@{output}}
+\index{output@{output}!R\+T\+Coarse\+Grainer@{R\+T\+Coarse\+Grainer}}
+\subsubsection{\texorpdfstring{output()}{output()}}
+{\footnotesize\ttfamily float R\+T\+Coarse\+Grainer\+::output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the last available coarse-\/grained value. 
+
+\mbox{\Hypertarget{classRTCoarseGrainer_a92ba58efd22b7c3c9e79cd4d5e065e70}\label{classRTCoarseGrainer_a92ba58efd22b7c3c9e79cd4d5e065e70}} 
+\index{R\+T\+Coarse\+Grainer@{R\+T\+Coarse\+Grainer}!push\+\_\+back@{push\+\_\+back}}
+\index{push\+\_\+back@{push\+\_\+back}!R\+T\+Coarse\+Grainer@{R\+T\+Coarse\+Grainer}}
+\subsubsection{\texorpdfstring{push\+\_\+back()}{push\_back()}}
+{\footnotesize\ttfamily template$<$typename Data\+Type $>$ \\
+void R\+T\+Coarse\+Grainer\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{const Data\+Type}]{datum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the {\ttfamily \hyperlink{classRTCoarseGrainer}{R\+T\+Coarse\+Grainer}} object with the passed datum. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classRTCoarseGrainer_a7912b13e79da3e88b1ea1c4067be7e08}\label{classRTCoarseGrainer_a7912b13e79da3e88b1ea1c4067be7e08}} 
+\index{R\+T\+Coarse\+Grainer@{R\+T\+Coarse\+Grainer}!Accumulate@{Accumulate}}
+\index{Accumulate@{Accumulate}!R\+T\+Coarse\+Grainer@{R\+T\+Coarse\+Grainer}}
+\subsubsection{\texorpdfstring{Accumulate}{Accumulate}}
+{\footnotesize\ttfamily float R\+T\+Coarse\+Grainer\+::\+Accumulate = 0.\+0}
+
+
+
+Accumulate of the data. 
+
+\mbox{\Hypertarget{classRTCoarseGrainer_a99dc7fa0624717d9ec0a3b1786dfb89a}\label{classRTCoarseGrainer_a99dc7fa0624717d9ec0a3b1786dfb89a}} 
+\index{R\+T\+Coarse\+Grainer@{R\+T\+Coarse\+Grainer}!C\+G\+Factor@{C\+G\+Factor}}
+\index{C\+G\+Factor@{C\+G\+Factor}!R\+T\+Coarse\+Grainer@{R\+T\+Coarse\+Grainer}}
+\subsubsection{\texorpdfstring{C\+G\+Factor}{CGFactor}}
+{\footnotesize\ttfamily const uint32\+\_\+t R\+T\+Coarse\+Grainer\+::\+C\+G\+Factor}
+
+
+
+Number of points that are coarse-\/grained together. 
+
+\mbox{\Hypertarget{classRTCoarseGrainer_a80a8cf362112f12a0f7acbeabf2477b2}\label{classRTCoarseGrainer_a80a8cf362112f12a0f7acbeabf2477b2}} 
+\index{R\+T\+Coarse\+Grainer@{R\+T\+Coarse\+Grainer}!Error@{Error}}
+\index{Error@{Error}!R\+T\+Coarse\+Grainer@{R\+T\+Coarse\+Grainer}}
+\subsubsection{\texorpdfstring{Error}{Error}}
+{\footnotesize\ttfamily float R\+T\+Coarse\+Grainer\+::\+Error = 0.\+0}
+
+
+
+Error in the coarsening interval due to discretization. 
+
+\mbox{\Hypertarget{classRTCoarseGrainer_a341ec4b52b5f79b15102fc1641a93b8f}\label{classRTCoarseGrainer_a341ec4b52b5f79b15102fc1641a93b8f}} 
+\index{R\+T\+Coarse\+Grainer@{R\+T\+Coarse\+Grainer}!Out@{Out}}
+\index{Out@{Out}!R\+T\+Coarse\+Grainer@{R\+T\+Coarse\+Grainer}}
+\subsubsection{\texorpdfstring{Out}{Out}}
+{\footnotesize\ttfamily float R\+T\+Coarse\+Grainer\+::\+Out = 0.\+0}
+
+
+
+Last Ready Coarse Grained Value. 
+
+\mbox{\Hypertarget{classRTCoarseGrainer_aea262e8f08584c79ac097e8d57dfa909}\label{classRTCoarseGrainer_aea262e8f08584c79ac097e8d57dfa909}} 
+\index{R\+T\+Coarse\+Grainer@{R\+T\+Coarse\+Grainer}!Update\+Cntr@{Update\+Cntr}}
+\index{Update\+Cntr@{Update\+Cntr}!R\+T\+Coarse\+Grainer@{R\+T\+Coarse\+Grainer}}
+\subsubsection{\texorpdfstring{Update\+Cntr}{UpdateCntr}}
+{\footnotesize\ttfamily uint32\+\_\+t R\+T\+Coarse\+Grainer\+::\+Update\+Cntr = 0}
+
+
+
+Local counter that keep tracks of the updates made. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/software/\hyperlink{monitor__channel_8hpp}{monitor\+\_\+channel.\+hpp}\end{DoxyCompactItemize}

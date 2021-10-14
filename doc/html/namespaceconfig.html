@@ -70,10 +70,12 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a4097152d333d323cef0159878ff205fc"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceconfig.html#a4097152d333d323cef0159878ff205fc">config_validation</a> (config)</td></tr>
+<tr class="separator:a4097152d333d323cef0159878ff205fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e5e09166a67c11eb868143f4e85607f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceconfig.html#a8e5e09166a67c11eb868143f4e85607f">generate_config_file</a> ()</td></tr>
 <tr class="separator:a8e5e09166a67c11eb868143f4e85607f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab97d69eb9e4097d1e43e248b73676d6a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceconfig.html#ab97d69eb9e4097d1e43e248b73676d6a">validate_config_file</a> (config_file)</td></tr>
-<tr class="separator:ab97d69eb9e4097d1e43e248b73676d6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7ad14f68cd9aec9e9b9d3cf08b3db07"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceconfig.html#ac7ad14f68cd9aec9e9b9d3cf08b3db07">fill_missing_in_config_file</a> (config_file)</td></tr>
+<tr class="separator:ac7ad14f68cd9aec9e9b9d3cf08b3db07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -81,6 +83,42 @@ Variables</h2></td></tr>
 <tr class="separator:ac321195dcb6ced179a85db093e63a1c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a4097152d333d323cef0159878ff205fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4097152d333d323cef0159878ff205fc">&#9670;&nbsp;</a></span>config_validation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def config.config_validation </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac7ad14f68cd9aec9e9b9d3cf08b3db07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7ad14f68cd9aec9e9b9d3cf08b3db07">&#9670;&nbsp;</a></span>fill_missing_in_config_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def config.fill_missing_in_config_file </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>config_file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Checks for missing fields in the configuration file and adds default values, if missing fields are found.</pre> 
+</div>
+</div>
 <a id="a8e5e09166a67c11eb868143f4e85607f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8e5e09166a67c11eb868143f4e85607f">&#9670;&nbsp;</a></span>generate_config_file()</h2>
 
@@ -98,24 +136,6 @@ Variables</h2></td></tr>
 <pre class="fragment">Generates the json configuration file in the current working directory </pre> 
 </div>
 </div>
-<a id="ab97d69eb9e4097d1e43e248b73676d6a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab97d69eb9e4097d1e43e248b73676d6a">&#9670;&nbsp;</a></span>validate_config_file()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def config.validate_config_file </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>config_file</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<pre class="fragment">Checks for missing fields in the configuration file and adds default values, if missing fields are found.</pre> 
-</div>
-</div>
 <h2 class="groupheader">Variable Documentation</h2>
 <a id="ac321195dcb6ced179a85db093e63a1c9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac321195dcb6ced179a85db093e63a1c9">&#9670;&nbsp;</a></span>default_config</h2>
@@ -128,7 +148,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=   { <span class="stringliteral">&quot;GateTime_us&quot;</span>: 5,</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                    <span class="stringliteral">&quot;AllowedGateTimeError_us&quot;</span>: 0.1,</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                    <span class="stringliteral">&quot;LinCorrs&quot;</span>: 9,</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                    <span class="stringliteral">&quot;SeriesSize&quot;</span>: 27,</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;                    <span class="stringliteral">&quot;BinRatio&quot;</span>: 3,</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;                    <span class="stringliteral">&quot;LiveGraph&quot;</span>: <span class="keyword">False</span>,</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;                    <span class="stringliteral">&quot;SamplingDelay_ms&quot;</span>: 50,</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                    <span class="stringliteral">&quot;Baud&quot;</span>: 9600,</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                    <span class="stringliteral">&quot;Port&quot;</span>: <span class="stringliteral">&quot;&quot;</span>,</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                    <span class="stringliteral">&quot;ISRPinToggle&quot;</span>: <span class="keyword">True</span>,</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                    <span class="stringliteral">&quot;AbortOnError&quot;</span>: <span class="keyword">True</span>,</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                    <span class="stringliteral">&quot;//# Comment&quot;</span>  : <span class="stringliteral">&quot;Missing fields will generate warnings and a default value will be added to the configuration.&quot;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                     }</div></div><!-- fragment -->
+
 </div>
 </div>
 </div><!-- contents -->

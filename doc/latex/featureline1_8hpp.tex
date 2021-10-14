@@ -1,0 +1,84 @@
+\hypertarget{featureline1_8hpp}{}\section{src/featureline1.hpp File Reference}
+\label{featureline1_8hpp}\index{src/featureline1.\+hpp@{src/featureline1.\+hpp}}
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include $<$imxrt.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}global.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}./../code/software/monitor\+\_\+channel.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}./../code/software/histogram.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}./../code/hardware/pins.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}./../code/hardware/utilities.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}./../code/hardware/ledpanel.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}./../code/hardware/errors.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}./../code/hardware/pit.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}./../code/hardware/qtmr1.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}./../code/hardware/perf\+\_\+counter.\+hpp\char`\"{}}\newline
+Include dependency graph for featureline1.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{featureline1_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{featureline1_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{featureline1_8hpp_a4fc8f622f69a856a51bd3d4b1b42233a}{isr\+\_\+fn} ()
+\begin{DoxyCompactList}\small\item\em I\+SR function used for processing counter values. \end{DoxyCompactList}\item 
+void \hyperlink{featureline1_8hpp_af81803d7af0f109d27e4bcc2859eb398}{serial\+\_\+out} ()
+\begin{DoxyCompactList}\small\item\em Outputs the data struct to the serial buffer. \end{DoxyCompactList}\item 
+void \hyperlink{featureline1_8hpp_a1d39ca49552cf7468c736db6854309ff}{gt\+\_\+setup} ()
+\begin{DoxyCompactList}\small\item\em Setup function for Initalization and setup. \end{DoxyCompactList}\item 
+void \hyperlink{featureline1_8hpp_aa9c34f2e013f03846aee63202bf56c43}{gt\+\_\+loop} ()
+\begin{DoxyCompactList}\small\item\em Loop function that processes the updates from the counters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{featureline1_8hpp_aa9c34f2e013f03846aee63202bf56c43}\label{featureline1_8hpp_aa9c34f2e013f03846aee63202bf56c43}} 
+\index{featureline1.\+hpp@{featureline1.\+hpp}!gt\+\_\+loop@{gt\+\_\+loop}}
+\index{gt\+\_\+loop@{gt\+\_\+loop}!featureline1.\+hpp@{featureline1.\+hpp}}
+\subsubsection{\texorpdfstring{gt\+\_\+loop()}{gt\_loop()}}
+{\footnotesize\ttfamily void gt\+\_\+loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loop function that processes the updates from the counters. 
+
+\mbox{\Hypertarget{featureline1_8hpp_a1d39ca49552cf7468c736db6854309ff}\label{featureline1_8hpp_a1d39ca49552cf7468c736db6854309ff}} 
+\index{featureline1.\+hpp@{featureline1.\+hpp}!gt\+\_\+setup@{gt\+\_\+setup}}
+\index{gt\+\_\+setup@{gt\+\_\+setup}!featureline1.\+hpp@{featureline1.\+hpp}}
+\subsubsection{\texorpdfstring{gt\+\_\+setup()}{gt\_setup()}}
+{\footnotesize\ttfamily void gt\+\_\+setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Setup function for Initalization and setup. 
+
+\mbox{\Hypertarget{featureline1_8hpp_a4fc8f622f69a856a51bd3d4b1b42233a}\label{featureline1_8hpp_a4fc8f622f69a856a51bd3d4b1b42233a}} 
+\index{featureline1.\+hpp@{featureline1.\+hpp}!isr\+\_\+fn@{isr\+\_\+fn}}
+\index{isr\+\_\+fn@{isr\+\_\+fn}!featureline1.\+hpp@{featureline1.\+hpp}}
+\subsubsection{\texorpdfstring{isr\+\_\+fn()}{isr\_fn()}}
+{\footnotesize\ttfamily void isr\+\_\+fn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+I\+SR function used for processing counter values. 
+
+\mbox{\Hypertarget{featureline1_8hpp_af81803d7af0f109d27e4bcc2859eb398}\label{featureline1_8hpp_af81803d7af0f109d27e4bcc2859eb398}} 
+\index{featureline1.\+hpp@{featureline1.\+hpp}!serial\+\_\+out@{serial\+\_\+out}}
+\index{serial\+\_\+out@{serial\+\_\+out}!featureline1.\+hpp@{featureline1.\+hpp}}
+\subsubsection{\texorpdfstring{serial\+\_\+out()}{serial\_out()}}
+{\footnotesize\ttfamily void serial\+\_\+out (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Outputs the data struct to the serial buffer. 
+

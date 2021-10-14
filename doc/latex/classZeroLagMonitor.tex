@@ -1,0 +1,55 @@
+\hypertarget{classZeroLagMonitor}{}\section{Zero\+Lag\+Monitor Class Reference}
+\label{classZeroLagMonitor}\index{Zero\+Lag\+Monitor@{Zero\+Lag\+Monitor}}
+
+
+Measures the zeroth auto-\/correlation, which is equal to the second moment of the sampled time series. This object was intended for experimentation with Linear-\/autocorrelators, which start from lag1, instead of lag0.  
+
+
+
+
+{\ttfamily \#include $<$monitor\+\_\+channel.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classZeroLagMonitor_a22be76548cef864fba0a9c9125a57cce}{push\+\_\+back} (\hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} datum) \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
+\item 
+float\+\_\+t \hyperlink{classZeroLagMonitor_ae55b5b21f78fd93d1c8afc95bba69ba4}{get\+\_\+output} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float\+\_\+t \hyperlink{classZeroLagMonitor_ad155a1aa85eba7a03b65c15649228006}{Second\+\_\+\+Moment} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Measures the zeroth auto-\/correlation, which is equal to the second moment of the sampled time series. This object was intended for experimentation with Linear-\/autocorrelators, which start from lag1, instead of lag0. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classZeroLagMonitor_ae55b5b21f78fd93d1c8afc95bba69ba4}\label{classZeroLagMonitor_ae55b5b21f78fd93d1c8afc95bba69ba4}} 
+\index{Zero\+Lag\+Monitor@{Zero\+Lag\+Monitor}!get\+\_\+output@{get\+\_\+output}}
+\index{get\+\_\+output@{get\+\_\+output}!Zero\+Lag\+Monitor@{Zero\+Lag\+Monitor}}
+\subsubsection{\texorpdfstring{get\+\_\+output()}{get\_output()}}
+{\footnotesize\ttfamily float\+\_\+t Zero\+Lag\+Monitor\+::get\+\_\+output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classZeroLagMonitor_a22be76548cef864fba0a9c9125a57cce}\label{classZeroLagMonitor_a22be76548cef864fba0a9c9125a57cce}} 
+\index{Zero\+Lag\+Monitor@{Zero\+Lag\+Monitor}!push\+\_\+back@{push\+\_\+back}}
+\index{push\+\_\+back@{push\+\_\+back}!Zero\+Lag\+Monitor@{Zero\+Lag\+Monitor}}
+\subsubsection{\texorpdfstring{push\+\_\+back()}{push\_back()}}
+{\footnotesize\ttfamily void Zero\+Lag\+Monitor\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{\hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t}}]{datum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classZeroLagMonitor_ad155a1aa85eba7a03b65c15649228006}\label{classZeroLagMonitor_ad155a1aa85eba7a03b65c15649228006}} 
+\index{Zero\+Lag\+Monitor@{Zero\+Lag\+Monitor}!Second\+\_\+\+Moment@{Second\+\_\+\+Moment}}
+\index{Second\+\_\+\+Moment@{Second\+\_\+\+Moment}!Zero\+Lag\+Monitor@{Zero\+Lag\+Monitor}}
+\subsubsection{\texorpdfstring{Second\+\_\+\+Moment}{Second\_Moment}}
+{\footnotesize\ttfamily float\+\_\+t Zero\+Lag\+Monitor\+::\+Second\+\_\+\+Moment = 0}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/software/\hyperlink{monitor__channel_8hpp}{monitor\+\_\+channel.\+hpp}\end{DoxyCompactItemize}

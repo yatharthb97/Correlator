@@ -1,4 +1,4 @@
-.TH "LinACorrRTTeensy< Series_Size, hasMonitorChannel >" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator and Photon Statistics" \" -*- nroff -*-
+.TH "LinACorrRTTeensy< Series_Size, hasMonitorChannel >" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -41,7 +41,7 @@ LinACorrRTTeensy< Series_Size, hasMonitorChannel > \- This is an implementation 
 
 .in +1c
 .ti -1c
-.RI "\fBchannel_t\fP \fBChannel_array\fP [Series_Size] = {0}"
+.RI "channel_t \fBChannel_array\fP [Series_Size] = {0}"
 .br
 .RI "Defines a run-time polymorphic \fBMonitorChannel\fP object, which decomposes to \fCghost\fP channel (UnitMeanChannel) if \fChasMonitorChannel\fP is true\&. Basically \fCUnitMeanChannel\fP does nothing\&. "
 .ti -1c
@@ -106,7 +106,7 @@ Repeatedly calls \fC\fBpush_datum()\fP\fP on the given container of values, one 
 Adds new \fIsingle\fP data point and processes it to the \fCChannel\fP\&. 
 .SH "Member Data Documentation"
 .PP 
-.SS "template<index_t Series_Size, bool hasMonitorChannel> \fBchannel_t\fP \fBLinACorrRTTeensy\fP< Series_Size, hasMonitorChannel >::Channel_array[Series_Size] = {0}"
+.SS "template<index_t Series_Size, bool hasMonitorChannel> channel_t \fBLinACorrRTTeensy\fP< Series_Size, hasMonitorChannel >::Channel_array[Series_Size] = {0}"
 
 .PP
 Defines a run-time polymorphic \fBMonitorChannel\fP object, which decomposes to \fCghost\fP channel (UnitMeanChannel) if \fChasMonitorChannel\fP is true\&. Basically \fCUnitMeanChannel\fP does nothing\&. Stores the Channel output 
@@ -121,4 +121,4 @@ Stores the last active index → Post-increment\&.
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for DIY Auto-Correlator and Photon Statistics from the source code\&.
+Generated automatically by Doxygen for DIY Auto-Correlator from the source code\&.

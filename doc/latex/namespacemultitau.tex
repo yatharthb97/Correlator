@@ -7,14 +7,28 @@ def \hyperlink{namespacemultitau_a1022c52950a892396ac45e7de5379e12}{channel\+\_\
 \item 
 def \hyperlink{namespacemultitau_a775aea685fe55a6707400660fadf9c35}{x\+\_\+tics} (lin\+\_\+corrs, series\+\_\+size, bin\+\_\+ratio)
 \item 
-def \hyperlink{namespacemultitau_a89bb2627a88498b04ebd436250310d71}{points\+\_\+norm} (lin\+\_\+corrs, series\+\_\+size, bin\+\_\+ratio, L\+C0\+\_\+points)
+def \hyperlink{namespacemultitau_a265372a8ef814094424e2d787eb6304f}{points\+\_\+scale\+\_\+template} (lin\+\_\+corrs, series\+\_\+size, bin\+\_\+ratio)
 \item 
-def \hyperlink{namespacemultitau_a6a712a94c13f6c08874ea710fc698ff7}{points\+\_\+norm\+\_\+template} (lin\+\_\+corrs, series\+\_\+size, bin\+\_\+ratio)
+def \hyperlink{namespacemultitau_a40d600d74abad18e71cccd90988a5cd7}{bin\+\_\+ratio\+\_\+scale} (lin\+\_\+corrs, series\+\_\+size, bin\+\_\+ratio)
+\item 
+def \hyperlink{namespacemultitau_a9516fc9217f79f4dc1c4f2dfb28c9b7a}{tau\+\_\+max} (lin\+\_\+corrs, series\+\_\+size, bin\+\_\+ratio)
+\item 
+def \hyperlink{namespacemultitau_aa907c1cffb653422b45f46332192b2a4}{time\+\_\+axis\+\_\+s} (tau\+\_\+axis, gate\+\_\+time\+\_\+ms)
+\item 
+def \hyperlink{namespacemultitau_a89bb2627a88498b04ebd436250310d71}{points\+\_\+norm} (lin\+\_\+corrs, series\+\_\+size, bin\+\_\+ratio, L\+C0\+\_\+points)
 \end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\mbox{\Hypertarget{namespacemultitau_a1022c52950a892396ac45e7de5379e12}\label{namespacemultitau_a1022c52950a892396ac45e7de5379e12}} 
+\mbox{\Hypertarget{namespacemultitau_a40d600d74abad18e71cccd90988a5cd7}\label{namespacemultitau_a40d600d74abad18e71cccd90988a5cd7}} 
+\index{multitau@{multitau}!bin\+\_\+ratio\+\_\+scale@{bin\+\_\+ratio\+\_\+scale}}
+\index{bin\+\_\+ratio\+\_\+scale@{bin\+\_\+ratio\+\_\+scale}!multitau@{multitau}}
+\subsubsection{\texorpdfstring{bin\+\_\+ratio\+\_\+scale()}{bin\_ratio\_scale()}}
+{\footnotesize\ttfamily def multitau.\+bin\+\_\+ratio\+\_\+scale (\begin{DoxyParamCaption}\item[{}]{lin\+\_\+corrs,  }\item[{}]{series\+\_\+size,  }\item[{}]{bin\+\_\+ratio }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns an array of size `channel_size` that scales as per the `multitau scheme` bin ratio.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacemultitau_a1022c52950a892396ac45e7de5379e12}\label{namespacemultitau_a1022c52950a892396ac45e7de5379e12}} 
 \index{multitau@{multitau}!channel\+\_\+size@{channel\+\_\+size}}
 \index{channel\+\_\+size@{channel\+\_\+size}!multitau@{multitau}}
 \subsubsection{\texorpdfstring{channel\+\_\+size()}{channel\_size()}}
@@ -31,13 +45,34 @@ def \hyperlink{namespacemultitau_a6a712a94c13f6c08874ea710fc698ff7}{points\+\_\+
 \begin{DoxyVerb}Generates and returns a list of normalisation values based on the data points fed to 
 the 0th Linear Correlator.
 \end{DoxyVerb}
- \mbox{\Hypertarget{namespacemultitau_a6a712a94c13f6c08874ea710fc698ff7}\label{namespacemultitau_a6a712a94c13f6c08874ea710fc698ff7}} 
-\index{multitau@{multitau}!points\+\_\+norm\+\_\+template@{points\+\_\+norm\+\_\+template}}
-\index{points\+\_\+norm\+\_\+template@{points\+\_\+norm\+\_\+template}!multitau@{multitau}}
-\subsubsection{\texorpdfstring{points\+\_\+norm\+\_\+template()}{points\_norm\_template()}}
-{\footnotesize\ttfamily def multitau.\+points\+\_\+norm\+\_\+template (\begin{DoxyParamCaption}\item[{}]{lin\+\_\+corrs,  }\item[{}]{series\+\_\+size,  }\item[{}]{bin\+\_\+ratio }\end{DoxyParamCaption})}
+ \mbox{\Hypertarget{namespacemultitau_a265372a8ef814094424e2d787eb6304f}\label{namespacemultitau_a265372a8ef814094424e2d787eb6304f}} 
+\index{multitau@{multitau}!points\+\_\+scale\+\_\+template@{points\+\_\+scale\+\_\+template}}
+\index{points\+\_\+scale\+\_\+template@{points\+\_\+scale\+\_\+template}!multitau@{multitau}}
+\subsubsection{\texorpdfstring{points\+\_\+scale\+\_\+template()}{points\_scale\_template()}}
+{\footnotesize\ttfamily def multitau.\+points\+\_\+scale\+\_\+template (\begin{DoxyParamCaption}\item[{}]{lin\+\_\+corrs,  }\item[{}]{series\+\_\+size,  }\item[{}]{bin\+\_\+ratio }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespacemultitau_a775aea685fe55a6707400660fadf9c35}\label{namespacemultitau_a775aea685fe55a6707400660fadf9c35}} 
+\begin{DoxyVerb}Generates and returns a list of normalisation values, which when multiplied by the points
+fed to the 0th linear Correlator - gives a list of points normalization values for all
+the tau values.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacemultitau_a9516fc9217f79f4dc1c4f2dfb28c9b7a}\label{namespacemultitau_a9516fc9217f79f4dc1c4f2dfb28c9b7a}} 
+\index{multitau@{multitau}!tau\+\_\+max@{tau\+\_\+max}}
+\index{tau\+\_\+max@{tau\+\_\+max}!multitau@{multitau}}
+\subsubsection{\texorpdfstring{tau\+\_\+max()}{tau\_max()}}
+{\footnotesize\ttfamily def multitau.\+tau\+\_\+max (\begin{DoxyParamCaption}\item[{}]{lin\+\_\+corrs,  }\item[{}]{series\+\_\+size,  }\item[{}]{bin\+\_\+ratio }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the maximum tau-value for the given multi-tau configuration.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacemultitau_aa907c1cffb653422b45f46332192b2a4}\label{namespacemultitau_aa907c1cffb653422b45f46332192b2a4}} 
+\index{multitau@{multitau}!time\+\_\+axis\+\_\+s@{time\+\_\+axis\+\_\+s}}
+\index{time\+\_\+axis\+\_\+s@{time\+\_\+axis\+\_\+s}!multitau@{multitau}}
+\subsubsection{\texorpdfstring{time\+\_\+axis\+\_\+s()}{time\_axis\_s()}}
+{\footnotesize\ttfamily def multitau.\+time\+\_\+axis\+\_\+s (\begin{DoxyParamCaption}\item[{}]{tau\+\_\+axis,  }\item[{}]{gate\+\_\+time\+\_\+ms }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the converted time axis in seconds based 
+on gate_time(minimum resolution) in microseconds.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacemultitau_a775aea685fe55a6707400660fadf9c35}\label{namespacemultitau_a775aea685fe55a6707400660fadf9c35}} 
 \index{multitau@{multitau}!x\+\_\+tics@{x\+\_\+tics}}
 \index{x\+\_\+tics@{x\+\_\+tics}!multitau@{multitau}}
 \subsubsection{\texorpdfstring{x\+\_\+tics()}{x\_tics()}}

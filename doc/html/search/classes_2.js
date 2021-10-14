@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['errors',['Errors',['../dc/d9a/classErrors.html',1,'']]]
+  ['errors',['Errors',['../classErrors.html',1,'']]]
 ];

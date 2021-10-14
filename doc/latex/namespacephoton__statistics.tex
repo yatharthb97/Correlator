@@ -1,0 +1,417 @@
+\hypertarget{namespacephoton__statistics}{}\section{photon\+\_\+statistics Namespace Reference}
+\label{namespacephoton__statistics}\index{photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacephoton__statistics_ad67c22ae3d8b73d690282b77915fa984}{update\+\_\+fn} ()
+\item 
+def \hyperlink{namespacephoton__statistics_a3d8a4bcc1566dd71aab0925749e1416f}{periodic\+\_\+callback\+\_\+fn} (period\+\_\+ms=\hyperlink{namespacephoton__statistics_ab809da8a53764aea064814bd4abdba42}{measurement\+\_\+sampling\+\_\+delay})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacephoton__statistics_a729c361165a662402f88b585477d2ee6}{name\+\_\+} = sys.\+argv\mbox{[}1\mbox{]}
+\item 
+\hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config} = json.\+load(f)
+\item 
+list \hyperlink{namespacephoton__statistics_a3c57d728c4b1cdcb2b6ca63bc6adfc4d}{multitau\+\_\+param\+\_\+set} = \mbox{[}\hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\textquotesingle{}Lin\+Corrs\textquotesingle{}\mbox{]}, \hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\textquotesingle{}Series\+Size\textquotesingle{}\mbox{]}, \hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\textquotesingle{}Bin\+Ratio\textquotesingle{}\mbox{]}\mbox{]}
+\item 
+\hyperlink{namespacephoton__statistics_a397f80b778ada9e9d514e3ed06936540}{this\+\_\+channel\+\_\+size} = \hyperlink{namespacemultitau_a1022c52950a892396ac45e7de5379e12}{multitau.\+channel\+\_\+size}($\ast$\hyperlink{namespacephoton__statistics_a3c57d728c4b1cdcb2b6ca63bc6adfc4d}{multitau\+\_\+param\+\_\+set})
+\item 
+int \hyperlink{namespacephoton__statistics_a12cca295f67eb3583c567d9907a3fe4f}{byte\+\_\+size} = 4
+\item 
+tuple \hyperlink{namespacephoton__statistics_aa8b4fc62029e126fa660593daaa282f8}{total\+\_\+struct\+\_\+size}
+\item 
+bool \hyperlink{namespacephoton__statistics_ae06425daaa0688ab0ff42c7619615e1d}{stop\+\_\+code\+\_\+asserted} = False
+\item 
+int \hyperlink{namespacephoton__statistics_aa0ea01ea8f5c4844ed6c10dbe51d0497}{update\+\_\+id} = 0
+\item 
+list \hyperlink{namespacephoton__statistics_ad632a8023bd406f2a2486a1c5d3e7832}{openfilelist} = \mbox{[}$\,$\mbox{]}
+\item 
+string \hyperlink{namespacephoton__statistics_a255f06b87745f05837e1623b921ae692}{parent\+\_\+dir} = \char`\"{}./runs/\char`\"{}
+\item 
+string \hyperlink{namespacephoton__statistics_ab381c3496e1a3a8d6dae99e66447c10c}{D\+A\+T\+A\+S\+EP} = \textquotesingle{},\textquotesingle{}
+\item 
+\hyperlink{namespacephoton__statistics_a421423fcce411e182e41fde2e450d2d9}{now\+\_\+tmp} = time.\+perf\+\_\+counter()
+\item 
+\hyperlink{namespacephoton__statistics_a2c4e09ca6009ec89417e7fb1842dc290}{update\+\_\+time\+\_\+start} = \hyperlink{namespacephoton__statistics_a421423fcce411e182e41fde2e450d2d9}{now\+\_\+tmp}
+\item 
+\hyperlink{namespacephoton__statistics_a1353da1c17a4f960cbacf200dcf13d4f}{update\+\_\+time\+\_\+stop} = \hyperlink{namespacephoton__statistics_a421423fcce411e182e41fde2e450d2d9}{now\+\_\+tmp}
+\item 
+\hyperlink{namespacephoton__statistics_a5c7400e3258e9336ce831f0fbda24f33}{measure\+\_\+clock\+\_\+start} = \hyperlink{namespacephoton__statistics_a421423fcce411e182e41fde2e450d2d9}{now\+\_\+tmp}
+\item 
+\hyperlink{namespacephoton__statistics_a328243354a643086bd68145d804782d0}{measure\+\_\+clock\+\_\+stop} = \hyperlink{namespacephoton__statistics_a421423fcce411e182e41fde2e450d2d9}{now\+\_\+tmp}
+\item 
+\hyperlink{namespacephoton__statistics_a930bc99eb656180a9ae6318b16d77976}{x\+\_\+tau\+\_\+values} = \hyperlink{namespacemultitau_a775aea685fe55a6707400660fadf9c35}{multitau.\+x\+\_\+tics}($\ast$\hyperlink{namespacephoton__statistics_a3c57d728c4b1cdcb2b6ca63bc6adfc4d}{multitau\+\_\+param\+\_\+set})
+\item 
+\hyperlink{namespacephoton__statistics_a4476861cf199e5ef481ee4bc15e08847}{normalizer} = \hyperlink{classnormalizer_1_1Normalizer}{Normalizer}($\ast$\hyperlink{namespacephoton__statistics_a3c57d728c4b1cdcb2b6ca63bc6adfc4d}{multitau\+\_\+param\+\_\+set})
+\item 
+tuple \hyperlink{namespacephoton__statistics_a28a89caae4538b504046ed301158e677}{norm\+\_\+mode} = (\char`\"{}no\char`\"{} $\ast$ (not \hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\char`\"{}Enable\+Points\+Norm\char`\"{}\mbox{]})) + (\char`\"{}points\char`\"{} $\ast$ (not \hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\char`\"{}Enable\+Mean\+Norm\char`\"{}\mbox{]}) $\ast$ config\mbox{[}\char`\"{}Enable\+Points\+Norm\char`\"{}\mbox{]}) + (\char`\"{}mean\char`\"{} $\ast$ config\mbox{[}\char`\"{}Enable\+Mean\+Norm\char`\"{}\mbox{]} $\ast$ config\mbox{[}\char`\"{}Enable\+Points\+Norm\char`\"{}\mbox{]})
+\item 
+list \hyperlink{namespacephoton__statistics_af558fed5a93a7b134efea382f1ad4007}{norm\+\_\+args} = \mbox{[}$\,$\mbox{]}
+\item 
+\hyperlink{namespacephoton__statistics_a1a182b084119bc408c9fbae7b462acc3}{struct\+\_\+rep} = Struct\+Representation(\hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config})
+\item 
+\hyperlink{namespacephoton__statistics_a718548ec119098f106f9ff9f31b409bf}{time\+\_\+x} = deque(maxlen = 100)
+\item 
+\hyperlink{namespacephoton__statistics_a9939968ed5be4ad1c5c6264ed0a875e9}{count\+\_\+rate\+\_\+y} = deque(maxlen = 100)
+\item 
+\hyperlink{namespacephoton__statistics_a5394aea076650f9894b4cb28977546d5}{mean\+\_\+int\+\_\+y} = deque(maxlen = 100)
+\item 
+\hyperlink{namespacephoton__statistics_a397e27175ec763175de0a4b04e9beb75}{pf\+\_\+serial\+\_\+y} = deque(maxlen = 100)
+\item 
+\hyperlink{namespacephoton__statistics_ada08824fb72ac8fb00ca57eb5ffa0a59}{pf\+\_\+acf\+\_\+y} = deque(maxlen = 100)
+\item 
+string \hyperlink{namespacephoton__statistics_af562d689a2b300926d155fb601e925ae}{y\+\_\+file\+\_\+name} = f\char`\"{}\{name\+\_\+\}\+\_\+y.\+dat\char`\"{}
+\item 
+string \hyperlink{namespacephoton__statistics_ac46f5d89cfe3237a86a586214643616d}{x\+\_\+file\+\_\+name} = f\char`\"{}\{name\+\_\+\}\+\_\+x\+\_\+taus.\+dat\char`\"{}
+\item 
+\hyperlink{namespacephoton__statistics_a0e1aee8b528dd37bb27185509aa5af09}{fmt}
+\item 
+\hyperlink{namespacephoton__statistics_a6c6d01b62f113634193642d2dda3124a}{newline}
+\item 
+\hyperlink{namespacephoton__statistics_ad37c8420c6a43ec4997809c4c236b145}{acffile} = open(os.\+path.\+join(\hyperlink{namespacephoton__statistics_a255f06b87745f05837e1623b921ae692}{parent\+\_\+dir}, \hyperlink{namespacephoton__statistics_af562d689a2b300926d155fb601e925ae}{y\+\_\+file\+\_\+name}), \textquotesingle{}a\textquotesingle{})
+\item 
+string \hyperlink{namespacephoton__statistics_aefac3a6449e578f00a5870a4249bf7ea}{count\+\_\+file\+\_\+name} = f\char`\"{}\{name\+\_\+\}\+\_\+countrate.\+dat\char`\"{}
+\item 
+\hyperlink{namespacephoton__statistics_af015eefc8f4b272cae12b376618be9dc}{countratefile} = open(os.\+path.\+join(\hyperlink{namespacephoton__statistics_a255f06b87745f05837e1623b921ae692}{parent\+\_\+dir}, \hyperlink{namespacephoton__statistics_aefac3a6449e578f00a5870a4249bf7ea}{count\+\_\+file\+\_\+name}), \textquotesingle{}w\textquotesingle{})
+\item 
+string \hyperlink{namespacephoton__statistics_a86328a634773cdedebc0fd4be6a8a068}{mean\+\_\+file\+\_\+name} = f\char`\"{}\{name\+\_\+\}\+\_\+meanintensity.\+dat\char`\"{}
+\item 
+\hyperlink{namespacephoton__statistics_a39901f127e13a9b2adb1e3624e51cdc9}{meanfile} = open(os.\+path.\+join(\hyperlink{namespacephoton__statistics_a255f06b87745f05837e1623b921ae692}{parent\+\_\+dir}, \hyperlink{namespacephoton__statistics_a86328a634773cdedebc0fd4be6a8a068}{mean\+\_\+file\+\_\+name}), \textquotesingle{}w\textquotesingle{})
+\item 
+\hyperlink{namespacephoton__statistics_a75ad62bb71f891a32137fe2fd41d40d9}{live\+\_\+graph} = Live\+Graph(x\+Range=\hyperlink{namespacephoton__statistics_a930bc99eb656180a9ae6318b16d77976}{x\+\_\+tau\+\_\+values}\mbox{[}-\/1\mbox{]}, \hyperlink{namespacephoton__statistics_a09fecae480663af684a1d523466242a4}{port}=\hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\textquotesingle{}Port\textquotesingle{}\mbox{]}, \hyperlink{namespacephoton__statistics_a76d9f47b30df749d7d370e77849ca649}{title}=\char`\"{}Auto-\/Correlation Function\char`\"{}, x\+\_\+label = \char`\"{}Lag\char`\"{}, y\+\_\+label=\char`\"{}A\+CF\char`\"{}, x\+\_\+units=\char`\"{}Tau\char`\"{}, y\+\_\+units=\char`\"{}G(Tau)\char`\"{}, config=\hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config} )
+\item 
+\hyperlink{namespacephoton__statistics_a76d9f47b30df749d7d370e77849ca649}{title}
+\item 
+\hyperlink{namespacephoton__statistics_a98d62096339004a1f6b233c2df89b3ba}{row}
+\item 
+\hyperlink{namespacephoton__statistics_a01b8c2da7bc3f1dd415a4c956cd2cd29}{col}
+\item 
+\hyperlink{namespacephoton__statistics_a01caa0fce4e95b6469fea2c15dec86b6}{rowspan}
+\item 
+\hyperlink{namespacephoton__statistics_a39fd907fbedfc2f81f1fdf9e6a29631a}{pen}
+\item 
+\hyperlink{namespacephoton__statistics_a5b8d0a21492531701eaab526f8d6ffda}{symbol\+Brush}
+\item 
+\hyperlink{namespacephoton__statistics_a31d8b2d681ba8e84148ca5a7a7d97829}{symbol\+Size}
+\item 
+\hyperlink{namespacephoton__statistics_a09fecae480663af684a1d523466242a4}{port} = Serial(port=\hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\char`\"{}Port\char`\"{}\mbox{]}, baudrate=\hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\char`\"{}Baud\char`\"{}\mbox{]}, timeout=None)
+\item 
+\hyperlink{namespacephoton__statistics_ab809da8a53764aea064814bd4abdba42}{measurement\+\_\+sampling\+\_\+delay} = int(\hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\textquotesingle{}Sampling\+Delay\+\_\+ms\textquotesingle{}\mbox{]}/2)
+\item 
+\hyperlink{namespacephoton__statistics_a826b8bcc70f5721cbb6036088fa1ed01}{measurement\+\_\+thread} = Qt\+Core.\+Q\+Timer()
+\item 
+tuple \hyperlink{namespacephoton__statistics_a17e0852f9ef02250d5e11c55b45dcbf6}{received\+\_\+data\+\_\+estimate} = \hyperlink{namespacephoton__statistics_aa8b4fc62029e126fa660593daaa282f8}{total\+\_\+struct\+\_\+size} $\ast$ \hyperlink{namespacephoton__statistics_aa0ea01ea8f5c4844ed6c10dbe51d0497}{update\+\_\+id}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacephoton__statistics_a3d8a4bcc1566dd71aab0925749e1416f}\label{namespacephoton__statistics_a3d8a4bcc1566dd71aab0925749e1416f}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!periodic\+\_\+callback\+\_\+fn@{periodic\+\_\+callback\+\_\+fn}}
+\index{periodic\+\_\+callback\+\_\+fn@{periodic\+\_\+callback\+\_\+fn}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{periodic\+\_\+callback\+\_\+fn()}{periodic\_callback\_fn()}}
+{\footnotesize\ttfamily def photon\+\_\+statistics.\+periodic\+\_\+callback\+\_\+fn (\begin{DoxyParamCaption}\item[{}]{period\+\_\+ms = {\ttfamily \hyperlink{namespacephoton__statistics_ab809da8a53764aea064814bd4abdba42}{measurement\+\_\+sampling\+\_\+delay}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacephoton__statistics_ad67c22ae3d8b73d690282b77915fa984}\label{namespacephoton__statistics_ad67c22ae3d8b73d690282b77915fa984}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!update\+\_\+fn@{update\+\_\+fn}}
+\index{update\+\_\+fn@{update\+\_\+fn}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{update\+\_\+fn()}{update\_fn()}}
+{\footnotesize\ttfamily def photon\+\_\+statistics.\+update\+\_\+fn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacephoton__statistics_ad37c8420c6a43ec4997809c4c236b145}\label{namespacephoton__statistics_ad37c8420c6a43ec4997809c4c236b145}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!acffile@{acffile}}
+\index{acffile@{acffile}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{acffile}{acffile}}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+acffile = open(os.\+path.\+join(\hyperlink{namespacephoton__statistics_a255f06b87745f05837e1623b921ae692}{parent\+\_\+dir}, \hyperlink{namespacephoton__statistics_af562d689a2b300926d155fb601e925ae}{y\+\_\+file\+\_\+name}), \textquotesingle{}a\textquotesingle{})}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a12cca295f67eb3583c567d9907a3fe4f}\label{namespacephoton__statistics_a12cca295f67eb3583c567d9907a3fe4f}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!byte\+\_\+size@{byte\+\_\+size}}
+\index{byte\+\_\+size@{byte\+\_\+size}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{byte\+\_\+size}{byte\_size}}
+{\footnotesize\ttfamily int photon\+\_\+statistics.\+byte\+\_\+size = 4}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a01b8c2da7bc3f1dd415a4c956cd2cd29}\label{namespacephoton__statistics_a01b8c2da7bc3f1dd415a4c956cd2cd29}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!col@{col}}
+\index{col@{col}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{col}{col}}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+col}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}\label{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!config@{config}}
+\index{config@{config}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{config}{config}}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+config = json.\+load(f)}
+
+\mbox{\Hypertarget{namespacephoton__statistics_aefac3a6449e578f00a5870a4249bf7ea}\label{namespacephoton__statistics_aefac3a6449e578f00a5870a4249bf7ea}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!count\+\_\+file\+\_\+name@{count\+\_\+file\+\_\+name}}
+\index{count\+\_\+file\+\_\+name@{count\+\_\+file\+\_\+name}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{count\+\_\+file\+\_\+name}{count\_file\_name}}
+{\footnotesize\ttfamily string photon\+\_\+statistics.\+count\+\_\+file\+\_\+name = f\char`\"{}\{name\+\_\+\}\+\_\+countrate.\+dat\char`\"{}}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a9939968ed5be4ad1c5c6264ed0a875e9}\label{namespacephoton__statistics_a9939968ed5be4ad1c5c6264ed0a875e9}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!count\+\_\+rate\+\_\+y@{count\+\_\+rate\+\_\+y}}
+\index{count\+\_\+rate\+\_\+y@{count\+\_\+rate\+\_\+y}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{count\+\_\+rate\+\_\+y}{count\_rate\_y}}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+count\+\_\+rate\+\_\+y = deque(maxlen = 100)}
+
+\mbox{\Hypertarget{namespacephoton__statistics_af015eefc8f4b272cae12b376618be9dc}\label{namespacephoton__statistics_af015eefc8f4b272cae12b376618be9dc}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!countratefile@{countratefile}}
+\index{countratefile@{countratefile}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{countratefile}{countratefile}}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+countratefile = open(os.\+path.\+join(\hyperlink{namespacephoton__statistics_a255f06b87745f05837e1623b921ae692}{parent\+\_\+dir}, \hyperlink{namespacephoton__statistics_aefac3a6449e578f00a5870a4249bf7ea}{count\+\_\+file\+\_\+name}), \textquotesingle{}w\textquotesingle{})}
+
+\mbox{\Hypertarget{namespacephoton__statistics_ab381c3496e1a3a8d6dae99e66447c10c}\label{namespacephoton__statistics_ab381c3496e1a3a8d6dae99e66447c10c}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!D\+A\+T\+A\+S\+EP@{D\+A\+T\+A\+S\+EP}}
+\index{D\+A\+T\+A\+S\+EP@{D\+A\+T\+A\+S\+EP}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{D\+A\+T\+A\+S\+EP}{DATASEP}}
+{\footnotesize\ttfamily string photon\+\_\+statistics.\+D\+A\+T\+A\+S\+EP = \textquotesingle{},\textquotesingle{}}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a0e1aee8b528dd37bb27185509aa5af09}\label{namespacephoton__statistics_a0e1aee8b528dd37bb27185509aa5af09}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!fmt@{fmt}}
+\index{fmt@{fmt}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{fmt}{fmt}}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+fmt}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a75ad62bb71f891a32137fe2fd41d40d9}\label{namespacephoton__statistics_a75ad62bb71f891a32137fe2fd41d40d9}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!live\+\_\+graph@{live\+\_\+graph}}
+\index{live\+\_\+graph@{live\+\_\+graph}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{live\+\_\+graph}{live\_graph}}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+live\+\_\+graph = Live\+Graph(x\+Range=\hyperlink{namespacephoton__statistics_a930bc99eb656180a9ae6318b16d77976}{x\+\_\+tau\+\_\+values}\mbox{[}-\/1\mbox{]}, \hyperlink{namespacephoton__statistics_a09fecae480663af684a1d523466242a4}{port}=\hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\textquotesingle{}Port\textquotesingle{}\mbox{]}, \hyperlink{namespacephoton__statistics_a76d9f47b30df749d7d370e77849ca649}{title}=\char`\"{}Auto-\/Correlation Function\char`\"{}, x\+\_\+label = \char`\"{}Lag\char`\"{}, y\+\_\+label=\char`\"{}A\+CF\char`\"{}, x\+\_\+units=\char`\"{}Tau\char`\"{}, y\+\_\+units=\char`\"{}G(Tau)\char`\"{}, config=\hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config} )}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a86328a634773cdedebc0fd4be6a8a068}\label{namespacephoton__statistics_a86328a634773cdedebc0fd4be6a8a068}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!mean\+\_\+file\+\_\+name@{mean\+\_\+file\+\_\+name}}
+\index{mean\+\_\+file\+\_\+name@{mean\+\_\+file\+\_\+name}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{mean\+\_\+file\+\_\+name}{mean\_file\_name}}
+{\footnotesize\ttfamily string photon\+\_\+statistics.\+mean\+\_\+file\+\_\+name = f\char`\"{}\{name\+\_\+\}\+\_\+meanintensity.\+dat\char`\"{}}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a5394aea076650f9894b4cb28977546d5}\label{namespacephoton__statistics_a5394aea076650f9894b4cb28977546d5}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!mean\+\_\+int\+\_\+y@{mean\+\_\+int\+\_\+y}}
+\index{mean\+\_\+int\+\_\+y@{mean\+\_\+int\+\_\+y}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{mean\+\_\+int\+\_\+y}{mean\_int\_y}}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+mean\+\_\+int\+\_\+y = deque(maxlen = 100)}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a39901f127e13a9b2adb1e3624e51cdc9}\label{namespacephoton__statistics_a39901f127e13a9b2adb1e3624e51cdc9}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!meanfile@{meanfile}}
+\index{meanfile@{meanfile}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{meanfile}{meanfile}}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+meanfile = open(os.\+path.\+join(\hyperlink{namespacephoton__statistics_a255f06b87745f05837e1623b921ae692}{parent\+\_\+dir}, \hyperlink{namespacephoton__statistics_a86328a634773cdedebc0fd4be6a8a068}{mean\+\_\+file\+\_\+name}), \textquotesingle{}w\textquotesingle{})}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a5c7400e3258e9336ce831f0fbda24f33}\label{namespacephoton__statistics_a5c7400e3258e9336ce831f0fbda24f33}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!measure\+\_\+clock\+\_\+start@{measure\+\_\+clock\+\_\+start}}
+\index{measure\+\_\+clock\+\_\+start@{measure\+\_\+clock\+\_\+start}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{measure\+\_\+clock\+\_\+start}{measure\_clock\_start}}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+measure\+\_\+clock\+\_\+start = \hyperlink{namespacephoton__statistics_a421423fcce411e182e41fde2e450d2d9}{now\+\_\+tmp}}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a328243354a643086bd68145d804782d0}\label{namespacephoton__statistics_a328243354a643086bd68145d804782d0}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!measure\+\_\+clock\+\_\+stop@{measure\+\_\+clock\+\_\+stop}}
+\index{measure\+\_\+clock\+\_\+stop@{measure\+\_\+clock\+\_\+stop}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{measure\+\_\+clock\+\_\+stop}{measure\_clock\_stop}}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+measure\+\_\+clock\+\_\+stop = \hyperlink{namespacephoton__statistics_a421423fcce411e182e41fde2e450d2d9}{now\+\_\+tmp}}
+
+\mbox{\Hypertarget{namespacephoton__statistics_ab809da8a53764aea064814bd4abdba42}\label{namespacephoton__statistics_ab809da8a53764aea064814bd4abdba42}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!measurement\+\_\+sampling\+\_\+delay@{measurement\+\_\+sampling\+\_\+delay}}
+\index{measurement\+\_\+sampling\+\_\+delay@{measurement\+\_\+sampling\+\_\+delay}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{measurement\+\_\+sampling\+\_\+delay}{measurement\_sampling\_delay}}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+measurement\+\_\+sampling\+\_\+delay = int(\hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\textquotesingle{}Sampling\+Delay\+\_\+ms\textquotesingle{}\mbox{]}/2)}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a826b8bcc70f5721cbb6036088fa1ed01}\label{namespacephoton__statistics_a826b8bcc70f5721cbb6036088fa1ed01}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!measurement\+\_\+thread@{measurement\+\_\+thread}}
+\index{measurement\+\_\+thread@{measurement\+\_\+thread}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{measurement\+\_\+thread}{measurement\_thread}}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+measurement\+\_\+thread = Qt\+Core.\+Q\+Timer()}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a3c57d728c4b1cdcb2b6ca63bc6adfc4d}\label{namespacephoton__statistics_a3c57d728c4b1cdcb2b6ca63bc6adfc4d}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!multitau\+\_\+param\+\_\+set@{multitau\+\_\+param\+\_\+set}}
+\index{multitau\+\_\+param\+\_\+set@{multitau\+\_\+param\+\_\+set}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{multitau\+\_\+param\+\_\+set}{multitau\_param\_set}}
+{\footnotesize\ttfamily list photon\+\_\+statistics.\+multitau\+\_\+param\+\_\+set = \mbox{[}\hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\textquotesingle{}Lin\+Corrs\textquotesingle{}\mbox{]}, \hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\textquotesingle{}Series\+Size\textquotesingle{}\mbox{]}, \hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\textquotesingle{}Bin\+Ratio\textquotesingle{}\mbox{]}\mbox{]}}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a729c361165a662402f88b585477d2ee6}\label{namespacephoton__statistics_a729c361165a662402f88b585477d2ee6}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!name\+\_\+@{name\+\_\+}}
+\index{name\+\_\+@{name\+\_\+}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{name\+\_\+}{name\_}}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+name\+\_\+ = sys.\+argv\mbox{[}1\mbox{]}}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a6c6d01b62f113634193642d2dda3124a}\label{namespacephoton__statistics_a6c6d01b62f113634193642d2dda3124a}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!newline@{newline}}
+\index{newline@{newline}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{newline}{newline}}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+newline}
+
+\mbox{\Hypertarget{namespacephoton__statistics_af558fed5a93a7b134efea382f1ad4007}\label{namespacephoton__statistics_af558fed5a93a7b134efea382f1ad4007}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!norm\+\_\+args@{norm\+\_\+args}}
+\index{norm\+\_\+args@{norm\+\_\+args}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{norm\+\_\+args}{norm\_args}}
+{\footnotesize\ttfamily list photon\+\_\+statistics.\+norm\+\_\+args = \mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a28a89caae4538b504046ed301158e677}\label{namespacephoton__statistics_a28a89caae4538b504046ed301158e677}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!norm\+\_\+mode@{norm\+\_\+mode}}
+\index{norm\+\_\+mode@{norm\+\_\+mode}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{norm\+\_\+mode}{norm\_mode}}
+{\footnotesize\ttfamily tuple photon\+\_\+statistics.\+norm\+\_\+mode = (\char`\"{}no\char`\"{} $\ast$ (not \hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\char`\"{}Enable\+Points\+Norm\char`\"{}\mbox{]})) + (\char`\"{}points\char`\"{} $\ast$ (not \hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\char`\"{}Enable\+Mean\+Norm\char`\"{}\mbox{]}) $\ast$ config\mbox{[}\char`\"{}Enable\+Points\+Norm\char`\"{}\mbox{]}) + (\char`\"{}mean\char`\"{} $\ast$ config\mbox{[}\char`\"{}Enable\+Mean\+Norm\char`\"{}\mbox{]} $\ast$ config\mbox{[}\char`\"{}Enable\+Points\+Norm\char`\"{}\mbox{]})}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a4476861cf199e5ef481ee4bc15e08847}\label{namespacephoton__statistics_a4476861cf199e5ef481ee4bc15e08847}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!normalizer@{normalizer}}
+\index{normalizer@{normalizer}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{normalizer}{normalizer}}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+normalizer = \hyperlink{classnormalizer_1_1Normalizer}{Normalizer}($\ast$\hyperlink{namespacephoton__statistics_a3c57d728c4b1cdcb2b6ca63bc6adfc4d}{multitau\+\_\+param\+\_\+set})}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a421423fcce411e182e41fde2e450d2d9}\label{namespacephoton__statistics_a421423fcce411e182e41fde2e450d2d9}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!now\+\_\+tmp@{now\+\_\+tmp}}
+\index{now\+\_\+tmp@{now\+\_\+tmp}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{now\+\_\+tmp}{now\_tmp}}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+now\+\_\+tmp = time.\+perf\+\_\+counter()}
+
+\mbox{\Hypertarget{namespacephoton__statistics_ad632a8023bd406f2a2486a1c5d3e7832}\label{namespacephoton__statistics_ad632a8023bd406f2a2486a1c5d3e7832}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!openfilelist@{openfilelist}}
+\index{openfilelist@{openfilelist}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{openfilelist}{openfilelist}}
+{\footnotesize\ttfamily list photon\+\_\+statistics.\+openfilelist = \mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a255f06b87745f05837e1623b921ae692}\label{namespacephoton__statistics_a255f06b87745f05837e1623b921ae692}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!parent\+\_\+dir@{parent\+\_\+dir}}
+\index{parent\+\_\+dir@{parent\+\_\+dir}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{parent\+\_\+dir}{parent\_dir}}
+{\footnotesize\ttfamily string photon\+\_\+statistics.\+parent\+\_\+dir = \char`\"{}./runs/\char`\"{}}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a39fd907fbedfc2f81f1fdf9e6a29631a}\label{namespacephoton__statistics_a39fd907fbedfc2f81f1fdf9e6a29631a}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!pen@{pen}}
+\index{pen@{pen}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{pen}{pen}}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+pen}
+
+\mbox{\Hypertarget{namespacephoton__statistics_ada08824fb72ac8fb00ca57eb5ffa0a59}\label{namespacephoton__statistics_ada08824fb72ac8fb00ca57eb5ffa0a59}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!pf\+\_\+acf\+\_\+y@{pf\+\_\+acf\+\_\+y}}
+\index{pf\+\_\+acf\+\_\+y@{pf\+\_\+acf\+\_\+y}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{pf\+\_\+acf\+\_\+y}{pf\_acf\_y}}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+pf\+\_\+acf\+\_\+y = deque(maxlen = 100)}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a397e27175ec763175de0a4b04e9beb75}\label{namespacephoton__statistics_a397e27175ec763175de0a4b04e9beb75}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!pf\+\_\+serial\+\_\+y@{pf\+\_\+serial\+\_\+y}}
+\index{pf\+\_\+serial\+\_\+y@{pf\+\_\+serial\+\_\+y}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{pf\+\_\+serial\+\_\+y}{pf\_serial\_y}}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+pf\+\_\+serial\+\_\+y = deque(maxlen = 100)}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a09fecae480663af684a1d523466242a4}\label{namespacephoton__statistics_a09fecae480663af684a1d523466242a4}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!port@{port}}
+\index{port@{port}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{port}{port}}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+port = Serial(port=\hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\char`\"{}Port\char`\"{}\mbox{]}, baudrate=\hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\char`\"{}Baud\char`\"{}\mbox{]}, timeout=None)}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a17e0852f9ef02250d5e11c55b45dcbf6}\label{namespacephoton__statistics_a17e0852f9ef02250d5e11c55b45dcbf6}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!received\+\_\+data\+\_\+estimate@{received\+\_\+data\+\_\+estimate}}
+\index{received\+\_\+data\+\_\+estimate@{received\+\_\+data\+\_\+estimate}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{received\+\_\+data\+\_\+estimate}{received\_data\_estimate}}
+{\footnotesize\ttfamily tuple photon\+\_\+statistics.\+received\+\_\+data\+\_\+estimate = \hyperlink{namespacephoton__statistics_aa8b4fc62029e126fa660593daaa282f8}{total\+\_\+struct\+\_\+size} $\ast$ \hyperlink{namespacephoton__statistics_aa0ea01ea8f5c4844ed6c10dbe51d0497}{update\+\_\+id}}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a98d62096339004a1f6b233c2df89b3ba}\label{namespacephoton__statistics_a98d62096339004a1f6b233c2df89b3ba}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!row@{row}}
+\index{row@{row}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{row}{row}}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+row}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a01caa0fce4e95b6469fea2c15dec86b6}\label{namespacephoton__statistics_a01caa0fce4e95b6469fea2c15dec86b6}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!rowspan@{rowspan}}
+\index{rowspan@{rowspan}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{rowspan}{rowspan}}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+rowspan}
+
+\mbox{\Hypertarget{namespacephoton__statistics_ae06425daaa0688ab0ff42c7619615e1d}\label{namespacephoton__statistics_ae06425daaa0688ab0ff42c7619615e1d}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!stop\+\_\+code\+\_\+asserted@{stop\+\_\+code\+\_\+asserted}}
+\index{stop\+\_\+code\+\_\+asserted@{stop\+\_\+code\+\_\+asserted}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{stop\+\_\+code\+\_\+asserted}{stop\_code\_asserted}}
+{\footnotesize\ttfamily bool photon\+\_\+statistics.\+stop\+\_\+code\+\_\+asserted = False}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a1a182b084119bc408c9fbae7b462acc3}\label{namespacephoton__statistics_a1a182b084119bc408c9fbae7b462acc3}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!struct\+\_\+rep@{struct\+\_\+rep}}
+\index{struct\+\_\+rep@{struct\+\_\+rep}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{struct\+\_\+rep}{struct\_rep}}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+struct\+\_\+rep = Struct\+Representation(\hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config})}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a5b8d0a21492531701eaab526f8d6ffda}\label{namespacephoton__statistics_a5b8d0a21492531701eaab526f8d6ffda}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!symbol\+Brush@{symbol\+Brush}}
+\index{symbol\+Brush@{symbol\+Brush}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{symbol\+Brush}{symbolBrush}}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+symbol\+Brush}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a31d8b2d681ba8e84148ca5a7a7d97829}\label{namespacephoton__statistics_a31d8b2d681ba8e84148ca5a7a7d97829}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!symbol\+Size@{symbol\+Size}}
+\index{symbol\+Size@{symbol\+Size}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{symbol\+Size}{symbolSize}}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+symbol\+Size}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a397f80b778ada9e9d514e3ed06936540}\label{namespacephoton__statistics_a397f80b778ada9e9d514e3ed06936540}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!this\+\_\+channel\+\_\+size@{this\+\_\+channel\+\_\+size}}
+\index{this\+\_\+channel\+\_\+size@{this\+\_\+channel\+\_\+size}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{this\+\_\+channel\+\_\+size}{this\_channel\_size}}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+this\+\_\+channel\+\_\+size = \hyperlink{namespacemultitau_a1022c52950a892396ac45e7de5379e12}{multitau.\+channel\+\_\+size}($\ast$\hyperlink{namespacephoton__statistics_a3c57d728c4b1cdcb2b6ca63bc6adfc4d}{multitau\+\_\+param\+\_\+set})}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a718548ec119098f106f9ff9f31b409bf}\label{namespacephoton__statistics_a718548ec119098f106f9ff9f31b409bf}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!time\+\_\+x@{time\+\_\+x}}
+\index{time\+\_\+x@{time\+\_\+x}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{time\+\_\+x}{time\_x}}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+time\+\_\+x = deque(maxlen = 100)}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a76d9f47b30df749d7d370e77849ca649}\label{namespacephoton__statistics_a76d9f47b30df749d7d370e77849ca649}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!title@{title}}
+\index{title@{title}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{title}{title}}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+title}
+
+\mbox{\Hypertarget{namespacephoton__statistics_aa8b4fc62029e126fa660593daaa282f8}\label{namespacephoton__statistics_aa8b4fc62029e126fa660593daaa282f8}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!total\+\_\+struct\+\_\+size@{total\+\_\+struct\+\_\+size}}
+\index{total\+\_\+struct\+\_\+size@{total\+\_\+struct\+\_\+size}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{total\+\_\+struct\+\_\+size}{total\_struct\_size}}
+{\footnotesize\ttfamily int photon\+\_\+statistics.\+total\+\_\+struct\+\_\+size}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 =  (    (config[\textcolor{stringliteral}{'EnableACFCalc'}] * this\_channel\_size) + 
+2                             config[\textcolor{stringliteral}{'EnableCountRate'}] +
+3                             config[\textcolor{stringliteral}{'EnablePointsNorm'}] +
+4                             config[\textcolor{stringliteral}{'EnableSyncCode'}] +
+5                             config[\textcolor{stringliteral}{'EnableMeanNorm'}] + 
+6                             config[\textcolor{stringliteral}{'Enable PC Histogram'}] * config[\textcolor{stringliteral}{'PC Histogram Bins'}] +
+7                             ((config[\textcolor{stringliteral}{'EnableACFCalc'}] + 1) * config[\textcolor{stringliteral}{'Enable Performance Counters'}])
+8                         ) * byte\_size
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacephoton__statistics_aa0ea01ea8f5c4844ed6c10dbe51d0497}\label{namespacephoton__statistics_aa0ea01ea8f5c4844ed6c10dbe51d0497}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!update\+\_\+id@{update\+\_\+id}}
+\index{update\+\_\+id@{update\+\_\+id}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{update\+\_\+id}{update\_id}}
+{\footnotesize\ttfamily int photon\+\_\+statistics.\+update\+\_\+id = 0}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a2c4e09ca6009ec89417e7fb1842dc290}\label{namespacephoton__statistics_a2c4e09ca6009ec89417e7fb1842dc290}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!update\+\_\+time\+\_\+start@{update\+\_\+time\+\_\+start}}
+\index{update\+\_\+time\+\_\+start@{update\+\_\+time\+\_\+start}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{update\+\_\+time\+\_\+start}{update\_time\_start}}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+update\+\_\+time\+\_\+start = \hyperlink{namespacephoton__statistics_a421423fcce411e182e41fde2e450d2d9}{now\+\_\+tmp}}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a1353da1c17a4f960cbacf200dcf13d4f}\label{namespacephoton__statistics_a1353da1c17a4f960cbacf200dcf13d4f}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!update\+\_\+time\+\_\+stop@{update\+\_\+time\+\_\+stop}}
+\index{update\+\_\+time\+\_\+stop@{update\+\_\+time\+\_\+stop}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{update\+\_\+time\+\_\+stop}{update\_time\_stop}}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+update\+\_\+time\+\_\+stop = \hyperlink{namespacephoton__statistics_a421423fcce411e182e41fde2e450d2d9}{now\+\_\+tmp}}
+
+\mbox{\Hypertarget{namespacephoton__statistics_ac46f5d89cfe3237a86a586214643616d}\label{namespacephoton__statistics_ac46f5d89cfe3237a86a586214643616d}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!x\+\_\+file\+\_\+name@{x\+\_\+file\+\_\+name}}
+\index{x\+\_\+file\+\_\+name@{x\+\_\+file\+\_\+name}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{x\+\_\+file\+\_\+name}{x\_file\_name}}
+{\footnotesize\ttfamily string photon\+\_\+statistics.\+x\+\_\+file\+\_\+name = f\char`\"{}\{name\+\_\+\}\+\_\+x\+\_\+taus.\+dat\char`\"{}}
+
+\mbox{\Hypertarget{namespacephoton__statistics_a930bc99eb656180a9ae6318b16d77976}\label{namespacephoton__statistics_a930bc99eb656180a9ae6318b16d77976}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!x\+\_\+tau\+\_\+values@{x\+\_\+tau\+\_\+values}}
+\index{x\+\_\+tau\+\_\+values@{x\+\_\+tau\+\_\+values}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{x\+\_\+tau\+\_\+values}{x\_tau\_values}}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+x\+\_\+tau\+\_\+values = \hyperlink{namespacemultitau_a775aea685fe55a6707400660fadf9c35}{multitau.\+x\+\_\+tics}($\ast$\hyperlink{namespacephoton__statistics_a3c57d728c4b1cdcb2b6ca63bc6adfc4d}{multitau\+\_\+param\+\_\+set})}
+
+\mbox{\Hypertarget{namespacephoton__statistics_af562d689a2b300926d155fb601e925ae}\label{namespacephoton__statistics_af562d689a2b300926d155fb601e925ae}} 
+\index{photon\+\_\+statistics@{photon\+\_\+statistics}!y\+\_\+file\+\_\+name@{y\+\_\+file\+\_\+name}}
+\index{y\+\_\+file\+\_\+name@{y\+\_\+file\+\_\+name}!photon\+\_\+statistics@{photon\+\_\+statistics}}
+\subsubsection{\texorpdfstring{y\+\_\+file\+\_\+name}{y\_file\_name}}
+{\footnotesize\ttfamily string photon\+\_\+statistics.\+y\+\_\+file\+\_\+name = f\char`\"{}\{name\+\_\+\}\+\_\+y.\+dat\char`\"{}}
+
