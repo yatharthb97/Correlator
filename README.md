@@ -41,6 +41,24 @@ Doxygen documentation: https://www.doxygen.nl/manual/index.html
 
 ### Errors and Debugging options ==Incomplete==
 
+The following mechanisms can be used for reading errors and troubleshooting:
+
+* The LED Panel uses specific colors for indicating specific feature lines.
+
+* The device asserts error by turning on all LED lights on the panel, but first a specific LED will blink for 10 seconds to indicate a specific type of error.
+
+  The assignments are as follows:
+
+  ```	text
+  Error_t::Counter_Overflow & Error_t::Counter_Underflow → White LED
+  Error_t::Precision → Blue LED
+  Error_t::Input_Validation → Red LED
+  ```
+
+* The option `"ISRPinToggle"` turns on the pin toggling of a specific pin `ISR_TEST_TOOGLE_PIN` whenever the ISR (Interrupt Service Routine) is fired during Gated Counting, whose signal can be measured on an oscilloscope to check the frequency jitter and measure timing of gated counting events. This option is only relevant for feature lines which use *Gated Counting*.
+
+* The option `"SomeDebugValue"` can be used to write any arbitrary value to the compilation unit as a macro `DEBUG_VALUE` for any debugging requirement.
+
 ### Emulation and Testing
 
 * The software modules can be tested/simulated on a PC. The files `test.cpp`, `pseudoSerial.hpp`, and  `pseudoSerial.cpp`  in the subdirectory `./code/software/` provide functionality to do so. The macro `CORR_SIMULATION` must be set during compilation to enable the contents of this file.
@@ -70,7 +88,7 @@ Feature Lines are specific *modes* for the device.  This is a framework that arr
 
   One way to emulate this error is to change the `config.json` file and start the PC software without compiling and pushing the changed configuration to the device.
 
-### Feature Line 1 - `ACF`  (Gate Counting)
+### Feature Line 1 - `ACF`  (Gated Counting)
 
 This is the main feature line. This mode supports the following features which can be selectively be enabled from the configuration file. The features have zero-footprint on performance when disabled, similarly, each feature adds an overhead to the performance of the device.
 
@@ -96,7 +114,7 @@ This is the main feature line. This mode supports the following features which c
 
 ==Implementation Pending==
 
-### Feature Line 3 - `Sampler` (Gate Counting)
+### Feature Line 3 - `Sampler` (Gated Counting)
 
 *Device ready* state is indicated by the *WHITE LED* and *Device running* state is indicated by the *GREEN LED* on the Panel.
 
@@ -150,5 +168,4 @@ File descriptions:
 This portion is written in python 3. 
 
 The PC application can be launched : `>> python ./code/pc_app/photon_statistics.py`
-
 
