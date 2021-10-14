@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['welcometext_0',['WelcomeText',['../namespaceutilities.html#ac9a730200ac8fc19e29a5d7fc4e90bc7',1,'utilities']]]
+  ['validate_0',['Validate',['../classErrors.html#a9e43e14a2d0834f192b954cce71c387b',1,'Errors']]],
+  ['var_5festimator_1',['var_estimator',['../classstatmethods_1_1StatMethods.html#ae9dd94cc0586ae5ea83ac6cf4a81cb69',1,'statmethods::StatMethods']]]
 ];

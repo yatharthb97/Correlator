@@ -1,6 +1,8 @@
 var searchData=
 [
   ['_5f_5fattribute_5f_5f_0',['__attribute__',['../classLin__CrossCorr__RT__Teensy.html#a33f639fa3a6f025d5a9ebe60b969cc55',1,'Lin_CrossCorr_RT_Teensy::__attribute__((flatten)) push_datum(counter_t datum1'],['../classLin__CrossCorr__RT__Teensy.html#a1d3a4042f89c99d3705f50666fa7735c',1,'Lin_CrossCorr_RT_Teensy::__attribute__((flatten)) push_data(const counter_t *container1']]],
-  ['_5fassert_5f_1',['_assert_',['../classErrors.html#a3618ed0e7aba69be0759fa821a987b3b',1,'Errors']]],
-  ['_5ftmr1_5fcontroller_5fch_5f_2',['_TMR1_CONTROLLER_CH_',['../qtmr1_8hpp.html#a9b1e0ba00a31105b8b486365043a4cd2',1,'qtmr1.hpp']]]
+  ['_5f_5finit_5f_5f_1',['__init__',['../classlive__graph_1_1PStatLiveGraph.html#a210a499fd4e06392f8f5fffc209971a4',1,'live_graph.PStatLiveGraph.__init__()'],['../classnormalizer_1_1Normalizer.html#afccec17549a3a8de54c39b7b5de3d4b7',1,'normalizer.Normalizer.__init__(self, lin_corrs, series_size, bin_ratio)']]],
+  ['_5f_5frepr_5f_5f_2',['__repr__',['../classnormalizer_1_1Normalizer.html#a09b6d62bec3fca383a1a9c82cc74836a',1,'normalizer::Normalizer']]],
+  ['_5fassert_5f_3',['_assert_',['../classErrors.html#a3618ed0e7aba69be0759fa821a987b3b',1,'Errors']]],
+  ['_5ftmr1_5fcontroller_5fch_5f_4',['_TMR1_CONTROLLER_CH_',['../qtmr1_8hpp.html#a9b1e0ba00a31105b8b486365043a4cd2',1,'qtmr1.hpp']]]
 ];

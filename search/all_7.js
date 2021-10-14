@@ -14,6 +14,7 @@ var searchData=
   ['get_5fxbar_5fout_5fpin_11',['get_xbar_out_pin',['../classTMR1Controller.html#a5b2f74d17a84db6a9c2957b75d79ab98',1,'TMR1Controller']]],
   ['global_2ecpp_12',['global.cpp',['../global_8cpp.html',1,'']]],
   ['global_2ehpp_13',['global.hpp',['../global_8hpp.html',1,'']]],
-  ['gt_5floop_14',['gt_loop',['../featureline1_8hpp.html#aa9c34f2e013f03846aee63202bf56c43',1,'featureline1.hpp']]],
-  ['gt_5fsetup_15',['gt_setup',['../featureline1_8hpp.html#a1d39ca49552cf7468c736db6854309ff',1,'featureline1.hpp']]]
+  ['grid_5fallocator_14',['grid_allocator',['../classlive__graph_1_1PStatLiveGraph.html#a4969c53cd50f31c9b50d86a7cac77a63',1,'live_graph::PStatLiveGraph']]],
+  ['gt_5floop_15',['gt_loop',['../featureline1_8hpp.html#aa9c34f2e013f03846aee63202bf56c43',1,'featureline1.hpp']]],
+  ['gt_5fsetup_16',['gt_setup',['../featureline1_8hpp.html#a1d39ca49552cf7468c736db6854309ff',1,'featureline1.hpp']]]
 ];

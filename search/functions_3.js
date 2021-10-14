@@ -1,9 +1,10 @@
 var searchData=
 [
-  ['dim_0',['dim',['../classLEDSet.html#a8a5ef40584236c3793e4274688eac379',1,'LEDSet']]],
-  ['dim_5fall_1',['dim_all',['../classLEDSet.html#ad8313aa0c4fc34cd3481db0fade6318c',1,'LEDSet']]],
-  ['dim_5fall_5froutine_2',['dim_all_routine',['../classLEDSet.html#a30c6efe7fc286c3d0a7e2ac210dd2c1e',1,'LEDSet']]],
-  ['disable_5fpits_3',['disable_PITs',['../classPITController.html#a5e1bf9f8053a51c68f0ff2178ab56954',1,'PITController']]],
-  ['discard_5fcount_4',['discard_count',['../classDiscarderTeensy.html#acddeb78ebed208384b8ce100d9c503e6',1,'DiscarderTeensy']]],
-  ['do_5faccumulate_5',['do_accumulate',['../classAccumulator.html#adab342ee6d376a45ed38fe1e1679a1e2',1,'Accumulator']]]
+  ['ch_5fout_0',['ch_out',['../classLinACorrRTTeensy.html#a967f1b3ea7e6ebdae8c9bf7c2c641e49',1,'LinACorrRTTeensy::ch_out()'],['../classMultiTauACorrRTTeensy.html#af9ab6f055c1efc4a28c7c5bfa3aea074',1,'MultiTauACorrRTTeensy::ch_out()']]],
+  ['ch_5fout_5fnorm_1',['ch_out_norm',['../classLinACorrRTTeensy.html#a4d1be65472a058b056386286d093b847',1,'LinACorrRTTeensy']]],
+  ['channel_5fsize_2',['channel_size',['../namespacemultitau.html#a1022c52950a892396ac45e7de5379e12',1,'multitau']]],
+  ['clear_5finput_5fedge_5fflag_3',['clear_input_edge_flag',['../classTMR1Controller.html#aa59afefa545098e53cb2e0560142526c',1,'TMR1Controller']]],
+  ['clear_5finterrupt_5fflag_4',['clear_interrupt_flag',['../classPITController.html#ae3f9c981e88cced34153234475de5646',1,'PITController']]],
+  ['clear_5foverflow_5fflag_5',['clear_overflow_flag',['../classTMR1Controller.html#a7117e12d0cb8ec32aa6552fe541023da',1,'TMR1Controller']]],
+  ['config_5fvalidation_6',['config_validation',['../namespaceconfig.html#a4097152d333d323cef0159878ff205fc',1,'config']]]
 ];

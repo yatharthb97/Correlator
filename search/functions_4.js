@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['elapsed32_0',['elapsed32',['../classPIT__LifetimeTimer.html#af7481214070333f845a23456b4d75880',1,'PIT_LifetimeTimer']]],
-  ['elapsed64_1',['elapsed64',['../classPIT__LifetimeTimer.html#a04adf2272a47d4c81a28c6363e2da4fd',1,'PIT_LifetimeTimer']]],
-  ['enable_5fpits_2',['enable_PITs',['../classPITController.html#aa742977692efbc075b52a5dbd6533230',1,'PITController']]],
-  ['end_3',['end',['../classPerfCounter.html#ab5d9f05bb15139451eaa857989ed8bd8',1,'PerfCounter']]],
-  ['error_4',['error',['../classLEDSet.html#aa392b74b090de60a25f7577195327afd',1,'LEDSet::error()'],['../classRTCoarseGrainer.html#a0a2a0cf51154b2ed00d18e397e0e0c95',1,'RTCoarseGrainer::error()']]]
+  ['dim_0',['dim',['../classLEDSet.html#a8a5ef40584236c3793e4274688eac379',1,'LEDSet']]],
+  ['dim_5fall_1',['dim_all',['../classLEDSet.html#ad8313aa0c4fc34cd3481db0fade6318c',1,'LEDSet']]],
+  ['dim_5fall_5froutine_2',['dim_all_routine',['../classLEDSet.html#a30c6efe7fc286c3d0a7e2ac210dd2c1e',1,'LEDSet']]],
+  ['disable_5fpits_3',['disable_PITs',['../classPITController.html#a5e1bf9f8053a51c68f0ff2178ab56954',1,'PITController']]],
+  ['discard_5fcount_4',['discard_count',['../classDiscarderTeensy.html#acddeb78ebed208384b8ce100d9c503e6',1,'DiscarderTeensy']]],
+  ['do_5faccumulate_5',['do_accumulate',['../classAccumulator.html#adab342ee6d376a45ed38fe1e1679a1e2',1,'Accumulator']]]
 ];

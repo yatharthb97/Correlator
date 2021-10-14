@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['zerolagmonitor_0',['ZeroLagMonitor',['../classZeroLagMonitor.html',1,'']]]
+  ['tmr1controller_0',['TMR1Controller',['../classTMR1Controller.html',1,'']]]
 ];

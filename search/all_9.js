@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['icon_0',['icon',['../namespacepost__upload__actions.html#a8004b9375182f00eeb8f8c608a6b7cfb',1,'post_upload_actions']]],
-  ['index_1',['Index',['../classPCHistogram.html#a3d0371659763511d752c3348db978f79',1,'PCHistogram']]],
-  ['index_5ft_2',['index_t',['../types_8hpp.html#a7c40bb931c31595ed6308605f4537447',1,'types.hpp']]],
-  ['init_3',['init',['../classLEDSet.html#aae4545d8f8cb6e41a3c2960fb7369e48',1,'LEDSet::init()'],['../classPIT__LifetimeTimer.html#ad1c585d138123be94769afcca87f2dc6',1,'PIT_LifetimeTimer::init()'],['../classPerfCounter.html#ae1897d617e84a28c141d554810fcaee9',1,'PerfCounter::init()'],['../classTMR1Controller.html#af92315e340766e3857eb6a20e7cab673',1,'TMR1Controller::init() __attribute__((always_inline))']]],
-  ['init_5fpins_4',['init_pins',['../classTMR1Controller.html#a1c5d358760aa98641333f63c7bcacd3a',1,'TMR1Controller']]],
+  ['index_0',['Index',['../classPCHistogram.html#a3d0371659763511d752c3348db978f79',1,'PCHistogram']]],
+  ['index_5ft_1',['index_t',['../types_8hpp.html#a7c40bb931c31595ed6308605f4537447',1,'types.hpp']]],
+  ['init_2',['init',['../classLEDSet.html#aae4545d8f8cb6e41a3c2960fb7369e48',1,'LEDSet::init()'],['../classPIT__LifetimeTimer.html#ad1c585d138123be94769afcca87f2dc6',1,'PIT_LifetimeTimer::init()'],['../classPerfCounter.html#ae1897d617e84a28c141d554810fcaee9',1,'PerfCounter::init()'],['../classTMR1Controller.html#af92315e340766e3857eb6a20e7cab673',1,'TMR1Controller::init() __attribute__((always_inline))']]],
+  ['init_5fpins_3',['init_pins',['../classTMR1Controller.html#a1c5d358760aa98641333f63c7bcacd3a',1,'TMR1Controller']]],
+  ['init_5fplots_4',['init_plots',['../classlive__graph_1_1PStatLiveGraph.html#a65b6193384abea9656044a84a6112eb2',1,'live_graph::PStatLiveGraph']]],
   ['input_5fvalidation_5',['Input_Validation',['../errors_8hpp.html#a4e8c0d09726859e3d3369c0da5a1aa7fa7e748bca7005cc737bad51b247997421',1,'errors.hpp']]],
   ['interarrival_2ehpp_6',['interarrival.hpp',['../interarrival_8hpp.html',1,'']]],
   ['interarrivaltime_7',['InterArrivalTime',['../classInterArrivalTime.html#a2b5ea12da6c38e85b7e92403abcade5f',1,'InterArrivalTime::InterArrivalTime()'],['../classInterArrivalTime.html',1,'InterArrivalTime&lt; CounterType, CPUTickType &gt;']]],

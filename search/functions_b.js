@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['on_5ftodigital_0',['ON_todigital',['../classLEDSet.html#a141bb664e7f58ae676455972ca9cd686',1,'LEDSet']]],
-  ['operator_5b_5d_1',['operator[]',['../classSimpler__Circular__Buffer.html#a4ce53bc8ad0d231e9d013c771191696a',1,'Simpler_Circular_Buffer']]],
-  ['output_2',['output',['../classInterArrivalTime.html#a8a12081f1132d4a2c7a3898b01897c8d',1,'InterArrivalTime::output()'],['../classPerfCounter.html#a291ce8187d35e1f97a68339fe51931a4',1,'PerfCounter::output()'],['../classDiscarderTeensy.html#ae7f8709724630ac3cc82a7a3ee202f2c',1,'DiscarderTeensy::output()'],['../classPCHistogram.html#af4391ac8ad3f4d9865ee6335fb563b4c',1,'PCHistogram::output()'],['../classRTCoarseGrainer.html#a2d0cd547401422150d1293a156abc86e',1,'RTCoarseGrainer::output()']]]
+  ['no_5finterrupt_0',['no_interrupt',['../classPITController.html#a6e36c84f319e52e5a14ca20f299b64b5',1,'PITController']]],
+  ['no_5fnorm_1',['no_norm',['../classnormalizer_1_1Normalizer.html#a7965c29d7d3a867dbb82cc7f3e7e69b3',1,'normalizer::Normalizer']]],
+  ['norm_2',['norm',['../classLinACorrRTTeensy.html#a98110e3b97a2300b9078a6e57a8234bc',1,'LinACorrRTTeensy']]],
+  ['norm_5flag0_5festimator_3',['norm_lag0_estimator',['../classstatmethods_1_1StatMethods.html#a98bde45d59d8558c9b675b9f5dbd0922',1,'statmethods::StatMethods']]],
+  ['normalize_4',['normalize',['../classnormalizer_1_1Normalizer.html#a6d75a8939f80d4ca8e1f8302fec590d6',1,'normalizer::Normalizer']]]
 ];

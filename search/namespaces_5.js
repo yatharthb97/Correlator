@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['statmethods',['statmethods',['../d4/dee/namespacestatmethods.html',1,'']]]
+  ['statmethods_0',['statmethods',['../namespacestatmethods.html',1,'']]]
 ];

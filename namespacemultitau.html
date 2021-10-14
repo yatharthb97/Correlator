@@ -75,12 +75,52 @@ Functions</h2></td></tr>
 <tr class="separator:a1022c52950a892396ac45e7de5379e12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a775aea685fe55a6707400660fadf9c35"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemultitau.html#a775aea685fe55a6707400660fadf9c35">x_tics</a> (lin_corrs, series_size, bin_ratio)</td></tr>
 <tr class="separator:a775aea685fe55a6707400660fadf9c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a265372a8ef814094424e2d787eb6304f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemultitau.html#a265372a8ef814094424e2d787eb6304f">points_scale_template</a> (lin_corrs, series_size, bin_ratio)</td></tr>
+<tr class="separator:a265372a8ef814094424e2d787eb6304f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40d600d74abad18e71cccd90988a5cd7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemultitau.html#a40d600d74abad18e71cccd90988a5cd7">bin_ratio_scale</a> (lin_corrs, series_size, bin_ratio)</td></tr>
+<tr class="separator:a40d600d74abad18e71cccd90988a5cd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9516fc9217f79f4dc1c4f2dfb28c9b7a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemultitau.html#a9516fc9217f79f4dc1c4f2dfb28c9b7a">tau_max</a> (lin_corrs, series_size, bin_ratio)</td></tr>
+<tr class="separator:a9516fc9217f79f4dc1c4f2dfb28c9b7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa907c1cffb653422b45f46332192b2a4"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemultitau.html#aa907c1cffb653422b45f46332192b2a4">time_axis_s</a> (tau_axis, gate_time_ms)</td></tr>
+<tr class="separator:aa907c1cffb653422b45f46332192b2a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89bb2627a88498b04ebd436250310d71"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemultitau.html#a89bb2627a88498b04ebd436250310d71">points_norm</a> (lin_corrs, series_size, bin_ratio, LC0_points)</td></tr>
 <tr class="separator:a89bb2627a88498b04ebd436250310d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a712a94c13f6c08874ea710fc698ff7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemultitau.html#a6a712a94c13f6c08874ea710fc698ff7">points_norm_template</a> (lin_corrs, series_size, bin_ratio)</td></tr>
-<tr class="separator:a6a712a94c13f6c08874ea710fc698ff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a40d600d74abad18e71cccd90988a5cd7" name="a40d600d74abad18e71cccd90988a5cd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40d600d74abad18e71cccd90988a5cd7">&#9670;&nbsp;</a></span>bin_ratio_scale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def multitau.bin_ratio_scale </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>lin_corrs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>series_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>bin_ratio</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">        Returns an array of size `channel_size` that scales as per the `multitau scheme` bin ratio.</pre> 
+</div>
+</div>
 <a id="a1022c52950a892396ac45e7de5379e12" name="a1022c52950a892396ac45e7de5379e12"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1022c52950a892396ac45e7de5379e12">&#9670;&nbsp;</a></span>channel_size()</h2>
 
@@ -157,14 +197,14 @@ Functions</h2></td></tr>
     the 0th Linear Correlator.</pre> 
 </div>
 </div>
-<a id="a6a712a94c13f6c08874ea710fc698ff7" name="a6a712a94c13f6c08874ea710fc698ff7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a712a94c13f6c08874ea710fc698ff7">&#9670;&nbsp;</a></span>points_norm_template()</h2>
+<a id="a265372a8ef814094424e2d787eb6304f" name="a265372a8ef814094424e2d787eb6304f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a265372a8ef814094424e2d787eb6304f">&#9670;&nbsp;</a></span>points_scale_template()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def multitau.points_norm_template </td>
+          <td class="memname">def multitau.points_scale_template </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>lin_corrs</em>, </td>
@@ -191,6 +231,69 @@ Functions</h2></td></tr>
 <pre class="fragment">    Generates and returns a list of normalisation values, which when multiplied by the points
     fed to the 0th linear Correlator - gives a list of points normalization values for all
     the tau values.</pre> 
+</div>
+</div>
+<a id="a9516fc9217f79f4dc1c4f2dfb28c9b7a" name="a9516fc9217f79f4dc1c4f2dfb28c9b7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9516fc9217f79f4dc1c4f2dfb28c9b7a">&#9670;&nbsp;</a></span>tau_max()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def multitau.tau_max </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>lin_corrs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>series_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>bin_ratio</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">    Returns the maximum tau-value for the given multi-tau configuration.</pre> 
+</div>
+</div>
+<a id="aa907c1cffb653422b45f46332192b2a4" name="aa907c1cffb653422b45f46332192b2a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa907c1cffb653422b45f46332192b2a4">&#9670;&nbsp;</a></span>time_axis_s()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def multitau.time_axis_s </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>tau_axis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>gate_time_ms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">    Returns the converted time axis in seconds based 
+    on gate_time(minimum resolution) in microseconds.</pre> 
 </div>
 </div>
 <a id="a775aea685fe55a6707400660fadf9c35" name="a775aea685fe55a6707400660fadf9c35"></a>

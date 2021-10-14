@@ -15,6 +15,9 @@ var searchData=
   ['stack_12',['Stack',['../classPerfCounter.html#ad440629d44a2bfd9b4d8de185ff66d27',1,'PerfCounter']]],
   ['starttime_13',['StartTime',['../classPerfCounter.html#adefe85b05d9c8920877053f6a8ed743c',1,'PerfCounter']]],
   ['state_14',['State',['../classLEDSet.html#a7185bf98d8866da93847fde7b2145cc4',1,'LEDSet']]],
-  ['stop_5fcode_5fasserted_15',['stop_code_asserted',['../namespacepost__upload__actions.html#a2eb0c1f0d253907108574abad6354f4e',1,'post_upload_actions']]],
-  ['sync_5fcode_16',['sync_code',['../global_8cpp.html#abaef541ea152f1c10c21aab606888f1b',1,'sync_code():&#160;global.cpp'],['../global_8hpp.html#abaef541ea152f1c10c21aab606888f1b',1,'sync_code():&#160;global.cpp']]]
+  ['stop_5fcode_5fasserted_15',['stop_code_asserted',['../namespacephoton__statistics.html#ae06425daaa0688ab0ff42c7619615e1d',1,'photon_statistics']]],
+  ['struct_5frep_16',['struct_rep',['../namespacephoton__statistics.html#a1a182b084119bc408c9fbae7b462acc3',1,'photon_statistics']]],
+  ['symbolbrush_17',['symbolBrush',['../namespacephoton__statistics.html#a5b8d0a21492531701eaab526f8d6ffda',1,'photon_statistics']]],
+  ['symbolsize_18',['symbolSize',['../namespacephoton__statistics.html#a31d8b2d681ba8e84148ca5a7a7d97829',1,'photon_statistics']]],
+  ['sync_5fcode_19',['sync_code',['../global_8cpp.html#abaef541ea152f1c10c21aab606888f1b',1,'sync_code():&#160;global.cpp'],['../global_8hpp.html#abaef541ea152f1c10c21aab606888f1b',1,'sync_code():&#160;global.cpp']]]
 ];
