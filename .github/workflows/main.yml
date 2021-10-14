@@ -32,7 +32,9 @@
 #         # Working directory
 #         working-directory: "." # default is .
     
-    
+on:
+  push:
+    branches: [ master ] 
 
 - name: Doxygen as Action
   uses: dreygur/doxygen@1.0.1
