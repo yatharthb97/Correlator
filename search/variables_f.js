@@ -4,7 +4,7 @@ var searchData=
   ['safe_5foutput_5fdump_5fpin_1',['SAFE_OUTPUT_DUMP_PIN',['../pins_8hpp.html#a2b2fb4f846b45d396215a25f949a1bc7',1,'pins.hpp']]],
   ['sample_5fcount_2',['Sample_Count',['../classMonitor__Channel.html#a20d148ca870b96cb19b7befbb0b2cd2b',1,'Monitor_Channel']]],
   ['sample_5fstack_3',['Sample_Stack',['../classMonitor__Channel.html#a5523d9f38c2910b4014e93d18a9267cd',1,'Monitor_Channel']]],
-  ['serialout_5fafter_4',['SerialOut_After',['../main_8cpp.html#a7687ee385c82b3ac600720b79678755a',1,'main.cpp']]],
+  ['serialout_5fafter_4',['SerialOut_After',['../global_8cpp.html#a7687ee385c82b3ac600720b79678755a',1,'SerialOut_After():&#160;global.cpp'],['../global_8hpp.html#a7687ee385c82b3ac600720b79678755a',1,'SerialOut_After():&#160;global.cpp']]],
   ['series_5farray_5',['Series_array',['../classLin__ACorr__RT__Teensy.html#a9a619d1a74076f0bac8b7f03acebbb75',1,'Lin_ACorr_RT_Teensy']]],
   ['series_5farray1_6',['Series_array1',['../classLin__CrossCorr__RT__Teensy.html#a13307ad04080703e9ef8c0cd9794a6b0',1,'Lin_CrossCorr_RT_Teensy']]],
   ['series_5farray2_7',['Series_array2',['../classLin__CrossCorr__RT__Teensy.html#a509bcfdab5a3239a014f5805c388172a',1,'Lin_CrossCorr_RT_Teensy']]],
@@ -14,5 +14,6 @@ var searchData=
   ['setup_5fled_11',['SETUP_LED',['../pins_8hpp.html#a3bceb7a516452849c8b6292b69e4fb71',1,'pins.hpp']]],
   ['singleton_5fflag_12',['Singleton_flag',['../classTMR1Controller.html#a532b729ca9a7c28e5f4d221f80487241',1,'TMR1Controller']]],
   ['state_13',['State',['../classLEDSet.html#a7185bf98d8866da93847fde7b2145cc4',1,'LEDSet']]],
-  ['stop_5fcode_5fasserted_14',['stop_code_asserted',['../namespacepost__upload__actions.html#a2eb0c1f0d253907108574abad6354f4e',1,'post_upload_actions']]]
+  ['stop_5fcode_5fasserted_14',['stop_code_asserted',['../namespacepost__upload__actions.html#a2eb0c1f0d253907108574abad6354f4e',1,'post_upload_actions']]],
+  ['sync_5fcode_15',['sync_code',['../global_8cpp.html#abaef541ea152f1c10c21aab606888f1b',1,'sync_code():&#160;global.cpp'],['../global_8hpp.html#abaef541ea152f1c10c21aab606888f1b',1,'sync_code():&#160;global.cpp']]]
 ];

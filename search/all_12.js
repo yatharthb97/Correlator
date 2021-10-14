@@ -16,7 +16,7 @@ var searchData=
   ['toggle_5fall_5froutine_13',['toggle_all_routine',['../classLEDSet.html#a61cc024950a5b66dff34c449cc73787f',1,'LEDSet']]],
   ['toggle_5ftwice_14',['toggle_twice',['../classLEDSet.html#a6062da843aabdf8fbdcedb70fed00dec',1,'LEDSet']]],
   ['true_15',['True',['../namespacepost__upload__actions.html#a748a990c990b3ae8a1fb339a2d53793b',1,'post_upload_actions']]],
-  ['ttl_5fc_16',['TTL_c',['../main_8cpp.html#a691981c43e1bdddca6df5accb6927331',1,'main.cpp']]],
+  ['ttl_5fc_16',['TTL_c',['../global_8cpp.html#a691981c43e1bdddca6df5accb6927331',1,'TTL_c():&#160;global.cpp'],['../global_8hpp.html#a691981c43e1bdddca6df5accb6927331',1,'TTL_c():&#160;global.cpp']]],
   ['ttl_5fc_5fpulse_5finput_5fpin_17',['TTL_C_PULSE_INPUT_PIN',['../pins_8hpp.html#a5017daf6b9fb9330e86878ec983ed163',1,'pins.hpp']]],
   ['types_2ehpp_18',['types.hpp',['../types_8hpp.html',1,'']]]
 ];
