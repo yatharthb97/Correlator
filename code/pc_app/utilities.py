@@ -51,7 +51,51 @@ def periodic_callbacks(period_ms, fn, *args):
 # ░▒▓▙▄▄▄▄▄▄▄▄▄▟▓▒░
 # """)
 
-def StructRepresentation(config):
+
+def boxed_txt(text):
+	t_l = '┏'
+	t_r = '┓'
+	b_l = '┗'
+	b_r = '┛'
+	hbounds = '━'
+	vbounds = '┃'
+
+	text_line = vbounds + ' ' + text + ' ' + vbounds
+	header = t_l + hbounds * (len(text_line)-2) + t_r
+	footer = b_l + hbounds * (len(text_line)-2) + b_r
+	return header, text_line, footer
+
+
+class OffsetTracker:
+
+	def __init__(self):
+		self.rd_bytes = 0
+		self.gen = self.offsetter()
+
+	def advance(self, bytes_read_now=0):
+		"""
+		Returns the current offset value, while storing the 
+		`bytes_read_now` for generating the next offset.
+		"""
+		offset_now = next(self.gen)
+		self.rd_bytes = bytes_read_now
+		return offset_now
+
+
+	def offsetter(self):
+
+		"""
+		Returns the current offset value.
+		"""
+		offset = 0 # Stores the sum of bytes read during all previous calls
+					
+		while True:
+			yield offset
+			offset = offset + self.rd_bytes
+
+
+
+def StructRepresentation(config): #[[DEPRECIATED]]
 
 	def box_generator(text):
 		t_l = '┏'
@@ -70,38 +114,38 @@ def StructRepresentation(config):
 	header = ""
 	text_line = ""
 	footer = ""
-	if config['EnableSyncCode']:
+	if config['Enable Sync Check']:
 		h, t, f = box_generator('SYNC CODE(4)')
 		header = header + h
 		text_line = text_line + t
 		footer = footer + f
 
-	if config['EnableCountRate']:
+	if config['Enable Count Rate(CR)']:
 		h, t, f = box_generator('COUNT RATE(4)')
 		header = header + h
 		text_line = text_line + t
 		footer = footer + f
 
-	if config['EnablePointsNorm']:
+	if config['Enable Points Norm']:
 		h, t, f = box_generator('NORM(4)')
 		header = header + h
 		text_line = text_line + t
 		footer = footer + f
 
-	if config['EnableMeanNorm']:
+	if config['Enable Mean Norm']:
 		h, t, f = box_generator('Mean/Accumulate(4)')
 		header = header + h
 		text_line = text_line + t
 		footer = footer + f
 
-	if config['EnableACFCalc']:
+	if config['Enable ACF']:
 		s = config["channel_size"]*4
 		h, t, f = box_generator(f'Auto Correlation Function({s})')
 		header = header + h
 		text_line = text_line + t
 		footer = footer + f
 
-	if config['Enable PC Histogram']:
+	if config['Enable Photon Count Histogram']:
 		s = (config["PC Histogram Bins"]+1)*4
 		h, t, f = box_generator(f'PC Histogram({s})')
 		header = header + h
@@ -115,7 +159,7 @@ def StructRepresentation(config):
 		text_line = text_line + t
 		footer = footer + f
 
-	if config['Enable Performance Counters'] and config['EnableACFCalc']:
+	if config['Enable Performance Counters'] and config['Enable ACF']:
 		s = 4
 		h, t, f = box_generator(f'PerfC-ACF({s})')
 		header = header + h

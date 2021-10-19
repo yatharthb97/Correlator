@@ -3,38 +3,52 @@ import numpy as np
 import sys
 
 default_config =  { 
-                    "Feature Line" : "ACF",
-                    "EnableACFCalc": True,
-                    "Log xAxis ACF": False,
-                    "GateTime_us": 5,
-                    "AllowedGateTimeError_us": 0.1,
-                    "LinCorrs": 9,
-                    "SeriesSize": 27,
-                    "BinRatio": 3,
-                    "LiveGraph": False,
-                    "SamplingDelay_ms": 200,
+                    "Live Graph": False,
+                    "Sampling Delay ms": 200,
                     "Baud": 115200,
                     "Port": "",
-                    "ISRPinToggle": True,
-                    "AbortOnError": True,
-                    "EnableCountRate": False,
-                    "EnableSyncCode": False,
-                    "SyncCode": int(np.int32(-123456789)),
-                    "CPUClockFrequency_MHz" : 600,
-                    "CRCoarseGrainingInterval_s" : 1.0,
-                    "SomeDebugValue" : 1.23456,
-                    "EnablePointsNorm" : True,
-                    "EnableMeanNorm" : True,
-                    "Enable PC Histogram": False,
+                    "ISR Pin Toggle": True,
+                    "Abort On Error": True,
+                    "CPU Clock Freq MHz" : 600,
+                    "Some Debug Value" : 1.23456,
+                    "Lights Off" : False,
+                    
+
+                    "Feature Line" : "ACF",
+                    "Enable Sync Check": False,
+                    "Sync Code": int(np.int32(-123456789)),
+
+
+                    "Gate Time us": 5,
+                    "Allowed Gate Timing Error us": 0.1,
+
+
+                    "Enable ACF": True,
+                    "Log xAxis ACF": False,
+                    
+                    "MT Linear Correlators(LCs)": 9,
+                    "MT LC Series Size": 27,
+                    "MT Bin Ratio": 3,
+                    
+                    "Enable Count Rate(CR)": False,
+                    "CR Coarse Graining Interval s" : 1.0,
+                    
+                    "Enable Points Norm" : True,
+                    "Enable Mean Norm" : True,
+                    
+                    "Enable Photon Count Histogram": False,
                     "PC Histogram Bins": 10,
+                    
                     "Enable Performance Counters":True,
+
                     "Instructions": 
                     { 
-                      0 : 'Feature Lines: {"ACF", "Interarrival", "Sampler"}.',
+                      0 : "Feature Lines: {`ACF`, `Interarrival`, `Sampler`}.",
                       1 : "Missing fields will generate warnings and a default value will be added to the configuration.",
                       2 : "SomeDebug value is set as a macro to help debug build system, macro conversion of different data types, etc.",
                       3 : "Enabling Interarrival Mode will disable all other functionality.",
-                      4 : "Options specific to a Feature Line are ignored unless that Feature Line is selected."
+                      4 : "Options specific to a Feature Line are ignored unless that Feature Line is selected.",
+                      5 : "The address for the emulator's virtual Port is `/dev/corr_virtual_serial_port` (only for linux)."
                     }
                   }
 
@@ -45,7 +59,7 @@ def config_validation(config):
     return f"\x1B[31m{string}\x1B[0m"
 
   # V1
-  if config['EnableMeanNorm'] and (not config['EnablePointsNorm']):
+  if config['Enable Mean Norm'] and (not config['Enable Points Norm']):
     print(RED("[CONFIG ERROR] Points Norm must be enabled for Mean norm to be eanabled."))
     sys.exit(1)
 

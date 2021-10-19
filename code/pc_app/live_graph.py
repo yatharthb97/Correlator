@@ -1,4 +1,4 @@
-from pyqtgraph.Qt import QtGui, QtCore, QFont
+from pyqtgraph.Qt import QtGui, QtCore
 import pyqtgraph as pg
 import math
 
@@ -10,17 +10,17 @@ class PStatLiveGraph:
 		"""
 		self.app = QtGui.QApplication([])
 	
-		win_title = f"{Photon Statistics}"
+		win_title = f"Photon Statistics"
 		if port is not None:
-			win_title.join(" - {this_port}")
+			win_title.join(f" - {this_port}")
 		
-		self.window = pg.GraphicsLayoutWidget(show=True, title= )
-		self.window.setWindowTitle(this_title)
+		self.window = pg.GraphicsLayoutWidget(show=True, title=win_title)
+		#self.window.setWindowTitle()
 		
 		self.window.resize(320, 180)
 
 		# icon
-		icon = QtGui.QIcon("icon.png")
+		icon = QtGui.QIcon("./Resource/icon.png")
 		self.window.setWindowIcon(icon)
 
 
@@ -31,7 +31,10 @@ class PStatLiveGraph:
 
 		self.dashboard = pg.LabelItem(title="Photon Statistics: Update → • |    Update time →  •s    |    Time Elapsed → •s", justify="centre")
 		self.window.addItem(self.dashboard, col=0, colspan=0.5)
-		self.window.nextRow()	
+		self.window.nextRow()
+
+		self.canvas = {} #Dictionary of Canvases
+		self.curve = {}  #Dictionary of Curves
 
 
 	def init_plots(config):
@@ -39,6 +42,17 @@ class PStatLiveGraph:
 		Sets plots based on the `config` dictionary.
 		"""
 
+		if config['Feature Line'] == "ACF":
+			_fL1_acf_(config)
+		elif config['Interarrival'] == "Interarrival":
+			_fl2_interarrival_(config)
+		elif config['Sampler'] == "Sampler":
+			_fl3_sampler(config)
+
+
+
+		
+	def _fL1_acf_(config):
 		#Add ACF Plot
 		if config['Enable ACF']:
 			self.add_canvas_plot('ACF', "Auto-correlation Function", 
@@ -79,6 +93,15 @@ class PStatLiveGraph:
 		self.window.resize(*screen_size)
 
 
+	def _fl2_interarrival_(config):
+		pass
+
+	def _fl3_sampler(config):
+		"""
+		Plot Init for 3rd feature line.
+		"""
+		pass
+
 	def screen_size_calc(final_row, final_col):
 		"""
 		Returns screen resolution based on number of plots.
@@ -106,14 +129,14 @@ class PStatLiveGraph:
 		while True:
 			yield x, y
 			
-			if not last_half and not half_row: 
+			if not last_half and (not half_row): 
 				# last plot was a full plot and this plot is also a full plot
 				x = 0 # Unchanged
 				y = y + 1
 				last_half = half_row
 
 
-			if last_half and not this half_row:
+			if last_half and (not half_row):
 				# last plot was a half plot and this one is a full plot
 				x = 0
 				y = y + 1
@@ -126,7 +149,7 @@ class PStatLiveGraph:
 				x = 1
 				last_half = half_row
 
-			if not last_half and half_row:
+			if (not last_half) and half_row:
 				#last was not half but this one is half
 				y = y + 1
 				x = 0
@@ -151,20 +174,20 @@ class PStatLiveGraph:
 		this_y_label = "Y axis →"
 		this_y_units = ""
 
-		if title in not None:
+		if title is not None:
 			this_title = title
 
-		if xLabel in not None:
+		if xLabel is not None:
 			this_x_label = xLabel[0]
 			this_x_units = xLabel[1]
 
-		if yLabel in not None:
+		if yLabel is not None:
 			this_y_label = yLabel[0]
 			this_y_units = yLabel[1]
 
 		
 		if ref_name in canvaslist:
-			raise Exception(f"PStatLiveGraph.add_canvas(`ref_name`) - {ref_name} is not unique.")
+			raise Exception(f"PStatLiveGraph.add_canvas(`ref_name`) - `ref_name` {ref_name} is not unique.")
 
 		row, col = self.grid_allocator(half_plot)
 		
@@ -193,9 +216,14 @@ class PStatLiveGraph:
 
 
 		if xRange is not None:
-			new_canvas.setRange(xRange=(*xRange), yRange=None, padding=None, update=True, disableAutoRange=True)
+			xl, xh = xRange
+			new_canvas.setRange(xRange=(xl, xh), yRange=None, padding=None, update=True, disableAutoRange=True)
 		if yRange is not None:
-			new_canvas.setRange(yRange=(*yRange), padding=None, update=True, disableAutoRange=True)
+			yl, yh = yRange
+			new_canvas.setRange(yRange=(yl, yh), padding=None, update=True, disableAutoRange=True)
 
 		self.curves[ref_name] = new_curve
 		self.canvas[ref_name] = new_canvas
+
+if __name__ == '__main__':
+	lv = PStatLiveGraph
