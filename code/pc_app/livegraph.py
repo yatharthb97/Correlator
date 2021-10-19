@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from pyqtgraph.Qt import QtGui, QtCore
 import pyqtgraph as pg
 import math

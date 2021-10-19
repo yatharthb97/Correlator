@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+
+
 from livegraph import LiveGraph
 import numpy as np
 

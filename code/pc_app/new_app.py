@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+
+
 #8. Defines update function - Coroutine
 def update_fn():
 	if port.in_waiting >= total_struct_size:

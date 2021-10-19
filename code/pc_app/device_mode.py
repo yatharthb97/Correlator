@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 class StructParsar:
 	
 	def __init__(self, session_name, parent_dir, config, add_suffix=False):
