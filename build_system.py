@@ -25,41 +25,42 @@ configr.config_validation(config)
 
 
 #3. Parameter Conversions
-ch_size = channel_size(config['LinCorrs'], config['SeriesSize'], config['BinRatio'])
+ch_size = channel_size(config['MT Linear Correlators(LCs)'], config['MT LC Series Size'], config['MT Bin Ratio'])
 
 fl = config['Feature Line']
-feature_line_code = (fl == "ACF")*1 + (fl=="Interarrival")*2 + (fl=="Sampler")*3
+feature_line_code = (fl == "ACF")*1 + (fl == "Interarrival")*2 + (fl == "Sampler")*3
 
 
 #4. Append Macros to the build environment
 env.Append(
 CPPDEFINES=[
-              ("BIN_RATIO", config["BinRatio"]),
-              ("SERIES_SIZE", config["SeriesSize"]),
-              ("LIN_CORRS", config["LinCorrs"]),
+              ("BIN_RATIO", config["MT Bin Ratio"]),
+              ("SERIES_SIZE", config["MT LC Series Size"]),
+              ("LIN_CORRS", config["MT Linear Correlators(LCs)"]),
               ("CHANNEL_SIZE", ch_size),
 
-              ("GATE_TIME_US", config["GateTime_us"]),
-              ("ALLOWED_GATE_TIME_ERROR_US", config["AllowedGateTimeError_us"]),
-              ("SAMPLING_TIME_MS", config["SamplingDelay_ms"]),
-              ("ISR_PIN_TOGGLE", int(config["ISRPinToggle"])),
-              ("ABORT_ON_ERROR", int(config["AbortOnError"])),
+              ("GATE_TIME_US", config["Gate Time us"]),
+              ("ALLOWED_GATE_TIME_ERROR_US", config["Allowed Gate Timing Error us"]),
+              ("SAMPLING_TIME_MS", config["Sampling Delay ms"]),
+              ("ISR_PIN_TOGGLE", int(config["ISR Pin Toggle"])),
+              ("ABORT_ON_ERROR", int(config["Abort On Error"])),
               
-              ("ENABLE_COUNT_RATE", int(config["EnableCountRate"])),
-              ("ENABLE_SYNC_CODE", int(config["EnableSyncCode"])),
-              ("SYNC_CODE", config["SyncCode"]),
-              ("ENABLE_ACF_CALC", int(config["EnableACFCalc"])),
-              ("F_CPU", int(config["CPUClockFrequency_MHz"]*1000000)),
-              ("CR_CG_INTERVAL_US", config["CRCoarseGrainingInterval_s"]*1e6),
-              ("DEBUG_VALUE", config["SomeDebugValue"]),
-              ("ENABLE_POINTS_NORM", int(config["EnablePointsNorm"])),
-              ("ENABLE_MEAN_NORM", int(config["EnableMeanNorm"])),
-              ("ENABLE_PC_HISTOGRAM", int(config["Enable PC Histogram"])),
+              ("ENABLE_COUNT_RATE", int(config["Enable Count Rate(CR)"])),
+              ("ENABLE_SYNC_CODE", int(config["Enable Sync Check"])),
+              ("SYNC_CODE", config["Sync Code"]),
+              ("ENABLE_ACF_CALC", int(config["Enable ACF"])),
+              ("F_CPU", int(config["CPU Clock Freq MHz"]*1000000)),
+              ("CR_CG_INTERVAL_US", config["CR Coarse Graining Interval s"]*1e6), #Converted to microseconds
+              ("DEBUG_VALUE", config["Some Debug Value"]),
+              ("ENABLE_POINTS_NORM", int(config["Enable Points Norm"])),
+              ("ENABLE_MEAN_NORM", int(config["Enable Mean Norm"])),
+              ("ENABLE_PC_HISTOGRAM", int(config["Enable Photon Count Histogram"])),
               ("PC_HISTOGRAM_BINS", int(config["PC Histogram Bins"])), 
               ("ENABLE_PERFORMANCE_COUNTERS", int(config["Enable Performance Counters"])),
               
               #FeatureLine
-              ("DEVICE_FEATURELINE", feature_line_code)
+              ("DEVICE_FEATURELINE", feature_line_code),
+              ("LIGHTS_OFF", config['Lights Off'])
             ])
 
 
@@ -71,13 +72,13 @@ print(f"Feature Line in use -> {config['Feature Line']}\n")
 if config["Feature Line"] == "ACF":
   print(f"""
   ••• Building Multi-Tau object •••
-     ACF Calculation -> {config['EnableACFCalc']}
-         Series Size -> {config['SeriesSize']}
-           Bin Ratio -> {config['BinRatio']}
-  Linear Correlators -> {config['LinCorrs']}
+     ACF Calculation -> {config['Enable ACF']}
+         Series Size -> {config['MT LC Series Size']}
+           Bin Ratio -> {config['MT Bin Ratio']}
+  Linear Correlators -> {config['MT Linear Correlators(LCs)']}
         Channel Size -> {ch_size}
-          Count Rate -> {config['EnableCountRate']}
-           Sync Code -> {config['EnableSyncCode']}
+          Count Rate -> {config['Enable Count Rate(CR)']}
+           Sync Code -> {config['Enable Sync Check']}
   """)
 
 #print(env.Dump())

@@ -1,47 +1,36 @@
 {
-    "Feature Line": "ACF",
-    "EnableACFCalc": true,
-    "Log xAxis ACF": false,
-    
-    "GateTime_us": 5,
-    "AllowedGateTimeError_us": 0.1,
-    
-    "LinCorrs": 9,
-    "SeriesSize": 27,
-    "BinRatio": 3,
-    
-    "LiveGraph": true,
-    
-    "SamplingDelay_ms": 200,
-    
+    "Live Graph": true,
+    "Sampling Delay ms": 1000,
     "Baud": 115200,
     "Port": "COM12",
-    
-    "ISRPinToggle": true,
-    "AbortOnError": true,
-
-    "EnableCountRate": true,
-    "EnableSyncCode": true,
-    "SyncCode": -123456789,
-
-    "CPUClockFrequency_MHz": 600,
-
-    "CRCoarseGrainingInterval_s": 1.0,
-    "SomeDebugValue": 1.23456,
-
-    "EnablePointsNorm": true,
-    "EnableMeanNorm": true,
-    
-    "Enable PC Histogram": false,
+    "ISR Pin Toggle": true,
+    "Abort On Error": true,
+    "CPU Clock Freq MHz": 600,
+    "Some Debug Value": 1.23456,
+    "Lights Off": false,
+    "Feature Line": "ACF",
+    "Enable Sync Check": true,
+    "Sync Code": -123456789,
+    "Gate Time us": 100,
+    "Allowed Gate Timing Error us": 0.1,
+    "Enable ACF": true,
+    "Log xAxis ACF": false,
+    "MT Linear Correlators(LCs)": 9,
+    "MT LC Series Size": 27,
+    "MT Bin Ratio": 3,
+    "Enable Count Rate(CR)": true,
+    "CR Coarse Graining Interval s": 1.0,
+    "Enable Points Norm": false,
+    "Enable Mean Norm": false,
+    "Enable Photon Count Histogram": false,
     "PC Histogram Bins": 10,
-    
-    "Enable Performance Counters": true,
-    
+    "Enable Performance Counters": false,
     "Instructions": {
-        "0": "Feature Lines: {\"ACF\", \"Interarrival\", \"Sampler\"}.",
+        "0": "Feature Lines: {`ACF`, `Interarrival`, `Sampler`}.",
         "1": "Missing fields will generate warnings and a default value will be added to the configuration.",
         "2": "SomeDebug value is set as a macro to help debug build system, macro conversion of different data types, etc.",
         "3": "Enabling Interarrival Mode will disable all other functionality.",
-        "4": "Options specific to a Feature Line are ignored unless that Feature Line is selected."
+        "4": "Options specific to a Feature Line are ignored unless that Feature Line is selected.",
+        "5": "The address for the emulator's virtual Port is `/dev/corr_virtual_serial_port` (only for linux)."
     }
 }

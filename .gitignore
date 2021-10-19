@@ -7,9 +7,6 @@
 __pycache__
 ./code/python/__pycache__
 ./code/pc_app/runs/
-./code/software/fluorescein_1us1.txt
-./code/software/fluorescein_1us0.txt
-./code/software/a.out
-./code/software/lin.dat
-./code/software/0.dat
+./code/software/datafiles/
+
 
