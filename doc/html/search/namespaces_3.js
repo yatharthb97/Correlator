@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['normalizer',['normalizer',['../namespacenormalizer.html',1,'']]]
+  ['multitau',['multitau',['../namespacemultitau.html',1,'']]]
 ];

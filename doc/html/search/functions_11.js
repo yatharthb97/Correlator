@@ -1,7 +1,14 @@
 var searchData=
 [
-  ['unset',['unset',['../classLEDSet.html#aacc3566d74c4051350977b578ada3a4d',1,'LEDSet::unset(int led_pin) __attribute__((always_inline))'],['../classLEDSet.html#ac84aa5b9e72689bbfd71f556995dfe03',1,'LEDSet::unset(int led_pin1, int led_pin2) __attribute__((always_inline))'],['../classLEDSet.html#a1a6a52e4fd96dd8500861df0a9d0066d',1,'LEDSet::unset(int led_pin1, int led_pin2, int led_pin3) __attribute__((always_inline))']]],
-  ['unset_5fall',['unset_all',['../classLEDSet.html#aabff2609d8df733936dda53d60302b72',1,'LEDSet']]],
-  ['update_5fdashboard',['update_dashboard',['../classlive__graph_1_1PStatLiveGraph.html#af167003562729fe08284e8f5675b26e2',1,'live_graph::PStatLiveGraph']]],
-  ['update_5ffn',['update_fn',['../namespacephoton__statistics.html#ad67c22ae3d8b73d690282b77915fa984',1,'photon_statistics']]]
+  ['tau_5fmax',['tau_max',['../namespacemultitau.html#a9516fc9217f79f4dc1c4f2dfb28c9b7a',1,'multitau']]],
+  ['tau_5fscaling_5fscheme',['tau_scaling_scheme',['../classMultiTauACorrRTTeensy.html#a1a677c901b40aecdd00a4f2135d8c2bb',1,'MultiTauACorrRTTeensy']]],
+  ['tick_5fperiod_5fus',['tick_period_us',['../classPITController.html#a2b64ce8a01dc1254002c4ff3c384a6fd',1,'PITController']]],
+  ['time_5faxis_5fs',['time_axis_s',['../namespacemultitau.html#aa907c1cffb653422b45f46332192b2a4',1,'multitau']]],
+  ['time_5fscaling_5ffactor',['time_scaling_factor',['../classMultiTauACorrRTTeensy.html#a56fbc9bf757ac74e0dad862ec45def82',1,'MultiTauACorrRTTeensy']]],
+  ['timers_5fanti_5ffreeze',['timers_anti_freeze',['../classTMR1Controller.html#acb383aa5321f552f018e4e217e2211f4',1,'TMR1Controller']]],
+  ['timers_5ffreeze',['timers_freeze',['../classTMR1Controller.html#aa00df5e2d591a36b1049275c9a293c51',1,'TMR1Controller']]],
+  ['tmr1controller',['TMR1Controller',['../classTMR1Controller.html#aebc677e795f673c6520d5a03eb6aa4f2',1,'TMR1Controller']]],
+  ['toggle_5fall',['toggle_all',['../classLEDSet.html#ae2bcd287ff637c2600603e83b0981c77',1,'LEDSet']]],
+  ['toggle_5fall_5froutine',['toggle_all_routine',['../classLEDSet.html#a61cc024950a5b66dff34c449cc73787f',1,'LEDSet']]],
+  ['toggle_5ftwice',['toggle_twice',['../classLEDSet.html#a6062da843aabdf8fbdcedb70fed00dec',1,'LEDSet']]]
 ];

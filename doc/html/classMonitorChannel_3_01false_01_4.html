@@ -77,16 +77,17 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a72d6a503399e9e8e986f0258d508a1b2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonitorChannel_3_01false_01_4.html#a72d6a503399e9e8e986f0258d508a1b2">AccumulateType</a> = uint32_t</td></tr>
-<tr class="separator:a72d6a503399e9e8e986f0258d508a1b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac36f4071aff4c11fda63ff839d13345c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonitorChannel_3_01false_01_4.html#ac36f4071aff4c11fda63ff839d13345c">AccumulateType</a> = float</td></tr>
+<tr class="separator:ac36f4071aff4c11fda63ff839d13345c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aec5ccac7dbda7816b5ddc163d6d4aa5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonitorChannel_3_01false_01_4.html#aec5ccac7dbda7816b5ddc163d6d4aa5b">push_back</a> () __attribute__((always_inline))</td></tr>
-<tr class="separator:aec5ccac7dbda7816b5ddc163d6d4aa5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac074706af7eebfb6478ffeedb87537ba"><td class="memTemplParams" colspan="2">template&lt;typename DataType &gt; </td></tr>
+<tr class="memitem:ac074706af7eebfb6478ffeedb87537ba"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classMonitorChannel_3_01false_01_4.html#ac074706af7eebfb6478ffeedb87537ba">push_back</a> (DataType data)</td></tr>
+<tr class="separator:ac074706af7eebfb6478ffeedb87537ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff1c900b36c53bd674b53f94c3c2770b"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonitorChannel_3_01false_01_4.html#aff1c900b36c53bd674b53f94c3c2770b">mean</a> () const __attribute__((always_inline))</td></tr>
 <tr class="separator:aff1c900b36c53bd674b53f94c3c2770b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55677fe669bca6b9382fc3baa73162b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMonitorChannel_3_01false_01_4.html#a72d6a503399e9e8e986f0258d508a1b2">AccumulateType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonitorChannel_3_01false_01_4.html#a55677fe669bca6b9382fc3baa73162b9">accumulate</a> () const __attribute__((always_inline))</td></tr>
+<tr class="memitem:a55677fe669bca6b9382fc3baa73162b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMonitorChannel_3_01false_01_4.html#ac36f4071aff4c11fda63ff839d13345c">AccumulateType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonitorChannel_3_01false_01_4.html#a55677fe669bca6b9382fc3baa73162b9">accumulate</a> () const __attribute__((always_inline))</td></tr>
 <tr class="memdesc:a55677fe669bca6b9382fc3baa73162b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the accumulate so far, which is the same as 'Count`.  <a href="#a55677fe669bca6b9382fc3baa73162b9">More...</a><br /></td></tr>
 <tr class="separator:a55677fe669bca6b9382fc3baa73162b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9310343e280b593894ac370932be4cbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonitorChannel_3_01false_01_4.html#a9310343e280b593894ac370932be4cbe">reset</a> ()</td></tr>
@@ -104,14 +105,14 @@ class MonitorChannel&lt; false &gt;</h3>
 
 <p>Specialization -&gt; Counter Monitor (degenerated mean monitor). </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a72d6a503399e9e8e986f0258d508a1b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72d6a503399e9e8e986f0258d508a1b2">&#9670;&nbsp;</a></span>AccumulateType</h2>
+<a id="ac36f4071aff4c11fda63ff839d13345c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac36f4071aff4c11fda63ff839d13345c">&#9670;&nbsp;</a></span>AccumulateType</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classMonitorChannel.html">MonitorChannel</a>&lt; false &gt;::<a class="el" href="classMonitorChannel_3_01false_01_4.html#a72d6a503399e9e8e986f0258d508a1b2">AccumulateType</a> =  uint32_t</td>
+          <td class="memname">using <a class="el" href="classMonitorChannel.html">MonitorChannel</a>&lt; false &gt;::<a class="el" href="classMonitorChannel_3_01false_01_4.html#ac36f4071aff4c11fda63ff839d13345c">AccumulateType</a> =  float</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -129,7 +130,7 @@ class MonitorChannel&lt; false &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classMonitorChannel_3_01false_01_4.html#a72d6a503399e9e8e986f0258d508a1b2">AccumulateType</a> <a class="el" href="classMonitorChannel.html">MonitorChannel</a>&lt; false &gt;::accumulate </td>
+          <td class="memname"><a class="el" href="classMonitorChannel_3_01false_01_4.html#ac36f4071aff4c11fda63ff839d13345c">AccumulateType</a> <a class="el" href="classMonitorChannel.html">MonitorChannel</a>&lt; false &gt;::accumulate </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -172,11 +173,13 @@ class MonitorChannel&lt; false &gt;</h3>
 
 </div>
 </div>
-<a id="aec5ccac7dbda7816b5ddc163d6d4aa5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec5ccac7dbda7816b5ddc163d6d4aa5b">&#9670;&nbsp;</a></span>push_back()</h2>
+<a id="ac074706af7eebfb6478ffeedb87537ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac074706af7eebfb6478ffeedb87537ba">&#9670;&nbsp;</a></span>push_back()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename DataType &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -184,7 +187,8 @@ class MonitorChannel&lt; false &gt;</h3>
         <tr>
           <td class="memname">void <a class="el" href="classMonitorChannel.html">MonitorChannel</a>&lt; false &gt;::push_back </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">DataType&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
           <td></td>
         </tr>
       </table>

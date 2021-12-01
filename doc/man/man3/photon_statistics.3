@@ -1,4 +1,4 @@
-.TH "photon_statistics" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "photon_statistics" 3 "Fri Nov 12 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -26,7 +26,7 @@ photon_statistics
 .RI "\fBconfig\fP = json\&.load(f)"
 .br
 .ti -1c
-.RI "list \fBmultitau_param_set\fP = [\fBconfig\fP['LinCorrs'], \fBconfig\fP['SeriesSize'], \fBconfig\fP['BinRatio']]"
+.RI "list \fBmultitau_param_set\fP = [\fBconfig\fP['MT Linear Correlators(LCs)'], \fBconfig\fP['MT LC Series Size'], \fBconfig\fP['MT Bin Ratio']]"
 .br
 .ti -1c
 .RI "\fBthis_channel_size\fP = \fBmultitau\&.channel_size\fP(*\fBmultitau_param_set\fP)"
@@ -74,7 +74,7 @@ photon_statistics
 .RI "\fBnormalizer\fP = \fBNormalizer\fP(*\fBmultitau_param_set\fP)"
 .br
 .ti -1c
-.RI "tuple \fBnorm_mode\fP = ('no' * (not \fBconfig\fP['EnablePointsNorm'])) + ('points' * (not \fBconfig\fP['EnableMeanNorm']) * config['EnablePointsNorm']) + ('mean' * config['EnableMeanNorm'] * config['EnablePointsNorm'])"
+.RI "tuple \fBnorm_mode\fP = ('no' * (not \fBconfig\fP['Enable Points Norm'])) + ('points' * (not \fBconfig\fP['Enable Mean Norm']) * config['Enable Points Norm']) + ('mean' * config['Enable Mean Norm'] * config['Enable Points Norm'])"
 .br
 .ti -1c
 .RI "list \fBnorm_args\fP = []"
@@ -152,7 +152,7 @@ photon_statistics
 .RI "\fBport\fP = Serial(port=\fBconfig\fP['Port'], baudrate=\fBconfig\fP['Baud'], timeout=None)"
 .br
 .ti -1c
-.RI "\fBmeasurement_sampling_delay\fP = int(\fBconfig\fP['SamplingDelay_ms']/2)"
+.RI "\fBmeasurement_sampling_delay\fP = int(\fBconfig\fP['Sampling Delay ms']/2)"
 .br
 .ti -1c
 .RI "\fBmeasurement_thread\fP = QtCore\&.QTimer()"
@@ -199,11 +199,11 @@ photon_statistics
 
 .SS "photon_statistics\&.measure_clock_stop = \fBnow_tmp\fP"
 
-.SS "photon_statistics\&.measurement_sampling_delay = int(\fBconfig\fP['SamplingDelay_ms']/2)"
+.SS "photon_statistics\&.measurement_sampling_delay = int(\fBconfig\fP['Sampling Delay ms']/2)"
 
 .SS "photon_statistics\&.measurement_thread = QtCore\&.QTimer()"
 
-.SS "list photon_statistics\&.multitau_param_set = [\fBconfig\fP['LinCorrs'], \fBconfig\fP['SeriesSize'], \fBconfig\fP['BinRatio']]"
+.SS "list photon_statistics\&.multitau_param_set = [\fBconfig\fP['MT Linear Correlators(LCs)'], \fBconfig\fP['MT LC Series Size'], \fBconfig\fP['MT Bin Ratio']]"
 
 .SS "photon_statistics\&.name_ = sys\&.argv[1]"
 
@@ -211,7 +211,7 @@ photon_statistics
 
 .SS "list photon_statistics\&.norm_args = []"
 
-.SS "tuple photon_statistics\&.norm_mode = ('no' * (not \fBconfig\fP['EnablePointsNorm'])) + ('points' * (not \fBconfig\fP['EnableMeanNorm']) * config['EnablePointsNorm']) + ('mean' * config['EnableMeanNorm'] * config['EnablePointsNorm'])"
+.SS "tuple photon_statistics\&.norm_mode = ('no' * (not \fBconfig\fP['Enable Points Norm'])) + ('points' * (not \fBconfig\fP['Enable Mean Norm']) * config['Enable Points Norm']) + ('mean' * config['Enable Mean Norm'] * config['Enable Points Norm'])"
 
 .SS "photon_statistics\&.normalizer = \fBNormalizer\fP(*\fBmultitau_param_set\fP)"
 
@@ -253,13 +253,13 @@ photon_statistics
 \fBInitial value:\fP
 .PP
 .nf
-1 =  ( (config['EnableACFCalc'] * this_channel_size) + 
-2                             config['EnableCountRate'] +
-3                             config['EnablePointsNorm'] +
-4                             config['EnableSyncCode'] +
-5                             config['EnableMeanNorm'] + 
-6                             config['Enable PC Histogram'] * config['PC Histogram Bins'] +
-7                             ((config['EnableACFCalc'] + 1) * config['Enable Performance Counters'])
+1 =  ( (config['Enable ACF'] * this_channel_size) + 
+2                             config['Enable Count Rate(CR)'] +
+3                             config['Enable Points Norm'] +
+4                             config['Enable Sync Check'] +
+5                             config['Enable Mean Norm'] + 
+6                             config['Enable Photon Count Histogram'] * config['PC Histogram Bins'] +
+7                             ((config['Enable ACF'] + 1) * config['Enable Performance Counters'])
 8                         ) * byte_size
 .fi
 .SS "int photon_statistics\&.update_id = 0"

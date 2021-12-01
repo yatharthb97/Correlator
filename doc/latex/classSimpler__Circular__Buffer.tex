@@ -6,8 +6,7 @@
 
 
 
-Collaboration diagram for Simpler\+\_\+\+Circular\+\_\+\+Buffer$<$ Type, Max\+Size $>$\+:
-\nopagebreak
+Collaboration diagram for Simpler\+\_\+\+Circular\+\_\+\+Buffer$<$ Type, Max\+Size $>$\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -22,7 +21,11 @@ void \hyperlink{classSimpler__Circular__Buffer_a793cdb8134afe48ef9918fa0428dfbb6
 void \hyperlink{classSimpler__Circular__Buffer_af4bdd0a6d3fc7a8c06f62b0d996158f0}{push\+\_\+back} (const Type datum) \+\_\+\+\_\+attribute\+\_\+\+\_\+((flatten))
 \begin{DoxyCompactList}\small\item\em Adds a datum to the circular buffer. \end{DoxyCompactList}\item 
 Type \hyperlink{classSimpler__Circular__Buffer_a4ce53bc8ad0d231e9d013c771191696a}{operator\mbox{[}$\,$\mbox{]}} (const size\+\_\+t index) const \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
-\begin{DoxyCompactList}\small\item\em Random access operator can be used to retrive the nth element in the buffer at any state of the buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Random access operator can be used to retrive the nth element in the buffer at any state of the buffer. \end{DoxyCompactList}\item 
+Type \hyperlink{classSimpler__Circular__Buffer_a6bdde2ca6c814ec455b8ffa190a90c1e}{get\+\_\+idx} (const size\+\_\+t index) const \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
+\begin{DoxyCompactList}\small\item\em Random access function can be used to retrive the nth element in the buffer at any state of the buffer. \end{DoxyCompactList}\item 
+Type \hyperlink{classSimpler__Circular__Buffer_afdd5b4da34472c721f46f354bfca2223}{history} (const size\+\_\+t index) const \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
+\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -35,6 +38,24 @@ size\+\_\+t \hyperlink{classSimpler__Circular__Buffer_a2833e67d4d6cfae68e7130603
 
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSimpler__Circular__Buffer_a6bdde2ca6c814ec455b8ffa190a90c1e}\label{classSimpler__Circular__Buffer_a6bdde2ca6c814ec455b8ffa190a90c1e}} 
+\index{Simpler\+\_\+\+Circular\+\_\+\+Buffer@{Simpler\+\_\+\+Circular\+\_\+\+Buffer}!get\+\_\+idx@{get\+\_\+idx}}
+\index{get\+\_\+idx@{get\+\_\+idx}!Simpler\+\_\+\+Circular\+\_\+\+Buffer@{Simpler\+\_\+\+Circular\+\_\+\+Buffer}}
+\subsubsection{\texorpdfstring{get\+\_\+idx()}{get\_idx()}}
+{\footnotesize\ttfamily template$<$typename Type, size\+\_\+t Max\+Size$>$ \\
+Type \hyperlink{classSimpler__Circular__Buffer}{Simpler\+\_\+\+Circular\+\_\+\+Buffer}$<$ Type, Max\+Size $>$\+::get\+\_\+idx (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Random access function can be used to retrive the nth element in the buffer at any state of the buffer. 
+
+\mbox{\Hypertarget{classSimpler__Circular__Buffer_afdd5b4da34472c721f46f354bfca2223}\label{classSimpler__Circular__Buffer_afdd5b4da34472c721f46f354bfca2223}} 
+\index{Simpler\+\_\+\+Circular\+\_\+\+Buffer@{Simpler\+\_\+\+Circular\+\_\+\+Buffer}!history@{history}}
+\index{history@{history}!Simpler\+\_\+\+Circular\+\_\+\+Buffer@{Simpler\+\_\+\+Circular\+\_\+\+Buffer}}
+\subsubsection{\texorpdfstring{history()}{history()}}
+{\footnotesize\ttfamily template$<$typename Type, size\+\_\+t Max\+Size$>$ \\
+Type \hyperlink{classSimpler__Circular__Buffer}{Simpler\+\_\+\+Circular\+\_\+\+Buffer}$<$ Type, Max\+Size $>$\+::history (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 \mbox{\Hypertarget{classSimpler__Circular__Buffer_a4ce53bc8ad0d231e9d013c771191696a}\label{classSimpler__Circular__Buffer_a4ce53bc8ad0d231e9d013c771191696a}} 
 \index{Simpler\+\_\+\+Circular\+\_\+\+Buffer@{Simpler\+\_\+\+Circular\+\_\+\+Buffer}!operator\mbox{[}\mbox{]}@{operator[]}}
 \index{operator\mbox{[}\mbox{]}@{operator[]}!Simpler\+\_\+\+Circular\+\_\+\+Buffer@{Simpler\+\_\+\+Circular\+\_\+\+Buffer}}

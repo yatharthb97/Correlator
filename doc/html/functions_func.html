@@ -67,14 +67,27 @@ $(function() {
 : <a class="el" href="classLin__CrossCorr__RT__Teensy.html#a33f639fa3a6f025d5a9ebe60b969cc55">Lin_CrossCorr_RT_Teensy&lt; Series_size &gt;</a>
 </li>
 <li>__init__()
-: <a class="el" href="classlive__graph_1_1PStatLiveGraph.html#a210a499fd4e06392f8f5fffc209971a4">live_graph.PStatLiveGraph</a>
+: <a class="el" href="classdevice__mode_1_1DataStore.html#a641442fc9847435e17d158c22864b698">device_mode.DataStore</a>
+, <a class="el" href="classdevice__mode_1_1StructParsar.html#a3fd85c5d99b5bfc1e359d9457cc07df1">device_mode.StructParsar</a>
+, <a class="el" href="classlive__graph_1_1PStatLiveGraph.html#a210a499fd4e06392f8f5fffc209971a4">live_graph.PStatLiveGraph</a>
+, <a class="el" href="classnew__app_1_1ParamStruct.html#aa1d6a92c83421312796c61a958fd92d0">new_app.ParamStruct</a>
 , <a class="el" href="classnormalizer_1_1Normalizer.html#afccec17549a3a8de54c39b7b5de3d4b7">normalizer.Normalizer</a>
+, <a class="el" href="classutilities_1_1OffsetTracker.html#a75d00b8c481ed3b39c2962b8e6e66b91">utilities.OffsetTracker</a>
 </li>
 <li>__repr__()
 : <a class="el" href="classnormalizer_1_1Normalizer.html#a09b6d62bec3fca383a1a9c82cc74836a">normalizer.Normalizer</a>
 </li>
 <li>_assert_()
 : <a class="el" href="classErrors.html#a3618ed0e7aba69be0759fa821a987b3b">Errors</a>
+</li>
+<li>_fL1_acf_()
+: <a class="el" href="classlive__graph_1_1PStatLiveGraph.html#a4069f240b66cc2e37612e7d46786112d">live_graph.PStatLiveGraph</a>
+</li>
+<li>_fl2_interarrival_()
+: <a class="el" href="classlive__graph_1_1PStatLiveGraph.html#af25888b90f22f5ab1d0ab266277302d3">live_graph.PStatLiveGraph</a>
+</li>
+<li>_fl3_sampler()
+: <a class="el" href="classlive__graph_1_1PStatLiveGraph.html#a14250ec993ac4478944f53caaf6746ab">live_graph.PStatLiveGraph</a>
 </li>
 </ul>
 
@@ -90,6 +103,9 @@ $(function() {
 <li>add_canvas_plot()
 : <a class="el" href="classlive__graph_1_1PStatLiveGraph.html#abfe72ecd8755e0cc4870ecbd560d45c3">live_graph.PStatLiveGraph</a>
 </li>
+<li>advance()
+: <a class="el" href="classutilities_1_1OffsetTracker.html#a058ad5ae0b53bfbfecc4612e094951d5">utilities.OffsetTracker</a>
+</li>
 <li>assert_errors()
 : <a class="el" href="classLEDSet.html#aafb42531245febe55685c764c29d918f">LEDSet&lt; SET_SIZE &gt;</a>
 </li>
@@ -101,11 +117,13 @@ $(function() {
 
 <h3><a id="index_c"></a>- c -</h3><ul>
 <li>ch_out()
-: <a class="el" href="classLinACorrRTTeensy.html#a967f1b3ea7e6ebdae8c9bf7c2c641e49">LinACorrRTTeensy&lt; Series_Size, hasMonitorChannel &gt;</a>
+: <a class="el" href="classFakeChannel.html#a4690f6aaaeded8dd776aab720fdfbd8b">FakeChannel&lt; Series_Size, hasMonitorChannel &gt;</a>
+, <a class="el" href="classLinACorrRTTeensy.html#a967f1b3ea7e6ebdae8c9bf7c2c641e49">LinACorrRTTeensy&lt; Series_Size, hasMonitorChannel &gt;</a>
 , <a class="el" href="classMultiTauACorrRTTeensy.html#af9ab6f055c1efc4a28c7c5bfa3aea074">MultiTauACorrRTTeensy&lt; Lin_channels, Series_size, Bin_Ratio &gt;</a>
 </li>
 <li>ch_out_norm()
-: <a class="el" href="classLinACorrRTTeensy.html#a4d1be65472a058b056386286d093b847">LinACorrRTTeensy&lt; Series_Size, hasMonitorChannel &gt;</a>
+: <a class="el" href="classFakeChannel.html#a89dc67c3d19480927f1c07f7a96a1674">FakeChannel&lt; Series_Size, hasMonitorChannel &gt;</a>
+, <a class="el" href="classLinACorrRTTeensy.html#a4d1be65472a058b056386286d093b847">LinACorrRTTeensy&lt; Series_Size, hasMonitorChannel &gt;</a>
 </li>
 <li>clear_input_edge_flag()
 : <a class="el" href="classTMR1Controller.html#aa59afefa545098e53cb2e0560142526c">TMR1Controller</a>
@@ -115,6 +133,12 @@ $(function() {
 </li>
 <li>clear_overflow_flag()
 : <a class="el" href="classTMR1Controller.html#a7117e12d0cb8ec32aa6552fe541023da">TMR1Controller</a>
+</li>
+<li>copy_config_to_session()
+: <a class="el" href="classdevice__mode_1_1StructParsar.html#aa712e82c9d517f5dc900a2160087b544">device_mode.StructParsar</a>
+</li>
+<li>create_file()
+: <a class="el" href="classdevice__mode_1_1StructParsar.html#a87d7fedb8e4d87378eab71acc68dfb43">device_mode.StructParsar</a>
 </li>
 </ul>
 
@@ -133,7 +157,7 @@ $(function() {
 : <a class="el" href="classPITController.html#a5e1bf9f8053a51c68f0ff2178ab56954">PITController&lt; ChID &gt;</a>
 </li>
 <li>discard_count()
-: <a class="el" href="classDiscarderTeensy.html#acddeb78ebed208384b8ce100d9c503e6">DiscarderTeensy&lt; Series_size, Front, End &gt;</a>
+: <a class="el" href="classDiscarderTeensy.html#a8bf8936122ce65643c2079d2629aae9a">DiscarderTeensy&lt; ChannelSize, Front, End &gt;</a>
 </li>
 <li>do_accumulate()
 : <a class="el" href="classAccumulator.html#adab342ee6d376a45ed38fe1e1679a1e2">Accumulator</a>
@@ -162,8 +186,17 @@ $(function() {
 
 
 <h3><a id="index_f"></a>- f -</h3><ul>
+<li>FakeChannel()
+: <a class="el" href="classFakeChannel.html#a7b6ecb79fe6460f07d395c4df4b30cda">FakeChannel&lt; Series_Size, hasMonitorChannel &gt;</a>
+</li>
 <li>fetch_index()
 : <a class="el" href="classLEDSet.html#a4ffb3b4a8a5cffdc03f4040ff67a33e9">LEDSet&lt; SET_SIZE &gt;</a>
+</li>
+<li>file_name_generator()
+: <a class="el" href="classdevice__mode_1_1StructParsar.html#a41a89941190ffef686890ed45110a086">device_mode.StructParsar</a>
+</li>
+<li>fl_structure()
+: <a class="el" href="classdevice__mode_1_1StructParsar.html#a27f6ebed8dceb8e44d29294383288ea3">device_mode.StructParsar</a>
 </li>
 <li>for()
 : <a class="el" href="classLin__CrossCorr__RT__Teensy.html#aca7ed016d12272211206139cd120b359">Lin_CrossCorr_RT_Teensy&lt; Series_size &gt;</a>
@@ -172,6 +205,25 @@ $(function() {
 
 
 <h3><a id="index_g"></a>- g -</h3><ul>
+<li>generate_data_fields()
+: <a class="el" href="classdevice__mode_1_1FeatureLine.html#a6223a227b982c9eec4035c5d9f3f7e3c">device_mode.FeatureLine</a>
+</li>
+<li>generate_data_files()
+: <a class="el" href="classdevice__mode_1_1FeatureLine.html#a1abbb99081dc21c569cba237c859dae5">device_mode.FeatureLine</a>
+, <a class="el" href="classdevice__mode_1_1StructParsar.html#ae57ed24c72707985427085a6ba87087c">device_mode.StructParsar</a>
+</li>
+<li>generate_datasets()
+: <a class="el" href="classdevice__mode_1_1StructParsar.html#aa61ace2e8ff58899b980e083c442bd7c">device_mode.StructParsar</a>
+</li>
+<li>generate_struct_parsar()
+: <a class="el" href="classdevice__mode_1_1StructParsar.html#afe15c55fc572e5fa0f02bf03188de789">device_mode.StructParsar</a>
+</li>
+<li>generate_struct_rep()
+: <a class="el" href="classdevice__mode_1_1StructParsar.html#a0292edb37b72eb19e711d58f6fc2567f">device_mode.StructParsar</a>
+</li>
+<li>generate_struct_repr()
+: <a class="el" href="classdevice__mode_1_1FeatureLine.html#a2f9a39132e28fc061bb16c96f7e8177e">device_mode.FeatureLine</a>
+</li>
 <li>get_capture_double_range()
 : <a class="el" href="classTMR1Controller.html#a34042b5a735d4f8fd40fa36135bdec8c">TMR1Controller</a>
 </li>
@@ -184,8 +236,21 @@ $(function() {
 <li>get_extern_capture_signal_pin()
 : <a class="el" href="classTMR1Controller.html#a49a1a48db1600173eeb24858645a0366">TMR1Controller</a>
 </li>
+<li>get_gui()
+: <a class="el" href="classdevice__mode_1_1FeatureLine.html#a828523120c977cfd677a8c5146906400">device_mode.FeatureLine</a>
+</li>
+<li>get_idx()
+: <a class="el" href="classSimpler__Circular__Buffer.html#a6bdde2ca6c814ec455b8ffa190a90c1e">Simpler_Circular_Buffer&lt; Type, MaxSize &gt;</a>
+</li>
 <li>get_output()
 : <a class="el" href="classZeroLagMonitor.html#ae55b5b21f78fd93d1c8afc95bba69ba4">ZeroLagMonitor</a>
+</li>
+<li>get_parsar()
+: <a class="el" href="classdevice__mode_1_1FeatureLine.html#a6f2c5a624f255bd290ff74a9f3a29291">device_mode.FeatureLine</a>
+</li>
+<li>get_struct_size()
+: <a class="el" href="classdevice__mode_1_1FeatureLine.html#a05270169f8fe514acc1238d70bde0f12">device_mode.FeatureLine</a>
+, <a class="el" href="classdevice__mode_1_1StructParsar.html#ad08ea57819388138c2e94a43780b6da5">device_mode.StructParsar</a>
 </li>
 <li>get_ttl_input_pin()
 : <a class="el" href="classTMR1Controller.html#a084c153e1a888f72456c54b29e3fa957">TMR1Controller</a>
@@ -198,6 +263,13 @@ $(function() {
 </li>
 <li>grid_allocator()
 : <a class="el" href="classlive__graph_1_1PStatLiveGraph.html#a4969c53cd50f31c9b50d86a7cac77a63">live_graph.PStatLiveGraph</a>
+</li>
+</ul>
+
+
+<h3><a id="index_h"></a>- h -</h3><ul>
+<li>history()
+: <a class="el" href="classSimpler__Circular__Buffer.html#afdd5b4da34472c721f46f354bfca2223">Simpler_Circular_Buffer&lt; Type, MaxSize &gt;</a>
 </li>
 </ul>
 
@@ -275,7 +347,8 @@ $(function() {
 : <a class="el" href="classnormalizer_1_1Normalizer.html#a7965c29d7d3a867dbb82cc7f3e7e69b3">normalizer.Normalizer</a>
 </li>
 <li>norm()
-: <a class="el" href="classLinACorrRTTeensy.html#a98110e3b97a2300b9078a6e57a8234bc">LinACorrRTTeensy&lt; Series_Size, hasMonitorChannel &gt;</a>
+: <a class="el" href="classFakeChannel.html#a2c7edb717127d703f71e50df8a0b391c">FakeChannel&lt; Series_Size, hasMonitorChannel &gt;</a>
+, <a class="el" href="classLinACorrRTTeensy.html#a98110e3b97a2300b9078a6e57a8234bc">LinACorrRTTeensy&lt; Series_Size, hasMonitorChannel &gt;</a>
 </li>
 <li>norm_lag0_estimator()
 : <a class="el" href="classstatmethods_1_1StatMethods.html#a98bde45d59d8558c9b675b9f5dbd0922">statmethods.StatMethods</a>
@@ -287,6 +360,9 @@ $(function() {
 
 
 <h3><a id="index_o"></a>- o -</h3><ul>
+<li>offsetter()
+: <a class="el" href="classutilities_1_1OffsetTracker.html#a3ed692ec6058294066507626026b78f1">utilities.OffsetTracker</a>
+</li>
 <li>ON_todigital()
 : <a class="el" href="classLEDSet.html#a141bb664e7f58ae676455972ca9cd686">LEDSet&lt; SET_SIZE &gt;</a>
 </li>
@@ -294,7 +370,7 @@ $(function() {
 : <a class="el" href="classSimpler__Circular__Buffer.html#a4ce53bc8ad0d231e9d013c771191696a">Simpler_Circular_Buffer&lt; Type, MaxSize &gt;</a>
 </li>
 <li>output()
-: <a class="el" href="classDiscarderTeensy.html#ae7f8709724630ac3cc82a7a3ee202f2c">DiscarderTeensy&lt; Series_size, Front, End &gt;</a>
+: <a class="el" href="classDiscarderTeensy.html#a16d1489169e9cfae817c350604141826">DiscarderTeensy&lt; ChannelSize, Front, End &gt;</a>
 , <a class="el" href="classInterArrivalTime.html#a8a12081f1132d4a2c7a3898b01897c8d">InterArrivalTime&lt; CounterType, CPUTickType &gt;</a>
 , <a class="el" href="classPCHistogram.html#af4391ac8ad3f4d9865ee6335fb563b4c">PCHistogram&lt; BinType, Bins &gt;</a>
 , <a class="el" href="classPerfCounter.html#a291ce8187d35e1f97a68339fe51931a4">PerfCounter</a>
@@ -311,7 +387,7 @@ $(function() {
 : <a class="el" href="classPITController.html#a3fedb5ff5a44b664e8132f4e2836b155">PITController&lt; ChID &gt;</a>
 </li>
 <li>pipe()
-: <a class="el" href="classAccumulator.html#aa7494b569b7f4f2d2ab115e623ab135d">Accumulator</a>
+: <a class="el" href="classAccumulator.html#a0b77af4be52d4c8f627cefb1f5315c98">Accumulator</a>
 </li>
 <li>PIT_LifetimeTimer()
 : <a class="el" href="classPIT__LifetimeTimer.html#a826797e75688ab4e7cd5c8854fa6a7c0">PIT_LifetimeTimer</a>
@@ -327,7 +403,7 @@ $(function() {
 </li>
 <li>push_back()
 : <a class="el" href="classLin__CrossCorr__RT__Teensy.html#af39e68107a612ca22a83046b10f52afb">Lin_CrossCorr_RT_Teensy&lt; Series_size &gt;</a>
-, <a class="el" href="classMonitorChannel_3_01false_01_4.html#aec5ccac7dbda7816b5ddc163d6d4aa5b">MonitorChannel&lt; false &gt;</a>
+, <a class="el" href="classMonitorChannel_3_01false_01_4.html#ac074706af7eebfb6478ffeedb87537ba">MonitorChannel&lt; false &gt;</a>
 , <a class="el" href="classMonitorChannel_3_01true_01_4.html#a5de2067c26c85de95bcaafe396a72471">MonitorChannel&lt; true &gt;</a>
 , <a class="el" href="classPCHistogram.html#a0885e66d0de46bd16b72b870d7f410fc">PCHistogram&lt; BinType, Bins &gt;</a>
 , <a class="el" href="classRTCoarseGrainer.html#a92ba58efd22b7c3c9e79cd4d5e065e70">RTCoarseGrainer</a>
@@ -335,11 +411,13 @@ $(function() {
 , <a class="el" href="classZeroLagMonitor.html#a22be76548cef864fba0a9c9125a57cce">ZeroLagMonitor</a>
 </li>
 <li>push_data()
-: <a class="el" href="classLinACorrRTTeensy.html#abf6a40dff92088469fbb8ceabf9da799">LinACorrRTTeensy&lt; Series_Size, hasMonitorChannel &gt;</a>
+: <a class="el" href="classFakeChannel.html#a0b367e4109f7143261f44e5fde277181">FakeChannel&lt; Series_Size, hasMonitorChannel &gt;</a>
+, <a class="el" href="classLinACorrRTTeensy.html#abf6a40dff92088469fbb8ceabf9da799">LinACorrRTTeensy&lt; Series_Size, hasMonitorChannel &gt;</a>
 , <a class="el" href="classMultiTauACorrRTTeensy.html#ad3c078b834bb1682c93ba4cd5639d450">MultiTauACorrRTTeensy&lt; Lin_channels, Series_size, Bin_Ratio &gt;</a>
 </li>
 <li>push_datum()
-: <a class="el" href="classLinACorrRTTeensy.html#aacc634aad2252efbb6ee3a4c2ac422dc">LinACorrRTTeensy&lt; Series_Size, hasMonitorChannel &gt;</a>
+: <a class="el" href="classFakeChannel.html#ad40cc96be3b22a6d0111b9cc8f30ffcf">FakeChannel&lt; Series_Size, hasMonitorChannel &gt;</a>
+, <a class="el" href="classLinACorrRTTeensy.html#aacc634aad2252efbb6ee3a4c2ac422dc">LinACorrRTTeensy&lt; Series_Size, hasMonitorChannel &gt;</a>
 , <a class="el" href="classMultiTauACorrRTTeensy.html#a85777a221b7a15de34b252ed804ab0f8">MultiTauACorrRTTeensy&lt; Lin_channels, Series_size, Bin_Ratio &gt;</a>
 </li>
 </ul>
@@ -384,6 +462,9 @@ $(function() {
 </li>
 <li>set_all()
 : <a class="el" href="classLEDSet.html#aaebfea59ba933621c4f7d7d405119702">LEDSet&lt; SET_SIZE &gt;</a>
+</li>
+<li>set_config()
+: <a class="el" href="classdevice__mode_1_1StructParsar.html#a4cdbf854c368e74051b505cca98ec41e">device_mode.StructParsar</a>
 </li>
 <li>set_gate_time()
 : <a class="el" href="classPITController.html#aaf7a79129a4ea5af057ea8f537b7ae9f">PITController&lt; ChID &gt;</a>

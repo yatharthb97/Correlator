@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['statmethods',['statmethods',['../namespacestatmethods.html',1,'']]]
+  ['photon_5fstatistics',['photon_statistics',['../namespacephoton__statistics.html',1,'']]]
 ];

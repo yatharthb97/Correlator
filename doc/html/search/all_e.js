@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['paramstruct',['ParamStruct',['../classnew__app_1_1ParamStruct.html',1,'new_app']]],
   ['parent_5fdir',['parent_dir',['../namespacephoton__statistics.html#a255f06b87745f05837e1623b921ae692',1,'photon_statistics']]],
   ['pause_5fresume_5fpits',['pause_resume_PITs',['../classPITController.html#a24b7ea02555967ef945ab87aae338574',1,'PITController']]],
   ['pchistogram',['PCHistogram',['../classPCHistogram.html',1,'']]],
@@ -15,7 +16,7 @@ var searchData=
   ['photon_5fstatistics_2epy',['photon_statistics.py',['../photon__statistics_8py.html',1,'']]],
   ['pi_5ft',['PI_t',['../global_8cpp.html#af11c331fc1c91504e3f7d2dccf67b739',1,'PI_t():&#160;global.cpp'],['../global_8hpp.html#af11c331fc1c91504e3f7d2dccf67b739',1,'PI_t():&#160;global.cpp']]],
   ['pins_2ehpp',['pins.hpp',['../pins_8hpp.html',1,'']]],
-  ['pipe',['pipe',['../classAccumulator.html#aa7494b569b7f4f2d2ab115e623ab135d',1,'Accumulator']]],
+  ['pipe',['pipe',['../classAccumulator.html#a0b77af4be52d4c8f627cefb1f5315c98',1,'Accumulator']]],
   ['pit_2ehpp',['pit.hpp',['../pit_8hpp.html',1,'']]],
   ['pit_5flifetimetimer',['PIT_LifetimeTimer',['../classPIT__LifetimeTimer.html',1,'PIT_LifetimeTimer'],['../classPIT__LifetimeTimer.html#a826797e75688ab4e7cd5c8854fa6a7c0',1,'PIT_LifetimeTimer::PIT_LifetimeTimer()']]],
   ['pit_5fmax_5fcounter',['PIT_MAX_COUNTER',['../classPITController.html#a53778fe7e47ac9741bef0bc190e0646a',1,'PITController']]],
@@ -30,7 +31,7 @@ var searchData=
   ['pseudoserial_2ecpp',['pseudoSerial.cpp',['../pseudoSerial_8cpp.html',1,'']]],
   ['pseudoserial_2ehpp',['pseudoSerial.hpp',['../pseudoSerial_8hpp.html',1,'']]],
   ['pstatlivegraph',['PStatLiveGraph',['../classlive__graph_1_1PStatLiveGraph.html',1,'live_graph']]],
-  ['push_5fback',['push_back',['../classPCHistogram.html#a0885e66d0de46bd16b72b870d7f410fc',1,'PCHistogram::push_back()'],['../classLin__CrossCorr__RT__Teensy.html#af39e68107a612ca22a83046b10f52afb',1,'Lin_CrossCorr_RT_Teensy::push_back()'],['../classMonitorChannel_3_01true_01_4.html#a5de2067c26c85de95bcaafe396a72471',1,'MonitorChannel&lt; true &gt;::push_back()'],['../classMonitorChannel_3_01false_01_4.html#aec5ccac7dbda7816b5ddc163d6d4aa5b',1,'MonitorChannel&lt; false &gt;::push_back()'],['../classZeroLagMonitor.html#a22be76548cef864fba0a9c9125a57cce',1,'ZeroLagMonitor::push_back()'],['../classRTCoarseGrainer.html#a92ba58efd22b7c3c9e79cd4d5e065e70',1,'RTCoarseGrainer::push_back()'],['../classSimpler__Circular__Buffer.html#af4bdd0a6d3fc7a8c06f62b0d996158f0',1,'Simpler_Circular_Buffer::push_back()']]],
-  ['push_5fdata',['push_data',['../classLinACorrRTTeensy.html#abf6a40dff92088469fbb8ceabf9da799',1,'LinACorrRTTeensy::push_data()'],['../classMultiTauACorrRTTeensy.html#ad3c078b834bb1682c93ba4cd5639d450',1,'MultiTauACorrRTTeensy::push_data()']]],
-  ['push_5fdatum',['push_datum',['../classLinACorrRTTeensy.html#aacc634aad2252efbb6ee3a4c2ac422dc',1,'LinACorrRTTeensy::push_datum()'],['../classMultiTauACorrRTTeensy.html#a85777a221b7a15de34b252ed804ab0f8',1,'MultiTauACorrRTTeensy::push_datum()']]]
+  ['push_5fback',['push_back',['../classPCHistogram.html#a0885e66d0de46bd16b72b870d7f410fc',1,'PCHistogram::push_back()'],['../classLin__CrossCorr__RT__Teensy.html#af39e68107a612ca22a83046b10f52afb',1,'Lin_CrossCorr_RT_Teensy::push_back()'],['../classMonitorChannel_3_01true_01_4.html#a5de2067c26c85de95bcaafe396a72471',1,'MonitorChannel&lt; true &gt;::push_back()'],['../classMonitorChannel_3_01false_01_4.html#ac074706af7eebfb6478ffeedb87537ba',1,'MonitorChannel&lt; false &gt;::push_back()'],['../classZeroLagMonitor.html#a22be76548cef864fba0a9c9125a57cce',1,'ZeroLagMonitor::push_back()'],['../classRTCoarseGrainer.html#a92ba58efd22b7c3c9e79cd4d5e065e70',1,'RTCoarseGrainer::push_back()'],['../classSimpler__Circular__Buffer.html#af4bdd0a6d3fc7a8c06f62b0d996158f0',1,'Simpler_Circular_Buffer::push_back()']]],
+  ['push_5fdata',['push_data',['../classFakeChannel.html#a0b367e4109f7143261f44e5fde277181',1,'FakeChannel::push_data()'],['../classLinACorrRTTeensy.html#abf6a40dff92088469fbb8ceabf9da799',1,'LinACorrRTTeensy::push_data()'],['../classMultiTauACorrRTTeensy.html#ad3c078b834bb1682c93ba4cd5639d450',1,'MultiTauACorrRTTeensy::push_data()']]],
+  ['push_5fdatum',['push_datum',['../classFakeChannel.html#ad40cc96be3b22a6d0111b9cc8f30ffcf',1,'FakeChannel::push_datum()'],['../classLinACorrRTTeensy.html#aacc634aad2252efbb6ee3a4c2ac422dc',1,'LinACorrRTTeensy::push_datum()'],['../classMultiTauACorrRTTeensy.html#a85777a221b7a15de34b252ed804ab0f8',1,'MultiTauACorrRTTeensy::push_datum()']]]
 ];

@@ -4,6 +4,7 @@ var searchData=
   ['accumulators',['Accumulators',['../classMultiTauACorrRTTeensy.html#aac3d87dfb6b995e83e20f444d3d5eb0d',1,'MultiTauACorrRTTeensy']]],
   ['acffile',['acffile',['../namespacephoton__statistics.html#ad37c8420c6a43ec4997809c4c236b145',1,'photon_statistics']]],
   ['actual_5fperiod',['Actual_period',['../classPITController.html#a549601e7c66941d7872a6e7d38ed9563',1,'PITController']]],
+  ['add_5fsuffix',['add_suffix',['../classdevice__mode_1_1StructParsar.html#a0f1adb7dde59a293a12a4889e9b3880b',1,'device_mode::StructParsar']]],
   ['allowed_5fperiod_5ferror_5fus',['Allowed_period_error_us',['../global_8cpp.html#ada17f1639ca8a5932f17942031baa67f',1,'Allowed_period_error_us():&#160;global.cpp'],['../global_8hpp.html#ada17f1639ca8a5932f17942031baa67f',1,'Allowed_period_error_us():&#160;global.cpp']]],
   ['always_5finline',['always_inline',['../classTMR1Controller.html#adce8e8a496510485a88ccc5b88595672',1,'TMR1Controller']]],
   ['app',['app',['../classlive__graph_1_1PStatLiveGraph.html#ad6b3c5024c9472884e04570fd1890f17',1,'live_graph::PStatLiveGraph']]],

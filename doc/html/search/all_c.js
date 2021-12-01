@@ -1,10 +1,13 @@
 var searchData=
 [
-  ['name_5f',['name_',['../namespacephoton__statistics.html#a729c361165a662402f88b585477d2ee6',1,'photon_statistics']]],
+  ['name',['name',['../classdevice__mode_1_1StructParsar.html#a937fe4559444433d8cff05910c16a4b6',1,'device_mode::StructParsar']]],
+  ['name_5f',['name_',['../classdevice__mode_1_1DataStore.html#ae6213989655f77d563bf81a9f31d3a40',1,'device_mode.DataStore.name_()'],['../namespacephoton__statistics.html#a729c361165a662402f88b585477d2ee6',1,'photon_statistics.name_()']]],
+  ['new_5fapp',['new_app',['../namespacenew__app.html',1,'']]],
+  ['new_5fapp_2epy',['new_app.py',['../new__app_8py.html',1,'']]],
   ['newline',['newline',['../namespacephoton__statistics.html#a6c6d01b62f113634193642d2dda3124a',1,'photon_statistics']]],
   ['no_5finterrupt',['no_interrupt',['../classPITController.html#a6e36c84f319e52e5a14ca20f299b64b5',1,'PITController']]],
   ['no_5fnorm',['no_norm',['../classnormalizer_1_1Normalizer.html#a7965c29d7d3a867dbb82cc7f3e7e69b3',1,'normalizer::Normalizer']]],
-  ['norm',['norm',['../classLinACorrRTTeensy.html#a98110e3b97a2300b9078a6e57a8234bc',1,'LinACorrRTTeensy']]],
+  ['norm',['norm',['../classFakeChannel.html#a2c7edb717127d703f71e50df8a0b391c',1,'FakeChannel::norm()'],['../classLinACorrRTTeensy.html#a98110e3b97a2300b9078a6e57a8234bc',1,'LinACorrRTTeensy::norm()']]],
   ['norm_5fargs',['norm_args',['../namespacephoton__statistics.html#af558fed5a93a7b134efea382f1ad4007',1,'photon_statistics']]],
   ['norm_5ffn',['norm_fn',['../classnormalizer_1_1Normalizer.html#a36df68fe4c6f2dbe72f08a71ad1c5fe1',1,'normalizer::Normalizer']]],
   ['norm_5flag0_5festimator',['norm_lag0_estimator',['../classstatmethods_1_1StatMethods.html#a98bde45d59d8558c9b675b9f5dbd0922',1,'statmethods::StatMethods']]],

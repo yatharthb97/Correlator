@@ -1,4 +1,4 @@
-.TH "code/pc_app/photon_statistics.py" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "code/pc_app/photon_statistics.py" 3 "Fri Nov 12 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -33,7 +33,7 @@ code/pc_app/photon_statistics.py
 .RI "\fBphoton_statistics\&.config\fP = json\&.load(f)"
 .br
 .ti -1c
-.RI "list \fBphoton_statistics\&.multitau_param_set\fP = [config['LinCorrs'], config['SeriesSize'], config['BinRatio']]"
+.RI "list \fBphoton_statistics\&.multitau_param_set\fP = [config['MT Linear Correlators(LCs)'], config['MT LC Series Size'], config['MT Bin Ratio']]"
 .br
 .ti -1c
 .RI "\fBphoton_statistics\&.this_channel_size\fP = \fBmultitau\&.channel_size\fP(*multitau_param_set)"
@@ -81,7 +81,7 @@ code/pc_app/photon_statistics.py
 .RI "\fBphoton_statistics\&.normalizer\fP = Normalizer(*multitau_param_set)"
 .br
 .ti -1c
-.RI "tuple \fBphoton_statistics\&.norm_mode\fP = ('no' * (not config['EnablePointsNorm'])) + ('points' * (not config['EnableMeanNorm']) * config['EnablePointsNorm']) + ('mean' * config['EnableMeanNorm'] * config['EnablePointsNorm'])"
+.RI "tuple \fBphoton_statistics\&.norm_mode\fP = ('no' * (not config['Enable Points Norm'])) + ('points' * (not config['Enable Mean Norm']) * config['Enable Points Norm']) + ('mean' * config['Enable Mean Norm'] * config['Enable Points Norm'])"
 .br
 .ti -1c
 .RI "list \fBphoton_statistics\&.norm_args\fP = []"
@@ -159,7 +159,7 @@ code/pc_app/photon_statistics.py
 .RI "\fBphoton_statistics\&.port\fP = Serial(port=config['Port'], baudrate=config['Baud'], timeout=None)"
 .br
 .ti -1c
-.RI "\fBphoton_statistics\&.measurement_sampling_delay\fP = int(config['SamplingDelay_ms']/2)"
+.RI "\fBphoton_statistics\&.measurement_sampling_delay\fP = int(config['Sampling Delay ms']/2)"
 .br
 .ti -1c
 .RI "\fBphoton_statistics\&.measurement_thread\fP = QtCore\&.QTimer()"

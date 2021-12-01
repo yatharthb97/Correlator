@@ -1,4 +1,4 @@
-.TH "Accumulator" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "Accumulator" 3 "Fri Nov 12 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,11 +15,11 @@ Accumulator \- Adapter object responsible for accumulating the points and coarse
 .ti -1c
 .RI "void \fBdo_accumulate\fP (unsigned int buffer_cnt)"
 .br
-.RI "Sets the number of points to buffer(accumulate) before pushing to Correlator object\&. "
+.RI "Sets the number of points to buffer (accumulate)\&. "
 .ti -1c
-.RI "template<typename LinCorrType > void \fBpipe\fP (LinCorrType &channel, const \fBcounter_t\fP datum)"
+.RI "template<typename LinCorrType > void \fBpipe\fP (LinCorrType &correlator, const \fBcounter_t\fP datum)"
 .br
-.RI "Accumulates data points until the BufferPoints criteria is satisfied, after which the points are pushed to the channel\&. "
+.RI "Accumulates data points and then pushes to the \fCLinCorrType\fP object (correlator) once criteria is satisfied\&. "
 .in -1c
 .SS "Public Attributes"
 
@@ -39,21 +39,30 @@ Accumulator \- Adapter object responsible for accumulating the points and coarse
 .ti -1c
 .RI "unsigned int \fBUpdate_count\fP = 0"
 .br
-.RI "Maintains a counter of the items to accumuate\&. "
+.RI "Running counter of the items to accumuate\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
 Adapter object responsible for accumulating the points and coarsening the time-series as per the relavent linear-correlator time-resolution\&. 
+
+
+.PP
+\fBTodo\fP
+.RS 4
+Bind the correlation object to each \fBAccumulator\fP, so that every \fCpipe\fP operation does not have to pass an address variable\&. 
+.RE
+.PP
+
 .SH "Member Function Documentation"
 .PP 
 .SS "void Accumulator::do_accumulate (unsigned int buffer_cnt)\fC [inline]\fP"
 
 .PP
-Sets the number of points to buffer(accumulate) before pushing to Correlator object\&. 
-.SS "template<typename LinCorrType > void Accumulator::pipe (LinCorrType & channel, const \fBcounter_t\fP datum)\fC [inline]\fP"
+Sets the number of points to buffer (accumulate)\&. 
+.SS "template<typename LinCorrType > void Accumulator::pipe (LinCorrType & correlator, const \fBcounter_t\fP datum)\fC [inline]\fP"
 
 .PP
-Accumulates data points until the BufferPoints criteria is satisfied, after which the points are pushed to the channel\&. 
+Accumulates data points and then pushes to the \fCLinCorrType\fP object (correlator) once criteria is satisfied\&. 
 .SH "Member Data Documentation"
 .PP 
 .SS "\fBcounter_t\fP Accumulator::Accumulate = 0\fC [private]\fP"
@@ -67,7 +76,7 @@ Number of points accumulated and binned together\&.
 .SS "unsigned int Accumulator::Update_count = 0\fC [private]\fP"
 
 .PP
-Maintains a counter of the items to accumuate\&. 
+Running counter of the items to accumuate\&. 
 
 .SH "Author"
 .PP 

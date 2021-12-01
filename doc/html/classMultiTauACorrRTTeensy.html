@@ -95,15 +95,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a85777a221b7a15de34b252ed804ab0f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMultiTauACorrRTTeensy.html#a85777a221b7a15de34b252ed804ab0f8">push_datum</a> (<a class="el" href="types_8hpp.html#a22f279793847eba127de149437848c48">counter_t</a> datum) __attribute__((flatten))</td></tr>
 <tr class="memdesc:a85777a221b7a15de34b252ed804ab0f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes the datum to each of the Linear Correlators through the <a class="el" href="classAccumulator.html" title="Adapter object responsible for accumulating the points and coarsening the time-series as per the rela...">Accumulator</a> adapter.  <a href="#a85777a221b7a15de34b252ed804ab0f8">More...</a><br /></td></tr>
 <tr class="separator:a85777a221b7a15de34b252ed804ab0f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3c078b834bb1682c93ba4cd5639d450"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMultiTauACorrRTTeensy.html#ad3c078b834bb1682c93ba4cd5639d450">push_data</a> (const <a class="el" href="types_8hpp.html#a22f279793847eba127de149437848c48">counter_t</a> *container, const <a class="el" href="types_8hpp.html#a7c40bb931c31595ed6308605f4537447">index_t</a> size) __attribute__((flatten))</td></tr>
+<tr class="memitem:ad3c078b834bb1682c93ba4cd5639d450"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMultiTauACorrRTTeensy.html#ad3c078b834bb1682c93ba4cd5639d450">push_data</a> (const <a class="el" href="types_8hpp.html#a22f279793847eba127de149437848c48">counter_t</a> *container, const <a class="el" href="types_8hpp.html#ab41b824af8e088d090c0b9e60f536c9d">index_t</a> size) __attribute__((flatten))</td></tr>
 <tr class="memdesc:ad3c078b834bb1682c93ba4cd5639d450"><td class="mdescLeft">&#160;</td><td class="mdescRight">Repeatedly calls the MultiTau_ACorr_RT::push_datum() on the given container of counter values.  <a href="#ad3c078b834bb1682c93ba4cd5639d450">More...</a><br /></td></tr>
 <tr class="separator:ad3c078b834bb1682c93ba4cd5639d450"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9ab6f055c1efc4a28c7c5bfa3aea074"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMultiTauACorrRTTeensy.html#af9ab6f055c1efc4a28c7c5bfa3aea074">ch_out</a> () const __attribute__((flatten))</td></tr>
 <tr class="memdesc:af9ab6f055c1efc4a28c7c5bfa3aea074"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outputs the Linear Correlator channels through the discarder adapter.  <a href="#af9ab6f055c1efc4a28c7c5bfa3aea074">More...</a><br /></td></tr>
 <tr class="separator:af9ab6f055c1efc4a28c7c5bfa3aea074"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56fbc9bf757ac74e0dad862ec45def82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8hpp.html#a7c40bb931c31595ed6308605f4537447">index_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMultiTauACorrRTTeensy.html#a56fbc9bf757ac74e0dad862ec45def82">time_scaling_factor</a> () const __attribute__((always_inline))</td></tr>
+<tr class="memitem:a56fbc9bf757ac74e0dad862ec45def82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8hpp.html#ab41b824af8e088d090c0b9e60f536c9d">index_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMultiTauACorrRTTeensy.html#a56fbc9bf757ac74e0dad862ec45def82">time_scaling_factor</a> () const __attribute__((always_inline))</td></tr>
 <tr class="separator:a56fbc9bf757ac74e0dad862ec45def82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a677c901b40aecdd00a4f2135d8c2bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8hpp.html#a7c40bb931c31595ed6308605f4537447">index_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMultiTauACorrRTTeensy.html#a1a677c901b40aecdd00a4f2135d8c2bb">tau_scaling_scheme</a> (unsigned int s) const __attribute__((always_inline))</td></tr>
+<tr class="memitem:a1a677c901b40aecdd00a4f2135d8c2bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8hpp.html#ab41b824af8e088d090c0b9e60f536c9d">index_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMultiTauACorrRTTeensy.html#a1a677c901b40aecdd00a4f2135d8c2bb">tau_scaling_scheme</a> (unsigned int s) const __attribute__((always_inline))</td></tr>
 <tr class="memdesc:a1a677c901b40aecdd00a4f2135d8c2bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the relavent Tau scaling factor, based on the specialised scheme. It is used by the accumulator objects to set the BufferPoints attribute.  <a href="#a1a677c901b40aecdd00a4f2135d8c2bb">More...</a><br /></td></tr>
 <tr class="separator:a1a677c901b40aecdd00a4f2135d8c2bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -212,7 +212,7 @@ template&lt;unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Rat
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="types_8hpp.html#a7c40bb931c31595ed6308605f4537447">index_t</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="types_8hpp.html#ab41b824af8e088d090c0b9e60f536c9d">index_t</a>&#160;</td>
           <td class="paramname"><em>size</em>&#160;</td>
         </tr>
         <tr>
@@ -274,7 +274,7 @@ template&lt;unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Rat
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8hpp.html#a7c40bb931c31595ed6308605f4537447">index_t</a> <a class="el" href="classMultiTauACorrRTTeensy.html">MultiTauACorrRTTeensy</a>&lt; Lin_channels, Series_size, Bin_Ratio &gt;::tau_scaling_scheme </td>
+          <td class="memname"><a class="el" href="types_8hpp.html#ab41b824af8e088d090c0b9e60f536c9d">index_t</a> <a class="el" href="classMultiTauACorrRTTeensy.html">MultiTauACorrRTTeensy</a>&lt; Lin_channels, Series_size, Bin_Ratio &gt;::tau_scaling_scheme </td>
           <td>(</td>
           <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>s</em></td><td>)</td>
@@ -304,7 +304,7 @@ template&lt;unsigned int Lin_channels, index_t Series_size, unsigned int Bin_Rat
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8hpp.html#a7c40bb931c31595ed6308605f4537447">index_t</a> <a class="el" href="classMultiTauACorrRTTeensy.html">MultiTauACorrRTTeensy</a>&lt; Lin_channels, Series_size, Bin_Ratio &gt;::time_scaling_factor </td>
+          <td class="memname"><a class="el" href="types_8hpp.html#ab41b824af8e088d090c0b9e60f536c9d">index_t</a> <a class="el" href="classMultiTauACorrRTTeensy.html">MultiTauACorrRTTeensy</a>&lt; Lin_channels, Series_size, Bin_Ratio &gt;::time_scaling_factor </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

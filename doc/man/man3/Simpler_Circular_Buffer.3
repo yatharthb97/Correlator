@@ -1,4 +1,4 @@
-.TH "Simpler_Circular_Buffer< Type, MaxSize >" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "Simpler_Circular_Buffer< Type, MaxSize >" 3 "Fri Nov 12 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -23,6 +23,13 @@ Simpler_Circular_Buffer< Type, MaxSize >
 .RI "Type \fBoperator[]\fP (const size_t index) const __attribute__((always_inline))"
 .br
 .RI "Random access operator can be used to retrive the nth element in the buffer at any state of the buffer\&. "
+.ti -1c
+.RI "Type \fBget_idx\fP (const size_t index) const __attribute__((always_inline))"
+.br
+.RI "Random access function can be used to retrive the nth element in the buffer at any state of the buffer\&. "
+.ti -1c
+.RI "Type \fBhistory\fP (const size_t index) const __attribute__((always_inline))"
+.br
 .in -1c
 .SS "Private Attributes"
 
@@ -41,6 +48,12 @@ Simpler_Circular_Buffer< Type, MaxSize >
 .in -1c
 .SH "Member Function Documentation"
 .PP 
+.SS "template<typename Type, size_t MaxSize> Type \fBSimpler_Circular_Buffer\fP< Type, MaxSize >::get_idx (const size_t index) const\fC [inline]\fP"
+
+.PP
+Random access function can be used to retrive the nth element in the buffer at any state of the buffer\&. 
+.SS "template<typename Type, size_t MaxSize> Type \fBSimpler_Circular_Buffer\fP< Type, MaxSize >::history (const size_t index) const\fC [inline]\fP"
+
 .SS "template<typename Type, size_t MaxSize> Type \fBSimpler_Circular_Buffer\fP< Type, MaxSize >::operator[] (const size_t index) const\fC [inline]\fP"
 
 .PP

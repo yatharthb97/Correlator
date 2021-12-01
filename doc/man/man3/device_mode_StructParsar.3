@@ -1,0 +1,194 @@
+.TH "device_mode.StructParsar" 3 "Fri Nov 12 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+device_mode.StructParsar
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP (self, session_name, parent_dir, \fBconfig\fP, \fBadd_suffix\fP=False)"
+.br
+.ti -1c
+.RI "def \fBfl_structure\fP (self)"
+.br
+.ti -1c
+.RI "def \fBget_struct_size\fP ()"
+.br
+.ti -1c
+.RI "def \fBcopy_config_to_session\fP ()"
+.br
+.ti -1c
+.RI "def \fBset_config\fP (\fBconfig\fP)"
+.br
+.ti -1c
+.RI "def \fBgenerate_data_files\fP ()"
+.br
+.ti -1c
+.RI "def \fBgenerate_datasets\fP ()"
+.br
+.ti -1c
+.RI "def \fBgenerate_struct_rep\fP ()"
+.br
+.ti -1c
+.RI "def \fBfile_name_generator\fP (self, \fBname\fP)"
+.br
+.ti -1c
+.RI "def \fBcreate_file\fP (self, \fBname\fP)"
+.br
+.ti -1c
+.RI "def \fBgenerate_struct_parsar\fP (self)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBdstore\fP"
+.br
+.ti -1c
+.RI "\fBdata\fP"
+.br
+.ti -1c
+.RI "\fBroot_dir\fP"
+.br
+.ti -1c
+.RI "\fBname\fP"
+.br
+.ti -1c
+.RI "\fBadd_suffix\fP"
+.br
+.ti -1c
+.RI "\fBconfig\fP"
+.br
+.ti -1c
+.RI "\fBmt_param\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "def device_mode\&.StructParsar\&.__init__ ( self,  session_name,  parent_dir,  config,  add_suffix = \fCFalse\fP)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "def device_mode\&.StructParsar\&.copy_config_to_session ()"
+
+.PP
+.nf
+Copies the current configuration file to the session directory.
+
+.fi
+.PP
+ 
+.SS "def device_mode\&.StructParsar\&.create_file ( self,  name)"
+
+.PP
+.nf
+Creates a file with a given name (name should be unique or it would override
+the past instance) and saves a reference to the `open_files` dictionary.
+
+.fi
+.PP
+ 
+.SS "def device_mode\&.StructParsar\&.file_name_generator ( self,  name)"
+
+.PP
+.nf
+Generates the file paths for the data files.
+
+.fi
+.PP
+ 
+.SS "def device_mode\&.StructParsar\&.fl_structure ( self)"
+
+.PP
+.nf
+Layout of feature line structure.
+
+.fi
+.PP
+ 
+.SS "def device_mode\&.StructParsar\&.generate_data_files ()"
+
+.PP
+.nf
+Generates the relavent data files for the feature line.
+
+.fi
+.PP
+ 
+.SS "def device_mode\&.StructParsar\&.generate_datasets ()"
+
+.PP
+.nf
+Populates the `data` dict with the required data sets → arrays, lists, or deques as required.
+
+.fi
+.PP
+ 
+.SS "def device_mode\&.StructParsar\&.generate_struct_parsar ( self)"
+
+.SS "def device_mode\&.StructParsar\&.generate_struct_rep ()"
+
+.SS "def device_mode\&.StructParsar\&.get_struct_size ()"
+
+.PP
+.nf
+Calculates and returns the size of the receiving struct.
+
+.fi
+.PP
+ 
+.SS "def device_mode\&.StructParsar\&.set_config ( config)"
+
+.PP
+.nf
+Creates a local store of configuration.
+Accepts both a dictionary or a config file path.
+
+.fi
+.PP
+ 
+.SH "Member Data Documentation"
+.PP 
+.SS "device_mode\&.StructParsar\&.add_suffix"
+
+.SS "device_mode\&.StructParsar\&.config"
+
+.PP
+.nf
+Creates a local store of configuration.
+Accepts both a dictionary or a config file path.
+
+.fi
+.PP
+ 
+.SS "device_mode\&.StructParsar\&.data"
+
+.SS "device_mode\&.StructParsar\&.dstore"
+
+.SS "device_mode\&.StructParsar\&.mt_param"
+
+.PP
+.nf
+Populates the `data` dict with the required data sets → arrays, lists, or deques as required.
+
+.fi
+.PP
+.PP
+.nf
+Constructs a deque and populates it to zero to prevent arithmetic errors, etc.
+.fi
+.PP
+ 
+.SS "device_mode\&.StructParsar\&.name"
+
+.SS "device_mode\&.StructParsar\&.root_dir"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator from the source code\&.

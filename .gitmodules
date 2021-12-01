@@ -1,3 +1,6 @@
 [submodule "emulator/json"]
 	path = emulator/json
 	url = https://github.com/nlohmann/json.git
+[submodule "code/pc_app/a0b3a2665f065d982e7b0e2b2dd274b0"]
+	path = code/pc_app/a0b3a2665f065d982e7b0e2b2dd274b0
+	url = https://gist.github.com/a0b3a2665f065d982e7b0e2b2dd274b0.git

@@ -13,9 +13,9 @@ Adapter object responsible for accumulating the points and coarsening the time-\
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{classAccumulator_adab342ee6d376a45ed38fe1e1679a1e2}{do\+\_\+accumulate} (unsigned int buffer\+\_\+cnt)
-\begin{DoxyCompactList}\small\item\em Sets the number of points to buffer(accumulate) before pushing to Correlator object. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Lin\+Corr\+Type $>$ }\\void \hyperlink{classAccumulator_aa7494b569b7f4f2d2ab115e623ab135d}{pipe} (Lin\+Corr\+Type \&channel, const \hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} datum)
-\begin{DoxyCompactList}\small\item\em Accumulates data points until the Buffer\+Points criteria is satisfied, after which the points are pushed to the channel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Sets the number of points to buffer (accumulate). \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Lin\+Corr\+Type $>$ }\\void \hyperlink{classAccumulator_a0b77af4be52d4c8f627cefb1f5315c98}{pipe} (Lin\+Corr\+Type \&correlator, const \hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} datum)
+\begin{DoxyCompactList}\small\item\em Accumulates data points and then pushes to the {\ttfamily Lin\+Corr\+Type} object (correlator) once criteria is satisfied. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -27,11 +27,15 @@ unsigned int \hyperlink{classAccumulator_a6e4595169413a77122fe56cdd39137ae}{Buff
 \hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} \hyperlink{classAccumulator_a8e615af8b85dd2c8500d1f8c473879ab}{Accumulate} = 0
 \begin{DoxyCompactList}\small\item\em Stores the value of the accumulate. \end{DoxyCompactList}\item 
 unsigned int \hyperlink{classAccumulator_afb010cbe82265d22e5d577033574a16b}{Update\+\_\+count} = 0
-\begin{DoxyCompactList}\small\item\em Maintains a counter of the items to accumuate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Running counter of the items to accumuate. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Adapter object responsible for accumulating the points and coarsening the time-\/series as per the relavent linear-\/correlator time-\/resolution. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]Bind the correlation object to each \hyperlink{classAccumulator}{Accumulator}, so that every {\ttfamily pipe} operation does not have to pass an address variable. \end{DoxyRefDesc}
+
 
 \subsection{Member Function Documentation}
 \mbox{\Hypertarget{classAccumulator_adab342ee6d376a45ed38fe1e1679a1e2}\label{classAccumulator_adab342ee6d376a45ed38fe1e1679a1e2}} 
@@ -42,18 +46,18 @@ Adapter object responsible for accumulating the points and coarsening the time-\
 
 
 
-Sets the number of points to buffer(accumulate) before pushing to Correlator object. 
+Sets the number of points to buffer (accumulate). 
 
-\mbox{\Hypertarget{classAccumulator_aa7494b569b7f4f2d2ab115e623ab135d}\label{classAccumulator_aa7494b569b7f4f2d2ab115e623ab135d}} 
+\mbox{\Hypertarget{classAccumulator_a0b77af4be52d4c8f627cefb1f5315c98}\label{classAccumulator_a0b77af4be52d4c8f627cefb1f5315c98}} 
 \index{Accumulator@{Accumulator}!pipe@{pipe}}
 \index{pipe@{pipe}!Accumulator@{Accumulator}}
 \subsubsection{\texorpdfstring{pipe()}{pipe()}}
 {\footnotesize\ttfamily template$<$typename Lin\+Corr\+Type $>$ \\
-void Accumulator\+::pipe (\begin{DoxyParamCaption}\item[{Lin\+Corr\+Type \&}]{channel,  }\item[{const \hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t}}]{datum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void Accumulator\+::pipe (\begin{DoxyParamCaption}\item[{Lin\+Corr\+Type \&}]{correlator,  }\item[{const \hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t}}]{datum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Accumulates data points until the Buffer\+Points criteria is satisfied, after which the points are pushed to the channel. 
+Accumulates data points and then pushes to the {\ttfamily Lin\+Corr\+Type} object (correlator) once criteria is satisfied. 
 
 
 
@@ -86,7 +90,7 @@ Number of points accumulated and binned together.
 
 
 
-Maintains a counter of the items to accumuate. 
+Running counter of the items to accumuate. 
 
 
 

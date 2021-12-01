@@ -90,7 +90,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aacc634aad2252efbb6ee3a4c2ac422dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinACorrRTTeensy.html#aacc634aad2252efbb6ee3a4c2ac422dc">push_datum</a> (<a class="el" href="types_8hpp.html#a22f279793847eba127de149437848c48">counter_t</a> datum)</td></tr>
 <tr class="memdesc:aacc634aad2252efbb6ee3a4c2ac422dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds new <em>single</em> data point and processes it to the <code>Channel</code>.  <a href="#aacc634aad2252efbb6ee3a4c2ac422dc">More...</a><br /></td></tr>
 <tr class="separator:aacc634aad2252efbb6ee3a4c2ac422dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf6a40dff92088469fbb8ceabf9da799"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinACorrRTTeensy.html#abf6a40dff92088469fbb8ceabf9da799">push_data</a> (const <a class="el" href="types_8hpp.html#a22f279793847eba127de149437848c48">counter_t</a> *container, const <a class="el" href="types_8hpp.html#a7c40bb931c31595ed6308605f4537447">index_t</a> size) __attribute__((flatten))</td></tr>
+<tr class="memitem:abf6a40dff92088469fbb8ceabf9da799"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinACorrRTTeensy.html#abf6a40dff92088469fbb8ceabf9da799">push_data</a> (const <a class="el" href="types_8hpp.html#a22f279793847eba127de149437848c48">counter_t</a> *container, const <a class="el" href="types_8hpp.html#ab41b824af8e088d090c0b9e60f536c9d">index_t</a> size) __attribute__((flatten))</td></tr>
 <tr class="memdesc:abf6a40dff92088469fbb8ceabf9da799"><td class="mdescLeft">&#160;</td><td class="mdescRight">Repeatedly calls <code><a class="el" href="classLinACorrRTTeensy.html#aacc634aad2252efbb6ee3a4c2ac422dc" title="Adds new single data point and processes it to the Channel. ">push_datum()</a></code> on the given container of values, one at a time.  <a href="#abf6a40dff92088469fbb8ceabf9da799">More...</a><br /></td></tr>
 <tr class="separator:abf6a40dff92088469fbb8ceabf9da799"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98110e3b97a2300b9078a6e57a8234bc"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinACorrRTTeensy.html#a98110e3b97a2300b9078a6e57a8234bc">norm</a> ()</td></tr>
@@ -105,13 +105,13 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a3276cb9bb215af9676edc35958c889b8"><td class="memItemLeft" align="right" valign="top">channel_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinACorrRTTeensy.html#a3276cb9bb215af9676edc35958c889b8">Channel_array</a> [Series_Size] = {0}</td></tr>
+<tr class="memitem:a3276cb9bb215af9676edc35958c889b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8hpp.html#a9f8f935e7952f42d763385090e3404a5">channel_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinACorrRTTeensy.html#a3276cb9bb215af9676edc35958c889b8">Channel_array</a> [Series_Size] = {0}</td></tr>
 <tr class="memdesc:a3276cb9bb215af9676edc35958c889b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a run-time polymorphic <a class="el" href="classMonitorChannel.html" title="A simple Averager Class that calculates the estimated mean. Template parameter Construct specifies a ...">MonitorChannel</a> object, which decomposes to <code>ghost</code> channel (UnitMeanChannel) if <code>hasMonitorChannel</code> is true. Basically <code>UnitMeanChannel</code> does nothing.  <a href="#a3276cb9bb215af9676edc35958c889b8">More...</a><br /></td></tr>
 <tr class="separator:a3276cb9bb215af9676edc35958c889b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c4cc1fe032812d6290579c7c8b22e57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSimpler__Circular__Buffer.html">Simpler_Circular_Buffer</a>&lt; <a class="el" href="types_8hpp.html#a22f279793847eba127de149437848c48">counter_t</a>, Series_Size &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinACorrRTTeensy.html#a5c4cc1fe032812d6290579c7c8b22e57">Series_array</a></td></tr>
 <tr class="memdesc:a5c4cc1fe032812d6290579c7c8b22e57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the data points in a circular Buffer.  <a href="#a5c4cc1fe032812d6290579c7c8b22e57">More...</a><br /></td></tr>
 <tr class="separator:a5c4cc1fe032812d6290579c7c8b22e57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe0523ada55375281deacb143b6055b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8hpp.html#a7c40bb931c31595ed6308605f4537447">index_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinACorrRTTeensy.html#abe0523ada55375281deacb143b6055b7">Series_index</a> = 0</td></tr>
+<tr class="memitem:abe0523ada55375281deacb143b6055b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8hpp.html#ab41b824af8e088d090c0b9e60f536c9d">index_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinACorrRTTeensy.html#abe0523ada55375281deacb143b6055b7">Series_index</a> = 0</td></tr>
 <tr class="memdesc:abe0523ada55375281deacb143b6055b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the last active index → Post-increment.  <a href="#abe0523ada55375281deacb143b6055b7">More...</a><br /></td></tr>
 <tr class="separator:abe0523ada55375281deacb143b6055b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -265,7 +265,7 @@ template&lt;index_t Series_Size, bool hasMonitorChannel&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="types_8hpp.html#a7c40bb931c31595ed6308605f4537447">index_t</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="types_8hpp.html#ab41b824af8e088d090c0b9e60f536c9d">index_t</a>&#160;</td>
           <td class="paramname"><em>size</em>&#160;</td>
         </tr>
         <tr>
@@ -325,7 +325,7 @@ template&lt;index_t Series_Size, bool hasMonitorChannel&gt; </div>
 template&lt;index_t Series_Size, bool hasMonitorChannel&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">channel_t <a class="el" href="classLinACorrRTTeensy.html">LinACorrRTTeensy</a>&lt; Series_Size, hasMonitorChannel &gt;::Channel_array[Series_Size] = {0}</td>
+          <td class="memname"><a class="el" href="types_8hpp.html#a9f8f935e7952f42d763385090e3404a5">channel_t</a> <a class="el" href="classLinACorrRTTeensy.html">LinACorrRTTeensy</a>&lt; Series_Size, hasMonitorChannel &gt;::Channel_array[Series_Size] = {0}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -362,7 +362,7 @@ template&lt;index_t Series_Size, bool hasMonitorChannel&gt; </div>
 template&lt;index_t Series_Size, bool hasMonitorChannel&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8hpp.html#a7c40bb931c31595ed6308605f4537447">index_t</a> <a class="el" href="classLinACorrRTTeensy.html">LinACorrRTTeensy</a>&lt; Series_Size, hasMonitorChannel &gt;::Series_index = 0</td>
+          <td class="memname"><a class="el" href="types_8hpp.html#ab41b824af8e088d090c0b9e60f536c9d">index_t</a> <a class="el" href="classLinACorrRTTeensy.html">LinACorrRTTeensy</a>&lt; Series_Size, hasMonitorChannel &gt;::Series_index = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">

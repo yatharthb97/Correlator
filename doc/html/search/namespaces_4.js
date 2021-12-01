@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['photon_5fstatistics',['photon_statistics',['../namespacephoton__statistics.html',1,'']]]
+  ['new_5fapp',['new_app',['../namespacenew__app.html',1,'']]],
+  ['normalizer',['normalizer',['../namespacenormalizer.html',1,'']]]
 ];

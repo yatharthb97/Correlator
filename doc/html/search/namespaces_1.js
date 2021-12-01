@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['live_5fgraph',['live_graph',['../namespacelive__graph.html',1,'']]],
-  ['livegraph',['livegraph',['../namespacelivegraph.html',1,'']]]
+  ['device_5fmode',['device_mode',['../namespacedevice__mode.html',1,'']]]
 ];

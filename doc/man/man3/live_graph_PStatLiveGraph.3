@@ -1,4 +1,4 @@
-.TH "live_graph.PStatLiveGraph" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "live_graph.PStatLiveGraph" 3 "Fri Nov 12 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -40,6 +40,25 @@ live_graph.PStatLiveGraph
 .ti -1c
 .RI "\fBdashboard\fP"
 .br
+.ti -1c
+.RI "\fBcanvas\fP"
+.br
+.ti -1c
+.RI "\fBcurve\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB_fL1_acf_\fP (config)"
+.br
+.ti -1c
+.RI "def \fB_fl2_interarrival_\fP (config)"
+.br
+.ti -1c
+.RI "def \fB_fl3_sampler\fP (config)"
+.br
 .in -1c
 .SH "Constructor & Destructor Documentation"
 .PP 
@@ -54,6 +73,19 @@ Constructor : takes optional parameter "port" which adds the port-address to the
  
 .SH "Member Function Documentation"
 .PP 
+.SS "def live_graph\&.PStatLiveGraph\&._fL1_acf_ ( config)\fC [private]\fP"
+
+.SS "def live_graph\&.PStatLiveGraph\&._fl2_interarrival_ ( config)\fC [private]\fP"
+
+.SS "def live_graph\&.PStatLiveGraph\&._fl3_sampler ( config)\fC [private]\fP"
+
+.PP
+.nf
+Plot Init for 3rd feature line.
+
+.fi
+.PP
+ 
 .SS "def live_graph\&.PStatLiveGraph\&.add_canvas_plot ( self,  ref_name,  title = \fCNone\fP,  half_plot = \fCFalse\fP,  xRange = \fCNone\fP,  yRange = \fCNone\fP,  xLabel = \fCNone\fP,  yLabel = \fCNone\fP,  xLog = \fCFalse\fP,  yLog = \fCFalse\fP)"
 
 .PP
@@ -102,6 +134,10 @@ Updates the plot dashboard with the passed values.
 .SH "Member Data Documentation"
 .PP 
 .SS "live_graph\&.PStatLiveGraph\&.app"
+
+.SS "live_graph\&.PStatLiveGraph\&.canvas"
+
+.SS "live_graph\&.PStatLiveGraph\&.curve"
 
 .SS "live_graph\&.PStatLiveGraph\&.dashboard"
 

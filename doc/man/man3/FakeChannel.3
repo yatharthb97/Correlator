@@ -1,0 +1,104 @@
+.TH "FakeChannel< Series_Size, hasMonitorChannel >" 3 "Fri Nov 12 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+FakeChannel< Series_Size, hasMonitorChannel > \- This is an \fIduck typed\fP implementaion of a \fILinear Correlator\fP that returns linearly increasing values for correlation\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <fakechannel\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFakeChannel\fP ()"
+.br
+.RI "Default Constructor\&. "
+.ti -1c
+.RI "void \fBpush_datum\fP (\fBcounter_t\fP datum)"
+.br
+.RI "Adds new \fIsingle\fP data point and processes it to the \fCChannel\fP\&. "
+.ti -1c
+.RI "void \fBpush_data\fP (const \fBcounter_t\fP *container, const \fBindex_t\fP size) __attribute__((flatten))"
+.br
+.RI "Repeatedly calls \fC\fBpush_datum()\fP\fP on the given container of values, one at a time\&. "
+.ti -1c
+.RI "float_t \fBnorm\fP (\fBindex_t\fP lag)"
+.br
+.RI "Returns the accumulate of the channel so far\&. "
+.ti -1c
+.RI "void \fBch_out\fP () const __attribute__((always_inline))"
+.br
+.RI "Outputs the complete channel to the Serial port\&. "
+.ti -1c
+.RI "void \fBch_out_norm\fP () const __attribute__((flatten))"
+.br
+.RI "Outputs the channel array to the Serial port after normalising it\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBSeries_index\fP = 0"
+.br
+.ti -1c
+.RI "\fBchannel_t\fP \fBChannel_array\fP [Series_Size] = {0}"
+.br
+.RI "Stores the Channel output\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<index_t Series_Size, bool hasMonitorChannel>
+.br
+class FakeChannel< Series_Size, hasMonitorChannel >"
+This is an \fIduck typed\fP implementaion of a \fILinear Correlator\fP that returns linearly increasing values for correlation\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<index_t Series_Size, bool hasMonitorChannel> \fBFakeChannel\fP< Series_Size, hasMonitorChannel >::\fBFakeChannel\fP ()\fC [inline]\fP"
+
+.PP
+Default Constructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<index_t Series_Size, bool hasMonitorChannel> void \fBFakeChannel\fP< Series_Size, hasMonitorChannel >::ch_out () const\fC [inline]\fP"
+
+.PP
+Outputs the complete channel to the Serial port\&. 
+.SS "template<index_t Series_Size, bool hasMonitorChannel> void \fBFakeChannel\fP< Series_Size, hasMonitorChannel >::ch_out_norm () const\fC [inline]\fP"
+
+.PP
+Outputs the channel array to the Serial port after normalising it\&. 
+.SS "template<index_t Series_Size, bool hasMonitorChannel> float_t \fBFakeChannel\fP< Series_Size, hasMonitorChannel >::norm (\fBindex_t\fP lag)\fC [inline]\fP"
+
+.PP
+Returns the accumulate of the channel so far\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fILag\fP time that is ignored by the function\&. 
+.RE
+.PP
+
+.SS "template<index_t Series_Size, bool hasMonitorChannel> void \fBFakeChannel\fP< Series_Size, hasMonitorChannel >::push_data (const \fBcounter_t\fP * container, const \fBindex_t\fP size)\fC [inline]\fP"
+
+.PP
+Repeatedly calls \fC\fBpush_datum()\fP\fP on the given container of values, one at a time\&. 
+.SS "template<index_t Series_Size, bool hasMonitorChannel> void \fBFakeChannel\fP< Series_Size, hasMonitorChannel >::push_datum (\fBcounter_t\fP datum)\fC [inline]\fP"
+
+.PP
+Adds new \fIsingle\fP data point and processes it to the \fCChannel\fP\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "template<index_t Series_Size, bool hasMonitorChannel> \fBchannel_t\fP \fBFakeChannel\fP< Series_Size, hasMonitorChannel >::Channel_array[Series_Size] = {0}"
+
+.PP
+Stores the Channel output\&. 
+.SS "template<index_t Series_Size, bool hasMonitorChannel> uint32_t \fBFakeChannel\fP< Series_Size, hasMonitorChannel >::Series_index = 0"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator from the source code\&.

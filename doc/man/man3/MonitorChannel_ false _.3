@@ -1,4 +1,4 @@
-.TH "MonitorChannel< false >" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "MonitorChannel< false >" 3 "Fri Nov 12 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -13,14 +13,14 @@ MonitorChannel< false > \- Specialization -> Counter Monitor (degenerated mean m
 
 .in +1c
 .ti -1c
-.RI "using \fBAccumulateType\fP = uint32_t"
+.RI "using \fBAccumulateType\fP = float"
 .br
 .in -1c
 .SS "Public Member Functions"
 
 .in +1c
 .ti -1c
-.RI "void \fBpush_back\fP () __attribute__((always_inline))"
+.RI "template<typename DataType > void \fBpush_back\fP (DataType data)"
 .br
 .ti -1c
 .RI "float_t \fBmean\fP () const __attribute__((always_inline))"
@@ -50,7 +50,7 @@ class MonitorChannel< false >"
 Specialization -> Counter Monitor (degenerated mean monitor)\&. 
 .SH "Member Typedef Documentation"
 .PP 
-.SS "using \fBMonitorChannel\fP< false >::\fBAccumulateType\fP =  uint32_t"
+.SS "using \fBMonitorChannel\fP< false >::\fBAccumulateType\fP =  float"
 
 .SH "Member Function Documentation"
 .PP 
@@ -60,7 +60,7 @@ Specialization -> Counter Monitor (degenerated mean monitor)\&.
 Returns the accumulate so far, which is the same as 'Count`\&. 
 .SS "float_t \fBMonitorChannel\fP< false >::mean () const\fC [inline]\fP"
 Returns a mean value of 1\&.0\&. 
-.SS "void \fBMonitorChannel\fP< false >::push_back ()\fC [inline]\fP"
+.SS "template<typename DataType > void \fBMonitorChannel\fP< false >::push_back (DataType data)\fC [inline]\fP"
 Increments the \fCCount\fP\&. 
 .SS "void \fBMonitorChannel\fP< false >::reset ()\fC [inline]\fP"
 

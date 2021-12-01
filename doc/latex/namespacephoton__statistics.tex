@@ -14,7 +14,7 @@ def \hyperlink{namespacephoton__statistics_a3d8a4bcc1566dd71aab0925749e1416f}{pe
 \item 
 \hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config} = json.\+load(f)
 \item 
-list \hyperlink{namespacephoton__statistics_a3c57d728c4b1cdcb2b6ca63bc6adfc4d}{multitau\+\_\+param\+\_\+set} = \mbox{[}\hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\textquotesingle{}Lin\+Corrs\textquotesingle{}\mbox{]}, \hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\textquotesingle{}Series\+Size\textquotesingle{}\mbox{]}, \hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\textquotesingle{}Bin\+Ratio\textquotesingle{}\mbox{]}\mbox{]}
+list \hyperlink{namespacephoton__statistics_a3c57d728c4b1cdcb2b6ca63bc6adfc4d}{multitau\+\_\+param\+\_\+set} = \mbox{[}\hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\textquotesingle{}MT Linear Correlators(L\+Cs)\textquotesingle{}\mbox{]}, \hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\textquotesingle{}MT LC Series Size\textquotesingle{}\mbox{]}, \hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\textquotesingle{}MT Bin Ratio\textquotesingle{}\mbox{]}\mbox{]}
 \item 
 \hyperlink{namespacephoton__statistics_a397f80b778ada9e9d514e3ed06936540}{this\+\_\+channel\+\_\+size} = \hyperlink{namespacemultitau_a1022c52950a892396ac45e7de5379e12}{multitau.\+channel\+\_\+size}($\ast$\hyperlink{namespacephoton__statistics_a3c57d728c4b1cdcb2b6ca63bc6adfc4d}{multitau\+\_\+param\+\_\+set})
 \item 
@@ -46,7 +46,7 @@ string \hyperlink{namespacephoton__statistics_ab381c3496e1a3a8d6dae99e66447c10c}
 \item 
 \hyperlink{namespacephoton__statistics_a4476861cf199e5ef481ee4bc15e08847}{normalizer} = \hyperlink{classnormalizer_1_1Normalizer}{Normalizer}($\ast$\hyperlink{namespacephoton__statistics_a3c57d728c4b1cdcb2b6ca63bc6adfc4d}{multitau\+\_\+param\+\_\+set})
 \item 
-tuple \hyperlink{namespacephoton__statistics_a28a89caae4538b504046ed301158e677}{norm\+\_\+mode} = (\char`\"{}no\char`\"{} $\ast$ (not \hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\char`\"{}Enable\+Points\+Norm\char`\"{}\mbox{]})) + (\char`\"{}points\char`\"{} $\ast$ (not \hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\char`\"{}Enable\+Mean\+Norm\char`\"{}\mbox{]}) $\ast$ config\mbox{[}\char`\"{}Enable\+Points\+Norm\char`\"{}\mbox{]}) + (\char`\"{}mean\char`\"{} $\ast$ config\mbox{[}\char`\"{}Enable\+Mean\+Norm\char`\"{}\mbox{]} $\ast$ config\mbox{[}\char`\"{}Enable\+Points\+Norm\char`\"{}\mbox{]})
+tuple \hyperlink{namespacephoton__statistics_a28a89caae4538b504046ed301158e677}{norm\+\_\+mode} = (\char`\"{}no\char`\"{} $\ast$ (not \hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\char`\"{}Enable Points Norm\char`\"{}\mbox{]})) + (\char`\"{}points\char`\"{} $\ast$ (not \hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\char`\"{}Enable Mean Norm\char`\"{}\mbox{]}) $\ast$ config\mbox{[}\char`\"{}Enable Points Norm\char`\"{}\mbox{]}) + (\char`\"{}mean\char`\"{} $\ast$ config\mbox{[}\char`\"{}Enable Mean Norm\char`\"{}\mbox{]} $\ast$ config\mbox{[}\char`\"{}Enable Points Norm\char`\"{}\mbox{]})
 \item 
 list \hyperlink{namespacephoton__statistics_af558fed5a93a7b134efea382f1ad4007}{norm\+\_\+args} = \mbox{[}$\,$\mbox{]}
 \item 
@@ -98,7 +98,7 @@ string \hyperlink{namespacephoton__statistics_a86328a634773cdedebc0fd4be6a8a068}
 \item 
 \hyperlink{namespacephoton__statistics_a09fecae480663af684a1d523466242a4}{port} = Serial(port=\hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\char`\"{}Port\char`\"{}\mbox{]}, baudrate=\hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\char`\"{}Baud\char`\"{}\mbox{]}, timeout=None)
 \item 
-\hyperlink{namespacephoton__statistics_ab809da8a53764aea064814bd4abdba42}{measurement\+\_\+sampling\+\_\+delay} = int(\hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\textquotesingle{}Sampling\+Delay\+\_\+ms\textquotesingle{}\mbox{]}/2)
+\hyperlink{namespacephoton__statistics_ab809da8a53764aea064814bd4abdba42}{measurement\+\_\+sampling\+\_\+delay} = int(\hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\textquotesingle{}Sampling Delay ms\textquotesingle{}\mbox{]}/2)
 \item 
 \hyperlink{namespacephoton__statistics_a826b8bcc70f5721cbb6036088fa1ed01}{measurement\+\_\+thread} = Qt\+Core.\+Q\+Timer()
 \item 
@@ -216,7 +216,7 @@ tuple \hyperlink{namespacephoton__statistics_a17e0852f9ef02250d5e11c55b45dcbf6}{
 \index{photon\+\_\+statistics@{photon\+\_\+statistics}!measurement\+\_\+sampling\+\_\+delay@{measurement\+\_\+sampling\+\_\+delay}}
 \index{measurement\+\_\+sampling\+\_\+delay@{measurement\+\_\+sampling\+\_\+delay}!photon\+\_\+statistics@{photon\+\_\+statistics}}
 \subsubsection{\texorpdfstring{measurement\+\_\+sampling\+\_\+delay}{measurement\_sampling\_delay}}
-{\footnotesize\ttfamily photon\+\_\+statistics.\+measurement\+\_\+sampling\+\_\+delay = int(\hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\textquotesingle{}Sampling\+Delay\+\_\+ms\textquotesingle{}\mbox{]}/2)}
+{\footnotesize\ttfamily photon\+\_\+statistics.\+measurement\+\_\+sampling\+\_\+delay = int(\hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\textquotesingle{}Sampling Delay ms\textquotesingle{}\mbox{]}/2)}
 
 \mbox{\Hypertarget{namespacephoton__statistics_a826b8bcc70f5721cbb6036088fa1ed01}\label{namespacephoton__statistics_a826b8bcc70f5721cbb6036088fa1ed01}} 
 \index{photon\+\_\+statistics@{photon\+\_\+statistics}!measurement\+\_\+thread@{measurement\+\_\+thread}}
@@ -228,7 +228,7 @@ tuple \hyperlink{namespacephoton__statistics_a17e0852f9ef02250d5e11c55b45dcbf6}{
 \index{photon\+\_\+statistics@{photon\+\_\+statistics}!multitau\+\_\+param\+\_\+set@{multitau\+\_\+param\+\_\+set}}
 \index{multitau\+\_\+param\+\_\+set@{multitau\+\_\+param\+\_\+set}!photon\+\_\+statistics@{photon\+\_\+statistics}}
 \subsubsection{\texorpdfstring{multitau\+\_\+param\+\_\+set}{multitau\_param\_set}}
-{\footnotesize\ttfamily list photon\+\_\+statistics.\+multitau\+\_\+param\+\_\+set = \mbox{[}\hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\textquotesingle{}Lin\+Corrs\textquotesingle{}\mbox{]}, \hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\textquotesingle{}Series\+Size\textquotesingle{}\mbox{]}, \hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\textquotesingle{}Bin\+Ratio\textquotesingle{}\mbox{]}\mbox{]}}
+{\footnotesize\ttfamily list photon\+\_\+statistics.\+multitau\+\_\+param\+\_\+set = \mbox{[}\hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\textquotesingle{}MT Linear Correlators(L\+Cs)\textquotesingle{}\mbox{]}, \hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\textquotesingle{}MT LC Series Size\textquotesingle{}\mbox{]}, \hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\textquotesingle{}MT Bin Ratio\textquotesingle{}\mbox{]}\mbox{]}}
 
 \mbox{\Hypertarget{namespacephoton__statistics_a729c361165a662402f88b585477d2ee6}\label{namespacephoton__statistics_a729c361165a662402f88b585477d2ee6}} 
 \index{photon\+\_\+statistics@{photon\+\_\+statistics}!name\+\_\+@{name\+\_\+}}
@@ -252,7 +252,7 @@ tuple \hyperlink{namespacephoton__statistics_a17e0852f9ef02250d5e11c55b45dcbf6}{
 \index{photon\+\_\+statistics@{photon\+\_\+statistics}!norm\+\_\+mode@{norm\+\_\+mode}}
 \index{norm\+\_\+mode@{norm\+\_\+mode}!photon\+\_\+statistics@{photon\+\_\+statistics}}
 \subsubsection{\texorpdfstring{norm\+\_\+mode}{norm\_mode}}
-{\footnotesize\ttfamily tuple photon\+\_\+statistics.\+norm\+\_\+mode = (\char`\"{}no\char`\"{} $\ast$ (not \hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\char`\"{}Enable\+Points\+Norm\char`\"{}\mbox{]})) + (\char`\"{}points\char`\"{} $\ast$ (not \hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\char`\"{}Enable\+Mean\+Norm\char`\"{}\mbox{]}) $\ast$ config\mbox{[}\char`\"{}Enable\+Points\+Norm\char`\"{}\mbox{]}) + (\char`\"{}mean\char`\"{} $\ast$ config\mbox{[}\char`\"{}Enable\+Mean\+Norm\char`\"{}\mbox{]} $\ast$ config\mbox{[}\char`\"{}Enable\+Points\+Norm\char`\"{}\mbox{]})}
+{\footnotesize\ttfamily tuple photon\+\_\+statistics.\+norm\+\_\+mode = (\char`\"{}no\char`\"{} $\ast$ (not \hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\char`\"{}Enable Points Norm\char`\"{}\mbox{]})) + (\char`\"{}points\char`\"{} $\ast$ (not \hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{config}\mbox{[}\char`\"{}Enable Mean Norm\char`\"{}\mbox{]}) $\ast$ config\mbox{[}\char`\"{}Enable Points Norm\char`\"{}\mbox{]}) + (\char`\"{}mean\char`\"{} $\ast$ config\mbox{[}\char`\"{}Enable Mean Norm\char`\"{}\mbox{]} $\ast$ config\mbox{[}\char`\"{}Enable Points Norm\char`\"{}\mbox{]})}
 
 \mbox{\Hypertarget{namespacephoton__statistics_a4476861cf199e5ef481ee4bc15e08847}\label{namespacephoton__statistics_a4476861cf199e5ef481ee4bc15e08847}} 
 \index{photon\+\_\+statistics@{photon\+\_\+statistics}!normalizer@{normalizer}}
@@ -370,13 +370,13 @@ tuple \hyperlink{namespacephoton__statistics_a17e0852f9ef02250d5e11c55b45dcbf6}{
 
 {\bfseries Initial value\+:}
 \begin{DoxyCode}
-1 =  (    (config[\textcolor{stringliteral}{'EnableACFCalc'}] * this\_channel\_size) + 
-2                             config[\textcolor{stringliteral}{'EnableCountRate'}] +
-3                             config[\textcolor{stringliteral}{'EnablePointsNorm'}] +
-4                             config[\textcolor{stringliteral}{'EnableSyncCode'}] +
-5                             config[\textcolor{stringliteral}{'EnableMeanNorm'}] + 
-6                             config[\textcolor{stringliteral}{'Enable PC Histogram'}] * config[\textcolor{stringliteral}{'PC Histogram Bins'}] +
-7                             ((config[\textcolor{stringliteral}{'EnableACFCalc'}] + 1) * config[\textcolor{stringliteral}{'Enable Performance Counters'}])
+1 =  (    (config[\textcolor{stringliteral}{'Enable ACF'}] * this\_channel\_size) + 
+2                             config[\textcolor{stringliteral}{'Enable Count Rate(CR)'}] +
+3                             config[\textcolor{stringliteral}{'Enable Points Norm'}] +
+4                             config[\textcolor{stringliteral}{'Enable Sync Check'}] +
+5                             config[\textcolor{stringliteral}{'Enable Mean Norm'}] + 
+6                             config[\textcolor{stringliteral}{'Enable Photon Count Histogram'}] * config[\textcolor{stringliteral}{'PC Histogram Bins'}] +
+7                             ((config[\textcolor{stringliteral}{'Enable ACF'}] + 1) * config[\textcolor{stringliteral}{'Enable Performance Counters'}])
 8                         ) * byte\_size
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacephoton__statistics_aa0ea01ea8f5c4844ed6c10dbe51d0497}\label{namespacephoton__statistics_aa0ea01ea8f5c4844ed6c10dbe51d0497}} 

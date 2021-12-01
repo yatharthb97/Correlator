@@ -1,0 +1,66 @@
+.TH "utilities.OffsetTracker" 3 "Fri Nov 12 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+utilities.OffsetTracker
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP (self)"
+.br
+.ti -1c
+.RI "def \fBadvance\fP (self, bytes_read_now=0)"
+.br
+.ti -1c
+.RI "def \fBoffsetter\fP (self)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBrd_bytes\fP"
+.br
+.ti -1c
+.RI "\fBgen\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "def utilities\&.OffsetTracker\&.__init__ ( self)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "def utilities\&.OffsetTracker\&.advance ( self,  bytes_read_now = \fC0\fP)"
+
+.PP
+.nf
+Returns the current offset value, while storing the 
+`bytes_read_now` for generating the next offset.
+
+.fi
+.PP
+ 
+.SS "def utilities\&.OffsetTracker\&.offsetter ( self)"
+
+.PP
+.nf
+Returns the current offset value.
+
+.fi
+.PP
+ 
+.SH "Member Data Documentation"
+.PP 
+.SS "utilities\&.OffsetTracker\&.gen"
+
+.SS "utilities\&.OffsetTracker\&.rd_bytes"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DIY Auto-Correlator from the source code\&.

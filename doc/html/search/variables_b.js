@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['name_5f',['name_',['../namespacephoton__statistics.html#a729c361165a662402f88b585477d2ee6',1,'photon_statistics']]],
+  ['name',['name',['../classdevice__mode_1_1StructParsar.html#a937fe4559444433d8cff05910c16a4b6',1,'device_mode::StructParsar']]],
+  ['name_5f',['name_',['../classdevice__mode_1_1DataStore.html#ae6213989655f77d563bf81a9f31d3a40',1,'device_mode.DataStore.name_()'],['../namespacephoton__statistics.html#a729c361165a662402f88b585477d2ee6',1,'photon_statistics.name_()']]],
   ['newline',['newline',['../namespacephoton__statistics.html#a6c6d01b62f113634193642d2dda3124a',1,'photon_statistics']]],
   ['norm_5fargs',['norm_args',['../namespacephoton__statistics.html#af558fed5a93a7b134efea382f1ad4007',1,'photon_statistics']]],
   ['norm_5ffn',['norm_fn',['../classnormalizer_1_1Normalizer.html#a36df68fe4c6f2dbe72f08a71ad1c5fe1',1,'normalizer::Normalizer']]],

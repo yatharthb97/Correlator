@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['test',['test',['../namespacetest.html',1,'']]]
+  ['statmethods',['statmethods',['../namespacestatmethods.html',1,'']]]
 ];

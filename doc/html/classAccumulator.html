@@ -78,12 +78,12 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:adab342ee6d376a45ed38fe1e1679a1e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAccumulator.html#adab342ee6d376a45ed38fe1e1679a1e2">do_accumulate</a> (unsigned int buffer_cnt)</td></tr>
-<tr class="memdesc:adab342ee6d376a45ed38fe1e1679a1e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the number of points to buffer(accumulate) before pushing to Correlator object.  <a href="#adab342ee6d376a45ed38fe1e1679a1e2">More...</a><br /></td></tr>
+<tr class="memdesc:adab342ee6d376a45ed38fe1e1679a1e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the number of points to buffer (accumulate).  <a href="#adab342ee6d376a45ed38fe1e1679a1e2">More...</a><br /></td></tr>
 <tr class="separator:adab342ee6d376a45ed38fe1e1679a1e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7494b569b7f4f2d2ab115e623ab135d"><td class="memTemplParams" colspan="2">template&lt;typename LinCorrType &gt; </td></tr>
-<tr class="memitem:aa7494b569b7f4f2d2ab115e623ab135d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classAccumulator.html#aa7494b569b7f4f2d2ab115e623ab135d">pipe</a> (LinCorrType &amp;channel, const <a class="el" href="types_8hpp.html#a22f279793847eba127de149437848c48">counter_t</a> datum)</td></tr>
-<tr class="memdesc:aa7494b569b7f4f2d2ab115e623ab135d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accumulates data points until the BufferPoints criteria is satisfied, after which the points are pushed to the channel.  <a href="#aa7494b569b7f4f2d2ab115e623ab135d">More...</a><br /></td></tr>
-<tr class="separator:aa7494b569b7f4f2d2ab115e623ab135d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b77af4be52d4c8f627cefb1f5315c98"><td class="memTemplParams" colspan="2">template&lt;typename LinCorrType &gt; </td></tr>
+<tr class="memitem:a0b77af4be52d4c8f627cefb1f5315c98"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classAccumulator.html#a0b77af4be52d4c8f627cefb1f5315c98">pipe</a> (LinCorrType &amp;correlator, const <a class="el" href="types_8hpp.html#a22f279793847eba127de149437848c48">counter_t</a> datum)</td></tr>
+<tr class="memdesc:a0b77af4be52d4c8f627cefb1f5315c98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accumulates data points and then pushes to the <code>LinCorrType</code> object (correlator) once criteria is satisfied.  <a href="#a0b77af4be52d4c8f627cefb1f5315c98">More...</a><br /></td></tr>
+<tr class="separator:a0b77af4be52d4c8f627cefb1f5315c98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -97,11 +97,12 @@ Private Attributes</h2></td></tr>
 <tr class="memdesc:a8e615af8b85dd2c8500d1f8c473879ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the value of the accumulate.  <a href="#a8e615af8b85dd2c8500d1f8c473879ab">More...</a><br /></td></tr>
 <tr class="separator:a8e615af8b85dd2c8500d1f8c473879ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb010cbe82265d22e5d577033574a16b"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAccumulator.html#afb010cbe82265d22e5d577033574a16b">Update_count</a> = 0</td></tr>
-<tr class="memdesc:afb010cbe82265d22e5d577033574a16b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maintains a counter of the items to accumuate.  <a href="#afb010cbe82265d22e5d577033574a16b">More...</a><br /></td></tr>
+<tr class="memdesc:afb010cbe82265d22e5d577033574a16b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Running counter of the items to accumuate.  <a href="#afb010cbe82265d22e5d577033574a16b">More...</a><br /></td></tr>
 <tr class="separator:afb010cbe82265d22e5d577033574a16b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Adapter object responsible for accumulating the points and coarsening the time-series as per the relavent linear-correlator time-resolution. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>Bind the correlation object to each <a class="el" href="classAccumulator.html" title="Adapter object responsible for accumulating the points and coarsening the time-series as per the rela...">Accumulator</a>, so that every <code>pipe</code> operation does not have to pass an address variable. </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="adab342ee6d376a45ed38fe1e1679a1e2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adab342ee6d376a45ed38fe1e1679a1e2">&#9670;&nbsp;</a></span>do_accumulate()</h2>
@@ -127,12 +128,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sets the number of points to buffer(accumulate) before pushing to Correlator object. </p>
+<p>Sets the number of points to buffer (accumulate). </p>
 
 </div>
 </div>
-<a id="aa7494b569b7f4f2d2ab115e623ab135d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7494b569b7f4f2d2ab115e623ab135d">&#9670;&nbsp;</a></span>pipe()</h2>
+<a id="a0b77af4be52d4c8f627cefb1f5315c98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b77af4be52d4c8f627cefb1f5315c98">&#9670;&nbsp;</a></span>pipe()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -146,7 +147,7 @@ template&lt;typename LinCorrType &gt; </div>
           <td class="memname">void Accumulator::pipe </td>
           <td>(</td>
           <td class="paramtype">LinCorrType &amp;&#160;</td>
-          <td class="paramname"><em>channel</em>, </td>
+          <td class="paramname"><em>correlator</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -167,7 +168,7 @@ template&lt;typename LinCorrType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Accumulates data points until the BufferPoints criteria is satisfied, after which the points are pushed to the channel. </p>
+<p>Accumulates data points and then pushes to the <code>LinCorrType</code> object (correlator) once criteria is satisfied. </p>
 
 </div>
 </div>
@@ -232,7 +233,7 @@ template&lt;typename LinCorrType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Maintains a counter of the items to accumuate. </p>
+<p>Running counter of the items to accumuate. </p>
 
 </div>
 </div>

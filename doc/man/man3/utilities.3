@@ -1,4 +1,4 @@
-.TH "utilities" 3 "Thu Oct 14 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
+.TH "utilities" 3 "Fri Nov 12 2021" "Version 1.0" "DIY Auto-Correlator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -6,6 +6,13 @@ utilities
 .SH SYNOPSIS
 .br
 .PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBOffsetTracker\fP"
+.br
+.in -1c
 .SS "Functions"
 
 .in +1c
@@ -19,11 +26,16 @@ utilities
 .RI "def \fBperiodic_callbacks\fP (period_ms, fn, args)"
 .br
 .ti -1c
+.RI "def \fBboxed_txt\fP (text)"
+.br
+.ti -1c
 .RI "def \fBStructRepresentation\fP (config)"
 .br
 .in -1c
 .SH "Function Documentation"
 .PP 
+.SS "def utilities\&.boxed_txt ( text)"
+
 .SS "def utilities\&.periodic_callbacks ( period_ms,  fn,  args)"
 
 .SS "def utilities\&.PseudoConsole ()"

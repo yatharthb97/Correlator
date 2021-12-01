@@ -74,8 +74,6 @@ $(function() {
 Collaboration diagram for Simpler_Circular_Buffer&lt; Type, MaxSize &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSimpler__Circular__Buffer__coll__graph.png" border="0" usemap="#Simpler__Circular__Buffer_3_01Type_00_01MaxSize_01_4_coll__map" alt="Collaboration graph"/></div>
-<map name="Simpler__Circular__Buffer_3_01Type_00_01MaxSize_01_4_coll__map" id="Simpler__Circular__Buffer_3_01Type_00_01MaxSize_01_4_coll__map">
-</map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -89,6 +87,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4ce53bc8ad0d231e9d013c771191696a"><td class="memItemLeft" align="right" valign="top">Type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSimpler__Circular__Buffer.html#a4ce53bc8ad0d231e9d013c771191696a">operator[]</a> (const size_t index) const __attribute__((always_inline))</td></tr>
 <tr class="memdesc:a4ce53bc8ad0d231e9d013c771191696a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Random access operator can be used to retrive the nth element in the buffer at any state of the buffer.  <a href="#a4ce53bc8ad0d231e9d013c771191696a">More...</a><br /></td></tr>
 <tr class="separator:a4ce53bc8ad0d231e9d013c771191696a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bdde2ca6c814ec455b8ffa190a90c1e"><td class="memItemLeft" align="right" valign="top">Type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSimpler__Circular__Buffer.html#a6bdde2ca6c814ec455b8ffa190a90c1e">get_idx</a> (const size_t index) const __attribute__((always_inline))</td></tr>
+<tr class="memdesc:a6bdde2ca6c814ec455b8ffa190a90c1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Random access function can be used to retrive the nth element in the buffer at any state of the buffer.  <a href="#a6bdde2ca6c814ec455b8ffa190a90c1e">More...</a><br /></td></tr>
+<tr class="separator:a6bdde2ca6c814ec455b8ffa190a90c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdd5b4da34472c721f46f354bfca2223"><td class="memItemLeft" align="right" valign="top">Type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSimpler__Circular__Buffer.html#afdd5b4da34472c721f46f354bfca2223">history</a> (const size_t index) const __attribute__((always_inline))</td></tr>
+<tr class="separator:afdd5b4da34472c721f46f354bfca2223"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -102,6 +105,64 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a2833e67d4d6cfae68e71306037015642"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6bdde2ca6c814ec455b8ffa190a90c1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bdde2ca6c814ec455b8ffa190a90c1e">&#9670;&nbsp;</a></span>get_idx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type, size_t MaxSize&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Type <a class="el" href="classSimpler__Circular__Buffer.html">Simpler_Circular_Buffer</a>&lt; Type, MaxSize &gt;::get_idx </td>
+          <td>(</td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Random access function can be used to retrive the nth element in the buffer at any state of the buffer. </p>
+
+</div>
+</div>
+<a id="afdd5b4da34472c721f46f354bfca2223"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdd5b4da34472c721f46f354bfca2223">&#9670;&nbsp;</a></span>history()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type, size_t MaxSize&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Type <a class="el" href="classSimpler__Circular__Buffer.html">Simpler_Circular_Buffer</a>&lt; Type, MaxSize &gt;::history </td>
+          <td>(</td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a4ce53bc8ad0d231e9d013c771191696a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4ce53bc8ad0d231e9d013c771191696a">&#9670;&nbsp;</a></span>operator[]()</h2>
 

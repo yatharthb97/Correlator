@@ -19,7 +19,7 @@ def \hyperlink{namespacephoton__statistics_a3d8a4bcc1566dd71aab0925749e1416f}{ph
 \item 
 \hyperlink{namespacephoton__statistics_a4176c548148b1c86da6ddf320ab00e90}{photon\+\_\+statistics.\+config} = json.\+load(f)
 \item 
-list \hyperlink{namespacephoton__statistics_a3c57d728c4b1cdcb2b6ca63bc6adfc4d}{photon\+\_\+statistics.\+multitau\+\_\+param\+\_\+set} = \mbox{[}config\mbox{[}\textquotesingle{}Lin\+Corrs\textquotesingle{}\mbox{]}, config\mbox{[}\textquotesingle{}Series\+Size\textquotesingle{}\mbox{]}, config\mbox{[}\textquotesingle{}Bin\+Ratio\textquotesingle{}\mbox{]}\mbox{]}
+list \hyperlink{namespacephoton__statistics_a3c57d728c4b1cdcb2b6ca63bc6adfc4d}{photon\+\_\+statistics.\+multitau\+\_\+param\+\_\+set} = \mbox{[}config\mbox{[}\textquotesingle{}MT Linear Correlators(L\+Cs)\textquotesingle{}\mbox{]}, config\mbox{[}\textquotesingle{}MT LC Series Size\textquotesingle{}\mbox{]}, config\mbox{[}\textquotesingle{}MT Bin Ratio\textquotesingle{}\mbox{]}\mbox{]}
 \item 
 \hyperlink{namespacephoton__statistics_a397f80b778ada9e9d514e3ed06936540}{photon\+\_\+statistics.\+this\+\_\+channel\+\_\+size} = \hyperlink{namespacemultitau_a1022c52950a892396ac45e7de5379e12}{multitau.\+channel\+\_\+size}($\ast$multitau\+\_\+param\+\_\+set)
 \item 
@@ -51,7 +51,7 @@ string \hyperlink{namespacephoton__statistics_ab381c3496e1a3a8d6dae99e66447c10c}
 \item 
 \hyperlink{namespacephoton__statistics_a4476861cf199e5ef481ee4bc15e08847}{photon\+\_\+statistics.\+normalizer} = Normalizer($\ast$multitau\+\_\+param\+\_\+set)
 \item 
-tuple \hyperlink{namespacephoton__statistics_a28a89caae4538b504046ed301158e677}{photon\+\_\+statistics.\+norm\+\_\+mode} = (\char`\"{}no\char`\"{} $\ast$ (not config\mbox{[}\char`\"{}Enable\+Points\+Norm\char`\"{}\mbox{]})) + (\char`\"{}points\char`\"{} $\ast$ (not config\mbox{[}\char`\"{}Enable\+Mean\+Norm\char`\"{}\mbox{]}) $\ast$ config\mbox{[}\char`\"{}Enable\+Points\+Norm\char`\"{}\mbox{]}) + (\char`\"{}mean\char`\"{} $\ast$ config\mbox{[}\char`\"{}Enable\+Mean\+Norm\char`\"{}\mbox{]} $\ast$ config\mbox{[}\char`\"{}Enable\+Points\+Norm\char`\"{}\mbox{]})
+tuple \hyperlink{namespacephoton__statistics_a28a89caae4538b504046ed301158e677}{photon\+\_\+statistics.\+norm\+\_\+mode} = (\char`\"{}no\char`\"{} $\ast$ (not config\mbox{[}\char`\"{}Enable Points Norm\char`\"{}\mbox{]})) + (\char`\"{}points\char`\"{} $\ast$ (not config\mbox{[}\char`\"{}Enable Mean Norm\char`\"{}\mbox{]}) $\ast$ config\mbox{[}\char`\"{}Enable Points Norm\char`\"{}\mbox{]}) + (\char`\"{}mean\char`\"{} $\ast$ config\mbox{[}\char`\"{}Enable Mean Norm\char`\"{}\mbox{]} $\ast$ config\mbox{[}\char`\"{}Enable Points Norm\char`\"{}\mbox{]})
 \item 
 list \hyperlink{namespacephoton__statistics_af558fed5a93a7b134efea382f1ad4007}{photon\+\_\+statistics.\+norm\+\_\+args} = \mbox{[}$\,$\mbox{]}
 \item 
@@ -103,7 +103,7 @@ string \hyperlink{namespacephoton__statistics_a86328a634773cdedebc0fd4be6a8a068}
 \item 
 \hyperlink{namespacephoton__statistics_a09fecae480663af684a1d523466242a4}{photon\+\_\+statistics.\+port} = Serial(port=config\mbox{[}\char`\"{}Port\char`\"{}\mbox{]}, baudrate=config\mbox{[}\char`\"{}Baud\char`\"{}\mbox{]}, timeout=None)
 \item 
-\hyperlink{namespacephoton__statistics_ab809da8a53764aea064814bd4abdba42}{photon\+\_\+statistics.\+measurement\+\_\+sampling\+\_\+delay} = int(config\mbox{[}\textquotesingle{}Sampling\+Delay\+\_\+ms\textquotesingle{}\mbox{]}/2)
+\hyperlink{namespacephoton__statistics_ab809da8a53764aea064814bd4abdba42}{photon\+\_\+statistics.\+measurement\+\_\+sampling\+\_\+delay} = int(config\mbox{[}\textquotesingle{}Sampling Delay ms\textquotesingle{}\mbox{]}/2)
 \item 
 \hyperlink{namespacephoton__statistics_a826b8bcc70f5721cbb6036088fa1ed01}{photon\+\_\+statistics.\+measurement\+\_\+thread} = Qt\+Core.\+Q\+Timer()
 \item 

@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['simpler_5fcircular_5fbuffer',['Simpler_Circular_Buffer',['../classSimpler__Circular__Buffer.html',1,'']]],
-  ['simpler_5fcircular_5fbuffer_3c_20counter_5ft_2c_20series_5fsize_20_3e',['Simpler_Circular_Buffer&lt; counter_t, Series_Size &gt;',['../classSimpler__Circular__Buffer.html',1,'Simpler_Circular_Buffer&lt; counter_t, Series_Size &gt;'],['../classSimpler__Circular__Buffer.html',1,'Simpler_Circular_Buffer&lt; counter_t, Series_size &gt;']]],
-  ['statmethods',['StatMethods',['../classstatmethods_1_1StatMethods.html',1,'statmethods']]]
+  ['paramstruct',['ParamStruct',['../classnew__app_1_1ParamStruct.html',1,'new_app']]],
+  ['pchistogram',['PCHistogram',['../classPCHistogram.html',1,'']]],
+  ['perfcounter',['PerfCounter',['../classPerfCounter.html',1,'']]],
+  ['pit_5flifetimetimer',['PIT_LifetimeTimer',['../classPIT__LifetimeTimer.html',1,'']]],
+  ['pitcontroller',['PITController',['../classPITController.html',1,'']]],
+  ['pstatlivegraph',['PStatLiveGraph',['../classlive__graph_1_1PStatLiveGraph.html',1,'live_graph']]]
 ];

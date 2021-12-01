@@ -11,8 +11,7 @@ This is an implementation of Lin\+\_\+\+A\+Corr\+\_\+\+R\+T\+\_\+\+Base for Teen
 
 
 
-Collaboration diagram for Lin\+A\+Corr\+R\+T\+Teensy$<$ Series\+\_\+\+Size, has\+Monitor\+Channel $>$\+:
-\nopagebreak
+Collaboration diagram for Lin\+A\+Corr\+R\+T\+Teensy$<$ Series\+\_\+\+Size, has\+Monitor\+Channel $>$\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -26,7 +25,7 @@ Collaboration diagram for Lin\+A\+Corr\+R\+T\+Teensy$<$ Series\+\_\+\+Size, has\
 \begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
 void \hyperlink{classLinACorrRTTeensy_aacc634aad2252efbb6ee3a4c2ac422dc}{push\+\_\+datum} (\hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} datum)
 \begin{DoxyCompactList}\small\item\em Adds new {\itshape single} data point and processes it to the {\ttfamily Channel}. \end{DoxyCompactList}\item 
-void \hyperlink{classLinACorrRTTeensy_abf6a40dff92088469fbb8ceabf9da799}{push\+\_\+data} (const \hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} $\ast$container, const \hyperlink{types_8hpp_a7c40bb931c31595ed6308605f4537447}{index\+\_\+t} size) \+\_\+\+\_\+attribute\+\_\+\+\_\+((flatten))
+void \hyperlink{classLinACorrRTTeensy_abf6a40dff92088469fbb8ceabf9da799}{push\+\_\+data} (const \hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} $\ast$container, const \hyperlink{types_8hpp_ab41b824af8e088d090c0b9e60f536c9d}{index\+\_\+t} size) \+\_\+\+\_\+attribute\+\_\+\+\_\+((flatten))
 \begin{DoxyCompactList}\small\item\em Repeatedly calls {\ttfamily \hyperlink{classLinACorrRTTeensy_aacc634aad2252efbb6ee3a4c2ac422dc}{push\+\_\+datum()}} on the given container of values, one at a time. \end{DoxyCompactList}\item 
 float\+\_\+t \hyperlink{classLinACorrRTTeensy_a98110e3b97a2300b9078a6e57a8234bc}{norm} ()
 \begin{DoxyCompactList}\small\item\em Returns the accumulate of the channel so far. \end{DoxyCompactList}\item 
@@ -37,11 +36,11 @@ void \hyperlink{classLinACorrRTTeensy_a4d1be65472a058b056386286d093b847}{ch\+\_\
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-channel\+\_\+t \hyperlink{classLinACorrRTTeensy_a3276cb9bb215af9676edc35958c889b8}{Channel\+\_\+array} \mbox{[}Series\+\_\+\+Size\mbox{]} = \{0\}
+\hyperlink{types_8hpp_a9f8f935e7952f42d763385090e3404a5}{channel\+\_\+t} \hyperlink{classLinACorrRTTeensy_a3276cb9bb215af9676edc35958c889b8}{Channel\+\_\+array} \mbox{[}Series\+\_\+\+Size\mbox{]} = \{0\}
 \begin{DoxyCompactList}\small\item\em Defines a run-\/time polymorphic \hyperlink{classMonitorChannel}{Monitor\+Channel} object, which decomposes to {\ttfamily ghost} channel (Unit\+Mean\+Channel) if {\ttfamily has\+Monitor\+Channel} is true. Basically {\ttfamily Unit\+Mean\+Channel} does nothing. \end{DoxyCompactList}\item 
 \hyperlink{classSimpler__Circular__Buffer}{Simpler\+\_\+\+Circular\+\_\+\+Buffer}$<$ \hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t}, Series\+\_\+\+Size $>$ \hyperlink{classLinACorrRTTeensy_a5c4cc1fe032812d6290579c7c8b22e57}{Series\+\_\+array}
 \begin{DoxyCompactList}\small\item\em Stores the data points in a circular Buffer. \end{DoxyCompactList}\item 
-\hyperlink{types_8hpp_a7c40bb931c31595ed6308605f4537447}{index\+\_\+t} \hyperlink{classLinACorrRTTeensy_abe0523ada55375281deacb143b6055b7}{Series\+\_\+index} = 0
+\hyperlink{types_8hpp_ab41b824af8e088d090c0b9e60f536c9d}{index\+\_\+t} \hyperlink{classLinACorrRTTeensy_abe0523ada55375281deacb143b6055b7}{Series\+\_\+index} = 0
 \begin{DoxyCompactList}\small\item\em Stores the last active index → Post-\/increment. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -114,7 +113,7 @@ Returns the accumulate of the channel so far.
 \index{push\+\_\+data@{push\+\_\+data}!Lin\+A\+Corr\+R\+T\+Teensy@{Lin\+A\+Corr\+R\+T\+Teensy}}
 \subsubsection{\texorpdfstring{push\+\_\+data()}{push\_data()}}
 {\footnotesize\ttfamily template$<$index\+\_\+t Series\+\_\+\+Size, bool has\+Monitor\+Channel$>$ \\
-void \hyperlink{classLinACorrRTTeensy}{Lin\+A\+Corr\+R\+T\+Teensy}$<$ Series\+\_\+\+Size, has\+Monitor\+Channel $>$\+::push\+\_\+data (\begin{DoxyParamCaption}\item[{const \hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} $\ast$}]{container,  }\item[{const \hyperlink{types_8hpp_a7c40bb931c31595ed6308605f4537447}{index\+\_\+t}}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void \hyperlink{classLinACorrRTTeensy}{Lin\+A\+Corr\+R\+T\+Teensy}$<$ Series\+\_\+\+Size, has\+Monitor\+Channel $>$\+::push\+\_\+data (\begin{DoxyParamCaption}\item[{const \hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} $\ast$}]{container,  }\item[{const \hyperlink{types_8hpp_ab41b824af8e088d090c0b9e60f536c9d}{index\+\_\+t}}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -139,7 +138,7 @@ Adds new {\itshape single} data point and processes it to the {\ttfamily Channel
 \index{Channel\+\_\+array@{Channel\+\_\+array}!Lin\+A\+Corr\+R\+T\+Teensy@{Lin\+A\+Corr\+R\+T\+Teensy}}
 \subsubsection{\texorpdfstring{Channel\+\_\+array}{Channel\_array}}
 {\footnotesize\ttfamily template$<$index\+\_\+t Series\+\_\+\+Size, bool has\+Monitor\+Channel$>$ \\
-channel\+\_\+t \hyperlink{classLinACorrRTTeensy}{Lin\+A\+Corr\+R\+T\+Teensy}$<$ Series\+\_\+\+Size, has\+Monitor\+Channel $>$\+::Channel\+\_\+array\mbox{[}Series\+\_\+\+Size\mbox{]} = \{0\}}
+\hyperlink{types_8hpp_a9f8f935e7952f42d763385090e3404a5}{channel\+\_\+t} \hyperlink{classLinACorrRTTeensy}{Lin\+A\+Corr\+R\+T\+Teensy}$<$ Series\+\_\+\+Size, has\+Monitor\+Channel $>$\+::Channel\+\_\+array\mbox{[}Series\+\_\+\+Size\mbox{]} = \{0\}}
 
 
 
@@ -161,7 +160,7 @@ Stores the data points in a circular Buffer.
 \index{Series\+\_\+index@{Series\+\_\+index}!Lin\+A\+Corr\+R\+T\+Teensy@{Lin\+A\+Corr\+R\+T\+Teensy}}
 \subsubsection{\texorpdfstring{Series\+\_\+index}{Series\_index}}
 {\footnotesize\ttfamily template$<$index\+\_\+t Series\+\_\+\+Size, bool has\+Monitor\+Channel$>$ \\
-\hyperlink{types_8hpp_a7c40bb931c31595ed6308605f4537447}{index\+\_\+t} \hyperlink{classLinACorrRTTeensy}{Lin\+A\+Corr\+R\+T\+Teensy}$<$ Series\+\_\+\+Size, has\+Monitor\+Channel $>$\+::Series\+\_\+index = 0}
+\hyperlink{types_8hpp_ab41b824af8e088d090c0b9e60f536c9d}{index\+\_\+t} \hyperlink{classLinACorrRTTeensy}{Lin\+A\+Corr\+R\+T\+Teensy}$<$ Series\+\_\+\+Size, has\+Monitor\+Channel $>$\+::Series\+\_\+index = 0}
 
 
 

@@ -1,0 +1,142 @@
+\hypertarget{classFakeChannel}{}\section{Fake\+Channel$<$ Series\+\_\+\+Size, has\+Monitor\+Channel $>$ Class Template Reference}
+\label{classFakeChannel}\index{Fake\+Channel$<$ Series\+\_\+\+Size, has\+Monitor\+Channel $>$@{Fake\+Channel$<$ Series\+\_\+\+Size, has\+Monitor\+Channel $>$}}
+
+
+This is an {\itshape duck typed} implementaion of a {\itshape Linear Correlator} that returns linearly increasing values for correlation.  
+
+
+
+
+{\ttfamily \#include $<$fakechannel.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFakeChannel_a7b6ecb79fe6460f07d395c4df4b30cda}{Fake\+Channel} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classFakeChannel_ad40cc96be3b22a6d0111b9cc8f30ffcf}{push\+\_\+datum} (\hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} datum)
+\begin{DoxyCompactList}\small\item\em Adds new {\itshape single} data point and processes it to the {\ttfamily Channel}. \end{DoxyCompactList}\item 
+void \hyperlink{classFakeChannel_a0b367e4109f7143261f44e5fde277181}{push\+\_\+data} (const \hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} $\ast$container, const \hyperlink{types_8hpp_ab41b824af8e088d090c0b9e60f536c9d}{index\+\_\+t} size) \+\_\+\+\_\+attribute\+\_\+\+\_\+((flatten))
+\begin{DoxyCompactList}\small\item\em Repeatedly calls {\ttfamily \hyperlink{classFakeChannel_ad40cc96be3b22a6d0111b9cc8f30ffcf}{push\+\_\+datum()}} on the given container of values, one at a time. \end{DoxyCompactList}\item 
+float\+\_\+t \hyperlink{classFakeChannel_a2c7edb717127d703f71e50df8a0b391c}{norm} (\hyperlink{types_8hpp_ab41b824af8e088d090c0b9e60f536c9d}{index\+\_\+t} lag)
+\begin{DoxyCompactList}\small\item\em Returns the accumulate of the channel so far. \end{DoxyCompactList}\item 
+void \hyperlink{classFakeChannel_a4690f6aaaeded8dd776aab720fdfbd8b}{ch\+\_\+out} () const \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
+\begin{DoxyCompactList}\small\item\em Outputs the complete channel to the Serial port. \end{DoxyCompactList}\item 
+void \hyperlink{classFakeChannel_a89dc67c3d19480927f1c07f7a96a1674}{ch\+\_\+out\+\_\+norm} () const \+\_\+\+\_\+attribute\+\_\+\+\_\+((flatten))
+\begin{DoxyCompactList}\small\item\em Outputs the channel array to the Serial port after normalising it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{classFakeChannel_a471a99ca4707397f949e6c26a3012ffe}{Series\+\_\+index} = 0
+\item 
+\hyperlink{types_8hpp_a9f8f935e7952f42d763385090e3404a5}{channel\+\_\+t} \hyperlink{classFakeChannel_a51f14eee081adbcd3db827b669e45749}{Channel\+\_\+array} \mbox{[}Series\+\_\+\+Size\mbox{]} = \{0\}
+\begin{DoxyCompactList}\small\item\em Stores the Channel output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$index\+\_\+t Series\+\_\+\+Size, bool has\+Monitor\+Channel$>$\newline
+class Fake\+Channel$<$ Series\+\_\+\+Size, has\+Monitor\+Channel $>$}
+
+This is an {\itshape duck typed} implementaion of a {\itshape Linear Correlator} that returns linearly increasing values for correlation. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFakeChannel_a7b6ecb79fe6460f07d395c4df4b30cda}\label{classFakeChannel_a7b6ecb79fe6460f07d395c4df4b30cda}} 
+\index{Fake\+Channel@{Fake\+Channel}!Fake\+Channel@{Fake\+Channel}}
+\index{Fake\+Channel@{Fake\+Channel}!Fake\+Channel@{Fake\+Channel}}
+\subsubsection{\texorpdfstring{Fake\+Channel()}{FakeChannel()}}
+{\footnotesize\ttfamily template$<$index\+\_\+t Series\+\_\+\+Size, bool has\+Monitor\+Channel$>$ \\
+\hyperlink{classFakeChannel}{Fake\+Channel}$<$ Series\+\_\+\+Size, has\+Monitor\+Channel $>$\+::\hyperlink{classFakeChannel}{Fake\+Channel} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default Constructor. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classFakeChannel_a4690f6aaaeded8dd776aab720fdfbd8b}\label{classFakeChannel_a4690f6aaaeded8dd776aab720fdfbd8b}} 
+\index{Fake\+Channel@{Fake\+Channel}!ch\+\_\+out@{ch\+\_\+out}}
+\index{ch\+\_\+out@{ch\+\_\+out}!Fake\+Channel@{Fake\+Channel}}
+\subsubsection{\texorpdfstring{ch\+\_\+out()}{ch\_out()}}
+{\footnotesize\ttfamily template$<$index\+\_\+t Series\+\_\+\+Size, bool has\+Monitor\+Channel$>$ \\
+void \hyperlink{classFakeChannel}{Fake\+Channel}$<$ Series\+\_\+\+Size, has\+Monitor\+Channel $>$\+::ch\+\_\+out (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Outputs the complete channel to the Serial port. 
+
+\mbox{\Hypertarget{classFakeChannel_a89dc67c3d19480927f1c07f7a96a1674}\label{classFakeChannel_a89dc67c3d19480927f1c07f7a96a1674}} 
+\index{Fake\+Channel@{Fake\+Channel}!ch\+\_\+out\+\_\+norm@{ch\+\_\+out\+\_\+norm}}
+\index{ch\+\_\+out\+\_\+norm@{ch\+\_\+out\+\_\+norm}!Fake\+Channel@{Fake\+Channel}}
+\subsubsection{\texorpdfstring{ch\+\_\+out\+\_\+norm()}{ch\_out\_norm()}}
+{\footnotesize\ttfamily template$<$index\+\_\+t Series\+\_\+\+Size, bool has\+Monitor\+Channel$>$ \\
+void \hyperlink{classFakeChannel}{Fake\+Channel}$<$ Series\+\_\+\+Size, has\+Monitor\+Channel $>$\+::ch\+\_\+out\+\_\+norm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Outputs the channel array to the Serial port after normalising it. 
+
+\mbox{\Hypertarget{classFakeChannel_a2c7edb717127d703f71e50df8a0b391c}\label{classFakeChannel_a2c7edb717127d703f71e50df8a0b391c}} 
+\index{Fake\+Channel@{Fake\+Channel}!norm@{norm}}
+\index{norm@{norm}!Fake\+Channel@{Fake\+Channel}}
+\subsubsection{\texorpdfstring{norm()}{norm()}}
+{\footnotesize\ttfamily template$<$index\+\_\+t Series\+\_\+\+Size, bool has\+Monitor\+Channel$>$ \\
+float\+\_\+t \hyperlink{classFakeChannel}{Fake\+Channel}$<$ Series\+\_\+\+Size, has\+Monitor\+Channel $>$\+::norm (\begin{DoxyParamCaption}\item[{\hyperlink{types_8hpp_ab41b824af8e088d090c0b9e60f536c9d}{index\+\_\+t}}]{lag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the accumulate of the channel so far. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Lag} & time that is ignored by the function. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFakeChannel_a0b367e4109f7143261f44e5fde277181}\label{classFakeChannel_a0b367e4109f7143261f44e5fde277181}} 
+\index{Fake\+Channel@{Fake\+Channel}!push\+\_\+data@{push\+\_\+data}}
+\index{push\+\_\+data@{push\+\_\+data}!Fake\+Channel@{Fake\+Channel}}
+\subsubsection{\texorpdfstring{push\+\_\+data()}{push\_data()}}
+{\footnotesize\ttfamily template$<$index\+\_\+t Series\+\_\+\+Size, bool has\+Monitor\+Channel$>$ \\
+void \hyperlink{classFakeChannel}{Fake\+Channel}$<$ Series\+\_\+\+Size, has\+Monitor\+Channel $>$\+::push\+\_\+data (\begin{DoxyParamCaption}\item[{const \hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t} $\ast$}]{container,  }\item[{const \hyperlink{types_8hpp_ab41b824af8e088d090c0b9e60f536c9d}{index\+\_\+t}}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Repeatedly calls {\ttfamily \hyperlink{classFakeChannel_ad40cc96be3b22a6d0111b9cc8f30ffcf}{push\+\_\+datum()}} on the given container of values, one at a time. 
+
+\mbox{\Hypertarget{classFakeChannel_ad40cc96be3b22a6d0111b9cc8f30ffcf}\label{classFakeChannel_ad40cc96be3b22a6d0111b9cc8f30ffcf}} 
+\index{Fake\+Channel@{Fake\+Channel}!push\+\_\+datum@{push\+\_\+datum}}
+\index{push\+\_\+datum@{push\+\_\+datum}!Fake\+Channel@{Fake\+Channel}}
+\subsubsection{\texorpdfstring{push\+\_\+datum()}{push\_datum()}}
+{\footnotesize\ttfamily template$<$index\+\_\+t Series\+\_\+\+Size, bool has\+Monitor\+Channel$>$ \\
+void \hyperlink{classFakeChannel}{Fake\+Channel}$<$ Series\+\_\+\+Size, has\+Monitor\+Channel $>$\+::push\+\_\+datum (\begin{DoxyParamCaption}\item[{\hyperlink{types_8hpp_a22f279793847eba127de149437848c48}{counter\+\_\+t}}]{datum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds new {\itshape single} data point and processes it to the {\ttfamily Channel}. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classFakeChannel_a51f14eee081adbcd3db827b669e45749}\label{classFakeChannel_a51f14eee081adbcd3db827b669e45749}} 
+\index{Fake\+Channel@{Fake\+Channel}!Channel\+\_\+array@{Channel\+\_\+array}}
+\index{Channel\+\_\+array@{Channel\+\_\+array}!Fake\+Channel@{Fake\+Channel}}
+\subsubsection{\texorpdfstring{Channel\+\_\+array}{Channel\_array}}
+{\footnotesize\ttfamily template$<$index\+\_\+t Series\+\_\+\+Size, bool has\+Monitor\+Channel$>$ \\
+\hyperlink{types_8hpp_a9f8f935e7952f42d763385090e3404a5}{channel\+\_\+t} \hyperlink{classFakeChannel}{Fake\+Channel}$<$ Series\+\_\+\+Size, has\+Monitor\+Channel $>$\+::Channel\+\_\+array\mbox{[}Series\+\_\+\+Size\mbox{]} = \{0\}}
+
+
+
+Stores the Channel output. 
+
+\mbox{\Hypertarget{classFakeChannel_a471a99ca4707397f949e6c26a3012ffe}\label{classFakeChannel_a471a99ca4707397f949e6c26a3012ffe}} 
+\index{Fake\+Channel@{Fake\+Channel}!Series\+\_\+index@{Series\+\_\+index}}
+\index{Series\+\_\+index@{Series\+\_\+index}!Fake\+Channel@{Fake\+Channel}}
+\subsubsection{\texorpdfstring{Series\+\_\+index}{Series\_index}}
+{\footnotesize\ttfamily template$<$index\+\_\+t Series\+\_\+\+Size, bool has\+Monitor\+Channel$>$ \\
+uint32\+\_\+t \hyperlink{classFakeChannel}{Fake\+Channel}$<$ Series\+\_\+\+Size, has\+Monitor\+Channel $>$\+::Series\+\_\+index = 0}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/software/\hyperlink{fakechannel_8hpp}{fakechannel.\+hpp}\end{DoxyCompactItemize}
